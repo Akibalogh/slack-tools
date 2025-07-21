@@ -322,7 +322,7 @@ async def process_single_page(url, browser, max_retries=3):
             await detail_page.goto(url, wait_until="domcontentloaded", timeout=45000)
             
             # Wait for dynamic content to load
-            await detail_page.wait_for_timeout(12000)  # Increased wait time for balance data
+            await detail_page.wait_for_timeout(15000)  # Increased wait time for balance data
             
             # Try to wait for specific elements that might contain balance
             try:
@@ -373,6 +373,13 @@ async def process_single_page(url, browser, max_retries=3):
             # Get the page content after waiting
             content = await detail_page.content()
             text_content = await detail_page.text_content("body")
+            
+            # Debug: Log what we found for problematic parties
+            if party_name in ["flowdesk", "gemini", "hashnote", "noders", "redstone"]:
+                logger.info(f"   🔍 Debug - {party_name} text content (first 200 chars): {text_content[:200]}")
+                import re
+                decimal_matches = re.findall(r'([0-9]{1,3}(?:,[0-9]{3})*\.[0-9]+)', text_content)
+                logger.info(f"   🔢 Debug - {party_name} decimal numbers found: {decimal_matches[:5]}")
             
             # Extract balance using multiple methods
             balance = extract_balance_from_html(content, text_content)
@@ -429,8 +436,12 @@ def extract_balance_from_html(html_content, text_content):
         # Most specific patterns for wallet balances (always have decimals)
         r'Wallet Balance[:\s]*([0-9]{1,3}(?:,[0-9]{3})*\.[0-9]+)',
         r'wallet balance[:\s]*([0-9]{1,3}(?:,[0-9]{3})*\.[0-9]+)',
+        r'Wallet Balance([0-9]{1,3}(?:,[0-9]{3})*\.[0-9]+)',  # No colon/space after "Wallet Balance"
+        r'wallet balance([0-9]{1,3}(?:,[0-9]{3})*\.[0-9]+)',  # No colon/space after "wallet balance"
         r'Balance[:\s]*([0-9]{1,3}(?:,[0-9]{3})*\.[0-9]+)',
         r'balance[:\s]*([0-9]{1,3}(?:,[0-9]{3})*\.[0-9]+)',
+        r'Balance([0-9]{1,3}(?:,[0-9]{3})*\.[0-9]+)',  # No colon/space after "Balance"
+        r'balance([0-9]{1,3}(?:,[0-9]{3})*\.[0-9]+)',  # No colon/space after "balance"
         # Look for numbers with currency symbols or units (must have decimals)
         r'([0-9]{1,3}(?:,[0-9]{3})*\.[0-9]+)\s*CANTON',
         r'([0-9]{1,3}(?:,[0-9]{3})*\.[0-9]+)\s*USD',
