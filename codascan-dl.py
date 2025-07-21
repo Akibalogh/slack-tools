@@ -315,14 +315,20 @@ async def process_single_page(url, browser, max_retries=3):
     party_name = extract_party_name_from_url(url)
     logger.info(f"   🔍 Processing: {party_name}")
     
+    # Progressive wait times: 15s, 25s, 35s
+    wait_times = [15000, 25000, 35000]
+    
     for attempt in range(max_retries):
         detail_page = await browser.new_page()
+        current_wait_time = wait_times[min(attempt, len(wait_times) - 1)]
+        
         try:
             # Set longer timeout for network issues
             await detail_page.goto(url, wait_until="domcontentloaded", timeout=45000)
             
-            # Wait for dynamic content to load
-            await detail_page.wait_for_timeout(15000)  # Increased wait time for balance data
+            # Wait for dynamic content to load with progressive timing
+            logger.info(f"   ⏱️ Attempt {attempt + 1}/{max_retries} - Waiting {current_wait_time/1000}s for content...")
+            await detail_page.wait_for_timeout(current_wait_time)
             
             # Try to wait for specific elements that might contain balance
             try:
@@ -334,6 +340,9 @@ async def process_single_page(url, browser, max_retries=3):
                     try:
                         await detail_page.wait_for_selector("[class*='amount']", timeout=5000)
                     except Exception as e:
+                        # If we can't find balance elements, try a longer wait on retry
+                        if attempt < max_retries - 1:
+                            logger.info(f"   🔍 No balance elements found, will retry with longer wait...")
                         pass
             
             # Additional debugging for bitsafe minter
@@ -374,6 +383,19 @@ async def process_single_page(url, browser, max_retries=3):
             content = await detail_page.content()
             text_content = await detail_page.text_content("body")
             
+            # Check if we got meaningful content
+            if not text_content or len(text_content.strip()) < 100:
+                if attempt < max_retries - 1:
+                    logger.warning(f"   ⚠️ {party_name}: Page content too short ({len(text_content)} chars), retrying...")
+                    continue
+                else:
+                    logger.error(f"   ❌ {party_name}: Page content too short after all retries")
+                    return {
+                        "party": party_name,
+                        "balance": "Not found",
+                        "url": url
+                    }
+            
             # Debug: Log what we found for problematic parties
             if party_name in ["flowdesk", "gemini", "hashnote", "noders", "redstone"]:
                 logger.info(f"   🔍 Debug - {party_name} text content (first 200 chars): {text_content[:200]}")
@@ -405,7 +427,8 @@ async def process_single_page(url, browser, max_retries=3):
             # Check if it's a network error that might be retryable
             if any(network_error in error_msg.lower() for network_error in ['timeout', 'network', 'connection', 'socket']):
                 if attempt < max_retries - 1:
-                    logger.info(f"   🔄 Retrying {party_name} in 2 seconds...")
+                    next_wait_time = wait_times[min(attempt + 1, len(wait_times) - 1)] / 1000
+                    logger.info(f"   🔄 Retrying {party_name} in 2 seconds with longer wait time ({next_wait_time}s)...")
                     await asyncio.sleep(2)
                     continue
             else:
