@@ -27,8 +27,50 @@ async def run():
     TEST_MODE = False  # Set to False to process all URLs
 
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
+        # Launch browser with performance optimizations
+        browser = await p.chromium.launch(
+            headless=True,
+            args=[
+                '--disable-gpu',  # Disable GPU hardware acceleration
+                '--disable-dev-shm-usage',  # Disable /dev/shm usage
+                '--disable-web-security',  # Disable web security for faster loading
+                '--disable-features=VizDisplayCompositor',  # Disable display compositor
+                '--disable-extensions',  # Disable extensions
+                '--disable-plugins',  # Disable plugins
+                '--disable-images',  # Disable image loading
+                # '--disable-javascript',  # Keep JavaScript enabled for dynamic content
+                '--disable-background-timer-throttling',  # Disable background timer throttling
+                '--disable-backgrounding-occluded-windows',  # Disable backgrounding
+                '--disable-renderer-backgrounding',  # Disable renderer backgrounding
+                '--disable-background-networking',  # Disable background networking
+                '--disable-default-apps',  # Disable default apps
+                '--disable-sync',  # Disable sync
+                '--disable-translate',  # Disable translate
+                '--hide-scrollbars',  # Hide scrollbars
+                '--mute-audio',  # Mute audio
+                '--no-first-run',  # Skip first run
+                '--no-sandbox',  # Disable sandbox (use with caution)
+                '--disable-setuid-sandbox',  # Disable setuid sandbox
+                # '--single-process',  # Use single process (reduces memory usage) - disabled due to stability issues
+                '--memory-pressure-off',  # Turn off memory pressure
+                '--max_old_space_size=4096',  # Limit memory usage
+            ]
+        )
         page = await browser.new_page()
+        
+        # Set page-level performance optimizations
+        await page.set_viewport_size({"width": 800, "height": 600})  # Smaller viewport
+        
+        # Block unnecessary resources to reduce CPU usage
+        await page.route("**/*.{png,jpg,jpeg,gif,svg,ico,woff,woff2,ttf,eot}", lambda route: route.abort())
+        # await page.route("**/*.{css}", lambda route: route.abort())  # Block CSS files - disabled due to stability issues
+        
+        await page.add_init_script("""
+            // Disable animations and transitions
+            const style = document.createElement('style');
+            style.textContent = '* { animation: none !important; transition: none !important; }';
+            document.head.appendChild(style);
+        """)
         
         try:
             await page.goto(base_url, wait_until="networkidle", timeout=60000)
@@ -249,7 +291,7 @@ async def run():
         results = []
 
         # Process URLs in parallel batches
-        batch_size = 50  # Process 50 pages at a time
+        batch_size = 25  # Process 25 pages at a time (reduced for lower CPU usage)
         logger.info(f"\n🚀 Processing {len(detail_links)} pages in parallel batches of {batch_size}...")
         
         for i in range(0, len(detail_links), batch_size):
@@ -272,6 +314,9 @@ async def run():
                         }
                 
                 results.extend(batch_results)
+                
+                # Add a small delay between batches to reduce CPU load
+                await asyncio.sleep(1)
             except Exception as e:
                 logger.error(f"Error processing batch {i//batch_size + 1}: {e}")
                 # Add error entries for this batch
@@ -320,6 +365,12 @@ async def process_single_page(url, browser, max_retries=3):
     
     for attempt in range(max_retries):
         detail_page = await browser.new_page()
+        
+        # Apply performance optimizations to detail pages
+        await detail_page.set_viewport_size({"width": 800, "height": 600})
+        await detail_page.route("**/*.{png,jpg,jpeg,gif,svg,ico,woff,woff2,ttf,eot}", lambda route: route.abort())
+        # await detail_page.route("**/*.{css}", lambda route: route.abort())  # Disabled due to stability issues
+        
         current_wait_time = wait_times[min(attempt, len(wait_times) - 1)]
         
         try:
