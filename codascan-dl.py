@@ -289,44 +289,76 @@ async def run():
 
         # Store results for file output
         results = []
+        failed_parties = []  # Track parties that failed for retry
 
-        # Process URLs in parallel batches
+        # Process URLs in parallel batches with multiple passes
         batch_size = 25  # Process 25 pages at a time (reduced for lower CPU usage)
+        max_passes = 3  # Maximum number of retry passes
+        
         logger.info(f"\n🚀 Processing {len(detail_links)} pages in parallel batches of {batch_size}...")
         
-        for i in range(0, len(detail_links), batch_size):
-            batch = detail_links[i:i + batch_size]
-            logger.info(f"\n📦 Processing batch {i//batch_size + 1}/{(len(detail_links) + batch_size - 1)//batch_size}")
+        # First pass - process all parties
+        current_links = detail_links.copy()
+        
+        for pass_num in range(1, max_passes + 1):
+            if not current_links:
+                logger.info(f"✅ No more parties to process in pass {pass_num}")
+                break
+                
+            logger.info(f"\n🔄 PASS {pass_num}/{max_passes} - Processing {len(current_links)} parties...")
             
-            # Process batch in parallel with better error handling
-            try:
-                batch_results = await asyncio.gather(*[process_single_page(url, browser) for url in batch], return_exceptions=True)
+            # Process current batch of links
+            for i in range(0, len(current_links), batch_size):
+                batch = current_links[i:i + batch_size]
+                logger.info(f"\n📦 Processing batch {i//batch_size + 1}/{(len(current_links) + batch_size - 1)//batch_size}")
                 
-                # Handle exceptions from gather
-                for j, result in enumerate(batch_results):
-                    if isinstance(result, Exception):
-                        party_name = extract_party_name_from_url(batch[j])
-                        logger.error(f"   ❌ {party_name}: Exception in batch processing - {result}")
-                        batch_results[j] = {
+                # Process batch in parallel with better error handling
+                try:
+                    batch_results = await asyncio.gather(*[process_single_page(url, browser, pass_num) for url in batch], return_exceptions=True)
+                    
+                    # Handle exceptions from gather
+                    for j, result in enumerate(batch_results):
+                        if isinstance(result, Exception):
+                            party_name = extract_party_name_from_url(batch[j])
+                            logger.error(f"   ❌ {party_name}: Exception in batch processing - {result}")
+                            batch_results[j] = {
+                                "party": party_name,
+                                "balance": f"Batch Error: {str(result)}",
+                                "url": batch[j]
+                            }
+                    
+                    # Add successful results to final results
+                    for result in batch_results:
+                        if isinstance(result, dict):
+                            results.append(result)
+                            # If this party failed, add to retry list for next pass
+                            if result.get('balance') == 'Not found' or 'Error:' in str(result.get('balance', '')):
+                                failed_parties.append(result['url'])
+                    
+                    # Add a small delay between batches to reduce CPU load
+                    await asyncio.sleep(1)
+                except Exception as e:
+                    logger.error(f"Error processing batch {i//batch_size + 1}: {e}")
+                    # Add error entries for this batch
+                    for url in batch:
+                        party_name = extract_party_name_from_url(url)
+                        results.append({
                             "party": party_name,
-                            "balance": f"Batch Error: {str(result)}",
-                            "url": batch[j]
-                        }
-                
-                results.extend(batch_results)
-                
-                # Add a small delay between batches to reduce CPU load
-                await asyncio.sleep(1)
-            except Exception as e:
-                logger.error(f"Error processing batch {i//batch_size + 1}: {e}")
-                # Add error entries for this batch
-                for url in batch:
-                    party_name = extract_party_name_from_url(url)
-                    results.append({
-                        "party": party_name,
-                        "balance": f"Batch Error: {str(e)}",
-                        "url": url
-                    })
+                            "balance": f"Batch Error: {str(e)}",
+                            "url": url
+                        })
+                        failed_parties.append(url)
+            
+            # Update current_links for next pass (only failed parties)
+            current_links = failed_parties.copy()
+            failed_parties = []  # Reset for next pass
+            
+            if current_links:
+                logger.info(f"🔄 Pass {pass_num} complete. {len(current_links)} parties failed, retrying in pass {pass_num + 1}...")
+                # Add longer delay between passes
+                await asyncio.sleep(5)
+            else:
+                logger.info(f"✅ Pass {pass_num} complete. All parties processed successfully!")
 
         # Write results to file
         logger.info(f"\n💾 Writing results to codascan_balances.txt...")
@@ -354,14 +386,22 @@ async def run():
 
         await browser.close()
 
-async def process_single_page(url, browser, max_retries=3):
+async def process_single_page(url, browser, pass_num=1):
     """Process a single page and extract balance with retry logic"""
     # Extract party name from URL
     party_name = extract_party_name_from_url(url)
     logger.info(f"   🔍 Processing: {party_name}")
     
-    # Progressive wait times: 15s, 25s, 35s
-    wait_times = [15000, 25000, 35000]
+    # Progressive wait times based on pass number
+    if pass_num == 1:
+        wait_times = [15000, 25000, 35000]  # Standard wait times
+        max_retries = 3
+    elif pass_num == 2:
+        wait_times = [25000, 35000, 45000]  # Longer wait times for retry
+        max_retries = 3
+    else:  # pass_num == 3
+        wait_times = [35000, 45000, 60000]  # Even longer wait times for final attempt
+        max_retries = 3
     
     for attempt in range(max_retries):
         detail_page = await browser.new_page()
@@ -378,7 +418,7 @@ async def process_single_page(url, browser, max_retries=3):
             await detail_page.goto(url, wait_until="domcontentloaded", timeout=45000)
             
             # Wait for dynamic content to load with progressive timing
-            logger.info(f"   ⏱️ Attempt {attempt + 1}/{max_retries} - Waiting {current_wait_time/1000}s for content...")
+            logger.info(f"   ⏱️ Pass {pass_num}, Attempt {attempt + 1}/{max_retries} - Waiting {current_wait_time/1000}s for content...")
             await detail_page.wait_for_timeout(current_wait_time)
             
             # Try to wait for specific elements that might contain balance
@@ -473,7 +513,7 @@ async def process_single_page(url, browser, max_retries=3):
                 
         except Exception as e:
             error_msg = str(e)
-            logger.warning(f"   ⚠️ {party_name}: Attempt {attempt + 1}/{max_retries} failed - {error_msg}")
+            logger.warning(f"   ⚠️ {party_name}: Pass {pass_num}, Attempt {attempt + 1}/{max_retries} failed - {error_msg}")
             
             # Check if it's a network error that might be retryable
             if any(network_error in error_msg.lower() for network_error in ['timeout', 'network', 'connection', 'socket']):
@@ -490,7 +530,7 @@ async def process_single_page(url, browser, max_retries=3):
             await detail_page.close()
     
     # All retries failed
-    logger.error(f"   ❌ {party_name}: All {max_retries} attempts failed")
+    logger.error(f"   ❌ {party_name}: All {max_retries} attempts failed in pass {pass_num}")
     return {
         "party": party_name,
         "balance": f"Error: {error_msg}",
@@ -585,30 +625,44 @@ def extract_balance_from_html(html_content, text_content):
     return None
 
 def extract_party_name_from_url(url):
-    """Extract party name from URL (part before ::)"""
+    """Extract party name from URL"""
     try:
-        # Extract the party ID part from the URL
-        # URL format: https://www.cantonscan.com/party/sendit%3A%3A1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2
-        party_part = url.split('/party/')[-1]
-        # Decode URL encoding (%3A becomes :)
-        decoded_part = urllib.parse.unquote(party_part)
-        # Extract part before ::
-        party_name = decoded_part.split('::')[0]
-        return party_name
-    except:
-        return "Unknown"
+        # Parse the URL
+        parsed = urllib.parse.urlparse(url)
+        path_parts = parsed.path.split('/')
+        
+        # Look for the party name in the path
+        for part in path_parts:
+            if part and part != 'party':
+                # URL decode the part
+                decoded_part = urllib.parse.unquote(part)
+                # Remove any query parameters or fragments
+                clean_part = decoded_part.split('?')[0].split('#')[0]
+                return clean_part
+        
+        return "unknown"
+    except Exception as e:
+        logger.error(f"Error extracting party name from URL {url}: {e}")
+        return "unknown"
 
 def extract_party_id_from_url(url):
-    """Extract full party ID (name::hash) from URL"""
+    """Extract party ID from URL"""
     try:
-        # Extract the party ID part from the URL
-        # URL format: https://www.cantonscan.com/party/sendit%3A%3A1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2
-        party_part = url.split('/party/')[-1]
-        # Decode URL encoding (%3A becomes :)
-        decoded_part = urllib.parse.unquote(party_part)
-        # Return the full party ID (name::hash)
-        return decoded_part
-    except:
-        return "Unknown"
+        # Parse the URL
+        parsed = urllib.parse.urlparse(url)
+        path_parts = parsed.path.split('/')
+        
+        # Look for the party ID (the part after the last colon)
+        for part in path_parts:
+            if '::' in part:
+                # URL decode the part
+                decoded_part = urllib.parse.unquote(part)
+                return decoded_part
+        
+        return "unknown"
+    except Exception as e:
+        logger.error(f"Error extracting party ID from URL {url}: {e}")
+        return "unknown"
 
-asyncio.run(run())
+if __name__ == "__main__":
+    asyncio.run(run())
