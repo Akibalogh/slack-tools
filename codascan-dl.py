@@ -625,44 +625,31 @@ def extract_balance_from_html(html_content, text_content):
     return None
 
 def extract_party_name_from_url(url):
-    """Extract party name from URL"""
+    """Extract party name from URL (part before ::)"""
     try:
-        # Parse the URL
-        parsed = urllib.parse.urlparse(url)
-        path_parts = parsed.path.split('/')
-        
-        # Look for the party name in the path
-        for part in path_parts:
-            if part and part != 'party':
-                # URL decode the part
-                decoded_part = urllib.parse.unquote(part)
-                # Remove any query parameters or fragments
-                clean_part = decoded_part.split('?')[0].split('#')[0]
-                return clean_part
-        
-        return "unknown"
-    except Exception as e:
-        logger.error(f"Error extracting party name from URL {url}: {e}")
-        return "unknown"
+        # Extract the party ID part from the URL
+        # URL format: https://www.cantonscan.com/party/sendit%3A%3A1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2
+        party_part = url.split('/party/')[-1]
+        # Decode URL encoding (%3A becomes :)
+        decoded_part = urllib.parse.unquote(party_part)
+        # Extract part before ::
+        party_name = decoded_part.split('::')[0]
+        return party_name
+    except:
+        return "Unknown"
 
 def extract_party_id_from_url(url):
-    """Extract party ID from URL"""
+    """Extract full party ID (name::hash) from URL"""
     try:
-        # Parse the URL
-        parsed = urllib.parse.urlparse(url)
-        path_parts = parsed.path.split('/')
-        
-        # Look for the party ID (the part after the last colon)
-        for part in path_parts:
-            if '::' in part:
-                # URL decode the part
-                decoded_part = urllib.parse.unquote(part)
-                return decoded_part
-        
-        return "unknown"
-    except Exception as e:
-        logger.error(f"Error extracting party ID from URL {url}: {e}")
-        return "unknown"
+        # Extract the party ID part from the URL
+        # URL format: https://www.cantonscan.com/party/sendit%3A%3A1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2
+        party_part = url.split('/party/')[-1]
+        # Decode URL encoding (%3A becomes :)
+        decoded_part = urllib.parse.unquote(party_part)
+        # Return the full party ID (name::hash)
+        return decoded_part
+    except:
+        return "Unknown"
 
 if __name__ == "__main__":
     asyncio.run(run())
