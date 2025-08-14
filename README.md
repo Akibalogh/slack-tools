@@ -1,165 +1,153 @@
-# CantonScan Balance Scraper
+# RepSplit - Sales Commission Calculator
 
-A Python script that automatically scrapes wallet balances for all parties on [CantonScan](https://cantonscan.com/). This tool extracts balance data from the Canton blockchain explorer and outputs it in a format ready for analysis.
+RepSplit analyzes private Slack channels ending with `-bitsafe` to calculate commission splits based on deal stage participation for your sales team.
 
-## 🚀 Features
+## Features
 
-- **Automated scraping** of all party balances from CantonScan
-- **Full party ID extraction** (name::hash format)
-- **CPU-optimized** with resource blocking and performance enhancements
-- **Progressive retry logic** with increasing wait times (15s, 25s, 35s)
-- **Comprehensive error handling** and logging
-- **Batch processing** for efficient memory usage
-- **100% success rate** with robust error recovery
+- **Automatic Stage Detection**: Uses keyword patterns to identify deal stages
+- **Commission Calculation**: Applies configurable weights and rules for fair distribution
+- **Audit Trail**: Every commission allocation is backed by specific message references
+- **Flexible Configuration**: Customizable stage weights, keywords, and participant settings
 
-## 📋 Requirements
+## Sales Team
 
-- Python 3.7+
-- Playwright
-- Virtual environment (recommended)
+**Commission-Earning Members:**
+- Aki (Founder cap applies)
+- Addie
+- Amy  
+- Mayank
 
-## 🛠️ Installation
+**Non-Commission Members:**
+- Prateek
+- Will
+- Kadeem
 
-1. **Clone the repository:**
+## Setup
+
+### 1. Create Slack App
+
+1. Go to [api.slack.com/apps](https://api.slack.com/apps)
+2. Click "Create New App" → "From scratch"
+3. Name: `RepSplit` (or your preferred name)
+4. Select your workspace
+
+### 2. Configure OAuth Scopes
+
+Add these **User Token Scopes**:
+- `groups:read` - Read private channels
+- `groups:history` - Read private channel messages  
+- `users:read` - Read user information
+- `team:read` - Read workspace information
+
+### 3. Install App
+
+1. Go to "OAuth & Permissions" in your app settings
+2. Click "Install to Workspace"
+3. Copy the **User OAuth Token** (starts with `xoxp-`)
+
+### 4. Configure RepSplit
+
+1. Edit `config.json`:
+   - Replace `xoxp-your-slack-token-here` with your actual token
+   - Update participant information (Slack IDs, display names, emails)
+
+2. Install dependencies:
    ```bash
-   git clone https://github.com/Akibalogh/slack-tools.git
-   cd slack-tools
+   pip install -r requirements.txt
    ```
 
-2. **Create and activate virtual environment:**
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+## Usage
 
-3. **Install dependencies:**
-   ```bash
-   pip install playwright
-   playwright install chromium
-   ```
+### 1. Ingest Slack Data
 
-## 🎯 Usage
-
-### Basic Usage
-
-Run the script to scrape all party balances:
+Download data from your `-bitsafe` channels:
 
 ```bash
-python3 codascan-dl.py
+python slack_ingest.py
 ```
 
-### Output
+This will:
+- Find all private channels ending with `-bitsafe`
+- Download message history (test mode: 1 channel, full mode: all channels)
+- Store data in local SQLite database
 
-The script generates a `codascan_balances.txt` file with the following format:
+### 2. Run Commission Analysis
 
-```
-Party Name	Party ID	Balance	URL
-meria	meria::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2	9,704.3101	https://www.cantonscan.com/party/meria%3A%3A1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2
-digik	digik::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2	9,704.3375	https://www.cantonscan.com/party/digik%3A%3A1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2
-...
-```
+Calculate commission splits:
 
-### Google Sheets Integration
-
-1. Run the script to generate `codascan_balances.txt`
-2. Open the [Google Sheets template](https://drive.google.com/open?id=1B2MXcW24vYuKx7-tUFiw9HcdFbmYc9-asIwQB_Iaeu0&usp=chrome_ntp)
-3. Go to the "Balances" tab
-4. Copy and paste the contents of `codascan_balances.txt` into the sheet
-
-## ⚡ Performance Optimizations
-
-The script includes several optimizations to minimize CPU usage:
-
-- **Browser optimizations**: Disabled GPU, extensions, plugins, images
-- **Resource blocking**: Blocks unnecessary files (images, fonts, CSS)
-- **Batch processing**: Processes 25 parties at a time
-- **Progressive waits**: Increases wait time on retries
-- **Memory management**: Limited memory usage and smaller viewports
-
-## 📊 Sample Results
-
-The script typically processes **238+ parties** with:
-- **100% success rate** (all parties processed)
-- **Zero errors** (robust error handling)
-- **Complete data extraction** (party names, IDs, balances, URLs)
-
-### Top Balances Example:
-```
-cbtc-treasury-1: 1,901,015.7898 CC
-iBTC-validator-1: 2,864,444.8496 CC
-bitsafe-minter: 199,124.3593 CC
-sendit-minter: 199,050.3247 CC
-obsidian-minter: 197,775.9827 CC
+```bash
+python repsplit.py
 ```
 
-## 🔧 Configuration
+This will:
+- Analyze message content for deal stage signals
+- Calculate commission percentages per participant
+- Generate detailed justifications
+- Output CSV files with results
 
-### Test Mode
-Set `TEST_MODE = True` in the script to process only the first few parties for testing.
+## Output Files
 
-### Batch Size
-Adjust `batch_size = 25` to change the number of parties processed simultaneously.
+- **`deal_splits.csv`**: Commission splits per deal/channel
+- **`person_rollup.csv`**: Total commission percentages per person
+- **`deal_outline.txt`**: Typical deal stage progression
+- **`justifications/`**: Detailed markdown files per deal
 
-### Wait Times
-Modify the `wait_times` list to adjust retry intervals:
-```python
-wait_times = [15, 25, 35]  # seconds for each retry attempt
-```
+## Deal Stages & Weights
 
-## 📝 Logging
+| Stage | Weight | Keywords |
+|-------|--------|----------|
+| **first_touch** | 15% | intro, introduce, connect, loop in, reached out |
+| **discovery** | 25% | use case, requirements, scope, pain, timeline |
+| **solutioning** | 20% | proposal, deck, spec, POC, integration, API |
+| **negotiation** | 20% | price, discount, terms, MSA, SOW, quote |
+| **scheduling_ops** | 10% | Calendly, schedule, agenda, follow up, notes |
+| **closing** | 10% | signed, countersigned, PO, invoice, closed won |
 
-The script generates detailed logs in `codascan_scraper.log` including:
-- Processing progress
-- Error details
-- Performance metrics
-- Debug information
+## Commission Rules
 
-## 🐛 Troubleshooting
+- **Diminishing Returns**: Repeated contributions in same stage get reduced weight
+- **Founder Cap**: Aki capped at 30% unless in negotiation/closing stages
+- **Presence Floor**: Minimum 5% for any participant in channel
+- **Closer Bonus**: Additional 2% for closing stage participants
+
+## Configuration
+
+Edit `config.json` to customize:
+- Stage weights and keywords
+- Participant information
+- Commission rules and thresholds
+- Slack API settings
+
+## Privacy & Security
+
+- All data stored locally in SQLite database
+- No data uploaded to external services
+- Slack token stored in local config file only
+- Full audit trail for transparency
+
+## Troubleshooting
 
 ### Common Issues
 
-1. **Playwright not installed:**
-   ```bash
-   pip install playwright
-   playwright install chromium
-   ```
+1. **"Slack token not found"**: Check `config.json` has valid token
+2. **"No channels found"**: Verify app has correct OAuth scopes
+3. **"Permission denied"**: Ensure app is installed in workspace
+4. **Rate limiting**: Tool includes delays, but may need adjustment for large workspaces
 
-2. **Memory issues:**
-   - Reduce batch size in the script
-   - Close other applications
-   - Ensure sufficient RAM available
+### Logs
 
-3. **Network timeouts:**
-   - Check internet connection
-   - Increase timeout values in the script
-   - Try running during off-peak hours
+Check these log files for detailed information:
+- `slack_ingest.log` - Ingestion process logs
+- `repsplit.log` - Analysis process logs
 
-### Debug Mode
+## Support
 
-The script includes debug logging. Check the log file for detailed information about any issues.
+For issues or questions:
+1. Check the logs for error details
+2. Verify Slack app configuration
+3. Ensure all dependencies are installed
+4. Check database file permissions
 
-## 📈 Data Analysis
+## License
 
-The generated data can be used for:
-- **Balance tracking** across all parties
-- **Trend analysis** over time
-- **Network health monitoring**
-- **Party activity analysis**
-
-## 🤝 Contributing
-
-Feel free to submit issues and enhancement requests!
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 🔗 Links
-
-- **Script**: [codascan-dl.py](https://github.com/Akibalogh/slack-tools/blob/main/codascan-dl.py)
-- **Google Sheets Template**: [CantonScan Balances](https://drive.google.com/open?id=1B2MXcW24vYuKx7-tUFiw9HcdFbmYc9-asIwQB_Iaeu0&usp=chrome_ntp)
-- **CantonScan**: [https://cantonscan.com/](https://cantonscan.com/)
-
----
-
-**Note**: This tool is designed for educational and research purposes. Please respect the website's terms of service and rate limits when using this scraper. 
+Internal tool for sales commission calculation. 

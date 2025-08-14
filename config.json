@@ -1,0 +1,106 @@
+{
+  "slack_token": "TOKEN_STORED_IN_LOCAL_CONFIG",
+  "stages": [
+    {
+      "name": "sourcing_intro",
+      "weight": 8.0,
+      "keywords": ["intro", "connect", "loop in", "reached out", "waitlist", "referral"]
+    },
+    {
+      "name": "discovery_qual",
+      "weight": 12.0,
+      "keywords": ["questions", "requirements", "use case", "needs", "challenge", "timeline"]
+    },
+    {
+      "name": "solution_presentation",
+      "weight": 32.0,
+      "keywords": ["credential", "rewards", "CC", "CBTC", "overview", "explain", "how it works"]
+    },
+    {
+      "name": "technical_discussion",
+      "weight": 5.0,
+      "keywords": ["API", "integration", "technical", "architecture", "implementation", "script"]
+    },
+    {
+      "name": "pricing_terms",
+      "weight": 8.0,
+      "keywords": ["$6000", "cost", "payment", "billing", "subscription", "pricing"]
+    },
+    {
+      "name": "contract_legal",
+      "weight": 15.0,
+      "keywords": ["MSA", "contract", "agreement", "terms", "legal", "docusign", "dropbox sign"]
+    },
+    {
+      "name": "scheduling_coordination",
+      "weight": 8.0,
+      "keywords": ["Calendly", "schedule", "meeting", "call", "demo", "follow up"]
+    },
+    {
+      "name": "closing_onboarding",
+      "weight": 12.0,
+      "keywords": ["signed", "accept", "onboard", "credential issued", "go live", "activate"]
+    }
+  ],
+  "participants": [
+    {
+      "name": "Aki",
+      "slack_id": "",
+      "display_name": "",
+      "email": "",
+      "founder_cap": true,
+      "earns_commission": true
+    },
+    {
+      "name": "Addie",
+      "slack_id": "U092B2GUASF",
+      "display_name": "Addie Tackman",
+      "email": "",
+      "founder_cap": false,
+      "earns_commission": true
+    },
+    {
+      "name": "Amy",
+      "slack_id": "U092DKJ8L4Q",
+      "display_name": "Amy Wu",
+      "email": "",
+      "founder_cap": false,
+      "earns_commission": true
+    },
+    {
+      "name": "Mayank",
+      "slack_id": "",
+      "display_name": "",
+      "email": "",
+      "founder_cap": false,
+      "earns_commission": true
+    },
+    {
+      "name": "Prateek",
+      "slack_id": "",
+      "display_name": "",
+      "email": "",
+      "founder_cap": false,
+      "earns_commission": false
+    },
+    {
+      "name": "Will",
+      "slack_id": "",
+      "display_name": "",
+      "email": "",
+      "founder_cap": false,
+      "earns_commission": false
+    },
+    {
+      "name": "Kadeem",
+      "slack_id": "",
+      "display_name": "",
+      "email": "",
+      "founder_cap": false,
+      "earns_commission": false
+    }
+  ],
+  "diminishing_returns": 0.8,
+  "presence_floor": 5.0,
+  "closer_bonus": 2.0
+}
