@@ -32,15 +32,23 @@ The system identifies deal stages by analyzing message content using keyword pat
 
 ### 3. Commission Calculation Logic
 
-#### Step 1: Raw Contribution Calculation
+#### Step 1: Internal Team Filtering
 ```
-For each participant in each stage:
+Before calculating contributions:
+- Filter to only include internal team members from config.json
+- Exclude external users (prospects/clients) from commission calculations
+- External users are identified as Slack IDs not in the participants list
+```
+
+#### Step 2: Raw Contribution Calculation
+```
+For each internal participant in each stage:
 - Count messages by participant
 - Apply confidence scores to messages
 - Calculate raw contribution per stage
 ```
 
-#### Step 2: Diminishing Returns
+#### Step 3: Diminishing Returns
 ```
 For repeated contributions in the same stage:
 - First contribution: 100% weight
@@ -48,7 +56,7 @@ For repeated contributions in the same stage:
 - Third+ contribution: 25% weight (configurable)
 ```
 
-#### Step 3: Stage Weight Application
+#### Step 4: Stage Weight Application
 ```
 For each stage:
 - Apply stage weight (e.g., Solution Presentation = 32%)
@@ -57,7 +65,7 @@ For each stage:
   → Aki gets: 32% × 60% = 19.2% commission
 ```
 
-#### Step 4: Business Rules Application
+#### Step 5: Business Rules Application
 
 **Founder Cap (Aki)**
 - Default cap: 30% of total commission
@@ -72,14 +80,14 @@ For each stage:
 - Participants must meet minimum activity level to qualify
 - Prevents very small contributions from receiving commission
 
-#### Step 5: Normalization
+#### Step 6: Normalization
 ```
 - Sum all participant commissions
 - If total ≠ 100%, normalize to 100%
 - If total = 0%, distribute equally among participants
 ```
 
-#### Step 6: 25% Rounding (New Feature)
+#### Step 7: 25% Rounding
 ```
 Final percentages are rounded to nearest 25%:
 - 0-12.5% → 0%
@@ -224,6 +232,41 @@ Enable detailed logging in `repsplit.py` to see:
 - Confidence scores
 - Business rule applications
 - Commission calculation steps
+
+## Recent Improvements (December 2024)
+
+### 1. External User Filtering
+- **Issue**: External users (prospects/clients) were being included in commission calculations
+- **Fix**: Updated logic to only include internal team members defined in `config.json`
+- **Impact**: More accurate commission attribution and cleaner stage breakdown
+
+### 2. Enhanced Rationale Output
+- **New File**: `deal_rationale.csv` with comprehensive deal analysis
+- **Features**: 
+  - Stage-by-stage breakdown showing who handled each sales stage
+  - Contestation level analysis (CLEAR OWNERSHIP, HIGH CONTESTATION, MODERATE CONTESTATION)
+  - Most likely owner recommendation
+  - Detailed rationale explaining commission splits
+
+### 3. Improved Contestation Logic
+- **Before**: 41 deals classified as "MODERATE CONTESTATION"
+- **After**: Only 6 deals as "MODERATE CONTESTATION", 55 as "CLEAR OWNERSHIP"
+- **Logic**: More aggressive identification of clear ownership (60%+ or 40%+ with ≤2 participants)
+
+### 4. User ID Mapping Bug Fix
+- **Issue**: Participants like Addie were showing 0% commission despite active participation
+- **Root Cause**: User ID mapping was failing due to empty display names in config
+- **Fix**: Updated mapping to use Slack IDs as primary identifier, with fallback to display names
+
+### 5. External User Filtering (Critical Fix)
+- **Issue**: External users (prospects/clients) were being included in commission calculations and stage breakdowns
+- **Problem**: External users like `U047SRHJQ5T` (External-JQ5T) were getting commission credit for participating in sales conversations
+- **Root Cause**: Stage detection was counting ALL message authors, not just internal team members
+- **Fix**: Updated commission calculation and stage breakdown to only include internal team members defined in `config.json`
+- **Impact**: 
+  - Dramatically improved contestation analysis (66 CLEAR OWNERSHIP vs 55 before)
+  - Eliminated confusing "External-XXXX" entries in stage breakdowns
+  - More accurate commission attribution (e.g., chata-ai-bitsafe now correctly shows Addie 100% vs 0% before)
 
 ## Future Enhancements
 

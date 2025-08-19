@@ -58,6 +58,26 @@ class SlackIngest:
     
 
     
+    def is_data_fresh(self) -> bool:
+        """Check if data is less than 30 days old"""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute('SELECT MAX(timestamp) FROM messages')
+        result = cursor.fetchone()
+        conn.close()
+        
+        if not result or not result[0]:
+            return False
+        
+        # Check if most recent message is less than 30 days old
+        latest_timestamp = result[0]
+        if isinstance(latest_timestamp, str):
+            latest_timestamp = float(latest_timestamp)
+        
+        days_old = (datetime.now().timestamp() - latest_timestamp) / (24 * 3600)
+        return days_old < 30
+    
     def init_database(self):
         """Initialize SQLite database with required tables"""
         conn = sqlite3.connect(self.db_path)
@@ -349,12 +369,17 @@ class SlackIngest:
 
 async def main():
     """Main entry point"""
+    import sys
+    
+    force_refresh = "--force-refresh" in sys.argv
+    test_mode = "--test" in sys.argv
+    
     print("Slack Ingestion Tool for RepSplit")
     print("=================================")
     
     try:
         ingest = SlackIngest()
-        await ingest.ingest_data(test_mode=True)
+        await ingest.ingest_data(test_mode=test_mode, force_refresh=force_refresh)
         print("\n✅ Ingestion complete! You can now run RepSplit analysis.")
         
     except Exception as e:
