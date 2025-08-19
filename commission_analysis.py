@@ -12,7 +12,23 @@ Analyzes commission splits and effort percentages for all customers based on:
 import sqlite3
 import json
 from collections import defaultdict
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Optional
+from datetime import datetime
+
+def round_to_nearest_25(percentage: float) -> float:
+    """Round a percentage to the nearest 25% (25, 50, 75, or 100)"""
+    if percentage <= 0:
+        return 0.0
+    elif percentage <= 12.5:
+        return 0.0
+    elif percentage <= 37.5:
+        return 25.0
+    elif percentage <= 62.5:
+        return 50.0
+    elif percentage <= 87.5:
+        return 75.0
+    else:
+        return 100.0
 
 class CommissionAnalyzer:
     def __init__(self):
@@ -215,9 +231,10 @@ class CommissionAnalyzer:
                 if participant_name == "Aki" and base_commission > self.commission_rules["founder_cap"]:
                     base_commission = self.commission_rules["founder_cap"]
                 
+                # Round commission percentage to nearest 25%
                 commission_splits[participant_name] = {
                     "effort_percentage": effort_pct,
-                    "commission_percentage": base_commission * 100,
+                    "commission_percentage": round_to_nearest_25(base_commission * 100),
                     "commission_amount": base_commission * revenue
                 }
         
@@ -398,7 +415,7 @@ def main():
         print(f"    Sourced: {result['sourced_by']}, Owned: {result['owned_by']}, Closed: {result['closed']}")
         for participant, data in result["commission_splits"].items():
             if data["commission_percentage"] > 0:
-                print(f"    - {participant}: {data['effort_percentage']:.1f}% effort, {data['commission_percentage']:.1f}% commission (${data['commission_amount']:,.0f})")
+                print(f"    - {participant}: {data['effort_percentage']:.1f}% effort, {data['commission_percentage']:.0f}% commission (${data['commission_amount']:,.0f})")
         print()
     
     analyzer.close()

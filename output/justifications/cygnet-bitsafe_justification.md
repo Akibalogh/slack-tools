@@ -6,15 +6,25 @@
 
 ## Commission Splits
 
-- **U094P1Z6F9Q:** 11.1%
-- **Aki:** 11.1%
-- **Dave Shin:** 11.1%
-- **Amy Wu:** 11.1%
-- **Mayank:** 11.1%
-- **:** 11.1%
-- **Addie Tackman:** 11.1%
-- **U047SRHJQ5T:** 11.1%
-- **Slackbot:** 11.1%
+- **U094P1Z6F9Q:** 25.0%
+- **Aki:** 25.0%
+- **Dave Shin:** 0.0%
+- **Amy Wu:** 0.0%
+- **Mayank:** 0.0%
+- **:** 0.0%
+- **Addie Tackman:** 0.0%
+- **U047SRHJQ5T:** 0.0%
+- **Slackbot:** 0.0%
 
 ## Stage Analysis
+
+### Sourcing Intro
+
+- **2025-08-13 16:55:28** - Aki (confidence: 0.47)
+  > Let me loop in my colleagues also, as an FYI
+
+### Scheduling Coordination
+
+- **2025-08-13 16:56:37** - Aki (confidence: 0.47)
+  > Grab a spot with me here? <https://calendly.com/akibalogh>
 

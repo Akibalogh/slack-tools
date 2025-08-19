@@ -46,6 +46,21 @@ class Participant:
     founder_cap: bool = False
     closer_bonus: bool = False
 
+def round_to_nearest_25(percentage: float) -> float:
+    """Round a percentage to the nearest 25% (25, 50, 75, or 100)"""
+    if percentage <= 0:
+        return 0.0
+    elif percentage <= 12.5:
+        return 0.0
+    elif percentage <= 37.5:
+        return 25.0
+    elif percentage <= 62.5:
+        return 50.0
+    elif percentage <= 87.5:
+        return 75.0
+    else:
+        return 100.0
+
 class RepSplit:
     def __init__(self, config_file: str = "config.json"):
         self.config_file = config_file
@@ -337,6 +352,9 @@ class RepSplit:
         # Get commission splits
         commissions = self.calculate_commission_splits(conv_id)
         
+        # Round percentages to nearest 25%
+        rounded_commissions = {p: round_to_nearest_25(v) for p, v in commissions.items()}
+        
         # Generate markdown file
         justification_file = self.justifications_dir / f"{conv_name}_justification.md"
         
@@ -347,7 +365,7 @@ class RepSplit:
             f.write(f"**Members:** {conv_data[2]}\n\n")
             
             f.write("## Commission Splits\n\n")
-            for participant_id, percentage in commissions.items():
+            for participant_id, percentage in rounded_commissions.items():
                 cursor.execute('SELECT display_name FROM users WHERE id = ?', (participant_id,))
                 display_name = cursor.fetchone()
                 name = display_name[0] if display_name else participant_id
@@ -400,9 +418,12 @@ class RepSplit:
             # Calculate splits
             commissions = self.calculate_commission_splits(conv_id)
             
+            # Round percentages to nearest 25%
+            rounded_commissions = {p: round_to_nearest_25(v) for p, v in commissions.items()}
+            
             # Map to participant names
             participant_names = {}
-            for participant_id, percentage in commissions.items():
+            for participant_id, percentage in rounded_commissions.items():
                 conn = sqlite3.connect(self.db_path)
                 cursor = conn.cursor()
                 cursor.execute('SELECT display_name FROM users WHERE id = ?', (participant_id,))
@@ -432,7 +453,7 @@ class RepSplit:
                 "Kadeem": 0.0
             }
             
-            for participant_id, percentage in commissions.items():
+            for participant_id, percentage in rounded_commissions.items():
                 participant_name = participant_names[participant_id]
                 if participant_name in split_record:
                     split_record[participant_name] = percentage

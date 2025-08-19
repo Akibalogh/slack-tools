@@ -8,6 +8,22 @@ import json
 import os
 from collections import defaultdict
 from datetime import datetime
+import re
+
+def round_to_nearest_25(percentage: float) -> float:
+    """Round a percentage to the nearest 25% (25, 50, 75, or 100)"""
+    if percentage <= 0:
+        return 0.0
+    elif percentage <= 12.5:
+        return 0.0
+    elif percentage <= 37.5:
+        return 25.0
+    elif percentage <= 62.5:
+        return 50.0
+    elif percentage <= 87.5:
+        return 75.0
+    else:
+        return 100.0
 
 def load_all_conversations():
     """Load ALL conversation data from Slack export"""
@@ -258,10 +274,11 @@ def comprehensive_company_mapping():
         total_commission = 0
         for user_id, commission in commission_splits.items():
             user_info = sales_team.get(user_id, {"name": "Unknown", "role": "Unknown"})
-            print(f"   {user_info['name']}: {commission:.1f}%")
-            total_commission += commission
+            rounded_commission = round_to_nearest_25(commission)
+            print(f"   {user_info['name']}: {rounded_commission:.0f}%")
+            total_commission += rounded_commission
         
-        print(f"   Total: {total_commission:.1f}%")
+        print(f"   Total: {total_commission:.0f}%")
         
         # Show sample activities
         print(f"\n💬 Sample Activities ({len(activities)} total):")
@@ -291,7 +308,8 @@ def comprehensive_company_mapping():
     for user_id, total_commission in rep_totals.items():
         user_info = sales_team.get(user_id, {"name": "Unknown", "role": "Unknown"})
         companies = rep_companies[user_id]
-        print(f"\n{user_info['name']} ({user_info['role']}): {total_commission:.1f}%")
+        rounded_total = round_to_nearest_25(total_commission)
+        print(f"\n{user_info['name']} ({user_info['role']}): {rounded_total:.0f}%")
         print(f"   Companies: {', '.join(companies[:5])}{'...' if len(companies) > 5 else ''}")
     
     # Save comprehensive results

@@ -6,15 +6,25 @@
 
 ## Commission Splits
 
-- **U076Y3RJRGW:** 11.1%
-- **Aki:** 11.1%
-- **Dave Shin:** 11.1%
-- **Amy Wu:** 11.1%
-- **:** 11.1%
-- **Mayank:** 11.1%
-- **Addie Tackman:** 11.1%
-- **Jesse Eisenberg - Bitsafe:** 11.1%
-- **Slackbot:** 11.1%
+- **U076Y3RJRGW:** 25.0%
+- **Aki:** 25.0%
+- **Dave Shin:** 0.0%
+- **Amy Wu:** 0.0%
+- **:** 0.0%
+- **Mayank:** 0.0%
+- **Addie Tackman:** 0.0%
+- **Jesse Eisenberg - Bitsafe:** 0.0%
+- **Slackbot:** 0.0%
 
 ## Stage Analysis
+
+### Scheduling Coordination
+
+- **2025-08-14 13:45:32** - Aki (confidence: 0.47)
+  > Great meeting you <@U076Y3RJRGW>! Looping in the rest of our BD &amp; Product team
+
+### Solution Presentation
+
+- **2025-08-14 13:45:50** - Aki (confidence: 0.44)
+  > It'd be great to try out CBTC-SBC swaps on CantonSwap next week
 

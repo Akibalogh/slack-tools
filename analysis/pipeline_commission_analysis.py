@@ -8,11 +8,28 @@ import os
 import asyncio
 import aiohttp
 import json
+import sqlite3
 from datetime import datetime
 from dotenv import load_dotenv
+from typing import Dict, List, Any
 
 # Load environment variables
 load_dotenv()
+
+def round_to_nearest_25(percentage: float) -> float:
+    """Round a percentage to the nearest 25% (25, 50, 75, or 100)"""
+    if percentage <= 0:
+        return 0.0
+    elif percentage <= 12.5:
+        return 0.0
+    elif percentage <= 37.5:
+        return 25.0
+    elif percentage <= 62.5:
+        return 50.0
+    elif percentage <= 87.5:
+        return 75.0
+    else:
+        return 100.0
 
 class PipelineCommissionAnalyzer:
     def __init__(self):
@@ -250,7 +267,7 @@ class PipelineCommissionAnalyzer:
         print(f"\n💵 Commission Splits:")
         for user_id, commission in commission_splits.items():
             user_info = self.sales_team.get(user_id, {"name": "Unknown", "role": "Unknown"})
-            print(f"   {user_info['name']} ({user_info['role']}): {commission:.1f}%")
+            print(f"   {user_info['name']} ({user_info['role']}): {round_to_nearest_25(commission):.1f}%")
         
         # Save results
         results = {
