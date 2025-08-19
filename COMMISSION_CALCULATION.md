@@ -168,6 +168,22 @@ total_contribution = (
 6. **Internal Team Only**: External prospects/clients excluded from calculations
 7. **Strategic Weighting**: Relationship building and strategic involvement weighted higher than tactical execution
 
+### Meeting Leadership Rules
+
+**NEW!** When both Aki and Addie are present in a meeting, **Aki is considered the driver** and should receive primary credit:
+
+- **Dual Attendance**: If both Aki and Addie attend the same meeting, Aki receives driving credit
+- **Leadership Recognition**: Aki's strategic role and relationship ownership is acknowledged
+- **Credit Distribution**: Aki gets primary meeting credit, Addie gets supporting credit
+- **Business Context**: Reflects Aki's role as strategic relationship owner and meeting driver
+
+**Example Scenarios:**
+- **Black Manta**: Aki + Addie meetings → Aki drives, Addie supports
+- **Vigil Markets**: Aki + Addie meetings → Aki drives, Addie supports
+- **Solo Meetings**: Individual meetings receive full credit for the attendee
+
+This rule ensures that strategic leadership and relationship ownership are properly recognized in commission calculations, even when multiple team members are present.
+
 ### Protection Mechanisms
 
 - **Anti-Zero Rule**: Participants with >5% contribution cannot be rounded to 0%

@@ -5,6 +5,10 @@ All notable changes to the Slack Tools project will be documented in this file.
 ## [Unreleased]
 
 ### Added
+- **Meeting Leadership Rules**: NEW! When both Aki and Addie are present in a meeting, Aki is considered the driver and receives primary credit
+  - Dual attendance meetings give Aki driving credit, Addie supporting credit
+  - Reflects Aki's strategic role and relationship ownership
+  - Ensures proper recognition of meeting leadership in commission calculations
 - **Addie Slack Export Analysis**: NEW! Comprehensive analysis of Addie's Slack export revealed critical insights about commission calculation accuracy
   - Strategic vs. tactical role recognition (Addie: tactical execution, Aki: strategic relationships)
   - Cross-channel activity missing from current analysis (e.g., Aki adding Finn to cbtc-holders, Soumya to gsf-outreach)

@@ -23,6 +23,16 @@ The system now includes **Google Calendar integration** and **strategic context 
 - **Team Participation Tracking**: Identifies which team members attended each meeting
 - **Comprehensive Coverage**: Includes meetings from the past 180 days
 
+### Meeting Leadership Rules
+
+**NEW!** When both Aki and Addie are present in a meeting, **Aki is considered the driver** and receives primary credit:
+
+- **Dual Attendance**: If both Aki and Addie attend the same meeting, Aki receives driving credit
+- **Leadership Recognition**: Aki's strategic role and relationship ownership is acknowledged
+- **Credit Distribution**: Aki gets primary meeting credit, Addie gets supporting credit
+
+This rule ensures that strategic leadership and relationship ownership are properly recognized in commission calculations.
+
 ### Strategic Context Analysis
 
 Recent analysis of Addie's comprehensive Slack export revealed important insights:
