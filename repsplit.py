@@ -215,7 +215,6 @@ class RepSplit:
             stage_name = stage_config["name"]
             keywords = stage_config["keywords"]
             
-            # Check for keyword matches
             matches = 0
             for keyword in keywords:
                 if keyword.lower() in text_lower:
@@ -223,137 +222,162 @@ class RepSplit:
             
             if matches > 0:
                 # Calculate confidence based on number of keyword matches
-                confidence = min(1.0, matches / len(keywords) + 0.3)
+                # Higher base confidence for multiple matches
+                confidence = min(1.0, 0.3 + (matches * 0.4))
                 detected_stages.append((stage_name, confidence))
         
         return detected_stages
+    
+    def _increment_stage_contribution(self, participant_stats: Dict, stage: str):
+        """Increment stage contribution count for a participant"""
+        if stage not in participant_stats["stage_contributions"]:
+            participant_stats["stage_contributions"][stage] = 0
+        participant_stats["stage_contributions"][stage] += 1
     
     def calculate_commission_splits(self, conv_id: str) -> Dict[str, float]:
         """Calculate commission splits for a specific conversation"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
-        # Get conversation name for logging
-        cursor.execute('SELECT name FROM conversations WHERE conv_id = ?', (conv_id,))
-        conv_name = cursor.fetchone()[0]
+        # Get internal team Slack IDs for filtering
+        internal_slack_ids = {p['slack_id'] for p in self.config['participants'] if p['slack_id']}
         
-        # Get internal team member Slack IDs from config
-        internal_slack_ids = {p["slack_id"] for p in self.config["participants"] if p["slack_id"]}
-        
-        # Get all stage detections for this conversation, but only for internal team members
+        # Get stage detections for internal team members only
         if internal_slack_ids:
-            placeholders = ','.join('?' * len(internal_slack_ids))
+            placeholders = ','.join(['?' for _ in internal_slack_ids])
             cursor.execute(f'''
-                SELECT stage_name, author, confidence
+                SELECT stage_name, author, confidence, timestamp
                 FROM stage_detections 
                 WHERE conv_id = ? AND author IN ({placeholders})
                 ORDER BY timestamp
-            ''', (conv_id,) + tuple(internal_slack_ids))
+            ''', [conv_id] + list(internal_slack_ids))
         else:
-            # Fallback if no internal slack IDs configured
             cursor.execute('''
-                SELECT stage_name, author, confidence
+                SELECT stage_name, author, confidence, timestamp
                 FROM stage_detections 
                 WHERE conv_id = ?
                 ORDER BY timestamp
-            ''', (conv_id,))
+            ''', [conv_id])
         
-        stage_data = cursor.fetchall()
+        stage_detections = cursor.fetchall()
         
-        # Get conversation participants (only internal team members)
+        # Get messages for internal team members only
         if internal_slack_ids:
-            placeholders = ','.join('?' * len(internal_slack_ids))
+            placeholders = ','.join(['?' for _ in internal_slack_ids])
             cursor.execute(f'''
-                SELECT DISTINCT author FROM messages 
+                SELECT author, timestamp
+                FROM messages 
                 WHERE conv_id = ? AND author IN ({placeholders})
-            ''', (conv_id,) + tuple(internal_slack_ids))
+                ORDER BY timestamp
+            ''', [conv_id] + list(internal_slack_ids))
         else:
-            # Fallback if no internal slack IDs configured
             cursor.execute('''
-                SELECT DISTINCT author FROM messages WHERE conv_id = ?
-            ''', (conv_id,))
+                SELECT author, timestamp
+                FROM messages 
+                WHERE conv_id = ?
+                ORDER BY timestamp
+            ''', [conv_id] + list(internal_slack_ids))
         
-        participants = [row[0] for row in cursor.fetchall()]
+        messages = cursor.fetchall()
         
-# Debug logging removed - commission calculation working correctly
+        # Get conversation name for calendar lookup
+        cursor.execute('SELECT name FROM conversations WHERE conv_id = ?', (conv_id,))
+        conv_data = cursor.fetchone()
+        conv_name = conv_data[0] if conv_data else "unknown"
+        conn.close()
         
-        # Initialize commission tracking
-        commissions = {p: 0.0 for p in participants}
-        stage_contributions = {}
+        if not stage_detections and not messages:
+            return {}
         
-        # Process each stage
-        for stage_name, author, confidence in stage_data:
-            if stage_name not in stage_contributions:
-                stage_contributions[stage_name] = {}
+        # Calculate participant contributions
+        participant_stats = {}
+        
+        # Process stage detections
+        for stage_name, author, confidence, timestamp in stage_detections:
+            if author not in participant_stats:
+                participant_stats[author] = {
+                    "total_confidence": 0,
+                    "stage_contributions": {},
+                    "message_count": 0,
+                    "first_message": timestamp,
+                    "last_message": timestamp,
+                    "calendar_meetings": 0
+                }
             
-            if author not in stage_contributions[stage_name]:
-                stage_contributions[stage_name][author] = 0
+            # Add stage contribution
+            if stage_name not in participant_stats[author]["stage_contributions"]:
+                participant_stats[author]["stage_contributions"][stage_name] = 0
+            participant_stats[author]["stage_contributions"][stage_name] += confidence
             
-            # Apply diminishing returns
-            current_contrib = stage_contributions[stage_name][author]
-            diminishing_factor = self.config["diminishing_returns"] ** current_contrib
-            contribution = confidence * diminishing_factor
+            # Update total confidence
+            participant_stats[author]["total_confidence"] += confidence
             
-            stage_contributions[stage_name][author] += 1
-            commissions[author] += contribution
+            # Update timestamp range
+            participant_stats[author]["first_message"] = min(participant_stats[author]["first_message"], timestamp)
+            participant_stats[author]["last_message"] = max(participant_stats[author]["last_message"], timestamp)
         
-        # Debug logging
-# Debug logging removed
+        # Process message counts
+        for author, timestamp in messages:
+            if author not in participant_stats:
+                participant_stats[author] = {
+                    "total_confidence": 0,
+                    "stage_contributions": {},
+                    "message_count": 0,
+                    "first_message": timestamp,
+                    "last_message": timestamp,
+                    "calendar_meetings": 0
+                }
+            
+            participant_stats[author]["message_count"] += 1
+            participant_stats[author]["first_message"] = min(participant_stats[author]["first_message"], timestamp)
+            participant_stats[author]["last_message"] = max(participant_stats[author]["last_message"], timestamp)
+        
+        # Add calendar meeting contributions for in-person interactions
+        self._add_calendar_contributions(conv_name, participant_stats)
+        
+        # Calculate commission splits
+        commission_splits = {}
+        total_contribution = 0
+        
+        for participant_id, stats in participant_stats.items():
+            # Base contribution from stage activity
+            stage_contribution = stats["total_confidence"]
+            
+            # Add message count contribution (weighted less than stage activity)
+            message_contribution = stats["message_count"] * 0.1
+            
+            # Add calendar meeting contribution (weighted higher for in-person interactions)
+            calendar_contribution = stats["calendar_meetings"] * 2.0  # 2x weight for in-person meetings
+            
+            # Add time-based contribution (earlier involvement gets bonus)
+            time_bonus = 0
+            if stats["first_message"] < stats["last_message"]:
+                # Bonus for early involvement
+                time_bonus = 0.2
+            
+            # Total contribution for this participant
+            contribution = stage_contribution + message_contribution + calendar_contribution + time_bonus
+            
+            commission_splits[participant_id] = contribution
+            total_contribution += contribution
         
         # Apply stage weights
-        weighted_commissions = {p: 0.0 for p in participants}
+        weighted_commissions = {p: 0.0 for p in commission_splits.keys()}
         
-        for stage_name, author_contribs in stage_contributions.items():
-            # Find stage config
-            stage_config = next((s for s in self.config["stages"] if s["name"] == stage_name), None)
-            if not stage_config:
-                continue
-            
-            stage_weight = stage_config["weight"]
-            total_contrib = sum(author_contribs.values())
-            
-            if total_contrib > 0:
-                for author, contrib in author_contribs.items():
-                    share = (contrib / total_contrib) * stage_weight
-                    weighted_commissions[author] += share
+        for participant_id, stats in participant_stats.items():
+            for stage_name, stage_confidence in stats["stage_contributions"].items():
+                # Find stage config and weight
+                stage_config = next((s for s in self.config["stages"] if s["name"] == stage_name), None)
+                if stage_config:
+                    stage_weight = stage_config["weight"]
+                    weighted_commissions[participant_id] += stage_confidence * stage_weight
         
-        # Debug logging
-# Debug logging removed
-        
-        # Apply founder cap for Aki (unless they appear in negotiation/closing)
-        aki_id = next((p["slack_id"] for p in self.config["participants"] if p["name"] == "Aki"), None)
-        if aki_id and aki_id in weighted_commissions:
-            # Check if Aki appears in negotiation or closing stages
-            aki_in_later_stages = False
-            for stage_name, author_contribs in stage_contributions.items():
-                if stage_name in ["negotiation", "closing"] and aki_id in author_contribs:
-                    aki_in_later_stages = True
-                    break
-            
-            if not aki_in_later_stages:
-                # Apply founder cap
-                max_aki_share = 30.0  # Cap Aki at 30% unless in later stages
-                if weighted_commissions[aki_id] > max_aki_share:
-                    excess = weighted_commissions[aki_id] - max_aki_share
-                    weighted_commissions[aki_id] = max_aki_share
-                    
-                    # Redistribute excess to other participants
-                    other_participants = [p for p in participants if p != aki_id]
-                    if other_participants:
-                        excess_per_participant = excess / len(other_participants)
-                        for p in other_participants:
-                            weighted_commissions[p] += excess_per_participant
-        
-        # Debug logging
-        # Debug logging removed
+        # No founder cap - Aki can earn full commission based on actual contribution
         
         # Apply presence floor
-        for participant in participants:
+        for participant in weighted_commissions:
             if weighted_commissions[participant] < self.config["presence_floor"]:
                 weighted_commissions[participant] = self.config["presence_floor"]
-        
-        # Debug logging
-        # Debug logging removed
         
         # Normalize to 100%
         total = sum(weighted_commissions.values())
@@ -361,16 +385,16 @@ class RepSplit:
             normalized_commissions = {p: (v / total) * 100 for p, v in weighted_commissions.items()}
         else:
             # Equal split if no contributions
-            normalized_commissions = {p: 100.0 / len(participants) for p in participants}
-        
-        # Debug logging
-        # Debug logging removed
+            normalized_commissions = {p: 100.0 / len(weighted_commissions) for p in weighted_commissions}
         
         # Round to nearest 25% and normalize to ensure sum = 100%
         rounded_commissions = {p: round_to_nearest_25(v) for p, v in normalized_commissions.items()}
         
-        # Debug logging
-        # Debug logging removed
+        # Ensure participants with real contributions don't get rounded down to 0%
+        for participant_id, original_pct in normalized_commissions.items():
+            if original_pct > 5.0 and rounded_commissions[participant_id] == 0.0:
+                # If they had >5% but got rounded to 0%, give them at least 25%
+                rounded_commissions[participant_id] = 25.0
         
         # Check if rounding caused total to exceed 100%
         total_rounded = sum(rounded_commissions.values())
@@ -388,8 +412,83 @@ class RepSplit:
                     else:
                         break
         
-        conn.close()
         return rounded_commissions
+    
+    def _add_calendar_contributions(self, conv_name: str, participant_stats: dict):
+        """Add calendar meeting contributions for in-person interactions"""
+        try:
+            from calendar_commission_analysis import CalendarCommissionAnalysis
+            
+            # Initialize calendar analysis
+            calendar_analysis = CalendarCommissionAnalysis()
+            if not calendar_analysis.authenticate():
+                logger.warning("Could not authenticate with Google Calendar - skipping calendar contributions")
+                return
+            
+            # Extract company name from conversation name (remove '-bitsafe' suffix)
+            company_name = conv_name.replace('-bitsafe', '').replace('_', ' ').title()
+            
+            # Get meeting data for this company
+            meeting_data = calendar_analysis.get_company_meeting_data(company_name, days_back=180)
+            
+            if not meeting_data or not meeting_data.get('overlapping_meetings'):
+                return
+            
+            # Map team member names to participant IDs
+            name_to_id = {}
+            for participant in self.config['participants']:
+                if participant['display_name']:
+                    name_to_id[participant['display_name']] = participant['slack_id']
+            
+            # Add calendar contributions
+            for overlap in meeting_data['overlapping_meetings']:
+                meeting = overlap['meeting']
+                team_participants = overlap['team_participants']
+                
+                # Find the participant ID for each team member
+                for team_member in team_participants:
+                    if team_member in name_to_id:
+                        participant_id = name_to_id[team_member]
+                        if participant_id in participant_stats:
+                            # Add meeting contribution (weighted by duration)
+                            duration_hours = meeting.get('duration_minutes', 60) / 60.0
+                            participant_stats[participant_id]["calendar_meetings"] += duration_hours
+                            
+                            logger.info(f"Added {duration_hours:.1f}h calendar contribution for {team_member} in {company_name}")
+            
+        except ImportError:
+            logger.warning("Calendar integration not available - skipping calendar contributions")
+        except Exception as e:
+            logger.error(f"Error adding calendar contributions: {e}")
+    
+    def get_calendar_summary(self, deal_id: str) -> str:
+        """Get summary of calendar meetings for a deal"""
+        try:
+            from calendar_commission_analysis import CalendarCommissionAnalysis
+            
+            calendar_analysis = CalendarCommissionAnalysis()
+            if not calendar_analysis.authenticate():
+                return "Calendar not accessible"
+            
+            company_name = deal_id.replace('-bitsafe', '').replace('_', ' ').title()
+            meeting_data = calendar_analysis.get_company_meeting_data(company_name, days_back=180)
+            
+            if not meeting_data or not meeting_data.get('overlapping_meetings'):
+                return "No meetings found"
+            
+            # Summarize meetings
+            meeting_summary = []
+            for overlap in meeting_data['overlapping_meetings']:
+                meeting = overlap['meeting']
+                team_participants = overlap['team_participants']
+                duration = meeting.get('duration_minutes', 60)
+                
+                meeting_summary.append(f"{', '.join(team_participants)} ({duration}m)")
+            
+            return "; ".join(meeting_summary)
+            
+        except Exception as e:
+            return f"Calendar error: {str(e)}"
     
     def generate_justification(self, conv_id: str, conv_name: str):
         """Generate detailed justification for commission splits"""
@@ -435,7 +534,37 @@ class RepSplit:
                 name = display_name[0] if display_name else participant_id
                 f.write(f"- **{name}:** {percentage:.1f}%\n")
             
-            f.write("\n## Stage Analysis\n\n")
+            # Add calendar meeting information
+            f.write("\n## Calendar Meetings (In-Person Interactions)\n\n")
+            try:
+                from calendar_commission_analysis import CalendarCommissionAnalysis
+                
+                calendar_analysis = CalendarCommissionAnalysis()
+                if calendar_analysis.authenticate():
+                    company_name = conv_name.replace('-bitsafe', '').replace('_', ' ').title()
+                    meeting_data = calendar_analysis.get_company_meeting_data(company_name, days_back=180)
+                    
+                    if meeting_data and meeting_data.get('overlapping_meetings'):
+                        f.write(f"**Company:** {company_name}\n\n")
+                        f.write("**Meetings Found:**\n\n")
+                        
+                        for overlap in meeting_data['overlapping_meetings']:
+                            meeting = overlap['meeting']
+                            team_participants = overlap['team_participants']
+                            
+                            f.write(f"- **{meeting.get('summary', 'No Title')}**\n")
+                            f.write(f"  - Date: {meeting.get('start_time', 'Unknown')}\n")
+                            f.write(f"  - Duration: {meeting.get('duration_minutes', 0)} minutes\n")
+                            f.write(f"  - Team Participants: {', '.join(team_participants)}\n")
+                            f.write(f"  - Description: {meeting.get('description', 'No description')[:200]}...\n\n")
+                    else:
+                        f.write("No in-person meetings found in calendar data.\n\n")
+                else:
+                    f.write("Could not authenticate with Google Calendar.\n\n")
+            except Exception as e:
+                f.write(f"Calendar integration error: {str(e)}\n\n")
+            
+            f.write("## Stage Analysis\n\n")
             
             current_stage = None
             for stage_name, author_id, timestamp, confidence, display_name, message_text in stage_detections:
@@ -586,6 +715,9 @@ class RepSplit:
             # Get stage-by-stage breakdown
             stage_breakdown = self.get_stage_breakdown(deal_id)
             
+            # Get calendar meeting information
+            calendar_info = self.get_calendar_summary(deal_id)
+            
             # Generate short rationale
             rationale = self.generate_short_rationale(deal_id, split)
             
@@ -597,6 +729,7 @@ class RepSplit:
                 "Amy %": f"{amy_pct:.0f}%",
                 "Contestation Level": contestation_level,
                 "Most Likely Owner": most_likely_owner,
+                "Calendar Meetings": calendar_info,
                 "Sourcing/Intro": stage_breakdown.get("sourcing_intro", "None"),
                 "Discovery/Qual": stage_breakdown.get("discovery_qual", "None"),
                 "Solution": stage_breakdown.get("solution_presentation", "None"),
@@ -612,40 +745,29 @@ class RepSplit:
         # Write rationale CSV
         with open(self.output_dir / "deal_rationale.csv", 'w', newline='') as f:
             fieldnames = ["Company", "Aki %", "Addie %", "Mayank %", "Amy %", "Contestation Level", "Most Likely Owner", 
-                         "Sourcing/Intro", "Discovery/Qual", "Solution", "Objection", "Technical", "Pricing", "Contract", "Scheduling", "Closing", "Rationale"]
+                         "Calendar Meetings", "Sourcing/Intro", "Discovery/Qual", "Solution", "Objection", "Technical", "Pricing", "Contract", "Scheduling", "Closing", "Rationale"]
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             for row in rationale_data:
                 writer.writerow(row)
         
-        logger.info("Generated deal_rationale.csv with contestation levels, stage breakdown, and rationale")
+        logger.info("Generated deal_rationale.csv with contestation levels, stage breakdown, calendar meetings, and rationale")
     
     def get_stage_breakdown(self, deal_id: str) -> Dict[str, str]:
         """Get stage-by-stage breakdown showing who handled each stage"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
-        # Get internal team member Slack IDs from config
+        # Get stage detections for internal team members only
         internal_slack_ids = {p["slack_id"] for p in self.config["participants"] if p["slack_id"]}
         
-        # Get all stage detections for this deal, but only for internal team members
-        if internal_slack_ids:
-            placeholders = ','.join('?' * len(internal_slack_ids))
-            cursor.execute(f'''
-                SELECT stage_name, author, confidence
-                FROM stage_detections 
-                WHERE conv_id = (SELECT conv_id FROM conversations WHERE name = ?) 
-                AND author IN ({placeholders})
-                ORDER BY timestamp
-            ''', (deal_id,) + tuple(internal_slack_ids))
-        else:
-            # Fallback if no internal slack IDs configured
-            cursor.execute('''
-                SELECT stage_name, author, confidence
-                FROM stage_detections 
-                WHERE conv_id = (SELECT conv_id FROM conversations WHERE name = ?)
-                ORDER BY timestamp
-            ''', (deal_id,))
+        cursor.execute('''
+            SELECT stage_name, author, confidence
+            FROM stage_detections 
+            WHERE conv_id = (SELECT conv_id FROM conversations WHERE name = ?) 
+            AND author IN ({})
+            ORDER BY timestamp
+        '''.format(','.join(['?' for _ in internal_slack_ids])), [deal_id] + list(internal_slack_ids))
         
         stage_data = cursor.fetchall()
         conn.close()

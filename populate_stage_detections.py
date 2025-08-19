@@ -49,7 +49,6 @@ class StageDetectionPopulator:
             stage_name = stage_config["name"]
             keywords = stage_config["keywords"]
             
-            # Check for keyword matches
             matches = 0
             for keyword in keywords:
                 if keyword.lower() in text_lower:
@@ -57,7 +56,8 @@ class StageDetectionPopulator:
             
             if matches > 0:
                 # Calculate confidence based on number of keyword matches
-                confidence = min(1.0, matches / len(keywords) + 0.3)
+                # Higher base confidence for multiple matches
+                confidence = min(1.0, 0.3 + (matches * 0.4))
                 detected_stages.append((stage_name, confidence))
         
         return detected_stages
