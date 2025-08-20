@@ -1,0 +1,387 @@
+[
+    {
+        "subtype": "bot_message",
+        "text": "*Hydra X* has joined this channel by invitation from *Global Synchronizer Foundation*.",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1741748957.812219",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Njk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hydra X",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " has joined this channel by invitation from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Global Synchronizer Foundation",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U057HGB61RS",
+        "text": "<@U057HGB61RS> has joined the channel",
+        "inviter": "U07MUJ34JQ0",
+        "type": "message",
+        "ts": "1741748958.093689",
+        "team": "T05FWTX7PMG"
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1741749526.578249",
+        "edited": {
+            "user": "U057HGB61RS",
+            "ts": "1741766149.000000"
+        },
+        "client_msg_id": "84235956-224a-463d-98e2-dee0ecd0ff60",
+        "text": "Thanks <@U03HMUTQ5F0> for the add. Wanted to check on issues relating to Scan API & `scan_txlog`\n\n*Context:*\n• I'm using `scan_txlog` for extracting transactions\n• Realised that `--log-file-path scan_tx.log` results in 76 GB of storage (as of now without complete sync to latest block height yet)\n• While leaving `scan_txlog` running overnight, I ran out of disk space that leads to `scan_txlog` stopping\n• As a result of insufficient disk space, cache.json became corrupted (I assume that it ran of space while writing halfway)\n• My local copy of cache.json looks like this at the end of the file (malformed ending with `:`)\n*Cache.json*\n```...\"00c4b31e26c29f11cab135b3b53e3142d6c0ff28c630699d618c85d063700754c3ca101220df9dc7f83df176433ca810184ec64c4c3e1c47cc5e5b000e2fb9ceb4b0f41c21\": {\"event_id\": \"12209b161a92ecf00f72fda15c12f90b7d32264521ad6792d385922bada29bab24c3:2\", \"template_id\": \"979ec710c3ae3a05cb44edf8461a9b4d7dd2053add95664f94fc89e5f18df80f:Splice.ValidatorLicense:ValidatorLivenessActivityRecord\", \"contract_id\": \"00c4b31e26c29f11cab135b3b53e3142d6c0ff28c630699d618c85d063700754c3ca101220df9dc7f83df176433ca810184ec64c4c3e1c47cc5e5b000e2fb9ceb4b0f41c21\", \"create_arguments\": {\"dso\": \"DSO::1220b1431ef217342db44d516bb9befde802be7d8899637d290895fa58880f19accc\", \"validator\": \"TRIZEGroup-cantonMainnetValidator-1::12206ab3bf15b14410220357d6a6375eb1015f2e7fade1deb449463c2f2a25304889\", \"round\": {\"number\": \"25805\"}}}, \"0034e94efc03bf0a484640b3bcd9ad8f64b9ee8e16db9b3ea5b3efee843e64eb84ca1012209966485d801838aafd5f239e721ca9af86de62189792c0991319592e000d757e\": {\"event_id\": \"1220c9a2a8b5f79670ab051db6861de95b2f4074e98d03f666988fa4c96d038ec16d:2\", \"template_id\": \"979ec710c3ae3a05cb44edf8461a9b4d7dd2053add95664f94fc89e5f18df80f:Splice.ValidatorLicense:ValidatorLivenessActivityRecord\", \"contract_id\": \"0034e94efc03bf0a484640b3bcd9ad8f64b9ee8e16db9b3ea5b3efee843e64eb84ca1012209966485d801838aafd5f239e721ca9af86de62189792c0991319592e000d757e\", \"create_arguments\": {\"dso\": \"DSO::1220b1431ef217342db44d516bb9befde802be7d8899637d290895fa58880f19accc\", \"validator\": ```\n*I believe I'm missing the equivalent of the following (generated with a new build) for the cache.json above:*\n```}, \"record_time\": \"2024-06-25T05:19:55.785384+00:00\", \"synchronizer_id\": \"global-domain::1220b1431ef217342db44d516bb9befde802be7d8899637d290895fa58880f19accc\", \"total_minted\": \"0E-10\", \"total_burnt\": \"0E-10\"}, \"per_round_states\": {}, \"pagination_key\": {\"after_record_time\": \"2024-06-25T05:19:55.785384+00:00\", \"after_migration_id\": 0}}```\n\n*Questions:*\n• How should I fix cache.json so that I can continue extracting raw transactions? I tried running `--rebuild-cache` but it's not doing what I imagine to fix the above issue (repair the corrupted cache.json). I'm unsure what's the correct data or where to get it to fix it manually (doubt this is an elegant method to resolve the issue)\n• Should i keep `--log-file-path scan_tx.log` running since it incurs high storage requirements? Followed it since it is part of the docs\n• While I'm able to rebuild from scratch (taking 1-2 days), it'll be ideal if there is a way to skip cache.json to a specific last known block height\/round\/timestamp? This should be able to resolve the issue and will be a generally useful feature.",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741749526.578249",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1741777466.201129",
+        "reply_users": [
+            "U057HGB61RS"
+        ],
+        "replies": [
+            {
+                "user": "U057HGB61RS",
+                "ts": "1741777466.201129"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eh4Gh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " for the add. Wanted to check on issues relating to Scan API & "
+                            },
+                            {
+                                "type": "text",
+                                "text": "scan_txlog",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Context:",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I'm using "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "scan_txlog",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " for extracting transactions"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Realised that "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "--log-file-path scan_tx.log",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " results in 76 GB of storage (as of now without complete sync to latest block height yet)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "While leaving "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "scan_txlog",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " running overnight, I ran out of disk space that leads to "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "scan_txlog",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " stopping"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "As a result of insufficient disk space, cache.json became corrupted (I assume that it ran of space while writing halfway)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "My local copy of cache.json looks like this at the end of the file (malformed ending with "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ":",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ")"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Cache.json",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "...\"00c4b31e26c29f11cab135b3b53e3142d6c0ff28c630699d618c85d063700754c3ca101220df9dc7f83df176433ca810184ec64c4c3e1c47cc5e5b000e2fb9ceb4b0f41c21\": {\"event_id\": \"12209b161a92ecf00f72fda15c12f90b7d32264521ad6792d385922bada29bab24c3:2\", \"template_id\": \"979ec710c3ae3a05cb44edf8461a9b4d7dd2053add95664f94fc89e5f18df80f:Splice.ValidatorLicense:ValidatorLivenessActivityRecord\", \"contract_id\": \"00c4b31e26c29f11cab135b3b53e3142d6c0ff28c630699d618c85d063700754c3ca101220df9dc7f83df176433ca810184ec64c4c3e1c47cc5e5b000e2fb9ceb4b0f41c21\", \"create_arguments\": {\"dso\": \"DSO::1220b1431ef217342db44d516bb9befde802be7d8899637d290895fa58880f19accc\", \"validator\": \"TRIZEGroup-cantonMainnetValidator-1::12206ab3bf15b14410220357d6a6375eb1015f2e7fade1deb449463c2f2a25304889\", \"round\": {\"number\": \"25805\"}}}, \"0034e94efc03bf0a484640b3bcd9ad8f64b9ee8e16db9b3ea5b3efee843e64eb84ca1012209966485d801838aafd5f239e721ca9af86de62189792c0991319592e000d757e\": {\"event_id\": \"1220c9a2a8b5f79670ab051db6861de95b2f4074e98d03f666988fa4c96d038ec16d:2\", \"template_id\": \"979ec710c3ae3a05cb44edf8461a9b4d7dd2053add95664f94fc89e5f18df80f:Splice.ValidatorLicense:ValidatorLivenessActivityRecord\", \"contract_id\": \"0034e94efc03bf0a484640b3bcd9ad8f64b9ee8e16db9b3ea5b3efee843e64eb84ca1012209966485d801838aafd5f239e721ca9af86de62189792c0991319592e000d757e\", \"create_arguments\": {\"dso\": \"DSO::1220b1431ef217342db44d516bb9befde802be7d8899637d290895fa58880f19accc\", \"validator\": "
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "I believe I'm missing the equivalent of the following (generated with a new build) for the cache.json above:",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "}, \"record_time\": \"2024-06-25T05:19:55.785384+00:00\", \"synchronizer_id\": \"global-domain::1220b1431ef217342db44d516bb9befde802be7d8899637d290895fa58880f19accc\", \"total_minted\": \"0E-10\", \"total_burnt\": \"0E-10\"}, \"per_round_states\": {}, \"pagination_key\": {\"after_record_time\": \"2024-06-25T05:19:55.785384+00:00\", \"after_migration_id\": 0}}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Questions:",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "How should I fix cache.json so that I can continue extracting raw transactions? I tried running "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "--rebuild-cache",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " but it's not doing what I imagine to fix the above issue (repair the corrupted cache.json). I'm unsure what's the correct data or where to get it to fix it manually (doubt this is an elegant method to resolve the issue)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Should i keep "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "--log-file-path scan_tx.log",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " running since it incurs high storage requirements? Followed it since it is part of the docs"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "While I'm able to rebuild from scratch (taking 1-2 days), it'll be ideal if there is a way to skip cache.json to a specific last known block height\/round\/timestamp? This should be able to resolve the issue and will be a generally useful feature."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    }
+]

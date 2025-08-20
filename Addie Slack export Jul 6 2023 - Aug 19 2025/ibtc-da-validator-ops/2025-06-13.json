@@ -1,0 +1,1094 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749819630.142829",
+        "client_msg_id": "30be6104-45ea-4816-a411-fa5c723c1181",
+        "text": "Question about best practices.\n\nWe are trying to run the website against the DevNet deployment. We log in with a 'merchantUser', who represents a regular minter user.\n\nWe have the necessary templateIds for the different Rules contracts.\n\nBut this user can't read the ACS of the decentralized-party, so it can't fetch the contractID\/createdEventBlob necessary for disclosing them for choices.\n\nSo what is the recommended way to do this? How will this user get access to this information? One option would be to bake it into the website code (both contractIds and the createdEventBlobs), since these Rules contracts don't (really) change on a prod network. And if they do, we have to update the website, its never dynamic.\n\nAnd in this case at least the user is on the same node, but what happens if the user is hosted on a participant that does not host the decentralized-party? This is a question for later ofc",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "reply_count": 18,
+        "reply_users_count": 1,
+        "latest_reply": "1750058937.911719",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749819955.810339"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749820387.278299"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749820425.934799"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749824621.301599"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749824958.823879"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749825000.834169"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749825133.240229"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749825187.990139"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749825201.779819"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749825228.403449"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749826002.380039"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749826023.303099"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749826081.759329"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749826103.252239"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749827139.440819"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749827548.009409"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1750057063.360849"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1750058937.911719"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VL6rL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Question about best practices.\n\nWe are trying to run the website against the DevNet deployment. We log in with a 'merchantUser', who represents a regular minter user.\n\nWe have the necessary templateIds for the different Rules contracts.\n\nBut this user can't read the ACS of the decentralized-party, so it can't fetch the contractID\/createdEventBlob necessary for disclosing them for choices.\n\nSo what is the recommended way to do this? How will this user get access to this information? One option would be to bake it into the website code (both contractIds and the createdEventBlobs), since these Rules contracts don't (really) change on a prod network. And if they do, we have to update the website, its never dynamic.\n\nAnd in this case at least the user is on the same node, but what happens if the user is hosted on a participant that does not host the decentralized-party? This is a question for later ofc"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749819955.810339",
+        "client_msg_id": "76b0eac4-fe99-4595-bf29-fc04e75681d9",
+        "text": "I remember this:\n<https:\/\/dlc-ag42820.slack.com\/archives\/C081VS8N76Z\/p1747305047295909?thread_ts=1747300781.958539&amp;cid=C081VS8N76Z>\n\nBut this does not mean any user can read all ACSs of all parties on the same node. So all users would have to get readAs rights for the decentralized-party?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "attachments": [
+            {
+                "from_url": "https:\/\/dlc-ag42820.slack.com\/archives\/C081VS8N76Z\/p1747305047295909?thread_ts=1747300781.958539&amp;cid=C081VS8N76Z",
+                "ts": "1747305047.295909",
+                "author_id": "UEHLS0JUB",
+                "channel_id": "C081VS8N76Z",
+                "channel_team": "T03T53E10",
+                "is_msg_unfurl": true,
+                "is_reply_unfurl": true,
+                "message_blocks": [
+                    {
+                        "team": "T05FWTX7PMG",
+                        "channel": "C081VS8N76Z",
+                        "ts": "1747305047.295909",
+                        "message": {
+                            "blocks": [
+                                {
+                                    "type": "rich_text",
+                                    "block_id": "PQP79",
+                                    "elements": [
+                                        {
+                                            "type": "rich_text_section",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "You need to query against the node that has the contract but you can then use it on another one by passing it in as a disclosed contract."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "id": 1,
+                "original_url": "https:\/\/dlc-ag42820.slack.com\/archives\/C081VS8N76Z\/p1747305047295909?thread_ts=1747300781.958539&amp;cid=C081VS8N76Z",
+                "fallback": "[May 15th, 2025 3:30 AM] moritz.kiefer: You need to query against the node that has the contract but you can then use it on another one by passing it in as a disclosed contract.",
+                "text": "You need to query against the node that has the contract but you can then use it on another one by passing it in as a disclosed contract.",
+                "author_name": "Moritz Kiefer",
+                "author_link": "https:\/\/dlc-ag42820.slack.com\/team\/UEHLS0JUB",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_48.jpg",
+                "author_subname": "Moritz Kiefer",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "footer": "Thread in Slack Conversation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vmgYG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I remember this:\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/dlc-ag42820.slack.com\/archives\/C081VS8N76Z\/p1747305047295909?thread_ts=1747300781.958539&cid=C081VS8N76Z"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nBut this does not mean any user can read all ACSs of all parties on the same node. So all users would have to get readAs rights for the decentralized-party?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749820387.278299",
+        "client_msg_id": "ed41279d-b010-47c9-ab52-786f488ab8f2",
+        "text": "And jamming on this, maybe the best is indeed hardcoding it on the dApp side",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ll1JF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And jamming on this, maybe the best is indeed hardcoding it on the dApp side"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749820425.934799",
+        "client_msg_id": "e0d90547-3fb3-4182-b850-d0d42db327fb",
+        "text": "Then it is technically 'visible' on any nodes?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rNHKh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Then it is technically 'visible' on any nodes?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749824621.301599",
+        "client_msg_id": "f8eab485-fc9c-42df-93b9-1e3ac73c7f74",
+        "text": "Not yet! They want to create a 'vault', by exercising a choice on the 'vaultRules' contract, which was deployed by the decentralized-party (the attestors).\n\nBut they obviously don't have access to this Rules contract without having readAs rights as the decentralized-party.\n\nSo what's the best way to disclose the Rules contract to the user, so they can interact with it?\n\nFor now, we just took the Rules contract's id and blob and hardcoded them in the dApp code, this works for now",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EL1Tm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Not yet! They want to create a 'vault', by exercising a choice on the 'vaultRules' contract, which was deployed by the decentralized-party (the attestors).\n\nBut they obviously don't have access to this Rules contract without having readAs rights as the decentralized-party.\n\nSo what's the best way to disclose the Rules contract to the user, so they can interact with it?\n\nFor now, we just took the Rules contract's id and blob and hardcoded them in the dApp code, this works for now"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749824958.823879",
+        "client_msg_id": "bf0d6a28-73ef-4f4f-bc6d-79022d710279",
+        "text": "This one: <https:\/\/github.com\/DLC-link\/canton\/blob\/e6131190c4db894eb610aea8b78455d5d601a88b\/daml\/dibtc\/daml\/IBTC\/DepositAccount.daml#L73>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1D6kV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This one: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton\/blob\/e6131190c4db894eb610aea8b78455d5d601a88b\/daml\/dibtc\/daml\/IBTC\/DepositAccount.daml#L73"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "eyeslooking",
+                "users": [
+                    "U9V802QQ6"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749825000.834169",
+        "client_msg_id": "fb01bb5b-fc3c-454b-bcd4-c9abf542a5c3",
+        "text": "user wants to call the choice on line 83, to have their own DepositAccount.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7M3Yn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "user wants to call the choice on line 83, to have their own DepositAccount."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749825133.240229",
+        "client_msg_id": "ddd185dc-dc18-4733-a6cc-501c2d4ca096",
+        "text": "But yeah, in general, just wondering what's the best way to share access to a 'public' contract (it might still require credentials, etc., but at least so that parties can 'see it')",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uS3a0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But yeah, in general, just wondering what's the best way to share access to a 'public' contract (it might still require credentials, etc., but at least so that parties can 'see it')"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749825187.990139",
+        "client_msg_id": "de793004-1220-4f44-9aa7-eba5a8f3f265",
+        "text": "hmmm it didn't! :smile:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TelRC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hmmm it didn't! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile",
+                                "unicode": "1f604"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749825201.779819",
+        "client_msg_id": "c3022e82-60b3-4646-8723-e710b47ae2e1",
+        "text": "or im missing something else",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FW\/TK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "or im missing something else"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749825228.403449",
+        "client_msg_id": "ee792696-4c25-4745-8914-8b7cd3b38a7d",
+        "text": "but using it as a disclosed contract, i could exercise the choice",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/t3yz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but using it as a disclosed contract, i could exercise the choice"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749826002.380039",
+        "client_msg_id": "9957d714-aa37-4eea-bbc6-9c24e91892b3",
+        "text": "Not really, this is running live already",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "K0h+M",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Not really, this is running live already"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749826023.303099",
+        "client_msg_id": "5677ff65-f570-4610-9a0f-32719a7f9fa1",
+        "text": "And we could create a DepositAccount using a user who has no readAs rights to these contracts",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QKw0k",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And we could create a DepositAccount using a user who has no readAs rights to these contracts"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749826081.759329",
+        "client_msg_id": "520fb899-4942-491d-9779-798e27caf8f1",
+        "text": "we just pasted the necessary stuff into the `disclosed_contracts` field similar to this\n```\"disclosedContracts\": [\n        {\n            \"templateId\": \"{{daRulesTemplateId}}\",\n            \"contractId\": \"{{daRulesContractId}}\",\n            \"createdEventBlob\": \"{{daRulesCreatedEventBlob}}\",\n            \"synchronizerId\": \"\"\n        }\n    ]```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qoaEx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "we just pasted the necessary stuff into the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "disclosed_contracts",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " field similar to this\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\"disclosedContracts\": [\n        {\n            \"templateId\": \"{{daRulesTemplateId}}\",\n            \"contractId\": \"{{daRulesContractId}}\",\n            \"createdEventBlob\": \"{{daRulesCreatedEventBlob}}\",\n            \"synchronizerId\": \"\"\n        }\n    ]"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749826103.252239",
+        "client_msg_id": "6bdbf04e-d12b-4c8c-a87c-0c0fa0954dba",
+        "text": "(which we fetched separately, using an attestor user, who does have readAs rights)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uPCdc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "(which we fetched separately, using an attestor user, who does have readAs rights)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749827139.440819",
+        "client_msg_id": "d3ad4e95-e9f9-453d-9810-19716ed04c1f",
+        "text": "Yes!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "m\/X5t",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749827548.009409",
+        "client_msg_id": "1ac5d074-5cbd-46ec-8858-9736f6d3b1ff",
+        "text": "Oh sorry, so the _attestor_ user has readAs rights. So basically the user representing a trusted node operator, a member of the Governance.\n\nThe enduser does not.\n\nThat's why we first fetched the templateId, contractId, createdEventBlob using an attestorUser =&gt; put the results in our website code =&gt; endusers can attach it as disclosed_contracts in the calls, without having extra rights",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sI0r+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oh sorry, so the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "attestor",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " user has readAs rights. So basically the user representing a trusted node operator, a member of the Governance.\n\nThe enduser does not.\n\nThat's why we first fetched the templateId, contractId, createdEventBlob using an attestorUser => put the results in our website code => endusers can attach it as disclosed_contracts in the calls, without having extra rights"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749828080.181069",
+        "client_msg_id": "f28bd39e-8154-4f42-8c9a-8dbcf514d303",
+        "text": "I get `TOPOLOGY_NO_APPROPRIATE_SIGNING_KEY_IN_STORE`, when I just\n```val namespaceKey = participant.keys.secret\n    .list()\n    .find(p =&gt; p.name == Some(\"decentralized-party-namespace\"))\n    .get\n    .id```\nand then\n```val p2p_signed = participant.topology.transactions\n    .sign(Seq(p2p), store = synchronizerId, signedBy = Seq(namespaceKey, damlKey))\n    .head```\nI might have to do that whole `crypto` `store` setup, like we do for the contract submissions...?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749627205.924459",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Qfr3J",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I get "
+                            },
+                            {
+                                "type": "text",
+                                "text": "TOPOLOGY_NO_APPROPRIATE_SIGNING_KEY_IN_STORE",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", when I just\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "val namespaceKey = participant.keys.secret\n    .list()\n    .find(p => p.name == Some(\"decentralized-party-namespace\"))\n    .get\n    .id"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and then\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "val p2p_signed = participant.topology.transactions\n    .sign(Seq(p2p), store = synchronizerId, signedBy = Seq(namespaceKey, damlKey))\n    .head"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I might have to do that whole "
+                            },
+                            {
+                                "type": "text",
+                                "text": "crypto",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": "store",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " setup, like we do for the contract submissions...?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1749828303.391979",
+        "client_msg_id": "a53393af-6edc-438a-99c9-de2c0cee697a",
+        "text": "Also I realized I don't get this bit:\n&gt; If you put in both the namespace key that you have in the decentralized namespace and the participant namespace key\nI have these two keys, `namespaceKey` and a `damlKey` , is that what you mean?\n```val namespaceKey = participant.keys.secret.generate_signing_key(\n    \"decentralized-party-namespace\",\n    SigningKeyUsage.NamespaceOnly\n  )```\n```val damlKey = participant.keys.secret.generate_signing_key(\n    \"decentralized-party-daml-transactions\",\n    SigningKeyUsage.ProtocolOnly\n  )```\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749627205.924459",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8bn9q",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Also I realized I don't get this bit:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If you put in both the namespace key that you have in the decentralized namespace and the participant namespace key"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nI have these two keys, "
+                            },
+                            {
+                                "type": "text",
+                                "text": "namespaceKey",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "damlKey",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " , is that what you mean?\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "val namespaceKey = participant.keys.secret.generate_signing_key(\n    \"decentralized-party-namespace\",\n    SigningKeyUsage.NamespaceOnly\n  )"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "val damlKey = participant.keys.secret.generate_signing_key(\n    \"decentralized-party-daml-transactions\",\n    SigningKeyUsage.ProtocolOnly\n  )"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ]
+    }
+]

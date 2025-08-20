@@ -2,7 +2,7 @@
 
 ## Overview
 
-The commission calculation system analyzes Slack conversations and Google Calendar data to determine fair commission splits based on actual sales activity and in-person meeting contributions.
+The commission calculation system analyzes Slack conversations, Telegram group chats, and Google Calendar data to determine fair commission splits based on actual sales activity and in-person meeting contributions.
 
 ## Recent Improvements
 
@@ -77,6 +77,43 @@ The system now incorporates **in-person meeting data** from Google Calendar to p
   - "Soumya Basu and Addie Tackman" (30 min) - Aki and Addie present
   - "Soumya / Aki" (60 min) - Aki only present
 - **Result**: Aki's in-person meeting with Soumya gives him substantial additional credit
+
+### Telegram Integration (NEW!)
+
+The system now incorporates **Telegram group conversation data** alongside Slack and Calendar data for comprehensive sales activity tracking.
+
+#### How It Works
+
+1. **HTML Export Processing**: Parses Telegram HTML export files from `data/telegram/DataExport_2025-08-19/`
+2. **Company Matching**: Automatically maps HubSpot CRM companies to corresponding Telegram groups using pattern matching
+3. **Message Analysis**: Processes Telegram messages for stage detection using the same keyword matching logic as Slack
+4. **Team Member Mapping**: Identifies internal team members by both Slack IDs and display names (e.g., "Aki", "Kadeem Clarke", "Mayank", "Addie")
+5. **Combined Analysis**: Integrates Telegram data with Slack and Calendar data in the commission calculation
+
+#### Data Coverage
+
+- **Total HubSpot Companies**: 235
+- **Telegram Matches**: 82 companies (34.9% match rate)
+- **Group Patterns**: Most groups follow `Company <> BitSafe (iBTC, CBTC)` format
+
+#### Impact on Commission Analysis
+
+Telegram integration provides critical data for deals where:
+- **Slack channels were deleted**: Some companies like P2P had their Slack channels removed
+- **Primary communication via Telegram**: International customers often preferred Telegram
+- **Missing conversation context**: Captures complete sales conversations not available in Slack
+
+#### Example: P2P Deal
+
+**Before Telegram Integration:**
+- Slack data: Minimal activity (3 messages from Aki, 2 from Addie)
+- Result: Addie 100%, Aki 0% (inaccurate)
+
+**After Telegram Integration:**
+- Telegram data: 77 messages from Aki, 10 from Kadeem Clarke, 6 from Mayank, 1 from Addie
+- Result: Aki 50%, Kadeem Clarke 25%, Mayank 25%, Addie 0% (accurate)
+
+This shows how Telegram integration reveals the true sales involvement and provides much more accurate commission splits.
 
 ### Enhanced Contestation Logic
 

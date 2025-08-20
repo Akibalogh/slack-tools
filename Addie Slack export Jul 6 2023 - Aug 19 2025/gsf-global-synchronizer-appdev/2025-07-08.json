@@ -1,0 +1,2270 @@
+[
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1751959447.374059",
+        "client_msg_id": "04557bbc-6f19-4421-9528-70730c79ba88",
+        "text": "Thanks for the link, so it means I need to call `<https:\/\/scan.sv-1.dev.global.canton.network.digitalasset.com\/registry\/metadata\/v1\/instruments>` for example ?\nHow can I discover the registry URL of a token? This is only valid for Canton Coin?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751899970.188659",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iYSUi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for the link, so it means I need to call "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-1.dev.global.canton.network.digitalasset.com\/registry\/metadata\/v1\/instruments",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " for example ?\nHow can I discover the registry URL of a token? This is only valid for Canton Coin?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1751959551.435719",
+        "client_msg_id": "f749d4aa-05a6-4af0-b770-1d1ca8f5a187",
+        "text": "Isn’t there any equivalent to do a “smart contract read” in canton?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751899970.188659",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JHtAi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Isn’t there any equivalent to do a “smart contract read” in canton?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08RYE73P8A",
+        "type": "message",
+        "ts": "1751966020.359229",
+        "client_msg_id": "7137139f-1cb7-4ead-87b3-dd9e971cd5c7",
+        "text": "Hi everyone,\n I'm working on setting up an M2M (machine-to-machine) token for interacting with the Daml ledger. So far, using this token I'm able to *allocate a party* and *get the ledger end* successfully. However, when I try to *create a contract*, the request fails with a `PERMISSION_DENIED` error.\nI suspect this might be related to the token's permissions — perhaps I'm missing the `actAs` or `readAs` claims. Here's what the token fields in payload currently look like:\n```{\n  \"iss\": \"\",\n  \"sub\": \"\",\n  \"aud\": \"\",\n  \"iat\": 1751963894,\n  \"exp\": 1752050294,\n  \"scope\": \"\",\n  \"gty\": \"\",\n  \"azp\": \"\"\n}```\nHas anyone encountered this issue before or knows which claims are required in the token for contract creation to succeed?\nAny help would be appreciated!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "bb95fe6ce815",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-14\/8881373286503_bb95fe6ce8152b94e8ec_72.jpg",
+            "first_name": "Ilya",
+            "real_name": "Ilya Okulov",
+            "display_name": "i.okulov",
+            "team": "T04NVD19L",
+            "name": "i.okulov",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751966020.359229",
+        "reply_count": 3,
+        "reply_users_count": 1,
+        "latest_reply": "1751981215.576459",
+        "reply_users": [
+            "U08RYE73P8A"
+        ],
+        "replies": [
+            {
+                "user": "U08RYE73P8A",
+                "ts": "1751969319.900599"
+            },
+            {
+                "user": "U08RYE73P8A",
+                "ts": "1751969826.249099"
+            },
+            {
+                "user": "U08RYE73P8A",
+                "ts": "1751981215.576459"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ufncH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi everyone,\n I'm working on setting up an M2M (machine-to-machine) token for interacting with the Daml ledger. So far, using this token I'm able to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "allocate a party",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "get the ledger end",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " successfully. However, when I try to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "create a contract",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", the request fails with a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PERMISSION_DENIED",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " error.\nI suspect this might be related to the token's permissions — perhaps I'm missing the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "actAs",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " or "
+                            },
+                            {
+                                "type": "text",
+                                "text": "readAs",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " claims. Here's what the token fields in payload currently look like:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n  \"iss\": \"\",\n  \"sub\": \"\",\n  \"aud\": \"\",\n  \"iat\": 1751963894,\n  \"exp\": 1752050294,\n  \"scope\": \"\",\n  \"gty\": \"\",\n  \"azp\": \"\"\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Has anyone encountered this issue before or knows which claims are required in the token for contract creation to succeed?\nAny help would be appreciated!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0724J67GSE",
+        "type": "message",
+        "ts": "1751966789.035609",
+        "client_msg_id": "568efdc7-780a-46d0-b156-26a2b2542840",
+        "text": "<@U02SR6E8Z9S> I hit the same error, and the curling command return error 403:\n```curl --netrc <https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codegen-java-runtime\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codegen-java-runtime-0.0.1-main.20250423.81.473.vde10c4f.pom>```\n```{\n  \"errors\" : [ {\n    \"status\" : 403,\n    \"message\" : \"Download request for repo:path 'libs-release-local:com\/daml\/transcode-codegen-java-runtime\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codegen-java-runtime-0.0.1-main.20250423.81.473.vde10c4f.pom' is forbidden for user: '<mailto:anh.le@angelhack.com|anh.le@angelhack.com>'.; Path: 'libs-release-local:com\/daml\/transcode-codegen-java-runtime\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codegen-java-runtime-0.0.1-main.20250423.81.473.vde10c4f.pom'\"\n  } ]\n}%             ```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "e3a9767538bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-10\/7272227989824_e3a9767538bfd906f0ba_72.png",
+            "first_name": "Hoang",
+            "real_name": "Hoang Anh Le",
+            "display_name": "Hoang-Anh",
+            "team": "T072736KDTK",
+            "name": "anh.le",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751744866.413069",
+        "parent_user_id": "U08LNCUMZFZ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vSxCP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U02SR6E8Z9S"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I hit the same error, and the curling command return error 403:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl --netrc "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codegen-java-runtime\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codegen-java-runtime-0.0.1-main.20250423.81.473.vde10c4f.pom"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n  \"errors\" : [ {\n    \"status\" : 403,\n    \"message\" : \"Download request for repo:path 'libs-release-local:com\/daml\/transcode-codegen-java-runtime\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codegen-java-runtime-0.0.1-main.20250423.81.473.vde10c4f.pom' is forbidden for user: 'anh.le@angelhack.com'.; Path: 'libs-release-local:com\/daml\/transcode-codegen-java-runtime\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codegen-java-runtime-0.0.1-main.20250423.81.473.vde10c4f.pom'\"\n  } ]\n}%             "
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1751967304.257449",
+        "client_msg_id": "91a4bb0b-41af-4da9-bcc8-8d44edc98e77",
+        "text": "<@U0PQ8E25D> it seems that the canton coin instrument admin has been updated, originally I was getting this value on devnet: `DSO::122071b3b1bdf69f2df3e161bd9933f2c419cdac3c48eaab7c2b920b6956d5d2a87b`\n\nnow I am getting `DSO::1220be58c29e65de40bf273be1dc2b266d43a9a002ea5b18955aeef7aac881bb471a`\n\nIs it expected to change often? I feel it is going to be hard to maintain mapping if the token contract get updated frequently?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750945190.308599",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Q0x\/V",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0PQ8E25D"
+                            },
+                            {
+                                "type": "text",
+                                "text": " it seems that the canton coin instrument admin has been updated, originally I was getting this value on devnet: "
+                            },
+                            {
+                                "type": "text",
+                                "text": "DSO::122071b3b1bdf69f2df3e161bd9933f2c419cdac3c48eaab7c2b920b6956d5d2a87b",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nnow I am getting "
+                            },
+                            {
+                                "type": "text",
+                                "text": "DSO::1220be58c29e65de40bf273be1dc2b266d43a9a002ea5b18955aeef7aac881bb471a",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nIs it expected to change often? I feel it is going to be hard to maintain mapping if the token contract get updated frequently?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1751967426.756619",
+        "client_msg_id": "9424f841-99db-4f4a-b2a5-bc8895344c7e",
+        "text": "Hi! is there a way to mint tokens that support the `transfer instruction` part of the standard? I believe it should be without the utility",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751896793.004189",
+        "parent_user_id": "U021EQM9HGV",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wciUa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi! is there a way to mint tokens that support the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "transfer instruction",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " part of the standard? I believe it should be without the utility"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08RYE73P8A",
+        "type": "message",
+        "ts": "1751969319.900599",
+        "edited": {
+            "user": "U08RYE73P8A",
+            "ts": "1751969346.000000"
+        },
+        "client_msg_id": "dd2c61f8-838c-4a09-a601-f2ea5339a02b",
+        "text": "i have granted rights and rights now are:\n```{\n    \"rights\": [\n        {\n            \"participant_admin\": {}\n        },\n        {\n            \"can_act_as\": {\n                \"party\": \"issuer::1220c7c1e52f96fe1b7165f890cdcf90991691e7555a7f0ca173757208f5c57541c4\"\n            }\n        },\n        {\n            \"can_read_as_any_party\": {}\n        },\n        {\n            \"can_read_as\": {\n                \"party\": \"issuer::1220c7c1e52f96fe1b7165f890cdcf90991691e7555a7f0ca173757208f5c57541c4\"\n            }\n        },\n        {\n            \"identity_provider_admin\": {}\n        }\n    ]\n}```\nnow i am getting error:\n```NO_SYNCHRONIZER_ON_WHICH_ALL_SUBMITTERS_CAN_SUBMIT(11,4f631e2c): This participant cannot submit as the given submitter on any connected synchronizer```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "bb95fe6ce815",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-14\/8881373286503_bb95fe6ce8152b94e8ec_72.jpg",
+            "first_name": "Ilya",
+            "real_name": "Ilya Okulov",
+            "display_name": "i.okulov",
+            "team": "T04NVD19L",
+            "name": "i.okulov",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751966020.359229",
+        "parent_user_id": "U08RYE73P8A",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Uyk\/q",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "i have granted rights and rights now are:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"rights\": [\n        {\n            \"participant_admin\": {}\n        },\n        {\n            \"can_act_as\": {\n                \"party\": \"issuer::1220c7c1e52f96fe1b7165f890cdcf90991691e7555a7f0ca173757208f5c57541c4\"\n            }\n        },\n        {\n            \"can_read_as_any_party\": {}\n        },\n        {\n            \"can_read_as\": {\n                \"party\": \"issuer::1220c7c1e52f96fe1b7165f890cdcf90991691e7555a7f0ca173757208f5c57541c4\"\n            }\n        },\n        {\n            \"identity_provider_admin\": {}\n        }\n    ]\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "now i am getting error:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "NO_SYNCHRONIZER_ON_WHICH_ALL_SUBMITTERS_CAN_SUBMIT(11,4f631e2c): This participant cannot submit as the given submitter on any connected synchronizer"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1751969597.264649",
+        "edited": {
+            "user": "U041YC9S6E7",
+            "ts": "1751969626.000000"
+        },
+        "client_msg_id": "2fe8e609-c3fe-4db1-a332-1f5b48b7a2f5",
+        "text": "Hello!\n\nAfter the mainnet migration was done for our validator (IEU) it appears that I’m no longer receiving the transactions from before when using `getTransactionTrees` (Java API).\n\nI do get some transactions with earlier timestamps and they all have `workflowId = canton-network-acs-import-X-Y` , but I’m not getting the real transaction history that was there before the migration.\n\nAny tips on what might be going wrong?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "reply_count": 18,
+        "reply_users_count": 2,
+        "latest_reply": "1752600470.743149",
+        "reply_users": [
+            "U041YC9S6E7",
+            "UUT0L5W2J"
+        ],
+        "replies": [
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1751969723.158549"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1751969742.387769"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1751969753.922129"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1751969783.401839"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1751970079.556869"
+            },
+            {
+                "user": "UUT0L5W2J",
+                "ts": "1751970303.526909"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1751979556.226469"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1751986573.817079"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1751987105.155189"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1752599241.831099"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1752599314.049879"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1752599370.378279"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1752599443.809079"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1752599452.061379"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1752599493.342959"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1752599507.979559"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1752600258.706259"
+            },
+            {
+                "user": "U041YC9S6E7",
+                "ts": "1752600470.743149"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/GEcS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello!\n\nAfter the mainnet migration was done for our validator (IEU) it appears that I’m no longer receiving the transactions from before when using "
+                            },
+                            {
+                                "type": "text",
+                                "text": "getTransactionTrees",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " (Java API).\n\nI do get some transactions with earlier timestamps and they all have "
+                            },
+                            {
+                                "type": "text",
+                                "text": "workflowId = canton-network-acs-import-X-Y",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " , but I’m not getting the real transaction history that was there before the migration.\n\nAny tips on what might be going wrong?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1751969723.158549",
+        "client_msg_id": "facd5cc7-2157-4b15-b810-44204e30c7ab",
+        "text": "The docs do seem to say that they are preserved",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zMnI3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The docs do seem to say that they are preserved"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1751969742.387769",
+        "client_msg_id": "325ebccd-20eb-4029-b4b8-140a7f15322f",
+        "text": "<https:\/\/docs.dev.sync.global\/validator_operator\/validator_major_upgrades.html#technical-details>",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PFIoF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/validator_operator\/validator_major_upgrades.html#technical-details"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1751969753.922129",
+        "client_msg_id": "03848a31-7161-4b28-9300-d5455f37558a",
+        "text": "Third bullet",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AHzZg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Third bullet"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1751969783.401839",
+        "client_msg_id": "7b434fbc-86e1-43bf-aec6-898e2bf1e619",
+        "text": "Regardless, what convenient alternatives are there to get at the history?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rlyfc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Regardless, what convenient alternatives are there to get at the history?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08RYE73P8A",
+        "type": "message",
+        "ts": "1751969826.249099",
+        "client_msg_id": "d4751e08-b23e-4dda-8229-8f7614ff2618",
+        "text": "how i can figure out i have testnet or devnet?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "bb95fe6ce815",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-14\/8881373286503_bb95fe6ce8152b94e8ec_72.jpg",
+            "first_name": "Ilya",
+            "real_name": "Ilya Okulov",
+            "display_name": "i.okulov",
+            "team": "T04NVD19L",
+            "name": "i.okulov",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751966020.359229",
+        "parent_user_id": "U08RYE73P8A",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "meaRZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "how i can figure out i have testnet or devnet?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1751970079.556869",
+        "edited": {
+            "user": "U041YC9S6E7",
+            "ts": "1751970087.000000"
+        },
+        "client_msg_id": "008c57b3-9fd9-4f49-8f51-81c38f01c3a5",
+        "text": "Is there no easy way to query the old participant’s db directly to get the history? Without having to get the old participant running and then connecting a PQS instance to it",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7cNGD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is there no easy way to query the old participant’s db directly to get the history? Without having to get the old participant running and then connecting a PQS instance to it"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UUT0L5W2J",
+        "type": "message",
+        "ts": "1751970303.526909",
+        "edited": {
+            "user": "UUT0L5W2J",
+            "ts": "1751970430.000000"
+        },
+        "client_msg_id": "503b9081-760e-4555-b448-8db28bb37660",
+        "text": "A small addition that we discussed internally in the context of that issue\n\nWhat is the difference between `transactions` and `updates` and why should we use the second option instead?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "ef1f7e9060b7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-11-07\/4345961656321_ef1f7e9060b7d426137a_72.jpg",
+            "first_name": "Oleksii",
+            "real_name": "Oleksii Maiko",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "oleksii.maiko",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VNFH5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "A small addition that we discussed internally in the context of that issue\n\nWhat is the difference between "
+                            },
+                            {
+                                "type": "text",
+                                "text": "transactions",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "updates",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and why should we use the second option instead?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U087Q971716",
+        "type": "message",
+        "ts": "1751970759.894349",
+        "client_msg_id": "9bfb7fc3-652a-4a18-b09d-5a509d795376",
+        "text": "Hi Team, we performed devnet reset on 3rd of july by following the instructions mentioned in the document, after the reset our validator and wallet is working as expected but we are facing issues with the utility app; while requesting the credentials in the utility app, we are getting below error:\n```{\"code\":404,\"body\":{\"code\":\"UNKNOWN_INFORMEES\",\"cause\":\"The participant is not connected to any synchronizer where the given informees are known.\",\"correlationId\":null,\"traceId\":\"01c731bd5ef95d06e3e60e79f37c63b5\",\"context\":{\"participant\":\"participant\",\"unknownInformees\":\"Set(auth0_007c65f857f1c3d599cb6df73775::12205bba10e5119890e1c2c1dca3a63ef996920ca6bf70075cca3a6d70c4aeeb9da9)\",\"category\":\"11\",\"tid\":\"01c731bd5ef95d06e3e60e79f37c63b5\",\"definite_answer\":\"false\"},\"resources\":[],\"errorCategory\":11,\"grpcCodeValue\":5,\"retryInfo\":null,\"definiteAnswer\":null},\"headers\":{\"content-length\":\"539\",\"content-type\":\"application\/json\",\"date\":\"Tue, 08 Jul 2025 09:55:19 GMT\",\"strict-transport-security\":\"max-age=31536000; includeSubDomains\"}}```\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07DE2TU0DQ",
+        "source_team": "T07DE2TU0DQ",
+        "user_profile": {
+            "avatar_hash": "gf30d33ca361",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/f30d33ca361deed88f42ffe337e1b636.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Preethi",
+            "real_name": "Preethi Chamarthi",
+            "display_name": "Preethi Chamarthi",
+            "team": "T07DE2TU0DQ",
+            "name": "jaya.preethi",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751970759.894349",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1751971745.257519",
+        "reply_users": [
+            "U01TZB7MFFA"
+        ],
+        "replies": [
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1751971745.257519"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rHpUx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Team, we performed devnet reset on 3rd of july by following the instructions mentioned in the document, after the reset our validator and wallet is working as expected but we are facing issues with the utility app; while requesting the credentials in the utility app, we are getting below error:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"code\":404,\"body\":{\"code\":\"UNKNOWN_INFORMEES\",\"cause\":\"The participant is not connected to any synchronizer where the given informees are known.\",\"correlationId\":null,\"traceId\":\"01c731bd5ef95d06e3e60e79f37c63b5\",\"context\":{\"participant\":\"participant\",\"unknownInformees\":\"Set(auth0_007c65f857f1c3d599cb6df73775::12205bba10e5119890e1c2c1dca3a63ef996920ca6bf70075cca3a6d70c4aeeb9da9)\",\"category\":\"11\",\"tid\":\"01c731bd5ef95d06e3e60e79f37c63b5\",\"definite_answer\":\"false\"},\"resources\":[],\"errorCategory\":11,\"grpcCodeValue\":5,\"retryInfo\":null,\"definiteAnswer\":null},\"headers\":{\"content-length\":\"539\",\"content-type\":\"application\/json\",\"date\":\"Tue, 08 Jul 2025 09:55:19 GMT\",\"strict-transport-security\":\"max-age=31536000; includeSubDomains\"}}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1751971685.087289",
+        "client_msg_id": "1e1c17ca-26fd-4f8f-94e1-0ff54e807325",
+        "text": "<@U087Q971716> I think I read that the auth0.... ID of the DA endpoint changed because of the reset",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/R5sf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U087Q971716"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I think I read that the auth0.... ID of the DA endpoint changed because of the reset"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1751971745.257519",
+        "edited": {
+            "user": "U01TZB7MFFA",
+            "ts": "1751971756.000000"
+        },
+        "client_msg_id": "5634446f-5238-42ee-b158-76603ddef238",
+        "text": "From <#C08338ZAL9X|utility-ops>: The new operator party id for DevNet is `auth0_007c65f857f1c3d599cb6df73775::1220d2d732d042c281cee80f483ab80f3cbaa4782860ed5f4dc228ab03dedd2ee8f9`",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751970759.894349",
+        "parent_user_id": "U087Q971716",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5MeVb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "From "
+                            },
+                            {
+                                "type": "channel",
+                                "channel_id": "C08338ZAL9X"
+                            },
+                            {
+                                "type": "text",
+                                "text": ": The new operator party id for DevNet is "
+                            },
+                            {
+                                "type": "text",
+                                "text": "auth0_007c65f857f1c3d599cb6df73775::1220d2d732d042c281cee80f483ab80f3cbaa4782860ed5f4dc228ab03dedd2ee8f9",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1751973484.848639",
+        "client_msg_id": "1315ec0a-78f9-42c9-9b27-f16e2731de76",
+        "text": "<https:\/\/dfnsvip.slack.com\/archives\/C08FQRCRFUN\/p1750946035920539?thread_ts=1750945190.308599&amp;cid=C08FQRCRFUN>\n\nDo you have a sample of the choiceArguments that I need to pass to accept a transfer? <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/token-standard\/cli\/src\/commands\/transfer.ts#L94>",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750945190.308599",
+        "parent_user_id": "U06JBU6A20K",
+        "attachments": [
+            {
+                "from_url": "https:\/\/dfnsvip.slack.com\/archives\/C08FQRCRFUN\/p1750946035920539?thread_ts=1750945190.308599&amp;cid=C08FQRCRFUN",
+                "ts": "1750946035.920539",
+                "author_id": "U0PQ8E25D",
+                "channel_id": "C08FQRCRFUN",
+                "channel_team": "T07LSPYDRT4",
+                "is_msg_unfurl": true,
+                "is_reply_unfurl": true,
+                "message_blocks": [
+                    {
+                        "team": "T02EKC617FD",
+                        "channel": "C08FQRCRFUN",
+                        "ts": "1750946035.920539",
+                        "message": {
+                            "blocks": [
+                                {
+                                    "type": "rich_text",
+                                    "block_id": "O5Y9m",
+                                    "elements": [
+                                        {
+                                            "type": "rich_text_section",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "There is currently no example for listing outstanding transfer offers and accepting them. Listing follows the same pattern as listing holdings (interface query) and accepting follows the same pattern as creating a transfer."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "id": 1,
+                "original_url": "https:\/\/dfnsvip.slack.com\/archives\/C08FQRCRFUN\/p1750946035920539?thread_ts=1750945190.308599&amp;cid=C08FQRCRFUN",
+                "fallback": "[June 26th, 2025 6:53 AM] simon: There is currently no example for listing outstanding transfer offers and accepting them. Listing follows the same pattern as listing holdings (interface query) and accepting follows the same pattern as creating a transfer.",
+                "text": "There is currently no example for listing outstanding transfer offers and accepting them. Listing follows the same pattern as listing holdings (interface query) and accepting follows the same pattern as creating a transfer.",
+                "author_name": "Simon Meier",
+                "author_link": "https:\/\/dfnsvip.slack.com\/team\/U0PQ8E25D",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_48.jpg",
+                "author_subname": "Simon Meier",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "footer": "Thread in Slack Conversation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Nk4Dn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/dfnsvip.slack.com\/archives\/C08FQRCRFUN\/p1750946035920539?thread_ts=1750945190.308599&cid=C08FQRCRFUN"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nDo you have a sample of the choiceArguments that I need to pass to accept a transfer? "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/token-standard\/cli\/src\/commands\/transfer.ts#L94"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1751973701.857849",
+        "client_msg_id": "82dd3ac2-60aa-4e36-89be-582cd7d4cb0b",
+        "text": "i’ll check, thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750945190.308599",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zBtBs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "i’ll check, thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0PQ8E25D"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1751979556.226469",
+        "client_msg_id": "70cc1f77-6860-4159-ab99-fcd93a8ced37",
+        "text": "Apropos, what exactly is returned in the updates endpoint of the scan api? All DSO-visible transactions?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gKdcj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Apropos, what exactly is returned in the updates endpoint of the scan api? All DSO-visible transactions?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08RYE73P8A",
+        "type": "message",
+        "ts": "1751981215.576459",
+        "client_msg_id": "87563fb5-8146-4fdd-a37c-aa155c32c07d",
+        "text": "thank you guys, i found the problem! appreciate it",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "bb95fe6ce815",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-14\/8881373286503_bb95fe6ce8152b94e8ec_72.jpg",
+            "first_name": "Ilya",
+            "real_name": "Ilya Okulov",
+            "display_name": "i.okulov",
+            "team": "T04NVD19L",
+            "name": "i.okulov",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751966020.359229",
+        "parent_user_id": "U08RYE73P8A",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1bgTM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thank you guys, i found the problem! appreciate it"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "clap",
+                "users": [
+                    "U0PQ8E25D",
+                    "UEHLS0JUB"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1751984974.243779",
+        "client_msg_id": "3b409b30-27d2-45b9-86a1-10c1dae3d4c8",
+        "text": "Am I correct in thinking CIP-47 is live on devnet?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751984974.243779",
+        "reply_count": 4,
+        "reply_users_count": 1,
+        "latest_reply": "1751989252.372629",
+        "reply_users": [
+            "U07J3V9CS78"
+        ],
+        "replies": [
+            {
+                "user": "U07J3V9CS78",
+                "ts": "1751985105.037799"
+            },
+            {
+                "user": "U07J3V9CS78",
+                "ts": "1751988256.555889"
+            },
+            {
+                "user": "U07J3V9CS78",
+                "ts": "1751988624.029459"
+            },
+            {
+                "user": "U07J3V9CS78",
+                "ts": "1751989252.372629"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9BNWG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Am I correct in thinking CIP-47 is live on devnet?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1751985105.037799",
+        "client_msg_id": "62d6c782-cb0e-4822-8d1a-5b58bf375a06",
+        "text": "Trying to exercise the FeaturedAppRight_CreateActivityMarker choice, and seeing `'The submitted request has invalid arguments: Invalid template:a5b055492fb8f08b2e7bc0fc94da6da50c39c2e1d7f24cd5ea8db12fc87c1332:Splice.Amulet:FeaturedAppRight or choice:FeaturedAppRight_CreateActivityMarker'`.\n\nIt was my understanding that the FeaturedAppRight template was updated to implement the FeaturedAppRight Interface, but I'm wondering if exercising an interface choice is different than exercising a typical template choice",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751984974.243779",
+        "parent_user_id": "U07J3V9CS78",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TqK+w",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Trying to exercise the FeaturedAppRight_CreateActivityMarker choice, and seeing "
+                            },
+                            {
+                                "type": "text",
+                                "text": "'The submitted request has invalid arguments: Invalid template:a5b055492fb8f08b2e7bc0fc94da6da50c39c2e1d7f24cd5ea8db12fc87c1332:Splice.Amulet:FeaturedAppRight or choice:FeaturedAppRight_CreateActivityMarker'",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n\nIt was my understanding that the FeaturedAppRight template was updated to implement the FeaturedAppRight Interface, but I'm wondering if exercising an interface choice is different than exercising a typical template choice"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1751986573.817079",
+        "client_msg_id": "4132ee71-f473-4d18-b7b4-b838b756304c",
+        "text": "Are there any plans to fix the history loss on migration btw?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PFyHs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Are there any plans to fix the history loss on migration btw?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U090UFN4ME2",
+        "type": "message",
+        "ts": "1751986757.363199",
+        "client_msg_id": "f05a5834-5560-41a5-9422-fca3dd265010",
+        "text": "I'm trying to run json-tests locally with canton sandbox, but I'm getting `INVALID_ARGUMENT\/ALLOWED_LANGUAGE_VERSIONS` . Any idea why? Seems to be incompatibility between the versions. I installed both canton and daml just now:\n\n```$ daml version\nSDK versions:\n  2.10.1  (default SDK version for new projects)\n\n$ .\/bin\/canton --version\nCanton: 3.4.0-SNAPSHOT\nDaml Libraries: 3.4.0-snapshot.20250619.13926.0.vafce7e37\nStable Canton protocol versions: List()\nPreview Canton protocol versions: List()```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08BFLLG1AB",
+        "source_team": "T08BFLLG1AB",
+        "user_profile": {
+            "avatar_hash": "c95f62f49f3f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-08\/9329437205076_c95f62f49f3fb1e319fe_72.png",
+            "first_name": "Ales",
+            "real_name": "Ales Ferlan",
+            "display_name": "Ales Ferlan",
+            "team": "T08BFLLG1AB",
+            "name": "ales",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751986757.363199",
+        "reply_count": 5,
+        "reply_users_count": 1,
+        "latest_reply": "1751989451.999349",
+        "reply_users": [
+            "U090UFN4ME2"
+        ],
+        "replies": [
+            {
+                "user": "U090UFN4ME2",
+                "ts": "1751988146.158479"
+            },
+            {
+                "user": "U090UFN4ME2",
+                "ts": "1751988184.301169"
+            },
+            {
+                "user": "U090UFN4ME2",
+                "ts": "1751988243.815729"
+            },
+            {
+                "user": "U090UFN4ME2",
+                "ts": "1751989400.420759"
+            },
+            {
+                "user": "U090UFN4ME2",
+                "ts": "1751989451.999349"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hFCb0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'm trying to run json-tests locally with canton sandbox, but I'm getting "
+                            },
+                            {
+                                "type": "text",
+                                "text": "INVALID_ARGUMENT\/ALLOWED_LANGUAGE_VERSIONS",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " . Any idea why? Seems to be incompatibility between the versions. I installed both canton and daml just now:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "$ daml version\nSDK versions:\n  2.10.1  (default SDK version for new projects)\n\n$ .\/bin\/canton --version\nCanton: 3.4.0-SNAPSHOT\nDaml Libraries: 3.4.0-snapshot.20250619.13926.0.vafce7e37\nStable Canton protocol versions: List()\nPreview Canton protocol versions: List()"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1751987105.155189",
+        "client_msg_id": "48b14a9f-e55e-4b9a-b245-5274d6e31fd6",
+        "text": "Right, but voluntary pruning is a little easier to coordinate and manage",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Cun22",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Right, but voluntary pruning is a little easier to coordinate and manage"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "UEHLS0JUB"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U090UFN4ME2",
+        "type": "message",
+        "ts": "1751988146.158479",
+        "client_msg_id": "3be8ad83-706f-446c-842f-faa9a5855469",
+        "text": "I installed the snapshot from github, like mentioned in the docs",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08BFLLG1AB",
+        "source_team": "T08BFLLG1AB",
+        "user_profile": {
+            "avatar_hash": "c95f62f49f3f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-08\/9329437205076_c95f62f49f3fb1e319fe_72.png",
+            "first_name": "Ales",
+            "real_name": "Ales Ferlan",
+            "display_name": "Ales Ferlan",
+            "team": "T08BFLLG1AB",
+            "name": "ales",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751986757.363199",
+        "parent_user_id": "U090UFN4ME2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Mx1Gq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I installed the snapshot from github, like mentioned in the docs"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U090UFN4ME2",
+        "type": "message",
+        "ts": "1751988184.301169",
+        "client_msg_id": "ddaa4715-2eae-49ee-aa36-ae23573fd8d9",
+        "text": "and daml with the script from <https:\/\/get.daml.com\/>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08BFLLG1AB",
+        "source_team": "T08BFLLG1AB",
+        "user_profile": {
+            "avatar_hash": "c95f62f49f3f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-08\/9329437205076_c95f62f49f3fb1e319fe_72.png",
+            "first_name": "Ales",
+            "real_name": "Ales Ferlan",
+            "display_name": "Ales Ferlan",
+            "team": "T08BFLLG1AB",
+            "name": "ales",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751986757.363199",
+        "parent_user_id": "U090UFN4ME2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MIcOS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and daml with the script from "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/get.daml.com\/"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U090UFN4ME2",
+        "type": "message",
+        "ts": "1751988243.815729",
+        "client_msg_id": "beb05ffe-31a9-4ddd-9184-8739339712b6",
+        "text": "and this repo for the snapshot <https:\/\/github.com\/digital-asset\/daml\/releases>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08BFLLG1AB",
+        "source_team": "T08BFLLG1AB",
+        "user_profile": {
+            "avatar_hash": "c95f62f49f3f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-08\/9329437205076_c95f62f49f3fb1e319fe_72.png",
+            "first_name": "Ales",
+            "real_name": "Ales Ferlan",
+            "display_name": "Ales Ferlan",
+            "team": "T08BFLLG1AB",
+            "name": "ales",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751986757.363199",
+        "parent_user_id": "U090UFN4ME2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vqh0l",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and this repo for the snapshot "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/digital-asset\/daml\/releases"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1751988256.555889",
+        "client_msg_id": "eb27371c-0d04-4a18-8285-b37d64fed804",
+        "text": "In the ExerciseCommand?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751984974.243779",
+        "parent_user_id": "U07J3V9CS78",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MtboL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In the ExerciseCommand?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1751988624.029459",
+        "client_msg_id": "e825257b-8432-4210-87d4-5eb3a3aa0fe0",
+        "text": "I don't see a property interface ID in the spec. Does the interface ID get used for the value of the template ID property?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751984974.243779",
+        "parent_user_id": "U07J3V9CS78",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CKaxb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I don't see a property interface ID in the spec. Does the interface ID get used for the value of the template ID property?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1751989252.372629",
+        "client_msg_id": "a93cd796-75f7-477a-ad99-542971531965",
+        "text": "Thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751984974.243779",
+        "parent_user_id": "U07J3V9CS78",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rcxlo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U090UFN4ME2",
+        "type": "message",
+        "ts": "1751989400.420759",
+        "client_msg_id": "f440233b-f510-4f7f-a7ec-fd668f7e2f78",
+        "text": "got it, this works now, thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08BFLLG1AB",
+        "source_team": "T08BFLLG1AB",
+        "user_profile": {
+            "avatar_hash": "c95f62f49f3f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-08\/9329437205076_c95f62f49f3fb1e319fe_72.png",
+            "first_name": "Ales",
+            "real_name": "Ales Ferlan",
+            "display_name": "Ales Ferlan",
+            "team": "T08BFLLG1AB",
+            "name": "ales",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751986757.363199",
+        "parent_user_id": "U090UFN4ME2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Gotrx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "got it, this works now, thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U090UFN4ME2",
+        "type": "message",
+        "ts": "1751989451.999349",
+        "client_msg_id": "8199599a-1862-4d73-8beb-49e69d881135",
+        "text": "why doesn't the script install the most recent version by default :thinking_face:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08BFLLG1AB",
+        "source_team": "T08BFLLG1AB",
+        "user_profile": {
+            "avatar_hash": "c95f62f49f3f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-08\/9329437205076_c95f62f49f3fb1e319fe_72.png",
+            "first_name": "Ales",
+            "real_name": "Ales Ferlan",
+            "display_name": "Ales Ferlan",
+            "team": "T08BFLLG1AB",
+            "name": "ales",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751986757.363199",
+        "parent_user_id": "U090UFN4ME2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mRliT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "why doesn't the script install the most recent version by default "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "thinking_face",
+                                "unicode": "1f914"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0724J67GSE",
+        "type": "message",
+        "ts": "1752036528.718539",
+        "edited": {
+            "user": "U0724J67GSE",
+            "ts": "1752036686.000000"
+        },
+        "client_msg_id": "1a1098d7-9300-4b1a-b378-4312e535db4b",
+        "text": "Hi <@U02SR6E8Z9S> <@U03QSP8LP9T> I'm getting this error when trying to build the latest version of `quickstart`. It looks like my user is not authorized to access these files from Jfrog.\ncc <@U07MFE5HS7P> <@U07UEV3B9LP> <@U094KF3PKDY>\n```FAILURE: Build failed with an exception.\n\n* Where:\nBuild file 'Quickstart\/quickstart\/backend\/build.gradle.kts' line: 62\n\n* What went wrong:\nCould not resolve all files for configuration ':backend:runtimeClasspath'.\n> Could not resolve com.daml:transcode-codegen-java-runtime:0.0.1-main.20250423.81.473.vde10c4f.\n  Required by:\n      project :backend\n   > Could not resolve com.daml:transcode-codegen-java-runtime:0.0.1-main.20250423.81.473.vde10c4f.\n      > Could not get resource '<https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codegen-java-runtime\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codegen-java-runtime-0.0.1-main.20250423.81.473.vde10c4f.pom>'.\n         > Could not GET '<https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codegen-java-runtime\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codegen-java-runtime-0.0.1-main.20250423.81.473.vde10c4f.pom>'. Received status code 403 from server: \n> Could not resolve com.daml:transcode-codec-proto-java-daml3.3_3:0.0.1-main.20250423.81.473.vde10c4f.\n  Required by:\n      project :backend\n   > Could not resolve com.daml:transcode-codec-proto-java-daml3.3_3:0.0.1-main.20250423.81.473.vde10c4f.\n      > Could not get resource '<https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codec-proto-java-daml3.3_3\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codec-proto-java-daml3.3_3-0.0.1-main.20250423.81.473.vde10c4f.pom>'.\n         > Could not GET '<https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codec-proto-java-daml3.3_3\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codec-proto-java-daml3.3_3-0.0.1-main.20250423.81.473.vde10c4f.pom>'. Received status code 403 from server: \n> Could not resolve com.daml:transcode-codec-json_3:0.0.1-main.20250423.81.473.vde10c4f.\n  Required by:\n      project :backend\n   > Could not resolve com.daml:transcode-codec-json_3:0.0.1-main.20250423.81.473.vde10c4f.\n      > Could not get resource '<https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codec-json_3\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codec-json_3-0.0.1-main.20250423.81.473.vde10c4f.pom>'.\n         > Could not GET '<https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codec-json_3\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codec-json_3-0.0.1-main.20250423.81.473.vde10c4f.pom>'. Received status code 403 from server```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "e3a9767538bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-10\/7272227989824_e3a9767538bfd906f0ba_72.png",
+            "first_name": "Hoang",
+            "real_name": "Hoang Anh Le",
+            "display_name": "Hoang-Anh",
+            "team": "T072736KDTK",
+            "name": "anh.le",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752036528.718539",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1752140570.117519",
+        "reply_users": [
+            "U0724J67GSE"
+        ],
+        "replies": [
+            {
+                "user": "U0724J67GSE",
+                "ts": "1752140570.117519"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0jllf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02SR6E8Z9S"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03QSP8LP9T"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I'm getting this error when trying to build the latest version of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "quickstart",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". It looks like my user is not authorized to access these files from Jfrog.\ncc "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U07MFE5HS7P"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U07UEV3B9LP"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U094KF3PKDY"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "FAILURE: Build failed with an exception.\n\n* Where:\nBuild file 'Quickstart\/quickstart\/backend\/build.gradle.kts' line: 62\n\n* What went wrong:\nCould not resolve all files for configuration ':backend:runtimeClasspath'.\n> Could not resolve com.daml:transcode-codegen-java-runtime:0.0.1-main.20250423.81.473.vde10c4f.\n  Required by:\n      project :backend\n   > Could not resolve com.daml:transcode-codegen-java-runtime:0.0.1-main.20250423.81.473.vde10c4f.\n      > Could not get resource '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codegen-java-runtime\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codegen-java-runtime-0.0.1-main.20250423.81.473.vde10c4f.pom"
+                            },
+                            {
+                                "type": "text",
+                                "text": "'.\n         > Could not GET '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codegen-java-runtime\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codegen-java-runtime-0.0.1-main.20250423.81.473.vde10c4f.pom"
+                            },
+                            {
+                                "type": "text",
+                                "text": "'. Received status code 403 from server: \n> Could not resolve com.daml:transcode-codec-proto-java-daml3.3_3:0.0.1-main.20250423.81.473.vde10c4f.\n  Required by:\n      project :backend\n   > Could not resolve com.daml:transcode-codec-proto-java-daml3.3_3:0.0.1-main.20250423.81.473.vde10c4f.\n      > Could not get resource '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codec-proto-java-daml3.3_3\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codec-proto-java-daml3.3_3-0.0.1-main.20250423.81.473.vde10c4f.pom"
+                            },
+                            {
+                                "type": "text",
+                                "text": "'.\n         > Could not GET '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codec-proto-java-daml3.3_3\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codec-proto-java-daml3.3_3-0.0.1-main.20250423.81.473.vde10c4f.pom"
+                            },
+                            {
+                                "type": "text",
+                                "text": "'. Received status code 403 from server: \n> Could not resolve com.daml:transcode-codec-json_3:0.0.1-main.20250423.81.473.vde10c4f.\n  Required by:\n      project :backend\n   > Could not resolve com.daml:transcode-codec-json_3:0.0.1-main.20250423.81.473.vde10c4f.\n      > Could not get resource '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codec-json_3\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codec-json_3-0.0.1-main.20250423.81.473.vde10c4f.pom"
+                            },
+                            {
+                                "type": "text",
+                                "text": "'.\n         > Could not GET '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codec-json_3\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codec-json_3-0.0.1-main.20250423.81.473.vde10c4f.pom"
+                            },
+                            {
+                                "type": "text",
+                                "text": "'. Received status code 403 from server"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

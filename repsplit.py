@@ -62,10 +62,10 @@ def round_to_nearest_25(percentage: float) -> float:
         return 100.0
 
 class RepSplit:
-    def __init__(self, config_file: str = "config.json"):
+    def __init__(self, config_file: str = "data/slack/config.json"):
         self.config_file = config_file
         self.config = self.load_config()
-        self.db_path = "repsplit.db"
+        self.db_path = "data/slack/repsplit.db"
         self.output_dir = Path("output")
         self.justifications_dir = self.output_dir / "justifications"
         
@@ -234,13 +234,57 @@ class RepSplit:
             participant_stats["stage_contributions"][stage] = 0
         participant_stats["stage_contributions"][stage] += 1
     
+    def _process_telegram_stage_detections(self, conv_id: str, internal_names: set) -> List[Tuple[str, str, float, str]]:
+        """Process Telegram messages for stage detection"""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        # Get Telegram messages for internal team members
+        if internal_names:
+            placeholders = ','.join(['?' for _ in internal_names])
+            cursor.execute(f'''
+                SELECT author, text, timestamp
+                FROM telegram_messages 
+                WHERE conv_id = ? AND author IN ({placeholders})
+                ORDER BY timestamp
+            ''', [conv_id] + list(internal_names))
+        else:
+            cursor.execute('''
+                SELECT author, text, timestamp
+                FROM telegram_messages 
+                WHERE conv_id = ?
+                ORDER BY timestamp
+            ''', [conv_id])
+        
+        telegram_messages = cursor.fetchall()
+        conn.close()
+        
+        # Process messages for stage detection
+        telegram_stage_detections = []
+        for author, text, timestamp in telegram_messages:
+            if text:  # Only process messages with text
+                detected_stages = self.detect_stages_in_message(text)
+                # Use current timestamp if Telegram timestamp is missing
+                ts = timestamp if timestamp else 0
+                for stage_name, confidence in detected_stages:
+                    telegram_stage_detections.append((stage_name, author, confidence, ts))
+        
+        return telegram_stage_detections
+    
     def calculate_commission_splits(self, conv_id: str) -> Dict[str, float]:
         """Calculate commission splits for a specific conversation"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
-        # Get internal team Slack IDs for filtering
+        # Get internal team Slack IDs and names for filtering
         internal_slack_ids = {p['slack_id'] for p in self.config['participants'] if p['slack_id']}
+        # Include both name and display_name for Telegram matching
+        internal_names = set()
+        for p in self.config['participants']:
+            if p.get('display_name'):
+                internal_names.add(p['display_name'])
+            if p.get('name'):
+                internal_names.add(p['name'])
         
         # Get stage detections for internal team members only
         if internal_slack_ids:
@@ -261,7 +305,13 @@ class RepSplit:
         
         stage_detections = cursor.fetchall()
         
-        # Get messages for internal team members only
+        # Process Telegram messages for stage detection
+        telegram_stage_detections = self._process_telegram_stage_detections(conv_id, internal_names)
+        
+        # Combine Slack and Telegram stage detections
+        all_stage_detections = stage_detections + telegram_stage_detections
+        
+        # Get messages for internal team members only (Slack)
         if internal_slack_ids:
             placeholders = ','.join(['?' for _ in internal_slack_ids])
             cursor.execute(f'''
@@ -278,7 +328,29 @@ class RepSplit:
                 ORDER BY timestamp
             ''', [conv_id] + list(internal_slack_ids))
         
-        messages = cursor.fetchall()
+        slack_messages = cursor.fetchall()
+        
+        # Get Telegram messages for internal team members
+        if internal_names:
+            placeholders = ','.join(['?' for _ in internal_names])
+            cursor.execute(f'''
+                SELECT author, timestamp
+                FROM telegram_messages 
+                WHERE conv_id = ? AND author IN ({placeholders})
+                ORDER BY timestamp
+            ''', [conv_id] + list(internal_names))
+        else:
+            cursor.execute('''
+                SELECT author, timestamp
+                FROM telegram_messages 
+                WHERE conv_id = ?
+                ORDER BY timestamp
+            ''', [conv_id])
+        
+        telegram_messages = cursor.fetchall()
+        
+        # Combine Slack and Telegram messages
+        messages = slack_messages + telegram_messages
         
         # Get conversation name for calendar lookup
         cursor.execute('SELECT name FROM conversations WHERE conv_id = ?', (conv_id,))
@@ -286,21 +358,24 @@ class RepSplit:
         conv_name = conv_data[0] if conv_data else "unknown"
         conn.close()
         
-        if not stage_detections and not messages:
+        if not all_stage_detections and not messages:
             return {}
         
         # Calculate participant contributions
         participant_stats = {}
         
-        # Process stage detections
-        for stage_name, author, confidence, timestamp in stage_detections:
+        # Process stage detections (Slack + Telegram)
+        for stage_name, author, confidence, timestamp in all_stage_detections:
+            # Handle missing timestamps
+            ts = timestamp if timestamp is not None else 0
+            
             if author not in participant_stats:
                 participant_stats[author] = {
                     "total_confidence": 0,
                     "stage_contributions": {},
                     "message_count": 0,
-                    "first_message": timestamp,
-                    "last_message": timestamp,
+                    "first_message": ts,
+                    "last_message": ts,
                     "calendar_meetings": 0
                 }
             
@@ -312,25 +387,30 @@ class RepSplit:
             # Update total confidence
             participant_stats[author]["total_confidence"] += confidence
             
-            # Update timestamp range
-            participant_stats[author]["first_message"] = min(participant_stats[author]["first_message"], timestamp)
-            participant_stats[author]["last_message"] = max(participant_stats[author]["last_message"], timestamp)
+            # Update timestamp range if timestamp is valid
+            if ts is not None:
+                participant_stats[author]["first_message"] = min(participant_stats[author]["first_message"], ts)
+                participant_stats[author]["last_message"] = max(participant_stats[author]["last_message"], ts)
         
         # Process message counts
         for author, timestamp in messages:
+            # Handle missing timestamps
+            ts = timestamp if timestamp is not None else 0
+            
             if author not in participant_stats:
                 participant_stats[author] = {
                     "total_confidence": 0,
                     "stage_contributions": {},
                     "message_count": 0,
-                    "first_message": timestamp,
-                    "last_message": timestamp,
+                    "first_message": ts,
+                    "last_message": ts,
                     "calendar_meetings": 0
                 }
             
             participant_stats[author]["message_count"] += 1
-            participant_stats[author]["first_message"] = min(participant_stats[author]["first_message"], timestamp)
-            participant_stats[author]["last_message"] = max(participant_stats[author]["last_message"], timestamp)
+            if ts is not None:
+                participant_stats[author]["first_message"] = min(participant_stats[author]["first_message"], ts)
+                participant_stats[author]["last_message"] = max(participant_stats[author]["last_message"], ts)
         
         # Add calendar meeting contributions for in-person interactions
         self._add_calendar_contributions(conv_name, participant_stats)
@@ -587,25 +667,36 @@ class RepSplit:
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
+        # Get both Slack bitsafe channels and Telegram conversations
         cursor.execute('''
             SELECT conv_id, name FROM conversations 
             WHERE is_bitsafe = TRUE
         ''')
+        slack_channels = cursor.fetchall()
         
-        bitsafe_channels = cursor.fetchall()
+        # Get Telegram conversations that have internal team activity
+        cursor.execute('''
+            SELECT DISTINCT conv_id, company_name as name
+            FROM telegram_messages 
+            WHERE author IN ('Aki', 'Addie', 'Mayank', 'Amy', 'Kadeem Clarke')
+        ''')
+        telegram_channels = cursor.fetchall()
+        
+        # Combine both data sources
+        all_channels = slack_channels + telegram_channels
         conn.close()
         
-        if not bitsafe_channels:
-            logger.warning("No bitsafe channels found. Please run the Slack ingestion first.")
+        if not all_channels:
+            logger.warning("No channels found. Please run the Slack ingestion first.")
             return
         
-        logger.info(f"Found {len(bitsafe_channels)} bitsafe channels to analyze")
+        logger.info(f"Found {len(slack_channels)} Slack channels and {len(telegram_channels)} Telegram conversations to analyze")
         
         # Calculate commission splits for each channel
         all_splits = []
         person_totals = {"Aki": 0.0, "Addie": 0.0, "Amy": 0.0, "Mayank": 0.0, "Prateek": 0.0, "Will": 0.0, "Kadeem": 0.0}
         
-        for conv_id, conv_name in bitsafe_channels:
+        for conv_id, conv_name in all_channels:
             logger.info(f"Analyzing {conv_name}...")
             
             # Calculate splits
@@ -970,8 +1061,8 @@ def main():
     print("=====================================")
     
     # Check if config exists
-    if not os.path.exists("config.json"):
-        print("\nNo configuration file found. Please create config.json with your Slack token and participant information.")
+    if not os.path.exists("data/slack/config.json"):
+        print("\nNo configuration file found. Please create data/slack/config.json with your Slack token and participant information.")
         print("A default config.json has been created for you to edit.")
         return
     

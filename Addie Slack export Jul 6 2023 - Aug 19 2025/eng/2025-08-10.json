@@ -1,0 +1,246 @@
+[
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754811909.890819",
+        "client_msg_id": "e96eca76-e375-46dc-9b32-60d43e4554d3",
+        "text": "I like the idea",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754778961.079519",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UzwRz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I like the idea"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1754854313.199339",
+        "edited": {
+            "user": "U05FU0HPZ9T",
+            "ts": "1754855641.000000"
+        },
+        "client_msg_id": "6bc6cbfe-404d-4685-a30d-fbc683fbbfc8",
+        "text": "Hey <@U088UV6MKFE> you might have gotten a low-priority pagerduty alert (or maybe I did?) because the rewards dropped below 5k for 2 rounds in a row.\n\nI’m going to change this alert as follows:\n\n• Priority: Low -> High, because I don’t think we’ll notice a low priority alert\n• Lower Bound Threshold: 5k -> 3k, because we’re interested in major problems with the app, not just lower rounds\n• Consecutive Rounds: 2 -> 5, again because we don’t care so much about one or two busy network rounds where our rewards are low, but rather major outages.\nSound ok to you guys, whatcha think?\n\n<https:\/\/github.com\/DLC-link\/health-dashboard\/pull\/101\/files>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754854313.199339",
+        "reply_count": 7,
+        "reply_users_count": 3,
+        "latest_reply": "1755162321.969569",
+        "reply_users": [
+            "U093Q4FPEJG",
+            "U05FU0HPZ9T",
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754889207.835389"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1755016806.755099"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1755162168.270339"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1755162203.197209"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1755162225.437069"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1755162234.764559"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1755162321.969569"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CMklH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " you might have gotten a low-priority pagerduty alert (or maybe I did?) because the rewards dropped below 5k for 2 rounds in a row.\n\nI’m going to change this alert as follows:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Priority: Low -> High, because I don’t think we’ll notice a low priority alert"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Lower Bound Threshold: 5k -> 3k, because we’re interested in major problems with the app, not just lower rounds"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Consecutive Rounds: 2 -> 5, again because we don’t care so much about one or two busy network rounds where our rewards are low, but rather major outages."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nSound ok to you guys, whatcha think?\n\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/health-dashboard\/pull\/101\/files"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754889207.835389",
+        "client_msg_id": "3C0341EE-6391-4FAB-99A6-5DE8863836C1",
+        "text": "Im fine with these changes. The alerts on my side are way stricter. I get notification in case of any error. There wasnt any in the past few days. Also I get notification if a cycle didnt make at least 10 successful transfer. So I can catch an outage pretty fast.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754854313.199339",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ky3T6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Im fine with these changes. The alerts on my side are way stricter. I get notification in case of any error. There wasnt any in the past few days. Also I get notification if a cycle didnt make at least 10 successful transfer. So I can catch an outage pretty fast."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            },
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

@@ -1,0 +1,2832 @@
+[
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745479312.825839",
+        "client_msg_id": "eda696d5-2468-4dcb-9b7e-3de0f1616955",
+        "text": "Here is some more interesting log\n\n\n```{\"@timestamp\":\"2025-04-23T23:35:30.081Z\",\"@version\":\"1\",\"message\":\"Uploading DAR file for e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) in submission ID .\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-48\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.100Z\",\"@version\":\"1\",\"message\":\"Package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) claims to upgrade package id 4e3e0d9cdadf80f4bf8f3cd3660d5287c084c9a29f23c901aabce597d72fd467 (splice-wallet-payments v0.1.7)\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-88\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.101Z\",\"@version\":\"1\",\"message\":\"DAR_NOT_VALID_UPGRADE(8,6c3ab253): The uploaded DAR contains a package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8), but upgrade checks indicate that new package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) cannot be an upgrade of existing package 4e3e0d9cdadf80f4bf8f3cd3660d5287c084c9a29f23c901aabce597d72fd467 (splice-wallet-payments v0.1.7). Reason: The upgraded data type AppPaymentRequest_AcceptResult has changed the types of some of its original fields.\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-88\",\"level\":\"INFO\",\"level_value\":20000,\"location\":\"PackageUpgradeValidator.scala:251\",\"error-code\":\"DAR_NOT_VALID_UPGRADE(8,6c3ab253)\",\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\",\"participant\":\"participant\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.101Z\",\"@version\":\"1\",\"message\":\"Request com.digitalasset.canton.admin.participant.v30.PackageService\/UploadDar by \/192.168.176.5:39232: failed with INVALID_ARGUMENT\/DAR_NOT_VALID_UPGRADE(8,6c3ab253): The uploaded DAR contains a package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8), but upgrade checks indicate that new package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) cannot be an upgrade of existing package 4e3e0d9cdadf80f4bf8f3cd3660d5287c084c9a29f23c901aabce597d72fd467 (splice-wallet-payments v0.1.7). Reason: The upgraded data type AppPaymentRequest_AcceptResult has changed the types of some of it...\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"canton-env-ec-95\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}```\nThe log is cutoff after the word `it...` so i cannot see the full log.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "56c1y",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Here is some more interesting log\n\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"@timestamp\":\"2025-04-23T23:35:30.081Z\",\"@version\":\"1\",\"message\":\"Uploading DAR file for e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) in submission ID .\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-48\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.100Z\",\"@version\":\"1\",\"message\":\"Package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) claims to upgrade package id 4e3e0d9cdadf80f4bf8f3cd3660d5287c084c9a29f23c901aabce597d72fd467 (splice-wallet-payments v0.1.7)\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-88\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.101Z\",\"@version\":\"1\",\"message\":\"DAR_NOT_VALID_UPGRADE(8,6c3ab253): The uploaded DAR contains a package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8), but upgrade checks indicate that new package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) cannot be an upgrade of existing package 4e3e0d9cdadf80f4bf8f3cd3660d5287c084c9a29f23c901aabce597d72fd467 (splice-wallet-payments v0.1.7). Reason: The upgraded data type AppPaymentRequest_AcceptResult has changed the types of some of its original fields.\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-88\",\"level\":\"INFO\",\"level_value\":20000,\"location\":\"PackageUpgradeValidator.scala:251\",\"error-code\":\"DAR_NOT_VALID_UPGRADE(8,6c3ab253)\",\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\",\"participant\":\"participant\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.101Z\",\"@version\":\"1\",\"message\":\"Request com.digitalasset.canton.admin.participant.v30.PackageService\/UploadDar by \/192.168.176.5:39232: failed with INVALID_ARGUMENT\/DAR_NOT_VALID_UPGRADE(8,6c3ab253): The uploaded DAR contains a package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8), but upgrade checks indicate that new package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) cannot be an upgrade of existing package 4e3e0d9cdadf80f4bf8f3cd3660d5287c084c9a29f23c901aabce597d72fd467 (splice-wallet-payments v0.1.7). Reason: The upgraded data type AppPaymentRequest_AcceptResult has changed the types of some of it...\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"canton-env-ec-95\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThe log is cutoff after the word "
+                            },
+                            {
+                                "type": "text",
+                                "text": "it...",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " so i cannot see the full log."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745479562.945069",
+        "client_msg_id": "b7376e28-9be2-4175-9acc-aad0d9d76288",
+        "text": "yes one sec",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jLe46",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes one sec"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745479622.418309",
+        "client_msg_id": "9a74824b-3708-4194-8ee3-7d86fbce026f",
+        "text": "``` participant.dars.list()\n{\"@timestamp\":\"2025-04-24T07:26:55.004Z\",\"@version\":\"1\",\"message\":\"Running command ListDars(1000) on participant against ClientConfig(participant,5002,None,Some(KeepAliveClientConfig(40s,20s)))\",\"logger_name\":\"c.d.c.c.ConsoleGrpcAdminCommandRunner\",\"thread_name\":\"canton-env-ec-27\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"9f0ed5fa8ffb20e72b286e582f49111e\"}\n{\"@timestamp\":\"2025-04-24T07:26:55.005Z\",\"@version\":\"1\",\"message\":\"Sending request ListDars(1000) to participant.\",\"logger_name\":\"c.d.c.a.a.client.GrpcCtlRunner\",\"thread_name\":\"canton-env-ec-71\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"9f0ed5fa8ffb20e72b286e582f49111e\"}\n{\"@timestamp\":\"2025-04-24T07:26:55.011Z\",\"@version\":\"1\",\"message\":\"Request ListDars(1000) has succeeded for participant.\",\"logger_name\":\"c.d.c.a.a.client.GrpcCtlRunner\",\"thread_name\":\"canton-env-ec-27\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"9f0ed5fa8ffb20e72b286e582f49111e\"}\nres1: Seq[com.digitalasset.canton.admin.participant.v30.DarDescription] = Vector(\n  DarDescription(hash = \"1220569e94cc875b3e5c2bb2524fe374cb2a7ca0abea0b22f2a3f7be17ed54f4ec19\", name = \"AdminWorkflows\"),\n  DarDescription(hash = \"12205a25b6c83077e267cacb570b963ff823acaa38d31207f1c695a98e026cbf32ea\", name = \"12205a25b6c83077e267cacb570b963ff823acaa38d31207f1c695a98e026cbf32ea\"),\n  DarDescription(hash = \"122033d2121a5b6bfaf3c1bfaea04aa8a779462f8c4d21a1ade1cbfdffc6732c9829\", name = \"122033d2121a5b6bfaf3c1bfaea04aa8a779462f8c4d21a1ade1cbfdffc6732c9829\"),\n  DarDescription(hash = \"122069d23cb5d3bad786c055bc15f782ecbff8eb3bc56e13012440e191b9f6f4343d\", name = \"122069d23cb5d3bad786c055bc15f782ecbff8eb3bc56e13012440e191b9f6f4343d\"),\n  DarDescription(hash = \"12209d761b8406534cb47a7157fce596829c2367885f17a537926335ae2c76e613c5\", name = \"12209d761b8406534cb47a7157fce596829c2367885f17a537926335ae2c76e613c5\"),\n  DarDescription(hash = \"122048b8666fb75d0acd6ba689522c0aeaae90c95b0ed5de1972bd86f7a0f50cb173\", name = \"122048b8666fb75d0acd6ba689522c0aeaae90c95b0ed5de1972bd86f7a0f50cb173\"),\n  DarDescription(hash = \"1220f2309844f46585d68107e6f826f81ea51ab723884d8930162203809103d81d6e\", name = \"1220f2309844f46585d68107e6f826f81ea51ab723884d8930162203809103d81d6e\"),\n  DarDescription(hash = \"1220648065562680ad5cbe1c7bc46e19aac0b046bb5cdc2083ba039873a3505827d0\", name = \"1220648065562680ad5cbe1c7bc46e19aac0b046bb5cdc2083ba039873a3505827d0\"),\n  DarDescription(hash = \"1220046b4573a25c3de5a7d782a3ed98d13f127d00f77dda1787e9c9e97770747795\", name = \"1220046b4573a25c3de5a7d782a3ed98d13f127d00f77dda1787e9c9e97770747795\"),\n  DarDescription(hash = \"1220d9cca51b000950697723fcc1ac3753febcb83f33da86af07b71d5dc5e9c3df50\", name = \"1220d9cca51b000950697723fcc1ac3753febcb83f33da86af07b71d5dc5e9c3df50\"),\n  DarDescription(hash = \"12200b0df6a3bc074f054790ddce5c796d2d450c23b956eba57c1b5d854d177d4bef\", name = \"12200b0df6a3bc074f054790ddce5c796d2d450c23b956eba57c1b5d854d177d4bef\"),\n  DarDescription(hash = \"12201e917c2f2f365273807316d3527c123b62bd785b7045fe65b28cc121d4c205f7\", name = \"12201e917c2f2f365273807316d3527c123b62bd785b7045fe65b28cc121d4c205f7\"),\n  DarDescription(hash = \"1220781d439d90416ecd63c1e9854d985dac3926d2d5bcf97249b9145cc0eeb3a798\", name = \"1220781d439d90416ecd63c1e9854d985dac3926d2d5bcf97249b9145cc0eeb3a798\"),\n  DarDescription(hash = \"1220545426e4e698379e09e23d35fe3f3d93785ff39651e187f5314dfdd782857210\", name = \"1220545426e4e698379e09e23d35fe3f3d93785ff39651e187f5314dfdd782857210\"),\n  DarDescription(hash = \"1220c088ab49335ff655ed238aeae0f5655aaa933e9bbc91dd614953b0f4fd991c37\", name = \"1220c088ab49335ff655ed238aeae0f5655aaa933e9bbc91dd614953b0f4fd991c37\"),\n  DarDescription(hash = \"1220759c60d6cbc41d150ead50f1fb872a094b79af6c70a1907854426123bdd41858\", name = \"1220759c60d6cbc41d150ead50f1fb872a094b79af6c70a1907854426123bdd41858\"),\n  DarDescription(hash = \"122081738b814642a0f7b34f0f4e6f314f424f8b6b9bf25f8c7a70dc28dfe4829853\", name = \"122081738b814642a0f7b34f0f4e6f314f424f8b6b9bf25f8c7a70dc28dfe4829853\"),\n  DarDescription(hash = \"12202e8252c749586a578dfcf8f1ed28da75c53c06f45323e8ef9a2ec0659a59afba\", name = \"12202e8252c749586a578dfcf8f1ed28da75c53c06f45323e8ef9a2ec0659a59afba\"),\n  DarDescription(hash = \"1220237cbba29b1f9a527e25821971e66f8c01db3abd340a641ea4d21d19f0f52d85\", name = \"1220237cbba29b1f9a527e25821971e66f8c01db3abd340a641ea4d21d19f0f52d85\"),\n  DarDescription(hash = \"12200cbfd10e1bb6e19d1f547c558d3cd40c6c3ce351450b6657c3c1bcbae36a216e\", name = \"12200cbfd10e1bb6e19d1f547c558d3cd40c6c3ce351450b6657c3c1bcbae36a216e\"),\n  DarDescription(hash = \"1220d97e823c1a43a0774f44a7374d184e65145bbcf98d8cd41382c75f13857f0e72\", name = \"1220d97e823c1a43a0774f44a7374d184e65145bbcf98d8cd41382c75f13857f0e72\"),\n  DarDescription(hash = \"1220e29052730729a1ad16f871ebf8f4445941cbe00b1f055df1e419d06abe64654c\", name = \"1220e29052730729a1ad16f871ebf8f4445941cbe00b1f055df1e419d06abe64654c\"),\n  DarDescription(hash = \"12202d249ca7dd5f2f36c6b33c7dbeaafc46cfc73ff6932dd07cbf59ef9131257aa8\", name = \"12202d249ca7dd5f2f36c6b33c7dbeaafc46cfc73ff6932dd07cbf59ef9131257aa8\"),\n  DarDescription(hash = \"1220ac1b7a65632eb93be38a48a313bc9c9cefe5bf74e11e7951b474e4916c184676\", name = \"1220ac1b7a65632eb93be38a48a313bc9c9cefe5bf74e11e7951b474e4916c184676\"),\n  DarDescription(hash = \"12208398d29e623fe946cbe3101093a7ca9314f7af39d87fa6c3b4f38ccf28889221\", name = \"12208398d29e623fe946cbe3101093a7ca9314f7af39d87fa6c3b4f38ccf28889221\"),\n  DarDescription(hash = \"12204d3b19a16e6760e7a7463e3367acf1ced0cd5c24445d981d872c3fe91e48fe64\", name = \"12204d3b19a16e6760e7a7463e3367acf1ced0cd5c24445d981d872c3fe91e48fe64\"),\n  DarDescription(hash = \"1220f7648538d868a8c279b23aa98c44fc0572df9002305cd84ea927740ec1ff7953\", name = \"1220f7648538d868a8c279b23aa98c44fc0572df9002305cd84ea927740ec1ff7953\"),\n  DarDescription(hash = \"1220c41a53312acf0e93960e2d581d4f60fdb343f334a158ea7f1e2ad75b7595a0d2\", name = \"1220c41a53312acf0e93960e2d581d4f60fdb343f334a158ea7f1e2ad75b7595a0d2\"),\n  DarDescription(hash = \"1220a685c4430f606c94cbd60ff930c5cc70290faadcffeb773ca92b4c6795c96766\", name = \"1220a685c4430f606c94cbd60ff930c5cc70290faadcffeb773ca92b4c6795c96766\"),\n  DarDescription(hash = \"1220da1a0085db0ad8e786a0dda84fc8b603010bacfd6d980880cd2f6f609a4b1aa5\", name = \"1220da1a0085db0ad8e786a0dda84fc8b603010bacfd6d980880cd2f6f609a4b1aa5\"),\n  DarDescription(hash = \"12206702cc17777f064311178a299a728ed640221827ccb2f290f4c3e11b4f2e56bd\", name = \"12206702cc17777f064311178a299a728ed640221827ccb2f290f4c3e11b4f2e56bd\"),\n  DarDescription(hash = \"122089f26c38177530076199c34663625a2bd5df900a0a2e470dff2f7b41898efc15\", name = \"splice-wallet-payments-current\"),\n  DarDescription(hash = \"1220d836077f7aa82a529e5fd30efc42c2053bb7060edcc4df2e9dfb95fadc1e911e\", name = \"splice-wallet-current\"),\n  DarDescription(hash = \"12209d397af0b09be45c004a9c2d88b8a58459cefa00319bc80c46e6c2c42143dbc0\", name = \"splice-amulet-name-service-0.1.7\"),\n  DarDescription(hash = \"1220c34cb704583d2b4d32e8ccd066c17a7c4b5923760f7dc058ff7ece37c962984a\", name = \"threetrade-licensing-0.2.2\")```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IJLQz",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " participant.dars.list()\n{\"@timestamp\":\"2025-04-24T07:26:55.004Z\",\"@version\":\"1\",\"message\":\"Running command ListDars(1000) on participant against ClientConfig(participant,5002,None,Some(KeepAliveClientConfig(40s,20s)))\",\"logger_name\":\"c.d.c.c.ConsoleGrpcAdminCommandRunner\",\"thread_name\":\"canton-env-ec-27\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"9f0ed5fa8ffb20e72b286e582f49111e\"}\n{\"@timestamp\":\"2025-04-24T07:26:55.005Z\",\"@version\":\"1\",\"message\":\"Sending request ListDars(1000) to participant.\",\"logger_name\":\"c.d.c.a.a.client.GrpcCtlRunner\",\"thread_name\":\"canton-env-ec-71\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"9f0ed5fa8ffb20e72b286e582f49111e\"}\n{\"@timestamp\":\"2025-04-24T07:26:55.011Z\",\"@version\":\"1\",\"message\":\"Request ListDars(1000) has succeeded for participant.\",\"logger_name\":\"c.d.c.a.a.client.GrpcCtlRunner\",\"thread_name\":\"canton-env-ec-27\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"9f0ed5fa8ffb20e72b286e582f49111e\"}\nres1: Seq[com.digitalasset.canton.admin.participant.v30.DarDescription] = Vector(\n  DarDescription(hash = \"1220569e94cc875b3e5c2bb2524fe374cb2a7ca0abea0b22f2a3f7be17ed54f4ec19\", name = \"AdminWorkflows\"),\n  DarDescription(hash = \"12205a25b6c83077e267cacb570b963ff823acaa38d31207f1c695a98e026cbf32ea\", name = \"12205a25b6c83077e267cacb570b963ff823acaa38d31207f1c695a98e026cbf32ea\"),\n  DarDescription(hash = \"122033d2121a5b6bfaf3c1bfaea04aa8a779462f8c4d21a1ade1cbfdffc6732c9829\", name = \"122033d2121a5b6bfaf3c1bfaea04aa8a779462f8c4d21a1ade1cbfdffc6732c9829\"),\n  DarDescription(hash = \"122069d23cb5d3bad786c055bc15f782ecbff8eb3bc56e13012440e191b9f6f4343d\", name = \"122069d23cb5d3bad786c055bc15f782ecbff8eb3bc56e13012440e191b9f6f4343d\"),\n  DarDescription(hash = \"12209d761b8406534cb47a7157fce596829c2367885f17a537926335ae2c76e613c5\", name = \"12209d761b8406534cb47a7157fce596829c2367885f17a537926335ae2c76e613c5\"),\n  DarDescription(hash = \"122048b8666fb75d0acd6ba689522c0aeaae90c95b0ed5de1972bd86f7a0f50cb173\", name = \"122048b8666fb75d0acd6ba689522c0aeaae90c95b0ed5de1972bd86f7a0f50cb173\"),\n  DarDescription(hash = \"1220f2309844f46585d68107e6f826f81ea51ab723884d8930162203809103d81d6e\", name = \"1220f2309844f46585d68107e6f826f81ea51ab723884d8930162203809103d81d6e\"),\n  DarDescription(hash = \"1220648065562680ad5cbe1c7bc46e19aac0b046bb5cdc2083ba039873a3505827d0\", name = \"1220648065562680ad5cbe1c7bc46e19aac0b046bb5cdc2083ba039873a3505827d0\"),\n  DarDescription(hash = \"1220046b4573a25c3de5a7d782a3ed98d13f127d00f77dda1787e9c9e97770747795\", name = \"1220046b4573a25c3de5a7d782a3ed98d13f127d00f77dda1787e9c9e97770747795\"),\n  DarDescription(hash = \"1220d9cca51b000950697723fcc1ac3753febcb83f33da86af07b71d5dc5e9c3df50\", name = \"1220d9cca51b000950697723fcc1ac3753febcb83f33da86af07b71d5dc5e9c3df50\"),\n  DarDescription(hash = \"12200b0df6a3bc074f054790ddce5c796d2d450c23b956eba57c1b5d854d177d4bef\", name = \"12200b0df6a3bc074f054790ddce5c796d2d450c23b956eba57c1b5d854d177d4bef\"),\n  DarDescription(hash = \"12201e917c2f2f365273807316d3527c123b62bd785b7045fe65b28cc121d4c205f7\", name = \"12201e917c2f2f365273807316d3527c123b62bd785b7045fe65b28cc121d4c205f7\"),\n  DarDescription(hash = \"1220781d439d90416ecd63c1e9854d985dac3926d2d5bcf97249b9145cc0eeb3a798\", name = \"1220781d439d90416ecd63c1e9854d985dac3926d2d5bcf97249b9145cc0eeb3a798\"),\n  DarDescription(hash = \"1220545426e4e698379e09e23d35fe3f3d93785ff39651e187f5314dfdd782857210\", name = \"1220545426e4e698379e09e23d35fe3f3d93785ff39651e187f5314dfdd782857210\"),\n  DarDescription(hash = \"1220c088ab49335ff655ed238aeae0f5655aaa933e9bbc91dd614953b0f4fd991c37\", name = \"1220c088ab49335ff655ed238aeae0f5655aaa933e9bbc91dd614953b0f4fd991c37\"),\n  DarDescription(hash = \"1220759c60d6cbc41d150ead50f1fb872a094b79af6c70a1907854426123bdd41858\", name = \"1220759c60d6cbc41d150ead50f1fb872a094b79af6c70a1907854426123bdd41858\"),\n  DarDescription(hash = \"122081738b814642a0f7b34f0f4e6f314f424f8b6b9bf25f8c7a70dc28dfe4829853\", name = \"122081738b814642a0f7b34f0f4e6f314f424f8b6b9bf25f8c7a70dc28dfe4829853\"),\n  DarDescription(hash = \"12202e8252c749586a578dfcf8f1ed28da75c53c06f45323e8ef9a2ec0659a59afba\", name = \"12202e8252c749586a578dfcf8f1ed28da75c53c06f45323e8ef9a2ec0659a59afba\"),\n  DarDescription(hash = \"1220237cbba29b1f9a527e25821971e66f8c01db3abd340a641ea4d21d19f0f52d85\", name = \"1220237cbba29b1f9a527e25821971e66f8c01db3abd340a641ea4d21d19f0f52d85\"),\n  DarDescription(hash = \"12200cbfd10e1bb6e19d1f547c558d3cd40c6c3ce351450b6657c3c1bcbae36a216e\", name = \"12200cbfd10e1bb6e19d1f547c558d3cd40c6c3ce351450b6657c3c1bcbae36a216e\"),\n  DarDescription(hash = \"1220d97e823c1a43a0774f44a7374d184e65145bbcf98d8cd41382c75f13857f0e72\", name = \"1220d97e823c1a43a0774f44a7374d184e65145bbcf98d8cd41382c75f13857f0e72\"),\n  DarDescription(hash = \"1220e29052730729a1ad16f871ebf8f4445941cbe00b1f055df1e419d06abe64654c\", name = \"1220e29052730729a1ad16f871ebf8f4445941cbe00b1f055df1e419d06abe64654c\"),\n  DarDescription(hash = \"12202d249ca7dd5f2f36c6b33c7dbeaafc46cfc73ff6932dd07cbf59ef9131257aa8\", name = \"12202d249ca7dd5f2f36c6b33c7dbeaafc46cfc73ff6932dd07cbf59ef9131257aa8\"),\n  DarDescription(hash = \"1220ac1b7a65632eb93be38a48a313bc9c9cefe5bf74e11e7951b474e4916c184676\", name = \"1220ac1b7a65632eb93be38a48a313bc9c9cefe5bf74e11e7951b474e4916c184676\"),\n  DarDescription(hash = \"12208398d29e623fe946cbe3101093a7ca9314f7af39d87fa6c3b4f38ccf28889221\", name = \"12208398d29e623fe946cbe3101093a7ca9314f7af39d87fa6c3b4f38ccf28889221\"),\n  DarDescription(hash = \"12204d3b19a16e6760e7a7463e3367acf1ced0cd5c24445d981d872c3fe91e48fe64\", name = \"12204d3b19a16e6760e7a7463e3367acf1ced0cd5c24445d981d872c3fe91e48fe64\"),\n  DarDescription(hash = \"1220f7648538d868a8c279b23aa98c44fc0572df9002305cd84ea927740ec1ff7953\", name = \"1220f7648538d868a8c279b23aa98c44fc0572df9002305cd84ea927740ec1ff7953\"),\n  DarDescription(hash = \"1220c41a53312acf0e93960e2d581d4f60fdb343f334a158ea7f1e2ad75b7595a0d2\", name = \"1220c41a53312acf0e93960e2d581d4f60fdb343f334a158ea7f1e2ad75b7595a0d2\"),\n  DarDescription(hash = \"1220a685c4430f606c94cbd60ff930c5cc70290faadcffeb773ca92b4c6795c96766\", name = \"1220a685c4430f606c94cbd60ff930c5cc70290faadcffeb773ca92b4c6795c96766\"),\n  DarDescription(hash = \"1220da1a0085db0ad8e786a0dda84fc8b603010bacfd6d980880cd2f6f609a4b1aa5\", name = \"1220da1a0085db0ad8e786a0dda84fc8b603010bacfd6d980880cd2f6f609a4b1aa5\"),\n  DarDescription(hash = \"12206702cc17777f064311178a299a728ed640221827ccb2f290f4c3e11b4f2e56bd\", name = \"12206702cc17777f064311178a299a728ed640221827ccb2f290f4c3e11b4f2e56bd\"),\n  DarDescription(hash = \"122089f26c38177530076199c34663625a2bd5df900a0a2e470dff2f7b41898efc15\", name = \"splice-wallet-payments-current\"),\n  DarDescription(hash = \"1220d836077f7aa82a529e5fd30efc42c2053bb7060edcc4df2e9dfb95fadc1e911e\", name = \"splice-wallet-current\"),\n  DarDescription(hash = \"12209d397af0b09be45c004a9c2d88b8a58459cefa00319bc80c46e6c2c42143dbc0\", name = \"splice-amulet-name-service-0.1.7\"),\n  DarDescription(hash = \"1220c34cb704583d2b4d32e8ccd066c17a7c4b5923760f7dc058ff7ece37c962984a\", name = \"threetrade-licensing-0.2.2\")"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F08PL0L2SQK",
+                "created": 1745479661,
+                "timestamp": 1745479661,
+                "name": "Untitled",
+                "title": "Untitled",
+                "mimetype": "text\/plain",
+                "filetype": "text",
+                "pretty_type": "Plain Text",
+                "user": "U08987JD1J9",
+                "user_team": "T08987C1Q77",
+                "editable": true,
+                "size": 12554,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T08987C1Q77-F08PL0L2SQK\/untitled?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T08987C1Q77-F08PL0L2SQK\/download\/untitled?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/fivenorthdigital.slack.com\/files\/U05FZBDQ4RJ\/F08PL0L2SQK\/untitled",
+                "permalink_public": "https:\/\/slack-files.com\/T08987C1Q77-F08PL0L2SQK-46e6f3f466",
+                "edit_link": "https:\/\/fivenorthdigital.slack.com\/files\/U05FZBDQ4RJ\/F08PL0L2SQK\/untitled\/edit",
+                "source_team": "T08987C1Q77",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": true,
+        "user": "U08987JD1J9",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1745479664.315419",
+        "client_msg_id": "1a81624b-9493-4257-8b99-316ddb91b519",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745479675.222269",
+        "client_msg_id": "61b57663-0b33-49fa-b6ee-ea2244dc733b",
+        "text": "it did",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+4JA4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "it did"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745479705.634569",
+        "client_msg_id": "214426ce-5a25-4d34-a203-e835c6717113",
+        "text": "right before this there was an issue with denex they upload the 0.2.2 version to onboarding page and the installation failed",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Q8a5B",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "right before this there was an issue with denex they upload the 0.2.2 version to onboarding page and the installation failed"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745479721.925189",
+        "client_msg_id": "a59d8357-6b18-4653-a893-cd33f1ebb0e5",
+        "text": "later on, they told me to use 0.2.3-dev and reupload the new dar file to their onboarding portal.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+Ke3U",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "later on, they told me to use 0.2.3-dev and reupload the new dar file to their onboarding portal."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745479752.024229",
+        "client_msg_id": "24431d39-faaf-4f0d-ad1d-29ba6b40729d",
+        "text": "but in the interim i also upgrade this node...maybe a bad idea.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OySAZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but in the interim i also upgrade this node...maybe a bad idea."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745479823.651099",
+        "client_msg_id": "53b2f2d9-ab84-4c71-bc46-5b580f901454",
+        "text": "is there a way to uninstall it  from the console ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5Vhqw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "is there a way to uninstall it  from the console ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U069QDTQV8S",
+        "type": "message",
+        "ts": "1745485816.899539",
+        "client_msg_id": "d89f29d9-0fd0-4153-9759-dc862d833597",
+        "text": "How to determine whether the node is deployed successfully?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T065T8729K4",
+        "source_team": "T065T8729K4",
+        "user_profile": {
+            "avatar_hash": "fcbb420e26d6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-12-12\/6315982222583_fcbb420e26d61573ac99_72.jpg",
+            "first_name": "JamesWang-HashKey",
+            "real_name": "JamesWang-HashKey Cloud",
+            "display_name": "JamesWang-HashKey Cloud",
+            "team": "T065T8729K4",
+            "name": "wangzezheng",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485816.899539",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1745488252.935639",
+        "reply_users": [
+            "U069QDTQV8S"
+        ],
+        "replies": [
+            {
+                "user": "U069QDTQV8S",
+                "ts": "1745488252.935639"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Eco5w",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "How to determine whether the node is deployed successfully?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06BXPXULH4",
+        "type": "message",
+        "ts": "1745487900.622919",
+        "client_msg_id": "3e308e2f-f03a-430c-b51a-0a1ec72cb7b9",
+        "text": "it works today for me as well :slightly_smiling_face:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NMQYT5QQ",
+        "source_team": "T04NMQYT5QQ",
+        "user_profile": {
+            "avatar_hash": "e054a18ad2db",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-01-09\/6436264963798_e054a18ad2db52ea3e2a_72.png",
+            "first_name": "Carsten",
+            "real_name": "Carsten Hermann",
+            "display_name": "Carsten Hermann",
+            "team": "T04NMQYT5QQ",
+            "name": "carsten.hermann",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745398669.758849",
+        "parent_user_id": "U06BXPXULH4",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "X9QEn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "it works today for me as well "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "My understanding is that these two values ​​can be set at will. But I don't know where these two values ​​are used.",
+        "files": [
+            {
+                "id": "F08PLL7SVV1",
+                "created": 1745488011,
+                "timestamp": 1745488011,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U069QDTQV8S",
+                "user_team": "T065T8729K4",
+                "editable": false,
+                "size": 55551,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T065T8729K4-F08PLL7SVV1\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T065T8729K4-F08PLL7SVV1\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08PLL7SVV1-4f4a9c587b\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08PLL7SVV1-4f4a9c587b\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08PLL7SVV1-4f4a9c587b\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 145,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08PLL7SVV1-4f4a9c587b\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 194,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08PLL7SVV1-4f4a9c587b\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08PLL7SVV1-4f4a9c587b\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 291,
+                "original_w": 758,
+                "original_h": 306,
+                "thumb_tiny": "AwATADDQJ5PNGT60vQ9KXPt+lADcn1oyfWnZoz7UANyfWlU5pc+36UCgCKQkNTdxp0n36ZQAu4+tG4+tJRQBLHznNPxg0yLvT+9AH\/\/Z",
+                "permalink": "https:\/\/hashkeycloud.slack.com\/files\/U05FZBDQ4RJ\/F08PLL7SVV1\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T065T8729K4-F08PLL7SVV1-71570c0f43",
+                "source_team": "T065T8729K4",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U069QDTQV8S",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yzZl+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "My understanding is that these two values ​​can be set at will. But I don't know where these two values ​​are used."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1745488085.166949",
+        "client_msg_id": "20472f92-fc1f-44b5-873d-0eb816000e06",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1745488085.166949",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1745489535.384299",
+        "reply_users": [
+            "U01DARYACCT"
+        ],
+        "replies": [
+            {
+                "user": "U01DARYACCT",
+                "ts": "1745489495.327089"
+            },
+            {
+                "user": "U01DARYACCT",
+                "ts": "1745489535.384299"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T065T8729K4",
+        "source_team": "T065T8729K4",
+        "user_profile": {
+            "avatar_hash": "fcbb420e26d6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-12-12\/6315982222583_fcbb420e26d61573ac99_72.jpg",
+            "first_name": "JamesWang-HashKey",
+            "real_name": "JamesWang-HashKey Cloud",
+            "display_name": "JamesWang-HashKey Cloud",
+            "team": "T065T8729K4",
+            "name": "wangzezheng",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U069QDTQV8S",
+        "type": "message",
+        "ts": "1745488252.935639",
+        "client_msg_id": "5dfba014-40cd-430b-87b7-42293e91db1b",
+        "text": "I mean how to check if my node has joined the network",
+        "team": "T05FWTX7PMG",
+        "user_team": "T065T8729K4",
+        "source_team": "T065T8729K4",
+        "user_profile": {
+            "avatar_hash": "fcbb420e26d6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-12-12\/6315982222583_fcbb420e26d61573ac99_72.jpg",
+            "first_name": "JamesWang-HashKey",
+            "real_name": "JamesWang-HashKey Cloud",
+            "display_name": "JamesWang-HashKey Cloud",
+            "team": "T065T8729K4",
+            "name": "wangzezheng",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485816.899539",
+        "parent_user_id": "U069QDTQV8S",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sIDl4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I mean how to check if my node has joined the network"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01DARYACCT",
+        "type": "message",
+        "ts": "1745489495.327089",
+        "client_msg_id": "d8a6b66a-d206-4448-a221-e98e3df45dec",
+        "text": "These values are used in OAuth2 access tokens and they are verified on backend apps. If a value configured on a backend doesn't match the one in a token of an HTTP request then the backend will reject the request.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E014GLQD2NN",
+        "source_team": "E014GLQD2NN",
+        "user_profile": {
+            "avatar_hash": "889d6e9cb5ee",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-10-04\/783644907056_889d6e9cb5ee13fbff83_72.jpg",
+            "first_name": "Stas",
+            "real_name": "Stas German",
+            "display_name": "stasge",
+            "team": "E014GLQD2NN",
+            "name": "stasge",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745488085.166949",
+        "parent_user_id": "U069QDTQV8S",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fw6qd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "These values are used in OAuth2 access tokens and they are verified on backend apps. If a value configured on a backend doesn't match the one in a token of an HTTP request then the backend will reject the request."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01DARYACCT",
+        "type": "message",
+        "ts": "1745489535.384299",
+        "client_msg_id": "6a2f7f7b-1dd2-492e-a5a2-eae364903a76",
+        "text": "The first one is for participant, the second one is for validator.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E014GLQD2NN",
+        "source_team": "E014GLQD2NN",
+        "user_profile": {
+            "avatar_hash": "889d6e9cb5ee",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-10-04\/783644907056_889d6e9cb5ee13fbff83_72.jpg",
+            "first_name": "Stas",
+            "real_name": "Stas German",
+            "display_name": "stasge",
+            "team": "E014GLQD2NN",
+            "name": "stasge",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745488085.166949",
+        "parent_user_id": "U069QDTQV8S",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "awGfH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The first one is for participant, the second one is for validator."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*alec.korba* from *Validation Cloud* was added to this channel by *dramandalmartin*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1745496497.070549",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "STeLd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "alec.korba",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Validation Cloud",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "dramandalmartin",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08P4C3FJ9Y",
+        "type": "message",
+        "ts": "1745499508.908599",
+        "client_msg_id": "33f9a10a-942d-42e2-8b20-aa1b22da1191",
+        "text": "Thanks <@U03HMUTQ5F0>\nCould you please add to this chat my colleague who is taking care of the devops?\n\nHis email: <mailto:patrick@deploi.org|patrick@deploi.org>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08P4C3EP26",
+        "source_team": "T08P4C3EP26",
+        "user_profile": {
+            "avatar_hash": "78c4ea48e285",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-03\/9312302546177_78c4ea48e285879e2f62_72.png",
+            "first_name": "Oskars",
+            "real_name": "Oskars Jepsis",
+            "display_name": "Oskars \/ deploi",
+            "team": "T08P4C3EP26",
+            "name": "oskars.j",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745313673.803519",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Jwc4z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nCould you please add to this chat my colleague who is taking care of the devops?\n\nHis email: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:patrick@deploi.org",
+                                "text": "patrick@deploi.org"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08P4C3FJ9Y",
+        "type": "message",
+        "ts": "1745509628.695229",
+        "client_msg_id": "14a70647-14bc-4e34-9738-d3dd5e1469af",
+        "text": "Thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08P4C3EP26",
+        "source_team": "T08P4C3EP26",
+        "user_profile": {
+            "avatar_hash": "78c4ea48e285",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-03\/9312302546177_78c4ea48e285879e2f62_72.png",
+            "first_name": "Oskars",
+            "real_name": "Oskars Jepsis",
+            "display_name": "Oskars \/ deploi",
+            "team": "T08P4C3EP26",
+            "name": "oskars.j",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745313673.803519",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cSYv0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745510962.242619",
+        "client_msg_id": "878c3281-de5d-4c75-9ac7-90a0527d1f39",
+        "text": "Hi <@U027H3VL3BJ>,\n\nI had update the log from above of particpant. It's just contains enough info.\n\n```{\"@timestamp\":\"2025-04-23T23:35:29.979Z\",\"@version\":\"1\",\"message\":\"Ignoring upload of package 19f0df5fdaf5a96e137b6ea885fdb378f37bd3166bd9a47ee11518e33fa09a20 (daml-prim-GHC-Tuple v1.0.0) as it has been previously uploaded\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-91\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:29.979Z\",\"@version\":\"1\",\"message\":\"Uploading DAR file for 511bd3bf23fab4e5171edb22dceabe3061f7faf78a44f8af44f3b87f977c61f6 (splice-amulet v0.1.8) in submission ID .\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-91\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.052Z\",\"@version\":\"1\",\"message\":\"Package 511bd3bf23fab4e5171edb22dceabe3061f7faf78a44f8af44f3b87f977c61f6 (splice-amulet v0.1.8) claims to upgrade package id 979ec710c3ae3a05cb44edf8461a9b4d7dd2053add95664f94fc89e5f18df80f (splice-amulet v0.1.6)\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-88\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.081Z\",\"@version\":\"1\",\"message\":\"Typechecking upgrades for 511bd3bf23fab4e5171edb22dceabe3061f7faf78a44f8af44f3b87f977c61f6 (splice-amulet v0.1.8) succeeded.\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-48\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.081Z\",\"@version\":\"1\",\"message\":\"Uploading DAR file for e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) in submission ID .\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-48\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.100Z\",\"@version\":\"1\",\"message\":\"Package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) claims to upgrade package id 4e3e0d9cdadf80f4bf8f3cd3660d5287c084c9a29f23c901aabce597d72fd467 (splice-wallet-payments v0.1.7)\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-88\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.101Z\",\"@version\":\"1\",\"message\":\"DAR_NOT_VALID_UPGRADE(8,6c3ab253): The uploaded DAR contains a package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8), but upgrade checks indicate that new package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) cannot be an upgrade of existing package 4e3e0d9cdadf80f4bf8f3cd3660d5287c084c9a29f23c901aabce597d72fd467 (splice-wallet-payments v0.1.7). Reason: The upgraded data type AppPaymentRequest_AcceptResult has changed the types of some of its original fields.\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-88\",\"level\":\"INFO\",\"level_value\":20000,\"location\":\"PackageUpgradeValidator.scala:251\",\"error-code\":\"DAR_NOT_VALID_UPGRADE(8,6c3ab253)\",\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\",\"participant\":\"participant\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.101Z\",\"@version\":\"1\",\"message\":\"Request com.digitalasset.canton.admin.participant.v30.PackageService\/UploadDar by \/192.168.176.5:39232: failed with INVALID_ARGUMENT\/DAR_NOT_VALID_UPGRADE(8,6c3ab253): The uploaded DAR contains a package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8), but upgrade checks indicate that new package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) cannot be an upgrade of existing package 4e3e0d9cdadf80f4bf8f3cd3660d5287c084c9a29f23c901aabce597d72fd467 (splice-wallet-payments v0.1.7). Reason: The upgraded data type AppPaymentRequest_AcceptResult has changed the types of some of it...\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"canton-env-ec-95\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}```\nThe cause is below but message isn't that useful. that's the only relevant log that has useful information.\n\n```DAR_NOT_VALID_UPGRADE(8,6c3ab253): The uploaded DAR contains a package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8), but upgrade checks indicate that new package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) cannot be an upgrade of existing package 4e3e0d9cdadf80f4bf8f3cd3660d5287c084c9a29f23c901aabce597d72fd467 (splice-wallet-payments v0.1.7). Reason: The upgraded data type AppPaymentRequest_AcceptResult has changed the types of some of its original fields```\n<@UEHLS0JUB> Had me do a list of dars and packages and see that I had 3trade and think that it might be something related to 3trade.\n\n\nI belived if I can uninstall the 3trade app, it may bring back my validator to a healthy state again.\n\nI tried to search in the docs for a way to do so but don't find anything.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vdZC\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U027H3VL3BJ"
+                            },
+                            {
+                                "type": "text",
+                                "text": ",\n\nI had update the log from above of particpant. It's just contains enough info.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"@timestamp\":\"2025-04-23T23:35:29.979Z\",\"@version\":\"1\",\"message\":\"Ignoring upload of package 19f0df5fdaf5a96e137b6ea885fdb378f37bd3166bd9a47ee11518e33fa09a20 (daml-prim-GHC-Tuple v1.0.0) as it has been previously uploaded\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-91\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:29.979Z\",\"@version\":\"1\",\"message\":\"Uploading DAR file for 511bd3bf23fab4e5171edb22dceabe3061f7faf78a44f8af44f3b87f977c61f6 (splice-amulet v0.1.8) in submission ID .\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-91\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.052Z\",\"@version\":\"1\",\"message\":\"Package 511bd3bf23fab4e5171edb22dceabe3061f7faf78a44f8af44f3b87f977c61f6 (splice-amulet v0.1.8) claims to upgrade package id 979ec710c3ae3a05cb44edf8461a9b4d7dd2053add95664f94fc89e5f18df80f (splice-amulet v0.1.6)\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-88\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.081Z\",\"@version\":\"1\",\"message\":\"Typechecking upgrades for 511bd3bf23fab4e5171edb22dceabe3061f7faf78a44f8af44f3b87f977c61f6 (splice-amulet v0.1.8) succeeded.\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-48\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.081Z\",\"@version\":\"1\",\"message\":\"Uploading DAR file for e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) in submission ID .\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-48\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.100Z\",\"@version\":\"1\",\"message\":\"Package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) claims to upgrade package id 4e3e0d9cdadf80f4bf8f3cd3660d5287c084c9a29f23c901aabce597d72fd467 (splice-wallet-payments v0.1.7)\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-88\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.101Z\",\"@version\":\"1\",\"message\":\"DAR_NOT_VALID_UPGRADE(8,6c3ab253): The uploaded DAR contains a package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8), but upgrade checks indicate that new package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) cannot be an upgrade of existing package 4e3e0d9cdadf80f4bf8f3cd3660d5287c084c9a29f23c901aabce597d72fd467 (splice-wallet-payments v0.1.7). Reason: The upgraded data type AppPaymentRequest_AcceptResult has changed the types of some of its original fields.\",\"logger_name\":\"c.d.c.p.a.s.a.PackageUpgradeValidator:participant=participant\",\"thread_name\":\"canton-env-ec-88\",\"level\":\"INFO\",\"level_value\":20000,\"location\":\"PackageUpgradeValidator.scala:251\",\"error-code\":\"DAR_NOT_VALID_UPGRADE(8,6c3ab253)\",\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\",\"participant\":\"participant\"}\n\n{\"@timestamp\":\"2025-04-23T23:35:30.101Z\",\"@version\":\"1\",\"message\":\"Request com.digitalasset.canton.admin.participant.v30.PackageService\/UploadDar by \/192.168.176.5:39232: failed with INVALID_ARGUMENT\/DAR_NOT_VALID_UPGRADE(8,6c3ab253): The uploaded DAR contains a package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8), but upgrade checks indicate that new package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) cannot be an upgrade of existing package 4e3e0d9cdadf80f4bf8f3cd3660d5287c084c9a29f23c901aabce597d72fd467 (splice-wallet-payments v0.1.7). Reason: The upgraded data type AppPaymentRequest_AcceptResult has changed the types of some of it...\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"canton-env-ec-95\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"6c3ab253d5b6eda0cc5afb44212b95b2\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThe cause is below but message isn't that useful. that's the only relevant log that has useful information.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "DAR_NOT_VALID_UPGRADE(8,6c3ab253): The uploaded DAR contains a package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8), but upgrade checks indicate that new package e48ea337ee3335c8bb3206a2501ce947ac1a7bdb1825cee8f28bad64f5a7bc4b (splice-wallet-payments v0.1.8) cannot be an upgrade of existing package 4e3e0d9cdadf80f4bf8f3cd3660d5287c084c9a29f23c901aabce597d72fd467 (splice-wallet-payments v0.1.7). Reason: The upgraded data type AppPaymentRequest_AcceptResult has changed the types of some of its original fields"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Had me do a list of dars and packages and see that I had 3trade and think that it might be something related to 3trade.\n\n\nI belived if I can uninstall the 3trade app, it may bring back my validator to a healthy state again.\n\nI tried to search in the docs for a way to do so but don't find anything."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745511329.830299",
+        "client_msg_id": "9a63e952-ff33-45d6-971d-77f941999d85",
+        "text": "that is `threetrade-licensing-0.2.2`  one",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Y7a3P",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "that is "
+                            },
+                            {
+                                "type": "text",
+                                "text": "threetrade-licensing-0.2.2",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  one"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745511342.551579",
+        "client_msg_id": "3ae0f30b-4120-408f-adb6-1fad08dacb28",
+        "text": "I can share in this channel",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ItkW1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I can share in this channel"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745511376.271529",
+        "client_msg_id": "057f81c7-f95e-40af-8c9d-d026f65b2521",
+        "text": "i don't need it as all because the installation failed at the last step.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PRwzX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "i don't need it as all because the installation failed at the last step."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745511405.697649",
+        "client_msg_id": "65895a99-26f8-4eea-ab6c-d46c582d0156",
+        "text": "they then re-upload 0.2.3 version and say that's the correct version to use. but problem is in the mean time I go ahead and update this node.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HHtSc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "they then re-upload 0.2.3 version and say that's the correct version to use. but problem is in the mean time I go ahead and update this node."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745511561.668499",
+        "client_msg_id": "cf9ec6be-119d-4d6a-bf0a-e531329e35fe",
+        "text": "more specific, the installtion failed on this step\n\n```curl <http:\/\/localhost:7575\/v1\/create> --fail-with-body -sS -X POST -H 'Authorization: Bearer &lt;redacted&gt; -H 'Content-Type: application\/json' -d '{\"templateId\":\"#threetrade-licensing:ThreeTradeLicensing.AppInstall:AppInstallRequest\",\"payload\":{\"provider\":\"3trade-General-1::12205f0f8ac02c9920688d2da4a71b67c9ebcdcd0baed2215d6defbd45cffba13283\",\"dso\":\"DSO::122071b3b1bdf69f2df3e161bd9933f2c419cdac3c48eaab7c2b920b6956d5d2a87b\",\"user\":\"fivenorth-devnet-1::122036c4a4b2f3030c1e01ecbfeaf143263c9dbc49fa03992cf69cd180176b567baa\",\"meta\":{\"values\":[]}}}'```\nThe log on our node showing\n\n```{\"@timestamp\":\"2025-04-22T12:28:37.661Z\",\"@version\":\"1\",\"message\":\"Not considering the following domains for routing: Map(global-domain::122071b3b1bd... -&gt; Some packages are not known to all informees on domain global-domain::122071b3b1bd...\\nParticipant PAR::validator-3trade-devnet::12205f0f8ac0... has not vetted 81564bf0430b...)\",\"logger_name\":\"c.d.c.p.p.s.r.DomainSelector:participant=participant\",\"thread_name\":\"canton-env-ec-31\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"ef5acef9b9dd9ae78cda0ee8136e5c76\"}\n\n{\"@timestamp\":\"2025-04-22T12:28:37.662Z\",\"@version\":\"1\",\"message\":\"NO_DOMAIN_FOR_SUBMISSION(9,ef5acef9): No valid domain for submission found.\",\"logger_name\":\"c.d.c.p.s.CantonSyncService:participant=participant\",\"thread_name\":\"canton-env-ec-50\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"ef5acef9b9dd9ae78cda0ee8136e5c76\",\"domainsNotUsed\":\"Map(global-domain::122071b3b1bd... -&gt; Some packages are not known to all informees on domain global-domain::122071b3b1bd...\\nParticipant PAR::validator-3trade-devnet::12205f0f8ac0... has not vetted 81564bf0430b...)\",\"location\":\"DomainSelector.scala:183\",\"applicationId\":\"ZR2HneN21U7k0SJMjylYW2TjHWr9Zt4U@clients\",\"error-code\":\"NO_DOMAIN_FOR_SUBMISSION(9,ef5acef9)\",\"commandId\":\"0d3204a4-8591-43c9-abf0-62c8c7d4661e\",\"participant\":\"participant\"}```\nThat is when I reached out to the denex team, and they told me about wrong version was uploaded to the onboarding portal.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4sydB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "more specific, the installtion failed on this step\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:7575\/v1\/create"
+                            },
+                            {
+                                "type": "text",
+                                "text": " --fail-with-body -sS -X POST -H 'Authorization: Bearer <redacted> -H 'Content-Type: application\/json' -d '{\"templateId\":\"#threetrade-licensing:ThreeTradeLicensing.AppInstall:AppInstallRequest\",\"payload\":{\"provider\":\"3trade-General-1::12205f0f8ac02c9920688d2da4a71b67c9ebcdcd0baed2215d6defbd45cffba13283\",\"dso\":\"DSO::122071b3b1bdf69f2df3e161bd9933f2c419cdac3c48eaab7c2b920b6956d5d2a87b\",\"user\":\"fivenorth-devnet-1::122036c4a4b2f3030c1e01ecbfeaf143263c9dbc49fa03992cf69cd180176b567baa\",\"meta\":{\"values\":[]}}}'"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThe log on our node showing\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"@timestamp\":\"2025-04-22T12:28:37.661Z\",\"@version\":\"1\",\"message\":\"Not considering the following domains for routing: Map(global-domain::122071b3b1bd... -> Some packages are not known to all informees on domain global-domain::122071b3b1bd...\\nParticipant PAR::validator-3trade-devnet::12205f0f8ac0... has not vetted 81564bf0430b...)\",\"logger_name\":\"c.d.c.p.p.s.r.DomainSelector:participant=participant\",\"thread_name\":\"canton-env-ec-31\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"ef5acef9b9dd9ae78cda0ee8136e5c76\"}\n\n{\"@timestamp\":\"2025-04-22T12:28:37.662Z\",\"@version\":\"1\",\"message\":\"NO_DOMAIN_FOR_SUBMISSION(9,ef5acef9): No valid domain for submission found.\",\"logger_name\":\"c.d.c.p.s.CantonSyncService:participant=participant\",\"thread_name\":\"canton-env-ec-50\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"ef5acef9b9dd9ae78cda0ee8136e5c76\",\"domainsNotUsed\":\"Map(global-domain::122071b3b1bd... -> Some packages are not known to all informees on domain global-domain::122071b3b1bd...\\nParticipant PAR::validator-3trade-devnet::12205f0f8ac0... has not vetted 81564bf0430b...)\",\"location\":\"DomainSelector.scala:183\",\"applicationId\":\"ZR2HneN21U7k0SJMjylYW2TjHWr9Zt4U@clients\",\"error-code\":\"NO_DOMAIN_FOR_SUBMISSION(9,ef5acef9)\",\"commandId\":\"0d3204a4-8591-43c9-abf0-62c8c7d4661e\",\"participant\":\"participant\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThat is when I reached out to the denex team, and they told me about wrong version was uploaded to the onboarding portal."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745512223.788149",
+        "client_msg_id": "1e20561f-7d56-4145-8684-9a89f66722db",
+        "text": "yes let me share the file",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WZRb2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes let me share the file"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "thanks",
+                "users": [
+                    "U027H3VL3BJ"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F08PNKT0WJW",
+                "created": 1745512244,
+                "timestamp": 1745512244,
+                "name": "threetrade-licensing-0.2.2.dar",
+                "title": "threetrade-licensing-0.2.2.dar",
+                "mimetype": "application\/octet-stream",
+                "filetype": "binary",
+                "pretty_type": "Binary",
+                "user": "U08987JD1J9",
+                "user_team": "T08987C1Q77",
+                "editable": false,
+                "size": 906428,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T08987C1Q77-F08PNKT0WJW\/threetrade-licensing-0.2.2.dar?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T08987C1Q77-F08PNKT0WJW\/download\/threetrade-licensing-0.2.2.dar?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/fivenorthdigital.slack.com\/files\/U05FZBDQ4RJ\/F08PNKT0WJW\/threetrade-licensing-0.2.2.dar",
+                "permalink_public": "https:\/\/slack-files.com\/T08987C1Q77-F08PNKT0WJW-9f110d031d",
+                "source_team": "T08987C1Q77",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U08987JD1J9",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1745512248.656959",
+        "client_msg_id": "fb514c61-89d4-4283-a7ff-7fb20df95de1",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "text": "(and this the 0.2.3 version suppose to fix the app installation issue above)",
+        "files": [
+            {
+                "id": "F08Q88JJAE4",
+                "created": 1745512255,
+                "timestamp": 1745512255,
+                "name": "threetrade-licensing-0.2.3.dar",
+                "title": "threetrade-licensing-0.2.3.dar",
+                "mimetype": "application\/octet-stream",
+                "filetype": "binary",
+                "pretty_type": "Binary",
+                "user": "U08987JD1J9",
+                "user_team": "T08987C1Q77",
+                "editable": false,
+                "size": 916577,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T08987C1Q77-F08Q88JJAE4\/threetrade-licensing-0.2.3.dar?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T08987C1Q77-F08Q88JJAE4\/download\/threetrade-licensing-0.2.3.dar?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/fivenorthdigital.slack.com\/files\/U05FZBDQ4RJ\/F08Q88JJAE4\/threetrade-licensing-0.2.3.dar",
+                "permalink_public": "https:\/\/slack-files.com\/T08987C1Q77-F08Q88JJAE4-f201270aae",
+                "source_team": "T08987C1Q77",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U08987JD1J9",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1xvPg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "(and this the 0.2.3 version suppose to fix the app installation issue above)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1745512283.420039",
+        "client_msg_id": "b3d41c75-3546-4382-9e2e-08dd9c9e9d95",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745512947.270729",
+        "client_msg_id": "a9ba813c-237d-4b39-9d54-df5c090e71ec",
+        "text": "ok, let me try this.\n\ngoing to run above command Nicu send. then reboot.\n\nif it works, great.\n\nif it isn't, I'm going to nuke this node, since it's just devnet and re-onboard this validator again.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bd3pr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ok, let me try this.\n\ngoing to run above command Nicu send. then reboot.\n\nif it works, great.\n\nif it isn't, I'm going to nuke this node, since it's just devnet and re-onboard this validator again."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745513757.375179",
+        "client_msg_id": "1cf2440a-a231-4929-a9a1-5e47bb019a6c",
+        "text": "yes, give me one sec",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "J4Jyc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes, give me one sec"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "thanks",
+                "users": [
+                    "U027H3VL3BJ"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F08PP8LE7MJ",
+                "created": 1745514324,
+                "timestamp": 1745514324,
+                "name": "splice-wallet-payments-0.1.7.dar",
+                "title": "splice-wallet-payments-0.1.7.dar",
+                "mimetype": "application\/octet-stream",
+                "filetype": "binary",
+                "pretty_type": "Binary",
+                "user": "U08987JD1J9",
+                "user_team": "T08987C1Q77",
+                "editable": false,
+                "size": 583425,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T08987C1Q77-F08PP8LE7MJ\/splice-wallet-payments-0.1.7.dar?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T08987C1Q77-F08PP8LE7MJ\/download\/splice-wallet-payments-0.1.7.dar?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/fivenorthdigital.slack.com\/files\/U05FZBDQ4RJ\/F08PP8LE7MJ\/splice-wallet-payments-0.1.7.dar",
+                "permalink_public": "https:\/\/slack-files.com\/T08987C1Q77-F08PP8LE7MJ-932c95852b",
+                "source_team": "T08987C1Q77",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F08Q8EQEGRE",
+                "created": 1745514327,
+                "timestamp": 1745514327,
+                "name": "splice-wallet-payments-0.1.8.dar",
+                "title": "splice-wallet-payments-0.1.8.dar",
+                "mimetype": "application\/octet-stream",
+                "filetype": "binary",
+                "pretty_type": "Binary",
+                "user": "U08987JD1J9",
+                "user_team": "T08987C1Q77",
+                "editable": false,
+                "size": 590071,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T08987C1Q77-F08Q8EQEGRE\/splice-wallet-payments-0.1.8.dar?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T08987C1Q77-F08Q8EQEGRE\/download\/splice-wallet-payments-0.1.8.dar?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/fivenorthdigital.slack.com\/files\/U05FZBDQ4RJ\/F08Q8EQEGRE\/splice-wallet-payments-0.1.8.dar",
+                "permalink_public": "https:\/\/slack-files.com\/T08987C1Q77-F08Q8EQEGRE-7d4311b7b7",
+                "source_team": "T08987C1Q77",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745514329.958139",
+        "client_msg_id": "a4a22494-d9ca-4089-a708-aaea04cca6b3",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745514372.950939",
+        "client_msg_id": "33c0cb24-bce7-416a-a7ee-53e8bde07d1f",
+        "text": "<@U027H3VL3BJ> here you go.\n\nSide note:\n\nI had another validator on devnode, still on 0.3.20. it doesn't have denex. I just upgrade it to 0.3.21 and it went through smoothly.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jyyKU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U027H3VL3BJ"
+                            },
+                            {
+                                "type": "text",
+                                "text": " here you go.\n\nSide note:\n\nI had another validator on devnode, still on 0.3.20. it doesn't have denex. I just upgrade it to 0.3.21 and it went through smoothly."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "thanks",
+                "users": [
+                    "U027H3VL3BJ"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "subtype": "thread_broadcast",
+        "user": "U07A0QHGBS4",
+        "thread_ts": "1741769451.698519",
+        "root": {
+            "user": "U01TZB7MFFA",
+            "type": "message",
+            "ts": "1741769451.698519",
+            "client_msg_id": "a877273b-284e-4b96-9cf2-f2b89a3cec39",
+            "text": "Question for Digital Asset people : do canton client (participant mostly I suppose) obey Proxy related ENV variables ? (to use an egress HTTP(s) proxy)",
+            "team": "T05FWTX7PMG",
+            "user_team": "T02CQ0UDY",
+            "source_team": "T02CQ0UDY",
+            "user_profile": {
+                "avatar_hash": "120a6007b09d",
+                "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+                "first_name": "Stephane",
+                "real_name": "Stephane Loeuillet",
+                "display_name": "Stef",
+                "team": "T02CQ0UDY",
+                "name": "stephane.loeuillet",
+                "is_restricted": false,
+                "is_ultra_restricted": false
+            },
+            "thread_ts": "1741769451.698519",
+            "reply_count": 19,
+            "reply_users_count": 3,
+            "latest_reply": "1745533336.332689",
+            "reply_users": [
+                "U01TZB7MFFA",
+                "U07A0QHGBS4",
+                "U08EPUD7KST"
+            ],
+            "replies": [
+                {
+                    "user": "U01TZB7MFFA",
+                    "ts": "1741769880.589129"
+                },
+                {
+                    "user": "U01TZB7MFFA",
+                    "ts": "1741770133.259319"
+                },
+                {
+                    "user": "U01TZB7MFFA",
+                    "ts": "1741770161.091249"
+                },
+                {
+                    "user": "U01TZB7MFFA",
+                    "ts": "1741770555.500379"
+                },
+                {
+                    "user": "U01TZB7MFFA",
+                    "ts": "1741772394.116189"
+                },
+                {
+                    "user": "U01TZB7MFFA",
+                    "ts": "1741772783.109609"
+                },
+                {
+                    "user": "U01TZB7MFFA",
+                    "ts": "1741777385.649589"
+                },
+                {
+                    "user": "U01TZB7MFFA",
+                    "ts": "1741783549.318219"
+                },
+                {
+                    "user": "U07A0QHGBS4",
+                    "ts": "1745514496.785119"
+                },
+                {
+                    "user": "U01TZB7MFFA",
+                    "ts": "1745524092.126869"
+                },
+                {
+                    "user": "U01TZB7MFFA",
+                    "ts": "1745524157.787549"
+                },
+                {
+                    "user": "U08EPUD7KST",
+                    "ts": "1745532765.578159"
+                },
+                {
+                    "user": "U08EPUD7KST",
+                    "ts": "1745532924.444799"
+                },
+                {
+                    "user": "U07A0QHGBS4",
+                    "ts": "1745532955.303089"
+                },
+                {
+                    "user": "U08EPUD7KST",
+                    "ts": "1745533051.747159"
+                },
+                {
+                    "user": "U08EPUD7KST",
+                    "ts": "1745533146.064089"
+                },
+                {
+                    "user": "U07A0QHGBS4",
+                    "ts": "1745533164.012309"
+                },
+                {
+                    "user": "U08EPUD7KST",
+                    "ts": "1745533298.283289"
+                },
+                {
+                    "user": "U08EPUD7KST",
+                    "ts": "1745533336.332689"
+                }
+            ],
+            "is_locked": false,
+            "subscribed": false,
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "us3rb",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "Question for Digital Asset people : do canton client (participant mostly I suppose) obey Proxy related ENV variables ? (to use an egress HTTP(s) proxy)"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "language": {
+                "locale": "en",
+                "is_reliable": true
+            }
+        },
+        "type": "message",
+        "ts": "1745514496.785119",
+        "edited": {
+            "user": "U07A0QHGBS4",
+            "ts": "1745514536.000000"
+        },
+        "client_msg_id": "63e2cadc-687b-4b16-9821-7a48789ad637",
+        "text": "for anyone else having problems here, I’m setting up a antrea service in my k8s so I can have a single ip egress, even though my cluster might have multiple nodes each of them with their own public ip\n\nRef: <https:\/\/antrea.io\/docs\/main\/docs\/egress\/>",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "67H50",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "for anyone else having problems here, I’m setting up a antrea service in my k8s so I can have a single ip egress, even though my cluster might have multiple nodes each of them with their own public ip\n\nRef: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/antrea.io\/docs\/main\/docs\/egress\/"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1745514536.145789",
+        "client_msg_id": "74e3e700-7746-4d4b-a7fa-e6a6cc75e636",
+        "text": "no problem. sorry for all the trouble.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745426258.109719",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7SfNd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "no problem. sorry for all the trouble."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1745524092.126869",
+        "edited": {
+            "user": "U01TZB7MFFA",
+            "ts": "1745524101.000000"
+        },
+        "client_msg_id": "54f8687d-11b1-4e06-a9ba-0118f76c52a7",
+        "text": "Yeah, could be a workaround for having 1 private cluster per instance per network",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741769451.698519",
+        "parent_user_id": "U01TZB7MFFA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2+HUM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yeah, could be a workaround for having 1 private cluster per instance per network"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1745524157.787549",
+        "client_msg_id": "3f14eba6-d11b-41a6-ad47-7256183d9972",
+        "text": "Thanks for that <@U07A0QHGBS4>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741769451.698519",
+        "parent_user_id": "U01TZB7MFFA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oKe0E",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for that "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U07A0QHGBS4"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08EPUD7KST",
+        "type": "message",
+        "ts": "1745532765.578159",
+        "client_msg_id": "ec73cccd-7651-431c-a10b-55cafc3399f7",
+        "text": "<@U07A0QHGBS4> did you install Antrea as the main CNI plugin for your cluster",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08EPUD6K7H",
+        "source_team": "T08EPUD6K7H",
+        "user_profile": {
+            "avatar_hash": "9dd7152e7efc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-26\/8512005772325_9dd7152e7efcf0f782d6_72.png",
+            "first_name": "Thibaut",
+            "real_name": "Thibaut HOUEDAN",
+            "display_name": "Thibaut",
+            "team": "T08EPUD6K7H",
+            "name": "thibaut",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741769451.698519",
+        "parent_user_id": "U01TZB7MFFA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PIqjs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U07A0QHGBS4"
+                            },
+                            {
+                                "type": "text",
+                                "text": " did you install Antrea as the main CNI plugin for your cluster"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08EPUD7KST",
+        "type": "message",
+        "ts": "1745532924.444799",
+        "client_msg_id": "76aab981-2f83-4ecf-8100-b1bd3140b266",
+        "text": "<@U01TZB7MFFA> you can use node affinity or taints and tolerations to assign workloads to a specifics node inside your cluster. And your default CNI plugin should SNAT to the node IP on egress.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08EPUD6K7H",
+        "source_team": "T08EPUD6K7H",
+        "user_profile": {
+            "avatar_hash": "9dd7152e7efc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-26\/8512005772325_9dd7152e7efcf0f782d6_72.png",
+            "first_name": "Thibaut",
+            "real_name": "Thibaut HOUEDAN",
+            "display_name": "Thibaut",
+            "team": "T08EPUD6K7H",
+            "name": "thibaut",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741769451.698519",
+        "parent_user_id": "U01TZB7MFFA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "d\/SUI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U01TZB7MFFA"
+                            },
+                            {
+                                "type": "text",
+                                "text": " you can use node affinity or taints and tolerations to assign workloads to a specifics node inside your cluster. And your default CNI plugin should SNAT to the node IP on egress."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07A0QHGBS4",
+        "type": "message",
+        "ts": "1745532955.303089",
+        "client_msg_id": "6222b1d2-a413-420b-bac8-3fcad8cadb8a",
+        "text": "the problem with this is when the node becomes unhealthy and needs to be deleted",
+        "team": "T05FWTX7PMG",
+        "user_team": "T6LLB04E9",
+        "source_team": "T6LLB04E9",
+        "user_profile": {
+            "avatar_hash": "ae3fbf42bf23",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-24\/7314673472294_ae3fbf42bf23cd5de31d_72.jpg",
+            "first_name": "Mario",
+            "real_name": "Mario Apra",
+            "display_name": "Mario",
+            "team": "T6LLB04E9",
+            "name": "mario.apra",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741769451.698519",
+        "parent_user_id": "U01TZB7MFFA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Qp\/PK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the problem with this is when the node becomes unhealthy and needs to be deleted"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08EPUD7KST",
+        "type": "message",
+        "ts": "1745533051.747159",
+        "client_msg_id": "e0cc4988-11dd-4470-a51e-7c58b8cbf98c",
+        "text": "Indeed. We use <https:\/\/spidernet-io.github.io\/egressgateway\/|https:\/\/spidernet-io.github.io\/egressgateway\/> in our setup because it works with the most popular CNI plugins.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08EPUD6K7H",
+        "source_team": "T08EPUD6K7H",
+        "user_profile": {
+            "avatar_hash": "9dd7152e7efc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-26\/8512005772325_9dd7152e7efcf0f782d6_72.png",
+            "first_name": "Thibaut",
+            "real_name": "Thibaut HOUEDAN",
+            "display_name": "Thibaut",
+            "team": "T08EPUD6K7H",
+            "name": "thibaut",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741769451.698519",
+        "parent_user_id": "U01TZB7MFFA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+YQVk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Indeed. We use "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/spidernet-io.github.io\/egressgateway\/",
+                                "text": "https:\/\/spidernet-io.github.io\/egressgateway\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": " in our setup because it works with the most popular CNI plugins."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08EPUD7KST",
+        "type": "message",
+        "ts": "1745533146.064089",
+        "edited": {
+            "user": "U08EPUD7KST",
+            "ts": "1745533160.000000"
+        },
+        "client_msg_id": "438e9ef2-8e28-472a-af38-7108d40995fc",
+        "text": "We have setup a floating IP that can easily be moved to another node in the cluster in case the node where the workload is assigned to is unhealthy",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08EPUD6K7H",
+        "source_team": "T08EPUD6K7H",
+        "user_profile": {
+            "avatar_hash": "9dd7152e7efc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-26\/8512005772325_9dd7152e7efcf0f782d6_72.png",
+            "first_name": "Thibaut",
+            "real_name": "Thibaut HOUEDAN",
+            "display_name": "Thibaut",
+            "team": "T08EPUD6K7H",
+            "name": "thibaut",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741769451.698519",
+        "parent_user_id": "U01TZB7MFFA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "P19W7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We have setup a floating IP that can easily be moved to another node in the cluster in case the node where the workload is assigned to is unhealthy"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07A0QHGBS4",
+        "type": "message",
+        "ts": "1745533164.012309",
+        "client_msg_id": "aff7f7f3-dc01-4d6d-a44e-c290d0e4916c",
+        "text": "that’s quite similar, but looks more lightweight",
+        "team": "T05FWTX7PMG",
+        "user_team": "T6LLB04E9",
+        "source_team": "T6LLB04E9",
+        "user_profile": {
+            "avatar_hash": "ae3fbf42bf23",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-24\/7314673472294_ae3fbf42bf23cd5de31d_72.jpg",
+            "first_name": "Mario",
+            "real_name": "Mario Apra",
+            "display_name": "Mario",
+            "team": "T6LLB04E9",
+            "name": "mario.apra",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741769451.698519",
+        "parent_user_id": "U01TZB7MFFA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dvByA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "that’s quite similar, but looks more lightweight"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08EPUD7KST",
+        "type": "message",
+        "ts": "1745533298.283289",
+        "client_msg_id": "2d0f2e22-808b-4d0a-9a3f-c1e185a06aea",
+        "text": "Yes. Calico our CNI plugin has and egress gateway feature but only in the enterprise version. We didnt want to chance our CNI plugin so we using the spidernet controller instead",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08EPUD6K7H",
+        "source_team": "T08EPUD6K7H",
+        "user_profile": {
+            "avatar_hash": "9dd7152e7efc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-26\/8512005772325_9dd7152e7efcf0f782d6_72.png",
+            "first_name": "Thibaut",
+            "real_name": "Thibaut HOUEDAN",
+            "display_name": "Thibaut",
+            "team": "T08EPUD6K7H",
+            "name": "thibaut",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741769451.698519",
+        "parent_user_id": "U01TZB7MFFA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XIe5C",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes. Calico our CNI plugin has and egress gateway feature but only in the enterprise version. We didnt want to chance our CNI plugin so we using the spidernet controller instead"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08EPUD7KST",
+        "type": "message",
+        "ts": "1745533336.332689",
+        "client_msg_id": "e88b974a-81ec-46b0-9bdc-c0ab603c9006",
+        "text": "Cillium has an egress gateway feature as well",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08EPUD6K7H",
+        "source_team": "T08EPUD6K7H",
+        "user_profile": {
+            "avatar_hash": "9dd7152e7efc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-26\/8512005772325_9dd7152e7efcf0f782d6_72.png",
+            "first_name": "Thibaut",
+            "real_name": "Thibaut HOUEDAN",
+            "display_name": "Thibaut",
+            "team": "T08EPUD6K7H",
+            "name": "thibaut",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741769451.698519",
+        "parent_user_id": "U01TZB7MFFA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mqs+c",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Cillium has an egress gateway feature as well"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U083R3AP1M1",
+        "type": "message",
+        "ts": "1745546613.911709",
+        "edited": {
+            "user": "U083R3AP1M1",
+            "ts": "1745547513.000000"
+        },
+        "client_msg_id": "e62e12ea-66a8-4bc5-8e82-64f1436402b1",
+        "text": "Hi team - attempting to validate our IP (54.66.181.181) on DevNet using the query in the docs, however I'm experiencing a unexpected error. Can please check if there's anything wrong in the query or setup wise for me to check? Expected at least to see the list and the results but nothing is outputting\n\n```for url in $(curl -sSL <https:\/\/scan.sv-1.dev.global.canton.network.sync.global\/api\/scan\/v0\/scans> | jq -r '.scans | .[].scans | .[] | .publicUrl' ); do\n  echo -n \"$url: \";\n  curl -sSL --connect-timeout 5 --fail-with-body $url\/api\/scan\/version | jq -r '.version';\ndone```\n>>>\n`jq: parse error: Invalid numeric literal at EOF at line 1, column 9`\n\nother details:\n\njq --version:\n`jq-1.7`\n\n`curl ifconfig.me: 54.66.181.181`",
+        "team": "T05FWTX7PMG",
+        "user_team": "T057SN2G1C2",
+        "source_team": "T057SN2G1C2",
+        "user_profile": {
+            "avatar_hash": "b1215cf047bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-04\/8124357279509_b1215cf047bf6e221c8f_72.png",
+            "first_name": "Brendan",
+            "real_name": "Brendan",
+            "display_name": "Brendan",
+            "team": "T057SN2G1C2",
+            "name": "brendan673",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745546613.911709",
+        "reply_count": 14,
+        "reply_users_count": 2,
+        "latest_reply": "1746428970.714769",
+        "reply_users": [
+            "U083R3AP1M1",
+            "U01DARYACCT"
+        ],
+        "replies": [
+            {
+                "user": "U083R3AP1M1",
+                "ts": "1745553072.092269"
+            },
+            {
+                "user": "U083R3AP1M1",
+                "ts": "1745558369.071449"
+            },
+            {
+                "user": "U01DARYACCT",
+                "ts": "1745561992.298889"
+            },
+            {
+                "user": "U083R3AP1M1",
+                "ts": "1745564855.138719"
+            },
+            {
+                "user": "U083R3AP1M1",
+                "ts": "1745566115.547379"
+            },
+            {
+                "user": "U01DARYACCT",
+                "ts": "1745567557.279149"
+            },
+            {
+                "user": "U083R3AP1M1",
+                "ts": "1745567649.539499"
+            },
+            {
+                "user": "U01DARYACCT",
+                "ts": "1745567691.907389"
+            },
+            {
+                "user": "U083R3AP1M1",
+                "ts": "1745567714.203439"
+            },
+            {
+                "user": "U083R3AP1M1",
+                "ts": "1745567719.301569"
+            },
+            {
+                "user": "U01DARYACCT",
+                "ts": "1745567767.751839"
+            },
+            {
+                "user": "U01DARYACCT",
+                "ts": "1745567791.697019"
+            },
+            {
+                "user": "U083R3AP1M1",
+                "ts": "1745568225.397799"
+            },
+            {
+                "user": "U083R3AP1M1",
+                "ts": "1746428970.714769"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UJb7N",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi team - attempting to validate our IP (54.66.181.181) on DevNet using the query in the docs, however I'm experiencing a unexpected error. Can please check if there's anything wrong in the query or setup wise for me to check? Expected at least to see the list and the results but nothing is outputting\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "for url in $(curl -sSL "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-1.dev.global.canton.network.sync.global\/api\/scan\/v0\/scans"
+                            },
+                            {
+                                "type": "text",
+                                "text": " | jq -r '.scans | .[].scans | .[] | .publicUrl' ); do\n  echo -n \"$url: \";\n  curl -sSL --connect-timeout 5 --fail-with-body $url\/api\/scan\/version | jq -r '.version';\ndone"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": ">>>\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "jq: parse error: Invalid numeric literal at EOF at line 1, column 9",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nother details:\n\njq --version:\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "jq-1.7",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "curl ifconfig.me: 54.66.181.181",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U083R3AP1M1",
+        "type": "message",
+        "ts": "1745553072.092269",
+        "edited": {
+            "user": "U083R3AP1M1",
+            "ts": "1745553475.000000"
+        },
+        "client_msg_id": "9644B5C7-44C8-4D68-9610-A0EA7E72C20F",
+        "text": "Thanks for the help - yeh perhaps some aspect of my setup is wrong, i’m querying directly on my server. Let me keep looking to see if i can find the fault also",
+        "team": "T05FWTX7PMG",
+        "user_team": "T057SN2G1C2",
+        "source_team": "T057SN2G1C2",
+        "user_profile": {
+            "avatar_hash": "b1215cf047bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-04\/8124357279509_b1215cf047bf6e221c8f_72.png",
+            "first_name": "Brendan",
+            "real_name": "Brendan",
+            "display_name": "Brendan",
+            "team": "T057SN2G1C2",
+            "name": "brendan673",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745546613.911709",
+        "parent_user_id": "U083R3AP1M1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ez9XA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for the help - yeh perhaps some aspect of my setup is wrong, i’m querying directly on my server. Let me keep looking to see if i can find the fault"
+                            },
+                            {
+                                "type": "text",
+                                "text": " also"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U083R3AP1M1",
+        "type": "message",
+        "ts": "1745558369.071449",
+        "client_msg_id": "DD5C9C13-7E84-4400-AD96-FB165A65A683",
+        "text": "Ok let me try that soon and will share results ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T057SN2G1C2",
+        "source_team": "T057SN2G1C2",
+        "user_profile": {
+            "avatar_hash": "b1215cf047bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-04\/8124357279509_b1215cf047bf6e221c8f_72.png",
+            "first_name": "Brendan",
+            "real_name": "Brendan",
+            "display_name": "Brendan",
+            "team": "T057SN2G1C2",
+            "name": "brendan673",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745546613.911709",
+        "parent_user_id": "U083R3AP1M1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HdIwX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ok let me try that soon and will share results "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01DARYACCT",
+        "type": "message",
+        "ts": "1745561992.298889",
+        "edited": {
+            "user": "U01DARYACCT",
+            "ts": "1745563147.000000"
+        },
+        "client_msg_id": "a607c8ce-89bb-42a0-9012-3f00d5a0ab13",
+        "text": "~<@U083R3AP1M1> I don't see `54.66.181.181` being in the list of allowed IPs~ actually I do",
+        "team": "T05FWTX7PMG",
+        "user_team": "E014GLQD2NN",
+        "source_team": "E014GLQD2NN",
+        "user_profile": {
+            "avatar_hash": "889d6e9cb5ee",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-10-04\/783644907056_889d6e9cb5ee13fbff83_72.jpg",
+            "first_name": "Stas",
+            "real_name": "Stas German",
+            "display_name": "stasge",
+            "team": "E014GLQD2NN",
+            "name": "stasge",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745546613.911709",
+        "parent_user_id": "U083R3AP1M1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bkxCb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U083R3AP1M1",
+                                "style": {
+                                    "strike": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " I don't see ",
+                                "style": {
+                                    "strike": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "54.66.181.181",
+                                "style": {
+                                    "strike": true,
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " being in the list of allowed IPs",
+                                "style": {
+                                    "strike": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " actually I do"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06LM4VUSHY",
+        "type": "message",
+        "ts": "1745562236.440519",
+        "client_msg_id": "4a84cabd-d523-4941-ba64-67c4953cd770",
+        "text": "Hey Folks, we are trying to deploying a mainnet validator and we need some SVs to whitelist our IP *34.68.83.211,* who do we need to reach out ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02M22JR77C",
+        "source_team": "T02M22JR77C",
+        "user_profile": {
+            "avatar_hash": "g04b65deb2b5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/04b65deb2b530ef24c07d7f197dc8e4d.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-72.png",
+            "first_name": "Abdul",
+            "real_name": "Abdul Rehman",
+            "display_name": "Abdul Rehman",
+            "team": "T02M22JR77C",
+            "name": "abdul",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745562236.440519",
+        "reply_count": 11,
+        "reply_users_count": 1,
+        "latest_reply": "1745850929.735359",
+        "reply_users": [
+            "U06LM4VUSHY"
+        ],
+        "replies": [
+            {
+                "user": "U06LM4VUSHY",
+                "ts": "1745581097.871979"
+            },
+            {
+                "user": "U06LM4VUSHY",
+                "ts": "1745581111.432709"
+            },
+            {
+                "user": "U06LM4VUSHY",
+                "ts": "1745583756.775089"
+            },
+            {
+                "user": "U06LM4VUSHY",
+                "ts": "1745587372.426139"
+            },
+            {
+                "user": "U06LM4VUSHY",
+                "ts": "1745587378.813919"
+            },
+            {
+                "user": "U06LM4VUSHY",
+                "ts": "1745587532.702829"
+            },
+            {
+                "user": "U06LM4VUSHY",
+                "ts": "1745588111.712269"
+            },
+            {
+                "user": "U06LM4VUSHY",
+                "ts": "1745678943.753549"
+            },
+            {
+                "user": "U06LM4VUSHY",
+                "ts": "1745850663.644269"
+            },
+            {
+                "user": "U06LM4VUSHY",
+                "ts": "1745850920.284009"
+            },
+            {
+                "user": "U06LM4VUSHY",
+                "ts": "1745850929.735359"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "U8OGF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey Folks, we are trying to deploying a mainnet validator and we need some SVs to whitelist our IP "
+                            },
+                            {
+                                "type": "text",
+                                "text": "34.68.83.211, ",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "who do we need to reach out ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

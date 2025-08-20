@@ -1,0 +1,214 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748246394.511879",
+        "client_msg_id": "b6da8910-26ca-4bb2-b820-862092093218",
+        "text": "Actually, circling back to this now:\n\nCan we leverage this existing scala code to piece together a script that third-party node operators can run against their nodes for onboarding? Or do we need to rewrite this in a python\/shell script?\n\nIt would be cool if I could just copy the relevant bits to a new `sc` file, wrap it in a shell script that takes a remote-connect URL, and could download the necessary signed messages we need to collect. Is this doable\/reasonable?\n\nAnd related to this, it seems to me that we need multiple rounds of distribute-collect for the whole flow:\n• nodes create namespaces (or is this implicit by them running a node? can we use those existing keys\/namespaces?)\n• _collect_ namespaces to create the `DecentralizedNamespaceDefiniton` \n• _distribute_ that, so that\n• nodes can set up `party_to_key_mappings`...\n• _distribute_ messages to be signed\n• _collect_ those, submit\nThanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4jET7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Actually, circling back to this now:\n\nCan we leverage this existing scala code to piece together a script that third-party node operators can run against their nodes for onboarding? Or do we need to rewrite this in a python\/shell script?\n\nIt would be cool if I could just copy the relevant bits to a new "
+                            },
+                            {
+                                "type": "text",
+                                "text": "sc",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " file, wrap it in a shell script that takes a remote-connect URL, and could download the necessary signed messages we need to collect. Is this doable\/reasonable?\n\nAnd related to this, it seems to me that we need multiple rounds of distribute-collect for the whole flow:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "nodes create namespaces (or is this implicit by them running a node? can we use those existing keys\/namespaces?)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "collect",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " namespaces to create the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "DecentralizedNamespaceDefiniton",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "distribute",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " that, so that"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "nodes can set up "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "party_to_key_mappings",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "..."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "distribute",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " messages to be signed"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "collect",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " those, submit"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748246430.168359",
+        "client_msg_id": "ad55407c-72f0-467b-bf7e-9cca1a0234c4",
+        "text": "So 2 separate scripts, ultimately",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pyM2z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So 2 separate scripts, ultimately"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,2330 @@
+[
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1755009799.720779",
+        "client_msg_id": "b149bdcd-9177-49b6-a845-3c8f99773c9f",
+        "text": "Hello! Is there a way to retrieve the `accumulated_holding_fees_unlocked` of a party with the token standard or another API different from `{{validator_api_url}}\/api\/validator\/v0\/admin\/external-party\/balance?party_id={partyId}`?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755009799.720779",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1755011108.685159",
+        "reply_users": [
+            "U06TMPD96M8"
+        ],
+        "replies": [
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1755011108.685159"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bThCC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello! Is there a way to retrieve the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "accumulated_holding_fees_unlocked",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " of a party with the token standard or another API different from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "{{validator_api_url}}\/api\/validator\/v0\/admin\/external-party\/balance?party_id={partyId}",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1755011108.685159",
+        "client_msg_id": "fbae9915-3c09-4e13-93ba-d91d412252c9",
+        "text": "Ultimately my goal is to calculate the holding fees for a transfer",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755009799.720779",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0HCrQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ultimately my goal is to calculate the holding fees for a transfer"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755018657.162789",
+        "edited": {
+            "user": "U08987JD1J9",
+            "ts": "1755018713.000000"
+        },
+        "client_msg_id": "fecb1d63-c499-4039-8e5e-fab2c91d282c",
+        "text": "Is there a built-in way to bundle more than one transfers into the same transaction using the external signing api ? Or our choice is writing our own DAML model to perform those ? Our use case is we want to charge a fee\n\nAlice -> Bob\nBut also Alice -> App Provider (a fee).\n\nWe can submit separate transaction but prefer if they can be bundled into the same atomic tx instead",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "reply_count": 39,
+        "reply_users_count": 3,
+        "latest_reply": "1755258702.706289",
+        "reply_users": [
+            "UEHLS0JUB",
+            "U08987JD1J9",
+            "U0PQ8E25D"
+        ],
+        "replies": [
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1755019052.678849"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755019214.850759"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755059556.788699"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755059597.533789"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755059618.945879"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755059647.946949"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755059751.511349"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755059786.819599"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755059812.836899"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755059819.272999"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755059884.496539"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755059905.258909"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755059923.003359"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755059959.120669"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755060017.194539"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755060085.856419"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755060217.108299"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755060220.345119"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755060298.148889"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755060322.956669"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755060517.280749"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755060667.889839"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755060779.936639"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755060962.167439"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755061002.587449"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755061074.855299"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755061078.320479"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755061334.331919"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755061732.807249"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755061935.706889"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755061951.347809"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755062004.509579"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755062009.689289"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755062028.730809"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755062059.280609"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755062082.019179"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755092816.835079"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755241811.491279"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755258702.706289"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7jm4F",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is there a built-in way to bundle more than one transfers into the same transaction using the external signing api ? Or our choice is writing our own DAML model to perform those ? Our use case is we want to charge a fee\n\nAlice -> Bob\nBut also Alice -> App Provider (a fee).\n\nWe can submit separate transaction but prefer if they can be bundled into the same atomic tx instead"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1755019052.678849",
+        "client_msg_id": "83a7d5a7-324f-4878-b748-c6719425abc9",
+        "text": "Not at this point. Either separate transactions or your own daml models",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7\/VGd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Not at this point. Either separate transactions or your own daml models"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755019214.850759",
+        "client_msg_id": "3981d5a9-42ec-49c7-8a84-16d94bb66f99",
+        "text": "In this case, even though we do our own DAML model but because we're calling choice in normal amulet contract.\n\nthe recipient doesn't need to have our own DAR , correct?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MAaE8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In this case, even though we do our own DAML model but because we're calling choice in normal amulet contract.\n\nthe recipient doesn't need to have our own DAR , correct?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*doug* from *Equitek* was added to this channel by *wayne.collier*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1755019667.467039",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AuRtu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "doug",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Equitek",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "wayne.collier",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U046V2U9RKQ"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755059556.788699",
+        "client_msg_id": "990a2302-d63e-40c8-9d9a-71fdc8939f23",
+        "text": "Yes only the sender needs to have vetted your own DAR.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mDLH8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes only the sender needs to have vetted your own DAR."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755059597.533789",
+        "client_msg_id": "de686b80-024f-4961-b1fe-757d148cebd7",
+        "text": "Note that it sounds like you are calling `splice-amulet` choices directly, is that so?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zhK8m",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Note that it sounds like you are calling "
+                            },
+                            {
+                                "type": "text",
+                                "text": "splice-amulet",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " choices directly, is that so?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755059618.945879",
+        "client_msg_id": "66de2805-266d-4940-8b8b-165b343fae7c",
+        "text": "Consider going via the token standard to avoid coupling yourself tightly to specific `splice-amulet` versions.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XLV2z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Consider going via the token standard to avoid coupling yourself tightly to specific "
+                            },
+                            {
+                                "type": "text",
+                                "text": "splice-amulet",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " versions."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755059647.946949",
+        "client_msg_id": "97210b0f-0486-4e47-9394-cc9ffad3ed76",
+        "text": "Yes, I currently found another way to do so by bundling multiple command in the same call.\n\nBut I think eventually we want some native daml modl that call `splice-amulet` choice directly to be more flexible.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "v\/9qQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, I currently found another way to do so by bundling multiple command in the same call.\n\nBut I think eventually we want some native daml modl that call "
+                            },
+                            {
+                                "type": "text",
+                                "text": "splice-amulet",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " choice directly to be more flexible."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755059751.511349",
+        "client_msg_id": "671b53fc-e571-48a6-90f4-efc57c67fbd6",
+        "text": "I also found another way to sign multiple transaction <https:\/\/docs.digitalasset.com\/build\/3.3\/tutorials\/app-dev\/external_signing_onboarding.html#multi-transaction-hash> So our used only need to sign once.\n\nSo will probably exploring that route first.\n\nWriting DAML probably will be the final choice if nothing else works but I no longer plan to do so at the moment.\n\nBut I do like having the option and flexibility there by calling choice of `splice-amulet` direclty.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Vc7Bt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I also found another way to sign multiple transaction "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.digitalasset.com\/build\/3.3\/tutorials\/app-dev\/external_signing_onboarding.html#multi-transaction-hash"
+                            },
+                            {
+                                "type": "text",
+                                "text": " So our used only need to sign once.\n\nSo will probably exploring that route first.\n\nWriting DAML probably will be the final choice if nothing else works but I no longer plan to do so at the moment.\n\nBut I do like having the option and flexibility there by calling choice of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "splice-amulet",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " direclty."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755059786.819599",
+        "client_msg_id": "4d0c8780-ffeb-4d1f-89b4-a8cbc041ac53",
+        "text": "Note that the multi-hash seems to apply only to topology transactions.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uCoRx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Note that the multi-hash seems to apply only to topology transactions."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755059812.836899",
+        "client_msg_id": "29a5e8c4-149c-47ab-9fda-7f0acca9feab",
+        "text": "dang so it isn't going to work.\n\nBut I can add multiple command into the same transaction?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6Voyx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "dang so it isn't going to work.\n\nBut I can add multiple command into the same transaction?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755059819.272999",
+        "client_msg_id": "3c99df1a-ce24-4325-a6a8-6c3c3e8c0d50",
+        "text": "the docs has it as an array",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NRaFt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the docs has it as an array"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755059884.496539",
+        "client_msg_id": "8c72f08b-534d-4acb-a264-4e11e6a07c75",
+        "text": "as in this link <https:\/\/docs.digitalasset.com\/build\/3.3\/tutorials\/app-dev\/external_signing_submission.html#prepare-the-transaction>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qLsNd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "as in this link "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.digitalasset.com\/build\/3.3\/tutorials\/app-dev\/external_signing_submission.html#prepare-the-transaction"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755059905.258909",
+        "client_msg_id": "0d8add0c-98d0-4943-8373-c05a96c11f44",
+        "text": "```{\n  \"user_id\": \"demo_app\",\n  \"command_id\": \"f2ec4d8f-ccc1-402b-b278-7556fdd2b412\",\n  \"act_as\": [\"alice::1220d466a5d96a3509736c821e25fe81fc8a73f226d92e57e94a65170e58b07fc08e\"],\n  \"synchronizer_id\": \"da::12203c0ecb446b35b0efa78e0bda9fd91716855866150a5eb7611a2ed5d418129de3\",\n  \"commands\": [\n    {\n      \"create\": {\n        \"template_id\": {\n          \"package_id\": \"#AdminWorkflows\",\n          \"module_name\": \"Canton.Internal.Ping\",\n          \"entity_name\": \"Ping\"\n        },\n        \"create_arguments\": {\n          \"record_id\": null,\n          \"fields\": [\n            {\n                \"label\" :\"id\",\n                \"value\": { \"text\": \"ping_id\" }\n            },\n            {\n                \"label\" :\"initiator\",\n                \"value\": { \"party\": \"alice::1220d466a5d96a3509736c821e25fe81fc8a73f226d92e57e94a65170e58b07fc08e\" }\n            },\n            {\n                \"label\" :\"responder\",\n                \"value\": { \"party\": \"bob::1220254d06095b407f8c6a378b6fc443a67d3356ab8edfbf1378cb3e44218de32c8a\" }\n            }\n          ]\n        }\n      }\n    }\n  ]\n}```\nI assume we can add more than one command",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KAW42",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n  \"user_id\": \"demo_app\",\n  \"command_id\": \"f2ec4d8f-ccc1-402b-b278-7556fdd2b412\",\n  \"act_as\": [\"alice::1220d466a5d96a3509736c821e25fe81fc8a73f226d92e57e94a65170e58b07fc08e\"],\n  \"synchronizer_id\": \"da::12203c0ecb446b35b0efa78e0bda9fd91716855866150a5eb7611a2ed5d418129de3\",\n  \"commands\": [\n    {\n      \"create\": {\n        \"template_id\": {\n          \"package_id\": \"#AdminWorkflows\",\n          \"module_name\": \"Canton.Internal.Ping\",\n          \"entity_name\": \"Ping\"\n        },\n        \"create_arguments\": {\n          \"record_id\": null,\n          \"fields\": [\n            {\n                \"label\" :\"id\",\n                \"value\": { \"text\": \"ping_id\" }\n            },\n            {\n                \"label\" :\"initiator\",\n                \"value\": { \"party\": \"alice::1220d466a5d96a3509736c821e25fe81fc8a73f226d92e57e94a65170e58b07fc08e\" }\n            },\n            {\n                \"label\" :\"responder\",\n                \"value\": { \"party\": \"bob::1220254d06095b407f8c6a378b6fc443a67d3356ab8edfbf1378cb3e44218de32c8a\" }\n            }\n          ]\n        }\n      }\n    }\n  ]\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nI assume we can add more than one command"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755059923.003359",
+        "client_msg_id": "9f8b4411-ec49-486f-a129-301ff202f7f3",
+        "text": "Yeah, it's unfortunate: support for multiple root nodes has not yet been implemented.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pk7p1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yeah, it's unfortunate: support for multiple root nodes has not yet been implemented."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755059959.120669",
+        "client_msg_id": "9d89c60f-d3f8-4d48-ab2a-623be4ca8f0e",
+        "text": "It's clear what it means semantically, but the implementation is rather complex. So the API already provides space for it, but sadly doesn't support it yet.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IOryu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It's clear what it means semantically, but the implementation is rather complex. So the API already provides space for it, but sadly doesn't support it yet."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755060017.194539",
+        "client_msg_id": "f2ab8863-44e3-4596-bd9f-84be58f050c6",
+        "text": "hmm so my plan is also busted with this.\n\nI see.\n\nSo look like my only choice is either signing 2 transactions, or writing our DAML model. But that make it couple to a version of `splice-amulet`...",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "T4zFE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hmm so my plan is also busted with this.\n\nI see.\n\nSo look like my only choice is either signing 2 transactions, or writing our DAML model. But that make it couple to a version of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "splice-amulet",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755060085.856419",
+        "client_msg_id": "19d2172b-53da-4570-a21c-2be182344190",
+        "text": "What would you like to achieve? I'm wondering whether we can't find a way to solve your needs and build it on top of the token standard.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "n3N0i",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "What would you like to achieve? I'm wondering whether we can't find a way to solve your needs and build it on top of the token standard."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755060217.108299",
+        "client_msg_id": "36a54f55-13be-402d-93fb-732ba55f0270",
+        "text": "Yes, let me back off a bit.\n\nWe have a wallet using external signing.\n\nWe want to encourage usage by having a way to earn app reward when people using our wallet, and share this reward back to user.\n\nBut in featured app, the recipient provider got the reward.\n\nSo say Alice -&gt; Bob. Bob's provider party got reward, and we cannot control Bob.\n\nSo our plan is having a \"fee\" tx of 0.01 CC for example, where Alice send to our featurd party 0.01CC. SO that it can mint reward.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Km+GS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, let me back off a bit.\n\nWe have a wallet using external signing.\n\nWe want to encourage usage by having a way to earn app reward when people using our wallet, and share this reward back to user.\n\nBut in featured app, the recipient provider got the reward.\n\nSo say Alice -> Bob. Bob's provider party got reward, and we cannot control Bob.\n\nSo our plan is having a \"fee\" tx of 0.01 CC for example, where Alice send to our featurd party 0.01CC. SO that it can mint reward."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755060220.345119",
+        "client_msg_id": "166971c6-f36b-42e6-b31f-d75303faf026",
+        "text": "That's our use case.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Lt5zU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That's our use case."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755060298.148889",
+        "client_msg_id": "1aff1430-4fc5-423e-90a0-9fa997e793bd",
+        "text": "and if I'm sending 2 tx, the user has to sign twice, and there is a chance of delay, of failure, degrade UX. So we want to have the both transfers run in the same transaction(Similar to multicall on EVM).",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "E6EPK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and if I'm sending 2 tx, the user has to sign twice, and there is a chance of delay, of failure, degrade UX. So we want to have the both transfers run in the same transaction(Similar to multicall on EVM)."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755060322.956669",
+        "client_msg_id": "79b3edbf-7a72-4a16-9722-a09ede098301",
+        "text": "What would be another approach or recomendation you suggest to us?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "C\/eOb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "What would be another approach or recomendation you suggest to us?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755060517.280749",
+        "client_msg_id": "d326a044-eacf-4ff2-91b9-2ccbb0a9a7df",
+        "text": "&gt;  We have a wallet using external signing.\nI assume you are right now building a CC wallet, correct?\n\nConsider building a wallet that can use all token standard assets as a next iteration.\n&gt; \n&gt; We want to encourage usage by having a way to earn app reward when people using our wallet, and share this reward back to user.\nGood call. Ideally, you use the featured app activity markers API (<https:\/\/docs.dev.sync.global\/app_dev\/daml_api\/index.html#featured-app-activity-markers-api-cip-0047>) to create the records. You can share some part of the app rewards directly with the user by listing them as a beneficiary: <https:\/\/docs.dev.sync.global\/app_dev\/api\/splice-api-featured-app-v1\/Splice-Api-FeaturedAppRightV1.html#type-splice-api-featuredapprightv1-featuredapprightcreateactivitymarker-36646|https:\/\/docs.dev.sync.global\/app_dev\/api\/splice-api-featured-app-v1\/Splice-Api-FeaturedAppRightV1.html#type-splice-api-featu[…]eactivitymarker-36646>\n\nSo that leaves us with the challenge of how to create the featured app activity marker as part of the wallet usage. I'll get to that in the follow-up message.\n&gt; \n&gt; But in featured app, the recipient provider got the reward.\n&gt; \n&gt; So say Alice -&gt; Bob. Bob's provider party got reward, and we cannot control Bob.\n&gt; \n&gt; So our plan is having a \"fee\" tx of 0.01 CC for example, where Alice send to our featurd party 0.01CC. SO that it can mint reward.\nI'd avoid this route, as it assumes the users have CC available; and are willing to spend it explicitly. Much better to go via the featured app activity markers.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Xp+\/l",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " We have a wallet using external signing."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I assume you are right now building a CC wallet, correct?\n\nConsider building a wallet that can use all token standard assets as a next iteration.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nWe want to encourage usage by having a way to earn app reward when people using our wallet, and share this reward back to user."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Good call. Ideally, you use the featured app activity markers API ("
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/app_dev\/daml_api\/index.html#featured-app-activity-markers-api-cip-0047"
+                            },
+                            {
+                                "type": "text",
+                                "text": ") to create the records. You can share some part of the app rewards directly with the user by listing them as a beneficiary: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/app_dev\/api\/splice-api-featured-app-v1\/Splice-Api-FeaturedAppRightV1.html#type-splice-api-featuredapprightv1-featuredapprightcreateactivitymarker-36646",
+                                "text": "https:\/\/docs.dev.sync.global\/app_dev\/api\/splice-api-featured-app-v1\/Splice-Api-FeaturedAppRightV1.html#type-splice-api-featu[…]eactivitymarker-36646"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nSo that leaves us with the challenge of how to create the featured app activity marker as part of the wallet usage. I'll get to that in the follow-up message.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nBut in featured app, the recipient provider got the reward.\n\nSo say Alice -> Bob. Bob's provider party got reward, and we cannot control Bob.\n\nSo our plan is having a \"fee\" tx of 0.01 CC for example, where Alice send to our featurd party 0.01CC. SO that it can mint reward."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'd avoid this route, as it assumes the users have CC available; and are willing to spend it explicitly. Much better to go via the featured app activity markers."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755060667.889839",
+        "client_msg_id": "b0c24c41-6475-4906-a914-0ec4cacdfc01",
+        "text": "So the piece that we are missing is the ability to for your users to call token standard choices in a way that:\n1. uses a single choice exercise\n2. creates the featured app activity marker with reward sharing back to the user",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZDLaJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So the piece that we are missing is the ability to for your users to call token standard choices in a way that:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "uses a single choice exercise"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "creates the featured app activity marker with reward sharing back to the user"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755060779.936639",
+        "client_msg_id": "4d25c863-f84b-471e-b632-38c3f0bc23d7",
+        "text": "I've seen this problem come up multiple times, and I have a hunch that we could actually add the right kind of wrapper Daml code to the splice Daml models, and ideally set it up as part of a validator install.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jDir0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I've seen this problem come up multiple times, and I have a hunch that we could actually add the right kind of wrapper Daml code to the splice Daml models, and ideally set it up as part of a validator install."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755060962.167439",
+        "client_msg_id": "7c7aeebe-37cc-4765-acda-42c98660f5db",
+        "text": "&gt;&gt;  We have a wallet using external signing.\n&gt; I assume you are right now building a CC wallet, correct?\n&gt; Consider building a wallet that can use all token standard assets as a next iteration.\nYes, the wallet is up on <http:\/\/devnet.cantonloop.com|devnet.cantonloop.com>\n\nAny docs on token standard assets? Is this is the right one <https:\/\/docs.dev.sync.global\/app_dev\/daml_api\/index.html#canton-network-token-standard-apis-cip-0056> ? Is there anything else with some example code?\n\n&gt; ideally, you use the featured app activity markers API\nI see. So handling the real problem instead of working around. Make sense. let me check this. I haven't read much into it and using it then. <https:\/\/github.com\/hyperledger-labs\/splice\/tree\/main\/token-standard#readme> Is this the right code usage example?\n\n&gt;  So the piece that we are missing is the ability to for your users to call token standard choices in a way that:\n&gt; 1. uses a single choice exercise\n&gt; 2. creates the featured app activity marker with reward sharing back to the user\n&gt; \nAny code example to save from trial and error and hunting around will be greatly appreciate.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wHL+s",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " We have a wallet using external signing."
+                            }
+                        ],
+                        "border": 1
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I assume you are right now building a CC wallet, correct?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Consider building a wallet that can use all token standard assets as a next iteration."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nYes, the wallet is up on "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/devnet.cantonloop.com",
+                                "text": "devnet.cantonloop.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nAny docs on token standard assets? Is this is the right one "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/app_dev\/daml_api\/index.html#canton-network-token-standard-apis-cip-0056"
+                            },
+                            {
+                                "type": "text",
+                                "text": " ? Is there anything else with some example code?\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ideally, you use the featured app activity markers API"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I see. So handling the real problem instead of working around. Make sense. let me check this. I haven't read much into it and using it then. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/tree\/main\/token-standard#readme"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Is this the right code usage example?\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " So the piece that we are missing is the ability to for your users to call token standard choices in a way that:"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "uses a single choice exercise"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "creates the featured app activity marker with reward sharing back to the user"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 1
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": []
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Any code example to save from trial and error and hunting around will be greatly appreciate."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755061002.587449",
+        "client_msg_id": "bc7dcfa4-5851-4fd3-a12a-c88487e7f703",
+        "text": "&gt;  I've seen this problem come up multiple times, and I have a hunch that we could actually add the right kind of wrapper Daml code to the splice Daml models, and ideally set it up as part of a validator install.\nThat would be awesome.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SzOaI",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " I've seen this problem come up multiple times, and I have a hunch that we could actually add the right kind of wrapper Daml code to the splice Daml models, and ideally set it up as part of a validator install."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That would be awesome."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755061074.855299",
+        "client_msg_id": "cf731b24-c00c-4337-95fc-682a451d22cf",
+        "text": "Token standard docs are just being improved: <https:\/\/github.com\/hyperledger-labs\/splice\/pull\/1872\/files>\n\nFocus on the CLI",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "l2YMZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Token standard docs are just being improved: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/pull\/1872\/files"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nFocus on the CLI"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755061078.320479",
+        "client_msg_id": "47281a9f-bd41-4eb9-aee6-d1806e68e72a",
+        "text": "Try it out on your node",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Q0SEY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Try it out on your node"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755061334.331919",
+        "client_msg_id": "f4b8fd2c-161b-4507-9803-2f0fdd67a2fb",
+        "text": "thank you. let me check",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/XZlt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thank you. let me check"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755061732.807249",
+        "client_msg_id": "62201b4d-d792-4181-a29b-9d6180b0425e",
+        "text": "I will need to figure out a way to make this work with external signing  <https:\/\/docs.dev.sync.global\/app_dev\/token_standard_openapi\/index.html>  Does token standard support external signing Simon ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iGGW3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I will need to figure out a way to make this work with external signing  "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/app_dev\/token_standard_openapi\/index.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": "  Does token standard support external signing Simon ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755061935.706889",
+        "client_msg_id": "1d182b90-bbdc-4764-a8a6-89a32c56f80a",
+        "text": "Yes, token standard supports external signing. See the example code here: <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/token-standard\/cli\/src\/commands\/transfer.ts>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "color": "24292f",
+                "bot_id": "B01UJLRD05Q",
+                "bot_team_id": "T03T53E10",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/token-standard\/cli\/src\/commands\/transfer.ts",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/token-standard\/cli\/src\/commands\/transfer.ts|transfer.ts>",
+                "text": "```\n\/\/ Copyright (c) 2024 Digital Asset (Switzerland) GmbH and\/or its affiliates. All rights reserved.\n\/\/ SPDX-License-Identifier: Apache-2.0\nimport {\n  createLedgerApiClient,\n  filtersByParty,\n} from \"..\/apis\/ledger-api-utils\";\nimport { CommandOptions } from \"..\/cli\";\nimport { HoldingInterface } from \"..\/constants\";\nimport {\n  Command,\n  DeduplicationPeriod2,\n  PartySignatures,\n} from \"canton-json-api-v2-openapi\";\nimport * as crypto from \"crypto\";\nimport dayjs from \"dayjs\";\nimport { randomUUID } from \"node:crypto\";\nimport { readFileSync } from \"node:fs\";\nimport {\n  createConfiguration,\n  DefaultApi as TransferFactoryAPI,\n  DisclosedContract,\n  ServerConfiguration,\n} from \"transfer-instruction-openapi\";\n\ninterface TransferCommandOptions {\n  sender: string;\n  receiver: string;\n  amount: string;\n  \/\/ paths to keys\n  publicKey: string;\n  privateKey: string;\n  instrumentAdmin: string; \/\/ TODO (#18611): replace with registry call\n  instrumentId: string;\n  transferFactoryRegistryUrl: string;\n  userId: string;\n}\n\nexport async function transfer(\n  opts: CommandOptions & TransferCommandOptions\n): Promise<void> {\n  const {\n    sender,\n    receiver,\n    amount,\n    privateKey,\n    publicKey,\n    instrumentAdmin,\n    instrumentId,\n    transferFactoryRegistryUrl,\n  } = opts;\n  const ledgerClient = createLedgerApiClient(opts);\n  const transferRegistryConfig = createConfiguration({\n    baseServer: new ServerConfiguration(transferFactoryRegistryUrl, {}),\n  });\n  const transferRegistryClient = new TransferFactoryAPI(transferRegistryConfig);\n\n  const ledgerEndOffset = await ledgerClient.getV2StateLedgerEnd();\n  const senderHoldings = await ledgerClient.postV2StateActiveContracts({\n    filter: {\n      filtersByParty: filtersByParty(sender, [HoldingInterface], false),\n    },\n    verbose: false,\n    activeAtOffset: ledgerEndOffset.offset,\n  });\n  if (senderHoldings.length === 0) {\n    throw new Error(\"Sender has no holdings, so transfer can't be executed.\");\n  }\n  const holdings = senderHoldings.map(\n    (h) => h[\"contractEntry\"][\"JsActiveContract\"]\n  );\n  const inputHoldingCids = holdings.map((h) => h[\"createdEvent\"][\"contractId\"]);\n\n  const now = dayjs();\n  const choiceArgs: any = {\n    expectedAdmin: instrumentAdmin,\n    transfer: {\n      sender,\n      receiver,\n      amount,\n      instrumentId: { admin: instrumentAdmin, id: instrumentId },\n      lock: null,\n      requestedAt: now,\n      executeBefore: now.add(24, \"hour\").toISOString(),\n      inputHoldingCids,\n      meta: { values: [] },\n    },\n    extraArgs: {\n      context: { values: [] },\n      meta: { values: [] },\n    },\n  };\n\n  const transferFactory = await transferRegistryClient.getTransferFactory({\n    choiceArguments: choiceArgs,\n  });\n  choiceArgs.extraArgs.context =\n    transferFactory.choiceContext.choiceContextData;\n\n  const command = new Command();\n  command.ExerciseCommand = {\n    templateId:\n      \"#splice-api-token-transfer-instruction-v1:Splice.Api.Token.TransferInstructionV1:TransferFactory\",\n    contractId: transferFactory.factoryId,\n    choice: \"TransferFactory_Transfer\",\n    choiceArgument: choiceArgs,\n  };\n\n  const disclosedContracts = transferFactory.choiceContext.disclosedContracts;\n\n  const synchronizerId =\n    getSynchronizerIdFromDisclosedContracts(disclosedContracts);\n\n  const prepared = await ledgerClient.postV2InteractiveSubmissionPrepare({\n    actAs: [sender],\n    readAs: [sender],\n    userId: opts.userId,\n    commandId: `tscli-${randomUUID()}`,\n    synchronizerId,\n    commands: [command],\n    disclosedContracts,\n    verboseHashing: true,\n    packageIdSelectionPreference: [],\n  });\n\n  const signed = signTransaction(\n    publicKey,\n    privateKey,\n    prepared.preparedTransactionHash\n  );\n  const partySignatures: PartySignatures = {\n    signatures: [\n      {\n        party: sender,\n        signatures: [\n          {\n            signature: signed.signedHash,\n            signedBy: signed.signedBy,\n            \/\/ `unrecognizedValue`s are forced because of openapi generation, but it's not required (nor does it break anything)\n            format: { SIGNATURE_FORMAT_RAW: {}, unrecognizedValue: 0 },\n            signingAlgorithmSpec: {\n              SIGNING_ALGORITHM_SPEC_ED25519: {},\n              unrecognizedValue: 0,\n            },\n          },\n        ],\n      },\n    ],\n  };\n\n  const deduplicationPeriod = new DeduplicationPeriod2();\n  deduplicationPeriod.Empty = {};\n  const result = await ledgerClient.postV2InteractiveSubmissionExecute({\n    userId: opts.userId,\n    submissionId: \"\",\n    preparedTransaction: prepared.preparedTransaction,\n    hashingSchemeVersion: prepared.hashingSchemeVersion,\n    partySignatures,\n    deduplicationPeriod,\n  });\n\n  \/\/ TODO (#18610): this is currently '{}'. It should include record_time and update_id, which require usage of completions API\n  console.log(JSON.stringify(result, null, 2));\n}\n\n\/\/ The synchronizer id is mandatory, so we derive it from the disclosed contracts,\n\/\/ expecting that they'll all be in the same synchronizer\nfunction getSynchronizerIdFromDisclosedContracts(\n  disclosedContracts: DisclosedContract[]\n): string {\n  const synchronizerId = disclosedContracts[0].synchronizerId;\n  const differentSynchronizerId = disclosedContracts.find(\n    (dc) => dc.synchronizerId !== synchronizerId\n  );\n  if (differentSynchronizerId) {\n    throw new Error(\n      `Contract is in a different domain so can't submit to the correct synchronizer: ${JSON.stringify(\n        differentSynchronizerId\n      )}`\n    );\n  }\n  return synchronizerId;\n}\n\ninterface SignTransactionResult {\n  signedBy: string;\n  \/\/ base64 encoded\n  signedHash: string;\n}\nfunction signTransaction(\n  publicKeyPath: string,\n  privateKeyPath: string,\n  preparedTransactionHash: string\n): SignTransactionResult {\n  const publicKey = readFileSync(publicKeyPath);\n  const nodePublicKey = crypto.createPublicKey({\n    key: publicKey,\n    format: \"der\",\n    type: \"spki\", \/\/ pycryptodome exports public keys as SPKI\n  });\n\n  const privateKey = readFileSync(privateKeyPath);\n  const nodePrivateKey = crypto.createPrivateKey({\n    key: privateKey,\n    format: \"der\",\n    type: \"pkcs8\",\n  });\n\n  const keyFingerprint = crypto\n    .createHash(\"sha256\")\n    .update(\n      Buffer.from(\n        `0000000C${nodePublicKey\n          .export({ format: \"der\", type: \"spki\" })\n          \/\/ Ed25519 public key is the last 32 bytes of the SPKI DER key\n          .subarray(-32)\n          .toString(\"hex\")}`,\n        \"hex\"\n      )\n    )\n    .digest(\"hex\");\n  const fingerprintPreFix = \"1220\"; \/\/ 12 PublicKeyFingerprint, 20 is a special length encoding\n  const signedBy = `${fingerprintPreFix}${keyFingerprint}`;\n\n  const hashBuffer = Buffer.from(preparedTransactionHash, \"base64\");\n  const signedHash = crypto\n    .sign(null, hashBuffer, {\n      key: nodePrivateKey,\n      dsaEncoding: \"ieee-p1363\",\n    })\n    .toString(\"base64\");\n\n  return {\n    signedBy,\n    signedHash,\n  };\n}\n\n```",
+                "title": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/token-standard\/cli\/src\/commands\/transfer.ts|transfer.ts>",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JvsyS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, token standard supports external signing. See the example code here: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/token-standard\/cli\/src\/commands\/transfer.ts"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755061951.347809",
+        "client_msg_id": "af0de81f-bc8a-4b82-8a54-d41456ac2cf1",
+        "text": "&gt;  Any code example to save from trial and error and hunting around will be greatly appreciate.\n<https:\/\/github.com\/hyperledger-labs\/splice\/issues\/1901>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "ts": 1755061894,
+                "color": "36a64f",
+                "bot_id": "B01UJLRD05Q",
+                "bot_team_id": "T03T53E10",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/issues\/1901",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "#1901 PoC of wrapper Daml library for combined token std choices + featured app rewards",
+                "text": "### Problem\n\n• featured wallet providers and others interacting with token standard choices would like to create featured app activity markers as part of calling these choices\n• when using external signing they cannot do so via submitting multiple commands, as prepared transactions with multiple root nodes are not yet supported\n\n### Solution Approach\n\n• build Daml library as part of splice that wraps every choice of the token standard APIs jointly with the ability to create a featured app marker with specific beneficiaries\n• consider what it would take to install this library by default on every validator node\n\n#### Details\n\nI expect the core construction to look about as follows:\n\n```\ntemplate TokenStandardProxy with\n    provider : Party\n  where\n    signatory provider\n\n    nonconsuming choice TokenStandardProxy_TransferFactory_Transfer \n      : ProxyResult TransferFactory_TransferResult\n      with\n        featureAppRightCid : ContractId FeaturedAppRight\n        markerArg : FeaturedAppRight_CreateActivityMarker\n        factoryCid : ContractId TranserFactory\n        choiceArg : TransferFactory_Transfer\n      controller choiceArg.transfer.sender\n      do \n        appRight <- fetch featuredAppRightCid\n        require \"appRight.provider matches\" (appRight.provider == provider)\n        exercise featuredAppRightCid markerArg \n        exercise factoryCid choiceArg\n\ndata ProxyResult r = ProxyResult with\n    markerResult : FeaturedAppRight_CreateActivityMarkerResult\n    choiceResult : r\n\n```\n\nThe idea being that a wallet app provider creates one proxy contract themselves and uses explicit disclosure when preparing the transaction for the user.",
+                "title": "#1901 PoC of wrapper Daml library for combined token std choices + featured app rewards",
+                "title_link": "https:\/\/github.com\/hyperledger-labs\/splice\/issues\/1901",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "fields": [
+                    {
+                        "value": "<https:\/\/github.com\/hyperledger-labs\/splice\/milestone\/34|Tokenomics>",
+                        "title": "Milestone",
+                        "short": true
+                    }
+                ],
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YUSrd",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " Any code example to save from trial and error and hunting around will be greatly appreciate."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/issues\/1901"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755062004.509579",
+        "client_msg_id": "9fad7c1c-4584-403a-9671-6ba890a0456a",
+        "text": "This is nice . Thank you so much.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7fEnX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This is nice . Thank you so much."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755062009.689289",
+        "client_msg_id": "c73852a8-bb96-4a6e-bf5c-079dfb381b44",
+        "text": "Appreciate your time Simon.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "81KaY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Appreciate your time Simon."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755062028.730809",
+        "client_msg_id": "a5358c0a-d2f0-41e3-ba8b-9700e1cbce54",
+        "text": "Thanks. You guys are doing great work. Happy to support you :raised_hands:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EyL1h",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks. You guys are doing great work. Happy to support you "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "raised_hands",
+                                "unicode": "1f64c"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755062059.280609",
+        "client_msg_id": "aed30737-1042-4e7c-acd5-dc899335ddb6",
+        "text": "I may have to ping you a few time more on this when we test this out. Thank you so much and apologize ahead of time if i'm a bit noisy.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CJgQU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I may have to ping you a few time more on this when we test this out. Thank you so much and apologize ahead of time if i'm a bit noisy."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755062082.019179",
+        "client_msg_id": "2a0d775e-2ed0-4462-95d2-af7b2dd7cfca",
+        "text": "No worries. Please do. It would be great to have more people building token standard wallets.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755018657.162789",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EMj69",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "No worries. Please do. It would be great to have more people building token standard wallets."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

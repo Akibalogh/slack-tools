@@ -1,0 +1,2937 @@
+[
+    {
+        "user": "U01VDC391QS",
+        "type": "message",
+        "ts": "1753867354.253739",
+        "client_msg_id": "a2620791-311b-4b92-a886-cdb13d9ac318",
+        "text": "Hi, in the `transfer_preapproval` contract, there is an item `expiresAt` .\n1. What happens when this `transfer_preapproval` expires? \n2. Will it be automatically renewed or one needs to create a new one? \n3. How is the expired contract, archived or be there forever? If not archived, I assume the validator-api would return the one still not expired.\nThanks.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4bb76c154e8c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-28\/2014447818772_4bb76c154e8c3b7720ce_72.jpg",
+            "first_name": "kc.tam",
+            "real_name": "kc.tam",
+            "display_name": "kc",
+            "team": "T03T53E10",
+            "name": "kc.tam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753867354.253739",
+        "reply_count": 6,
+        "reply_users_count": 2,
+        "latest_reply": "1753879460.142419",
+        "reply_users": [
+            "U0PQ8E25D",
+            "U01VDC391QS"
+        ],
+        "replies": [
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1753868399.081059"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1753868514.691499"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1753868567.359589"
+            },
+            {
+                "user": "U01VDC391QS",
+                "ts": "1753868675.062039"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1753879457.739499"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1753879460.142419"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zVlXo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, in the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "transfer_preapproval",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " contract, there is an item "
+                            },
+                            {
+                                "type": "text",
+                                "text": "expiresAt",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " .\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "What happens when this "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "transfer_preapproval",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " expires? "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Will it be automatically renewed or one needs to create a new one? "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "How is the expired contract, archived or be there forever? If not archived, I assume the validator-api would return the one still not expired."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1753868399.081059",
+        "client_msg_id": "1918e5a1-9d6b-43fb-ba45-efae7ff90ed8",
+        "text": "&gt; On 3\n<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818b49fdb\/apps\/sv\/src\/main\/scala\/org\/lfdecentralizedtrust\/splice\/sv\/automation\/delegatebased\/ExpireTransferPreapprovalsTrigger.scala#L53|https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818[…]utomation\/delegatebased\/ExpireTransferPreapprovalsTrigger.scala> running on the SV app takes care of calling the expiry choice.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753867354.253739",
+        "parent_user_id": "U01VDC391QS",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "color": "24292f",
+                "bot_id": "B01UJLRD05Q",
+                "bot_team_id": "T03T53E10",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818b49fdb\/apps\/sv\/src\/main\/scala\/org\/lfdecentralizedtrust\/splice\/sv\/automation\/delegatebased\/ExpireTransferPreapprovalsTrigger.scala#L53",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818b49fdb\/apps\/sv\/src\/main\/scala\/org\/lfdecentralizedtrust\/splice\/sv\/automation\/delegatebased\/ExpireTransferPreapprovalsTrigger.scala|ExpireTransferPreapprovalsTrigger.scala>",
+                "text": "```\n        _.exerciseDsoRules_ExpireTransferPreapproval(\n```",
+                "title": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818b49fdb\/apps\/sv\/src\/main\/scala\/org\/lfdecentralizedtrust\/splice\/sv\/automation\/delegatebased\/ExpireTransferPreapprovalsTrigger.scala|ExpireTransferPreapprovalsTrigger.scala>",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fM4Jp",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "On 3"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818b49fdb\/apps\/sv\/src\/main\/scala\/org\/lfdecentralizedtrust\/splice\/sv\/automation\/delegatebased\/ExpireTransferPreapprovalsTrigger.scala#L53",
+                                "text": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818[…]utomation\/delegatebased\/ExpireTransferPreapprovalsTrigger.scala"
+                            },
+                            {
+                                "type": "text",
+                                "text": " running on the SV app takes care of calling the expiry choice."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1753868514.691499",
+        "edited": {
+            "user": "U0PQ8E25D",
+            "ts": "1753868521.000000"
+        },
+        "client_msg_id": "bf839e46-965c-4d19-9e13-549d5322c01e",
+        "text": ">  On 2\nRenewal happens automatically if the pre-approval lists the validator operator party as the provider: <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/apps\/validator\/src\/main\/scala\/org\/lfdecentralizedtrust\/splice\/validator\/automation\/RenewTransferPreapprovalTrigger.scala|https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/apps\/validator\/src\/main\/scala[…]lice\/validator\/automation\/RenewTransferPreapprovalTrigger.scala>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753867354.253739",
+        "parent_user_id": "U01VDC391QS",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "color": "24292f",
+                "bot_id": "B01UJLRD05Q",
+                "bot_team_id": "T03T53E10",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/apps\/validator\/src\/main\/scala\/org\/lfdecentralizedtrust\/splice\/validator\/automation\/RenewTransferPreapprovalTrigger.scala",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/apps\/validator\/src\/main\/scala\/org\/lfdecentralizedtrust\/splice\/validator\/automation\/RenewTransferPreapprovalTrigger.scala|RenewTransferPreapprovalTrigger.scala>",
+                "text": "```\n\/\/ Copyright (c) 2024 Digital Asset (Switzerland) GmbH and\/or its affiliates. All rights reserved.\n\/\/ SPDX-License-Identifier: Apache-2.0\n\npackage org.lfdecentralizedtrust.splice.validator.automation\n\nimport org.lfdecentralizedtrust.splice.automation.*\nimport org.lfdecentralizedtrust.splice.codegen.java.splice.amuletrules.{\n  TransferPreapproval,\n  invalidtransferreason,\n}\nimport org.lfdecentralizedtrust.splice.codegen.java.splice.wallet.install.amuletoperation.CO_RenewTransferPreapproval\nimport org.lfdecentralizedtrust.splice.codegen.java.splice.wallet.install.amuletoperationoutcome\nimport org.lfdecentralizedtrust.splice.util.AssignedContract\nimport org.lfdecentralizedtrust.splice.validator.store.ValidatorStore\nimport org.lfdecentralizedtrust.splice.validator.util.ValidatorUtil\nimport org.lfdecentralizedtrust.splice.wallet.UserWalletManager\nimport org.lfdecentralizedtrust.splice.wallet.config.TransferPreapprovalConfig\nimport com.digitalasset.canton.tracing.TraceContext\nimport io.grpc.Status\nimport io.opentelemetry.api.trace.Tracer\nimport org.apache.pekko.stream.Materializer\n\nimport scala.concurrent.{ExecutionContext, Future}\n\nclass RenewTransferPreapprovalTrigger(\n    override protected val context: TriggerContext,\n    store: ValidatorStore,\n    walletManager: UserWalletManager,\n    transferPreapprovalConfig: TransferPreapprovalConfig,\n)(implicit\n    override val ec: ExecutionContext,\n    override val tracer: Tracer,\n    mat: Materializer,\n) extends MultiDomainExpiredContractTrigger.Template[\n      TransferPreapproval.ContractId,\n      TransferPreapproval,\n    ](\n      store.multiDomainAcsStore,\n      store.listExpiringTransferPreapprovals(transferPreapprovalConfig.renewalDuration),\n      TransferPreapproval.COMPANION,\n    ) {\n\n  override def completeTask(\n      task: ScheduledTaskTrigger.ReadyTask[\n        AssignedContract[TransferPreapproval.ContractId, TransferPreapproval]\n      ]\n  )(implicit tc: TraceContext): Future[TaskOutcome] = {\n    for {\n      validatorWallet <- ValidatorUtil.getValidatorWallet(store, walletManager)\n      expiringPreapproval = task.work.contract\n      newExpiresAt = expiringPreapproval.payload.expiresAt.plus(\n        transferPreapprovalConfig.preapprovalLifetime.asJava\n      )\n      outcome <- validatorWallet.treasury\n        .enqueueAmuletOperation(\n          new CO_RenewTransferPreapproval(\n            expiringPreapproval.contractId,\n            newExpiresAt,\n          )\n        )\n        .flatMap {\n          case successResult: amuletoperationoutcome.COO_RenewTransferPreapproval =>\n            Future.successful(\n              TaskSuccess(\n                s\"Renewed transfer pre-approval for party ${expiringPreapproval.payload.receiver} with new expiry at $newExpiresAt: $successResult\"\n              )\n            )\n          case failedOperation: amuletoperationoutcome.COO_Error =>\n            failedOperation.invalidTransferReasonValue match {\n              case fundsError: invalidtransferreason.ITR_InsufficientFunds =>\n                val missingStr = s\"(missing ${fundsError.missingAmount} CC)\"\n                val msg = s\"Insufficient funds for the transfer pre-approval renewal $missingStr\"\n                <http:\/\/logger.info|logger.info>(msg)\n                Future.failed(Status.ABORTED.withDescription(msg).asRuntimeException())\n\n              case otherError =>\n                val msg =\n                  s\"Unexpectedly failed to complete transfer pre-approval renewal for ${expiringPreapproval.payload.receiver} due to $otherError\"\n                \/\/ We report this as INTERNAL, as we don't want to retry on this.\n                Future.failed(Status.INTERNAL.withDescription(msg).asRuntimeException())\n\n            }\n          case unknownResult =>\n            val msg = s\"Unexpected amulet-operation result $unknownResult\"\n            Future.failed(Status.INTERNAL.withDescription(msg).asRuntimeException())\n        }\n    } yield outcome\n  }\n}\n\n```",
+                "title": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/apps\/validator\/src\/main\/scala\/org\/lfdecentralizedtrust\/splice\/validator\/automation\/RenewTransferPreapprovalTrigger.scala|RenewTransferPreapprovalTrigger.scala>",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EeMmN",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " On 2"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Renewal happens automatically if the pre-approval lists the validator operator party as the provider: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/apps\/validator\/src\/main\/scala\/org\/lfdecentralizedtrust\/splice\/validator\/automation\/RenewTransferPreapprovalTrigger.scala",
+                                "text": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/apps\/validator\/src\/main\/scala[…]lice\/validator\/automation\/RenewTransferPreapprovalTrigger.scala"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1753868567.359589",
+        "client_msg_id": "99bcddf1-0be9-47d1-8e69-2fa998713747",
+        "text": "&gt;  On 1\non expiry the deadlines checks on the choices change: <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818b49fdb\/daml\/splice-amulet\/daml\/Splice\/AmuletRules.daml#L1470>\n\nNo more _Send, but _Expire becomes available",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753867354.253739",
+        "parent_user_id": "U01VDC391QS",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "color": "24292f",
+                "bot_id": "B01UJLRD05Q",
+                "bot_team_id": "T03T53E10",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818b49fdb\/daml\/splice-amulet\/daml\/Splice\/AmuletRules.daml#L1470",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818b49fdb\/daml\/splice-amulet\/daml\/Splice\/AmuletRules.daml|AmuletRules.daml>",
+                "text": "```\n         assertWithinDeadline \"TransferPreapproval.expiresAt\" expiresAt\n```",
+                "title": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818b49fdb\/daml\/splice-amulet\/daml\/Splice\/AmuletRules.daml|AmuletRules.daml>",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+6FAv",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " On 1"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "on expiry the deadlines checks on the choices change: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818b49fdb\/daml\/splice-amulet\/daml\/Splice\/AmuletRules.daml#L1470"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nNo more _Send, but _Expire becomes available"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01VDC391QS",
+        "type": "message",
+        "ts": "1753868675.062039",
+        "edited": {
+            "user": "U01VDC391QS",
+            "ts": "1753868707.000000"
+        },
+        "client_msg_id": "5cd4ccd5-0efc-44d5-b25e-67647073f33a",
+        "text": "Thanks a lot! Is (2) also applicable for external parties? I assume yes but just double check.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4bb76c154e8c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-28\/2014447818772_4bb76c154e8c3b7720ce_72.jpg",
+            "first_name": "kc.tam",
+            "real_name": "kc.tam",
+            "display_name": "kc",
+            "team": "T03T53E10",
+            "name": "kc.tam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753867354.253739",
+        "parent_user_id": "U01VDC391QS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QyO2w",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks a lot! Is (2) also applicable for external parties? I assume yes but just double check."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0821PFKM0V",
+        "type": "message",
+        "ts": "1753877959.817139",
+        "client_msg_id": "70d364a5-7911-4ae4-abd3-41dbf6768111",
+        "text": "sadly have to wait for the review to finish",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07LSPYDRT4",
+        "source_team": "T07LSPYDRT4",
+        "user_profile": {
+            "avatar_hash": "e8a463dbf0c2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-22\/8072578026611_e8a463dbf0c21e1dd722_72.jpg",
+            "first_name": "Amanda",
+            "real_name": "Amanda Martin",
+            "display_name": "Dr. Amanda Martin",
+            "team": "T07LSPYDRT4",
+            "name": "dramandalmartin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753784023.332859",
+        "parent_user_id": "U092DKJ8L4Q",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Akktj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "sadly have to wait for the review to finish"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1753879457.739499",
+        "client_msg_id": "60669cf3-e15d-488a-9858-a74203d37a9b",
+        "text": "The validator operator hosting them renews for them",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753867354.253739",
+        "parent_user_id": "U01VDC391QS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nW+Hw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The validator operator hosting them renews for them"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1753879460.142419",
+        "client_msg_id": "f705b6fa-e6dd-447f-89b7-eb2bfdc0d382",
+        "text": "so yes",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753867354.253739",
+        "parent_user_id": "U01VDC391QS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dUAKK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "so yes"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01VDC391QS",
+                    "U081VQ5TGU9"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U052ZNTU38T",
+        "type": "message",
+        "ts": "1753882357.159339",
+        "client_msg_id": "8cdbea72-111d-4bd6-bf61-dae63c53d54b",
+        "text": "Hey all, my team is working on the devnet node deployment and has some questions, how can I go about getting them added to slack?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0265A7P7TJ",
+        "source_team": "T0265A7P7TJ",
+        "user_profile": {
+            "avatar_hash": "8f009bbbacf6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-20\/7762894290002_8f009bbbacf6e526a275_72.png",
+            "first_name": "Christian",
+            "real_name": "Christian Reza",
+            "display_name": "Christian",
+            "team": "T0265A7P7TJ",
+            "name": "christian",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753882357.159339",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1753883315.644459",
+        "reply_users": [
+            "U03HMUTQ5F0"
+        ],
+        "replies": [
+            {
+                "user": "U03HMUTQ5F0",
+                "ts": "1753883315.644459"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "POftn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey all, my team is working on the devnet node deployment and has some questions, how can I go about getting them added to slack?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "done",
+                "users": [
+                    "U08G1KD2XSB"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1753883315.644459",
+        "client_msg_id": "c2af218b-adde-4f7f-803e-4a649dfd99a4",
+        "text": "<@U08G1KD2XSB>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "e46cf2f361cd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-06-02\/3638231569136_e46cf2f361cda890c6d5_72.jpg",
+            "first_name": "Wayne",
+            "real_name": "Wayne Collier",
+            "display_name": "Wayne Collier",
+            "team": "T03T53E10",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753882357.159339",
+        "parent_user_id": "U052ZNTU38T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "69yk7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U08G1KD2XSB"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U04L13WNCVA",
+        "type": "message",
+        "ts": "1753887513.222229",
+        "client_msg_id": "be590a49-07d2-4899-998e-c0e0f6ea8f20",
+        "text": "Awesome, thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T038T0B571P",
+        "source_team": "T038T0B571P",
+        "user_profile": {
+            "avatar_hash": "bf8e7c726d3b",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-01-21\/4681132793236_bf8e7c726d3b8e3bcb63_72.png",
+            "first_name": "Carlos",
+            "real_name": "Carlos",
+            "display_name": "Carlos",
+            "team": "T038T0B571P",
+            "name": "carlos",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753798231.193579",
+        "parent_user_id": "U04L13WNCVA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9aVi6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Awesome, thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "Splice release 0.4.5 is ready for deployment on MainNet",
+        "type": "message",
+        "ts": "1753887675.358169",
+        "bot_id": "B08HVPQURK8",
+        "team": "T05FWTX7PMG",
+        "bot_profile": {
+            "id": "B08HVPQURK8",
+            "app_id": "A08J1DB9NFP",
+            "name": "Upgrade Announcement",
+            "icons": {
+                "image_36": "https:\/\/avatars.slack-edge.com\/2025-03-18\/8620985120898_5933881ee684291a6301_36.png",
+                "image_48": "https:\/\/avatars.slack-edge.com\/2025-03-18\/8620985120898_5933881ee684291a6301_48.png",
+                "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-18\/8620985120898_5933881ee684291a6301_72.png"
+            },
+            "deleted": false,
+            "updated": 1745496545,
+            "team_id": "T07LSPYDRT4"
+        },
+        "thread_ts": "1753887675.358169",
+        "reply_count": 6,
+        "reply_users_count": 5,
+        "latest_reply": "1753950959.255239",
+        "reply_users": [
+            "U07A0QHGBS4",
+            "UUT0L5W2J",
+            "U08987JD1J9",
+            "U08FCND9P1Q",
+            "U03UHRL9221"
+        ],
+        "replies": [
+            {
+                "user": "U07A0QHGBS4",
+                "ts": "1753891972.100249"
+            },
+            {
+                "user": "UUT0L5W2J",
+                "ts": "1753892689.340829"
+            },
+            {
+                "user": "U07A0QHGBS4",
+                "ts": "1753892815.364249"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1753897691.047689"
+            },
+            {
+                "user": "U08FCND9P1Q",
+                "ts": "1753899998.329179"
+            },
+            {
+                "user": "U03UHRL9221",
+                "ts": "1753950959.255239"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "section",
+                "block_id": "CS6gN",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": ":tada: Splice release `0.4.5` is ready for deployment on MainNet, and is available from the GSF\n:ship: ⅔ of Super Validator nodes have upgraded to this release, including the GSF Super Validator node\n*SV node status here*: <https:\/\/sync.global\/sv-network>\n*Release notes here*: <https:\/\/docs.sync.global\/release_notes.html>\n",
+                    "verbatim": false
+                }
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U02UADJT5QR",
+                    "U05T6QQK7GU",
+                    "U06N136QSFM",
+                    "U090U9RMQKW"
+                ],
+                "count": 4
+            }
+        ]
+    },
+    {
+        "user": "U04L13WNCVA",
+        "type": "message",
+        "ts": "1753888791.946649",
+        "client_msg_id": "ac29e37c-6cca-4f40-850e-58cc9ac0e36e",
+        "text": "Guys, is there a direct metric to use for measuring validator \"performance\". Or should it be done by checking total rounds against missed rounds?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T038T0B571P",
+        "source_team": "T038T0B571P",
+        "user_profile": {
+            "avatar_hash": "bf8e7c726d3b",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-01-21\/4681132793236_bf8e7c726d3b8e3bcb63_72.png",
+            "first_name": "Carlos",
+            "real_name": "Carlos",
+            "display_name": "Carlos",
+            "team": "T038T0B571P",
+            "name": "carlos",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753888791.946649",
+        "reply_count": 3,
+        "reply_users_count": 1,
+        "latest_reply": "1753890226.477349",
+        "reply_users": [
+            "U07UFMLQ6M9"
+        ],
+        "replies": [
+            {
+                "user": "U07UFMLQ6M9",
+                "ts": "1753890173.720029"
+            },
+            {
+                "user": "U07UFMLQ6M9",
+                "ts": "1753890198.829559"
+            },
+            {
+                "user": "U07UFMLQ6M9",
+                "ts": "1753890226.477349"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LxObN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Guys, is there a direct metric to use for measuring validator \"performance\". Or should it be done by checking total rounds against missed rounds?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07UFMLQ6M9",
+        "type": "message",
+        "ts": "1753890173.720029",
+        "client_msg_id": "4623227F-6185-48F8-B54D-0BE01111F326",
+        "text": "<https:\/\/docs.sync.global\/app_dev\/scan_api\/scan_openapi.html#get--readyz|https:\/\/docs.sync.global\/app_dev\/scan_api\/scan_openapi.html#get--readyz> \n\nAlso works on your validator: \ncurl <http:\/\/wallet.localhost\/api\/validator\/readyz|http:\/\/wallet.localhost\/><http:\/\/wallet.localhost\/api\/validator\/readyz|api\/validator\/readyz> \n(Returns nothing, but 200 OK in the response header) \n\nYou can change readyz to livez (same 200 OK)\n\nAnd also “version” and status”, both of which return JSON you can parse. ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07U960EDNJ",
+        "source_team": "T07U960EDNJ",
+        "user_profile": {
+            "avatar_hash": "6c68dc53e993",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-01\/7990629713536_6c68dc53e99326d3558f_72.png",
+            "first_name": "Jan",
+            "real_name": "Jan Willem Veldhuis",
+            "display_name": "JW",
+            "team": "T07U960EDNJ",
+            "name": "jan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753888791.946649",
+        "parent_user_id": "U04L13WNCVA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "S7cur",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.sync.global\/app_dev\/scan_api\/scan_openapi.html#get--readyz",
+                                "text": "https:\/\/docs.sync.global\/app_dev\/scan_api\/scan_openapi.html#get--readyz"
+                            },
+                            {
+                                "type": "text",
+                                "text": " \n\nAlso works on your validator: \ncurl "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/wallet.localhost\/api\/validator\/readyz",
+                                "text": "http:\/\/wallet.localhost\/"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/wallet.localhost\/api\/validator\/readyz",
+                                "text": "api\/validator\/readyz"
+                            },
+                            {
+                                "type": "text",
+                                "text": " \n(Returns nothing, but 200 OK in the response header) \n\nYou can change readyz to livez (same 200 OK)\n\nAnd also “version” and status”, both of which return JSON you can parse. "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07UFMLQ6M9",
+        "type": "message",
+        "ts": "1753890198.829559",
+        "client_msg_id": "E9515E0C-107C-489A-A7C6-39A6DE8E73D1",
+        "text": "I am on mobile so the curl command might need some tweaking. ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07U960EDNJ",
+        "source_team": "T07U960EDNJ",
+        "user_profile": {
+            "avatar_hash": "6c68dc53e993",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-01\/7990629713536_6c68dc53e99326d3558f_72.png",
+            "first_name": "Jan",
+            "real_name": "Jan Willem Veldhuis",
+            "display_name": "JW",
+            "team": "T07U960EDNJ",
+            "name": "jan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753888791.946649",
+        "parent_user_id": "U04L13WNCVA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6dQF5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I am on mobile so the curl command might need some tweaking. "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07UFMLQ6M9",
+        "type": "message",
+        "ts": "1753890226.477349",
+        "client_msg_id": "70DB8A36-E768-4DEF-9E13-FD3DAAAA2F3F",
+        "text": "And you can find prometheus examples in the docs. ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07U960EDNJ",
+        "source_team": "T07U960EDNJ",
+        "user_profile": {
+            "avatar_hash": "6c68dc53e993",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-01\/7990629713536_6c68dc53e99326d3558f_72.png",
+            "first_name": "Jan",
+            "real_name": "Jan Willem Veldhuis",
+            "display_name": "JW",
+            "team": "T07U960EDNJ",
+            "name": "jan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753888791.946649",
+        "parent_user_id": "U04L13WNCVA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fU2VN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And you can find prometheus examples in the docs. "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U04C4JQV1D1",
+        "type": "message",
+        "ts": "1753890371.315549",
+        "edited": {
+            "user": "U04C4JQV1D1",
+            "ts": "1753890599.000000"
+        },
+        "client_msg_id": "6b136547-55c9-4cbe-91fe-ad126b525dd4",
+        "text": "Outside of the slack messages in this channel, what is the best way to programmatically pull in Splice releases into our own workflows and see scheduled dates for go-live on MainNet?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "403b6aa966df",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-12-05\/4468772403891_403b6aa966dff4d014b6_72.jpg",
+            "first_name": "Kevin",
+            "real_name": "Kevin Bornatsch",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "kevin.bornatsch",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753890371.315549",
+        "reply_count": 6,
+        "reply_users_count": 2,
+        "latest_reply": "1753893336.482919",
+        "reply_users": [
+            "U04C4JQV1D1",
+            "U03HMUTQ5F0"
+        ],
+        "replies": [
+            {
+                "user": "U04C4JQV1D1",
+                "ts": "1753890631.177009"
+            },
+            {
+                "user": "U03HMUTQ5F0",
+                "ts": "1753891874.300689"
+            },
+            {
+                "user": "U03HMUTQ5F0",
+                "ts": "1753891904.906499"
+            },
+            {
+                "user": "U03HMUTQ5F0",
+                "ts": "1753891936.515019"
+            },
+            {
+                "user": "U04C4JQV1D1",
+                "ts": "1753892040.612539"
+            },
+            {
+                "user": "U03HMUTQ5F0",
+                "ts": "1753893336.482919"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "t2NdD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Outside of the slack messages in this channel, what is the best way to programmatically pull in Splice releases into our own workflows and see scheduled dates for go-live on MainNet?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U04C4JQV1D1",
+        "type": "message",
+        "ts": "1753890631.177009",
+        "client_msg_id": "26bf1b3e-d783-4274-bdc1-4fceccb70327",
+        "text": "Specifically I would be looking for the release notes and a heads up that it is coming up for release on MainNet",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "403b6aa966df",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-12-05\/4468772403891_403b6aa966dff4d014b6_72.jpg",
+            "first_name": "Kevin",
+            "real_name": "Kevin Bornatsch",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "kevin.bornatsch",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753890371.315549",
+        "parent_user_id": "U04C4JQV1D1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gDe6H",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Specifically I would be looking for the release notes and a heads up that it is coming up for release on MainNet"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07UFMLQ6M9",
+        "type": "message",
+        "ts": "1753891040.043929",
+        "client_msg_id": "80A4B49F-582C-423D-8195-734B7DCCA22A",
+        "text": "<@U04C4JQV1D1> ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07U960EDNJ",
+        "source_team": "T07U960EDNJ",
+        "user_profile": {
+            "avatar_hash": "6c68dc53e993",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-01\/7990629713536_6c68dc53e99326d3558f_72.png",
+            "first_name": "Jan",
+            "real_name": "Jan Willem Veldhuis",
+            "display_name": "JW",
+            "team": "T07U960EDNJ",
+            "name": "jan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753704228.616239",
+        "parent_user_id": "U0821PFKM0V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Vxjhi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U04C4JQV1D1"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U07UFMLQ6M9",
+        "type": "message",
+        "ts": "1753891078.902299",
+        "client_msg_id": "8AFCA72A-2616-40D2-AED1-8B87FB54C89C",
+        "text": "And there are forum topics to subscribe to which will send an email to you when a new version is live ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07U960EDNJ",
+        "source_team": "T07U960EDNJ",
+        "user_profile": {
+            "avatar_hash": "6c68dc53e993",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-01\/7990629713536_6c68dc53e99326d3558f_72.png",
+            "first_name": "Jan",
+            "real_name": "Jan Willem Veldhuis",
+            "display_name": "JW",
+            "team": "T07U960EDNJ",
+            "name": "jan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753704228.616239",
+        "parent_user_id": "U0821PFKM0V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "u\/sVX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And there are forum topics to subscribe to which will send an email to you when a new version is live "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1753891874.300689",
+        "client_msg_id": "06899f9a-1155-4b6d-baab-32d60eda2969",
+        "text": "Go-live depends on adoption by the SVs, so the announcements in this channel and in the validator-operations email list at <https:\/\/lists.sync.global> are the best way to know that a new release is ready for adoption.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "e46cf2f361cd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-06-02\/3638231569136_e46cf2f361cda890c6d5_72.jpg",
+            "first_name": "Wayne",
+            "real_name": "Wayne Collier",
+            "display_name": "Wayne Collier",
+            "team": "T03T53E10",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753890371.315549",
+        "parent_user_id": "U04C4JQV1D1",
+        "attachments": [
+            {
+                "from_url": "https:\/\/lists.sync.global\/",
+                "image_url": "https:\/\/groups.io\/orgimg\/org.1275\/logofull.png?v=1719848263306412311",
+                "image_width": 400,
+                "image_height": 100,
+                "image_bytes": 1867,
+                "service_icon": "https:\/\/lists.sync.global\/orgimg\/org.1275\/favicons\/apple-icon-57x57.png?v=1719848263306412311",
+                "id": 1,
+                "original_url": "https:\/\/lists.sync.global",
+                "fallback": "globalSyncForum lists.sync.global Group",
+                "text": "To edit your profile visit <https:\/\/lists.sync.global\/g\/globalSyncForum\/editprofile> *This mailing list provides a general forum for learning about the Global Synchronizer.* Intended for discussions of general interest to: Node operators Application providers Application users of the Global Synchronizer on Canton Network. Anyone with a <http:\/\/groups.io|groups.io> account may join this group. New posters are moderated until they post two approved messages. Posts are public, and accessible to Google Search Posts in most sub-groups are also public, and accessible to Google Search NOTE: Detailed discussions of technical documentation should take place via GitHub discussions.",
+                "title": "globalSyncForum lists.sync.global Group",
+                "title_link": "https:\/\/lists.sync.global\/",
+                "service_name": "lists.sync.global"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xOJzd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Go-live depends on adoption by the SVs, so the announcements in this channel and in the validator-operations email list at "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/lists.sync.global"
+                            },
+                            {
+                                "type": "text",
+                                "text": " are the best way to know that a new release is ready for adoption."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1753891904.906499",
+        "client_msg_id": "ee5c6f2f-5d9b-4083-8f53-8bc39fed8f1a",
+        "text": "In terms of planning, you can assume that there will be a new Splice release every week, unless otherwise indicated in this channel.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "e46cf2f361cd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-06-02\/3638231569136_e46cf2f361cda890c6d5_72.jpg",
+            "first_name": "Wayne",
+            "real_name": "Wayne Collier",
+            "display_name": "Wayne Collier",
+            "team": "T03T53E10",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753890371.315549",
+        "parent_user_id": "U04C4JQV1D1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eMoYj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In terms of planning, you can assume that there will be a new Splice release every week, unless otherwise indicated in this channel."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1753891936.515019",
+        "edited": {
+            "user": "U03HMUTQ5F0",
+            "ts": "1753891946.000000"
+        },
+        "client_msg_id": "ef50212d-643e-48d1-b01a-4c66bbacdc30",
+        "text": "You can also monitor the active configuration of the GSF's SV node here:\n\n<https:\/\/sync.global\/sv-network>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "e46cf2f361cd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-06-02\/3638231569136_e46cf2f361cda890c6d5_72.jpg",
+            "first_name": "Wayne",
+            "real_name": "Wayne Collier",
+            "display_name": "Wayne Collier",
+            "team": "T03T53E10",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753890371.315549",
+        "parent_user_id": "U04C4JQV1D1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xF5G3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You can also monitor the active configuration of the GSF's SV node here:\n\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/sync.global\/sv-network"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "thread_broadcast",
+        "user": "U07A0QHGBS4",
+        "thread_ts": "1753887675.358169",
+        "root": {
+            "subtype": "bot_message",
+            "text": "Splice release 0.4.5 is ready for deployment on MainNet",
+            "type": "message",
+            "ts": "1753887675.358169",
+            "bot_id": "B08HVPQURK8",
+            "team": "T05FWTX7PMG",
+            "bot_profile": {
+                "id": "B08HVPQURK8",
+                "app_id": "A08J1DB9NFP",
+                "name": "Upgrade Announcement",
+                "icons": {
+                    "image_36": "https:\/\/avatars.slack-edge.com\/2025-03-18\/8620985120898_5933881ee684291a6301_36.png",
+                    "image_48": "https:\/\/avatars.slack-edge.com\/2025-03-18\/8620985120898_5933881ee684291a6301_48.png",
+                    "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-18\/8620985120898_5933881ee684291a6301_72.png"
+                },
+                "deleted": false,
+                "updated": 1745496545,
+                "team_id": "T07LSPYDRT4"
+            },
+            "thread_ts": "1753887675.358169",
+            "reply_count": 6,
+            "reply_users_count": 5,
+            "latest_reply": "1753950959.255239",
+            "reply_users": [
+                "U07A0QHGBS4",
+                "UUT0L5W2J",
+                "U08987JD1J9",
+                "U08FCND9P1Q",
+                "U03UHRL9221"
+            ],
+            "replies": [
+                {
+                    "user": "U07A0QHGBS4",
+                    "ts": "1753891972.100249"
+                },
+                {
+                    "user": "UUT0L5W2J",
+                    "ts": "1753892689.340829"
+                },
+                {
+                    "user": "U07A0QHGBS4",
+                    "ts": "1753892815.364249"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1753897691.047689"
+                },
+                {
+                    "user": "U08FCND9P1Q",
+                    "ts": "1753899998.329179"
+                },
+                {
+                    "user": "U03UHRL9221",
+                    "ts": "1753950959.255239"
+                }
+            ],
+            "is_locked": false,
+            "subscribed": false,
+            "blocks": [
+                {
+                    "type": "section",
+                    "block_id": "CS6gN",
+                    "text": {
+                        "type": "mrkdwn",
+                        "text": ":tada: Splice release `0.4.5` is ready for deployment on MainNet, and is available from the GSF\n:ship: ⅔ of Super Validator nodes have upgraded to this release, including the GSF Super Validator node\n*SV node status here*: <https:\/\/sync.global\/sv-network>\n*Release notes here*: <https:\/\/docs.sync.global\/release_notes.html>\n",
+                        "verbatim": false
+                    }
+                }
+            ]
+        },
+        "type": "message",
+        "ts": "1753891972.100249",
+        "client_msg_id": "984a605a-2702-4140-bd1b-9ef9c101c8df",
+        "text": "Is there a way to subscribe to get notified when a new version is deployed?\n\nSo far I noticed that one can get the current version by running:\n\n```curl -s <https:\/\/docs.global.canton.network.sync.global\/info> | jq '.synchronizer.active.version'```",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AY0H5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is there a way to subscribe to get notified when a new version is deployed?\n\nSo far I noticed that one can get the current version by running:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl -s "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.global.canton.network.sync.global\/info"
+                            },
+                            {
+                                "type": "text",
+                                "text": " | jq '.synchronizer.active.version'"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U04C4JQV1D1",
+        "type": "message",
+        "ts": "1753892040.612539",
+        "client_msg_id": "be63efbe-0812-4356-bee9-e92344164b40",
+        "text": "Thank you for this information. This is helpful",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "403b6aa966df",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-12-05\/4468772403891_403b6aa966dff4d014b6_72.jpg",
+            "first_name": "Kevin",
+            "real_name": "Kevin Bornatsch",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "kevin.bornatsch",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753890371.315549",
+        "parent_user_id": "U04C4JQV1D1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Gfb\/X",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you for this information. This is helpful"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UUT0L5W2J",
+        "type": "message",
+        "ts": "1753892689.340829",
+        "client_msg_id": "a6f9deb4-85c4-4bad-9378-0495a9c4c334",
+        "text": "I assume you can subscribe to <https:\/\/lists.sync.global\/g\/validator-announce> and get emails notifications (the same as here in the channel)",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "ef1f7e9060b7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-11-07\/4345961656321_ef1f7e9060b7d426137a_72.jpg",
+            "first_name": "Oleksii",
+            "real_name": "Oleksii Maiko",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "oleksii.maiko",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753887675.358169",
+        "attachments": [
+            {
+                "image_url": "https:\/\/groups.io\/orgimg\/org.1275\/logofull.png?v=1719848263306412311",
+                "image_width": 400,
+                "image_height": 100,
+                "image_bytes": 1867,
+                "from_url": "https:\/\/lists.sync.global\/g\/validator-announce",
+                "service_icon": "https:\/\/lists.sync.global\/orgimg\/org.1275\/favicons\/apple-icon-57x57.png?v=1719848263306412311",
+                "id": 1,
+                "original_url": "https:\/\/lists.sync.global\/g\/validator-announce",
+                "fallback": "validator-announce lists.sync.global Group",
+                "text": "Announcements and updates related to operating a Validator on the Global Synchronizer for Canton Network",
+                "title": "validator-announce lists.sync.global Group",
+                "title_link": "https:\/\/lists.sync.global\/g\/validator-announce",
+                "service_name": "lists.sync.global"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Tdcc8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I assume you can subscribe to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/lists.sync.global\/g\/validator-announce"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and get emails notifications (the same as here in the channel)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U096LKMJSDS",
+        "type": "message",
+        "ts": "1753892705.740419",
+        "client_msg_id": "1E7B87B4-E448-4387-B008-711C21A9A2FB",
+        "text": "Hello everyone !",
+        "team": "T05FWTX7PMG",
+        "user_team": "T096LKMJ9J8",
+        "source_team": "T096LKMJ9J8",
+        "user_profile": {
+            "avatar_hash": "g28417d0fe2d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/28417d0fe2d6fee9ef73d314dd5280ee.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "gnarcin",
+            "real_name": "gnarcin",
+            "display_name": "",
+            "team": "T096LKMJ9J8",
+            "name": "gnarcin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RXG18",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello everyone !"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U04034PRT8D"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U07A0QHGBS4",
+        "type": "message",
+        "ts": "1753892815.364249",
+        "client_msg_id": "f558128d-bdf4-47e4-a21b-62aead05db67",
+        "text": "ah, cool, <https:\/\/lists.sync.global\/g\/validator-announce\/rss> is what I was looking for",
+        "team": "T05FWTX7PMG",
+        "user_team": "T6LLB04E9",
+        "source_team": "T6LLB04E9",
+        "user_profile": {
+            "avatar_hash": "ae3fbf42bf23",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-24\/7314673472294_ae3fbf42bf23cd5de31d_72.jpg",
+            "first_name": "Mario",
+            "real_name": "Mario Apra",
+            "display_name": "Mario",
+            "team": "T6LLB04E9",
+            "name": "mario.apra",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753887675.358169",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "o\/mAD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ah, cool, "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/lists.sync.global\/g\/validator-announce\/rss"
+                            },
+                            {
+                                "type": "text",
+                                "text": " is what I was looking for"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U096LKMJSDS",
+        "type": "message",
+        "ts": "1753892967.134749",
+        "client_msg_id": "32E948A3-DBE4-4E6C-9415-E5A135048B3F",
+        "text": "Where to find information,  to setup nodes please",
+        "team": "T05FWTX7PMG",
+        "user_team": "T096LKMJ9J8",
+        "source_team": "T096LKMJ9J8",
+        "user_profile": {
+            "avatar_hash": "g28417d0fe2d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/28417d0fe2d6fee9ef73d314dd5280ee.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "gnarcin",
+            "real_name": "gnarcin",
+            "display_name": "",
+            "team": "T096LKMJ9J8",
+            "name": "gnarcin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753892967.134749",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1753893135.455589",
+        "reply_users": [
+            "U7BSDJUJX"
+        ],
+        "replies": [
+            {
+                "user": "U7BSDJUJX",
+                "ts": "1753893135.455589"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zxpH7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Where to find information,  to setup nodes please"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U7BSDJUJX",
+        "type": "message",
+        "ts": "1753893135.455589",
+        "client_msg_id": "cad8517b-4f48-494d-a2b5-1faf4215b128",
+        "text": "I suggest starting with <https:\/\/docs.dev.sync.global\/validator_operator\/validator_onboarding.html|the validator onboarding docs>.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f786aefa8934",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-06-25\/663881175331_f786aefa8934903bc5f0_72.jpg",
+            "first_name": "Stephen",
+            "real_name": "Stephen Compall",
+            "display_name": "stephen",
+            "team": "T03T53E10",
+            "name": "stephen.compall",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753892967.134749",
+        "parent_user_id": "U096LKMJSDS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GGX62",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I suggest starting with "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/validator_operator\/validator_onboarding.html",
+                                "text": "the validator onboarding docs"
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "thread_broadcast",
+        "user": "U03HMUTQ5F0",
+        "thread_ts": "1753890371.315549",
+        "root": {
+            "user": "U04C4JQV1D1",
+            "type": "message",
+            "ts": "1753890371.315549",
+            "edited": {
+                "user": "U04C4JQV1D1",
+                "ts": "1753890599.000000"
+            },
+            "client_msg_id": "6b136547-55c9-4cbe-91fe-ad126b525dd4",
+            "text": "Outside of the slack messages in this channel, what is the best way to programmatically pull in Splice releases into our own workflows and see scheduled dates for go-live on MainNet?",
+            "team": "T05FWTX7PMG",
+            "user_team": "E082HD2JV25",
+            "source_team": "E082HD2JV25",
+            "user_profile": {
+                "avatar_hash": "403b6aa966df",
+                "image_72": "https:\/\/avatars.slack-edge.com\/2022-12-05\/4468772403891_403b6aa966dff4d014b6_72.jpg",
+                "first_name": "Kevin",
+                "real_name": "Kevin Bornatsch",
+                "display_name": "",
+                "team": "E082HD2JV25",
+                "name": "kevin.bornatsch",
+                "is_restricted": false,
+                "is_ultra_restricted": false
+            },
+            "thread_ts": "1753890371.315549",
+            "reply_count": 6,
+            "reply_users_count": 2,
+            "latest_reply": "1753893336.482919",
+            "reply_users": [
+                "U04C4JQV1D1",
+                "U03HMUTQ5F0"
+            ],
+            "replies": [
+                {
+                    "user": "U04C4JQV1D1",
+                    "ts": "1753890631.177009"
+                },
+                {
+                    "user": "U03HMUTQ5F0",
+                    "ts": "1753891874.300689"
+                },
+                {
+                    "user": "U03HMUTQ5F0",
+                    "ts": "1753891904.906499"
+                },
+                {
+                    "user": "U03HMUTQ5F0",
+                    "ts": "1753891936.515019"
+                },
+                {
+                    "user": "U04C4JQV1D1",
+                    "ts": "1753892040.612539"
+                },
+                {
+                    "user": "U03HMUTQ5F0",
+                    "ts": "1753893336.482919"
+                }
+            ],
+            "is_locked": false,
+            "subscribed": false,
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "t2NdD",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "Outside of the slack messages in this channel, what is the best way to programmatically pull in Splice releases into our own workflows and see scheduled dates for go-live on MainNet?"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "language": {
+                "locale": "en",
+                "is_reliable": true
+            }
+        },
+        "type": "message",
+        "ts": "1753893336.482919",
+        "edited": {
+            "user": "U03HMUTQ5F0",
+            "ts": "1753893344.000000"
+        },
+        "client_msg_id": "34fa3386-267e-4f2f-a34b-8e8e42a85b47",
+        "text": "<https:\/\/lists.sync.global\/g\/validator-announce\/rss>",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2TLiv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/lists.sync.global\/g\/validator-announce\/rss"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "fire",
+                "users": [
+                    "U04C4JQV1D1"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U054FRUS2MA",
+        "type": "message",
+        "ts": "1753894347.982149",
+        "client_msg_id": "bf184f7e-68fa-4716-b673-7de7e52ee24a",
+        "text": "Hello! Any updates on the devnet onboarding status ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04B6975FB6",
+        "source_team": "T04B6975FB6",
+        "user_profile": {
+            "avatar_hash": "98250ad34db5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-03\/6901050907094_98250ad34db562bec6a6_72.jpg",
+            "first_name": "Gus",
+            "real_name": "Gus",
+            "display_name": "Gus",
+            "team": "T04B6975FB6",
+            "name": "gus",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753712113.312239",
+        "parent_user_id": "U03HMUTQ5F0",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XO1Dd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello! Any updates on the devnet onboarding status ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1753894388.823029",
+        "edited": {
+            "user": "U03HMUTQ5F0",
+            "ts": "1753894402.000000"
+        },
+        "client_msg_id": "8d9754f9-0c35-426e-b92b-c78d9a70d89d",
+        "text": "I expect the SVs to announce either today or tomorrow that they have a fix in place that will allow nodes to resume onboarding to DevNet.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "e46cf2f361cd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-06-02\/3638231569136_e46cf2f361cda890c6d5_72.jpg",
+            "first_name": "Wayne",
+            "real_name": "Wayne Collier",
+            "display_name": "Wayne Collier",
+            "team": "T03T53E10",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753712113.312239",
+        "parent_user_id": "U03HMUTQ5F0",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "l0srv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I expect the SVs to announce either today or tomorrow that they have a fix in place that will allow nodes to resume onboarding to DevNet."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "rocket",
+                "users": [
+                    "U054FRUS2MA"
+                ],
+                "count": 1
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U092NF1BX9C"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "Hi Team, we have deleted and reinstalled the DevNet node on Kubernetes with version `0.4.7` with new onboarding secret but the `validator-app`  is neither running healthy nor having the restarts. Can anyone take a look at the logs and suggest what the issue might be. Attaching logs here:",
+        "files": [
+            {
+                "id": "F09834BN24B",
+                "created": 1753895766,
+                "timestamp": 1753895766,
+                "name": "validator.log",
+                "title": "validator.log",
+                "mimetype": "text\/plain",
+                "filetype": "text",
+                "pretty_type": "Plain Text",
+                "user": "U01CVV30P18",
+                "user_team": "T2DD6ACGP",
+                "editable": true,
+                "size": 186047,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T2DD6ACGP-F09834BN24B\/validator.log?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T2DD6ACGP-F09834BN24B\/download\/validator.log?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/chataai.slack.com\/files\/U05FZBDQ4RJ\/F09834BN24B\/validator.log",
+                "permalink_public": "https:\/\/slack-files.com\/T2DD6ACGP-F09834BN24B-547d1e5196",
+                "edit_link": "https:\/\/chataai.slack.com\/files\/U05FZBDQ4RJ\/F09834BN24B\/validator.log\/edit",
+                "source_team": "T2DD6ACGP",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U01CVV30P18",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RoNJw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Team, we have deleted and reinstalled the DevNet node on Kubernetes with version "
+                            },
+                            {
+                                "type": "text",
+                                "text": "0.4.7",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " with new onboarding secret but the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "validator-app",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  is neither running healthy nor having the restarts. Can anyone take a look at the logs and suggest what the issue might be. Attaching logs here:"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1753895770.210509",
+        "client_msg_id": "8b4c3657-0da1-4aac-aa63-8a9fd3f32f3b",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1753895770.210509",
+        "reply_count": 6,
+        "reply_users_count": 4,
+        "latest_reply": "1753922630.937829",
+        "reply_users": [
+            "U08987JD1J9",
+            "U04JX22CUTF",
+            "U03HMUTQ5F0",
+            "U01CVV30P18"
+        ],
+        "replies": [
+            {
+                "user": "U08987JD1J9",
+                "ts": "1753897855.342949"
+            },
+            {
+                "user": "U04JX22CUTF",
+                "ts": "1753908055.157739"
+            },
+            {
+                "user": "U03HMUTQ5F0",
+                "ts": "1753908981.880569"
+            },
+            {
+                "user": "U01CVV30P18",
+                "ts": "1753916015.152609"
+            },
+            {
+                "user": "U03HMUTQ5F0",
+                "ts": "1753922574.775459"
+            },
+            {
+                "user": "U03HMUTQ5F0",
+                "ts": "1753922630.937829"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T2DD6ACGP",
+        "source_team": "T2DD6ACGP",
+        "user_profile": {
+            "avatar_hash": "ga06447b6718",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a06447b6718e0a1c8e27c91fab0f078d.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0011-72.png",
+            "first_name": "",
+            "real_name": "Vinod Kumar Paruchuri",
+            "display_name": "Vinod Kumar Paruchuri",
+            "team": "T2DD6ACGP",
+            "name": "vparuchuri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1753897691.047689",
+        "client_msg_id": "6099098d-b25d-43a5-a6c9-cbfb9fe2e233",
+        "text": "If you use terraform, we use the below tf approach to pull the version\n\n`bft_version` is the version that more than 2\/3 of SV has upgraded to and you should use that version\n\n```# Define the URLs for each network environment\nlocals {\n  network_urls = {\n    devnet  = \"<https:\/\/docs.dev.global.canton.network.sync.global\/info>\"\n    testnet = \"<https:\/\/docs.test.global.canton.network.sync.global\/info>\"\n    mainnet = \"<https:\/\/docs.global.canton.network.sync.global\/info>\"\n  }\n}\n\n# Fetch data from the selected network endpoint\ndata \"http\" \"canton_info\" {\n  url = local.network_urls[var.network]\n}\n\n# Migration info\n# Parse the JSON response body\nlocals {\n  info = jsondecode(data.http.canton_info.response_body)\n}\n\n\n# Version\nlocals {\n  version_urls = {\n    devnet  = \"<https:\/\/docs.dev.global.canton.network.sync.global\/versions>\"\n    testnet = \"<https:\/\/docs.test.global.canton.network.sync.global\/versions>\"\n    mainnet = \"<https:\/\/docs.global.canton.network.sync.global\/versions>\"\n  }\n}\n\ndata \"http\" \"canton_versions\" {\n  url = local.version_urls[var.network]\n}\n\nlocals {\n  # 1. Split the raw text into lines, removing the header\n  raw_lines   = split(\"\\n\", trimspace(data.http.canton_versions.response_body))\n  data_lines  = slice(local.raw_lines, 1, length(local.raw_lines))\n\n  # 2. Parse valid lines into a list of objects.\n  #    - A line is valid if it has 3 comma-separated parts.\n  #    - The 3rd part (version) must match the format X.Y.Z\n  parsed_svs = [\n    for line in local.data_lines : {\n      sv_name = trimspace(split(\",\", line)[0])\n      version = trimspace(split(\",\", line)[2])\n    }\n    if length(split(\",\", line)) == 3 &amp;&amp; can(regex(\"^\\\\d+\\\\.\\\\d+\\\\.\\\\d+$\", trimspace(split(\",\", line)[2])))\n  ]\n\n  # 3. Create the 'versions' map (sv_name -&gt; version)\n  versions = {\n    for sv in local.parsed_svs : sv.sv_name =&gt; sv.version\n  }\n\n  # 4. Get the specific version for \"Five-North-1\"\n  #    Use lookup for safety in case the SV is not found.\n  five_north_version = local.versions[\"Five-North-1\"] # prefer a crash if not found\n\n  # 5. Calculate the BFT majority version\n  all_valid_versions = values(local.versions)\n  version_counts = {\n    for v in toset(local.all_valid_versions) : v =&gt; length([\n      for ver in local.all_valid_versions : ver if ver == v\n    ])\n  }\n  bft_threshold = ceil(length(local.all_valid_versions) * 2 \/ 3)\n  bft_versions_met = [\n    for version, count in local.version_counts : version if count &gt;= local.bft_threshold\n  ]\n  # Use one() to ensure there is exactly one majority version, otherwise fail.\n  bft_version = length(local.bft_versions_met) &gt; 0 ? one(local.bft_versions_met) : \"\"\n}```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753887675.358169",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FNELk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If you use terraform, we use the below tf approach to pull the version\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "bft_version",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is the version that more than 2\/3 of SV has upgraded to and you should use that version\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "# Define the URLs for each network environment\nlocals {\n  network_urls = {\n    devnet  = \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.global.canton.network.sync.global\/info"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"\n    testnet = \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.test.global.canton.network.sync.global\/info"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"\n    mainnet = \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.global.canton.network.sync.global\/info"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"\n  }\n}\n\n# Fetch data from the selected network endpoint\ndata \"http\" \"canton_info\" {\n  url = local.network_urls[var.network]\n}\n\n# Migration info\n# Parse the JSON response body\nlocals {\n  info = jsondecode(data.http.canton_info.response_body)\n}\n\n\n# Version\nlocals {\n  version_urls = {\n    devnet  = \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.global.canton.network.sync.global\/versions"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"\n    testnet = \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.test.global.canton.network.sync.global\/versions"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"\n    mainnet = \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.global.canton.network.sync.global\/versions"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"\n  }\n}\n\ndata \"http\" \"canton_versions\" {\n  url = local.version_urls[var.network]\n}\n\nlocals {\n  # 1. Split the raw text into lines, removing the header\n  raw_lines   = split(\"\\n\", trimspace(data.http.canton_versions.response_body))\n  data_lines  = slice(local.raw_lines, 1, length(local.raw_lines))\n\n  # 2. Parse valid lines into a list of objects.\n  #    - A line is valid if it has 3 comma-separated parts.\n  #    - The 3rd part (version) must match the format X.Y.Z\n  parsed_svs = [\n    for line in local.data_lines : {\n      sv_name = trimspace(split(\",\", line)[0])\n      version = trimspace(split(\",\", line)[2])\n    }\n    if length(split(\",\", line)) == 3 && can(regex(\"^\\\\d+\\\\.\\\\d+\\\\.\\\\d+$\", trimspace(split(\",\", line)[2])))\n  ]\n\n  # 3. Create the 'versions' map (sv_name -> version)\n  versions = {\n    for sv in local.parsed_svs : sv.sv_name => sv.version\n  }\n\n  # 4. Get the specific version for \"Five-North-1\"\n  #    Use lookup for safety in case the SV is not found.\n  five_north_version = local.versions[\"Five-North-1\"] # prefer a crash if not found\n\n  # 5. Calculate the BFT majority version\n  all_valid_versions = values(local.versions)\n  version_counts = {\n    for v in toset(local.all_valid_versions) : v => length([\n      for ver in local.all_valid_versions : ver if ver == v\n    ])\n  }\n  bft_threshold = ceil(length(local.all_valid_versions) * 2 \/ 3)\n  bft_versions_met = [\n    for version, count in local.version_counts : version if count >= local.bft_threshold\n  ]\n  # Use one() to ensure there is exactly one majority version, otherwise fail.\n  bft_version = length(local.bft_versions_met) > 0 ? one(local.bft_versions_met) : \"\"\n}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1753897855.342949",
+        "client_msg_id": "9f7afacf-a791-4c1d-9275-eda62ae0ad15",
+        "text": "<https:\/\/fivenorthgroup.slack.com\/archives\/C08AP9QR7K4\/p1753712113312239>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753895770.210509",
+        "parent_user_id": "U01CVV30P18",
+        "attachments": [
+            {
+                "from_url": "https:\/\/fivenorthgroup.slack.com\/archives\/C08AP9QR7K4\/p1753712113312239",
+                "ts": "1753712113.312239",
+                "author_id": "U03HMUTQ5F0",
+                "channel_id": "C08AP9QR7K4",
+                "channel_team": "T07LSPYDRT4",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "message_blocks": [
+                    {
+                        "team": "T08987C1Q77",
+                        "channel": "C08AP9QR7K4",
+                        "ts": "1753712113.312239",
+                        "message": {
+                            "blocks": [
+                                {
+                                    "type": "rich_text",
+                                    "block_id": "pR0G3",
+                                    "elements": [
+                                        {
+                                            "type": "rich_text_section",
+                                            "elements": [
+                                                {
+                                                    "type": "broadcast",
+                                                    "range": "here"
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": "\nFAILURES IN ONBOARDING NEW VALIDATORS TO DEVNET\n\nSplice 0.4.8 introduced an error in the Canton topology management code that adds an excess (quadratic) increase in topology state entries.\n\nThis very large increase in topology state causes the onboarding process to stall for new Validator nodes attempting to onboard to DevNet.\n\nThe Splice and Canton teams have identified the root cause and are collaborating to implement a fix.\n\nIn the meantime, we suggest that you don't attempt to onboard any new nodes to DevNet until further notice. The Splice and Canton teams will work with the Super Validators to determine how quickly a fix can be rolled out, and we'll announce here as soon as we know."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "id": 1,
+                "original_url": "https:\/\/fivenorthgroup.slack.com\/archives\/C08AP9QR7K4\/p1753712113312239",
+                "fallback": "[July 28th, 2025 7:15 AM] wayne.collier: <!here>\nFAILURES IN ONBOARDING NEW VALIDATORS TO DEVNET\n\nSplice 0.4.8 introduced an error in the Canton topology management code that adds an excess (quadratic) increase in topology state entries.\n\nThis very large increase in topology state causes the onboarding process to stall for new Validator nodes attempting to onboard to DevNet.\n\nThe Splice and Canton teams have identified the root cause and are collaborating to implement a fix.\n\nIn the meantime, we suggest that you don't attempt to onboard any new nodes to DevNet until further notice. The Splice and Canton teams will work with the Super Validators to determine how quickly a fix can be rolled out, and we'll announce here as soon as we know.",
+                "text": "<!here>\nFAILURES IN ONBOARDING NEW VALIDATORS TO DEVNET\n\nSplice 0.4.8 introduced an error in the Canton topology management code that adds an excess (quadratic) increase in topology state entries.\n\nThis very large increase in topology state causes the onboarding process to stall for new Validator nodes attempting to onboard to DevNet.\n\nThe Splice and Canton teams have identified the root cause and are collaborating to implement a fix.\n\nIn the meantime, we suggest that you don't attempt to onboard any new nodes to DevNet until further notice. The Splice and Canton teams will work with the Super Validators to determine how quickly a fix can be rolled out, and we'll announce here as soon as we know.",
+                "author_name": "Wayne Collier",
+                "author_link": "https:\/\/fivenorthgroup.slack.com\/team\/U03HMUTQ5F0",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2022-06-02\/3638231569136_e46cf2f361cda890c6d5_48.jpg",
+                "author_subname": "Wayne Collier",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "footer": "Thread in Slack Conversation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UPUzY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/fivenorthgroup.slack.com\/archives\/C08AP9QR7K4\/p1753712113312239"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01CVV30P18"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08FCND9P1Q",
+        "type": "message",
+        "ts": "1753899998.329179",
+        "client_msg_id": "7ad64ff5-227a-486c-9541-44df99abdf18",
+        "text": "When are the `ComputeFees` , `Transfer`, `BuyMemberTraffic`, etc going to begin enforcing the `expectedDso` argument requirements?",
+        "team": "T05FWTX7PMG",
+        "user_team": "EJ0K0BDC0",
+        "source_team": "EJ0K0BDC0",
+        "user_profile": {
+            "avatar_hash": "da13c9f3e103",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-20\/9076489873526_da13c9f3e103ebf65adf_72.jpg",
+            "first_name": "Michael",
+            "real_name": "Michael Gaare",
+            "display_name": "mgaare",
+            "team": "EJ0K0BDC0",
+            "name": "mgaare",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753887675.358169",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RuUyD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "When are the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "ComputeFees",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " , "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Transfer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", "
+                            },
+                            {
+                                "type": "text",
+                                "text": "BuyMemberTraffic",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", etc going to begin enforcing the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "expectedDso",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " argument requirements?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U04JX22CUTF",
+        "type": "message",
+        "ts": "1753908055.157739",
+        "client_msg_id": "7e93b94f-47b3-49de-8507-02109acd08aa",
+        "text": "when can we expect onboarding to resume normally ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TMCLAM45B",
+        "source_team": "TMCLAM45B",
+        "user_profile": {
+            "avatar_hash": "20342bdf1e9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-06\/5072696717877_20342bdf1e9c13a82f31_72.jpg",
+            "first_name": "Brij",
+            "real_name": "Brij Chauhan",
+            "display_name": "",
+            "team": "TMCLAM45B",
+            "name": "brindrajsinh.chauhan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753895770.210509",
+        "parent_user_id": "U01CVV30P18",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "k2YvR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "when can we expect onboarding to resume normally ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1753908981.880569",
+        "client_msg_id": "889ffa36-0769-4a54-a2b9-bd2a00d95b7e",
+        "text": "Over the next 24 to 48 hours",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "e46cf2f361cd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-06-02\/3638231569136_e46cf2f361cda890c6d5_72.jpg",
+            "first_name": "Wayne",
+            "real_name": "Wayne Collier",
+            "display_name": "Wayne Collier",
+            "team": "T03T53E10",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753895770.210509",
+        "parent_user_id": "U01CVV30P18",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ek11R",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Over the next 24 to 48 hours"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U04JX22CUTF"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U01CVV30P18",
+        "type": "message",
+        "ts": "1753916015.152609",
+        "client_msg_id": "1b3d3a61-8d9a-40c3-a170-14efc281c60e",
+        "text": "<@U03HMUTQ5F0> should we skip `0.4.8`  and go to `0.4.9` once the onboarding resumes?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T2DD6ACGP",
+        "source_team": "T2DD6ACGP",
+        "user_profile": {
+            "avatar_hash": "ga06447b6718",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a06447b6718e0a1c8e27c91fab0f078d.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0011-72.png",
+            "first_name": "",
+            "real_name": "Vinod Kumar Paruchuri",
+            "display_name": "Vinod Kumar Paruchuri",
+            "team": "T2DD6ACGP",
+            "name": "vparuchuri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753895770.210509",
+        "parent_user_id": "U01CVV30P18",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1oGwz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " should we skip "
+                            },
+                            {
+                                "type": "text",
+                                "text": "0.4.8",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  and go to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "0.4.9",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " once the onboarding resumes?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1753922574.775459",
+        "client_msg_id": "624D1CE3-C1CC-4997-9739-D0DAB570DD0D",
+        "text": "Either is fine",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "e46cf2f361cd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-06-02\/3638231569136_e46cf2f361cda890c6d5_72.jpg",
+            "first_name": "Wayne",
+            "real_name": "Wayne Collier",
+            "display_name": "Wayne Collier",
+            "team": "T03T53E10",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753895770.210509",
+        "parent_user_id": "U01CVV30P18",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VkSk9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Either is fine"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1753922630.937829",
+        "client_msg_id": "8F62546E-1AF5-44B2-B22F-B1CE542F54C6",
+        "text": "The problem in 0.4.8 was limited to SV nodes",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "e46cf2f361cd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-06-02\/3638231569136_e46cf2f361cda890c6d5_72.jpg",
+            "first_name": "Wayne",
+            "real_name": "Wayne Collier",
+            "display_name": "Wayne Collier",
+            "team": "T03T53E10",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753895770.210509",
+        "parent_user_id": "U01CVV30P18",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bf3zz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The problem"
+                            },
+                            {
+                                "type": "text",
+                                "text": " in 0.4.8 was limited to SV nodes"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "thankyou",
+                "users": [
+                    "U01CVV30P18"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1753929192.088329",
+        "edited": {
+            "user": "U057HGB61RS",
+            "ts": "1753945331.000000"
+        },
+        "client_msg_id": "610a3d6b-4c10-4e29-9cff-77c523ace849",
+        "text": "Looking for advice\/best practice on Canton Console\n\n*Context:*\n• Currently Canton console in our setup is only available by having direct access to Kubernetes\n• This makes it difficult to separate between DevOps & Ops usage (Since operational usage should not involve having access to K8)\n• Canton console has functionalities that are sensitive in nature relating to authentication\/authorisation (that should not be exposed to ops)\n• However Canton console also has useful functionalities to monitor parties & transactions for operations\n*Alternative*\n• PQS (<https:\/\/docs.daml.com\/query\/pqs-user-guide.html>) seems to fulfil some of the desired use case I mention. Unsure if PQS would be more appropriate than Canton console here\nIs there a specific usage pattern that caters to what I described? Also want to validate that the use case I have in mind is valid (and not achievable in some other ways) :pray:",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753929192.088329",
+        "reply_count": 8,
+        "reply_users_count": 4,
+        "latest_reply": "1753965175.385759",
+        "reply_users": [
+            "U9UAQ9R5G",
+            "U057HGB61RS",
+            "U047U17D7KL",
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U9UAQ9R5G",
+                "ts": "1753946040.435689"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1753946188.318549"
+            },
+            {
+                "user": "U9UAQ9R5G",
+                "ts": "1753948967.517379"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1753948991.690759"
+            },
+            {
+                "user": "U047U17D7KL",
+                "ts": "1753961512.685779"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1753961811.408169"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753962369.537469"
+            },
+            {
+                "user": "U047U17D7KL",
+                "ts": "1753965175.385759"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "H4x29",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Looking for advice\/best practice on Canton Console\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Context:",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Currently Canton console in our setup is only available by having direct access to Kubernetes"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "This makes it difficult to separate between DevOps & Ops usage (Since operational usage should not involve having access to K8)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Canton console has functionalities that are sensitive in nature relating to authentication\/authorisation (that should not be exposed to ops)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "However Canton console also has useful functionalities to monitor parties & transactions for operations"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Alternative",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "PQS ("
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/docs.daml.com\/query\/pqs-user-guide.html"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ") seems to fulfil some of the desired use case I mention. Unsure if PQS would be more appropriate than Canton console here"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nIs there a specific usage pattern that caters to what I described? Also want to validate that the use case I have in mind is valid (and not achievable in some other ways) "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray",
+                                "unicode": "1f64f"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

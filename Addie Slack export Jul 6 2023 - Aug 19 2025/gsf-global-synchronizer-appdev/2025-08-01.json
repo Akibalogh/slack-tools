@@ -1,0 +1,378 @@
+[
+    {
+        "text": "Hi.\n\nhope for advice with problem of external signing.\nWe deployed very simple smart contract to test it by firing choice as external party.\nWe created and instance of this smart contract and initiated a choice execution as external party.\nOver gPRC Ledger API we initiated submission prepare (`InteractiveSubmissionService\/PrepareSumbission`) and obtained\na prepared transaction for signing.\n\naccordingly to examples:\n<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/canton\/community\/app\/src\/pack\/examples\/08-interactive-submission\/daml_transaction_hashing_v2.py>\n<https:\/\/docs.digitalasset.com\/build\/3.4\/tutorials\/app-dev\/external_signing_submission.html#compute-the-transaction-hash>\n\nwe applied the logic to calculate transaction hash and sign it with private key of external party.\nunfortunately on firing `InteractiveSubmissionService\/ExecuteSubmission` we always got failure of invalid signature.\nwe found no logs on canton node on this problem.\nwe tried with various options to sign and calculate hash but still no success.\n\nplease see files attached:\n1. prepared_tx.txt - example of prepared transaction\n2. transaction_util.go - our attempt to implement hash calculation of prepared transaction.\n3. ledgerapi.go - our test scenario of execute choice of smart contract.\n4. gprc_log.txt -  log grpc communication.\n5. TestTxExt.daml - example of smart contract we try to execute as external party\n\nany advice appreciated, thanks.",
+        "files": [
+            {
+                "id": "F098ZKPUZ9P",
+                "created": 1754049092,
+                "timestamp": 1754049092,
+                "name": "grpc_log.txt",
+                "title": "grpc_log.txt",
+                "mimetype": "text\/plain",
+                "filetype": "text",
+                "pretty_type": "Plain Text",
+                "user": "U08QALM68SF",
+                "user_team": "T04NVD19L",
+                "editable": true,
+                "size": 4871,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T04NVD19L-F098ZKPUZ9P\/grpc_log.txt?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T04NVD19L-F098ZKPUZ9P\/download\/grpc_log.txt?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/pixelplex.slack.com\/files\/U05FZBDQ4RJ\/F098ZKPUZ9P\/grpc_log.txt",
+                "permalink_public": "https:\/\/slack-files.com\/T04NVD19L-F098ZKPUZ9P-ec74a15f93",
+                "edit_link": "https:\/\/pixelplex.slack.com\/files\/U05FZBDQ4RJ\/F098ZKPUZ9P\/grpc_log.txt\/edit",
+                "source_team": "T04NVD19L",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F098F77N72A",
+                "created": 1754049094,
+                "timestamp": 1754049094,
+                "name": "ledgerapi.go",
+                "title": "ledgerapi.go",
+                "mimetype": "text\/plain",
+                "filetype": "go",
+                "pretty_type": "Go",
+                "user": "U08QALM68SF",
+                "user_team": "T04NVD19L",
+                "editable": true,
+                "size": 5869,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T04NVD19L-F098F77N72A\/ledgerapi.go?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T04NVD19L-F098F77N72A\/download\/ledgerapi.go?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/pixelplex.slack.com\/files\/U05FZBDQ4RJ\/F098F77N72A\/ledgerapi.go",
+                "permalink_public": "https:\/\/slack-files.com\/T04NVD19L-F098F77N72A-3fb55fb022",
+                "edit_link": "https:\/\/pixelplex.slack.com\/files\/U05FZBDQ4RJ\/F098F77N72A\/ledgerapi.go\/edit",
+                "source_team": "T04NVD19L",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F0995QC1NJU",
+                "created": 1754049095,
+                "timestamp": 1754049095,
+                "name": "prepared_tx.txt",
+                "title": "prepared_tx.txt",
+                "mimetype": "text\/plain",
+                "filetype": "text",
+                "pretty_type": "Plain Text",
+                "user": "U08QALM68SF",
+                "user_team": "T04NVD19L",
+                "editable": true,
+                "size": 5845,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T04NVD19L-F0995QC1NJU\/prepared_tx.txt?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T04NVD19L-F0995QC1NJU\/download\/prepared_tx.txt?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/pixelplex.slack.com\/files\/U05FZBDQ4RJ\/F0995QC1NJU\/prepared_tx.txt",
+                "permalink_public": "https:\/\/slack-files.com\/T04NVD19L-F0995QC1NJU-0d7e72a7f7",
+                "edit_link": "https:\/\/pixelplex.slack.com\/files\/U05FZBDQ4RJ\/F0995QC1NJU\/prepared_tx.txt\/edit",
+                "source_team": "T04NVD19L",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F098ZKQG9CH",
+                "created": 1754049096,
+                "timestamp": 1754049096,
+                "name": "TestTxExt.daml",
+                "title": "TestTxExt.daml",
+                "mimetype": "text\/plain",
+                "filetype": "cpp",
+                "pretty_type": "C++",
+                "user": "U08QALM68SF",
+                "user_team": "T04NVD19L",
+                "editable": true,
+                "size": 1038,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T04NVD19L-F098ZKQG9CH\/testtxext.daml?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T04NVD19L-F098ZKQG9CH\/download\/testtxext.daml?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/pixelplex.slack.com\/files\/U05FZBDQ4RJ\/F098ZKQG9CH\/testtxext.daml",
+                "permalink_public": "https:\/\/slack-files.com\/T04NVD19L-F098ZKQG9CH-bcef2698bb",
+                "edit_link": "https:\/\/pixelplex.slack.com\/files\/U05FZBDQ4RJ\/F098ZKQG9CH\/testtxext.daml\/edit",
+                "source_team": "T04NVD19L",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F098F789WES",
+                "created": 1754049098,
+                "timestamp": 1754049098,
+                "name": "transaction_util.go",
+                "title": "transaction_util.go",
+                "mimetype": "text\/plain",
+                "filetype": "go",
+                "pretty_type": "Go",
+                "user": "U08QALM68SF",
+                "user_team": "T04NVD19L",
+                "editable": true,
+                "size": 15623,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T04NVD19L-F098F789WES\/transaction_util.go?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T04NVD19L-F098F789WES\/download\/transaction_util.go?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/pixelplex.slack.com\/files\/U05FZBDQ4RJ\/F098F789WES\/transaction_util.go",
+                "permalink_public": "https:\/\/slack-files.com\/T04NVD19L-F098F789WES-8a16381a95",
+                "edit_link": "https:\/\/pixelplex.slack.com\/files\/U05FZBDQ4RJ\/F098F789WES\/transaction_util.go\/edit",
+                "source_team": "T04NVD19L",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U08QALM68SF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tOvye",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi.\n\nhope for advice with problem of external signing.\nWe deployed very simple smart contract to test it by firing choice as external party.\nWe created and instance of this smart contract and initiated a choice execution as external party.\nOver gPRC Ledger API we initiated submission prepare ("
+                            },
+                            {
+                                "type": "text",
+                                "text": "InteractiveSubmissionService\/PrepareSumbission",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ") and obtained\na prepared transaction for signing.\n\naccordingly to examples:\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/canton\/community\/app\/src\/pack\/examples\/08-interactive-submission\/daml_transaction_hashing_v2.py"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.digitalasset.com\/build\/3.4\/tutorials\/app-dev\/external_signing_submission.html#compute-the-transaction-hash"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nwe applied the logic to calculate transaction hash and sign it with private key of external party.\nunfortunately on firing "
+                            },
+                            {
+                                "type": "text",
+                                "text": "InteractiveSubmissionService\/ExecuteSubmission",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " we always got failure of invalid signature.\nwe found no logs on canton node on this problem.\nwe tried with various options to sign and calculate hash but still no success.\n\nplease see files attached:\n1. prepared_tx.txt - example of prepared transaction\n2. transaction_util.go - our attempt to implement hash calculation of prepared transaction.\n3. ledgerapi.go - our test scenario of execute choice of smart contract.\n4. gprc_log.txt -  log grpc communication.\n5. TestTxExt.daml - example of smart contract we try to execute as external party\n\nany advice appreciated, thanks."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1754049245.373989",
+        "client_msg_id": "a97e9a14-6d07-4a64-9ee1-bde160cbfd39",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1754049245.373989",
+        "reply_count": 3,
+        "reply_users_count": 2,
+        "latest_reply": "1754310838.048809",
+        "reply_users": [
+            "U03NCGBFCDP",
+            "U03HMUTQ5F0"
+        ],
+        "replies": [
+            {
+                "user": "U03NCGBFCDP",
+                "ts": "1754125762.187809"
+            },
+            {
+                "user": "U03NCGBFCDP",
+                "ts": "1754131262.851669"
+            },
+            {
+                "user": "U03HMUTQ5F0",
+                "ts": "1754310838.048809"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "7e3168e191ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-30\/8829788550835_7e3168e191adcf78a96f_72.jpg",
+            "first_name": "Dmitry",
+            "real_name": "Dmitry Krylou",
+            "display_name": "d.krylou",
+            "team": "T04NVD19L",
+            "name": "d.krylou",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U06LMNHCGHJ",
+        "type": "message",
+        "ts": "1754062580.749309",
+        "client_msg_id": "61f2037a-c3c1-4656-b7c9-86c61d7e75de",
+        "text": "Hi all, anyone knows maybe is there is an option to get access to contracts placed here? <https:\/\/digitalasset.jfrog.io\/ui\/native\/canton-network-utility\/dars\/>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "dfa8e066936b",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-18\/7292057193395_dfa8e066936b4a6ad82e_72.jpg",
+            "first_name": "Yury",
+            "real_name": "Yury Korzun",
+            "display_name": "yury.korzun",
+            "team": "T04NVD19L",
+            "name": "yury.korzun",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754062580.749309",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1754063767.598779",
+        "reply_users": [
+            "U02LLFM3NF2"
+        ],
+        "replies": [
+            {
+                "user": "U02LLFM3NF2",
+                "ts": "1754063767.598779"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1W\/EG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all, anyone knows maybe is there is an option to get access to contracts placed here? "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/digitalasset.jfrog.io\/ui\/native\/canton-network-utility\/dars\/"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02LLFM3NF2",
+        "type": "message",
+        "ts": "1754063767.598779",
+        "client_msg_id": "4cfbedbd-0f7b-42fb-add4-52d8ef5002e9",
+        "text": "These are not open source. You need a license from Digital Asset to use them.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "0e341839a8c0",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-02\/2662300191959_0e341839a8c029bd52cd_72.png",
+            "first_name": "Alex",
+            "real_name": "Alex Putkov",
+            "display_name": "Alex Putkov",
+            "team": "T03T53E10",
+            "name": "alex.putkov",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754062580.749309",
+        "parent_user_id": "U06LMNHCGHJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tqeT9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "These are not open source. You need a license from Digital Asset to use them."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "ok_hand::skin-tone-3",
+                "users": [
+                    "U06LMNHCGHJ"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

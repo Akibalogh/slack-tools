@@ -1,0 +1,94 @@
+[
+    {
+        "user": "U2DCVHH2S",
+        "type": "message",
+        "ts": "1746923036.511979",
+        "edited": {
+            "user": "U2DCVHH2S",
+            "ts": "1746923099.000000"
+        },
+        "client_msg_id": "0724f9da-ca51-45f5-8edc-436443c434f1",
+        "text": "We are having some issues i'm hoping someone else might have run in to before as we are not able to find documentation around this.\n\nWe had uploaded a brand new dar file with new templates to DevNet. Making calls through grpc to the ledger results in the error below:\n\n```Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.util.concurrent.CompletionException: io.grpc.StatusRuntimeException: FAILED_PRECONDITION: NO_DOMAIN_FOR_SUBMISSION(9,0d3d024c): No valid domain for submission found.] with root cause```\nBased on some other forums we confirmed that the new DAR was vetted which seemed to be a previous problem.\n\nIf anyone knows of a resource to point us to or run in to this in the past, any help would be appreciated!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T2DD6ACGP",
+        "source_team": "T2DD6ACGP",
+        "user_profile": {
+            "avatar_hash": "9bb5de1cfe52",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2016-09-19\/81446954629_9bb5de1cfe520dc52f12_72.jpg",
+            "first_name": "Kelly",
+            "real_name": "Kelly Cherniwchan",
+            "display_name": "kelly.cherniwchan",
+            "team": "T2DD6ACGP",
+            "name": "kelly.cherniwchan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746923036.511979",
+        "reply_count": 4,
+        "reply_users_count": 1,
+        "latest_reply": "1747060545.847629",
+        "reply_users": [
+            "U2DCVHH2S"
+        ],
+        "replies": [
+            {
+                "user": "U2DCVHH2S",
+                "ts": "1746976775.440469"
+            },
+            {
+                "user": "U2DCVHH2S",
+                "ts": "1746976786.933839"
+            },
+            {
+                "user": "U2DCVHH2S",
+                "ts": "1747057698.980159"
+            },
+            {
+                "user": "U2DCVHH2S",
+                "ts": "1747060545.847629"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oh\/A2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We are having some issues i'm hoping someone else might have run in to before as we are not able to find documentation around this.\n\nWe had uploaded a brand new dar file with new templates to DevNet. Making calls through grpc to the ledger results in the error below:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.util.concurrent.CompletionException: io.grpc.StatusRuntimeException: FAILED_PRECONDITION: NO_DOMAIN_FOR_SUBMISSION(9,0d3d024c): No valid domain for submission found.] with root cause"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nBased on some other forums we confirmed that the new DAR was vetted which seemed to be a previous problem.\n\nIf anyone knows of a resource to point us to or run in to this in the past, any help would be appreciated!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

@@ -1,0 +1,251 @@
+[
+    {
+        "user": "UFM12NUJG",
+        "type": "message",
+        "ts": "1750449951.570049",
+        "client_msg_id": "6719c632-4515-4e2b-9f3a-17a615c50526",
+        "text": "Hi Teams, I tried install validator by docker compose inside a GCP VM. then I get this error in validator log. I just installed it,  no TLS and authentication yet.\n\ndo I need to setup in firewall?\n\nWould really appreciate any help anyone can offer.\n``` {\"@timestamp\":\"2025-06-20T19:57:50.683Z\",\"@version\":\"1\",\"message\":\"HTTP client (GET \/api\/scan\/v0\/transfer-preapprovals\/by-party\/chatadocker-dev-1::12203e3e6f32653fabecfef0e02361b9de1aa...): HTTP request failed\",\"logger_name\":\"o.l.s.v.ValidatorApp:validator=validator_backend\",\"thread_name\":\"canton-env-ec-23\",\"level\":\"DEBUG\",\"level_value\":10000,\"stack_trace\":\"org.apache.pekko.stream.StreamTcpException: Tcp command [Connect(<http:\/\/scan.sv.dev.global.canton.network.digitalasset.com\/&lt;unresolved&gt;:443,None,List(),Some|scan.sv.dev.global.canton.network.digitalasset.com\/&lt;unresolved&gt;:443,None,List(),Some>(10 seconds),true)] failed because of org.apache.pekko.io.TcpOutgoingConnection$$anon$2: Connect timeout of Some(10 seconds) expired\\nCaused by: org.apache.pekko.io.TcpOutgoingConnection$$anon$2: Connect timeout of Some(10 seconds) expired\\n\",\"trace-id\":\"abd68ba5863637e18bf30a8e042795d8\",\"span-id\":\"95605c4467868aef\"}```\nand\n``` {\"@timestamp\":\"2025-06-20T19:57:49.253Z\",\"@version\":\"1\",\"message\":\"Scans List(<https:\/\/scan.sv.dev.global.canton.network.digitalasset.com>) disagreed with the Consensus Success(None) and instead returned ExceptionFailureResponse(org.apache.pekko.stream.StreamTcpException: Tcp command [Connect(<http:\/\/scan.sv.dev.global.canton.network.digitalasset.com\/&lt;unresolved&gt;:443,None,List(),Some|scan.sv.dev.global.canton.network.digitalasset.com\/&lt;unresolved&gt;:443,None,List(),Some>(10 seconds),true)] failed because of org.apache.pekko.io.TcpOutgoingConnection$$anon$2: Connect timeout of Some(10 seconds) expired)\",\"logger_name\":\"o.l.s.s.a.a.c.BftScanConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-63\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"edb2822485bdce75\",\"span-parent-id\":\"ccaaf66a87e49d18\",\"trace-id\":\"6d7ce6b7530a796b9f050bb4dc20d932\",\"span-name\":\"HttpScanProxyHandler.lookupTransferPreapprovalByParty\"}```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T2DD6ACGP",
+        "source_team": "T2DD6ACGP",
+        "user_profile": {
+            "avatar_hash": "c478785fdc28",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-01-27\/533773004673_c478785fdc280fe3897c_72.jpg",
+            "first_name": "Sherman",
+            "real_name": "Sherman Yang",
+            "display_name": "Sherman",
+            "team": "T2DD6ACGP",
+            "name": "syang",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750449951.570049",
+        "reply_count": 4,
+        "reply_users_count": 2,
+        "latest_reply": "1751927221.822609",
+        "reply_users": [
+            "UFM12NUJG",
+            "U08QNTDEU9F"
+        ],
+        "replies": [
+            {
+                "user": "UFM12NUJG",
+                "ts": "1750450118.193309"
+            },
+            {
+                "user": "U08QNTDEU9F",
+                "ts": "1750482791.474969"
+            },
+            {
+                "user": "UFM12NUJG",
+                "ts": "1750523877.594849"
+            },
+            {
+                "user": "U08QNTDEU9F",
+                "ts": "1751927221.822609"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FiwQ\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Teams, I tried install validator by docker compose inside a GCP VM. then I get this error in validator log. I just installed it,  no TLS and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "authentication",
+                                "style": {
+                                    "unlink": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " yet.\n\ndo I need to setup in firewall?\n\nWould really appreciate any help anyone can offer.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " {\"@timestamp\":\"2025-06-20T19:57:50.683Z\",\"@version\":\"1\",\"message\":\"HTTP client (GET \/api\/scan\/v0\/transfer-preapprovals\/by-party\/chatadocker-dev-1::12203e3e6f32653fabecfef0e02361b9de1aa...): HTTP request failed\",\"logger_name\":\"o.l.s.v.ValidatorApp:validator=validator_backend\",\"thread_name\":\"canton-env-ec-23\",\"level\":\"DEBUG\",\"level_value\":10000,\"stack_trace\":\"org.apache.pekko.stream.StreamTcpException: Tcp command [Connect(scan.sv.dev.global.canton.network.digitalasset.com\/<unresolved>:443,None,List(),Some(10 seconds),true)] failed because of org.apache.pekko.io.TcpOutgoingConnection$$anon$2: Connect timeout of Some(10 seconds) expired\\nCaused by: org.apache.pekko.io.TcpOutgoingConnection$$anon$2: Connect timeout of Some(10 seconds) expired\\n\",\"trace-id\":\"abd68ba5863637e18bf30a8e042795d8\",\"span-id\":\"95605c4467868aef\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " {\"@timestamp\":\"2025-06-20T19:57:49.253Z\",\"@version\":\"1\",\"message\":\"Scans List("
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv.dev.global.canton.network.digitalasset.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": ") disagreed with the Consensus Success(None) and instead returned ExceptionFailureResponse(org.apache.pekko.stream.StreamTcpException: Tcp command [Connect(scan.sv.dev.global.canton.network.digitalasset.com\/<unresolved>:443,None,List(),Some(10 seconds),true)] failed because of org.apache.pekko.io.TcpOutgoingConnection$$anon$2: Connect timeout of Some(10 seconds) expired)\",\"logger_name\":\"o.l.s.s.a.a.c.BftScanConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-63\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"edb2822485bdce75\",\"span-parent-id\":\"ccaaf66a87e49d18\",\"trace-id\":\"6d7ce6b7530a796b9f050bb4dc20d932\",\"span-name\":\"HttpScanProxyHandler.lookupTransferPreapprovalByParty\"}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "this is the services status",
+        "files": [
+            {
+                "id": "F092D8QJ3LM",
+                "created": 1750450095,
+                "timestamp": 1750450095,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "UFM12NUJG",
+                "user_team": "T2DD6ACGP",
+                "editable": false,
+                "size": 38133,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T2DD6ACGP-F092D8QJ3LM\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T2DD6ACGP-F092D8QJ3LM\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F092D8QJ3LM-68074ccbd4\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F092D8QJ3LM-68074ccbd4\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F092D8QJ3LM-68074ccbd4\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 148,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F092D8QJ3LM-68074ccbd4\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 197,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F092D8QJ3LM-68074ccbd4\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "original_w": 496,
+                "original_h": 204,
+                "thumb_tiny": "AwATADDPAG3OBSlQTQn3RSjoKAG7BzzQU446\/Wnd\/wAKa5\/zmgBoHFG72FKPu9abQBL06UgpTSCgBQefwqKpB1\/Co6ADNFFFAH\/\/2Q==",
+                "permalink": "https:\/\/chataai.slack.com\/files\/U05FZBDQ4RJ\/F092D8QJ3LM\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T2DD6ACGP-F092D8QJ3LM-b690c0f934",
+                "source_team": "T2DD6ACGP",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "UFM12NUJG",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TnFQz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "this is the services status"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1750450118.193309",
+        "client_msg_id": "cc44f414-2e65-4dfb-bdec-caf87ae35d63",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1750449951.570049",
+        "parent_user_id": "UFM12NUJG",
+        "user_team": "T2DD6ACGP",
+        "source_team": "T2DD6ACGP",
+        "user_profile": {
+            "avatar_hash": "c478785fdc28",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-01-27\/533773004673_c478785fdc280fe3897c_72.jpg",
+            "first_name": "Sherman",
+            "real_name": "Sherman Yang",
+            "display_name": "Sherman",
+            "team": "T2DD6ACGP",
+            "name": "syang",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U08QNTDEU9F",
+        "type": "message",
+        "ts": "1750482791.474969",
+        "client_msg_id": "d6a298fd-c88d-4270-bc9b-f99623114654",
+        "text": "It looks like outbound tcp connections are failing. Usually there will be a firewall rule to enable masquerade on the docker network.   iptables -t nat -S\nwithout that rule outbound traffic from containers could have issues.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08QNTDEQRX",
+        "source_team": "T08QNTDEQRX",
+        "user_profile": {
+            "avatar_hash": "625d4e0a38ae",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-17\/9083152748352_625d4e0a38ae04a61bec_72.png",
+            "first_name": "jason",
+            "real_name": "jason",
+            "display_name": "",
+            "team": "T08QNTDEQRX",
+            "name": "jason",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750449951.570049",
+        "parent_user_id": "UFM12NUJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oaC9i",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It looks like outbound tcp connections are failing. Usually there will be a firewall rule to enable masquerade on the docker network.   iptables -t nat -S\nwithout that rule outbound traffic from containers could have issues."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

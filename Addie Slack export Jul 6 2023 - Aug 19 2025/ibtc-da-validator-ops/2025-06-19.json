@@ -1,0 +1,243 @@
+[
+    {
+        "subtype": "thread_broadcast",
+        "user": "U088UV6MKFE",
+        "thread_ts": "1749625037.555849",
+        "root": {
+            "subtype": "tombstone",
+            "text": "This message was deleted.",
+            "user": "USLACKBOT",
+            "hidden": true,
+            "type": "message",
+            "ts": "1749625037.555849",
+            "team": "T05FWTX7PMG",
+            "user_team": "T03T53E10",
+            "source_team": "T03T53E10",
+            "user_profile": {
+                "avatar_hash": "sv41d8cd98f0",
+                "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+                "first_name": "slackbot",
+                "real_name": "Slackbot",
+                "display_name": "Slackbot",
+                "team": "T03T53E10",
+                "name": "slackbot",
+                "is_restricted": false,
+                "is_ultra_restricted": false
+            },
+            "thread_ts": "1749625037.555849",
+            "parent_user_id": "USLACKBOT",
+            "reply_count": 9,
+            "reply_users_count": 1,
+            "latest_reply": "1750857488.363659",
+            "reply_users": [
+                "U088UV6MKFE"
+            ],
+            "replies": [
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750065469.301009"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750321174.066719"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750322336.964469"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750323361.253259"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750673430.499919"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750673501.855619"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750775051.687859"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750853919.466069"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750857488.363659"
+                }
+            ],
+            "is_locked": false,
+            "subscribed": false
+        },
+        "type": "message",
+        "ts": "1750321174.066719",
+        "client_msg_id": "4fcd12b6-edfd-4dac-b60e-9810628af84c",
+        "text": "So I am actually starting with Featured App rewards first.\n\nOur thinking is that we can migrate to the decentralized credentials later, but we don't want to launch without app rewards. I realize the former is closely tied to us onboarding to the utility so the token will be transferable, so I will have to figure it out anyway soon.\n\nSo as I see, I need to create FeaturedAppActivityMarkers, since our actions are not CC transfers: <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/1e592174d377ef4908c0847ea5b6ccb53739a67d\/daml\/splice-amulet\/daml\/Splice\/Amulet.daml#L254>\nI am looking to add it to Account (DA and WA) creation, and every mint\/burn action. We also need to have <https:\/\/docs.sync.global\/app_dev\/api\/splice-amulet\/Splice-Amulet.html#type-splice-amulet-featuredappright-765|FeaturedAppRight>, on Devnet I can assign this to myself (my party? So this again won't work for decentralized party that simply I take it)\n\nFor minting rewards, the repo you sent I can't access, but im guessing this is the same: <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/2100cb1c1154c6232ab6fc0886d7c7fdeaa4e30a\/daml\/splice-amulet\/daml\/Splice\/AmuletRules.daml#L113>\n\nAnd iirc the decentralized party will need some automation to exercise a governance choice, to actually mint the rewards\n\nI wonder if there is an example out there, where this flow comes together I could use (other projects already using this, maybe open source? :crossed_fingers:), or even a doc, or its figuring it out from source?\nThe closest useful I found are these scripts:\n <https:\/\/github.com\/digital-asset\/cn-quickstart\/tree\/main\/quickstart\/daml\/external-test-sources\/splice-amulet-test\/daml\/Splice\/Scripts>,\n and this I guess: <https:\/\/github.com\/digital-asset\/cn-quickstart\/blob\/main\/quickstart\/daml\/external-test-sources\/splice-token-standard-test\/daml\/Splice\/Testing\/Registries\/AmuletRegistry.daml|https:\/\/github.com\/digital-asset\/cn-quickstart\/blob\/main\/quickstart\/daml\/external-[…]tandard-test\/daml\/Splice\/Testing\/Registries\/AmuletRegistry.daml>",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "039jG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So I am actually starting with Featured App rewards first.\n\nOur thinking is that we can migrate to the decentralized credentials later, but we don't want to launch without app rewards. I realize the former is closely tied to us onboarding to the utility so the token will be transferable, so I will have to figure it out anyway soon.\n\nSo as I see, I need to create FeaturedAppActivityMarkers, since our actions are not CC transfers: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/1e592174d377ef4908c0847ea5b6ccb53739a67d\/daml\/splice-amulet\/daml\/Splice\/Amulet.daml#L254"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nI am looking to add it to Account (DA and WA) creation, and every mint\/burn action. We also need to have "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.sync.global\/app_dev\/api\/splice-amulet\/Splice-Amulet.html#type-splice-amulet-featuredappright-765",
+                                "text": "FeaturedAppRight"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", on Devnet I can assign this to myself (my party? So this again won't work for decentralized party that simply I take it)\n\nFor minting rewards, the repo you sent I can't access, but im guessing this is the same: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/2100cb1c1154c6232ab6fc0886d7c7fdeaa4e30a\/daml\/splice-amulet\/daml\/Splice\/AmuletRules.daml#L113"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nAnd iirc the decentralized party will need some automation to exercise a governance choice, to actually mint the rewards\n\nI wonder if there is an example out there, where this flow comes together I could use (other projects already using this, maybe open source? "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "crossed_fingers",
+                                "unicode": "1f91e"
+                            },
+                            {
+                                "type": "text",
+                                "text": "), or even a doc, or its figuring it out from source?\nThe closest useful I found are these scripts:\n "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/digital-asset\/cn-quickstart\/tree\/main\/quickstart\/daml\/external-test-sources\/splice-amulet-test\/daml\/Splice\/Scripts"
+                            },
+                            {
+                                "type": "text",
+                                "text": ",\n and this I guess: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/digital-asset\/cn-quickstart\/blob\/main\/quickstart\/daml\/external-test-sources\/splice-token-standard-test\/daml\/Splice\/Testing\/Registries\/AmuletRegistry.daml",
+                                "text": "https:\/\/github.com\/digital-asset\/cn-quickstart\/blob\/main\/quickstart\/daml\/external-[…]tandard-test\/daml\/Splice\/Testing\/Registries\/AmuletRegistry.daml"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750322336.964469",
+        "client_msg_id": "26bf095e-cd7b-4a10-842b-62721f1e7995",
+        "text": "&gt; Otherwise you create double for each of these.\nIs that a problem for us? :slightly_smiling_face: hehe\n\nwhat's the ETA on the utility adding them?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749625037.555849",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NZs2j",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Otherwise you create double for each of these."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is that a problem for us? "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            },
+                            {
+                                "type": "text",
+                                "text": " hehe\n\nwhat's the ETA on the utility adding them?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750323361.253259",
+        "client_msg_id": "7e1f3c27-fd16-4df9-9e4f-f79c0094cf9c",
+        "text": "Seeing how the account creation is 'rare' compared to the mint\/burn events, we might just skip that. It would be a great simplification if we don't have to add custom logic for this at all",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749625037.555849",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TCrFT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Seeing how the account creation is 'rare' compared to the mint\/burn events, we might just skip that. It would be a great simplification if we don't have to add custom logic for this at all"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

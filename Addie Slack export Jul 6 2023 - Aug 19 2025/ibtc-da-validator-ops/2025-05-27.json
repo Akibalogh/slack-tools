@@ -1,0 +1,1157 @@
+[
+    {
+        "text": "I can't seem to recreate the issue you raise in drawings or in my head - could you show us what you mean? A scenario where we double-broadcast?\n\nI think the key to grasp is: we broadcast for the _difference_ between already broadcast amounts, and pendingAmount. The actual amount is irrelevant\n\nPendingBalance only changes in two steps of the flow:\n• when the user calls withdraw, it increases immediately\n• at a Periodic Check (PC), the Attestors decrease it by the amount of Sum(Confirmed Requests)\nIt's not a problem if it goes up between, as it only decreases at PCs, _before_ Attestors would create new requests for the outstanding remaining amount.\n\nWe would still use command dedup though.\n\nI made a new drawing where confirmations take longer (as in reality, it's about 60 PCs to confirm a single broadcast), and there are many withdraw calls.",
+        "files": [
+            {
+                "id": "F08U7L3BS3E",
+                "created": 1748342022,
+                "timestamp": 1748342022,
+                "name": "diBTC Withdraw flow.svg",
+                "title": "diBTC Withdraw flow.svg",
+                "mimetype": "image\/svg+xml",
+                "filetype": "svg",
+                "pretty_type": "SVG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 40494,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08U7L3BS3E\/dibtc_withdraw_flow.svg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08U7L3BS3E\/download\/dibtc_withdraw_flow.svg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08U7L3BS3E\/dibtc_withdraw_flow.svg",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08U7L3BS3E-9fdcb6db6a",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jrVXl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I can't seem to recreate the issue you raise in drawings or in my head - could you show us what you mean? A scenario where we double-broadcast?\n\nI think the key to grasp is: we broadcast for the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "difference",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " between already broadcast amounts, and pendingAmount. The actual amount is irrelevant\n\nPendingBalance only changes in two steps of the flow:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "when the user calls withdraw, it increases immediately"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "at a Periodic Check (PC), the Attestors decrease it by the amount of Sum(Confirmed Requests)"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nIt's not a problem if it goes up between, as it only decreases at PCs, "
+                            },
+                            {
+                                "type": "text",
+                                "text": "before",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " Attestors would create new requests for the outstanding remaining amount.\n\nWe would still use command dedup though.\n\nI made a new drawing where confirmations take longer (as in reality, it's about 60 PCs to confirm a single broadcast), and there are many withdraw calls."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1748342260.371039",
+        "client_msg_id": "48c393bf-591c-4a99-8fad-3fbd0c9e30f0",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748342542.665459",
+        "client_msg_id": "b9ea0a4a-13f0-4924-8acb-abb2668c8708",
+        "text": "We fetch all active WD Requests before creating new ones, to sum them up. So we would see it in there in the next PC",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8pkt8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We fetch all active WD Requests before creating new ones, to sum them up. So we would see it in there in the next PC"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748342602.741499",
+        "edited": {
+            "user": "U088UV6MKFE",
+            "ts": "1748342618.000000"
+        },
+        "client_msg_id": "263b3826-765d-475c-9784-1efefd0babfa",
+        "text": "And, WD Requests contain the btc_tx_id, so if we crash after the BTC Broadcast, we would also see that in the next PC",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YjAks",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And, WD Requests contain the btc_tx_id, so if we crash after the BTC Broadcast, we would also see that in the next PC"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748343425.258559",
+        "client_msg_id": "09556d3a-f50a-4ab0-a33c-acfe3c0b0936",
+        "text": "I see your point, yeah. I sort of assumed that txs submitted to my local participant would be visible to me ~immediately. But anyway actually the service does its first PC _after_ 1 period has passed, not immediately on startup, so there is 60 seconds on Mainnet for the ledger to catch up.\n\nBut also importantly, there is a consensus step here as well. So before I do anything, I would consult all my peers - so unless more then a threshold of them crashed at the same time, at one step of this flow, it would fail (for example by a peer refusing to sign a withdraw request creation for 2, since it sees that there is already a pending WDR for 1, and the balance is 2!) -- and retried at the next PC, and hopefully by then my ledger is up-to-date (120 seconds)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZXR8Z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I see your point, yeah. I sort of assumed that txs submitted to my local participant would be visible to me ~immediately. But anyway actually the service does its first PC "
+                            },
+                            {
+                                "type": "text",
+                                "text": "after",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " 1 period has passed, not immediately on startup, so there is 60 seconds on Mainnet for the ledger to catch up.\n\nBut also importantly, there is a consensus step here as well. So before I do anything, I would consult all my peers - so unless more then a threshold of them crashed at the same time, at one step of this flow, it would fail (for example by a peer refusing to sign a withdraw request creation for 2, since it sees that there is already a pending WDR for 1, and the balance is 2!) -- and retried at the next PC, and hopefully by then my ledger is up-to-date (120 seconds)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748343835.681119",
+        "client_msg_id": "4b7e95c4-d168-47b1-a009-f9a1f4e60f87",
+        "text": "Of course.\n\nAlso note we commit to the btc_tx_id in the WDRequest. If a threshold doesn't agree on it, it's discarded and retried later. So yes, you have to trust the threshold.\n\nIt relies on the assumption that a threshold of the nodes will be operating correctly, but this is the core trust assumption of the system anyway, no?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4WVTB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Of course.\n\nAlso note we commit to the btc_tx_id in the WDRequest. If a threshold doesn't agree on it, it's discarded and retried later. So yes, you have to trust the threshold.\n\nIt relies on the assumption that a threshold of the nodes will be operating correctly, but this is the core trust assumption of the system anyway, no?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "&gt; But I don't think you can include \"observes transactions fast enough\" in \"operating correctly\"\nFair!\n\nThere is actually one more thing that prevents a problem with this.\nAssume nodes restart in a millisecond and immediately check WDRequests and would immediately submit a new one. So the issue is with an out-of-date ledger on the Coordinator.\n\nSay there are two WDRequests now, for the same amount, and assume they have different btc_tx_ids (which means all nodes suffered the same crash within that same PC).\n\nActual Bitcoin Broadcast is meant to happen in the next PC. It arrives. Coordinator fetches all active WDRequests. Check the bottom of the flowchart. Neither of the two txs from the WDRs are on chain yet (as we didn't see the first one in it's second PC due to the crash, and the second one was just created in the previous PC). So we check what they have in-memory (a threshold of them). The one not in memory (the old one) is archived, no action is taken. The new one gets broadcast.",
+        "files": [
+            {
+                "id": "F08TYJU0ULE",
+                "created": 1748344382,
+                "timestamp": 1748344382,
+                "name": "Screenshot 2025-05-27 at 13.12.59.png",
+                "title": "Screenshot 2025-05-27 at 13.12.59.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 165362,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08TYJU0ULE\/screenshot_2025-05-27_at_13.12.59.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08TYJU0ULE\/download\/screenshot_2025-05-27_at_13.12.59.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TYJU0ULE-49da879822\/screenshot_2025-05-27_at_13.12.59_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TYJU0ULE-49da879822\/screenshot_2025-05-27_at_13.12.59_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TYJU0ULE-49da879822\/screenshot_2025-05-27_at_13.12.59_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 227,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TYJU0ULE-49da879822\/screenshot_2025-05-27_at_13.12.59_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 303,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TYJU0ULE-49da879822\/screenshot_2025-05-27_at_13.12.59_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TYJU0ULE-49da879822\/screenshot_2025-05-27_at_13.12.59_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 455,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TYJU0ULE-49da879822\/screenshot_2025-05-27_at_13.12.59_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 505,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TYJU0ULE-49da879822\/screenshot_2025-05-27_at_13.12.59_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 606,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TYJU0ULE-49da879822\/screenshot_2025-05-27_at_13.12.59_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 646,
+                "original_w": 1253,
+                "original_h": 791,
+                "thumb_tiny": "AwAeADDRPX7tOFFFACN06ZpFGO1B59aUDFAC0xCSeTT6MUAIQfWlpCD60tACDOelBBPelooABRSY9zSigD\/\/2Q==",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08TYJU0ULE\/screenshot_2025-05-27_at_13.12.59.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08TYJU0ULE-be501a20e4",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3nOGE",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But I don't think you can include \"observes transactions fast enough\" in \"operating correctly\""
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Fair!\n\nThere is actually one more thing that prevents a problem with this.\nAssume nodes restart in a millisecond and immediately check WDRequests and would immediately submit a new one. So the issue is with an out-of-date ledger on the Coordinator.\n\nSay there are two WDRequests now, for the same amount, and assume they have different btc_tx_ids (which means all nodes suffered the same crash within that same PC).\n\nActual Bitcoin Broadcast is meant to happen in the next PC. It arrives. Coordinator fetches all active WDRequests. Check the bottom of the flowchart. Neither of the two txs from the WDRs are on chain yet (as we didn't see the first one in it's second PC due to the crash, and the second one was just created in the previous PC). So we check what they have in-memory (a threshold of them). The one not in memory (the old one) is archived, no action is taken. The new one gets broadcast."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1748344444.958859",
+        "client_msg_id": "d3599987-a4e2-4c71-aa38-d80762609ace",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748345185.019089",
+        "client_msg_id": "76c40eaf-8590-4fe0-b768-61e2094cbe84",
+        "text": "There is no Bitcoin or PC reliance in this, PC could be 1 sec or 1 day, the result is the same I think.\n\n&gt; Can you explain what the issue was with the prior approach where you immediately deduct the pending balance?\nThere we do have the issue of the attestors crashing between crucial states, because they might try spending the same UTXOs for multiple WD requests. So we needed a way for them to have some temporary state, and to only confirm actions on Canton once Bitcoin has successfully settled -- otherwise it ran the risk of user burning diBTC but never getting back Bitcoin (without some convoluted rescue steps)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NJGiZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "There is no Bitcoin or PC reliance in this, PC could be 1 sec or 1 day, the result is the same I think.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Can you explain what the issue was with the prior approach where you immediately deduct the pending balance?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "There we do have the issue of the attestors crashing between crucial states, because they might try spending the same UTXOs for multiple WD requests. So we needed a way for them to have some temporary state, and to only confirm actions on Canton once Bitcoin has successfully settled -- otherwise it ran the risk of user burning diBTC but never getting back Bitcoin (without some convoluted rescue steps)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748346806.307349",
+        "client_msg_id": "2EE13911-BBDB-46BE-8836-A2746E10695B",
+        "text": "This might be better answered by the BD team as it depends on the usecase. If it will be a few bigger actors bridging mainly in bigger chunks, actual flows are not very frequent, unless they bridge for many small costumers of theirs through the same withdraw account… we should ask Levente for some predictions",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GHkBP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "T"
+                            },
+                            {
+                                "type": "text",
+                                "text": "his might be better answered by the BD team as it depends on the usecase. If it will be a few bigger actors bridging mainly in bigger chunks, actual flows are not very frequent, unless they bridge for many small costumers of theirs through the same withdraw account"
+                            },
+                            {
+                                "type": "text",
+                                "text": "…"
+                            },
+                            {
+                                "type": "text",
+                                "text": " we should ask Levente for some predictions"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748346833.219859",
+        "client_msg_id": "F8A7DEA3-B2C7-48DC-804D-66B3A7281EAA",
+        "text": "Nice catch, i think thats just a typo\/not updated doc sorry ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IZ7Q5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Nice catch, i think thats just a typo\/not updated doc sorry "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748346988.083659",
+        "client_msg_id": "c77ebb26-aad7-4ab3-9351-fdb6ebff5ec1",
+        "text": "It should be pendingBalance -= amount",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mDWvN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It should be pendingBalance -= amount"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748346989.963909",
+        "client_msg_id": "5710b21e-f1ef-4e98-b6c4-2134c08870c1",
+        "text": "yes",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IB8ze",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748347073.177879",
+        "client_msg_id": "fe3eaf60-131b-4d04-8f6a-eedeb98e30de",
+        "text": "<https:\/\/github.com\/DLC-link\/canton\/blob\/a754288b430d5b0eb3a051e8d4c8d9875d5ab57f\/daml\/dibtc\/daml\/IBTC\/WithdrawAccount.daml#L107>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4+R3d",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton\/blob\/a754288b430d5b0eb3a051e8d4c8d9875d5ab57f\/daml\/dibtc\/daml\/IBTC\/WithdrawAccount.daml#L107"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "No tbc this is fun and very useful! Not annoying at all.\n\nSo we made a change based on this conversation, removing one of the self-healing steps, that was auto-archiving requests missing from in-memory. This solves the issue of archiving a request instance that actually has a real broadcast, but we (for whatever reason) don't see it on Bitcoin.\n\nThere is also a check that `SUM(WDRs.amount) &lt; pendingBalance`  which essentially breaks the potential erroneous second prepared but unbroadcast btc_tx &amp; WDRequest. We can push code later to rescue these\/archive them manually. Vulnerabilities are worse than stuck vaults, agreed.\n\nThis way, if:\n• a btc tx was broadcast\n• we crash and dont see it\n• we erroneously prepare a new tx and request\n• next PC, we will handle the original request as normal\n• second one would be stuck until manual archiving \/ some other solution, never broadcast\nBut also, I'm thinking of something even more foolproof, next post",
+        "files": [
+            {
+                "id": "F08U84MMVM0",
+                "created": 1748366948,
+                "timestamp": 1748366948,
+                "name": "Screenshot 2025-05-27 at 19.28.51.png",
+                "title": "Screenshot 2025-05-27 at 19.28.51.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 201737,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08U84MMVM0\/screenshot_2025-05-27_at_19.28.51.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08U84MMVM0\/download\/screenshot_2025-05-27_at_19.28.51.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U84MMVM0-5a406b1544\/screenshot_2025-05-27_at_19.28.51_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U84MMVM0-5a406b1544\/screenshot_2025-05-27_at_19.28.51_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U84MMVM0-5a406b1544\/screenshot_2025-05-27_at_19.28.51_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 199,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U84MMVM0-5a406b1544\/screenshot_2025-05-27_at_19.28.51_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 265,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U84MMVM0-5a406b1544\/screenshot_2025-05-27_at_19.28.51_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U84MMVM0-5a406b1544\/screenshot_2025-05-27_at_19.28.51_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 398,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U84MMVM0-5a406b1544\/screenshot_2025-05-27_at_19.28.51_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 442,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U84MMVM0-5a406b1544\/screenshot_2025-05-27_at_19.28.51_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 530,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U84MMVM0-5a406b1544\/screenshot_2025-05-27_at_19.28.51_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 565,
+                "original_w": 1860,
+                "original_h": 1027,
+                "thumb_tiny": "AwAaADDSyKXNIVHXmkBHvQApPbBoAA7UZGetHUcGgBaKQZHU0tADS1OzRRQAhUE5paKKAA57UnPrS0UAf\/\/Z",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08U84MMVM0\/screenshot_2025-05-27_at_19.28.51.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08U84MMVM0-7326d43208",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oZSrD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "No tbc this is fun and very useful! Not annoying at all.\n\nSo we made a change based on this conversation, removing one of the self-healing steps, that was auto-archiving requests missing from in-memory. This solves the issue of archiving a request instance that actually has a real broadcast, but we (for whatever reason) don't see it on Bitcoin.\n\nThere is also a check that "
+                            },
+                            {
+                                "type": "text",
+                                "text": "SUM(WDRs.amount) < pendingBalance",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  which essentially breaks the potential erroneous second prepared but unbroadcast btc_tx & WDRequest. We can push code later to rescue these\/archive them manually. Vulnerabilities are worse than stuck vaults, agreed.\n\nThis way, if:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "a btc tx was broadcast"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "we crash and dont see it"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "we erroneously prepare a new tx and request"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "next PC, we will handle the original request as normal"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "second one would be stuck until manual archiving \/ some other solution, never broadcast"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nBut also, I'm thinking of something even more foolproof, next post"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1748366961.133139",
+        "client_msg_id": "d1b36d7e-a6f6-46f9-9d8a-9292faa542e6",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "text": "As I typed this out below I realized I am back at pendingBalance almost the same as before, set during WDR creation, with the same issue as before (which is arguably acceptable). Nevertheless, here it is:\n\n\"So I've been thinking of leveraging the utxo model of Canton, and it took me right back to introducing another variable.\n\nTwo variables:\nPendingBalance:\n• increases on user `withdraw()` calls\n• decreases to zero on _every_ WDRequest creation in a Periodic Check, therefore it consumes the previous WithdrawAccount anyway\n ProcessingBalance:\n• increases on _every_ WDRequest creation, with the pendingBalance amount at the time of the PC\n• decreases after 6 Bitcoin confirmations, when the WDR is consumed, and the flow is finished.\nIn this case, if the Bitcoin tx failed, that would require manual intervention\"",
+        "files": [
+            {
+                "id": "F08U8504NKU",
+                "created": 1748367041,
+                "timestamp": 1748367041,
+                "name": "diBTC Withdraw flow2.png",
+                "title": "diBTC Withdraw flow2.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 285217,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08U8504NKU\/dibtc_withdraw_flow2.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08U8504NKU\/download\/dibtc_withdraw_flow2.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U8504NKU-d9f387c1bd\/dibtc_withdraw_flow2_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U8504NKU-d9f387c1bd\/dibtc_withdraw_flow2_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U8504NKU-d9f387c1bd\/dibtc_withdraw_flow2_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 71,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U8504NKU-d9f387c1bd\/dibtc_withdraw_flow2_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 95,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U8504NKU-d9f387c1bd\/dibtc_withdraw_flow2_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U8504NKU-d9f387c1bd\/dibtc_withdraw_flow2_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 143,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U8504NKU-d9f387c1bd\/dibtc_withdraw_flow2_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 159,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U8504NKU-d9f387c1bd\/dibtc_withdraw_flow2_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 191,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08U8504NKU-d9f387c1bd\/dibtc_withdraw_flow2_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 203,
+                "original_w": 5333,
+                "original_h": 1059,
+                "thumb_tiny": "AwAJADDPpfwpKKAF4o4pKKAFpPwoooA\/\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08U8504NKU\/dibtc_withdraw_flow2.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08U8504NKU-b3a6aaa7e3",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Tfnzs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "As I typed this out below I realized I am back at pendingBalance almost the same as before, set during WDR creation, with the same issue as before (which is arguably acceptable). Nevertheless, here it is:\n\n\"So I've been thinking of leveraging the utxo model of Canton, and it took me right back to introducing another variable.\n\nTwo variables:\nPendingBalance:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "increases on user "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "withdraw()",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " calls"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "decreases to zero on "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "every",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " WDRequest creation in a Periodic Check, therefore it consumes the previous WithdrawAccount anyway"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " ProcessingBalance:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "increases on "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "every",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " WDRequest creation, with the pendingBalance amount at the time of the PC"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "decreases after 6 Bitcoin confirmations, when the WDR is consumed, and the flow is finished."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nIn this case, if the Bitcoin tx failed, that would require manual intervention\""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1748367438.401049",
+        "client_msg_id": "9d40f244-17f2-4f65-9fc0-30e181cf2b69",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748367471.132159",
+        "client_msg_id": "7f66d328-622b-45bf-bcf9-c874d9fc8e06",
+        "text": "Ideas welcome :smile: Maybe there is another way im missing, something DAML-specific",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/XPb7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ideas welcome "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile",
+                                "unicode": "1f604"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Maybe there is another way im missing, something DAML-specific"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748367993.722949",
+        "client_msg_id": "79eb6c5d-f90c-4d17-ac91-129633ff69d6",
+        "text": "Anyway, this hybrid design can still leverage the in-memory state to stop the locked UTXO issue. But we need to set _something_ on Canton on the WithdrawAccount, something else then just creating an independent WDR. So might as well store the amount outstanding that gets zeroed, like before.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NLdJm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Anyway, this hybrid design can still leverage the in-memory state to stop the locked UTXO issue. But we need to set "
+                            },
+                            {
+                                "type": "text",
+                                "text": "something",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " on Canton on the WithdrawAccount, something else then just creating an independent WDR. So might as well store the amount outstanding that gets zeroed, like before."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

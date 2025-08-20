@@ -1,0 +1,1271 @@
+[
+    {
+        "user": "U094KF3PKDY",
+        "type": "message",
+        "ts": "1755080603.716349",
+        "client_msg_id": "60a5d15d-7563-424c-b491-b381731143af",
+        "text": "<@U02SR6E8Z9S> <@U0122RHUD2A> I have some questions regarded to contracts in Canton. Based on your support in Mr. Hoang Anh's case, I have successfully created a contract via `\/v2\/commands\/submit-and-wait` and got the response:\n```{\n    \"updateId\": \"122008f92d516dccff00f907d6eb9e023dea81f121cabfacb225d1ebc357838dadd9\",\n    \"completionOffset\": 15662\n}```\nI wonder what the `updateId` is? I guess it is not the contract ID? And what can I do with that `updateId`?\nNext, I used the below API to get the admin access token:\n```curl --location '<http:\/\/localhost:8082\/realms\/AppUser\/protocol\/openid-connect\/token>' \\\n--header 'Content-Type: application\/x-www-form-urlencoded' \\\n--data-urlencode 'client_id=app-user-validator' \\\n--data-urlencode 'client_secret=6m12QyyGl81d9nABWQXMycZdXho6ejEX' \\\n--data-urlencode 'grant_type=client_credentials' \\\n--data-urlencode 'scope=openid'```\nThen I used the admin access token to call `\/v2\/state\/active-contracts`. However, I got the response:\n```{\n    \"code\": \"NA\",\n    \"cause\": \"A security-sensitive error has been received\",\n    \"correlationId\": \"3f2d486a14d3564c239e51503b249cbf\",\n    \"traceId\": \"3f2d486a14d3564c239e51503b249cbf\",\n    \"context\": {},\n    \"resources\": [],\n    \"errorCategory\": -1,\n    \"grpcCodeValue\": 7,\n    \"retryInfo\": null,\n    \"definiteAnswer\": null\n}```\nSo, could you please explain me which role\/scope is missing in the admin access token? I need the contract ID for further interactions\nThank you very much!\ncc. <@U0724J67GSE> <@U098ZSW8LPN>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "653bd24517b7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-07\/9170168246257_653bd24517b7c2a9d9bd_72.jpg",
+            "first_name": "Quang-Huy",
+            "real_name": "Quang-Huy Tran",
+            "display_name": "Quang-Huy Tran",
+            "team": "T072736KDTK",
+            "name": "huy.tran",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QdXXa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U02SR6E8Z9S"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0122RHUD2A"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I have some questions regarded to contracts in Canton. Based on your support in Mr. Hoang Anh's case, I have successfully created a contract via "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/v2\/commands\/submit-and-wait",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and got the response:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"updateId\": \"122008f92d516dccff00f907d6eb9e023dea81f121cabfacb225d1ebc357838dadd9\",\n    \"completionOffset\": 15662\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I wonder what the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "updateId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is? I guess it is not the contract ID? And what can I do with that "
+                            },
+                            {
+                                "type": "text",
+                                "text": "updateId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "?\nNext, I used the below API to get the admin access token:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl --location '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:8082\/realms\/AppUser\/protocol\/openid-connect\/token"
+                            },
+                            {
+                                "type": "text",
+                                "text": "' \\\n--header 'Content-Type: application\/x-www-form-urlencoded' \\\n--data-urlencode 'client_id=app-user-validator' \\\n--data-urlencode 'client_secret=6m12QyyGl81d9nABWQXMycZdXho6ejEX' \\\n--data-urlencode 'grant_type=client_credentials' \\\n--data-urlencode 'scope=openid'"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Then I used the admin access token to call "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/v2\/state\/active-contracts",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". However, I got the response:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"code\": \"NA\",\n    \"cause\": \"A security-sensitive error has been received\",\n    \"correlationId\": \"3f2d486a14d3564c239e51503b249cbf\",\n    \"traceId\": \"3f2d486a14d3564c239e51503b249cbf\",\n    \"context\": {},\n    \"resources\": [],\n    \"errorCategory\": -1,\n    \"grpcCodeValue\": 7,\n    \"retryInfo\": null,\n    \"definiteAnswer\": null\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So, could you please explain me which role\/scope is missing in the admin access token? I need the contract ID for further interactions\nThank you very much!\ncc. "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0724J67GSE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U098ZSW8LPN"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U098ZSW8LPN"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "<http:\/\/localhost:9090\/#\/default\/postV2CommandsSubmit-and-wait> check swagger for info about `updateId`\nCheck canton logs search for `3f2d486a14d3564c239e51503b249cbf`  to get more information about `A security-sensitive error has been received`\n<https:\/\/daholdings.slack.com\/archives\/C08FQRCRFUN\/p1754355790814939?thread_ts=1753956107.329089&cid=C08FQRCRFUN>",
+        "files": [
+            {
+                "id": "F09AZ6HJS2U",
+                "created": 1755083517,
+                "timestamp": 1755083517,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U0122RHUD2A",
+                "user_team": "T03T53E10",
+                "editable": false,
+                "size": 557675,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T03T53E10-F09AZ6HJS2U\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T03T53E10-F09AZ6HJS2U\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F09AZ6HJS2U-87e5eb4637\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F09AZ6HJS2U-87e5eb4637\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F09AZ6HJS2U-87e5eb4637\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 326,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F09AZ6HJS2U-87e5eb4637\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 434,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F09AZ6HJS2U-87e5eb4637\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F09AZ6HJS2U-87e5eb4637\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 652,
+                "thumb_720_h": 720,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F09AZ6HJS2U-87e5eb4637\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 884,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F09AZ6HJS2U-87e5eb4637\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 869,
+                "thumb_960_h": 960,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F09AZ6HJS2U-87e5eb4637\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 927,
+                "thumb_1024_h": 1024,
+                "original_w": 2854,
+                "original_h": 3154,
+                "thumb_tiny": "AwAwACy19gt\/+ef6n\/Gj7Dbf88\/\/AB41MWfsoP1P\/wBalBbHIwfagCubC37Rj8z\/AI0v2C3\/AOef6n\/GrGTRk0AR+QnrJ\/38b\/GjyE9ZP+\/jf41Jk0ZNAEX2iMZ5JwdpwD1pn22D\/np+hqmxI+0AFhljwCOefz\/xqux3MTnOTnNAGp9tg\/56foaPtsH\/AD0\/Q1k0UAaxvIOMSfXg1JHMkq7kJIzjoaxa09N\/492\/3v6CgB32aBmy8Z3MT0Jpfsdv\/c\/U0+XoFBwT\/tYNKJMgEEEHp70CI\/sdv\/c\/U0fY7f8AufqalyfSjJ9KAIvsdv8A3P1NSRRpEpWMEDNLk+lOoA\/\/2Q==",
+                "permalink": "https:\/\/daholdings.slack.com\/files\/U05FZBDQ4RJ\/F09AZ6HJS2U\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T03T53E10-F09AZ6HJS2U-7a0c4ee0e9",
+                "source_team": "T03T53E10",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U0122RHUD2A",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KAgmA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:9090\/#\/default\/postV2CommandsSubmit-and-wait"
+                            },
+                            {
+                                "type": "text",
+                                "text": " check swagger for info about "
+                            },
+                            {
+                                "type": "text",
+                                "text": "updateId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nCheck canton logs search for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "3f2d486a14d3564c239e51503b249cbf",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  to get more information about "
+                            },
+                            {
+                                "type": "text",
+                                "text": "A security-sensitive error has been received",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/daholdings.slack.com\/archives\/C08FQRCRFUN\/p1754355790814939?thread_ts=1753956107.329089&cid=C08FQRCRFUN"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1755083582.317739",
+        "edited": {
+            "user": "U0122RHUD2A",
+            "ts": "1755085865.000000"
+        },
+        "client_msg_id": "319ac5cb-9ea1-4d53-b308-80692187ffea",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "attachments": [
+            {
+                "from_url": "https:\/\/daholdings.slack.com\/archives\/C08FQRCRFUN\/p1754355790814939?thread_ts=1753956107.329089&amp;cid=C08FQRCRFUN",
+                "ts": "1754355790.814939",
+                "author_id": "U0122RHUD2A",
+                "channel_id": "C08FQRCRFUN",
+                "channel_team": "T07LSPYDRT4",
+                "is_msg_unfurl": true,
+                "is_reply_unfurl": true,
+                "message_blocks": [
+                    {
+                        "team": "T03T53E10",
+                        "channel": "C08FQRCRFUN",
+                        "ts": "1754355790.814939",
+                        "message": {
+                            "blocks": [
+                                {
+                                    "type": "rich_text",
+                                    "block_id": "6pm4W",
+                                    "elements": [
+                                        {
+                                            "type": "rich_text_list",
+                                            "elements": [
+                                                {
+                                                    "type": "rich_text_section",
+                                                    "elements": [
+                                                        {
+                                                            "type": "text",
+                                                            "text": "get in the habit of checking canton log whenever you see error like this:"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "style": "ordered",
+                                            "indent": 0,
+                                            "border": 0
+                                        },
+                                        {
+                                            "type": "rich_text_preformatted",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Request failed with HTTP status code 403\nResponse body: {\"code\":\"NA\",\"cause\":\"A security-sensitive error has been received\",\"correlationId\":\"ec96936b50b5a45dac754d955376f792\",\"traceId\":\"ec96936b50b5a45dac754d955376f792\",\"context\":{},\"resources\":[],\"errorCategory\":-1,\"grpcCodeValue\":7,\"retryInfo\":null,\"definiteAnswer\":null}"
+                                                }
+                                            ],
+                                            "border": 0
+                                        },
+                                        {
+                                            "type": "rich_text_section",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "search by correlationId and very likely you will find more detail around the line you found explaining why you see the error"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "id": 1,
+                "original_url": "https:\/\/daholdings.slack.com\/archives\/C08FQRCRFUN\/p1754355790814939?thread_ts=1753956107.329089&amp;cid=C08FQRCRFUN",
+                "fallback": "[August 4th, 2025 6:03 PM] peter.kvokacka: 1. get in the habit of checking canton log whenever you see error like this:\n```Request failed with HTTP status code 403\nResponse body: {\"code\":\"NA\",\"cause\":\"A security-sensitive error has been received\",\"correlationId\":\"ec96936b50b5a45dac754d955376f792\",\"traceId\":\"ec96936b50b5a45dac754d955376f792\",\"context\":{},\"resources\":[],\"errorCategory\":-1,\"grpcCodeValue\":7,\"retryInfo\":null,\"definiteAnswer\":null}```\nsearch by correlationId and very likely you will find more detail around the line you found explaining why you see the error",
+                "text": "1. get in the habit of checking canton log whenever you see error like this:\n```Request failed with HTTP status code 403\nResponse body: {\"code\":\"NA\",\"cause\":\"A security-sensitive error has been received\",\"correlationId\":\"ec96936b50b5a45dac754d955376f792\",\"traceId\":\"ec96936b50b5a45dac754d955376f792\",\"context\":{},\"resources\":[],\"errorCategory\":-1,\"grpcCodeValue\":7,\"retryInfo\":null,\"definiteAnswer\":null}```\nsearch by correlationId and very likely you will find more detail around the line you found explaining why you see the error",
+                "author_name": "Peter Kvokacka",
+                "author_link": "https:\/\/daholdings.slack.com\/team\/U0122RHUD2A",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2020-04-22\/1090389769617_f323bd2b807965503456_48.png",
+                "author_subname": "Peter Kvokacka",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "footer": "Thread in Slack Conversation"
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f323bd2b8079",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-04-22\/1090389769617_f323bd2b807965503456_72.png",
+            "first_name": "Peter",
+            "real_name": "Peter Kvokacka",
+            "display_name": "peter.kvokacka",
+            "team": "T03T53E10",
+            "name": "peter.kvokacka",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U07MUJ34JQ0",
+        "type": "message",
+        "ts": "1755092242.254499",
+        "client_msg_id": "c0e2b1c1-1e45-4299-902f-3217fbc24ab2",
+        "text": "<@U0943MJC0LE> :wave:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07LSPYDRT4",
+        "source_team": "T07LSPYDRT4",
+        "user_profile": {
+            "avatar_hash": "gd42683d1cd6",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d42683d1cd6de81338326a75f7e18ab5.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-72.png",
+            "first_name": "Digital",
+            "real_name": "Digital Asset Support for GSF Operations",
+            "display_name": "Digital Asset GSF Contributions (Wayne Collier)",
+            "team": "T07LSPYDRT4",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "aNwd4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0943MJC0LE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wave",
+                                "unicode": "1f44b"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U0943MJC0LE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U07MUJ34JQ0",
+        "type": "message",
+        "ts": "1755092310.198239",
+        "client_msg_id": "d8773058-ad43-48c4-8165-153c6cd116d9",
+        "text": "<@U093PFE33DK> :wave:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07LSPYDRT4",
+        "source_team": "T07LSPYDRT4",
+        "user_profile": {
+            "avatar_hash": "gd42683d1cd6",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d42683d1cd6de81338326a75f7e18ab5.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-72.png",
+            "first_name": "Digital",
+            "real_name": "Digital Asset Support for GSF Operations",
+            "display_name": "Digital Asset GSF Contributions (Wayne Collier)",
+            "team": "T07LSPYDRT4",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+Ieko",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U093PFE33DK"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wave",
+                                "unicode": "1f44b"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "thread_broadcast",
+        "user": "U0PQ8E25D",
+        "thread_ts": "1755018657.162789",
+        "root": {
+            "user": "U08987JD1J9",
+            "type": "message",
+            "ts": "1755018657.162789",
+            "edited": {
+                "user": "U08987JD1J9",
+                "ts": "1755018713.000000"
+            },
+            "client_msg_id": "fecb1d63-c499-4039-8e5e-fab2c91d282c",
+            "text": "Is there a built-in way to bundle more than one transfers into the same transaction using the external signing api ? Or our choice is writing our own DAML model to perform those ? Our use case is we want to charge a fee\n\nAlice -> Bob\nBut also Alice -> App Provider (a fee).\n\nWe can submit separate transaction but prefer if they can be bundled into the same atomic tx instead",
+            "team": "T05FWTX7PMG",
+            "user_team": "T08987C1Q77",
+            "source_team": "T08987C1Q77",
+            "user_profile": {
+                "avatar_hash": "99a85730a5ad",
+                "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+                "first_name": "Vinh",
+                "real_name": "Vinh",
+                "display_name": "Vinh",
+                "team": "T08987C1Q77",
+                "name": "vinh",
+                "is_restricted": false,
+                "is_ultra_restricted": false
+            },
+            "thread_ts": "1755018657.162789",
+            "reply_count": 39,
+            "reply_users_count": 3,
+            "latest_reply": "1755258702.706289",
+            "reply_users": [
+                "UEHLS0JUB",
+                "U08987JD1J9",
+                "U0PQ8E25D"
+            ],
+            "replies": [
+                {
+                    "user": "UEHLS0JUB",
+                    "ts": "1755019052.678849"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755019214.850759"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755059556.788699"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755059597.533789"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755059618.945879"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755059647.946949"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755059751.511349"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755059786.819599"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755059812.836899"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755059819.272999"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755059884.496539"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755059905.258909"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755059923.003359"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755059959.120669"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755060017.194539"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755060085.856419"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755060217.108299"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755060220.345119"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755060298.148889"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755060322.956669"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755060517.280749"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755060667.889839"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755060779.936639"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755060962.167439"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755061002.587449"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755061074.855299"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755061078.320479"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755061334.331919"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755061732.807249"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755061935.706889"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755061951.347809"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755062004.509579"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755062009.689289"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755062028.730809"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755062059.280609"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755062082.019179"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755092816.835079"
+                },
+                {
+                    "user": "U08987JD1J9",
+                    "ts": "1755241811.491279"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1755258702.706289"
+                }
+            ],
+            "is_locked": false,
+            "subscribed": false,
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "7jm4F",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "Is there a built-in way to bundle more than one transfers into the same transaction using the external signing api ? Or our choice is writing our own DAML model to perform those ? Our use case is we want to charge a fee\n\nAlice -> Bob\nBut also Alice -> App Provider (a fee).\n\nWe can submit separate transaction but prefer if they can be bundled into the same atomic tx instead"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "language": {
+                "locale": "en",
+                "is_reliable": true
+            }
+        },
+        "type": "message",
+        "ts": "1755092816.835079",
+        "client_msg_id": "415392f7-f2d7-453a-b8a8-5f70ffc9df97",
+        "text": "<@U08987JD1J9> and others that are interested in getting a leg up on the Daml code for creating featured app activity markers as part of calling token standard choices from off-ledger parts of their app. Here's a sketch <https:\/\/github.com\/hyperledger-labs\/splice\/issues\/1901#issuecomment-3183999764> that might help.",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "ts": 1755092712,
+                "color": "24292f",
+                "bot_id": "B01UJLRD05Q",
+                "bot_team_id": "T03T53E10",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/issues\/1901#issuecomment-3183999764",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "Comment on #1901 PoC of wrapper Daml library for combined token std choices + featured app rewards",
+                "text": "A PoC of proxy wrapper is now available here:\n\n• <https:\/\/github.com\/hyperledger-labs\/splice\/pull\/1907\/files#diff-4cbc6e851f73f40db384d63aa97dbf4ffb93c505b0ed0c3c360e7914f94f6201|https:\/\/github.com\/hyperledger-labs\/splice\/pull\/1907\/files#diff-4cbc6e851f73f40db384d63aa97dbf4ffb93c505b0ed0c3c360e7914f94f6201>\n• see the diff of the test changes for how to use it: <https:\/\/github.com\/hyperledger-labs\/splice\/pull\/1907\/files#diff-86d6136a6d3a8b1a45ea66d292327836b2ae17e857bc8f1d0b0762ac04665e1a|https:\/\/github.com\/hyperledger-labs\/splice\/pull\/1907\/files#diff-86d6136a6d3a8b1a45ea66d292327836b2ae17e857bc8f1d0b0762ac04665e1a>\n\nMaking this a default feature of a validator node would require:\n\n1. packaging this up as a library like `splice-token-standard-featuring-proxy`\n2. changing the validator app to upload the current version(s) of that by default\n3. create a CIP that justifies point 2\n\nI won't do more about making this a default feature of a validator node right now, as I can't justify the time investment. I'd be supportive of it though.",
+                "title": "Comment on #1901 PoC of wrapper Daml library for combined token std choices + featured app rewards",
+                "title_link": "https:\/\/github.com\/hyperledger-labs\/splice\/issues\/1901#issuecomment-3183999764",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8bNNj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U08987JD1J9"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and others that are interested in getting a leg up on the Daml code for creating featured app activity markers as part of calling token standard choices from off-ledger parts of their app. Here's a sketch "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/issues\/1901#issuecomment-3183999764"
+                            },
+                            {
+                                "type": "text",
+                                "text": " that might help."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U08987JD1J9",
+                    "U07ATTEPSLT",
+                    "U09AQULJPQ8"
+                ],
+                "count": 3
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U08987JD1J9",
+                    "U057HGB61RS"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U04B73XH77Z",
+        "type": "message",
+        "ts": "1755108625.937869",
+        "client_msg_id": "a53e5447-491d-474e-9d03-c430ac041edd",
+        "text": "Hey, can someone in here provide me access to the Digital AssetsJFrog Artifactory? my mail is <mailto:carlos.flores@zerohash.com|carlos.flores@zerohash.com>",
+        "team": "T05FWTX7PMG",
+        "user_team": "E05DZEEPY48",
+        "source_team": "E05DZEEPY48",
+        "user_profile": {
+            "avatar_hash": "b760917a90e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-11-22\/4404602313814_b760917a90e82b5abd99_72.png",
+            "first_name": "Carlos Alfredo",
+            "real_name": "Carlos Alfredo Flores Falcon",
+            "display_name": "carlos.flores",
+            "team": "E05DZEEPY48",
+            "name": "carlos.flores",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755108625.937869",
+        "reply_count": 8,
+        "reply_users_count": 3,
+        "latest_reply": "1755302020.183529",
+        "reply_users": [
+            "U047U17D7KL",
+            "U04B73XH77Z",
+            "U06URGPRSDV"
+        ],
+        "replies": [
+            {
+                "user": "U047U17D7KL",
+                "ts": "1755109085.643619"
+            },
+            {
+                "user": "U04B73XH77Z",
+                "ts": "1755109335.729439"
+            },
+            {
+                "user": "U047U17D7KL",
+                "ts": "1755109650.370759"
+            },
+            {
+                "user": "U04B73XH77Z",
+                "ts": "1755109851.651059"
+            },
+            {
+                "user": "U06URGPRSDV",
+                "ts": "1755116950.469979"
+            },
+            {
+                "user": "U047U17D7KL",
+                "ts": "1755117437.230539"
+            },
+            {
+                "user": "U047U17D7KL",
+                "ts": "1755169290.362199"
+            },
+            {
+                "user": "U04B73XH77Z",
+                "ts": "1755302020.183529"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Qtqxr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey, can someone in here provide me access to the Digital AssetsJFrog Artifactory? my mail is "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:carlos.flores@zerohash.com",
+                                "text": "carlos.flores@zerohash.com"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U047U17D7KL",
+        "type": "message",
+        "ts": "1755109085.643619",
+        "client_msg_id": "42493f71-95f3-45bb-bb64-d47b9ad13ecf",
+        "text": "What are you trying to get access to?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "16aeca7859e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-10-24\/4263109753253_16aeca7859e88c51a7d5_72.png",
+            "first_name": "Wallace",
+            "real_name": "Wallace Kelly",
+            "display_name": "Wallace Kelly",
+            "team": "T03T53E10",
+            "name": "wallace.kelly",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755108625.937869",
+        "parent_user_id": "U04B73XH77Z",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3a5Tt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "What are you trying to get access to?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U04B73XH77Z",
+        "type": "message",
+        "ts": "1755109335.729439",
+        "client_msg_id": "0b0cad43-24e3-4e84-a25b-63a1b3c40d6f",
+        "text": "I'm trying to execute `make install-daml-sdk`  to run the Quickstart, but fails because I don't have credentials in netrc",
+        "team": "T05FWTX7PMG",
+        "user_team": "E05DZEEPY48",
+        "source_team": "E05DZEEPY48",
+        "user_profile": {
+            "avatar_hash": "b760917a90e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-11-22\/4404602313814_b760917a90e82b5abd99_72.png",
+            "first_name": "Carlos Alfredo",
+            "real_name": "Carlos Alfredo Flores Falcon",
+            "display_name": "carlos.flores",
+            "team": "E05DZEEPY48",
+            "name": "carlos.flores",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755108625.937869",
+        "parent_user_id": "U04B73XH77Z",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VZtj8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'm trying to execute "
+                            },
+                            {
+                                "type": "text",
+                                "text": "make install-daml-sdk",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  to run the Quickstart, but fails because I don't have credentials in netrc"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U047U17D7KL",
+        "type": "message",
+        "ts": "1755109650.370759",
+        "client_msg_id": "61cc9415-8242-4200-ac88-508b168560e4",
+        "text": "Looks like <https:\/\/github.com\/digital-asset\/cn-quickstart\/blob\/main\/README.md|the README> suggests…\n\n&gt; To run the Quickstart, you need some binaries from Artifactory. <https:\/\/www.digitalasset.com\/contact-us?comments=I%27m%20requesting%20access%20to%20jFrog|Contact us> to request Artifactory access.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "16aeca7859e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-10-24\/4263109753253_16aeca7859e88c51a7d5_72.png",
+            "first_name": "Wallace",
+            "real_name": "Wallace Kelly",
+            "display_name": "Wallace Kelly",
+            "team": "T03T53E10",
+            "name": "wallace.kelly",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755108625.937869",
+        "parent_user_id": "U04B73XH77Z",
+        "attachments": [
+            {
+                "from_url": "https:\/\/www.digitalasset.com\/contact-us?comments=I%27m%20requesting%20access%20to%20jFrog",
+                "id": 1,
+                "original_url": "https:\/\/www.digitalasset.com\/contact-us?comments=I%27m%20requesting%20access%20to%20jFrog",
+                "fallback": "Contact Us",
+                "text": "Want to learn more about how your business can help transform our financial future?",
+                "title": "Contact Us",
+                "title_link": "https:\/\/www.digitalasset.com\/contact-us?comments=I%27m%20requesting%20access%20to%20jFrog",
+                "service_name": "digitalasset.com"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FaNe0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Looks like "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/digital-asset\/cn-quickstart\/blob\/main\/README.md",
+                                "text": "the README"
+                            },
+                            {
+                                "type": "text",
+                                "text": " suggests…\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "To run the Quickstart, you need some binaries from Artifactory. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.digitalasset.com\/contact-us?comments=I%27m%20requesting%20access%20to%20jFrog",
+                                "text": "Contact us"
+                            },
+                            {
+                                "type": "text",
+                                "text": " to request Artifactory access."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U04B73XH77Z",
+        "type": "message",
+        "ts": "1755109851.651059",
+        "client_msg_id": "ae1b23b4-b410-441c-b10e-342adfbdf184",
+        "text": "I already requested it in there, but saw some JFrog-related discussions here so thought I'd try both channels. Thanks! I'll wait for the response",
+        "team": "T05FWTX7PMG",
+        "user_team": "E05DZEEPY48",
+        "source_team": "E05DZEEPY48",
+        "user_profile": {
+            "avatar_hash": "b760917a90e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-11-22\/4404602313814_b760917a90e82b5abd99_72.png",
+            "first_name": "Carlos Alfredo",
+            "real_name": "Carlos Alfredo Flores Falcon",
+            "display_name": "carlos.flores",
+            "team": "E05DZEEPY48",
+            "name": "carlos.flores",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755108625.937869",
+        "parent_user_id": "U04B73XH77Z",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Oy2OK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I already requested it in there, but saw some JFrog-related discussions here so thought I'd try both channels. Thanks! I'll wait for the response"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06URGPRSDV",
+        "type": "message",
+        "ts": "1755116950.469979",
+        "client_msg_id": "b771bbf5-6bc9-4e09-87aa-187a8e4be7aa",
+        "text": "<@U047U17D7KL> is there anything we can do to speed this up? We are just trying to get insights on how it works",
+        "team": "T05FWTX7PMG",
+        "user_team": "E05DZEEPY48",
+        "source_team": "E05DZEEPY48",
+        "user_profile": {
+            "avatar_hash": "f6e7418ee699",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-03\/8993936704226_f6e7418ee69918f5b74a_72.png",
+            "first_name": "Julien",
+            "real_name": "Julien Lucca",
+            "display_name": "Lucca",
+            "team": "E05DZEEPY48",
+            "name": "julien.lucca",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755108625.937869",
+        "parent_user_id": "U04B73XH77Z",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rGr3d",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U047U17D7KL"
+                            },
+                            {
+                                "type": "text",
+                                "text": " is there anything we can do to speed this up? We are just trying to get insights on how it works"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U047U17D7KL",
+        "type": "message",
+        "ts": "1755117437.230539",
+        "client_msg_id": "60cb38b9-31b6-4a61-b3c4-a6d03296fa85",
+        "text": "I’ve submitted a message to that contact form asking who gets it and what the expectations should be.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "16aeca7859e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-10-24\/4263109753253_16aeca7859e88c51a7d5_72.png",
+            "first_name": "Wallace",
+            "real_name": "Wallace Kelly",
+            "display_name": "Wallace Kelly",
+            "team": "T03T53E10",
+            "name": "wallace.kelly",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755108625.937869",
+        "parent_user_id": "U04B73XH77Z",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mpGQu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I’ve submitted a message to that contact form asking who gets it and what the expectations should be."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "thanks-1",
+                "users": [
+                    "U06URGPRSDV"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U094KF3PKDY",
+        "type": "message",
+        "ts": "1755137406.197399",
+        "client_msg_id": "ba7a8524-7062-4afa-8637-35c031cb11ff",
+        "text": "Thank you very much for the explanation. I will check those information",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "653bd24517b7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-07\/9170168246257_653bd24517b7c2a9d9bd_72.jpg",
+            "first_name": "Quang-Huy",
+            "real_name": "Quang-Huy Tran",
+            "display_name": "Quang-Huy Tran",
+            "team": "T072736KDTK",
+            "name": "huy.tran",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "43i1l",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you very much for the explanation. I will check those information"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

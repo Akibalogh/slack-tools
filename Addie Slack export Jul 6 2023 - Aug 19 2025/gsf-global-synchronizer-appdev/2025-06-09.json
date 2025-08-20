@@ -1,0 +1,1016 @@
+[
+    {
+        "user": "UJUA0QH45",
+        "type": "message",
+        "ts": "1749455373.031119",
+        "client_msg_id": "024387c4-632c-4548-a93a-ebaef5b13307",
+        "text": "<@U0HNR4PGR> did you run the scan_tx log script all the way to that update specifically in light of this thread or do you have the output of it saved somewhere and you looked up the update there?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "060dc25df4b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9394671860016_060dc25df4b2903c88b8_72.png",
+            "first_name": "Antoine",
+            "real_name": "Antoine Le Calvez",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "antoine.lecalvez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749119739.482119",
+        "parent_user_id": "UJUA0QH45",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wTfNg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0HNR4PGR"
+                            },
+                            {
+                                "type": "text",
+                                "text": " did you run the scan_tx log script all the way to that update specifically in light of this thread or do you have the output of it saved somewhere and you looked up the update there?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08RYE73P8A",
+        "type": "message",
+        "ts": "1749491463.797759",
+        "client_msg_id": "db9034a9-0dd2-430a-b71a-ca7bcb20f0cf",
+        "text": "Hi, i have a problem with external signing flow:\nThis sequence of calls is used for creating the topology of the external party:\n```POST \/v0\/admin\/external-party\/topology\/generate  \nPOST \/v0\/admin\/external-party\/topology\/submit```\nThis sequence is used for setting up a wallet for the external party:\n```POST \/v0\/admin\/external-party\/setup-proposal  \nPOST \/v0\/admin\/external-party\/setup-proposal\/prepare-accept  \nPOST \/v0\/admin\/external-party\/setup-proposal\/submit-accept```\nAfter this step, I’m able to retrieve the external party’s balance using:\n```GET \/v0\/admin\/external-party\/balance```\nNext, I make the following calls to initiate and submit the transfer:\n```POST \/v0\/admin\/external-party\/transfer-preapproval\/prepare-send  \nPOST \/v0\/admin\/external-party\/transfer-preapproval\/submit-send```\nAfter the last call, I receive an `update_id`, *but the balances for both the sender and receiver remain unchanged.*\nA contract which must do a transfer is <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/daml\/splice-amulet\/daml\/Splice\/ExternalPartyAmuletRules.daml#L110C10-L110C25|TransferCommand> from submit-send responce now. This contract waits until some party named delegate perform this via call <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/daml\/splice-amulet\/daml\/Splice\/ExternalPartyAmuletRules.daml#L129|TransferCommand_Send> .\nCould someone help to figure out how to accept the transaction on the external party receiver side?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "bb95fe6ce815",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-14\/8881373286503_bb95fe6ce8152b94e8ec_72.jpg",
+            "first_name": "Ilya",
+            "real_name": "Ilya Okulov",
+            "display_name": "i.okulov",
+            "team": "T04NVD19L",
+            "name": "i.okulov",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749491463.797759",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1749573107.116509",
+        "reply_users": [
+            "U08RYE73P8A",
+            "U08QALM68SF"
+        ],
+        "replies": [
+            {
+                "user": "U08RYE73P8A",
+                "ts": "1749570422.247839"
+            },
+            {
+                "user": "U08QALM68SF",
+                "ts": "1749573107.116509"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bQbAc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, i have a problem with external signing flow:\nThis sequence of calls is used for creating the topology of the external party:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "POST \/v0\/admin\/external-party\/topology\/generate  \nPOST \/v0\/admin\/external-party\/topology\/submit"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This sequence is used for setting up a wallet for the external party:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "POST \/v0\/admin\/external-party\/setup-proposal  \nPOST \/v0\/admin\/external-party\/setup-proposal\/prepare-accept  \nPOST \/v0\/admin\/external-party\/setup-proposal\/submit-accept"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "After this step, I’m able to retrieve the external party’s balance using:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "GET \/v0\/admin\/external-party\/balance"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Next, I make the following calls to initiate and submit the transfer:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "POST \/v0\/admin\/external-party\/transfer-preapproval\/prepare-send  \nPOST \/v0\/admin\/external-party\/transfer-preapproval\/submit-send"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "After the last call, I receive an "
+                            },
+                            {
+                                "type": "text",
+                                "text": "update_id",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", "
+                            },
+                            {
+                                "type": "text",
+                                "text": "but the balances for both the sender and receiver remain unchanged.",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nA contract which must do a transfer is "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/daml\/splice-amulet\/daml\/Splice\/ExternalPartyAmuletRules.daml#L110C10-L110C25",
+                                "text": "TransferCommand"
+                            },
+                            {
+                                "type": "text",
+                                "text": " from submit-send responce now. This contract waits until some party named delegate perform this via call "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/daml\/splice-amulet\/daml\/Splice\/ExternalPartyAmuletRules.daml#L129",
+                                "text": "TransferCommand_Send"
+                            },
+                            {
+                                "type": "text",
+                                "text": " .\nCould someone help to figure out how to accept the transaction on the external party receiver side?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*mbertin* from *Maestro* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749496850.727299",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qae",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "mbertin",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Maestro",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08UW224T0E",
+        "type": "message",
+        "ts": "1749500029.565289",
+        "client_msg_id": "956836d0-7a83-4867-869d-3989993db873",
+        "text": "How can I `actAs` a new internal party that I just created?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBV22AESY",
+        "source_team": "TBV22AESY",
+        "user_profile": {
+            "avatar_hash": "3741aba01a3b",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-02\/8982191016646_3741aba01a3b74456e22_72.png",
+            "first_name": "Nick",
+            "real_name": "Nick Mancuso",
+            "display_name": "Nick",
+            "team": "TBV22AESY",
+            "name": "nick",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749500029.565289",
+        "reply_count": 11,
+        "reply_users_count": 3,
+        "latest_reply": "1749501326.008029",
+        "reply_users": [
+            "U08UW224T0E",
+            "U08H5BYLACX",
+            "U08987JD1J9"
+        ],
+        "replies": [
+            {
+                "user": "U08UW224T0E",
+                "ts": "1749500040.751919"
+            },
+            {
+                "user": "U08H5BYLACX",
+                "ts": "1749500110.063269"
+            },
+            {
+                "user": "U08UW224T0E",
+                "ts": "1749500408.178609"
+            },
+            {
+                "user": "U08H5BYLACX",
+                "ts": "1749500550.468489"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1749500832.894209"
+            },
+            {
+                "user": "U08H5BYLACX",
+                "ts": "1749501121.582069"
+            },
+            {
+                "user": "U08H5BYLACX",
+                "ts": "1749501184.505379"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1749501204.394389"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1749501220.550059"
+            },
+            {
+                "user": "U08H5BYLACX",
+                "ts": "1749501230.015199"
+            },
+            {
+                "user": "U08H5BYLACX",
+                "ts": "1749501326.008029"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7750b",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "How can I `actAs` a new internal party that I just created?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08UW224T0E",
+        "type": "message",
+        "ts": "1749500040.751919",
+        "edited": {
+            "user": "U08UW224T0E",
+            "ts": "1749500060.000000"
+        },
+        "client_msg_id": "8b51a574-5109-4be6-88c0-3162a9295786",
+        "text": "I’m using a bearer token to authenticate with the ledger API. The steps I’m trying are:\n\n1. Create a new party via POST \/v2\/parties\n2. Add `CanActAs` right for the newly created party via POST \/v2\/users\/9\/rights\n3. Attempt to `actAs` the newly created party via POST \/v2\/commands\/submit-and-wait-for-transaction-tree\n\nHere’s the request that fails:\n\n```{\n  \"timestamp\": \"2025-06-09T20-07-18-791Z\",\n  \"url\": \"<http:\/\/ledger-api.validator.devnet.transfer-agent.xyz\/v2\/commands\/submit-and-wait-for-transaction-tree>\",\n  \"request\": {\n    \"commands\": [\n      {\n        \"ExerciseCommand\": {\n          \"templateId\": \"#OpenCapTable-v00:IssuerAuthorization:IssuerAuthorization\",\n          \"contractId\": \"0090ac23a490d167fa15b9d5939ce96a0c35c315fba298ce84060370981f6b169bca1112202ca4b8c0d2ff5a392100ca9a43e959c8b400533d52de87103a124bcf2778bf5b\",\n          \"choice\": \"CreateIssuer\",\n          \"choiceArgument\": {\n            \"name\": \"Acme Inc\",\n            \"authorizedShares\": 15000000\n          }\n        }\n      }\n    ],\n    \"commandId\": \"3\",\n    \"actAs\": [\n      \"FM:Tester009::12207e20949de58ae945f24777319b3dd5d4ffb8a61cb3c321397cf7602b1e471ede\"\n    ]\n  },\n  \"response\": {\n    \"error\": {\n      \"code\": \"NA\",\n      \"cause\": \"A security-sensitive error has been received\",\n      \"correlationId\": \"103b41cdab4f8dee6087fd5c8bb501d2\",\n      \"traceId\": \"103b41cdab4f8dee6087fd5c8bb501d2\",\n      \"context\": {},\n      \"resources\": [],\n      \"errorCategory\": -1,\n      \"grpcCodeValue\": 7,\n      \"retryInfo\": null,\n      \"definiteAnswer\": null\n    }\n  }\n}```",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBV22AESY",
+        "source_team": "TBV22AESY",
+        "user_profile": {
+            "avatar_hash": "3741aba01a3b",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-02\/8982191016646_3741aba01a3b74456e22_72.png",
+            "first_name": "Nick",
+            "real_name": "Nick Mancuso",
+            "display_name": "Nick",
+            "team": "TBV22AESY",
+            "name": "nick",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749500029.565289",
+        "parent_user_id": "U08UW224T0E",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8QQJ2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I’m using a bearer token to authenticate with the ledger API. The steps I’m trying are:\n\n1. Create a new party via POST \/v2\/parties\n2. Add `CanActAs` right for the newly created party via POST \/v2\/users\/9\/rights\n3. Attempt to `actAs` the newly created party via POST \/v2\/commands\/submit-and-wait-for-transaction-tree\n\nHere’s the request that fails:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n  \"timestamp\": \"2025-06-09T20-07-18-791Z\",\n  \"url\": \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/ledger-api.validator.devnet.transfer-agent.xyz\/v2\/commands\/submit-and-wait-for-transaction-tree"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\",\n  \"request\": {\n    \"commands\": [\n      {\n        \"ExerciseCommand\": {\n          \"templateId\": \"#OpenCapTable-v00:IssuerAuthorization:IssuerAuthorization\",\n          \"contractId\": \"0090ac23a490d167fa15b9d5939ce96a0c35c315fba298ce84060370981f6b169bca1112202ca4b8c0d2ff5a392100ca9a43e959c8b400533d52de87103a124bcf2778bf5b\",\n          \"choice\": \"CreateIssuer\",\n          \"choiceArgument\": {\n            \"name\": \"Acme Inc\",\n            \"authorizedShares\": 15000000\n          }\n        }\n      }\n    ],\n    \"commandId\": \"3\",\n    \"actAs\": [\n      \"FM:Tester009::12207e20949de58ae945f24777319b3dd5d4ffb8a61cb3c321397cf7602b1e471ede\"\n    ]\n  },\n  \"response\": {\n    \"error\": {\n      \"code\": \"NA\",\n      \"cause\": \"A security-sensitive error has been received\",\n      \"correlationId\": \"103b41cdab4f8dee6087fd5c8bb501d2\",\n      \"traceId\": \"103b41cdab4f8dee6087fd5c8bb501d2\",\n      \"context\": {},\n      \"resources\": [],\n      \"errorCategory\": -1,\n      \"grpcCodeValue\": 7,\n      \"retryInfo\": null,\n      \"definiteAnswer\": null\n    }\n  }\n}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08H5BYLACX",
+        "type": "message",
+        "ts": "1749500110.063269",
+        "client_msg_id": "93c428fa-3e51-4acc-85e3-b04ff783e014",
+        "text": "You need a new auth token that encodes that you can act as the user.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T073DDGB63C",
+        "source_team": "T073DDGB63C",
+        "user_profile": {
+            "avatar_hash": "g46d97e3567e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/46d97e3567ec9b6955d79e24abbb38c4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-72.png",
+            "first_name": "Leonid",
+            "real_name": "Leonid Rozenberg",
+            "display_name": "Leonid Rozenberg",
+            "team": "T073DDGB63C",
+            "name": "leo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749500029.565289",
+        "parent_user_id": "U08UW224T0E",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "J4Pgq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You need a new auth token that encodes that you can act as the user."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08UW224T0E",
+        "type": "message",
+        "ts": "1749500408.178609",
+        "client_msg_id": "65cdcd33-002f-4373-9a0d-f0b6dc7e1420",
+        "text": "Is this a param I can add to the request when generating the access token?\n\nI’m using <https:\/\/auth.transfer-agent.xyz\/application\/o\/token\/>\n\n```curl --request POST \\\n  --url <https:\/\/auth.transfer-agent.xyz\/application\/o\/token\/> \\\n  --header 'Content-Type: application\/x-www-form-urlencoded' \\\n  --data grant_type=client_credentials \\\n  --data client_id=validator-devnet-m2m \\\n  --data client_secret=SECRET \\\n  --data audience=validator-devnet-m2m \\\n  --data scope=daml_ledger_api```",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBV22AESY",
+        "source_team": "TBV22AESY",
+        "user_profile": {
+            "avatar_hash": "3741aba01a3b",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-02\/8982191016646_3741aba01a3b74456e22_72.png",
+            "first_name": "Nick",
+            "real_name": "Nick Mancuso",
+            "display_name": "Nick",
+            "team": "TBV22AESY",
+            "name": "nick",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749500029.565289",
+        "parent_user_id": "U08UW224T0E",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PlzMi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is this a param I can add to the request when generating the access token?\n\nI’m using "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/auth.transfer-agent.xyz\/application\/o\/token\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl --request POST \\\n  --url "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/auth.transfer-agent.xyz\/application\/o\/token\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": " \\\n  --header 'Content-Type: application\/x-www-form-urlencoded' \\\n  --data grant_type=client_credentials \\\n  --data client_id=validator-devnet-m2m \\\n  --data client_secret=SECRET \\\n  --data audience=validator-devnet-m2m \\\n  --data scope=daml_ledger_api"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08H5BYLACX",
+        "type": "message",
+        "ts": "1749500550.468489",
+        "client_msg_id": "aac83922-8bb6-4290-a3c6-dd4180e8c660",
+        "text": "&gt; Is this a param I can add to the request when generating the access token?\nSorry, I’m not familiar with that service.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T073DDGB63C",
+        "source_team": "T073DDGB63C",
+        "user_profile": {
+            "avatar_hash": "g46d97e3567e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/46d97e3567ec9b6955d79e24abbb38c4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-72.png",
+            "first_name": "Leonid",
+            "real_name": "Leonid Rozenberg",
+            "display_name": "Leonid Rozenberg",
+            "team": "T073DDGB63C",
+            "name": "leo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749500029.565289",
+        "parent_user_id": "U08UW224T0E",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JDY7w",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is this a param I can add to the request when generating the access token?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sorry, I’m not familiar with that service."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1749500832.894209",
+        "client_msg_id": "d8664d13-2013-4cd1-bc64-97b77378e991",
+        "text": "<@U08H5BYLACX> how would you usually request a JWT token that say it can actAs ? what would the `jwt` claim should look like?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749500029.565289",
+        "parent_user_id": "U08UW224T0E",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6BpJB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U08H5BYLACX"
+                            },
+                            {
+                                "type": "text",
+                                "text": " how would you usually request a JWT token that say it can actAs ? what would the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "jwt",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " claim should look like?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08H5BYLACX",
+        "type": "message",
+        "ts": "1749501121.582069",
+        "edited": {
+            "user": "U08H5BYLACX",
+            "ts": "1749501145.000000"
+        },
+        "client_msg_id": "467d967d-ba21-4329-a91c-0ca52a15a0c2",
+        "text": "Sorry, my wording is confusing as I used “can act as”. Your first token granted you the right to act as a participant-admin (<https:\/\/docs.daml.com\/app-dev\/authorization.html#access-tokens-and-rights>), probably via an `sub` field of an Audience (or Scope) based token. Now when you want to “act as”  Party `p` that you associated with the user `u`, you need a token where `sub: u` .\n\nHow you do that is dependent on your authentication service. That’s something I don’t really know much about and ask the GPTs.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T073DDGB63C",
+        "source_team": "T073DDGB63C",
+        "user_profile": {
+            "avatar_hash": "g46d97e3567e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/46d97e3567ec9b6955d79e24abbb38c4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-72.png",
+            "first_name": "Leonid",
+            "real_name": "Leonid Rozenberg",
+            "display_name": "Leonid Rozenberg",
+            "team": "T073DDGB63C",
+            "name": "leo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749500029.565289",
+        "parent_user_id": "U08UW224T0E",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "62WYG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sorry, my wording is confusing as I used “can act as”. Your first token granted you the right to act as a participant-admin ("
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.daml.com\/app-dev\/authorization.html#access-tokens-and-rights"
+                            },
+                            {
+                                "type": "text",
+                                "text": "), probably via an "
+                            },
+                            {
+                                "type": "text",
+                                "text": "sub",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " field of an Audience (or Scope) based token. Now when you want to “act as”  Party "
+                            },
+                            {
+                                "type": "text",
+                                "text": "p",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " that you associated with the user "
+                            },
+                            {
+                                "type": "text",
+                                "text": "u",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", you need a token where "
+                            },
+                            {
+                                "type": "text",
+                                "text": "sub: u",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " .\n\nHow you do that is dependent on your authentication service. That’s something I don’t really know much about and ask the GPTs."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08H5BYLACX",
+        "type": "message",
+        "ts": "1749501184.505379",
+        "edited": {
+            "user": "U08H5BYLACX",
+            "ts": "1749501203.000000"
+        },
+        "client_msg_id": "8087534b-6321-44d4-87bf-53b6c62ac785",
+        "text": "In our (C7 hosted by IEU) case we have a keycloak server. I think DA ends up using Auth0.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T073DDGB63C",
+        "source_team": "T073DDGB63C",
+        "user_profile": {
+            "avatar_hash": "g46d97e3567e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/46d97e3567ec9b6955d79e24abbb38c4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-72.png",
+            "first_name": "Leonid",
+            "real_name": "Leonid Rozenberg",
+            "display_name": "Leonid Rozenberg",
+            "team": "T073DDGB63C",
+            "name": "leo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749500029.565289",
+        "parent_user_id": "U08UW224T0E",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Sj\/hf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In our (C7 hosted by IEU) case we have a keycloak server. I think DA ends up using Auth0."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1749501204.394389",
+        "client_msg_id": "06b2b6b6-713e-4e9d-80e1-07147d499da3",
+        "text": "nice that <http:\/\/daml.com|daml.com> link has more information. id din't know about it.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749500029.565289",
+        "parent_user_id": "U08UW224T0E",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OHrb7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "nice that "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/daml.com",
+                                "text": "daml.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " link has more information. id din't know about it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U08H5BYLACX"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1749501220.550059",
+        "client_msg_id": "6dfecec0-dd2b-487d-a583-e834b0a6c607",
+        "text": "thank you <@U08H5BYLACX>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749500029.565289",
+        "parent_user_id": "U08UW224T0E",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IfBKy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thank you "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U08H5BYLACX"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08H5BYLACX",
+        "type": "message",
+        "ts": "1749501230.015199",
+        "client_msg_id": "e96e0c1f-810b-423d-af77-5b54d3dde6f9",
+        "text": "You’re welcome.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T073DDGB63C",
+        "source_team": "T073DDGB63C",
+        "user_profile": {
+            "avatar_hash": "g46d97e3567e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/46d97e3567ec9b6955d79e24abbb38c4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-72.png",
+            "first_name": "Leonid",
+            "real_name": "Leonid Rozenberg",
+            "display_name": "Leonid Rozenberg",
+            "team": "T073DDGB63C",
+            "name": "leo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749500029.565289",
+        "parent_user_id": "U08UW224T0E",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "O6ezu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You’re welcome."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08H5BYLACX",
+        "type": "message",
+        "ts": "1749501326.008029",
+        "client_msg_id": "5758e118-8a43-4e99-85f7-ade1df1e0dab",
+        "text": "Just remember that that documentation is for the 2.10 Daml version. I think most of it applies but you have to confer with DA when something’s off or find the same section in the new <https:\/\/docs.digitalasset.com\/>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T073DDGB63C",
+        "source_team": "T073DDGB63C",
+        "user_profile": {
+            "avatar_hash": "g46d97e3567e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/46d97e3567ec9b6955d79e24abbb38c4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-72.png",
+            "first_name": "Leonid",
+            "real_name": "Leonid Rozenberg",
+            "display_name": "Leonid Rozenberg",
+            "team": "T073DDGB63C",
+            "name": "leo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749500029.565289",
+        "parent_user_id": "U08UW224T0E",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fhc8n",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Just remember that that documentation is for the 2.10 Daml version. I think most of it applies but you have to confer with DA when something’s off or find the same section in the new "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.digitalasset.com\/"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

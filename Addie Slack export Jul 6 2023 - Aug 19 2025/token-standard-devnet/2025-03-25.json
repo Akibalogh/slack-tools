@@ -1,0 +1,424 @@
+[
+    {
+        "subtype": "channel_join",
+        "user": "U03CV15QKV3",
+        "text": "<@U03CV15QKV3> has joined the channel",
+        "inviter": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1742905847.117709",
+        "team": "T05FWTX7PMG"
+    },
+    {
+        "subtype": "tombstone",
+        "text": "This message was deleted.",
+        "user": "USLACKBOT",
+        "hidden": true,
+        "type": "message",
+        "ts": "1742905951.956249",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T03T53E10",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742905951.956249",
+        "parent_user_id": "USLACKBOT",
+        "reply_count": 6,
+        "reply_users_count": 2,
+        "latest_reply": "1742910646.040599",
+        "reply_users": [
+            "U03CV15QKV3",
+            "U021EQM9HGV"
+        ],
+        "replies": [
+            {
+                "user": "U03CV15QKV3",
+                "ts": "1742906830.662509"
+            },
+            {
+                "user": "U021EQM9HGV",
+                "ts": "1742907292.389789"
+            },
+            {
+                "user": "U021EQM9HGV",
+                "ts": "1742907320.898279"
+            },
+            {
+                "user": "U021EQM9HGV",
+                "ts": "1742907743.349959"
+            },
+            {
+                "user": "U021EQM9HGV",
+                "ts": "1742908209.839199"
+            },
+            {
+                "user": "U021EQM9HGV",
+                "ts": "1742910646.040599"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U06UH7XPTGF",
+        "text": "<@U06UH7XPTGF> has joined the channel",
+        "inviter": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1742905997.303759",
+        "team": "T05FWTX7PMG"
+    },
+    {
+        "user": "U03CV15QKV3",
+        "type": "message",
+        "ts": "1742906830.662509",
+        "client_msg_id": "9d25484c-8368-4f1d-b5c7-57e1f5c637fe",
+        "text": "Hello,\nOne of our clients wants to send funds to party that doesn’t have TransferPreapproval tx and we get error from node\n```Receiver *** does not have a TransferPreapproval```\n```*****\/api\/validator\/v0\/admin\/external-party\/transfer-preapproval\/prepare-send &lt;~~~ {\"amount\":\"48.100576418\",\"expires_at\":\"2025-03-15T19:50:31.310Z\",\"nonce\":\"0\",\"receiver_party_id\":\"*******\",\"sender_party_id\":\"****\"}```\nis there anything we can do to resolve it on our node and get payload? Can we set to ignore this error on our node and still allow clients to send funds to parties that don’t have TransferPreapproval tx? Or there is another way to do so?\ncc <@U021EQM9HGV> <@U03BD2N7FTK>",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "529e48a7cd98",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-05-04\/3470177423334_529e48a7cd9826bf4ef2_72.jpg",
+            "first_name": "Pablo",
+            "real_name": "Pablo Kurskii",
+            "display_name": "Pablo Kurskii",
+            "team": "E02KFSNH6CV",
+            "name": "pablo.kurskii",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742905951.956249",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "u67Jz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello,\nOne of our clients wants to send funds to party that doesn’t have TransferPreapproval tx and we get error from node\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Receiver *** does not have a TransferPreapproval"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "*****\/api\/validator\/v0\/admin\/external-party\/transfer-preapproval\/prepare-send <~~~ {\"amount\":\"48.100576418\",\"expires_at\":\"2025-03-15T19:50:31.310Z\",\"nonce\":\"0\",\"receiver_party_id\":\"*******\",\"sender_party_id\":\"****\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nis there anything we can do to resolve it on our node and get payload? Can we set to ignore this error on our node and still allow clients to send funds to parties that don’t have TransferPreapproval tx? Or there is another way to do so?\ncc "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U021EQM9HGV"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03BD2N7FTK"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U021EQM9HGV",
+        "type": "message",
+        "ts": "1742907292.389789",
+        "client_msg_id": "0f94f188-9604-43e6-97bd-59a160a6e727",
+        "text": "But how this “expiration in 1-10” days works then?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "9601ffda6367",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-03-02\/3176498706533_9601ffda63679982cdd6_72.jpg",
+            "first_name": "Ilya",
+            "real_name": "Ilya Brovkin",
+            "display_name": "Ilya Brovkin",
+            "team": "E02KFSNH6CV",
+            "name": "ilya.brovkin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742905951.956249",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fG80K",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But how this “expiration in 1-10” days works then?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U021EQM9HGV",
+        "type": "message",
+        "ts": "1742907320.898279",
+        "client_msg_id": "0740ad95-e9ae-4ff2-ab3d-775ea9423d5c",
+        "text": "I assume that transaction can be broadcasted and will wait untill recipient will approve it manually",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "9601ffda6367",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-03-02\/3176498706533_9601ffda63679982cdd6_72.jpg",
+            "first_name": "Ilya",
+            "real_name": "Ilya Brovkin",
+            "display_name": "Ilya Brovkin",
+            "team": "E02KFSNH6CV",
+            "name": "ilya.brovkin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742905951.956249",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xowU1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I assume that transaction can be broadcasted and will wait untill recipient will approve it manually"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U021EQM9HGV",
+        "type": "message",
+        "ts": "1742907670.970039",
+        "client_msg_id": "e2cdee3c-4782-4a0e-a815-980f1cc24b92",
+        "text": "we have start it in another chat already",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "9601ffda6367",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-03-02\/3176498706533_9601ffda63679982cdd6_72.jpg",
+            "first_name": "Ilya",
+            "real_name": "Ilya Brovkin",
+            "display_name": "Ilya Brovkin",
+            "team": "E02KFSNH6CV",
+            "name": "ilya.brovkin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742826655.928999",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ei9al",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "we have start it in another chat already"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U021EQM9HGV",
+        "type": "message",
+        "ts": "1742907743.349959",
+        "client_msg_id": "fd2fe4e1-793c-44e6-bf08-607eee4bafae",
+        "text": "Does it mean that “pre-approval” is literally blocking incoming transactions?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "9601ffda6367",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-03-02\/3176498706533_9601ffda63679982cdd6_72.jpg",
+            "first_name": "Ilya",
+            "real_name": "Ilya Brovkin",
+            "display_name": "Ilya Brovkin",
+            "team": "E02KFSNH6CV",
+            "name": "ilya.brovkin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742905951.956249",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RhQQy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Does it mean that “pre-approval” is literally blocking incoming transactions?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "honestly I’m finally lost. Now I see approval request on my side. But I have pre-approval turned ON since yesterday",
+        "files": [
+            {
+                "id": "F08KJMLFD6D",
+                "mode": "tombstone"
+            },
+            {
+                "id": "F08K117AP0E",
+                "mode": "tombstone"
+            },
+            {
+                "id": "F08K5GMFPEZ",
+                "mode": "tombstone"
+            }
+        ],
+        "upload": false,
+        "user": "U021EQM9HGV",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xzdfh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "honestly I’m finally lost. Now I see approval request on my side. But I have pre-approval turned ON since yesterday"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1742908209.839199",
+        "client_msg_id": "79219109-5e60-47e9-93bc-cb735062e394",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1742905951.956249",
+        "parent_user_id": "USLACKBOT",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "9601ffda6367",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-03-02\/3176498706533_9601ffda63679982cdd6_72.jpg",
+            "first_name": "Ilya",
+            "real_name": "Ilya Brovkin",
+            "display_name": "Ilya Brovkin",
+            "team": "E02KFSNH6CV",
+            "name": "ilya.brovkin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U021EQM9HGV",
+        "type": "message",
+        "ts": "1742910646.040599",
+        "client_msg_id": "1ca62568-48e2-472a-8d4d-822221104694",
+        "text": "Got it, we also find out on our side. I.e. we can’t build “transfer offer” with our type of keys yet.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "9601ffda6367",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-03-02\/3176498706533_9601ffda63679982cdd6_72.jpg",
+            "first_name": "Ilya",
+            "real_name": "Ilya Brovkin",
+            "display_name": "Ilya Brovkin",
+            "team": "E02KFSNH6CV",
+            "name": "ilya.brovkin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742905951.956249",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "i5fYX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Got it, we also find out on our side. I.e. we can’t build “transfer offer” with our type of keys yet."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

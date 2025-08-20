@@ -1,0 +1,182 @@
+[
+    {
+        "user": "U047SRHJQ5T",
+        "type": "message",
+        "ts": "1754916969.465009",
+        "client_msg_id": "2a73b520-1131-4857-837f-17d4face01ba",
+        "text": "Thanks, <@U0PQ8E25D>!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GGGURARK",
+        "source_team": "T02GGGURARK",
+        "user_profile": {
+            "avatar_hash": "gc547e35a01a",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/c547e35a01a31d4b28cf33d79587f9e4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0023-72.png",
+            "first_name": "Ryan",
+            "real_name": "Ryan Trinkle",
+            "display_name": "Ryan Trinkle",
+            "team": "T02GGGURARK",
+            "name": "ryan.trinkle",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754682223.960609",
+        "parent_user_id": "U047SRHJQ5T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1WF02",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks, "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0PQ8E25D"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1754928085.828979",
+        "client_msg_id": "24e52bed-2fe5-440e-9aa5-dcf1188c58f4",
+        "text": "Thank you Moritz.\n\nThis is now clear.\n\nThere is a thing I cannot understand how yet is why the recipient get the reward?\n\nThe sender burns the fee to pay for the tx, why didn't they got the reward ?\n\nIf an app builder generate transaction, it should be the one receive reward, not the user of it, right ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754854004.881979",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "68Z8y",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you Moritz.\n\nThis is now clear.\n\nThere is a thing I cannot understand how yet is why the recipient get the reward?\n\nThe sender burns the fee to pay for the tx, why didn't they got the reward ?\n\nIf an app builder generate transaction, it should be the one receive reward, not the user of it, right ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1754928652.075329",
+        "client_msg_id": "059974b2-d04a-4c46-88e6-0dcfc5895274",
+        "text": "The idea with the provider was that the app that \"enables\" a transfer gets the reward. E.g., an exchange app can be a provider in a DVP. In this case the provider that setup the preapproval enabled the transfer. I tend to agree though that leaving it open to whoever creates the transaction makes more sense in this case.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754854004.881979",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "W3ER2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The idea with the provider was that the app that \"enables\" a transfer gets the reward. E.g., an exchange app can be a provider in a DVP. In this case the provider that setup the preapproval enabled the transfer. I tend to agree though that leaving it open to whoever creates the transaction makes more sense in this case."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1754929129.932899",
+        "client_msg_id": "266481fd-8fa7-4461-941f-6e66424002c1",
+        "text": "I think it makes sense for app like an subscriontion, exchange where people send token to the app.\n\nBut our case was reversing, the app is now the sender.\n\nThanks for your help again Moritz",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754854004.881979",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eLo6f",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think it makes sense for app like an subscriontion, exchange where people send token to the app.\n\nBut our case was reversing, the app is now the sender.\n\nThanks for your help again Moritz"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

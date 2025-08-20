@@ -1,0 +1,211 @@
+[
+    {
+        "subtype": "channel_join",
+        "user": "UFXF4BCE6",
+        "text": "<@UFXF4BCE6> has joined the channel",
+        "inviter": "U04BDUU197Z",
+        "type": "message",
+        "ts": "1732717153.046789",
+        "team": "T05FWTX7PMG"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U057HGB61RS",
+        "text": "<@U057HGB61RS> has joined the channel",
+        "inviter": "U04BDUU197Z",
+        "type": "message",
+        "ts": "1732717155.537009",
+        "team": "T05FWTX7PMG"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U02BWGGEPT9",
+        "text": "<@U02BWGGEPT9> has joined the channel",
+        "inviter": "U04BDUU197Z",
+        "type": "message",
+        "ts": "1732717156.589999",
+        "team": "T05FWTX7PMG"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "UUT0L5W2J",
+        "text": "<@UUT0L5W2J> has joined the channel",
+        "inviter": "U04BDUU197Z",
+        "type": "message",
+        "ts": "1732717156.970869",
+        "team": "T05FWTX7PMG"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U06HUQ2M0FP",
+        "text": "<@U06HUQ2M0FP> has joined the channel",
+        "inviter": "U04BDUU197Z",
+        "type": "message",
+        "ts": "1732717159.104109",
+        "team": "T05FWTX7PMG"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U036PEBBNMC",
+        "text": "<@U036PEBBNMC> has joined the channel",
+        "inviter": "U04BDUU197Z",
+        "type": "message",
+        "ts": "1732773977.519689",
+        "team": "T05FWTX7PMG"
+    },
+    {
+        "user": "U036PEBBNMC",
+        "type": "message",
+        "ts": "1732775259.479979",
+        "client_msg_id": "e2eb9a11-b308-4e59-99ad-43df77b8f9f0",
+        "text": "anybody has a working ingress configuration file for the utility-ui? This does not seem to work with rewrite.\n```apiVersion: <http:\/\/networking.k8s.io\/v1|networking.k8s.io\/v1>\nkind: Ingress\nmetadata:\n  name: utility-ui-ingress\n  namespace: validator\n  annotations:\n    <http:\/\/cert-manager.io\/cluster-issuer|cert-manager.io\/cluster-issuer>: lets-encrypt\n    <http:\/\/nginx.ingress.kubernetes.io\/use-regex|nginx.ingress.kubernetes.io\/use-regex>: \"true\"\n    <http:\/\/nginx.ingress.kubernetes.io\/rewrite-target|nginx.ingress.kubernetes.io\/rewrite-target>: \/$2\nspec:\n  ingressClassName: public\n  rules:\n  - host: <http:\/\/utility.testdomain.com|utility.testdomain.com>\n    http:\n      paths:\n      - path: \/\n        pathType: Prefix\n        backend:\n          service:\n            name: utility-ui\n            port:\n              number: 8080\n      - path: \/api\/validator\/\n        pathType: Prefix\n        backend:\n          service:\n            name: validator-app\n            port:\n              number: 5003\n      - path: \/api\/json-api(\/|$)(.*)\n        pathType: ImplementationSpecific\n        backend:\n          service:\n            name: participant\n            port:\n              number: 7575\n  tls:\n  - hosts:\n    - <http:\/\/utility.testdomain.com|utility.testdomain.com>\n    secretName: cn-net-tls```",
+        "team": "T05FWTX7PMG",
+        "user_team": "TPZA6MDB5",
+        "source_team": "TPZA6MDB5",
+        "user_profile": {
+            "avatar_hash": "803467c98ba9",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-03-18\/3257255417413_803467c98ba9c7d76f91_72.jpg",
+            "first_name": "Ken",
+            "real_name": "Ken Le",
+            "display_name": "Ken Le",
+            "team": "TPZA6MDB5",
+            "name": "ken_le",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1732775259.479979",
+        "reply_count": 6,
+        "reply_users_count": 1,
+        "latest_reply": "1733388525.273629",
+        "reply_users": [
+            "U036PEBBNMC"
+        ],
+        "replies": [
+            {
+                "user": "U036PEBBNMC",
+                "ts": "1732775461.558319"
+            },
+            {
+                "user": "U036PEBBNMC",
+                "ts": "1732781823.006289"
+            },
+            {
+                "user": "U036PEBBNMC",
+                "ts": "1732782610.806079"
+            },
+            {
+                "user": "U036PEBBNMC",
+                "ts": "1732782636.640979"
+            },
+            {
+                "user": "U036PEBBNMC",
+                "ts": "1732871323.436569"
+            },
+            {
+                "user": "U036PEBBNMC",
+                "ts": "1733388525.273629"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HVCZB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "anybody has a working ingress configuration file for the utility-ui? This does not seem to work with rewrite.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "apiVersion: networking.k8s.io\/v1\nkind: Ingress\nmetadata:\n  name: utility-ui-ingress\n  namespace: validator\n  annotations:\n    cert-manager.io\/cluster-issuer: lets-encrypt\n    nginx.ingress.kubernetes.io\/use-regex: \"true\"\n    nginx.ingress.kubernetes.io\/rewrite-target: \/$2\nspec:\n  ingressClassName: public\n  rules:\n  - host: utility.testdomain.com\n    http:\n      paths:\n      - path: \/\n        pathType: Prefix\n        backend:\n          service:\n            name: utility-ui\n            port:\n              number: 8080\n      - path: \/api\/validator\/\n        pathType: Prefix\n        backend:\n          service:\n            name: validator-app\n            port:\n              number: 5003\n      - path: \/api\/json-api(\/|$)(.*)\n        pathType: ImplementationSpecific\n        backend:\n          service:\n            name: participant\n            port:\n              number: 7575\n  tls:\n  - hosts:\n    - utility.testdomain.com\n    secretName: cn-net-tls"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U036PEBBNMC",
+        "type": "message",
+        "ts": "1732775461.558319",
+        "client_msg_id": "d51cd970-8416-46dd-ab26-c0d4ea9cfd5d",
+        "text": "without the part below, i can access the ui over https but cannot use the *credentials* and *registry*\n```    <http:\/\/nginx.ingress.kubernetes.io\/use-regex|nginx.ingress.kubernetes.io\/use-regex>: \"true\"\n    <http:\/\/nginx.ingress.kubernetes.io\/rewrite-target|nginx.ingress.kubernetes.io\/rewrite-target>: \/$2\nand\n      - path: \/api\/json-api(\/|$)(.*)\n        pathType: ImplementationSpecific\n        backend:\n          service:\n            name: participant\n            port:\n              number: 7575```",
+        "team": "T05FWTX7PMG",
+        "user_team": "TPZA6MDB5",
+        "source_team": "TPZA6MDB5",
+        "user_profile": {
+            "avatar_hash": "803467c98ba9",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-03-18\/3257255417413_803467c98ba9c7d76f91_72.jpg",
+            "first_name": "Ken",
+            "real_name": "Ken Le",
+            "display_name": "Ken Le",
+            "team": "TPZA6MDB5",
+            "name": "ken_le",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1732775259.479979",
+        "parent_user_id": "U036PEBBNMC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ppjJA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "without the part below, i can access the ui over https but cannot use the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "credentials ",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "registry",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "    nginx.ingress.kubernetes.io\/use-regex: \"true\"\n    nginx.ingress.kubernetes.io\/rewrite-target: \/$2\nand\n      - path: \/api\/json-api(\/|$)(.*)\n        pathType: ImplementationSpecific\n        backend:\n          service:\n            name: participant\n            port:\n              number: 7575"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,2236 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743666697.151669",
+        "client_msg_id": "38b42704-277e-483e-a7b4-bd1f6b177883",
+        "text": "Is there an equivalent to pre\/post-transfer hooks in DAML? Can a contract instance 'react' to someone transferring holdings to it? Is that even a thing - transferring holdings to a contract instance _other than_ calling a method on it?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743666697.151669",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1743666787.450019",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743666787.450019"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yDLHW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is there an equivalent to pre\/post-transfer hooks in DAML? Can a contract instance 'react' to someone transferring holdings to it? Is that even a thing - transferring holdings to a contract instance _other than_ calling a method on it?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743666787.450019",
+        "client_msg_id": "c03eb196-a510-41d7-a4e7-69b2d7f5f0a3",
+        "text": "thanks yeah that's what i thought",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743666697.151669",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1KAda",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks yeah that's what i thought"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743692477.751519",
+        "client_msg_id": "9fac85b6-3e6a-488a-8579-60fbce9bd632",
+        "text": "Hey guys!\n\nWe have been busy this week designing the next iteration of iBTC, dubbed diBTC internally: the ability for _any whitelisted holder_ to redeem back to Bitcoin, without the shackles of the Vault system. This solves a lot of our current headaches with iBTC. I think we have talked about this on calls already, but to name a few:\n• the ability for any Bitcoin wallet to mint: no need for Taproot or custom scripting support\n• solves the 'redemption gap' issue, that is, no Bitcoin can be left locked -- since anyone can redeem the locked BTC with the correct Burn transaction\nFor EVM, another limitation we try to get around is the inability of custodial wallets to sign custom transactions. So the new flow focuses on 'Transfers only' as much as possible, although on Canton this is currently not strictly part of the plans - we would love to get more insight into the wallet ecosystem &amp; support of different signing capabilities...\n\nNevertheless, we want to launch on Canton with this upgraded design. I made some plans for our contract-redesigns, with two competing ideas currently, and would appreciate any feedback and comments, dropping it in the next message",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743692477.751519",
+        "reply_count": 3,
+        "reply_users_count": 2,
+        "latest_reply": "1743760346.614719",
+        "reply_users": [
+            "U088UV6MKFE",
+            "U05FU0HPZ9T"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743694525.090809"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743695169.848149"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1743760346.614719"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sn5uk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey guys!\n\nWe have been busy this week designing the next iteration of iBTC, dubbed diBTC internally: the ability for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "any whitelisted holder",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " to redeem back to Bitcoin, without the shackles of the Vault system. This solves a lot of our current headaches with iBTC. I think we have talked about this on calls already, but to name a few:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "the ability for any Bitcoin wallet to mint: no need for Taproot or custom scripting support"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "solves the 'redemption gap' issue, that is, no Bitcoin can be left locked -- since anyone can redeem the locked BTC with the correct Burn transaction"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nFor EVM, another limitation we try to get around is the inability of custodial wallets to sign custom transactions. So the new flow focuses on 'Transfers only' as much as possible, although on Canton this is currently not strictly part of the plans - we would love to get more insight into the wallet ecosystem & support of different signing capabilities...\n\nNevertheless, we want to launch on Canton with this upgraded design. I made some plans for our contract-redesigns, with two competing ideas currently, and would appreciate any feedback and comments, dropping it in the next message"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "Two main Templates:\n• Accounts (bookkeeping for a User)\n• Requests (a sort of unordered queue of mint\/burn requests)\nThe goal is to separate mint\/burn requests from the concept of 'vaults'. You can think of Accounts as the old Vaults contracts, but simpler and without 'State'. Individual Requests are now separated, more lightweight, and can run parallel, etc.\nUsers are still whitelisted, which just means the creation of an Account contract for them.\nIn this first variation, there is a `pendingBalance` on the Account, which is similar to the older `lockedAmount`, this is the amount that can go either way: to be minted as Holdings or Redeemed to BTC.\n\nThis Account contract instance, with it's `ID` and `nonce` determine a specific BTC deposit address, which the user should use for Transferring BTC to.\nThe Attestors monitor this address, and when its 'funded', they create a Request for the Account, increase the nonce, etc.\n\nThe withdraw flow uses the `pendingBalance`. Any User with an account can bring iBTC Holdings, 'transfer' them to the contract, which will burn it and increase the `pendingBalance` , which can be redeemed off-chain for Bitcoin on a HTTP endpoint on the Attestors.\n\nThis endpoint needs a way to _verify that a request comes from someone controlling this particular Canton Party_. We currently don't know how easy this is to do with canton wallets. Ideas welcome!\n\nSecond version dropping in next message!",
+        "files": [
+            {
+                "id": "F08LKUDLJ85",
+                "created": 1743692513,
+                "timestamp": 1743692513,
+                "name": "diBTC Architecture.png",
+                "title": "diBTC Architecture.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 784608,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08LKUDLJ85\/dibtc_architecture.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08LKUDLJ85\/download\/dibtc_architecture.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LKUDLJ85-85799935b8\/dibtc_architecture_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LKUDLJ85-85799935b8\/dibtc_architecture_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LKUDLJ85-85799935b8\/dibtc_architecture_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 188,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LKUDLJ85-85799935b8\/dibtc_architecture_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 250,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LKUDLJ85-85799935b8\/dibtc_architecture_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LKUDLJ85-85799935b8\/dibtc_architecture_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 375,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LKUDLJ85-85799935b8\/dibtc_architecture_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 417,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LKUDLJ85-85799935b8\/dibtc_architecture_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 501,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LKUDLJ85-85799935b8\/dibtc_architecture_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 534,
+                "original_w": 3977,
+                "original_h": 2074,
+                "thumb_tiny": "AwAZADCgDijJ96B1oP1oASlGO9BooASil\/EUlACjrSn8KbRQAtFJSigAxSU+mHrQB\/\/Z",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08LKUDLJ85\/dibtc_architecture.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08LKUDLJ85-76c1c06bd9",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VAzEg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Two main Templates:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Accounts (bookkeeping for a User)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Requests (a sort of unordered queue of mint\/burn requests)"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThe goal is to separate mint\/burn requests from the concept of 'vaults'. You can think of Accounts as the old Vaults contracts, but simpler and without 'State'. Individual Requests are now separated, more lightweight, and can run parallel, etc.\nUsers are still whitelisted, which just means the creation of an Account contract for them.\nIn this first variation, there is a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "pendingBalance",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " on the Account, which is similar to the older "
+                            },
+                            {
+                                "type": "text",
+                                "text": "lockedAmount",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", this is the amount that can go either way: to be minted as Holdings or Redeemed to BTC.\n\nThis Account contract instance, with it's "
+                            },
+                            {
+                                "type": "text",
+                                "text": "ID",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "nonce",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " determine a specific BTC deposit address, which the user should use for Transferring BTC to.\nThe Attestors monitor this address, and when its 'funded', they create a Request for the Account, increase the nonce, etc.\n\nThe withdraw flow uses the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "pendingBalance",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Any User with an account can bring iBTC Holdings, 'transfer' them to the contract, which will burn it and increase the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "pendingBalance",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " , which can be redeemed off-chain for Bitcoin on a HTTP endpoint on the Attestors.\n\nThis endpoint needs a way to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "verify that a request comes from someone controlling this particular Canton Party",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". We currently don't know how easy this is to do with canton wallets. Ideas welcome!\n\nSecond version dropping in next message!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1743693192.246119",
+        "client_msg_id": "8f07cdf8-2868-4122-b67f-fc09f4278206",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1743693192.246119",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1743695557.022309",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743695557.022309"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "text": "This next version is simpler for the User, but the overall flow is a little bit more complicated.\nDifferences to first version:\n• there is no `pendingBalance`. A Withdraw request immediately triggers the withdraw flow, by having an extra Request type. \n• This new request type is created immediately, and picked up by the Attestors by polling for them.\n• The Destination BTC Address of the request is then funded by the Attestors, and they set the Request to 'Pending', ....\nThis simplifies user interaction to a single Choice, and no off-chain interaction with the Attestors.\nWe don't really know what is easier to do with current Canton wallets. Calling a Withdraw function with custom parameters, or just Transferring Holdings to it (although, as you have seen, that is still a Choice with params, not 'just a transfer to the contract'. ..)\n\nHappy to hear your thoughts and ideas, thank you!",
+        "files": [
+            {
+                "id": "F08LQ0TPU3W",
+                "created": 1743693624,
+                "timestamp": 1743693624,
+                "name": "diBTC Architecture1.png",
+                "title": "diBTC Architecture1.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 733900,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08LQ0TPU3W\/dibtc_architecture1.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08LQ0TPU3W\/download\/dibtc_architecture1.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQ0TPU3W-215a16dd3f\/dibtc_architecture1_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQ0TPU3W-215a16dd3f\/dibtc_architecture1_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQ0TPU3W-215a16dd3f\/dibtc_architecture1_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 195,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQ0TPU3W-215a16dd3f\/dibtc_architecture1_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 259,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQ0TPU3W-215a16dd3f\/dibtc_architecture1_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQ0TPU3W-215a16dd3f\/dibtc_architecture1_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 389,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQ0TPU3W-215a16dd3f\/dibtc_architecture1_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 432,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQ0TPU3W-215a16dd3f\/dibtc_architecture1_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 519,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQ0TPU3W-215a16dd3f\/dibtc_architecture1_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 554,
+                "original_w": 3977,
+                "original_h": 2150,
+                "thumb_tiny": "AwAZADCgKMn3oFFACUox3oNGaADikpfxpKAFFFJRQAtFJSigA\/Gg07tTW60Af\/\/Z",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08LQ0TPU3W\/dibtc_architecture1.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08LQ0TPU3W-0ff8bfdac8",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xG\/gV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This next version is simpler for the User, but the overall flow is a little bit more complicated.\nDifferences to first version:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "there is no "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "pendingBalance",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ". A Withdraw request immediately triggers the withdraw flow, by having an extra Request type. "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "This new request type is created immediately, and picked up by the Attestors by polling for them."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "The Destination BTC Address of the request is then funded by the Attestors, and they set the Request to 'Pending', ...."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThis simplifies user interaction to a single Choice, and no off-chain interaction with the Attestors.\nWe don't really know what is easier to do with current Canton wallets. Calling a Withdraw function with custom parameters, or just Transferring Holdings to it (although, as you have seen, that is still a Choice with params, not 'just a transfer to the contract'. ..)\n\nHappy to hear your thoughts and ideas, thank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1743693634.868169",
+        "client_msg_id": "cbaa75c3-2140-42d0-af11-6983a8fddf1c",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1743693634.868169",
+        "reply_count": 22,
+        "reply_users_count": 1,
+        "latest_reply": "1743698233.543319",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743695683.503939"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743695781.672919"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743695867.231479"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743696043.935479"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743696082.579699"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743696181.033169"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743696294.427819"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743696711.506249"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743696830.481639"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743696888.163119"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743696993.898099"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743697303.083229"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743697316.665599"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743697321.689059"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743697478.343999"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743697496.965339"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743697648.528159"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743697688.020959"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743697838.847619"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743698050.117809"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743698114.107269"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1743698233.543319"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "reactions": [
+            {
+                "name": "eyeslooking",
+                "users": [
+                    "U9V802QQ6"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743693902.484089",
+        "client_msg_id": "b95e066f-1ba4-4f18-a9fa-dca49c5a05f6",
+        "text": "<@UEHLS0JUB> <@UMW95BAT1> <@U9V802QQ6> <@U05FU0HPZ9T> ^^",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hDJ1I",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UMW95BAT1"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U9V802QQ6"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FU0HPZ9T"
+                            },
+                            {
+                                "type": "text",
+                                "text": " ^^"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "If you're curious, this is how we can put this information in the Bitcoin script",
+        "files": [
+            {
+                "id": "F08LQKAHFQS",
+                "created": 1743694499,
+                "timestamp": 1743694499,
+                "name": "Screenshot 2025-04-03 at 17.34.39.png",
+                "title": "Screenshot 2025-04-03 at 17.34.39.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 140479,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08LQKAHFQS\/screenshot_2025-04-03_at_17.34.39.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08LQKAHFQS\/download\/screenshot_2025-04-03_at_17.34.39.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 226,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 302,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 453,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 503,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 603,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 644,
+                "original_w": 1271,
+                "original_h": 799,
+                "thumb_tiny": "AwAeADDSyM9fwoyKCDSYPrQA6kyPWgDFIQM9DQAuR60ZB6Gk4\/un8qUY9MUALSYJ64oOc9aTB\/vUAOFNJOeBRg\/3qMH+9QAZb0FKM9xSYP8AepRn1zQB\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08LQKAHFQS\/screenshot_2025-04-03_at_17.34.39.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08LQKAHFQS-5a1e880ecf",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "66Uax",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If you're curious, this is how we can put this information in the Bitcoin script"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1743694525.090809",
+        "client_msg_id": "89735bff-6ae0-46ec-9402-b1501c2e092f",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1743692477.751519",
+        "parent_user_id": "U088UV6MKFE",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "text": "If you are even more curious, here is the high level design for Version 1 deposits, and different withdraw designs for EVM... We probably won't upgrade on EVM for now, but are aiming to keep designs similar as much as reasonable for the future",
+        "files": [
+            {
+                "id": "F08LQLHJL83",
+                "created": 1743695067,
+                "timestamp": 1743695067,
+                "name": "diBTC Architecturehighleveldeposit.png",
+                "title": "diBTC Architecturehighleveldeposit.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 242035,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08LQLHJL83\/dibtc_architecturehighleveldeposit.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08LQLHJL83\/download\/dibtc_architecturehighleveldeposit.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQLHJL83-688285f4c6\/dibtc_architecturehighleveldeposit_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQLHJL83-688285f4c6\/dibtc_architecturehighleveldeposit_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQLHJL83-688285f4c6\/dibtc_architecturehighleveldeposit_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 125,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQLHJL83-688285f4c6\/dibtc_architecturehighleveldeposit_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 166,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQLHJL83-688285f4c6\/dibtc_architecturehighleveldeposit_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQLHJL83-688285f4c6\/dibtc_architecturehighleveldeposit_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 249,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQLHJL83-688285f4c6\/dibtc_architecturehighleveldeposit_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 277,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQLHJL83-688285f4c6\/dibtc_architecturehighleveldeposit_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 332,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQLHJL83-688285f4c6\/dibtc_architecturehighleveldeposit_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 354,
+                "original_w": 2936,
+                "original_h": 1016,
+                "thumb_tiny": "AwAQADCjn3pOO+aSigAo70ooOc0AJxRS0UwP\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08LQLHJL83\/dibtc_architecturehighleveldeposit.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08LQLHJL83-22bfe3e5d2",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F08LQM562JW",
+                "created": 1743695098,
+                "timestamp": 1743695098,
+                "name": "diBTC Architecturewithdraw.png",
+                "title": "diBTC Architecturewithdraw.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 1107815,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08LQM562JW\/dibtc_architecturewithdraw.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08LQM562JW\/download\/dibtc_architecturewithdraw.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQM562JW-852bd88656\/dibtc_architecturewithdraw_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQM562JW-852bd88656\/dibtc_architecturewithdraw_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQM562JW-852bd88656\/dibtc_architecturewithdraw_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 273,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQM562JW-852bd88656\/dibtc_architecturewithdraw_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 363,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQM562JW-852bd88656\/dibtc_architecturewithdraw_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQM562JW-852bd88656\/dibtc_architecturewithdraw_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 545,
+                "thumb_720_h": 720,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQM562JW-852bd88656\/dibtc_architecturewithdraw_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 1057,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQM562JW-852bd88656\/dibtc_architecturewithdraw_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 727,
+                "thumb_960_h": 960,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQM562JW-852bd88656\/dibtc_architecturewithdraw_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 775,
+                "thumb_1024_h": 1024,
+                "original_w": 3632,
+                "original_h": 4798,
+                "thumb_tiny": "AwAwACTPpe1JRzQAUUvaigBKKKKAClzSUYoAXFFFFACUUtFACUvakooAUUGig0wEooopAf\/Z",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08LQM562JW\/dibtc_architecturewithdraw.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08LQM562JW-4ffdb3b27e",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ODyup",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If you are even more curious, here is the high level design for Version 1 deposits, and different withdraw designs for EVM... We probably won't upgrade on EVM for now, but are aiming to keep designs similar as much as reasonable for the future"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1743695169.848149",
+        "client_msg_id": "aa5e0e1b-b7cd-42dd-b933-661dd0c2ae44",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1743692477.751519",
+        "parent_user_id": "U088UV6MKFE",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743695557.022309",
+        "client_msg_id": "9bf1451b-7390-43f5-9d49-28d72fe877d7",
+        "text": "Good question!\n\nPendingBalance is indeed 'unminted ibtc.canton balance'. It represents the amount you are eligible to either A.) get as iBTC Holdings or B.) Withdraw back to Bitcoin\n\nDuring deposits, you can choose: either mint automatically, OR just increase the unminted amount on your account. 99.9% of users would choose auto-mint, but the option could be there.\n\nDuring withdrawals, you _first_ need to increase your pendingBalance, since then the actual Withdraw request happens off-chain. This also allows you to collect several Holdings through some time on your account, before withdrawing them all at once. Although I suppose you could just collect the actual Holdings",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693192.246119",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PeXTT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Good question!\n\nPendingBalance is indeed 'unminted ibtc.canton balance'. It represents the amount you are eligible to either A.) get as iBTC Holdings or B.) Withdraw back to Bitcoin\n\nDuring deposits, you can choose: either mint automatically, OR just increase the unminted amount on your account. 99.9% of users would choose auto-mint, but the option could be there.\n\nDuring withdrawals, you "
+                            },
+                            {
+                                "type": "text",
+                                "text": "first",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " need to increase your pendingBalance, since then the actual Withdraw request happens off-chain. This also allows you to collect several Holdings through some time on your account, before withdrawing them all at once. Although I suppose you could just collect the actual Holdings"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743695683.503939",
+        "client_msg_id": "4198290f-8f03-43e2-ae84-0e29b38a53cc",
+        "text": "Yes, more specifically like this: <https:\/\/dlc-ag42820.slack.com\/archives\/C081VS8N76Z\/p1743694525090809?thread_ts=1743692477.751519&amp;cid=C081VS8N76Z>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "attachments": [
+            {
+                "from_url": "https:\/\/dlc-ag42820.slack.com\/archives\/C081VS8N76Z\/p1743694525090809?thread_ts=1743692477.751519&amp;cid=C081VS8N76Z",
+                "ts": "1743694525.090809",
+                "author_id": "U088UV6MKFE",
+                "channel_id": "C081VS8N76Z",
+                "channel_team": "T03T53E10",
+                "is_msg_unfurl": true,
+                "is_reply_unfurl": true,
+                "message_blocks": [
+                    {
+                        "team": "T05FWTX7PMG",
+                        "channel": "C081VS8N76Z",
+                        "ts": "1743694525.090809",
+                        "message": {
+                            "blocks": [
+                                {
+                                    "type": "rich_text",
+                                    "block_id": "66Uax",
+                                    "elements": [
+                                        {
+                                            "type": "rich_text_section",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "If you're curious, this is how we can put this information in the Bitcoin script"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "files": [
+                    {
+                        "id": "F08LQKAHFQS",
+                        "created": 1743694499,
+                        "timestamp": 1743694499,
+                        "name": "Screenshot 2025-04-03 at 17.34.39.png",
+                        "title": "Screenshot 2025-04-03 at 17.34.39.png",
+                        "mimetype": "image\/png",
+                        "filetype": "png",
+                        "pretty_type": "PNG",
+                        "user": "U088UV6MKFE",
+                        "user_team": "T05FWTX7PMG",
+                        "editable": false,
+                        "size": 140479,
+                        "mode": "hosted",
+                        "is_external": false,
+                        "external_type": "",
+                        "is_public": true,
+                        "public_url_shared": false,
+                        "display_as_bot": false,
+                        "username": "",
+                        "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08LQKAHFQS\/screenshot_2025-04-03_at_17.34.39.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08LQKAHFQS\/download\/screenshot_2025-04-03_at_17.34.39.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "media_display_type": "unknown",
+                        "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_360_w": 360,
+                        "thumb_360_h": 226,
+                        "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_480_w": 480,
+                        "thumb_480_h": 302,
+                        "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_720_w": 720,
+                        "thumb_720_h": 453,
+                        "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_800_w": 800,
+                        "thumb_800_h": 503,
+                        "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_960_w": 960,
+                        "thumb_960_h": 603,
+                        "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LQKAHFQS-eb30dc8b8c\/screenshot_2025-04-03_at_17.34.39_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_1024_w": 1024,
+                        "thumb_1024_h": 644,
+                        "original_w": 1271,
+                        "original_h": 799,
+                        "thumb_tiny": "AwAeADDSyM9fwoyKCDSYPrQA6kyPWgDFIQM9DQAuR60ZB6Gk4\/un8qUY9MUALSYJ64oOc9aTB\/vUAOFNJOeBRg\/3qMH+9QAZb0FKM9xSYP8AepRn1zQB\/9k=",
+                        "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08LQKAHFQS\/screenshot_2025-04-03_at_17.34.39.png",
+                        "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08LQKAHFQS-5a1e880ecf",
+                        "comments_count": 0,
+                        "is_starred": false,
+                        "skipped_shares": true,
+                        "has_rich_preview": false,
+                        "file_access": "visible"
+                    }
+                ],
+                "id": 1,
+                "original_url": "https:\/\/dlc-ag42820.slack.com\/archives\/C081VS8N76Z\/p1743694525090809?thread_ts=1743692477.751519&amp;cid=C081VS8N76Z",
+                "fallback": "[April 3rd, 2025 8:35 AM] robert: If you're curious, this is how we can put this information in the Bitcoin script",
+                "text": "If you're curious, this is how we can put this information in the Bitcoin script",
+                "author_name": "Robert Tera",
+                "author_link": "https:\/\/dlc-ag42820.slack.com\/team\/U088UV6MKFE",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2025-01-15\/8311170821937_db306a56f513d4ede6a7_48.png",
+                "author_subname": "Robert Tera",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "footer": "Thread in Slack Conversation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "phZOm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, more specifically like this: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/dlc-ag42820.slack.com\/archives\/C081VS8N76Z\/p1743694525090809?thread_ts=1743692477.751519&cid=C081VS8N76Z"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743695781.672919",
+        "client_msg_id": "9a0dbbd2-2008-4df4-bdf0-ab17912bbf7d",
+        "text": "So, it is unique for every deposit, and spendable by the FROST threshold signature of the Attestor Network",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZTi3u",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So, it is unique for every deposit, and spendable by the FROST threshold signature of the Attestor Network"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743695867.231479",
+        "client_msg_id": "70fa956d-43a4-46ae-841c-5cd3e8cbce4d",
+        "text": "pretty neat, no?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "E4vtT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "pretty neat, no?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743696043.935479",
+        "client_msg_id": "f30a2e66-cf92-4021-bee9-e0fffb864dee",
+        "text": "No its a valid question and we did entertain it, but yes its much easier to track _who_ deposits",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3hMLP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "No its a valid question and we did entertain it, but yes its much easier to track "
+                            },
+                            {
+                                "type": "text",
+                                "text": "who",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " deposits"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743696082.579699",
+        "client_msg_id": "5181df9d-e49a-4b8a-bb0c-12519e24b1cf",
+        "text": "Especially since one of the main motivators is wallet-compatibility, so the transaction to this address has to be as simple as possible. And this way its a simple transfer of BTC",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gfVEu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Especially since one of the main motivators is wallet-compatibility, so the transaction to this address has to be as simple as possible. And this way its a simple transfer of BTC"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743696181.033169",
+        "client_msg_id": "5c5692e2-d475-4ba6-ab6f-0adc438fff74",
+        "text": "&gt; and if you have different addresses what happens if there is another transfer to the address for the same nonce and user id?\nNothing catastrophic - its not desirable, but we technically could keep monitoring 'used' addresses to be used for more mints\/rescue operations. But ideally they are not reused. But funds wouldnt be lost",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Vzvr6",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and if you have different addresses what happens if there is another transfer to the address for the same nonce and user id?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Nothing catastrophic - its not desirable, but we technically could keep monitoring 'used' addresses to be used for more mints\/rescue operations. But ideally they are not reused. But funds wouldnt be lost"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743696294.427819",
+        "client_msg_id": "7c727038-28a3-434a-b5ff-909555581b0d",
+        "text": "&gt; and you're not fine with a mapping that just stores btc address &lt;-&gt; canton party id on the Canton side?\nAnother thing we entertained, but this would make parallel operations harder, introduce some race-conditions. Probably doable though",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LMEnu",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and you're not fine with a mapping that just stores btc address <-> canton party id on the Canton side?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Another thing we entertained, but this would make parallel operations harder, introduce some race-conditions. Probably doable though"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743696711.506249",
+        "client_msg_id": "06482b04-712f-4626-91d9-082227bd4f43",
+        "text": "haha no worries thats why im sharing this here, to gather ideas",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RSrsO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "haha no worries thats why im sharing this here, to gather ideas"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743696830.481639",
+        "client_msg_id": "caae38ca-4d74-4576-95de-b8c23888e9fd",
+        "text": "Yes your take of the flow is correct!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YC7iR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes your take of the flow is correct!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743696888.163119",
+        "client_msg_id": "d788225b-6f64-4974-80e5-ee2e78a063f0",
+        "text": "There was a reason we didn't want users to reuse addresses that im blanking on rn, but maybe it's not a big deal if i can blank on it. I'll get back to you about this",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7IrO0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "There was a reason we didn't want users to reuse addresses that im blanking on rn, but maybe it's not a big deal if i can blank on it. I'll get back to you about this"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743696993.898099",
+        "client_msg_id": "403d842f-7a97-4d34-9927-7161ed3948bb",
+        "text": "One more thing:\n&gt; Afaict a burn does not need to be tied to any account.\nThis _could_ be true, if we wanted, in fact, this would open up total retail usage. But c-suite does not want that, so it will still be restricted to Account holders",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "p4Z1U",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "One more thing:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Afaict a burn does not need to be tied to any account."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This "
+                            },
+                            {
+                                "type": "text",
+                                "text": "could",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " be true, if we wanted, in fact, this would open up total retail usage. But c-suite does not want that, so it will still be restricted to Account holders"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743697303.083229",
+        "client_msg_id": "9e4dcca0-6f60-4f05-8537-a450092cf22b",
+        "text": "Thats right.\nMy point is just that _theoretically_, we don't need an account, since DepositAddressess are deterministical based on an EVM address\/Canton Party ID, so you _could know yours without having an Account_. But the _Attestors *wouldn't* know to look for deposits there_ (currently). But yeah, you get it",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0hKnx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thats right.\nMy point is just that "
+                            },
+                            {
+                                "type": "text",
+                                "text": "theoretically",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", we don't need an account, since DepositAddressess are deterministical based on an EVM address\/Canton Party ID, so you "
+                            },
+                            {
+                                "type": "text",
+                                "text": "could know yours without having an Account",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". But the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Attestors ",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "wouldn't",
+                                "style": {
+                                    "bold": true,
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " know to look for deposits there",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " (currently). But yeah, you get it"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "UEHLS0JUB"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743697316.665599",
+        "client_msg_id": "510cdccd-8cd5-400a-abb2-10ccd4b3f24e",
+        "text": "Accounts are for us to know where to look",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ucYV+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Accounts are for us to know where to look"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743697321.689059",
+        "client_msg_id": "f83cee24-8bca-4e0b-96c1-99bb9f951306",
+        "text": "(plus for gatekeeping)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PCZHD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "(plus for gatekeeping)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743697478.343999",
+        "client_msg_id": "73f07639-f713-4751-99a3-bc2e4f8e75f4",
+        "text": "&gt; ah the btc_tx_id field\nYes, and since Attestors hold no state, we have to rely on on-chain info. So they set the btc-tx-id atomically (as much as possible) upon Bitcoin broadcast, so even if they crash right after, they should know that a transfer happened",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QMXy7",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ah the btc_tx_id field"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, and since Attestors hold no state, we have to rely on on-chain info. So they set the btc-tx-id atomically (as much as possible) upon Bitcoin broadcast, so even if they crash right after, they should know that a transfer happened"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743697496.965339",
+        "client_msg_id": "60c473be-7cb2-4f33-9c1f-8b002e2d8976",
+        "text": "This is the same how it works now with the Pending state.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IjcMW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This is the same how it works now with the Pending state."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743697648.528159",
+        "client_msg_id": "6f651ef7-531a-436f-81ab-3f1232fc4055",
+        "text": "Actually, sorry, _currently_ this is not how it works -- since right now Attestors only react to direct user interaction",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3RHt8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Actually, sorry, "
+                            },
+                            {
+                                "type": "text",
+                                "text": "currently",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " this is not how it works -- since right now Attestors only react to direct user interaction"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743697688.020959",
+        "client_msg_id": "eb12482f-5ea4-4c49-a85b-6df2ff0a0010",
+        "text": "Hmm yes I'll make a note of this! thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GbQxh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hmm yes I'll make a note of this! thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743697838.847619",
+        "client_msg_id": "0f1d6e03-4d71-4ed3-b959-45e9a3e2a789",
+        "text": "Although, if you set the Pending state, but then the Broadcast fails, you need to revert",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EV7Qb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Although, if you set the Pending state, but then the Broadcast fails, you need to revert"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743698050.117809",
+        "client_msg_id": "4174bd1e-b974-484a-8ab4-e15aaf566de3",
+        "text": "In the live iBTC design we Broadcast first, and if that succeeded, we setPending. The risk-profile is a bit different though, since the Bitcoin transaction is different, the user has much more control over it... im getting a bit tired but will meditate on this as well",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "aThnQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In the live iBTC design we Broadcast first, and if that succeeded, we setPending. The risk-profile is a bit different though, since the Bitcoin transaction is different, the user has much more control over it... im getting a bit tired but will meditate on this as well"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "UEHLS0JUB"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743698114.107269",
+        "client_msg_id": "f40316b3-92c2-45dd-a90e-015a22c07460",
+        "text": "&gt; If it's helpful we could sit together and sketch out the Daml models more concretely. Or you can make a first pass and I (and\/or <@U9V802QQ6> and <@UMW95BAT1> will be happy to take a look)\nDefinitely! Thanks. I think I'll attempt a first pass but will def need you haha",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rEp2\/",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If it's helpful we could sit together and sketch out the Daml models more concretely. Or you can make a first pass and I (and\/or "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U9V802QQ6"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UMW95BAT1"
+                            },
+                            {
+                                "type": "text",
+                                "text": " will be happy to take a look)"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Definitely! Thanks. I think I'll attempt a first pass but will def need you haha"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743698233.543319",
+        "client_msg_id": "d896ee0b-ee1b-4c0b-b40d-488de845de93",
+        "text": "&gt; How expensive do you expect it to be to adjust the attestor backend to this different flow? I think on the Daml side it doesn't make a difference in terms of complexity whether we implement this or the vault based flow.\nSince we haven't written any code yet for Canton anyway, now is the right time to make these changes. Since we plan on eventually launching this on EVM too, we would build it with that in mind.\n\nAt first glance does not seem hard. <@U06337M5HDG> will make the Bitcoin changes and Jesse and I will prob write the connector for the API",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743693634.868169",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "M3wQc",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "How expensive do you expect it to be to adjust the attestor backend to this different flow? I think on the Daml side it doesn't make a difference in terms of complexity whether we implement this or the vault based flow."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Since we haven't written any code yet for Canton anyway, now is the right time to make these changes. Since we plan on eventually launching this on EVM too, we would build it with that in mind.\n\nAt first glance does not seem hard. "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U06337M5HDG"
+                            },
+                            {
+                                "type": "text",
+                                "text": " will make the Bitcoin changes and Jesse and I will prob write the connector for the API"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "UEHLS0JUB"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

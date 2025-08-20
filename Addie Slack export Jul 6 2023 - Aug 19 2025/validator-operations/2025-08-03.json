@@ -1,0 +1,1267 @@
+[
+    {
+        "subtype": "bot_message",
+        "text": "*Mintera* has removed themselves from this channel.",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1754219771.695219",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6zo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Mintera",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " has removed themselves from this channel."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U095FB31DLH",
+        "type": "message",
+        "ts": "1754223174.555669",
+        "edited": {
+            "user": "U095FB31DLH",
+            "ts": "1754224171.000000"
+        },
+        "client_msg_id": "a05ab155-f603-4ba7-b5f7-994caa5f8e1d",
+        "text": "Hi Team,\n\nStruggling to get a connection from my Validator to the Scan address. I can generate my onboarding secret, so I'm not sure it's a whitelisting issue. It appears I'm receiving HTML in response to my requests with the scan address from the \/api\/scan\/version endpoint.\n```Unsupported Content-Type [Some(text\/html)], supported: application\/json```\nI have been told to use this scan\/sponsor endpoint by <@U04KJF6UTNU>:\n```<https:\/\/sv.sv-2.dev.global.canton.network.digitalasset.com\/>```\nBut I also tried running a curl against\n```<https:\/\/sv.sv-1.dev.global.canton.network.sync.global>```\nAnd received the same error.\n\nI have noticed that the URL provided (sv.sv-2) does not exist in the All DevNet Super Validator Nodes page. The nearest one is this:\n```<https:\/\/scan.sv-2-eng.dev.global.canton.network.digitalasset.com>```\nCould I have been given the wrong URL?\n\nI'm a bit stuck at the moment so would appreciate some help.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754223174.555669",
+        "reply_count": 11,
+        "reply_users_count": 3,
+        "latest_reply": "1754237114.126729",
+        "reply_users": [
+            "UUT0L5W2J",
+            "U095FB31DLH",
+            "U01DARYACCT"
+        ],
+        "replies": [
+            {
+                "user": "UUT0L5W2J",
+                "ts": "1754225644.331779"
+            },
+            {
+                "user": "U095FB31DLH",
+                "ts": "1754226155.575069"
+            },
+            {
+                "user": "U095FB31DLH",
+                "ts": "1754226213.145439"
+            },
+            {
+                "user": "U01DARYACCT",
+                "ts": "1754227065.550739"
+            },
+            {
+                "user": "U095FB31DLH",
+                "ts": "1754235247.180629"
+            },
+            {
+                "user": "U095FB31DLH",
+                "ts": "1754235568.095619"
+            },
+            {
+                "user": "UUT0L5W2J",
+                "ts": "1754236544.251399"
+            },
+            {
+                "user": "U095FB31DLH",
+                "ts": "1754236923.246419"
+            },
+            {
+                "user": "U095FB31DLH",
+                "ts": "1754236996.664579"
+            },
+            {
+                "user": "U095FB31DLH",
+                "ts": "1754236999.190389"
+            },
+            {
+                "user": "U095FB31DLH",
+                "ts": "1754237114.126729"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "a1dAe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Team,\n\nStruggling to get a connection from my Validator to the Scan address. I can generate my onboarding secret, so I'm not sure it's a whitelisting issue. It appears I'm receiving HTML in response to my requests with the scan address from the \/api\/scan\/version endpoint.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Unsupported Content-Type [Some(text\/html)], supported: application\/json"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I have been told to use this scan\/sponsor endpoint by "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U04KJF6UTNU"
+                            },
+                            {
+                                "type": "text",
+                                "text": ":\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/sv.sv-2.dev.global.canton.network.digitalasset.com\/"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But I also tried running a curl against\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/sv.sv-1.dev.global.canton.network.sync.global"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And received the same error.\n\nI have noticed that the URL provided (sv.sv-2) does not exist in the All DevNet Super Validator Nodes page. The nearest one is this:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-2-eng.dev.global.canton.network.digitalasset.com"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nCould I have been given the wrong URL?\n\nI'm a bit stuck at the moment so would appreciate some help."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UUT0L5W2J",
+        "type": "message",
+        "ts": "1754225644.331779",
+        "edited": {
+            "user": "UUT0L5W2J",
+            "ts": "1754225697.000000"
+        },
+        "client_msg_id": "dd6be0a9-37ca-473a-b8b4-ece813162ce6",
+        "text": "Hi\nPlease use this guide to check the whitelist for the DevNet: <https:\/\/docs.dev.sync.global\/validator_operator\/validator_onboarding.html#validating-that-your-ip-has-been-approved|https:\/\/docs.dev.sync.global\/validator_operator\/validator_onboarding.html#validating-that-your-ip-has-been-approved>\n\nTo join the network, you need to be whitelisted by the majority of SVs (12+ for the DevNet as of now)\n\nYou can check all available scan URLs per network here: <https:\/\/sync.global\/sv-network\/|https:\/\/sync.global\/sv-network\/>",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "ef1f7e9060b7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-11-07\/4345961656321_ef1f7e9060b7d426137a_72.jpg",
+            "first_name": "Oleksii",
+            "real_name": "Oleksii Maiko",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "oleksii.maiko",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754223174.555669",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4cQu3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi\nPlease use this guide to check the whitelist for the DevNet: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/validator_operator\/validator_onboarding.html#validating-that-your-ip-has-been-approved",
+                                "text": "https:\/\/docs.dev.sync.global\/validator_operator\/validator_onboarding.html#validating-that-your-ip-has-been-approved"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nTo join the network, you need to be whitelisted by the majority of SVs (12+ for the DevNet as of now)\n\nYou can check all available scan URLs per network here: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/sync.global\/sv-network\/",
+                                "text": "https:\/\/sync.global\/sv-network\/"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "Hi <@UUT0L5W2J>\n\nI had already tested this and it was fine.",
+        "files": [
+            {
+                "id": "F0989UC6PDM",
+                "created": 1754226122,
+                "timestamp": 1754226122,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U095FB31DLH",
+                "user_team": "T095FB30QQ1",
+                "editable": false,
+                "size": 82974,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T095FB30QQ1-F0989UC6PDM\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T095FB30QQ1-F0989UC6PDM\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F0989UC6PDM-e0d129fd86\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F0989UC6PDM-e0d129fd86\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F0989UC6PDM-e0d129fd86\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 111,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F0989UC6PDM-e0d129fd86\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 148,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F0989UC6PDM-e0d129fd86\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F0989UC6PDM-e0d129fd86\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 222,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F0989UC6PDM-e0d129fd86\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 247,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F0989UC6PDM-e0d129fd86\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 296,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F0989UC6PDM-e0d129fd86\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 316,
+                "original_w": 1401,
+                "original_h": 432,
+                "thumb_tiny": "AwAPADCh93BB68fpTljUhTvwT16f40GThcE5A9+P1pBIQc5OR0GT\/jQA1scYJIHrSAkdCR3pWbdgZJA6ZptAC0lFFAH\/2Q==",
+                "permalink": "https:\/\/dltahq.slack.com\/files\/U05FZBDQ4RJ\/F0989UC6PDM\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T095FB30QQ1-F0989UC6PDM-d6949b525d",
+                "source_team": "T095FB30QQ1",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U095FB31DLH",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NuG1h",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UUT0L5W2J"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nI had already tested this and it was fine."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1754226155.575069",
+        "client_msg_id": "b59214b0-9611-48f4-a8f5-ae1bb2644ed7",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1754223174.555669",
+        "parent_user_id": "U095FB31DLH",
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "reactions": [
+            {
+                "name": "pipeline-success",
+                "users": [
+                    "UUT0L5W2J"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "I even tried to force curl to use json\/application and got a load of HTML back",
+        "files": [
+            {
+                "id": "F098RTNN81J",
+                "created": 1754226207,
+                "timestamp": 1754226207,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U095FB31DLH",
+                "user_team": "T095FB30QQ1",
+                "editable": false,
+                "size": 63933,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T095FB30QQ1-F098RTNN81J\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T095FB30QQ1-F098RTNN81J\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F098RTNN81J-367b287928\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F098RTNN81J-367b287928\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F098RTNN81J-367b287928\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 164,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F098RTNN81J-367b287928\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 219,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F098RTNN81J-367b287928\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F098RTNN81J-367b287928\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 328,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F098RTNN81J-367b287928\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 364,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F098RTNN81J-367b287928\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 437,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T095FB30QQ1-F098RTNN81J-367b287928\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 466,
+                "original_w": 1122,
+                "original_h": 511,
+                "thumb_tiny": "AwAWADCjGFzyxBx2\/lS7s\/N5jA5J65P+f8KYOh+bGO3rSHr1zQBIygDIlzk56HnmmkttA3Er1xmmjHekoAXccYyaXLZDZP1ptFADmG3g47Hj3FJTpfvj\/dX+QplAC0HHGPxpKKACiiigD\/\/Z",
+                "permalink": "https:\/\/dltahq.slack.com\/files\/U05FZBDQ4RJ\/F098RTNN81J\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T095FB30QQ1-F098RTNN81J-7b73837bdd",
+                "source_team": "T095FB30QQ1",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U095FB31DLH",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iNyMa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I even tried to force curl to use json\/application and got a load of HTML back"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1754226213.145439",
+        "client_msg_id": "88b77078-7941-424e-81b6-7666ce5fccab",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1754223174.555669",
+        "parent_user_id": "U095FB31DLH",
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U01DARYACCT",
+        "type": "message",
+        "ts": "1754227065.550739",
+        "edited": {
+            "user": "U01DARYACCT",
+            "ts": "1754227086.000000"
+        },
+        "client_msg_id": "6F2A4C13-D453-4066-9F10-755883717478",
+        "text": "the first screenshot shows scan, the second one sv, the path for sv would be \/api\/sv\/version",
+        "team": "T05FWTX7PMG",
+        "user_team": "E014GLQD2NN",
+        "source_team": "E014GLQD2NN",
+        "user_profile": {
+            "avatar_hash": "889d6e9cb5ee",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-10-04\/783644907056_889d6e9cb5ee13fbff83_72.jpg",
+            "first_name": "Stas",
+            "real_name": "Stas German",
+            "display_name": "stasge",
+            "team": "E014GLQD2NN",
+            "name": "stasge",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754223174.555669",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cJkk6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the first screenshot shows scan, the second one sv, the path for sv would be \/api\/sv\/version"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08SD4YLZB2",
+        "type": "message",
+        "ts": "1754228953.454009",
+        "client_msg_id": "3738CF5C-A685-40AE-9339-C71BBCD9D3A6",
+        "text": "Hi all -  I’m currently signed up with ProofGroup, Brale and CBTC for rewards….havent seen much in the way of rewards yet, since I’ve recently started, but was curious as to what other. apps you all might be using that have a nice CC yield on investment?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08SD4YLNCQ",
+        "source_team": "T08SD4YLNCQ",
+        "user_profile": {
+            "avatar_hash": "31317b05add1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-17\/8903813595043_31317b05add15f406072_72.png",
+            "first_name": "Max",
+            "real_name": "Max Myers",
+            "display_name": "Mmyers",
+            "team": "T08SD4YLNCQ",
+            "name": "mmyers",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UtQd3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all -  "
+                            },
+                            {
+                                "type": "text",
+                                "text": "I’m"
+                            },
+                            {
+                                "type": "text",
+                                "text": " currently signed up with ProofGroup, Brale and CBTC for rewards"
+                            },
+                            {
+                                "type": "text",
+                                "text": "…"
+                            },
+                            {
+                                "type": "text",
+                                "text": ".havent seen much in the way of rewards yet, since "
+                            },
+                            {
+                                "type": "text",
+                                "text": "I’ve"
+                            },
+                            {
+                                "type": "text",
+                                "text": " recently started, but was curious as to what other"
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            },
+                            {
+                                "type": "text",
+                                "text": " apps you all might be using that have a nice CC yield on investment?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U095FB31DLH",
+        "type": "message",
+        "ts": "1754235247.180629",
+        "client_msg_id": "e57a70bb-9525-4505-8b69-1031f18d5bc7",
+        "text": "<@U01DARYACCT> - so all I need to do is append that to the URL for the sponsor?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754223174.555669",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "S\/LoW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U01DARYACCT"
+                            },
+                            {
+                                "type": "text",
+                                "text": " - so all I need to do is append that to the URL for the sponsor?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U095FB31DLH",
+        "type": "message",
+        "ts": "1754235568.095619",
+        "client_msg_id": "a526a445-365d-44f4-b6e8-fab70cdf7a77",
+        "text": "To confirm, the scanAddress in validator-values.yaml should be:\n\n```<https:\/\/sv.sv-2.dev.global.canton.network.digitalasset.com\/api\/sv\/version>```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754223174.555669",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "w6Ruz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "To confirm, the scanAddress in validator-values.yaml should be:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/sv.sv-2.dev.global.canton.network.digitalasset.com\/api\/sv\/version"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UUT0L5W2J",
+        "type": "message",
+        "ts": "1754236544.251399",
+        "client_msg_id": "9e3708c5-2fc7-4af3-b7df-fd7e7cfdec94",
+        "text": "scan address starts with the `scan.`\n\"Sponsor address\" starts with the `sv.`",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "ef1f7e9060b7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-11-07\/4345961656321_ef1f7e9060b7d426137a_72.jpg",
+            "first_name": "Oleksii",
+            "real_name": "Oleksii Maiko",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "oleksii.maiko",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754223174.555669",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "STXu9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "scan address starts with the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "scan.",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\"Sponsor address\" starts with the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "sv.",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U095FB31DLH",
+        "type": "message",
+        "ts": "1754236923.246419",
+        "client_msg_id": "e0ccd3a8-6b68-43af-80bd-fa43a397e491",
+        "text": "<@U01DARYACCT> - I tried adding \/api\/sv\/version to the end of my scanAddress and then just appended `\/api\/scan\/version` so the GET request looked like this:\n```GET <https:\/\/sv.sv-2.dev.global.canton.network.digitalasset.com\/api\/sv\/version\/api\/scan\/version>```\n<@UUT0L5W2J> - The issue I'm having is that when my validator tries to reach back, it's giving me this error:\n```Unsupported Content-Type [Some(text\/html)], supported: application\/json```\nMy validator-values.yaml page states this:\n`<https:\/\/sv.sv-2.dev.global.canton.network.digitalasset.com>`\nIt is then auto-appending `\/api\/scan\/version` which then returns HTTP content where it appears to be expecting JSON content, which I think is leading to the error.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754223174.555669",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Cy2VS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U01DARYACCT"
+                            },
+                            {
+                                "type": "text",
+                                "text": " - I tried adding \/api\/sv\/version to the end of my scanAddress and then just appended "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/api\/scan\/version",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " so the GET request looked like this:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "GET "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/sv.sv-2.dev.global.canton.network.digitalasset.com\/api\/sv\/version\/api\/scan\/version"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "UUT0L5W2J"
+                            },
+                            {
+                                "type": "text",
+                                "text": " - The issue I'm having is that when my validator tries to reach back, it's giving me this error:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Unsupported Content-Type [Some(text\/html)], supported: application\/json"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "My validator-values.yaml page states this:\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/sv.sv-2.dev.global.canton.network.digitalasset.com",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nIt is then auto-appending "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/api\/scan\/version",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " which then returns HTTP content where it appears to be expecting JSON content, which I think is leading to the error."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U095FB31DLH",
+        "type": "message",
+        "ts": "1754236996.664579",
+        "client_msg_id": "c427742b-2ebf-4535-93ef-75065d51608c",
+        "text": "Should my scan address be:\n```<https:\/\/scan.sv-2.dev.global.canton.network.digitalasset.com>```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754223174.555669",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EOxM3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Should my scan address be:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-2.dev.global.canton.network.digitalasset.com"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U095FB31DLH",
+        "type": "message",
+        "ts": "1754236999.190389",
+        "client_msg_id": "8b202491-64b9-4017-bd2b-33ab51665c90",
+        "text": "?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754223174.555669",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DZgpv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U095FB31DLH",
+        "type": "message",
+        "ts": "1754237114.126729",
+        "edited": {
+            "user": "U095FB31DLH",
+            "ts": "1754237136.000000"
+        },
+        "client_msg_id": "45f78712-acd3-4082-ab12-f525db7c9cf2",
+        "text": "I just tried running `curl -H \"Content-Type: application\/json\" -s <https:\/\/scan.sv-2.dev.global.canton.network.digitalasset.com\/api\/sv\/version>` \nAnd it gave me HTML again",
+        "team": "T05FWTX7PMG",
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754223174.555669",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "emf\/e",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I just tried running "
+                            },
+                            {
+                                "type": "text",
+                                "text": "curl -H \"Content-Type: application\/json\" -s ",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-2.dev.global.canton.network.digitalasset.com\/api\/sv\/version",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " ",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nAnd it gave me HTML again"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U03TRNED8ES",
+        "type": "message",
+        "ts": "1754257390.034669",
+        "client_msg_id": "67568858-07f0-4d67-aef2-6ada4ad91a56",
+        "text": "Going to piggy back off this comment so I don’t spam the channel, and see if we can get the following added:\n\n<mailto:avinava@piertwo.com|avinava@piertwo.com>\n<mailto:dave@piertwo.com|dave@piertwo.com>\n<mailto:tushar@piertwo.com|tushar@piertwo.com>\n\nThanks <@U08G1KD2XSB>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03TM2X9E8J",
+        "source_team": "T03TM2X9E8J",
+        "user_profile": {
+            "avatar_hash": "df7911ae7478",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-08-16\/3952832497892_df7911ae74783c8622bb_72.jpg",
+            "first_name": "Seamus",
+            "real_name": "Seamus McNab",
+            "display_name": "Pier Two - Seamus McNab",
+            "team": "T03TM2X9E8J",
+            "name": "seamus",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754071153.909219",
+        "parent_user_id": "U08KBEEPLKE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+5aNP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Going to piggy back off this comment so I don’t spam the channel, and see if we can get the following added:\n\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:avinava@piertwo.com",
+                                "text": "avinava@piertwo.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:dave@piertwo.com",
+                                "text": "dave@piertwo.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:tushar@piertwo.com",
+                                "text": "tushar@piertwo.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nThanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U08G1KD2XSB"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "done",
+                "users": [
+                    "U08G1KD2XSB"
+                ],
+                "count": 1
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U08G1KD2XSB"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "Splice release 0.4.9 is ready for deployment on DevNet",
+        "type": "message",
+        "ts": "1754266233.749279",
+        "bot_id": "B08HVPQURK8",
+        "team": "T05FWTX7PMG",
+        "bot_profile": {
+            "id": "B08HVPQURK8",
+            "app_id": "A08J1DB9NFP",
+            "name": "Upgrade Announcement",
+            "icons": {
+                "image_36": "https:\/\/avatars.slack-edge.com\/2025-03-18\/8620985120898_5933881ee684291a6301_36.png",
+                "image_48": "https:\/\/avatars.slack-edge.com\/2025-03-18\/8620985120898_5933881ee684291a6301_48.png",
+                "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-18\/8620985120898_5933881ee684291a6301_72.png"
+            },
+            "deleted": false,
+            "updated": 1745496545,
+            "team_id": "T07LSPYDRT4"
+        },
+        "blocks": [
+            {
+                "type": "section",
+                "block_id": "kwEon",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": ":tada: Splice release `0.4.9` is ready for deployment on DevNet, and is available from the GSF\n:ship: ⅔ of Super Validator nodes have upgraded to this release, including the GSF Super Validator node\n*SV node status here*: <https:\/\/sync.global\/sv-network>\n*Release notes here*: <https:\/\/docs.dev.sync.global\/release_notes.html>\n",
+                    "verbatim": false
+                }
+            }
+        ],
+        "reactions": [
+            {
+                "name": "clap::skin-tone-2",
+                "users": [
+                    "U02T94QS4U8"
+                ],
+                "count": 1
+            },
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U040VDGJ7J5"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U092DKJ8L4Q",
+        "type": "message",
+        "ts": "1754285035.507019",
+        "client_msg_id": "f1ae9406-1a09-420a-a6e2-ede3bd4c789f",
+        "text": "Company： SGPdefi Technology Co., Ltd.\nEmail：<mailto:baichuan@sgpdefi.com|baichuan@sgpdefi.com>\nIP:192.238.253.208",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88e7604dd804",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-16\/9081664858656_88e7604dd8040c247efa_72.png",
+            "first_name": "Amy",
+            "real_name": "Amy Wu",
+            "display_name": "Amy Wu",
+            "team": "T05FWTX7PMG",
+            "name": "amy",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753784023.332859",
+        "parent_user_id": "U092DKJ8L4Q",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6AGLE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Company： SGPdefi Technology Co., Ltd.\nEmail："
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:baichuan@sgpdefi.com",
+                                "text": "baichuan@sgpdefi.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nIP:192.238.253.208"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

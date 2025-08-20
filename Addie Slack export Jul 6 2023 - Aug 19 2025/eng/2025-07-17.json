@@ -1,0 +1,2380 @@
+[
+    {
+        "subtype": "channel_join",
+        "user": "U05FU0HPZ9T",
+        "text": "<@U05FU0HPZ9T> has joined the channel",
+        "type": "message",
+        "ts": "1752761139.140999"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U093Q4FPEJG",
+        "text": "<@U093Q4FPEJG> has joined the channel",
+        "inviter": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1752761152.679069"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U088UV6MKFE",
+        "text": "<@U088UV6MKFE> has joined the channel",
+        "inviter": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1752761152.782419"
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1752761177.733949",
+        "client_msg_id": "9f804269-c1e1-435b-8eb8-9466c5f1a832",
+        "text": "yo",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "G+ntM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yo"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1752762973.779559",
+        "client_msg_id": "99e72b6b-1638-4999-963b-aa48280a9fa1",
+        "text": "<https:\/\/github.com\/DLC-link\/canton-billing.git>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZZA8f",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton-billing.git"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752762997.246219",
+        "client_msg_id": "cf25bcea-c440-4a6a-a24c-de79d1791b69",
+        "text": "<https:\/\/github.com\/DLC-link\/canton-billing>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UkIuv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton-billing"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "<@U093Q4FPEJG> we can think a bit about the feature set of your backend process app.\n\nI suppose some ideas:\n\nThe Billing Credential will have the following attributes:\n\nHolder: String (that’s the party that is accepting the credentials and paying for them)\nId: String (usually like &lt;customer-business-name&gt;-cbtc-holder\nDescription: String\nClaims : Array of Subject: String, Property: String, Value: String\nFee_Per_day: int (USD value of the amount to spend per day from this credential to us)\nBilling_Period: int (in minutes, how often the payment happens)\nCredential_Fees_Reserve_Amount: int (in USD, amount of USD they will lock up)\nCredential_Fees_Target_Reserve_Amount: int (in USD, I forget what this is for :slightly_smiling_face: )",
+        "files": [
+            {
+                "id": "F0964HC3P9R",
+                "created": 1752765624,
+                "timestamp": 1752765624,
+                "name": "Screenshot 2025-07-17 at 17.19.59.png",
+                "title": "Screenshot 2025-07-17 at 17.19.59.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U05FU0HPZ9T",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 123872,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F0964HC3P9R\/screenshot_2025-07-17_at_17.19.59.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F0964HC3P9R\/download\/screenshot_2025-07-17_at_17.19.59.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0964HC3P9R-410d250abc\/screenshot_2025-07-17_at_17.19.59_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0964HC3P9R-410d250abc\/screenshot_2025-07-17_at_17.19.59_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0964HC3P9R-410d250abc\/screenshot_2025-07-17_at_17.19.59_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 242,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0964HC3P9R-410d250abc\/screenshot_2025-07-17_at_17.19.59_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 323,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0964HC3P9R-410d250abc\/screenshot_2025-07-17_at_17.19.59_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0964HC3P9R-410d250abc\/screenshot_2025-07-17_at_17.19.59_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 484,
+                "thumb_720_h": 720,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0964HC3P9R-410d250abc\/screenshot_2025-07-17_at_17.19.59_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 1190,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0964HC3P9R-410d250abc\/screenshot_2025-07-17_at_17.19.59_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 646,
+                "thumb_960_h": 960,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0964HC3P9R-410d250abc\/screenshot_2025-07-17_at_17.19.59_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 689,
+                "thumb_1024_h": 1024,
+                "original_w": 1150,
+                "original_h": 1710,
+                "thumb_tiny": "AwAwACHTopADuOSCO3HSloAKKKKACiiigA\/Gj8ajSPa5be5zngtkflUlAB+NFFFABRRRQA3PzE4X2OaXI9R+dJuOfuH9Kd2oATI9RQWA70tIT25H4UAGR6ijI9RS5+v5UZ+v5UAf\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F0964HC3P9R\/screenshot_2025-07-17_at_17.19.59.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F0964HC3P9R-33aa6945ca",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U05FU0HPZ9T",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "S0P4L",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U093Q4FPEJG"
+                            },
+                            {
+                                "type": "text",
+                                "text": " we can think a bit about the feature set of your backend process app.\n\nI suppose some ideas:\n\nThe Billing Credential will have the following attributes:\n\nHolder: String (that’s the party that is accepting the credentials and paying for them)\nId: String (usually like <customer-business-name>-cbtc-holder\nDescription: String\nClaims : Array of Subject: String, Property: String, Value: String\nFee_Per_day: int (USD value of the amount to spend per day from this credential to us)\nBilling_Period: int (in minutes, how often the payment happens)\nCredential_Fees_Reserve_Amount: int (in USD, amount of USD they will lock up)\nCredential_Fees_Target_Reserve_Amount: int (in USD, I forget what this is for "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            },
+                            {
+                                "type": "text",
+                                "text": " )"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1752765920.554139",
+        "client_msg_id": "89f0ef01-9fa5-4ea0-b36f-8ea3bd984517"
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1752766099.620109",
+        "client_msg_id": "60c2e9fd-8e4a-403e-b474-42f0716330fb",
+        "text": "So features of your app:\n\nHappy Path\n1. It should periodically poll every X seconds to see if any credentials are ready to be paid. Fetch all contracts and filter based on previous call to the `send_payment` function?\n2. If any are ready, it can call the “send_payment” option for this bill, \nError Handling\n1. It can report if any one’s reserve gets too low (less then X days of billing remain)\n2. It can report if anything fails",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EXHBs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So features of your app:\n\nHappy Path\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "It should periodically poll every X seconds to see if any credentials are ready to be paid. Fetch all contracts and filter based on previous call to the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "send_payment",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " function?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "If any are ready, it can call the “send_payment” option for this bill, "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nError Handling\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "It can report if any one’s reserve gets too low (less then X days of billing remain)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "It can report if anything fails"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1752766300.523009",
+        "edited": {
+            "user": "U093Q4FPEJG",
+            "ts": "1752766531.000000"
+        },
+        "client_msg_id": "086e2e26-3775-4f44-80ae-cd510bf7b957",
+        "text": "<https:\/\/editor.swagger.io\/>\n<https:\/\/raw.githubusercontent.com\/scolear\/canton-api-rust-client\/refs\/heads\/main\/openapi-spec.yaml>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OY5A0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/editor.swagger.io\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/raw.githubusercontent.com\/scolear\/canton-api-rust-client\/refs\/heads\/main\/openapi-spec.yaml"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "USLACKBOT",
+        "subtype": "channel_tab_added",
+        "tab_id": "Ct0968GNQE69",
+        "tab_added_user_id": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1752768859.357169",
+        "text": "",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T05FWTX7PMG",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jCtbZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Jesse Eisenberg added Some Test Folder? as a tab"
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FU0HPZ9T"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "So I created a basic Postman Collection.\n\nI also added scripts to some of them, do check them out. But, in essence, if you run them in sequence from top to bottom, each request will set up env vars for the upcoming requests.",
+        "files": [
+            {
+                "id": "F095W0UH9FH",
+                "created": 1752768816,
+                "timestamp": 1752768816,
+                "name": "Screenshot 2025-07-17 at 18.11.23.png",
+                "title": "Screenshot 2025-07-17 at 18.11.23.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 11112,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F095W0UH9FH\/screenshot_2025-07-17_at_18.11.23.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F095W0UH9FH\/download\/screenshot_2025-07-17_at_18.11.23.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F095W0UH9FH-6093c68bec\/screenshot_2025-07-17_at_18.11.23_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F095W0UH9FH-6093c68bec\/screenshot_2025-07-17_at_18.11.23_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F095W0UH9FH-6093c68bec\/screenshot_2025-07-17_at_18.11.23_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 296,
+                "thumb_360_h": 157,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F095W0UH9FH-6093c68bec\/screenshot_2025-07-17_at_18.11.23_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "original_w": 296,
+                "original_h": 157,
+                "thumb_tiny": "AwAaADDROe3WkO\/HG3NO71H\/AHv3Y6+o5oAkGcc4z7UUwBQ33APfin0AFNf\/AFbfQ06mv\/q2+hoAXHNNIGM\/N+GafRQAzAxt+bj60mAgz8x\/M1JRQA0fMOM\/iMUjcxseencU+mv\/AKtvoaAP\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F095W0UH9FH\/screenshot_2025-07-17_at_18.11.23.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F095W0UH9FH-0e8aca7950",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F096AG231J6",
+                "created": 1752768822,
+                "timestamp": 1752768822,
+                "name": "Screenshot 2025-07-17 at 18.11.33.png",
+                "title": "Screenshot 2025-07-17 at 18.11.33.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 36297,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F096AG231J6\/screenshot_2025-07-17_at_18.11.33.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F096AG231J6\/download\/screenshot_2025-07-17_at_18.11.33.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F096AG231J6-2da22d7dfa\/screenshot_2025-07-17_at_18.11.33_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F096AG231J6-2da22d7dfa\/screenshot_2025-07-17_at_18.11.33_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F096AG231J6-2da22d7dfa\/screenshot_2025-07-17_at_18.11.33_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 170,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F096AG231J6-2da22d7dfa\/screenshot_2025-07-17_at_18.11.33_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 227,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F096AG231J6-2da22d7dfa\/screenshot_2025-07-17_at_18.11.33_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "original_w": 625,
+                "original_h": 295,
+                "thumb_tiny": "AwAXADDSPQ9T+NIR3wx+hoDAsRkZHbNLwCOvP1oAQfLwFYj1zS55xg\/Wk3AgH5vToaUEe\/5GgBaKQHPr+VGQcjn8qAFooooAPxo70UUAFFFFAH\/\/2Q==",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F096AG231J6\/screenshot_2025-07-17_at_18.11.33.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F096AG231J6-e1f808ee3a",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2wTVn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So I created a basic Postman Collection.\n\nI also added scripts to some of them, do check them out. But, in essence, if you run them in sequence from top to bottom, each request will set up env vars for the upcoming requests."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1752768873.924199",
+        "client_msg_id": "bdd0950b-3197-446a-b41b-8b927dec4d8c",
+        "thread_ts": "1752768873.924199",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1752768948.178089",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752768948.178089"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "reactions": [
+            {
+                "name": "fire",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752768948.178089",
+        "client_msg_id": "9202b467-4a22-472f-b6af-811abbf6370e",
+        "text": "These three simple calls represent 99% of interacting we have to do.\n\nLedger end, Active Contracts, Exercise a choice (and a get parties is there, but only to help fill some env vars. in prod, those are from keycloak\/hardcoded to the backend)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752768873.924199",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rBpee",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "These three simple calls represent 99% of interacting we have to do.\n\nLedger end, Active Contracts, Exercise a choice (and a get parties is there, but only to help fill some env vars. in prod, those are from keycloak\/hardcoded to the backend)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "USLACKBOT",
+        "subtype": "tabbed_canvas_updated",
+        "canvas_update_user_ids": [
+            "U088UV6MKFE"
+        ],
+        "canvas_update_section_ids": [
+            "temp:C:HVVfb06426c03aa4286a6c60f43d",
+            "temp:C:HVVd034ea8218de4a26b60bd4bb6",
+            "temp:C:HVV6cc4a2fd1e5c4273a071e5737"
+        ],
+        "canvas_update_canvas_id": "F0966AKF0G6",
+        "canvas_update_ai_summary_blocks": [],
+        "type": "message",
+        "ts": "1752769386.759749",
+        "text": "",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T05FWTX7PMG",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5pxum",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Robert Tera made updates to a canvas tab: "
+                            },
+                            {
+                                "type": "canvas",
+                                "file_id": "F0966AKF0G6"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752769792.464709",
+        "client_msg_id": "f7ed2cf4-f6bd-4681-8f13-83209a37122a",
+        "text": "So to recap, first we are building a prototype, to prove we can, and that everyone is familiar with the stack.\n• JJ is launching a UI that can be used to issue\/accept credentials\n• Ferenc is working on a backend app, that can read active contracts of an 'operator' party, and call choices on them periodically\n• I will be building the DAML\nWe meet in the middle",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CcHms",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So to recap, first we are building a prototype, to prove we can, and that everyone is familiar with the stack.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "JJ is launching a UI that can be used to issue\/accept credentials"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Ferenc is working on a backend app, that can read active contracts of an 'operator' party, and call choices on them periodically"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I will be building the DAML"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nWe meet in the middle"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1752772017.868859",
+        "edited": {
+            "user": "U093Q4FPEJG",
+            "ts": "1752773756.000000"
+        },
+        "client_msg_id": "E6EC824F-1CE4-466F-89A2-9AF508999501",
+        "text": "<@U088UV6MKFE> We as a “party” are a FAP? So if we create own solution we remain to be a FAP or the contract the FAP?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752772017.868859",
+        "reply_count": 3,
+        "reply_users_count": 2,
+        "latest_reply": "1752784134.338099",
+        "reply_users": [
+            "U088UV6MKFE",
+            "U093Q4FPEJG"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752780873.645509"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752783680.945249"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1752784134.338099"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5Yxjm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " We as a “party” ar"
+                            },
+                            {
+                                "type": "text",
+                                "text": "e"
+                            },
+                            {
+                                "type": "text",
+                                "text": " a FAP? So if we create own solution we remain to be a FAP or the contract the FAP?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1752779675.363689",
+        "client_msg_id": "4fa76cb9-5a27-4116-8dee-d84158c2b74b",
+        "text": "One other idea in the FE we might want <@U088UV6MKFE> is to show the user’s CC holdings, so they are sure they have enough CC to accept the credential? Do you imagine that Accepting the credential sends CC in the same step \/ tx?\n\nAlso, let’s not forget to add a DAML choice for cancelling the credentials by someone",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752779675.363689",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1752781104.446409",
+        "reply_users": [
+            "U088UV6MKFE",
+            "U093Q4FPEJG"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752780792.492029"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1752781104.446409"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UWY8J",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "One other idea in the FE we might want "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " is to show the user’s CC holdings, so they are sure they have enough CC to accept the credential? Do you imagine that Accepting the credential sends CC in the same step \/ tx?\n\nAlso, let’s not forget to add a DAML choice for cancelling the credentials by someone"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752780792.492029",
+        "client_msg_id": "3a6fed16-488d-4b00-b0ba-60a2c32ad5c3",
+        "text": "&gt;  Do you imagine that Accepting the credential sends CC in the same step \/ tx?\nThis depends on the final architecture. If its the costudial way, it might be two steps, but due to the nature of DAML, it can still come from a single 'click' on the FE actually\n\n&gt; show the user’s CC holdings\nThis is a good idea, you could peep at the network tab of the Wallet UI, to see how they fetch Amulet balance",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752779675.363689",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8FKoq",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " Do you imagine that Accepting the credential sends CC in the same step \/ tx?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This depends on the final architecture. If its the costudial way, it might be two steps, but due to the nature of DAML, it can still come from a single 'click' on the FE actually\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "show the user’s CC holdings"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This is a good idea, you could peep at the network tab of the Wallet UI, to see how they fetch Amulet balance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752780873.645509",
+        "client_msg_id": "51c4fefe-198c-43b1-8c53-bf5321d6fd19",
+        "text": "I don't fully know yet, how we can mimic this, but on DevNet, we can request FAP rights to ourselves. I think it just means we create a FeaturedAppRightV1 contract to ourselves, its in the linked daml contracts...\nHowever, it should not matter for our testing, until we get to DevNet.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752772017.868859",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RKaAX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I don't fully know yet, how we can mimic this, but on DevNet, we can request FAP rights to ourselves. I think it just means we create a FeaturedAppRightV1 contract to ourselves, its in the linked daml contracts...\nHowever, it should not matter for our testing, until we get to DevNet."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1752781104.446409",
+        "client_msg_id": "0e84a58e-d82e-4e0c-87fd-eaaefd60020e",
+        "text": "Probably we wrap it behind the backend. So that can be any amount of steps.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752779675.363689",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2yIVd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Probably we wrap it behind the backend. So that can be any amount of steps."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752783517.390999",
+        "text": "should we still bother with building an actual app, or......",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "ts": "1752783415.168419",
+                "author_id": "U088UV6MKFE",
+                "channel_id": "C094Q9TUVUL",
+                "channel_team": "T05FWTX7PMG",
+                "is_msg_unfurl": true,
+                "message_blocks": [
+                    {
+                        "team": "T05FWTX7PMG",
+                        "channel": "C094Q9TUVUL",
+                        "ts": "1752783415.168419",
+                        "message": {
+                            "blocks": [
+                                {
+                                    "type": "rich_text",
+                                    "block_id": "Yr\/FE",
+                                    "elements": [
+                                        {
+                                            "type": "rich_text_section",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Sidenote, but Fairmint is quite shamelessly farming in the open "
+                                                },
+                                                {
+                                                    "type": "emoji",
+                                                    "name": "smile",
+                                                    "unicode": "1f604"
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                },
+                                                {
+                                                    "type": "link",
+                                                    "url": "https:\/\/www.cantonscan.com\/search\/12204a039322c01e9f714b56259c3e68b69058bf5dfe1debbe956c698f905ceba9d7"
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": "\nTheir validator hosts 85 parties, whose balances look exactly like this, just a deposit, and a slow spend to 0, earning their receiver app rewards.\nI wonder how the GSF will deal with this"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "files": [
+                    {
+                        "id": "F0968EAFYMC",
+                        "created": 1752783184,
+                        "timestamp": 1752783184,
+                        "name": "Screenshot 2025-07-17 at 22.08.34.png",
+                        "title": "Screenshot 2025-07-17 at 22.08.34.png",
+                        "mimetype": "image\/png",
+                        "filetype": "png",
+                        "pretty_type": "PNG",
+                        "user": "U088UV6MKFE",
+                        "user_team": "T05FWTX7PMG",
+                        "editable": false,
+                        "size": 166223,
+                        "mode": "hosted",
+                        "is_external": false,
+                        "external_type": "",
+                        "is_public": true,
+                        "public_url_shared": false,
+                        "display_as_bot": false,
+                        "username": "",
+                        "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F0968EAFYMC\/screenshot_2025-07-17_at_22.08.34.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F0968EAFYMC\/download\/screenshot_2025-07-17_at_22.08.34.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "media_display_type": "unknown",
+                        "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0968EAFYMC-9a49a3fa76\/screenshot_2025-07-17_at_22.08.34_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0968EAFYMC-9a49a3fa76\/screenshot_2025-07-17_at_22.08.34_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0968EAFYMC-9a49a3fa76\/screenshot_2025-07-17_at_22.08.34_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_360_w": 360,
+                        "thumb_360_h": 308,
+                        "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0968EAFYMC-9a49a3fa76\/screenshot_2025-07-17_at_22.08.34_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_480_w": 480,
+                        "thumb_480_h": 411,
+                        "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0968EAFYMC-9a49a3fa76\/screenshot_2025-07-17_at_22.08.34_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0968EAFYMC-9a49a3fa76\/screenshot_2025-07-17_at_22.08.34_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_720_w": 720,
+                        "thumb_720_h": 617,
+                        "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0968EAFYMC-9a49a3fa76\/screenshot_2025-07-17_at_22.08.34_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_800_w": 800,
+                        "thumb_800_h": 685,
+                        "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0968EAFYMC-9a49a3fa76\/screenshot_2025-07-17_at_22.08.34_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_960_w": 960,
+                        "thumb_960_h": 823,
+                        "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0968EAFYMC-9a49a3fa76\/screenshot_2025-07-17_at_22.08.34_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_1024_w": 1024,
+                        "thumb_1024_h": 877,
+                        "original_w": 1306,
+                        "original_h": 1119,
+                        "thumb_tiny": "AwAqADCkBkH5SfpSlenytScdxR8voenrTEGP9k9KSnfLxwfzptABTgPlzhfzptPA+T7q\/Xdz\/OgBlFFFABRRRQAVKoHlf8s+h69aiqZf9T\/yy6Hr96mgZDRR2opAFFFFABUgYCPH7vp3BzUdWkRTaklRnB5xTQmf\/9k=",
+                        "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F0968EAFYMC\/screenshot_2025-07-17_at_22.08.34.png",
+                        "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F0968EAFYMC-01b7822cdb",
+                        "comments_count": 0,
+                        "is_starred": false,
+                        "skipped_shares": true,
+                        "has_rich_preview": false,
+                        "file_access": "visible"
+                    },
+                    {
+                        "id": "F0969REA3GD",
+                        "created": 1752783187,
+                        "timestamp": 1752783187,
+                        "name": "Screenshot 2025-07-17 at 22.08.29.png",
+                        "title": "Screenshot 2025-07-17 at 22.08.29.png",
+                        "mimetype": "image\/png",
+                        "filetype": "png",
+                        "pretty_type": "PNG",
+                        "user": "U088UV6MKFE",
+                        "user_team": "T05FWTX7PMG",
+                        "editable": false,
+                        "size": 104576,
+                        "mode": "hosted",
+                        "is_external": false,
+                        "external_type": "",
+                        "is_public": true,
+                        "public_url_shared": false,
+                        "display_as_bot": false,
+                        "username": "",
+                        "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F0969REA3GD\/screenshot_2025-07-17_at_22.08.29.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F0969REA3GD\/download\/screenshot_2025-07-17_at_22.08.29.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "media_display_type": "unknown",
+                        "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0969REA3GD-ebfba15ba3\/screenshot_2025-07-17_at_22.08.29_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0969REA3GD-ebfba15ba3\/screenshot_2025-07-17_at_22.08.29_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0969REA3GD-ebfba15ba3\/screenshot_2025-07-17_at_22.08.29_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_360_w": 360,
+                        "thumb_360_h": 308,
+                        "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0969REA3GD-ebfba15ba3\/screenshot_2025-07-17_at_22.08.29_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_480_w": 480,
+                        "thumb_480_h": 411,
+                        "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0969REA3GD-ebfba15ba3\/screenshot_2025-07-17_at_22.08.29_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0969REA3GD-ebfba15ba3\/screenshot_2025-07-17_at_22.08.29_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_720_w": 720,
+                        "thumb_720_h": 617,
+                        "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0969REA3GD-ebfba15ba3\/screenshot_2025-07-17_at_22.08.29_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_800_w": 800,
+                        "thumb_800_h": 685,
+                        "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0969REA3GD-ebfba15ba3\/screenshot_2025-07-17_at_22.08.29_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_960_w": 960,
+                        "thumb_960_h": 823,
+                        "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0969REA3GD-ebfba15ba3\/screenshot_2025-07-17_at_22.08.29_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                        "thumb_1024_w": 1024,
+                        "thumb_1024_h": 877,
+                        "original_w": 1306,
+                        "original_h": 1119,
+                        "thumb_tiny": "AwAqADCmCRyNvI7gUbD\/ALPTP3hQM7CMr64xzTaYh2w\/7P8A30KbRRQAUUUUAPAXaTvIb0xTSPejtRTAMUYoooAMUYoooAKKSigBaMdfakooAXqaO2aSigD\/2Q==",
+                        "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F0969REA3GD\/screenshot_2025-07-17_at_22.08.29.png",
+                        "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F0969REA3GD-77ea4b0866",
+                        "comments_count": 0,
+                        "is_starred": false,
+                        "skipped_shares": true,
+                        "has_rich_preview": false,
+                        "file_access": "visible"
+                    }
+                ],
+                "color": "D0D0D0",
+                "from_url": "https:\/\/bit-safe.slack.com\/archives\/C094Q9TUVUL\/p1752783415168419",
+                "is_share": true,
+                "fallback": "[July 17th, 2025 10:16 PM] robert: Sidenote, but Fairmint is quite shamelessly farming in the open :smile: <https:\/\/www.cantonscan.com\/search\/12204a039322c01e9f714b56259c3e68b69058bf5dfe1debbe956c698f905ceba9d7>\nTheir validator hosts 85 parties, whose balances look exactly like this, just a deposit, and a slow spend to 0, earning their receiver app rewards.\nI wonder how the GSF will deal with this",
+                "text": "Sidenote, but Fairmint is quite shamelessly farming in the open :smile: <https:\/\/www.cantonscan.com\/search\/12204a039322c01e9f714b56259c3e68b69058bf5dfe1debbe956c698f905ceba9d7>\nTheir validator hosts 85 parties, whose balances look exactly like this, just a deposit, and a slow spend to 0, earning their receiver app rewards.\nI wonder how the GSF will deal with this",
+                "author_name": "Robert Tera",
+                "author_link": "https:\/\/bit-safe.slack.com\/team\/U088UV6MKFE",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_48.jpg",
+                "author_subname": "Robert Tera",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "footer": "Slack Conversation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8DsCt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "should we still bother with building an actual app, or......"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752783558.331279",
+        "client_msg_id": "9fba4a67-5f9e-4cfd-b24f-f110f3b448e8",
+        "text": "I think this is too much to be honest, very poor taste, but who am i to judge",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "r7dzl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think this is too much to be honest, very poor taste, but who am i to judge"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752783680.945249",
+        "client_msg_id": "b4f40723-4c41-42d5-b80a-3865523a3c5e",
+        "text": "Oh and to answer your question: on Mainnet, we have a FAP party. So as long as that party is receiving CC, it earns rewards",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752772017.868859",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9h+qf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oh and to answer your question: on Mainnet, we have a FAP party. So as long as that party is receiving CC, it earns rewards"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U093Q4FPEJG"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1752784134.338099",
+        "client_msg_id": "0b3ae0b1-991d-4589-888b-5d0bdb1ed71a",
+        "text": "That's good actually, thanks.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752772017.868859",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5ZngK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That's good actually, thanks."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1752784254.253579",
+        "client_msg_id": "76fad35b-662c-4ba5-889c-98230b8cec0b",
+        "text": "<@U088UV6MKFE> So the free money will end soon?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752784254.253579",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1752784908.835699",
+        "reply_users": [
+            "U05FU0HPZ9T"
+        ],
+        "replies": [
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1752784908.835699"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LCWaa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " So the free money will end soon?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752784285.254869",
+        "client_msg_id": "b45f20a8-6229-4540-aecf-1dab1c40e2cf",
+        "text": "Dunno hah",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1FLNI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Dunno hah"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F0966CR5M19",
+                "created": 1752784635,
+                "timestamp": 1752784635,
+                "name": "Screenshot 2025-07-17 at 22.36.54.png",
+                "title": "Screenshot 2025-07-17 at 22.36.54.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U05FU0HPZ9T",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 518176,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F0966CR5M19\/screenshot_2025-07-17_at_22.36.54.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F0966CR5M19\/download\/screenshot_2025-07-17_at_22.36.54.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966CR5M19-552c21e647\/screenshot_2025-07-17_at_22.36.54_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966CR5M19-552c21e647\/screenshot_2025-07-17_at_22.36.54_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966CR5M19-552c21e647\/screenshot_2025-07-17_at_22.36.54_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 317,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966CR5M19-552c21e647\/screenshot_2025-07-17_at_22.36.54_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 422,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966CR5M19-552c21e647\/screenshot_2025-07-17_at_22.36.54_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966CR5M19-552c21e647\/screenshot_2025-07-17_at_22.36.54_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 634,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966CR5M19-552c21e647\/screenshot_2025-07-17_at_22.36.54_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 704,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966CR5M19-552c21e647\/screenshot_2025-07-17_at_22.36.54_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 845,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966CR5M19-552c21e647\/screenshot_2025-07-17_at_22.36.54_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 901,
+                "original_w": 2252,
+                "original_h": 1982,
+                "thumb_tiny": "AwArADDSwKQ4A6H8KU5wcYB7Zo5z7UANVlbOAwx6qR\/OnYHpRxnOKKAGnrjDfUUBcY6\/pzTGUhyS5CsRgCnoexbJPIyMHFAA+dhI6jmgAkqc8Y56806igApAqg5CgE98UtFACM2Me5wKUHIBIx7Uc56jH0pPn9QePTvQAtFV\/Nf1\/SjzH9f0oAsUVB5r+v6UnmP6\/pQBZoqv5r+v6Uea\/r+lAH\/\/2Q==",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F0966CR5M19\/screenshot_2025-07-17_at_22.36.54.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F0966CR5M19-b8b545e0a6",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U05FU0HPZ9T",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1752784643.886079",
+        "client_msg_id": "745f0bc2-33c5-4f79-9ef9-21520a10da0e"
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752784668.402329",
+        "client_msg_id": "112d4609-5712-43fc-ad27-72e052e23155",
+        "text": "eeeeey",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wvi+r",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "eeeeey"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752784669.959669",
+        "client_msg_id": "74ac1bf7-55f0-468e-996e-abf584915e09",
+        "text": "wow",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "R5ajB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "wow"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1752784878.693919",
+        "client_msg_id": "1bcf2c77-b9b2-4c08-ac38-f5f5d87bae6e",
+        "text": "UI hard part is pretty much done. AI can take it from here :laughing:\n\nprobably the next hardest part is packaging it up for an easy deploy",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752784878.693919",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1752823694.071169",
+        "reply_users": [
+            "U093Q4FPEJG",
+            "U05FU0HPZ9T"
+        ],
+        "replies": [
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1752786695.357249"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1752823694.071169"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "a59zt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "UI hard part is pretty much done. AI can take it from here "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "laughing",
+                                "unicode": "1f606"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nprobably the next hardest part is packaging it up for an easy deploy"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1752784908.835699",
+        "client_msg_id": "edc0a120-a6dd-4f40-991c-a972a5d72751",
+        "text": "Well at least saving the $5 will buy us a lot of time",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752784254.253579",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "C7d7s",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Well at least saving the $5 will buy us a lot of time"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1752784951.274369",
+        "client_msg_id": "c45a36b8-128a-4577-8ccf-d3345be64890",
+        "text": "But tomorrow we can think of how to get this fairmint style feature working too, so people who don’t want to install any software don’t have to",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wxuzo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But tomorrow we can think of how to get this fairmint style feature working too, so people who don’t want to install any software don’t have to"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1752785066.988489",
+        "client_msg_id": "25c95f5b-dd22-4ef7-bfae-b7b66cabe16a",
+        "text": "<@U088UV6MKFE> do you know what Kelly was talking about with this comment\n&gt; “the splice amulet 1.0.6 we use in the dar for some reason is not backward compatible and there was no notice given about this (which is very annoying IMO), so we are fighting through that now”",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752785066.988489",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1752785347.972479",
+        "reply_users": [
+            "U088UV6MKFE",
+            "U05FU0HPZ9T"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752785163.404959"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1752785347.972479"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZPRUp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " do you know what Kelly was talking about with this comment\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "“the splice amulet 1.0.6 we use in the dar for some reason is not backward compatible and there was no notice given about this (which is very annoying IMO), so we are fighting through that now”"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752785078.694169",
+        "client_msg_id": "3d28e4b0-ffc0-4589-86ac-c7f92783fb27",
+        "text": "That sounds very easy. I can summarize:\nA backend\/cronjob, that can transfer CC tokens of a local party.\n\nBasically:\n• you set up a new party \n• you send CC to it\n• you periodically call the json_api, to send CC coins to your FAP\n• $$",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+R+l9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That sounds very easy. I can summarize:\nA backend\/cronjob, that can transfer CC tokens of a local party.\n\nBasically:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "you set up a new party "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "you send CC to it"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "you periodically call the json_api, to send CC coins to your FAP"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "$$"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752785106.402379",
+        "client_msg_id": "2cfe2f49-12b6-4c19-b95b-9b2847fd0da1",
+        "text": "no new daml or ui needed",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FNrqe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "no new daml or ui needed"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1752785117.936029",
+        "client_msg_id": "9c730233-adec-413d-b89c-95cad3f0b987",
+        "text": "awesome",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9R3A9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "awesome"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752785163.404959",
+        "client_msg_id": "e8b17d1f-bf14-4762-9585-acb87cb4e3c5",
+        "text": "they built their tool using an old Splice.Amulet DAR version, and its no longer supported",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752785066.988489",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "A5Kq2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "they built their tool using an old Splice.Amulet DAR version, and its no longer supported"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1752785347.972479",
+        "client_msg_id": "04bf8102-d62d-42f0-ab96-efa291a5ba00",
+        "text": "oh gotcha :+1:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752785066.988489",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ygvIA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "oh gotcha "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "thumbsup",
+                                "unicode": "1f44d"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1752786695.357249",
+        "client_msg_id": "596b7dae-a131-4a64-93e8-e51fc051359f",
+        "text": "We can handle it from Go",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752784878.693919",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6qJyy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We can handle it from Go"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "claude is 'overloaded'. good night",
+        "files": [
+            {
+                "id": "F0966HQMXLK",
+                "created": 1752786721,
+                "timestamp": 1752786721,
+                "name": "Screenshot 2025-07-17 at 23.11.58.png",
+                "title": "Screenshot 2025-07-17 at 23.11.58.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 120815,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F0966HQMXLK\/screenshot_2025-07-17_at_23.11.58.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F0966HQMXLK\/download\/screenshot_2025-07-17_at_23.11.58.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966HQMXLK-7a3fbf9677\/screenshot_2025-07-17_at_23.11.58_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966HQMXLK-7a3fbf9677\/screenshot_2025-07-17_at_23.11.58_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966HQMXLK-7a3fbf9677\/screenshot_2025-07-17_at_23.11.58_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 208,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966HQMXLK-7a3fbf9677\/screenshot_2025-07-17_at_23.11.58_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 278,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966HQMXLK-7a3fbf9677\/screenshot_2025-07-17_at_23.11.58_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966HQMXLK-7a3fbf9677\/screenshot_2025-07-17_at_23.11.58_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 417,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966HQMXLK-7a3fbf9677\/screenshot_2025-07-17_at_23.11.58_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 463,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966HQMXLK-7a3fbf9677\/screenshot_2025-07-17_at_23.11.58_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 556,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0966HQMXLK-7a3fbf9677\/screenshot_2025-07-17_at_23.11.58_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 593,
+                "original_w": 1042,
+                "original_h": 603,
+                "thumb_tiny": "AwAcADCkv3Rz2pwzj72Pxpq\/dHFKevP6UAA+uKU5x94fnSUcUAB+uaMfT86D1oBHpQAL0HNHfjikX7o+lLkj\/wDVQAUfjRuP9KKABuvXNH40lFAH\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F0966HQMXLK\/screenshot_2025-07-17_at_23.11.58.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F0966HQMXLK-fda29c6ce4",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+gHbT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "claude is 'overloaded'. good night"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1752786731.239239",
+        "client_msg_id": "9058a97e-efce-4f0c-82a3-a4f12c313eab",
+        "thread_ts": "1752786731.239239",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1752822071.054279",
+        "reply_users": [
+            "U05FU0HPZ9T"
+        ],
+        "replies": [
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1752822071.054279"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "text": "The MVP of the tasks kind of ready. It gets the parties from the node, get the active contracts and execute the predefined function name periodically (can be set from config).",
+        "files": [
+            {
+                "id": "F096AD3GPHB",
+                "created": 1752791690,
+                "timestamp": 1752791690,
+                "name": "Screenshot From 2025-07-18 00-34-25.png",
+                "title": "Screenshot From 2025-07-18 00-34-25.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U093Q4FPEJG",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 87385,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F096AD3GPHB\/screenshot_from_2025-07-18_00-34-25.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F096AD3GPHB\/download\/screenshot_from_2025-07-18_00-34-25.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F096AD3GPHB-7d4246e5c9\/screenshot_from_2025-07-18_00-34-25_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F096AD3GPHB-7d4246e5c9\/screenshot_from_2025-07-18_00-34-25_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F096AD3GPHB-7d4246e5c9\/screenshot_from_2025-07-18_00-34-25_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 125,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F096AD3GPHB-7d4246e5c9\/screenshot_from_2025-07-18_00-34-25_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 167,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F096AD3GPHB-7d4246e5c9\/screenshot_from_2025-07-18_00-34-25_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F096AD3GPHB-7d4246e5c9\/screenshot_from_2025-07-18_00-34-25_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 251,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F096AD3GPHB-7d4246e5c9\/screenshot_from_2025-07-18_00-34-25_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 279,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F096AD3GPHB-7d4246e5c9\/screenshot_from_2025-07-18_00-34-25_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 334,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F096AD3GPHB-7d4246e5c9\/screenshot_from_2025-07-18_00-34-25_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 357,
+                "original_w": 1613,
+                "original_h": 562,
+                "thumb_tiny": "AwARADCnkkAe\/rSZ9P1oJx0pKAF59vzo5xnj86TJ9aMn1oAXn2\/Ojnjpz70mTzyeaMn1oAU9KbTj0ptABRRRQAUUUUAf\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F096AD3GPHB\/screenshot_from_2025-07-18_00-34-25.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F096AD3GPHB-f2349c1f7d",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U093Q4FPEJG",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hIBct",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The MVP of the tasks kind of ready. It gets the parties from the node, get the active contracts and execute the predefined function name periodically (can be set from config)."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1752791752.267419",
+        "client_msg_id": "557802d9-277c-4c1e-a08c-b35922a9ad20",
+        "reactions": [
+            {
+                "name": "fire",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            },
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752821518.033389",
+        "client_msg_id": "6BAF70A6-6556-4382-A9FD-FC31EC2CF895",
+        "text": "Gm folks. Can we postpone the stack review meeting? I have a 11oclock errand to run",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/oI2R",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Gm folks. Can we postpone the stack review meeting? I have a 11oclock errand to run"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

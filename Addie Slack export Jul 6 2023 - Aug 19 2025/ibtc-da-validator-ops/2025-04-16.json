@@ -1,0 +1,618 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744791922.967569",
+        "client_msg_id": "4851e702-0d0f-4a0c-86de-64c4afae5340",
+        "text": "Do you guys know how the Denex GasStation app works? We did not have to host their UI, just authenticate on some site they host, and yet we can adjust values we assume are on some contract related to our validator party.\n\n<@UEHLS0JUB> you mentioned:\n&gt; I'm hoping it will also be the case for mint\/burn but that probably needs double checking.\nCurrently as you've seen minting is fine without exercising choices (if we can create an Account for the user), but withdrawal requires one on the Account. Is it possible to have this feature on a token wallet (with some integration, but how much effort is that?), or not without rethinking the contract architecture?\n\nIn short, we expect that Merchants (the people who mint\/burn) would require some pretty UI to manage their bridgings and Accounts",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744634040.710089",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZJIaP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Do you guys know how the Denex GasStation app works? We did not have to host their UI, just authenticate on some site they host, and yet we can adjust values we assume are on some contract related to our validator party.\n\n"
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " you mentioned:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'm hoping it will also be the case for mint\/burn but that probably needs double checking."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Currently as you've seen minting is fine without exercising choices (if we can create an Account for the user), but withdrawal requires one on the Account. Is it possible to have this feature on a token wallet (with some integration, but how much effort is that?), or not without rethinking the contract architecture?\n\nIn short, we expect that Merchants (the people who mint\/burn) would require some pretty UI to manage their bridgings and Accounts"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744792069.347629",
+        "client_msg_id": "b592f34f-da8c-47ab-a8ef-9052d8e5e063",
+        "text": "&gt; It's essentially a read-only UI from your pov\nHmm there are sliders where we can set some values, but its possible its all off-chain, not sure",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744634040.710089",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zW\/3R",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It's essentially a read-only UI from your pov"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nHmm there are sliders where we can set some values, but its possible its all off-chain, not sure"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744792426.122019",
+        "client_msg_id": "0e2b3cf7-2e71-4479-ace4-e7bcf8e6e321",
+        "text": "&gt; We would need to slightly rearchitect the burn choice and turn it into a token standard transfer\nThat's the dream on EVM too actually! Sounds great\n\nSo the only question remaining would be Account creation\/management. Who\/when\/where could create a new Account contract, and where would a user see their Deposit Addresses, without a custom UI?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744634040.710089",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "z\/60N",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We would need to slightly rearchitect the burn choice and turn it into a token standard transfer"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That's the dream on EVM too actually! Sounds great\n\nSo the only question remaining would be Account creation\/management. Who\/when\/where could create a new Account contract, and where would a user see their Deposit Addresses, without a custom UI?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "Hey <@UEHLS0JUB>. Based on your comments, we have cleaned up the design a lot.\n\n• removed the Deposit Request flow all together. \n• Baked the destination_btc_address into the Account. If you want a new one, create a new Account.\n• introduced a way to store processed BTC blockheight for the Account\n• in an attempt to simplify the Withdraw process as well, reintroduced a `pendingBalance` (not two-way this time. Just increased during a Burn, and Attestors react to seeing it increased, create the Withdraw Request, and set it to 0 in one tx). \n• After 6 Bitcoin confirmations, that request is archived as well.\nLet us know what you think of this iteration!",
+        "files": [
+            {
+                "id": "F08NJ3YK96W",
+                "created": 1744795792,
+                "timestamp": 1744795792,
+                "name": "diBTCArchitecture4.png",
+                "title": "diBTCArchitecture4.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 591718,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08NJ3YK96W\/dibtcarchitecture4.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08NJ3YK96W\/download\/dibtcarchitecture4.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08NJ3YK96W-972a125b29\/dibtcarchitecture4_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08NJ3YK96W-972a125b29\/dibtcarchitecture4_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08NJ3YK96W-972a125b29\/dibtcarchitecture4_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 218,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08NJ3YK96W-972a125b29\/dibtcarchitecture4_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 290,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08NJ3YK96W-972a125b29\/dibtcarchitecture4_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08NJ3YK96W-972a125b29\/dibtcarchitecture4_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 435,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08NJ3YK96W-972a125b29\/dibtcarchitecture4_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 484,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08NJ3YK96W-972a125b29\/dibtcarchitecture4_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 580,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08NJ3YK96W-972a125b29\/dibtcarchitecture4_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 619,
+                "original_w": 3311,
+                "original_h": 2002,
+                "thumb_tiny": "AwAdADCgDg0ufekHWlI9j+VACE570lFL2oASilBxQTQAUceppKUnNABRSUZoAKKM0pPtQB\/\/2Q==",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08NJ3YK96W\/dibtcarchitecture4.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08NJ3YK96W-e22f7304bd",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NopwA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Based on your comments, we have cleaned up the design a lot.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "removed the Deposit Request flow all together. "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Baked the destination_btc_address into the Account. If you want a new one, create a new Account."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "introduced a way to store processed BTC blockheight for the Account"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "in an attempt to simplify the Withdraw process as well, reintroduced a "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "pendingBalance",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " (not two-way this time. Just increased during a Burn, and Attestors react to seeing it increased, create the Withdraw Request, and set it to 0 in one tx). "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "After 6 Bitcoin confirmations, that request is archived as well."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nLet us know what you think of this iteration!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1744796178.435619",
+        "edited": {
+            "user": "U088UV6MKFE",
+            "ts": "1744796295.000000"
+        },
+        "client_msg_id": "0934542a-a3ff-4c2d-8ca6-743192a43a71",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1744796178.435619",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1744804176.336329",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1744804176.336329"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744804176.336329",
+        "client_msg_id": "ce43f07e-a8ba-4094-9d80-2572038013be",
+        "text": "Actually, I am cooking something even better, no worries",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744796178.435619",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZjM06",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Actually, I am cooking something even better, no worries"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "Ok so here is something potentially even better, more daml-oriented than ever before.\n\n• Ultimately, the concept of Deposit and Withdrawal Addresses are separate. So it makes sense to separate the 'Accounts' representing them as well (maybe even rename them to Addresses?).\n• Some users might only have one type of them. \n• Either way, the ability to have multiple of both, means we should allow the free creation of both separately, _and not tie one's functionality to the other_. \n• So, 2 separate templates, for requesting\/registering addresses. \n• The flow itself otherwise is the same as the previous iteration, but total separation of Deposit\/Withdraw flows. \n<@UMW95BAT1> <@UEHLS0JUB>",
+        "files": [
+            {
+                "id": "F08N074AUCF",
+                "created": 1744807453,
+                "timestamp": 1744807453,
+                "name": "diBTCArchitecture2AccountTypes.png",
+                "title": "diBTCArchitecture2AccountTypes.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 955321,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08N074AUCF\/dibtcarchitecture2accounttypes.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08N074AUCF\/download\/dibtcarchitecture2accounttypes.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08N074AUCF-f766e483ba\/dibtcarchitecture2accounttypes_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08N074AUCF-f766e483ba\/dibtcarchitecture2accounttypes_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08N074AUCF-f766e483ba\/dibtcarchitecture2accounttypes_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 130,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08N074AUCF-f766e483ba\/dibtcarchitecture2accounttypes_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 174,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08N074AUCF-f766e483ba\/dibtcarchitecture2accounttypes_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08N074AUCF-f766e483ba\/dibtcarchitecture2accounttypes_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 261,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08N074AUCF-f766e483ba\/dibtcarchitecture2accounttypes_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 290,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08N074AUCF-f766e483ba\/dibtcarchitecture2accounttypes_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 348,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08N074AUCF-f766e483ba\/dibtcarchitecture2accounttypes_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 371,
+                "original_w": 5459,
+                "original_h": 1977,
+                "thumb_tiny": "AwARADDPpaBiigAzRQKKAE4opaTFABRRRQAoooFFACUUUUAf\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08N074AUCF\/dibtcarchitecture2accounttypes.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08N074AUCF-c8c4d994dd",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nkyWq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ok so here is something potentially even better, more daml-oriented than ever before.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Ultimately, the concept of Deposit and Withdrawal Addresses are separate. So it makes sense to separate the 'Accounts' representing them as well (maybe even rename them to Addresses?)."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Some users might only have one type of them. "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Either way, the ability to have multiple of both, means we should allow the free creation of both separately, "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "and not tie one's functionality to the other",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ". "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "So, 2 separate templates, for requesting\/registering addresses. "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "The flow itself otherwise is the same as the previous iteration, but total separation of Deposit\/Withdraw flows. "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "UMW95BAT1"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1744807835.171719",
+        "client_msg_id": "906deb5a-6a4d-461c-b0aa-ac4d46837563",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1744807835.171719",
+        "reply_count": 7,
+        "reply_users_count": 1,
+        "latest_reply": "1746534021.629029",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1744877742.093819"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1744877903.317649"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1744879719.077679"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1744880094.116519"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1744880126.219699"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1744880158.917479"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1746534021.629029"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

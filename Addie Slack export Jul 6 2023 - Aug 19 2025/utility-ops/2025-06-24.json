@@ -1,0 +1,766 @@
+[
+    {
+        "user": "U083R3AP1M1",
+        "type": "message",
+        "ts": "1750752069.269649",
+        "edited": {
+            "user": "U083R3AP1M1",
+            "ts": "1750752079.000000"
+        },
+        "client_msg_id": "91febc8d-5c78-4df2-ae3e-f1cae43e1af8",
+        "text": "Hi <@UU4AZ8EEQ> thanks for the response. Yes the Utility UI, but didn't realise at the time that the same auth configuration was needed and it seems Utility requires the OIDC anyway. Therefore from what i understand the only way is to redeploy validator with the correct auth config. So I think we'll do that ,and probably just deploy on k8.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T057SN2G1C2",
+        "source_team": "T057SN2G1C2",
+        "user_profile": {
+            "avatar_hash": "b1215cf047bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-04\/8124357279509_b1215cf047bf6e221c8f_72.png",
+            "first_name": "Brendan",
+            "real_name": "Brendan",
+            "display_name": "Brendan",
+            "team": "T057SN2G1C2",
+            "name": "brendan673",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750732966.275079",
+        "parent_user_id": "U083R3AP1M1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gykVb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UU4AZ8EEQ"
+                            },
+                            {
+                                "type": "text",
+                                "text": " thanks for the response. Yes the Utility UI, but didn't realise at the time that the same auth configuration was needed and it seems Utility requires the OIDC anyway. Therefore from what i understand the only way is to redeploy validator with the correct auth config. So I think we'll do that ,and probably just deploy on k8."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U069QDTQV8S",
+        "type": "message",
+        "ts": "1750752246.352139",
+        "client_msg_id": "f0b93d33-7410-44c6-8ce0-0e408b20cbc0",
+        "text": "Hello, we deployed the canton validator using docker. Now we are deploying the utility service. The document only gives the k8s deployment method. I would like to ask if anyone has used docker to deploy it, and can you share the docker compose file and the reverse proxy file?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T065T8729K4",
+        "source_team": "T065T8729K4",
+        "user_profile": {
+            "avatar_hash": "fcbb420e26d6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-12-12\/6315982222583_fcbb420e26d61573ac99_72.jpg",
+            "first_name": "JamesWang-HashKey",
+            "real_name": "JamesWang-HashKey Cloud",
+            "display_name": "JamesWang-HashKey Cloud",
+            "team": "T065T8729K4",
+            "name": "wangzezheng",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750752246.352139",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1750752734.909769",
+        "reply_users": [
+            "U08GX9SV51V",
+            "U069QDTQV8S"
+        ],
+        "replies": [
+            {
+                "user": "U08GX9SV51V",
+                "ts": "1750752489.019059"
+            },
+            {
+                "user": "U069QDTQV8S",
+                "ts": "1750752734.909769"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cO1x6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello, we deployed the canton validator using docker. Now we are deploying the utility service. The document only gives the k8s deployment method. I would like to ask if anyone has used docker to deploy it, and can you share the docker compose file and the reverse proxy file?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U069QDTQV8S",
+        "type": "message",
+        "ts": "1750752432.491759",
+        "client_msg_id": "ec75958b-75ce-4f1a-8821-c493185f7c67",
+        "text": "Can you share the complete contents of the docker compose file and the reverse proxy file?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T065T8729K4",
+        "source_team": "T065T8729K4",
+        "user_profile": {
+            "avatar_hash": "fcbb420e26d6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-12-12\/6315982222583_fcbb420e26d61573ac99_72.jpg",
+            "first_name": "JamesWang-HashKey",
+            "real_name": "JamesWang-HashKey Cloud",
+            "display_name": "JamesWang-HashKey Cloud",
+            "team": "T065T8729K4",
+            "name": "wangzezheng",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750732301.595079",
+        "parent_user_id": "U069QDTQV8S",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+HrcH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Can you share the complete contents of the docker compose file and the reverse proxy file?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08GX9SV51V",
+        "type": "message",
+        "ts": "1750752489.019059",
+        "client_msg_id": "9586df0a-6c48-4d51-836c-80d421ae1377",
+        "text": "This is a very relevant issue, and many validators don’t know how to solve it. We really hope the team will give it serious attention.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08GX9SV0CX",
+        "source_team": "T08GX9SV0CX",
+        "user_profile": {
+            "avatar_hash": "d954e5f40242",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-12\/8575327914519_d954e5f4024205266f90_72.jpg",
+            "first_name": "Igor",
+            "real_name": "Igor Gusarov",
+            "display_name": "",
+            "team": "T08GX9SV0CX",
+            "name": "igrgusarov",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750752246.352139",
+        "parent_user_id": "U069QDTQV8S",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JVSMV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This is a very relevant issue, and many validators don’t know how to solve it. We really hope the team will give it serious attention."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U069QDTQV8S",
+        "type": "message",
+        "ts": "1750752734.909769",
+        "client_msg_id": "52c77dba-c543-435c-ba80-311f699b69e2",
+        "text": "I tried many methods today, but still couldn't solve it. If someone has completed this part of the work, I hope you can share it.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T065T8729K4",
+        "source_team": "T065T8729K4",
+        "user_profile": {
+            "avatar_hash": "fcbb420e26d6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-12-12\/6315982222583_fcbb420e26d61573ac99_72.jpg",
+            "first_name": "JamesWang-HashKey",
+            "real_name": "JamesWang-HashKey Cloud",
+            "display_name": "JamesWang-HashKey Cloud",
+            "team": "T065T8729K4",
+            "name": "wangzezheng",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750752246.352139",
+        "parent_user_id": "U069QDTQV8S",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZGzDb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I tried many methods today, but still couldn't solve it. If someone has completed this part of the work, I hope you can share it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "tombstone",
+        "text": "This message was deleted.",
+        "user": "USLACKBOT",
+        "hidden": true,
+        "type": "message",
+        "ts": "1750775855.552739",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T03T53E10",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750775855.552739",
+        "parent_user_id": "USLACKBOT",
+        "reply_count": 5,
+        "reply_users_count": 1,
+        "latest_reply": "1750855838.324269",
+        "reply_users": [
+            "U063ECF2URZ"
+        ],
+        "replies": [
+            {
+                "user": "U063ECF2URZ",
+                "ts": "1750776194.082979"
+            },
+            {
+                "user": "U063ECF2URZ",
+                "ts": "1750854842.619729"
+            },
+            {
+                "user": "U063ECF2URZ",
+                "ts": "1750854906.205949"
+            },
+            {
+                "user": "U063ECF2URZ",
+                "ts": "1750855155.068549"
+            },
+            {
+                "user": "U063ECF2URZ",
+                "ts": "1750855838.324269"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "user": "U063ECF2URZ",
+        "type": "message",
+        "ts": "1750776194.082979",
+        "client_msg_id": "a887bbf4-c150-4640-b0fa-5e8585aa98d6",
+        "text": "Awesome! Thank you, guys!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03NWTF768Z",
+        "source_team": "T03NWTF768Z",
+        "user_profile": {
+            "avatar_hash": "f9fbbfdb4c8d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-16\/6200926379382_f9fbbfdb4c8de44315f3_72.jpg",
+            "first_name": "Ivan",
+            "real_name": "Ivan Rylach",
+            "display_name": "Ivan",
+            "team": "T03NWTF768Z",
+            "name": "ivan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750775855.552739",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BowoP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Awesome! Thank you, guys!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1750805625.229329",
+        "edited": {
+            "user": "U012DRCTM61",
+            "ts": "1750805629.000000"
+        },
+        "client_msg_id": "a6edb0f1-1c73-4e70-a3dc-0434614b8835",
+        "text": "do i need to be on > 0.6 before tomorrow's mainnet network upgrade?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750805625.229329",
+        "reply_count": 6,
+        "reply_users_count": 2,
+        "latest_reply": "1750822829.958639",
+        "reply_users": [
+            "U012DRCTM61",
+            "U08AG8GNV0B"
+        ],
+        "replies": [
+            {
+                "user": "U012DRCTM61",
+                "ts": "1750806159.640089"
+            },
+            {
+                "user": "U012DRCTM61",
+                "ts": "1750816574.690749"
+            },
+            {
+                "user": "U08AG8GNV0B",
+                "ts": "1750817318.414469"
+            },
+            {
+                "user": "U012DRCTM61",
+                "ts": "1750817587.661149"
+            },
+            {
+                "user": "U012DRCTM61",
+                "ts": "1750821451.913519"
+            },
+            {
+                "user": "U012DRCTM61",
+                "ts": "1750822829.958639"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xsoiB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "do i need to be on > 0.6 before tomorrow's mainnet network upgrade?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1750806159.640089",
+        "client_msg_id": "70fdb25a-8e0d-4586-8890-df373408387e",
+        "text": "ok will try the upgrade to 6 on testnet rn",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750805625.229329",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MFM57",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ok will try the upgrade to 6 on testnet rn"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1750816574.690749",
+        "edited": {
+            "user": "U012DRCTM61",
+            "ts": "1750816587.000000"
+        },
+        "client_msg_id": "46a0944f-60a6-4e04-943c-4594c1c0af4d",
+        "text": "i'm trying to upgrade the UI but keep running into an issue pulling the image - i've made sure to authenticate to jfrog and docker etc and that's all fine\n\nis there anything different about the process than what i did for 0.5?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750805625.229329",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IYyZN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "i'm trying to upgrade the UI but keep running into an issue pulling the image - i've made sure to authenticate to jfrog and docker etc and that's all fine\n\nis there anything different about the process than what i did for 0.5?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08AG8GNV0B",
+        "type": "message",
+        "ts": "1750817318.414469",
+        "edited": {
+            "user": "U08AG8GNV0B",
+            "ts": "1750817332.000000"
+        },
+        "client_msg_id": "bba85509-1503-4d97-907a-cd8538c54832",
+        "text": "<@U1BLSQM9Q> for the upgrade to 0.6.x are any new Dars required from 5.x?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08A9NBLPHC",
+        "source_team": "T08A9NBLPHC",
+        "user_profile": {
+            "avatar_hash": "e6f97c3ebd5a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-01-27\/8379301531456_e6f97c3ebd5a276ee463_72.png",
+            "first_name": "Tom",
+            "real_name": "Tom S",
+            "display_name": "Tom (Sekoya Labs)",
+            "team": "T08A9NBLPHC",
+            "name": "tom",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750805625.229329",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mj+n\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U1BLSQM9Q"
+                            },
+                            {
+                                "type": "text",
+                                "text": " for the upgrade to 0.6.x are any new Dars required from 5.x?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1750817587.661149",
+        "client_msg_id": "a4e7fcba-2888-4237-8564-bc1733b9e864",
+        "text": "i uploaded new dars for 6.x but i think it's just having trouble pulling the ui image from jfrog for some reason",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750805625.229329",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VXQTz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "i uploaded new dars for 6.x but i think it's just having trouble pulling the ui image from jfrog for some reason"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1750821451.913519",
+        "client_msg_id": "2ac7b3ec-7261-4195-938d-225eb6157543",
+        "text": "yes was able to locally pull but still facing the unable to pull and resolve error on the pod",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750805625.229329",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OOKms",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes was able to locally pull but still facing the unable to pull and resolve error on the pod"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1750822829.958639",
+        "client_msg_id": "573454bb-577e-4811-8250-70010a9e198a",
+        "text": "solved by refreshing identity token from jfrog",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750805625.229329",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kvGDu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "solved by refreshing identity token from jfrog"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1750824915.281559",
+        "edited": {
+            "user": "U012DRCTM61",
+            "ts": "1750825296.000000"
+        },
+        "client_msg_id": "7ba29f19-7750-4fbe-9d06-0ab4eb25da81",
+        "text": "I've been trying to manually top up on commercial agreement in mainnet and usually it works after a couple tries but 10+ times in its still saying contract not found, on 0.5.1",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750824915.281559",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1750855405.627229",
+        "reply_users": [
+            "U0740Q6GD0R",
+            "U012DRCTM61"
+        ],
+        "replies": [
+            {
+                "user": "U0740Q6GD0R",
+                "ts": "1750836064.516019"
+            },
+            {
+                "user": "U012DRCTM61",
+                "ts": "1750855405.627229"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7xG6S",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I've been trying to manually top up on commercial agreement in mainnet and usually it works after a couple tries but 10+ times in its still saying contract not found, on 0.5.1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

@@ -1,0 +1,218 @@
+[
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1748529354.544649",
+        "edited": {
+            "user": "U06TMPD96M8",
+            "ts": "1748530333.000000"
+        },
+        "client_msg_id": "a974bd93-7e4c-41d6-8df2-45e66ed59a1a",
+        "text": "Hello! I have a question about transaction fetching, for syncing.\n\nFor CantonCoin transfers (and Amulet on testnet), we use the endpoint `\/api\/scan\/v1\/updates\/{updateId}` from the Scan API and parse the events that have the choice `AmuletRules_Transfer`.\n\nNow, with the token standard, we will use the endpoint `\/v2\/updates\/{updateId}` from the Ledger API. I see that for each Amulet transfer we are getting events with choices `AmuletRules_Transfer` and `TransferFactory_Transfer`. So my question is:\n1. Only Amulet and CantonCoin transfers will have the event with choice `AmuletRules_Transfer` ?\n 2.  In order to process transfers from any token\/instruments, should we rather parse the event with choice  `TransferFactory_Transfer` ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748529354.544649",
+        "reply_count": 3,
+        "reply_users_count": 1,
+        "latest_reply": "1748948323.773419",
+        "reply_users": [
+            "U06TMPD96M8"
+        ],
+        "replies": [
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1748531789.552589"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1748604824.859439"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1748948323.773419"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EjoJP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello! I have a question about transaction fetching, for syncing.\n\nFor CantonCoin transfers (and Amulet on testnet), we use the endpoint "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/api\/scan\/v1\/updates\/{updateId}",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from the Scan API and parse the events that have the choice "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AmuletRules_Transfer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n\nNow, with the token standard, we will use the endpoint "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/v2\/updates\/{updateId}",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from the Ledger API. I see that for each Amulet transfer we are getting events with choices "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AmuletRules_Transfer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "TransferFactory_Transfer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". So my question is:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Only Amulet and CantonCoin transfers will have the event with choice "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "AmuletRules_Transfer",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " ?"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " 2.  In order to process transfers from any token\/instruments, should we rather parse the event with choice  "
+                            },
+                            {
+                                "type": "text",
+                                "text": "TransferFactory_Transfer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1748531789.552589",
+        "client_msg_id": "2d878d88-7b2e-438b-af40-a9174575147d",
+        "text": "Nice. Thank you <@UEHLS0JUB>!",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748529354.544649",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "g\/YNA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Nice. Thank you "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

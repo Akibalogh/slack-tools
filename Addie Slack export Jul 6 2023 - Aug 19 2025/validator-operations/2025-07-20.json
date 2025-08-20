@@ -1,0 +1,930 @@
+[
+    {
+        "user": "U095FB31DLH",
+        "type": "message",
+        "ts": "1753013276.164119",
+        "edited": {
+            "user": "U095FB31DLH",
+            "ts": "1753013367.000000"
+        },
+        "client_msg_id": "0f9a41e8-6be0-4fb2-b73d-68d01139b02f",
+        "text": "Hi all,\n\nTrying to get the Helm chart for deployment. Perhaps I'm looking in the wrong location, but I keep getting this error:\n\n```Error: failed to perform \"FetchReference\" on source: ghcr.io\/sync-global\/splice-node:0.4.5: not found```\nThe command I'm entering from a device that isn't whitelisted (not sure if this makes a difference) is:\n\n```helm pull <oci:\/\/ghcr.io\/sync-global\/splice-node> --version 0.4.5```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753013276.164119",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1753014225.649519",
+        "reply_users": [
+            "U08RL7F5VQD",
+            "U095FB31DLH"
+        ],
+        "replies": [
+            {
+                "user": "U08RL7F5VQD",
+                "ts": "1753013751.914899"
+            },
+            {
+                "user": "U095FB31DLH",
+                "ts": "1753013828.324409"
+            },
+            {
+                "user": "U095FB31DLH",
+                "ts": "1753013859.905089"
+            },
+            {
+                "user": "U08RL7F5VQD",
+                "ts": "1753014094.509129"
+            },
+            {
+                "user": "U095FB31DLH",
+                "ts": "1753014225.649519"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wnIwl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all,\n\nTrying to get the Helm chart for deployment. Perhaps I'm looking in the wrong location, but I keep getting this error:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Error: failed to perform \"FetchReference\" on source: ghcr.io\/sync-global\/splice-node:0.4.5: not found"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThe command I'm entering from a device that isn't whitelisted (not sure if this makes a difference) is:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "helm pull "
+                            },
+                            {
+                                "type": "link",
+                                "url": "oci:\/\/ghcr.io\/sync-global\/splice-node"
+                            },
+                            {
+                                "type": "text",
+                                "text": " --version 0.4.5"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08RL7F5VQD",
+        "type": "message",
+        "ts": "1753013751.914899",
+        "client_msg_id": "9f432e87-ccab-4463-bc9b-c9f4cec6b2d5",
+        "text": "```helm pull <oci:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/helm\/splice-participant> --version 0.4.5\n\nhelm pull <oci:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/helm\/splice-validator> --version 0.4.5```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08R84XCX8F",
+        "source_team": "T08R84XCX8F",
+        "user_profile": {
+            "avatar_hash": "ad744635e269",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-09\/8870303570853_ad744635e269f41f4ffa_72.webp",
+            "first_name": "Ivan",
+            "real_name": "Ivan Wijaya",
+            "display_name": "Ivan",
+            "team": "T08R84XCX8F",
+            "name": "ivan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753013276.164119",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1mh7C",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "helm pull "
+                            },
+                            {
+                                "type": "link",
+                                "url": "oci:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/helm\/splice-participant"
+                            },
+                            {
+                                "type": "text",
+                                "text": " --version 0.4.5\n\nhelm pull "
+                            },
+                            {
+                                "type": "link",
+                                "url": "oci:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/helm\/splice-validator"
+                            },
+                            {
+                                "type": "text",
+                                "text": " --version 0.4.5"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U095FB31DLH"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*Deploi* has removed themselves from this channel.",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1753013813.977389",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4bL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Deploi",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " has removed themselves from this channel."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U095FB31DLH",
+        "type": "message",
+        "ts": "1753013828.324409",
+        "client_msg_id": "6bce02d1-c3be-4fa4-a445-acacc70fd662",
+        "text": "Just to double check <@U08RL7F5VQD> - are both of those URLs the same?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753013276.164119",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Wj+Jz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Just to double check "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U08RL7F5VQD"
+                            },
+                            {
+                                "type": "text",
+                                "text": " - are both of those URLs the same?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U095FB31DLH",
+        "type": "message",
+        "ts": "1753013859.905089",
+        "client_msg_id": "11a451d8-a5f8-4b3f-9655-bee6fdc1add4",
+        "text": "Just wasn't sure if I was missing something.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753013276.164119",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+fonD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Just wasn't sure if I was missing something."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08RL7F5VQD",
+        "type": "message",
+        "ts": "1753014094.509129",
+        "client_msg_id": "5b08b4c2-c4ee-4fdc-ab37-5257f1160b08",
+        "text": "The one above is the Helm chart for deploying the participant, while the one below is for the validator-app.\n\nCheck this docs for more info: <https:\/\/docs.sync.global\/validator_operator\/validator_helm.html#configuring-the-helm-charts>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08R84XCX8F",
+        "source_team": "T08R84XCX8F",
+        "user_profile": {
+            "avatar_hash": "ad744635e269",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-09\/8870303570853_ad744635e269f41f4ffa_72.webp",
+            "first_name": "Ivan",
+            "real_name": "Ivan Wijaya",
+            "display_name": "Ivan",
+            "team": "T08R84XCX8F",
+            "name": "ivan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753013276.164119",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FuFRZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The one above is the Helm chart for deploying the participant, while the one below is for the validator-app.\n\nCheck this docs for more info: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.sync.global\/validator_operator\/validator_helm.html#configuring-the-helm-charts"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U095FB31DLH",
+        "type": "message",
+        "ts": "1753014225.649519",
+        "client_msg_id": "0b1761e7-3f9b-47e4-9d96-18898a52b1a6",
+        "text": "Thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753013276.164119",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cSYv0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U035B4M173L",
+        "type": "message",
+        "ts": "1753028264.647759",
+        "client_msg_id": "bf355a1e-945e-41ec-9611-bf097d83bb81",
+        "text": "i assume most validators that are joining now are without sponsor as well",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0360SUDGTS",
+        "source_team": "T0360SUDGTS",
+        "user_profile": {
+            "avatar_hash": "c070bffa1dcf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-03-09\/3214330827555_c070bffa1dcf94f56663_72.png",
+            "first_name": "Luka",
+            "real_name": "Luka",
+            "display_name": "mindstyle",
+            "team": "T0360SUDGTS",
+            "name": "luka",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752670231.811419",
+        "parent_user_id": "U04RV9FPGA1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uvGOg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "i assume most validators that are joining now are without sponsor as well"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U095Y2GQU3Z",
+        "type": "message",
+        "ts": "1753028398.896799",
+        "client_msg_id": "7bd87b0c-539f-4486-982f-852ff198e154",
+        "text": "Hey team, here is our addresses for the whitelist:\n```devnet: 8.52.196.100\ntestnet: 207.121.21.148\nmainnet: 8.52.153.92```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T095Y2GQNDD",
+        "source_team": "T095Y2GQNDD",
+        "user_profile": {
+            "avatar_hash": "7a06a381012e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-20\/9220812502499_7a06a381012ec5c9f211_72.png",
+            "first_name": "Sam",
+            "real_name": "Sam",
+            "display_name": "",
+            "team": "T095Y2GQNDD",
+            "name": "sam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753028398.896799",
+        "reply_count": 14,
+        "reply_users_count": 4,
+        "latest_reply": "1755545038.716769",
+        "reply_users": [
+            "U095Y2GQU3Z",
+            "U0821PFKM0V",
+            "U097A0Y9QQ0",
+            "UUT0L5W2J"
+        ],
+        "replies": [
+            {
+                "user": "U095Y2GQU3Z",
+                "ts": "1753210825.836729"
+            },
+            {
+                "user": "U0821PFKM0V",
+                "ts": "1753213014.579049"
+            },
+            {
+                "user": "U095Y2GQU3Z",
+                "ts": "1753213448.465789"
+            },
+            {
+                "user": "U095Y2GQU3Z",
+                "ts": "1753214382.239029"
+            },
+            {
+                "user": "U0821PFKM0V",
+                "ts": "1753214925.603469"
+            },
+            {
+                "user": "U097A0Y9QQ0",
+                "ts": "1755277214.408249"
+            },
+            {
+                "user": "U0821PFKM0V",
+                "ts": "1755277597.936919"
+            },
+            {
+                "user": "U097A0Y9QQ0",
+                "ts": "1755278980.766519"
+            },
+            {
+                "user": "UUT0L5W2J",
+                "ts": "1755279713.305769"
+            },
+            {
+                "user": "U0821PFKM0V",
+                "ts": "1755280801.735429"
+            },
+            {
+                "user": "U095Y2GQU3Z",
+                "ts": "1755409203.551929"
+            },
+            {
+                "user": "U0821PFKM0V",
+                "ts": "1755516801.683579"
+            },
+            {
+                "user": "U095Y2GQU3Z",
+                "ts": "1755544996.020049"
+            },
+            {
+                "user": "U0821PFKM0V",
+                "ts": "1755545038.716769"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oLkFf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey team, here is our addresses for the whitelist:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "devnet: 8.52.196.100\ntestnet: 207.121.21.148\nmainnet: 8.52.153.92"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*thomas* from *Blockbuilders* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1753041647.378469",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kd+b",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thomas",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Blockbuilders",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*ian.lawrence139* from *Saxonadvisors* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1753048395.520799",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "reff",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ian.lawrence139",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Saxonadvisors",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0971MT3XFB",
+        "type": "message",
+        "ts": "1753048690.783829",
+        "client_msg_id": "3e332b46-f940-4154-acb0-bd3391859743",
+        "text": "Hi everyone and great to be here! I am part of the nodes team @ saxon. Please add our egress IP of 51.15.202.197 to devnet. Thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T021T8DN5RQ",
+        "source_team": "T021T8DN5RQ",
+        "user_profile": {
+            "avatar_hash": "d52247219943",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-21\/9226794584933_d522472199436111a3ce_72.png",
+            "first_name": "Ian",
+            "real_name": "Ian XYZ",
+            "display_name": "Ian XYZ",
+            "team": "T021T8DN5RQ",
+            "name": "ian_saxon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SwJPN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi everyone and great to be here! I am part of the nodes team @ saxon. Please add our egress IP of 51.15.202.197 to devnet. Thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0971MT3XFB",
+        "type": "message",
+        "ts": "1753049208.271889",
+        "client_msg_id": "3834ea4d-949e-4eb2-b597-c2bd752b005d",
+        "text": "also wondered about the onboarding secret and how to get that for dev net",
+        "team": "T05FWTX7PMG",
+        "user_team": "T021T8DN5RQ",
+        "source_team": "T021T8DN5RQ",
+        "user_profile": {
+            "avatar_hash": "d52247219943",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-21\/9226794584933_d522472199436111a3ce_72.png",
+            "first_name": "Ian",
+            "real_name": "Ian XYZ",
+            "display_name": "Ian XYZ",
+            "team": "T021T8DN5RQ",
+            "name": "ian_saxon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753049208.271889",
+        "reply_count": 3,
+        "reply_users_count": 2,
+        "latest_reply": "1753099505.771059",
+        "reply_users": [
+            "U2KT900HE",
+            "U0971MT3XFB"
+        ],
+        "replies": [
+            {
+                "user": "U2KT900HE",
+                "ts": "1753049323.473239"
+            },
+            {
+                "user": "U0971MT3XFB",
+                "ts": "1753099315.886889"
+            },
+            {
+                "user": "U0971MT3XFB",
+                "ts": "1753099505.771059"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KqgVb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "also wondered about the onboarding secret and how to get that for dev net"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U2KT900HE",
+        "type": "message",
+        "ts": "1753049323.473239",
+        "edited": {
+            "user": "U2KT900HE",
+            "ts": "1753049339.000000"
+        },
+        "client_msg_id": "e66f0de8-cb16-479e-9cbc-bae901384d5a",
+        "text": "Once you're whitelisted:\n```curl -X POST <https:\/\/sv.sv-1.dev.global.canton.network.sync.global\/api\/sv\/v0\/devnet\/onboard\/validator\/prepare>```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4772b560949d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-27\/7646277389857_4772b560949d9bf6fce1_72.jpg",
+            "first_name": "Fil",
+            "real_name": "Fil Mackay",
+            "display_name": "Fil",
+            "team": "T03T53E10",
+            "name": "fil",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753049208.271889",
+        "parent_user_id": "U0971MT3XFB",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2QTkT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Once you're whitelisted:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl -X POST "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/sv.sv-1.dev.global.canton.network.sync.global\/api\/sv\/v0\/devnet\/onboard\/validator\/prepare"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0971MT3XFB"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "Splice release 0.4.7 is ready for deployment on DevNet",
+        "type": "message",
+        "ts": "1753056650.883969",
+        "bot_id": "B08HVPQURK8",
+        "team": "T05FWTX7PMG",
+        "bot_profile": {
+            "id": "B08HVPQURK8",
+            "app_id": "A08J1DB9NFP",
+            "name": "Upgrade Announcement",
+            "icons": {
+                "image_36": "https:\/\/avatars.slack-edge.com\/2025-03-18\/8620985120898_5933881ee684291a6301_36.png",
+                "image_48": "https:\/\/avatars.slack-edge.com\/2025-03-18\/8620985120898_5933881ee684291a6301_48.png",
+                "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-18\/8620985120898_5933881ee684291a6301_72.png"
+            },
+            "deleted": false,
+            "updated": 1745496545,
+            "team_id": "T07LSPYDRT4"
+        },
+        "blocks": [
+            {
+                "type": "section",
+                "block_id": "x0DB0",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": ":tada: Splice release `0.4.7` is ready for deployment on DevNet, and is available from the GSF\n:ship: ⅔ of Super Validator nodes have upgraded to this release, including the GSF Super Validator node\n*SV node status here*: <https:\/\/sync.global\/sv-network>\n*Release notes here*: <https:\/\/docs.dev.sync.global\/release_notes.html>\n",
+                    "verbatim": false
+                }
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U040VDGJ7J5",
+                    "U01TZB7MFFA",
+                    "U090J98M141"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "user": "U04KJF6UTNU",
+        "type": "message",
+        "ts": "1753061687.255119",
+        "client_msg_id": "fc440f6b-9896-4c33-b6f2-6861ffafb7cb",
+        "text": "<@U08G1KD2XSB> can you pls help with the above",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "243972e90187",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-01-23\/4669746023911_243972e901876df74b5b_72.jpg",
+            "first_name": "Sophia",
+            "real_name": "Sophia Roman",
+            "display_name": "Sophia",
+            "team": "T03T53E10",
+            "name": "sophia.roman",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752616402.523159",
+        "parent_user_id": "U03NX7CC3BN",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "U4ZA2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U08G1KD2XSB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " can you pls help with the above"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

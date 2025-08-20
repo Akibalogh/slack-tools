@@ -1,0 +1,2003 @@
+[
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754990706.595219",
+        "client_msg_id": "94c440af-7a26-4500-a960-22096da0b6b3",
+        "text": "<@U05FZBDQ4RJ> I run a massive investigation with this.\n\n• There is no option to delete a party. I tried to run `DELETE <https:\/\/participant-ibtc-devnet-1.console.dev.canton.ibtc.network\/v2\/parties\/askdjfakjsf::1220fa8543db6c66fe3a55b1f180c8dfc7f876265c76684fbc1d35d89e02c8aafe8e>`  but got `405 Method Not Allowed` as response which is a clear indication that this is not an option.\n• I tried to disable a party with the `participant.parties.disable(party)` . It run successfully so I guess it disabled the account, but I didn't see any effect on it. After I disabled it, I still could search it on the Admin UI, and there isn't any field which indicates whether it is disabled or not when I get it from chain. What Robert linked there is a Warning: `Disabling a party is not currently supported and is considered a dangerous operation.` so I assume it's not allowed to do right now.\n• I deleted the canton user as well which is linked to the party. It didn't really care about it. Maybe it only removes the option to make a transfer on behalf of the user, but there is no clear indication that anything happened with the party. I still be able to list it on the Admin UI.\n• Somehow I can de-authorize the party from the participant node. This means that the party no longer able to do anything on the participant so it won't be \"local\". But I did not find practical solution for that, so I assume it's not something what we can do on version 3.3.0.\nNote: If I can list a party on the Admin UI, it means that it is still on-chain.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754938721.600789",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EzdoH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U05FZBDQ4RJ"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I run a massive investigation with this.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "There is no option to delete a party. I tried to run "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "DELETE ",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/participant-ibtc-devnet-1.console.dev.canton.ibtc.network\/v2\/parties\/askdjfakjsf::1220fa8543db6c66fe3a55b1f180c8dfc7f876265c76684fbc1d35d89e02c8aafe8e",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "  but got "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "405 Method Not Allowed",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " as response which is a clear indication that this is not an option."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I tried to disable a party with the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "participant.parties.disable(party)",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " . It run successfully so I guess it disabled the account, but I didn't see any effect on it. After I disabled it, I still could search it on the Admin UI, and there isn't any field which indicates whether it is disabled or not when I get it from chain. What Robert linked there is a Warning: "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "Disabling a party is not currently supported and is considered a dangerous operation.",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " so I assume it's not allowed to do right now."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I deleted the canton user as well which is linked to the party. It didn't really care about it. Maybe it only removes the option to make a transfer on behalf of the user, but there is no clear indication that anything happened with the party. I still be able to list it on the Admin UI."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Somehow I can de-authorize the party from the participant node. This means that the party no longer able to do anything on the participant so it won't be \"local\". But I did not find practical solution for that, so I assume it's not something what we can do on version 3.3.0."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nNote: If I can list a party on the Admin UI, it means that it is still on-chain."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754990770.600469",
+        "edited": {
+            "user": "U093Q4FPEJG",
+            "ts": "1754990778.000000"
+        },
+        "client_msg_id": "53b61b34-1433-4d52-902b-7d2a85fb28ba",
+        "text": "*Conclusion, we can't do anything about to delete them.*",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754938721.600789",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "enJvU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Conclusion, we can't do anything about to delete them.",
+                                "style": {
+                                    "bold": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1754993324.385139",
+        "client_msg_id": "F17725B8-78F5-4936-BBF2-CF07F9516463",
+        "text": "Thank you very much for the extensive sleuthing!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754938721.600789",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "G\/UMr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you very much for the extensive sleuthing!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1754993405.973649",
+        "client_msg_id": "874C948E-C370-4586-A851-A01BB323370D",
+        "text": "No problem at all. I will mention it to them if it comes up again ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754938721.600789",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vYaMU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "No problem at all. I will mention it to them if it comes up again "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754993433.139079",
+        "client_msg_id": "e2bbac4d-da34-4a55-bd18-9e21fca077d9",
+        "text": "If they have any option I can investigate it.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754938721.600789",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9A2L7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If they have any option I can investigate it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U05FZBDQ4RJ"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "subtype": "channel_convert_to_public",
+        "user": "U05FZBDQ4RJ",
+        "text": "made this channel *public*. Any member in this workspace can see and join it.",
+        "type": "message",
+        "ts": "1755000599.707219",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U092B2GUASF"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08Q9VCAM1A",
+        "type": "message",
+        "ts": "1755009544.562459",
+        "edited": {
+            "user": "U08Q9VCAM1A",
+            "ts": "1755009755.000000"
+        },
+        "client_msg_id": "68739a4a-935d-48b6-a688-c0d9b21e887e",
+        "text": "Hello friend and especially our volunteer <@U091F8WHDC3>; getting close with the file: <https:\/\/docs.google.com\/spreadsheets\/d\/1B2MXcW24vYuKx7-tUFiw9HcdFbmYc9-asIwQB_Iaeu0\/edit?gid=822511189#gid=822511189>   (tab=wallet matching). I made you a checkbox column where you could just tick off anyone that has confirmed",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "g019daf4f78d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/019daf4f78d76a8bb2381ebc905c209e.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Anna",
+            "real_name": "Anna Matusova",
+            "display_name": "Anna Matusova",
+            "team": "T05FWTX7PMG",
+            "name": "anna",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755009544.562459",
+        "reply_count": 13,
+        "reply_users_count": 2,
+        "latest_reply": "1755511739.574649",
+        "reply_users": [
+            "U08Q9VCAM1A",
+            "U091F8WHDC3"
+        ],
+        "replies": [
+            {
+                "user": "U08Q9VCAM1A",
+                "ts": "1755018944.093379"
+            },
+            {
+                "user": "U091F8WHDC3",
+                "ts": "1755187222.999879"
+            },
+            {
+                "user": "U08Q9VCAM1A",
+                "ts": "1755194000.722629"
+            },
+            {
+                "user": "U08Q9VCAM1A",
+                "ts": "1755194043.712289"
+            },
+            {
+                "user": "U08Q9VCAM1A",
+                "ts": "1755194166.819349"
+            },
+            {
+                "user": "U08Q9VCAM1A",
+                "ts": "1755194180.986379"
+            },
+            {
+                "user": "U08Q9VCAM1A",
+                "ts": "1755194201.582669"
+            },
+            {
+                "user": "U091F8WHDC3",
+                "ts": "1755260203.160799"
+            },
+            {
+                "user": "U08Q9VCAM1A",
+                "ts": "1755260231.964719"
+            },
+            {
+                "user": "U091F8WHDC3",
+                "ts": "1755260252.926459"
+            },
+            {
+                "user": "U08Q9VCAM1A",
+                "ts": "1755260643.908549"
+            },
+            {
+                "user": "U091F8WHDC3",
+                "ts": "1755501835.161389"
+            },
+            {
+                "user": "U08Q9VCAM1A",
+                "ts": "1755511739.574649"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6afKF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello friend and especially our volunteer "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U091F8WHDC3"
+                            },
+                            {
+                                "type": "text",
+                                "text": "; getting close with the file: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.google.com\/spreadsheets\/d\/1B2MXcW24vYuKx7-tUFiw9HcdFbmYc9-asIwQB_Iaeu0\/edit?gid=822511189#gid=822511189"
+                            },
+                            {
+                                "type": "text",
+                                "text": "   (tab=wallet matching). I made you a checkbox column where you could just tick off anyone that has confirmed"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U088UV6MKFE",
+                    "U091F8WHDC3"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U08Q9VCAM1A",
+        "type": "message",
+        "ts": "1755009573.008589",
+        "edited": {
+            "user": "U08Q9VCAM1A",
+            "ts": "1755009654.000000"
+        },
+        "client_msg_id": "3e282180-179e-452f-9624-992e1c9cbabb",
+        "text": "there are a few companies I coundn't find in the files: Allnodes, Distributed Lab, Linkpool, Modulo Finance, Notabene and Tall Oak Midstream. Unless someone has a nother idea for source, we probably just need to ask",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "g019daf4f78d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/019daf4f78d76a8bb2381ebc905c209e.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Anna",
+            "real_name": "Anna Matusova",
+            "display_name": "Anna Matusova",
+            "team": "T05FWTX7PMG",
+            "name": "anna",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "N9pX7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "there are a few companies I coundn't find in the files: Allnodes, Distributed Lab, Linkpool, Modulo Finance, Notabene and Tall Oak Midstream. Unless someone has a nother idea for source, we probably just need to ask"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08Q9VCAM1A",
+        "type": "message",
+        "ts": "1755009713.065389",
+        "edited": {
+            "user": "U08Q9VCAM1A",
+            "ts": "1755010591.000000"
+        },
+        "client_msg_id": "a2ac1989-6ba5-43bd-b79d-9475fd777c5f",
+        "text": "The ones I think we should double check I marked in red. They are ones were I saw multiple validator addresses or that do not have their company name in the address.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "g019daf4f78d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/019daf4f78d76a8bb2381ebc905c209e.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Anna",
+            "real_name": "Anna Matusova",
+            "display_name": "Anna Matusova",
+            "team": "T05FWTX7PMG",
+            "name": "anna",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8op6I",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The ones I think we should double check I marked in red. They are ones were I saw multiple validator addresses or that do not have their company name in the address."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08Q9VCAM1A",
+        "type": "message",
+        "ts": "1755009843.898059",
+        "client_msg_id": "9f9cd5ed-e696-43e0-b0ff-247f5f543ebf",
+        "text": "<@U05FZBDQ4RJ> I have two companies that show up on the reward sheet but not in the credential tracker: b2c2 and trakx. Should I add them?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "g019daf4f78d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/019daf4f78d76a8bb2381ebc905c209e.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Anna",
+            "real_name": "Anna Matusova",
+            "display_name": "Anna Matusova",
+            "team": "T05FWTX7PMG",
+            "name": "anna",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755009843.898059",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1755015032.024439",
+        "reply_users": [
+            "U05FZBDQ4RJ"
+        ],
+        "replies": [
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1755015018.592499"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1755015032.024439"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1755015032.024439",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Vunse",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U05FZBDQ4RJ"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I have two companies that show up on the reward sheet but not in the credential tracker: b2c2 and trakx. Should I add them?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1755010969.194309",
+        "edited": {
+            "user": "U088UV6MKFE",
+            "ts": "1755010986.000000"
+        },
+        "client_msg_id": "CC20515D-08E8-4CD1-AABE-62DE0667AA4C",
+        "text": "Nice research, thanks. \nBtw there is a field in the metadata, Disabled or Enabled or smth. That must toggle when you call disable? Its another question, where or whether that flag is handled anywhere else",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754938721.600789",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dObGW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Nice research, thanks. \nBtw there is a field in the metadata, Disabled or Enabled or smth. That must toggle when you call disable? Its another question, where or w"
+                            },
+                            {
+                                "type": "text",
+                                "text": "h"
+                            },
+                            {
+                                "type": "text",
+                                "text": "ether that flag is handled anywhere else"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1755011054.922009",
+        "client_msg_id": "3825f18f-7178-4e0f-9b3c-fbb6d8e9f363",
+        "text": "I can check that flag, but it doesn't really helps, because the party still act as something which is normal.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754938721.600789",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NRX1A",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I can check that flag, but it doesn't really helps, because the party still act as something which is normal."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1755011066.878319",
+        "client_msg_id": "cb23fdce-5863-4f2e-9410-c58238db57e8",
+        "text": "Maybe I should try to do a transfer with it.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754938721.600789",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rK9ie",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Maybe I should try to do a transfer with it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1755011163.336879",
+        "client_msg_id": "420F91D7-40EA-4E77-879E-A03B2A9806E1",
+        "text": "In the end, it doesnt “help us”: if they see the party on the node, they might be suspicious we earn rewards (wrongly). If they know its only for transfers, they already know we arent :man-shrugging: ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754938721.600789",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TL7yt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In the end, it doesnt “help us”: if they see the party on the node, they might be suspicious we earn rewards (wrongly"
+                            },
+                            {
+                                "type": "text",
+                                "text": ")"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". If they know its only for transfers, they already know we arent "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "man-shrugging",
+                                "unicode": "1f937-200d-2642-fe0f"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1755011191.861939",
+        "client_msg_id": "52671CC5-E6F8-4CD4-9F7A-9E6F3B7BDE5B",
+        "text": "So i wouldnt bother",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754938721.600789",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2my2q",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So i wouldnt bother"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1755014369.429569",
+        "edited": {
+            "user": "U05FU0HPZ9T",
+            "ts": "1755014468.000000"
+        },
+        "client_msg_id": "95925e8c-55d7-4663-8385-2548f2ef7f3f",
+        "text": "Sounds like some AI generated data got passed off as real data? Anyone know how that happened? It could have happened in one of our scripties on the eng side, perhaps even one of mine. It can sneakily make you think it’s doing code-driven actions, but actually it filled in imaginary data. Something to be wary of.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754937753.724739",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EMlqQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sounds like some AI generated data got passed off as real data? Anyone know how that happened? It could have happened in one of our scripties on the eng side, perhaps even one of mine. It can sneakily make you think it’s doing code-driven actions, but actually it filled in imaginary data. Something to be wary of."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1755014492.688079",
+        "client_msg_id": "40c45282-8d32-49d8-b45a-8ba3d7fa3ded",
+        "text": "<@U093Q4FPEJG> and <@U05FZBDQ4RJ> and <@U08Q9VCAM1A> and everyone, it sounds like there are quite a few little issues getting cleaned up. Just an idea, but consider just hopping on a call together to “war room” out some of these issues. Could be quicker than async.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755014492.688079",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1755162118.064289",
+        "reply_users": [
+            "U08Q9VCAM1A",
+            "U05FU0HPZ9T"
+        ],
+        "replies": [
+            {
+                "user": "U08Q9VCAM1A",
+                "ts": "1755019135.629419"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1755162118.064289"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1755162118.064289",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "k16K5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U093Q4FPEJG"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FZBDQ4RJ"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U08Q9VCAM1A"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and everyone, it sounds like there are quite a few little issues getting cleaned up. Just an idea, but consider just hopping on a call together to “war room” out some of these issues. Could be quicker than async."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1755015018.592499",
+        "client_msg_id": "1ae0c802-98b9-4cf4-868f-7a2248ba3b7e",
+        "text": "b2c2 - not a customer. was pre-funded but they didn't convert",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755009843.898059",
+        "parent_user_id": "U08Q9VCAM1A",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fAlxm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "b2c2 - not a customer. was pre-funded but they didn't convert"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1755015032.024439",
+        "client_msg_id": "d7cdd29e-a1dd-46f3-9400-eb9d49e7d8cf",
+        "text": "trakx - we pre-funded them. we should pay them app rewards",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755009843.898059",
+        "parent_user_id": "U08Q9VCAM1A",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kyS8K",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "trakx - we pre-funded them. we should pay them app rewards"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1755016053.016469",
+        "edited": {
+            "user": "U05FU0HPZ9T",
+            "ts": "1755016113.000000"
+        },
+        "client_msg_id": "2d67f457-547b-4edc-95ae-2052c594af74",
+        "text": "I suppose the customer PartyIDs should have come from the script typeform data? I’m not sure now how this data mistake got made. I’m curious though, AI is a tricky tool and we need to be accountable for our use of it.\n\nIt also crossed my mind that one of my scripts or perhaps Robert’s scripts to format the data and automate the creation of the parties could be the culprit as well. Perhaps what I thought was code to tweak data deterministically  was actually AI generating content, and it snuck by my radar.\n\nI think it’s worth doing a bit of a “root cause analysis” on this, as this is the world we live in now, and AI will be getting sneakily into our data pipelines",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754929630.013969",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "b\/qez",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I suppose the customer PartyIDs should have come from the script typeform data? I’m not sure now how this data mistake got made. I’m curious though, AI is a tricky tool and we need to be accountable for our use of it.\n\nIt also crossed my mind that one of my scripts or perhaps Robert’s scripts to format the data and automate the creation of the parties could be the culprit as well. Perhaps what I thought was code to tweak data deterministically  was actually AI generating content, and it snuck by my radar.\n\nI think it’s worth doing a bit of a “root cause analysis” on this, as this is the world we live in now, and AI will be getting sneakily into our data pipelines"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*Akos, you have 28 documents out for signature today!*\n1. <https:\/\/app.hellosign.com\/home\/manage?guid=21b3e58ceaf280dbee9686674108923a719b9d59|CBTC Early Bird Minter Credential> sent to j@ordinals.foundation 26 days ago\n2. <https:\/\/app.hellosign.com\/home\/manage?guid=4ab5569d30c33de489ed0330888b98e56d2f52f0|CBTC Early Bird Minter Credential> sent to <mailto:john.liatos@xbto.com|john.liatos@xbto.com> 26 days ago\n3. <https:\/\/app.hellosign.com\/home\/manage?guid=b12383be43ab8f19b707d61c94965ca03c8b2096|CBTC Early Bird Minter Credential> sent to <mailto:y@fivenorthgroup.com|y@fivenorthgroup.com> 24 days ago\n4. <https:\/\/app.hellosign.com\/home\/manage?guid=612cb3259668b31653cfc764b8d4543df92c1d3e|CBTC Early Bird Minter Credential> sent to <mailto:joe@nethermind.io|joe@nethermind.io> 24 days ago\n5. <https:\/\/app.hellosign.com\/home\/manage?guid=6a6cc30f15fb9b69241a86bcd853d54676a5190b|CBTC Early Bird Minter Credential> sent to <mailto:owen.simonin@meria.com|owen.simonin@meria.com> 24 days ago\n6. <https:\/\/app.hellosign.com\/home\/manage?guid=8da12aaa0aee5108a1c872689f458379f4ba45b1|CBTC Early Bird Minter Credential> sent to <mailto:kinga.bosse@mpch.com|kinga.bosse@mpch.com> 24 days ago\n7. <https:\/\/app.hellosign.com\/home\/manage?guid=eb8f90407cbb1190b7112c693a3c1fad9938496b|CBTC Early Bird Minter Credential> sent to <mailto:jon.knipper@republic.com|jon.knipper@republic.com> 24 days ago\n8. <https:\/\/app.hellosign.com\/home\/manage?guid=2995b115c21e650bf826118b53ab08bec70d03ad|CBTC Early Bird Holder Credential> sent to <mailto:khaled@round13.com|khaled@round13.com> 24 days ago\n9. <https:\/\/app.hellosign.com\/home\/manage?guid=241c498f4356e91c8eb09e6c911afaf6b42eea23|CBTC Early Bird Minter Credential> sent to <mailto:khaled@round13.com|khaled@round13.com> 24 days ago\n10. <https:\/\/app.hellosign.com\/home\/manage?guid=1e666404ac6fb93193c597134955623d03425c9b|CBTC Early Bird Holder Credential> sent to <mailto:khaled@round13.com|khaled@round13.com> 22 days ago\n11. <https:\/\/app.hellosign.com\/home\/manage?guid=b321abf6cb3af6cd4ced1f214b580670e7f35b13|CBTC Early Bird Minter Credential> sent to <mailto:khaled@round13.com|khaled@round13.com> 22 days ago\n12. <https:\/\/app.hellosign.com\/home\/manage?guid=d70f4bbf3f39a97985218b55f63ab4763c36ab36|CBTC Early Bird Minter Credential> sent to <mailto:owen.simonin@meria.com|owen.simonin@meria.com> 22 days ago\n13. <https:\/\/app.hellosign.com\/home\/manage?guid=0aff5797837e1df7ac73cd3bcd1b5a86113832a2|CBTC Early Bird Holder Credential> sent to <mailto:lionel@trakx.io|lionel@trakx.io> 15 days ago\n14. <https:\/\/app.hellosign.com\/home\/manage?guid=c78d787c2839f8eb9ae21f2bcccde3f7fca72394|CBTC Early Bird Minter Credential> sent to <mailto:lionel@trakx.io|lionel@trakx.io> 14 days ago\n15. <https:\/\/app.hellosign.com\/home\/manage?guid=93e3c5c991cd857803e2a1e17404d7bb2b703e58|CBTC Early Bird Holder Credential> sent to <mailto:brandon@blacksand.xyz|brandon@blacksand.xyz> 12 days ago\n16. <https:\/\/app.hellosign.com\/home\/manage?guid=d07f2df92c3530c1619d6281582dd65c9aa1e5c5|CBTC Early Bird Minter Credential> sent to <mailto:brandon@blacksand.xyz|brandon@blacksand.xyz> 12 days ago\n17. <https:\/\/app.hellosign.com\/home\/manage?guid=b1e6747c6bcb4f254284d434d053ba2b06f83607|CBTC Early Bird Holder Credential> sent to <mailto:daniel.schrader@finoa.io|daniel.schrader@finoa.io> 11 days ago\n18. <https:\/\/app.hellosign.com\/home\/manage?guid=5b3ad866546d112e84ef9e2d1b3251257b387b6c|CBTC Early Bird Minter Credential> sent to <mailto:daniel.schrader@finoa.io|daniel.schrader@finoa.io> 11 days ago\n19. <https:\/\/app.hellosign.com\/home\/manage?guid=c2cfa144dfb00ac7eb6a694b9a9c186750a12d7b|DLC-Link Employee or Contractor Agreement> sent to <mailto:shinnovation@protonmail.com|shinnovation@protonmail.com> 7 days ago\n20. <https:\/\/app.hellosign.com\/home\/manage?guid=7677411103fbeed58a3bc3b59c9a085e5fbf72c4|DLC.Link Token Warrant for Employees (June 2024)> sent to <mailto:shinnovation@protonmail.com|shinnovation@protonmail.com> 7 days ago",
+        "type": "message",
+        "ts": "1755018133.429009",
+        "bot_id": "B095UTUK0UW",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AoK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Akos, you have 28 documents out for signature today!",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n1. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=21b3e58ceaf280dbee9686674108923a719b9d59",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to j@ordinals.foundation 26 days ago\n2. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=4ab5569d30c33de489ed0330888b98e56d2f52f0",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:john.liatos@xbto.com",
+                                "text": "john.liatos@xbto.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 26 days ago\n3. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=b12383be43ab8f19b707d61c94965ca03c8b2096",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:y@fivenorthgroup.com",
+                                "text": "y@fivenorthgroup.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 24 days ago\n4. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=612cb3259668b31653cfc764b8d4543df92c1d3e",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:joe@nethermind.io",
+                                "text": "joe@nethermind.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 24 days ago\n5. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=6a6cc30f15fb9b69241a86bcd853d54676a5190b",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:owen.simonin@meria.com",
+                                "text": "owen.simonin@meria.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 24 days ago\n6. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=8da12aaa0aee5108a1c872689f458379f4ba45b1",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:kinga.bosse@mpch.com",
+                                "text": "kinga.bosse@mpch.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 24 days ago\n7. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=eb8f90407cbb1190b7112c693a3c1fad9938496b",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:jon.knipper@republic.com",
+                                "text": "jon.knipper@republic.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 24 days ago\n8. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=2995b115c21e650bf826118b53ab08bec70d03ad",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:khaled@round13.com",
+                                "text": "khaled@round13.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 24 days ago\n9. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=241c498f4356e91c8eb09e6c911afaf6b42eea23",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:khaled@round13.com",
+                                "text": "khaled@round13.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 24 days ago\n10. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=1e666404ac6fb93193c597134955623d03425c9b",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:khaled@round13.com",
+                                "text": "khaled@round13.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 22 days ago\n11. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=b321abf6cb3af6cd4ced1f214b580670e7f35b13",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:khaled@round13.com",
+                                "text": "khaled@round13.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 22 days ago\n12. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=d70f4bbf3f39a97985218b55f63ab4763c36ab36",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:owen.simonin@meria.com",
+                                "text": "owen.simonin@meria.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 22 days ago\n13. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=0aff5797837e1df7ac73cd3bcd1b5a86113832a2",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:lionel@trakx.io",
+                                "text": "lionel@trakx.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 15 days ago\n14. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=c78d787c2839f8eb9ae21f2bcccde3f7fca72394",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:lionel@trakx.io",
+                                "text": "lionel@trakx.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 14 days ago\n15. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=93e3c5c991cd857803e2a1e17404d7bb2b703e58",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:brandon@blacksand.xyz",
+                                "text": "brandon@blacksand.xyz"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 12 days ago\n16. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=d07f2df92c3530c1619d6281582dd65c9aa1e5c5",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:brandon@blacksand.xyz",
+                                "text": "brandon@blacksand.xyz"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 12 days ago\n17. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=b1e6747c6bcb4f254284d434d053ba2b06f83607",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:daniel.schrader@finoa.io",
+                                "text": "daniel.schrader@finoa.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 11 days ago\n18. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=5b3ad866546d112e84ef9e2d1b3251257b387b6c",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:daniel.schrader@finoa.io",
+                                "text": "daniel.schrader@finoa.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 11 days ago\n19. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=c2cfa144dfb00ac7eb6a694b9a9c186750a12d7b",
+                                "text": "DLC-Link Employee or Contractor Agreement"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:shinnovation@protonmail.com",
+                                "text": "shinnovation@protonmail.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 7 days ago\n20. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=7677411103fbeed58a3bc3b59c9a085e5fbf72c4",
+                                "text": "DLC.Link Token Warrant for Employees (June 2024)",
+                                "unsafe": true
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:shinnovation@protonmail.com",
+                                "text": "shinnovation@protonmail.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 7 days ago"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "21. <https:\/\/app.hellosign.com\/home\/manage?guid=c61dcce2029f9e68099158ab47a5a1222f1d06d8|CBTC Early Bird Holder Credential> sent to alex@blackmanta.capital 7 days ago\n22. <https:\/\/app.hellosign.com\/home\/manage?guid=00991f6732246da78546747e25c3db72a1e856c6|CBTC Early Bird Minter Credential> sent to alex@blackmanta.capital 7 days ago\n23. <https:\/\/app.hellosign.com\/home\/manage?guid=62ddb50f16a460b03c39c3c5c3f6a49f2488bb00|CBTC Early Bird Holder Credential> sent to <mailto:tony@ubyx.xyz|tony@ubyx.xyz> 7 days ago\n24. <https:\/\/app.hellosign.com\/home\/manage?guid=fcf75d567b1d82fa15621185e1f9f9ae5cd97167|CBTC Early Bird Minter Credential> sent to <mailto:tony@ubyx.xyz|tony@ubyx.xyz> 7 days ago\n25. <https:\/\/app.hellosign.com\/home\/manage?guid=bd1ada73e6e9bb6566356b3635f98080ed9e8cb0|CBTC Early Bird Holder Credential> sent to brandon@barg.systems 5 days ago\n26. <https:\/\/app.hellosign.com\/home\/manage?guid=53efc40607d6e05fde8c37b4e2c492a3834a38c8|CBTC Early Bird Minter Credential> sent to brandon@barg.systems 5 days ago\n27. <https:\/\/app.hellosign.com\/home\/manage?guid=26b61b6a5d0a57ec7e24405f5cea7d9b6c933a22|CBTC Early Bird Holder Credential> sent to <mailto:christopher.blodgett@binance.us|christopher.blodgett@binance.us> 4 days ago\n28. <https:\/\/app.hellosign.com\/home\/manage?guid=25520ea395d07311935e9145a288f7d67214a01c|CBTC Early Bird Minter Credential> sent to <mailto:christopher.blodgett@binance.us|christopher.blodgett@binance.us> 4 days ago\n&gt;&gt; <https:\/\/app.hellosign.com\/home\/manage|Manage Documents On HelloSign>",
+        "type": "message",
+        "ts": "1755018133.454849",
+        "bot_id": "B095UTUK0UW",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OMNVz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "21. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=c61dcce2029f9e68099158ab47a5a1222f1d06d8",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to alex@blackmanta.capital 7 days ago\n22. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=00991f6732246da78546747e25c3db72a1e856c6",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to alex@blackmanta.capital 7 days ago\n23. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=62ddb50f16a460b03c39c3c5c3f6a49f2488bb00",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:tony@ubyx.xyz",
+                                "text": "tony@ubyx.xyz"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 7 days ago\n24. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=fcf75d567b1d82fa15621185e1f9f9ae5cd97167",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:tony@ubyx.xyz",
+                                "text": "tony@ubyx.xyz"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 7 days ago\n25. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=bd1ada73e6e9bb6566356b3635f98080ed9e8cb0",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to brandon@barg.systems 5 days ago\n26. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=53efc40607d6e05fde8c37b4e2c492a3834a38c8",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to brandon@barg.systems 5 days ago\n27. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=26b61b6a5d0a57ec7e24405f5cea7d9b6c933a22",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:christopher.blodgett@binance.us",
+                                "text": "christopher.blodgett@binance.us"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 4 days ago\n28. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=25520ea395d07311935e9145a288f7d67214a01c",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:christopher.blodgett@binance.us",
+                                "text": "christopher.blodgett@binance.us"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 4 days ago"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "> "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage",
+                                "text": "Manage Documents On HelloSign"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1755018268.046059",
+        "client_msg_id": "933c0c6d-c0df-4d67-81c4-ea12c95713cc",
+        "text": "Thanks, yeah, no need to bother",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754938721.600789",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0OeLP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks, yeah, no need to bother"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08Q9VCAM1A",
+        "type": "message",
+        "ts": "1755018944.093379",
+        "client_msg_id": "b28faa2f-23cb-4c4a-b9d4-fec7a8ff614b",
+        "text": "<@U091F8WHDC3> Aki is taking a look at the sheet and taking out anyone who is prefunded and would not get rewards. So the list will get shorter",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "g019daf4f78d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/019daf4f78d76a8bb2381ebc905c209e.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Anna",
+            "real_name": "Anna Matusova",
+            "display_name": "Anna Matusova",
+            "team": "T05FWTX7PMG",
+            "name": "anna",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755009544.562459",
+        "parent_user_id": "U08Q9VCAM1A",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "InZem",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U091F8WHDC3"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Aki is taking a look at the sheet and taking out anyone who is prefunded and would not get rewards. So the list will get shorter"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U091F8WHDC3"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08Q9VCAM1A",
+        "type": "message",
+        "ts": "1755019135.629419",
+        "client_msg_id": "de7c245d-bbf4-407f-b257-a2938fce1cda",
+        "text": "<@U05FU0HPZ9T> Aki is helping me with this live atm, Once we have a list, Mayank will reach out to all customers and verify the address",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "g019daf4f78d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/019daf4f78d76a8bb2381ebc905c209e.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Anna",
+            "real_name": "Anna Matusova",
+            "display_name": "Anna Matusova",
+            "team": "T05FWTX7PMG",
+            "name": "anna",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755014492.688079",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qskS5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U05FU0HPZ9T"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Aki is helping me with this live atm, Once we have a list, Mayank will reach out to all customers and verify the address"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1755023535.750149",
+        "client_msg_id": "6a08db13-64a8-418e-bb07-b84fc12c0af7",
+        "text": "Hey <@U092B2GUASF>! Since you're in all of these groups -- could you chase these folks to get their MSAs signed?\n\nTalking to <@U08Q9VCAM1A>.. she's right, it's probably fine to mention that having a signed MSA is a pre-requisite to getting rewards paid out.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755023535.750149",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1755092244.221379",
+        "reply_users": [
+            "U092B2GUASF",
+            "U05FZBDQ4RJ"
+        ],
+        "replies": [
+            {
+                "user": "U092B2GUASF",
+                "ts": "1755042943.203399"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1755092244.221379"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1755092244.221379",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "i6aFZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U092B2GUASF"
+                            },
+                            {
+                                "type": "text",
+                                "text": "! Since you're in all of these groups -- could you chase these folks to get their MSAs signed?\n\nTalking to "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U08Q9VCAM1A"
+                            },
+                            {
+                                "type": "text",
+                                "text": ".. she's right, it's probably fine to mention that having a signed MSA is a pre-requisite to getting rewards paid out."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08Q9VCAM1A",
+        "type": "message",
+        "ts": "1755024961.638959",
+        "client_msg_id": "131d50b1-c738-4c28-b11e-514766126be2",
+        "text": "<@U091F8WHDC3> Aki and I talked, the list is ready for reachout. There are a couple that explicitly wanted us to top of their credentials, so those have no address, and are already checked off as confirmed. Thanks for your help!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "g019daf4f78d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/019daf4f78d76a8bb2381ebc905c209e.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Anna",
+            "real_name": "Anna Matusova",
+            "display_name": "Anna Matusova",
+            "team": "T05FWTX7PMG",
+            "name": "anna",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Y6052",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U091F8WHDC3"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Aki and I talked, the list is ready for reachout. There are a couple that explicitly wanted us to top of their credentials, so those have no address, and are already checked off as confirmed. Thanks for your help!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U091F8WHDC3"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U092B2GUASF",
+        "type": "message",
+        "ts": "1755042943.203399",
+        "client_msg_id": "33186477-641C-4CD5-8DE8-3ED504D526A8",
+        "text": "Yes!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "8b842055c598",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-02\/9134237124982_8b842055c59860142a0b_72.jpg",
+            "first_name": "Addie",
+            "real_name": "Addie Tackman",
+            "display_name": "Addie Tackman",
+            "team": "T05FWTX7PMG",
+            "name": "addie",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755023535.750149",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ic8PB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U091F8WHDC3",
+        "type": "message",
+        "ts": "1755065884.571549",
+        "client_msg_id": "117d21f8-9e87-42dd-a49b-e781b9cba84d",
+        "text": "Can someone add me to a group with Lithium Digital <@U092B2GUASF> <@U05FZBDQ4RJ>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "b5a5873fb4ba",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-14\/9352769908786_b5a5873fb4baadcf4a8a_72.jpg",
+            "first_name": "Mayank",
+            "real_name": "Mayank Sachdev",
+            "display_name": "Mayank",
+            "team": "T05FWTX7PMG",
+            "name": "mayank",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755065884.571549",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1755091629.885279",
+        "reply_users": [
+            "U05FZBDQ4RJ"
+        ],
+        "replies": [
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1755091629.885279"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1755091629.885279",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "My+QO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Can someone add me to a group with Lithium Digital "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U092B2GUASF"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FZBDQ4RJ"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

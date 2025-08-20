@@ -1,0 +1,386 @@
+[
+    {
+        "user": "U047U17D7KL",
+        "type": "message",
+        "ts": "1755169290.362199",
+        "client_msg_id": "4d2cad21-9998-4d85-9fb4-ac7c7e392d50",
+        "text": "Just to set expectations… I _believe_ that anything in the DA Artifactory which requires JFrog credentials to download is part of DA’s paid enterprise offerings. I’ll double-check.\n\nIf you don’t have a DA enterprise license, the CN Quickstart still serves as publicly available example architecture and code. However, it is built on enterprise components. It is a Quickstart for those looking to build a full application using those components. (Correct me if I’m wrong, <@U02SR6E8Z9S>).\n\nHave you already tried <https:\/\/docs.dev.sync.global\/validator_operator\/validator_compose.html|connecting a Docker Compose-hosted validator on your workstation> to DevNet? If not, that’s a worthwhile exercise.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "16aeca7859e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-10-24\/4263109753253_16aeca7859e88c51a7d5_72.png",
+            "first_name": "Wallace",
+            "real_name": "Wallace Kelly",
+            "display_name": "Wallace Kelly",
+            "team": "T03T53E10",
+            "name": "wallace.kelly",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755108625.937869",
+        "parent_user_id": "U04B73XH77Z",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/hA9a",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Just to set expectations… I "
+                            },
+                            {
+                                "type": "text",
+                                "text": "believe",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " that anything in the DA Artifactory which requires JFrog credentials to download is part of DA’s paid enterprise offerings. I’ll double-check.\n\nIf you don’t have a DA enterprise license, the CN Quickstart still serves as publicly available example architecture and code. However, it is built on enterprise components. It is a Quickstart for those looking to build a full application using those components. (Correct me if I’m wrong, "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02SR6E8Z9S"
+                            },
+                            {
+                                "type": "text",
+                                "text": ").\n\nHave you already tried "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/validator_operator\/validator_compose.html",
+                                "text": "connecting a Docker Compose-hosted validator on your workstation"
+                            },
+                            {
+                                "type": "text",
+                                "text": " to DevNet? If not, that’s a worthwhile exercise."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755198945.376369",
+        "client_msg_id": "18dbda4c-df14-471e-920d-16d0b4c5c626",
+        "text": "Hi <@U05MA5XENTC> Have you ever got this working?\n\nI actually got it other way around. `secp256r1` work, but I want to use `ed25519` instead.\n\nBy my sandbox is having the same error of\n\n```WARN  c.d.c.p.s.m.InMemorySyncPersistentState$$anon$1:participant=participant1\/synchronizerId=da::122046b42adb - TOPOLOGY_UNAUTHORIZED_TRANSACTION(5,0): Topology transaction is not properly authorized: No delegation found for keys 12207e835a06... err-context:{location=TopologyTransactionRejection.scala:35, reason=No delegation found for keys 12207e835a06...```\nWhat did you change to make `ed25519` work?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749647205.846449",
+        "parent_user_id": "U05MA5XENTC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "amuwY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05MA5XENTC"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Have you ever got this working?\n\nI actually got it other way around. "
+                            },
+                            {
+                                "type": "text",
+                                "text": "secp256r1",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " work, but I want to use "
+                            },
+                            {
+                                "type": "text",
+                                "text": "ed25519",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " instead.\n\nBy my sandbox is having the same error of\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "WARN  c.d.c.p.s.m.InMemorySyncPersistentState$$anon$1:participant=participant1\/synchronizerId=da::122046b42adb - TOPOLOGY_UNAUTHORIZED_TRANSACTION(5,0): Topology transaction is not properly authorized: No delegation found for keys 12207e835a06... err-context:{location=TopologyTransactionRejection.scala:35, reason=No delegation found for keys 12207e835a06..."
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nWhat did you change to make "
+                            },
+                            {
+                                "type": "text",
+                                "text": "ed25519",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " work?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U047SRHJQ5T",
+        "type": "message",
+        "ts": "1755204973.966089",
+        "client_msg_id": "3fb66545-64cc-47a9-8511-7c182ec1ad0b",
+        "text": "So, when we have a token registry in Canton Utility, and we have created an allocation factory, how do we get a disclosure of that allocation factory that other parties can use?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GGGURARK",
+        "source_team": "T02GGGURARK",
+        "user_profile": {
+            "avatar_hash": "gc547e35a01a",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/c547e35a01a31d4b28cf33d79587f9e4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0023-72.png",
+            "first_name": "Ryan",
+            "real_name": "Ryan Trinkle",
+            "display_name": "Ryan Trinkle",
+            "team": "T02GGGURARK",
+            "name": "ryan.trinkle",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MtyP8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So, when we have a token registry in Canton Utility, and we have created an allocation factory, how do we get a disclosure of that allocation factory that other parties can use?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U047SRHJQ5T",
+        "type": "message",
+        "ts": "1755205384.055029",
+        "client_msg_id": "58935f3f-82ef-4576-96ac-700a56c57872",
+        "text": "Specifically I am looking for \/registry\/allocation-instruction\/v1\/allocation-factory",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GGGURARK",
+        "source_team": "T02GGGURARK",
+        "user_profile": {
+            "avatar_hash": "gc547e35a01a",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/c547e35a01a31d4b28cf33d79587f9e4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0023-72.png",
+            "first_name": "Ryan",
+            "real_name": "Ryan Trinkle",
+            "display_name": "Ryan Trinkle",
+            "team": "T02GGGURARK",
+            "name": "ryan.trinkle",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755205384.055029",
+        "reply_count": 6,
+        "reply_users_count": 3,
+        "latest_reply": "1755250851.319229",
+        "reply_users": [
+            "U0PQ8E25D",
+            "U02KJ7PKHN2",
+            "U047SRHJQ5T"
+        ],
+        "replies": [
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1755234514.360609"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1755242259.208779"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1755242299.565219"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1755242414.292499"
+            },
+            {
+                "user": "U047SRHJQ5T",
+                "ts": "1755250792.098269"
+            },
+            {
+                "user": "U047SRHJQ5T",
+                "ts": "1755250851.319229"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GntPp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Specifically I am looking for \/registry\/allocation-instruction\/v1\/allocation-factory"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1755234514.360609",
+        "client_msg_id": "9104bea9-0a39-400c-9895-1aa9fa3c1214",
+        "text": "Mid-term you will be able to look up the URL prefix from the CNS entry of the `admin` party on the `InstrumentId`, as described in <https:\/\/github.com\/global-synchronizer-foundation\/cips\/blob\/main\/cip-0056\/cip-0056.md#off-ledger-api-discovery-and-access>\n\nRight now CNS is a bit cumbersome to use for storing metadata, which is why it's not done yet for the utility or the DSO party.\n\nApps should manage the list of registry URLs on their side.\n\nI'd wager that the utility serves the off-ledger API from the same server as it serves other UI components. You can probably have a peek at the UI's connections for creating allocations to figure this out.\n\nOr wait for <@U02KJ7PKHN2> do you give you the answer :wink:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755205384.055029",
+        "parent_user_id": "U047SRHJQ5T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "P4xGI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Mid-term you will be able to look up the URL prefix from the CNS entry of the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "admin",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " party on the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "InstrumentId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", as described in "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/global-synchronizer-foundation\/cips\/blob\/main\/cip-0056\/cip-0056.md#off-ledger-api-discovery-and-access"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nRight now CNS is a bit cumbersome to use for storing metadata, which is why it's not done yet for the utility or the DSO party.\n\nApps should manage the list of registry URLs on their side.\n\nI'd wager that the utility serves the off-ledger API from the same server as it serves other UI components. You can probably have a peek at the UI's connections for creating allocations to figure this out.\n\nOr wait for "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02KJ7PKHN2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " do you give you the answer "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink",
+                                "unicode": "1f609"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

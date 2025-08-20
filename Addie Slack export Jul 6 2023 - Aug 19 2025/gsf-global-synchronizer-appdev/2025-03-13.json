@@ -1,0 +1,293 @@
+[
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1741859020.604639",
+        "client_msg_id": "3fb7cf09-0385-4c4e-b643-bae7926d3ac4",
+        "text": "Thanks <@U03HMUTQ5F0> and <@UEHLS0JUB> for the great answers. I have some follow up questions about the traffic balance.\n\n1. Is there some API, like a dry-run, that can tell us the traffic balance necessary to execute a transaction? \n2. What is the API that gives us the current traffic balance of an account?\n3. About this:\n&gt; In addition, Canton Coin transfers charge fees denominated in Canton Coin itself.\n&gt; Other tokens each define their own fee structure.\nSo, in addition to having available traffic balance, there could also be some fee on the transaction itself and it would depend on each token implementation? If so, where could we get the amulet price of those tokens from in order to calculate the fees?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741800696.666699",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0coo6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " for the great answers. I have some follow up questions about the traffic balance.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Is there some API, like a dry-run, that can tell us the traffic balance necessary to execute a transaction? "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "What is the API that gives us the current traffic balance of an account?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "About this:"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In addition, Canton Coin transfers charge fees denominated in Canton Coin itself.\nOther tokens each define their own fee structure."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So, in addition to having available traffic balance, there could also be some fee on the transaction itself and it would depend on each token implementation? If so, where could we get the amulet price of those tokens from in order to calculate the fees?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1741877675.460199",
+        "client_msg_id": "5fd5df2c-1eb6-42c8-881c-c25edc35f8ae",
+        "text": "Circling back on this, I see two transfer offers when I query for `TransferOffer` . I assume these are two that have not yet been accepted or expired. I would expect to see three additional offers querying for `\"#splice-wallet:Splice.Wallet.TransferOffer:AcceptedTransferOffer\"`, but I don't see any.\n\nIs there another way I can see accepted\/completed transfer offers?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741805502.464069",
+        "parent_user_id": "U07J3V9CS78",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CPerk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Circling back on this, I see two transfer offers when I query for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "TransferOffer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " . I assume these are two that have not yet been accepted or expired. I would expect to see three additional offers querying for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"#splice-wallet:Splice.Wallet.TransferOffer:AcceptedTransferOffer\"",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", but I don't see any.\n\nIs there another way I can see accepted\/completed transfer offers?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1741883944.264879",
+        "client_msg_id": "b73431fd-68f3-46ac-ba27-ac23b5082b2b",
+        "text": "To give more context about the fees questions. We need to estimate the base fee, transfer fee, and holding fee of each transaction. We need to know these values before the transaction is sent. Currently we do this by using the endpoint `api\/validator\/v0\/scan-proxy\/open-and-issuing-mining-rounds`. Will there be an equivalent for endpoint for all tokens? Can we assume the tokens can have each of those fees (base fee, transfer fee, and holding fee) or are any exclusive to Canton Coin?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741800696.666699",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MS8\/t",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "To give more context about the fees questions. We need to estimate the base fee, transfer fee, and holding fee of each transaction. We need to know these values before the transaction is sent. Currently we do this by using the endpoint "
+                            },
+                            {
+                                "type": "text",
+                                "text": "api\/validator\/v0\/scan-proxy\/open-and-issuing-mining-rounds",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Will there be an equivalent for endpoint for all tokens? Can we assume the tokens can have each of those fees (base fee, transfer fee, and holding fee) or are any exclusive to Canton Coin?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1741884026.819549",
+        "client_msg_id": "b93ba464-4d3c-43de-8084-5c43a02c7c65",
+        "text": "Another question, about this:\n&gt;&gt; Does each token need a preapproval or is that account wide?\n&gt;&gt; It's per token. Some tokens may also chose more restrictive versions e.g. only preapprove transfers from certain parties or require explicit approvals for each transfer.\nHow can we know about the distinct restrictions each token will have? Will this information be present in the token metadata?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741800696.666699",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nZQWz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Another question, about this:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Does each token need a preapproval or is that account wide?"
+                            }
+                        ],
+                        "border": 1
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It's per token. Some tokens may also chose more restrictive versions e.g. only preapprove transfers from certain parties or require explicit approvals for each transfer."
+                            }
+                        ],
+                        "border": 1
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "How can we know about the distinct restrictions each token will have? Will this information be present in the token metadata?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

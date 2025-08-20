@@ -1,0 +1,373 @@
+[
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1742559820.333329",
+        "edited": {
+            "user": "U05FU0HPZ9T",
+            "ts": "1742559832.000000"
+        },
+        "client_msg_id": "f631383c-c87a-4c89-8162-7ecdc0b06136",
+        "text": "Hi <@UEHLS0JUB>, we put together a high level list of functions that summarize the functions of our connectors. Take a peek if you have a moment.\n\nI think none of this will surprise you, but we felt it would be nice to have a mapping for developing the connections from our core Attestor code to the Gov contracts you built\n\n<https:\/\/docs.google.com\/spreadsheets\/d\/1VIGASnZepOaWsl9HPzOraJDnGphPOtY6VaoJQRZpl_k\/edit>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742559820.333329",
+        "reply_count": 0,
+        "reply_users_count": 0,
+        "latest_reply": "0000000000.000000",
+        "reply_users": [],
+        "replies": [],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "43eMG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", we put together a high level list of functions that summarize the functions of our connectors. Take a peek if you have a moment.\n\nI think none of this will surprise you, but we felt it would be nice to have a mapping for developing the connections from our core Attestor code to the Gov contracts you built\n\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.google.com\/spreadsheets\/d\/1VIGASnZepOaWsl9HPzOraJDnGphPOtY6VaoJQRZpl_k\/edit"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1742569564.535859",
+        "client_msg_id": "94a32b45-34ed-4c7a-8bf1-7d70144ec70b",
+        "text": "Hey <@UEHLS0JUB>!\n\nTrying to run `daml build --all` throws the following:\n\n```[cocreature\/daml][~\/Coding\/dlc-link\/canton\/daml]$ daml build --all\nRunning multi-package build of all packages in \/Users\/scolear\/Coding\/dlc-link\/canton\/daml.\ndamlc: option --target: Unknown Daml-LF version: 1.14, 1.15 (default), 1.17, 1.dev\n\nUsage: daml build [--include INCLUDE-PATH] [--package-db LOC-OF-PACKAGE-DB]\n                  [--access-token-file PATH]\n                  [--shake-profiling PROFILING-REPORT] [[--jobs THREADS]]\n                  [--debug | [--log-level ARG]] [--detail LEVEL]\n                  [--ghc-option OPTION] [(-p|--test-pattern PATTERN)]\n                  [--typecheck-upgrades ARG] [--upgrades UPGRADE_DAR] [-W ARG]\n                  [--ignore-data-deps-visibility ARG] [-o|--output FILE]\n                  [--incremental ARG] [--init-package-db ARG]\nCallStack (from HasCallStack):\n  error, called at compiler\/damlc\/lib\/DA\/Cli\/Damlc.hs:1905:20 in compilerZSdamlcZSdamlc-lib:DA.Cli.Damlc```\nMy daml SDK version is `2.10.0` - I tried downgrading to `1.15` but that also did not work\n\nThanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742569564.535859",
+        "reply_count": 3,
+        "reply_users_count": 1,
+        "latest_reply": "1742570560.577419",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1742569996.203799"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1742569996.652009"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1742570560.577419"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Iskg1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!\n\nTrying to run "
+                            },
+                            {
+                                "type": "text",
+                                "text": "daml build --all",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " throws the following:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "[cocreature\/daml][~\/Coding\/dlc-link\/canton\/daml]$ daml build --all\nRunning multi-package build of all packages in \/Users\/scolear\/Coding\/dlc-link\/canton\/daml.\ndamlc: option --target: Unknown Daml-LF version: 1.14, 1.15 (default), 1.17, 1.dev\n\nUsage: daml build [--include INCLUDE-PATH] [--package-db LOC-OF-PACKAGE-DB]\n                  [--access-token-file PATH]\n                  [--shake-profiling PROFILING-REPORT] [[--jobs THREADS]]\n                  [--debug | [--log-level ARG]] [--detail LEVEL]\n                  [--ghc-option OPTION] [(-p|--test-pattern PATTERN)]\n                  [--typecheck-upgrades ARG] [--upgrades UPGRADE_DAR] [-W ARG]\n                  [--ignore-data-deps-visibility ARG] [-o|--output FILE]\n                  [--incremental ARG] [--init-package-db ARG]\nCallStack (from HasCallStack):\n  error, called at compiler\/damlc\/lib\/DA\/Cli\/Damlc.hs:1905:20 in compilerZSdamlcZSdamlc-lib:DA.Cli.Damlc"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "My daml SDK version is "
+                            },
+                            {
+                                "type": "text",
+                                "text": "2.10.0",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " - I tried downgrading to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "1.15",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " but that also did not work\n\nThanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1742569996.203799",
+        "client_msg_id": "a38aa3a2-5738-438c-a052-8d51e3c1f0b3",
+        "text": "cool yeah i needed to go into vault\/governance and do `daml install project`, then in the parent folder `daml build --all` worked",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742569564.535859",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sCNvr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "cool yeah i needed to go into vault\/governance and do "
+                            },
+                            {
+                                "type": "text",
+                                "text": "daml install project",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", then in the parent folder "
+                            },
+                            {
+                                "type": "text",
+                                "text": "daml build --all",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " worked"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1742569996.652009",
+        "client_msg_id": "1d2fcd09-6013-4bb6-82b1-f698004a2c00",
+        "text": "thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742569564.535859",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QN5Fg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "Is this what all-green tests should look like?",
+        "files": [
+            {
+                "id": "F08JC6G10QP",
+                "created": 1742570555,
+                "timestamp": 1742570555,
+                "name": "Screenshot 2025-03-21 at 16.22.00.png",
+                "title": "Screenshot 2025-03-21 at 16.22.00.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 89092,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08JC6G10QP\/screenshot_2025-03-21_at_16.22.00.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08JC6G10QP\/download\/screenshot_2025-03-21_at_16.22.00.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08JC6G10QP-2217ab10e1\/screenshot_2025-03-21_at_16.22.00_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08JC6G10QP-2217ab10e1\/screenshot_2025-03-21_at_16.22.00_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08JC6G10QP-2217ab10e1\/screenshot_2025-03-21_at_16.22.00_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 320,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08JC6G10QP-2217ab10e1\/screenshot_2025-03-21_at_16.22.00_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 427,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08JC6G10QP-2217ab10e1\/screenshot_2025-03-21_at_16.22.00_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "original_w": 565,
+                "original_h": 635,
+                "thumb_tiny": "AwAwACqt268fSmkAd6cPu0h\/CmA3ijj3ox9KSgBePekoooAeOBR26UDpQRnuaAGkYpKcQPWm0AFFFFADx0o+X2\/OgEbetHH96gAO2mU4getNoAKKKKAP\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08JC6G10QP\/screenshot_2025-03-21_at_16.22.00.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08JC6G10QP-d187261cc1",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VFVd6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is this what all-green tests should look like?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1742570560.577419",
+        "client_msg_id": "113a4aa2-3511-4854-ac43-8452b0150f25",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1742569564.535859",
+        "parent_user_id": "U088UV6MKFE",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

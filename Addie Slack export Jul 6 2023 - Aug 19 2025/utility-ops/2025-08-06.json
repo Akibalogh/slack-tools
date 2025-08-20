@@ -1,0 +1,3219 @@
+[
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754466700.894949",
+        "client_msg_id": "8be1d21f-feca-4ed6-9fe4-1297157fe690",
+        "text": "On the validator end, we only use the `scan-proxy` endpoints (the Splice Wallet UI might need additional ones though)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754241890.943689",
+        "parent_user_id": "U08JYBDSK0V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6JXwr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "On the validator end, we only use the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "scan-proxy",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " endpoints (the Splice Wallet UI might need additional ones though)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754466777.507929",
+        "edited": {
+            "user": "U02KJ7PKHN2",
+            "ts": "1754466795.000000"
+        },
+        "client_msg_id": "278ac7bb-881b-432d-bbb2-9509ad11a379",
+        "text": "For the participant, endpoints are listed here <https:\/\/docs.digitalasset.com\/build\/3.3\/reference\/json-api\/openapi.html>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754241890.943689",
+        "parent_user_id": "U08JYBDSK0V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "aLMUz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "For the participant, endpoints are listed here "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.digitalasset.com\/build\/3.3\/reference\/json-api\/openapi.html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754466846.143389",
+        "client_msg_id": "a8501f74-3d1d-4614-8ee5-df3a204b6075",
+        "text": "We only use a subset of those, but that could change in the future",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754241890.943689",
+        "parent_user_id": "U08JYBDSK0V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mHFSA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We only use a subset of those, but that could change in the future"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754466942.486639",
+        "client_msg_id": "b6f33351-5f6a-4ab9-b8c9-b4d5cc2e7abc",
+        "text": "&gt; Can we make the same statement about the Splice Wallet UI: \"_External parties are supported in the API, but not in the Splice Wallet UI\"?_\nYes, but with some caveats (e.g. I don't think the Wallet automation works with external parties. Moreover, token standard CC transfer are also subject to a short signing window (the issue I mentioned above). I think it's better to clarify in <#C08FQRCRFUN|gsf-global-synchronizer-appdev>\n\n&gt;  And so, Splice Wallet UI and Utility UI only support 'Local Parties', right ?\nYes",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754241890.943689",
+        "parent_user_id": "U08JYBDSK0V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RLXDM",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Can we make the same statement about the Splice Wallet UI: \""
+                            },
+                            {
+                                "type": "text",
+                                "text": "External parties are supported in the API, but not in the Splice Wallet UI\"?",
+                                "style": {
+                                    "italic": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nYes, but with some caveats (e.g. I don't think the Wallet automation works with external parties. Moreover, token standard CC transfer are also subject to a short signing window (the issue I mentioned above). I think it's better to clarify in "
+                            },
+                            {
+                                "type": "channel",
+                                "channel_id": "C08FQRCRFUN"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " And so, Splice Wallet UI and Utility UI only support 'Local Parties', right ?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nYes"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U08JYBDSK0V"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754468527.510909",
+        "edited": {
+            "user": "U02KJ7PKHN2",
+            "ts": "1754468536.000000"
+        },
+        "client_msg_id": "281132d3-5e0e-418c-9696-1351a9304958",
+        "text": "Hi Tony",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KQHjX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Tony"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754468547.842809",
+        "client_msg_id": "be994a6d-7bbf-4a40-8a14-73b646297ae1",
+        "text": "did you accept the credential I offered yesterday?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xlQ+r",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "did you accept the credential I offered yesterday?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754468604.349589",
+        "client_msg_id": "fef72117-1288-4b86-92a9-8a53d2b9b38e",
+        "text": "I see it as still pending acceptance",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "twabD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I see it as still pending acceptance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754468673.875289",
+        "client_msg_id": "30b5d60e-9ce4-4b33-b08b-5a5fa0242b15",
+        "text": "I can't onboard to UserService. Therefore I can't even see credentials on the UI",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "u9WT2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I can't onboard to UserService. Therefore I can't even see credentials on the UI"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "The UserService request gets cancelled after around 30 seconds",
+        "files": [
+            {
+                "id": "F09965KALLS",
+                "created": 1754468708,
+                "timestamp": 1754468708,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U057HGB61RS",
+                "user_team": "TBL1G8KHT",
+                "editable": false,
+                "size": 16125,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/TBL1G8KHT-F09965KALLS\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/TBL1G8KHT-F09965KALLS\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F09965KALLS-7f53d749a7\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F09965KALLS-7f53d749a7\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F09965KALLS-7f53d749a7\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 70,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F09965KALLS-7f53d749a7\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 94,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F09965KALLS-7f53d749a7\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F09965KALLS-7f53d749a7\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 141,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F09965KALLS-7f53d749a7\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 157,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F09965KALLS-7f53d749a7\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 188,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F09965KALLS-7f53d749a7\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 200,
+                "original_w": 1492,
+                "original_h": 292,
+                "thumb_tiny": "AwAKADDSAI6sT9aWiigAooooAKTJ3YwcY69qWigD\/9k=",
+                "permalink": "https:\/\/hydrax.slack.com\/files\/U05FZBDQ4RJ\/F09965KALLS\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/TBL1G8KHT-F09965KALLS-f9cd3596b6",
+                "source_team": "TBL1G8KHT",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U057HGB61RS",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DF1h+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The UserService request gets cancelled after around 30 seconds"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1754468731.724459",
+        "client_msg_id": "a1e777a0-9af1-432f-8b30-e6515194390d",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754468873.560539",
+        "client_msg_id": "ed06a189-ee81-4bc4-9d68-6e8473945497",
+        "text": "`hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410`  already has a valid `UserService`",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "R3rIQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  already has a valid "
+                            },
+                            {
+                                "type": "text",
+                                "text": "UserService",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754468960.307719",
+        "client_msg_id": "0e97188d-78aa-45bb-949e-a65b199232fc",
+        "text": "I wonder if it's another instance of the query for the `UserService` failing in the UI",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XuQLB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I wonder if it's another instance of the query for the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "UserService",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " failing in the UI"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754469028.066249",
+        "client_msg_id": "4affc15f-d19c-40e4-85a1-b27d2683f93b",
+        "text": "Yeah. we actually enabled UserService a few days back. Therefore I was surprised to see it not showing yesterday.",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "52ABm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yeah. we actually enabled UserService a few days back. Therefore I was surprised to see it not showing yesterday."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754469055.755209",
+        "client_msg_id": "bde5fd47-045e-494d-b128-70ba4e2957d2",
+        "text": "you should see the request failing in the Network Tab of the UI",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iQyKn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "you should see the request failing in the Network Tab of the UI"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754469157.041859",
+        "client_msg_id": "a18a55e0-48a4-40fb-a622-3d4c3dd02fb6",
+        "text": "I actually dont see any error on the network tab",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6x+Al",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I actually dont see any error on the network tab"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754469231.337219",
+        "client_msg_id": "f6812d06-32f6-40af-89a8-8f678d13946c",
+        "text": "Thanks. So there is no call for `active-contracts` failing?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "b+p5U",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks. So there is no call for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "active-contracts",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " failing?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754469251.782789",
+        "client_msg_id": "d5a1f041-49b5-4569-8162-86e116841173",
+        "text": "Not currently",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "umNaH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Not currently"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754469347.318099",
+        "client_msg_id": "b9bdc5a8-18dc-41ab-bcce-e691a903f754",
+        "text": "understood, thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WoCtf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "understood, thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U057HGB61RS"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754469365.837829",
+        "client_msg_id": "a6f60cb0-f909-4464-912d-5a1ec47579f4",
+        "text": "could you confirm that the query for `UserService` returns an empty result?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QEZj4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "could you confirm that the query for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "UserService",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " returns an empty result?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754469458.546199",
+        "client_msg_id": "ae302655-b14e-415d-b45b-5ed743b4f48d",
+        "text": "Request (cURL)\n```curl ^\"<https:\/\/utility.validator.canton-test.drax.dev\/api\/json-api\/v2\/commands\/submit-and-wait-for-transaction>^\" ^\n  -H ^\"accept: application\/json, *\/*;q=0.8^\" ^\n  -H ^\"accept-language: en-US,en;q=0.9^\" ^\n  -H ^\"authorization: Bearer ---^\" ^\n  -H ^\"content-type: application\/json^\" ^\n  -H ^\"origin: <https:\/\/utility.validator.canton-test.drax.dev>^\" ^\n  -H ^\"priority: u=1, i^\" ^\n  -H ^\"referer: <https:\/\/utility.validator.canton-test.drax.dev\/credential\/onboarding>^\" ^\n  -H ^\"sec-ch-ua: ^\\^\"Not)A;Brand^\\^\";v=^\\^\"8^\\^\", ^\\^\"Chromium^\\^\";v=^\\^\"138^\\^\", ^\\^\"Google Chrome^\\^\";v=^\\^\"138^\\^\"^\" ^\n  -H ^\"sec-ch-ua-mobile: ?0^\" ^\n  -H ^\"sec-ch-ua-platform: ^\\^\"Windows^\\^\"^\" ^\n  -H ^\"sec-fetch-dest: empty^\" ^\n  -H ^\"sec-fetch-mode: cors^\" ^\n  -H ^\"sec-fetch-site: same-origin^\" ^\n  -H ^\"user-agent: Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36^\" ^\n  --data-raw ^\"^{^\\^\"commands^\\^\":^{^\\^\"commands^\\^\":^[^{^\\^\"CreateCommand^\\^\":^{^\\^\"templateId^\\^\":^\\^\"^#utility-credential-app-v0:Utility.Credential.App.V0.Service.User:UserServiceRequest^\\^\",^\\^\"createArguments^\\^\":^{^\\^\"operator^\\^\":^\\^\"auth0_007c66019993301e3ed49d0e36e9::12206268795b181eafd1432facbb3a3c5711f1f8b743ea0e9c0050b32126b33071fa^\\^\",^\\^\"user^\\^\":^\\^\"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410^\\^\"^}^}^}^],^\\^\"workflowId^\\^\":^\\^\"^\\^\",^\\^\"userId^\\^\":^\\^\"0be9f876-7e09-45f6-9348-374404829f49^\\^\",^\\^\"commandId^\\^\":^\\^\"bd63ee97fd93479017134523e042c23c68e3cb4a^\\^\",^\\^\"deduplicationPeriod^\\^\":^{^\\^\"DeduplicationDuration^\\^\":^{^\\^\"value^\\^\":^{^\\^\"seconds^\\^\":30,^\\^\"nanos^\\^\":0^}^}^},^\\^\"actAs^\\^\":^[^\\^\"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410^\\^\"^],^\\^\"readAs^\\^\":^[^],^\\^\"submissionId^\\^\":^\\^\"bcd780e7-0c81-4ce1-b01e-ff834f6b72c0^\\^\",^\\^\"disclosedContracts^\\^\":^[^],^\\^\"domainId^\\^\":^\\^\"^\\^\",^\\^\"packageIdSelectionPreference^\\^\":^[^\\^\"e4beed1b8ae0506e63d6da04bffb447f8f406261dd64b9abf457c4655d031a6a^\\^\",^\\^\"8209a411cf3988feeaf56d5534199b54864955f1175e30880628299506c36ea4^\\^\"^]^},^\\^\"transactionFormat^\\^\":^{^\\^\"eventFormat^\\^\":^{^\\^\"filtersByParty^\\^\":^{^\\^\"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410^\\^\":^{^\\^\"cumulative^\\^\":^[^{^\\^\"identifierFilter^\\^\":^{^\\^\"WildcardFilter^\\^\":^{^\\^\"value^\\^\":^{^\\^\"includeCreatedEventBlob^\\^\":true^}^}^}^}^]^}^},^\\^\"verbose^\\^\":false^},^\\^\"transactionShape^\\^\":^\\^\"TRANSACTION_SHAPE_ACS_DELTA^\\^\"^}^}^\"```\nResponse\n```{\n    \"transaction\": {\n        \"updateId\": \"122090ca4c30f782be4cf33f943f749d97dbf33465349d035ea4e5fa328e6b00bf98\",\n        \"commandId\": \"bd63ee97fd93479017134523e042c23c68e3cb4a\",\n        \"workflowId\": \"\",\n        \"effectiveAt\": \"2025-08-06T08:36:32.684646Z\",\n        \"events\": [\n            {\n                \"CreatedEvent\": {\n                    \"offset\": 82464,\n                    \"nodeId\": 0,\n                    \"contractId\": \"00df9978608bbee29bf9c4d827eb9bf7b3db451c9907427e239efad468c06ed141ca1112207c581cfc7b82c150ef9831da83267a0c0fdb9c0f75b6b0c4183d53bea4faa759\",\n                    \"templateId\": \"e4beed1b8ae0506e63d6da04bffb447f8f406261dd64b9abf457c4655d031a6a:Utility.Credential.App.V0.Service.User:UserServiceRequest\",\n                    \"contractKey\": null,\n                    \"createArgument\": {\n                        \"operator\": \"auth0_007c66019993301e3ed49d0e36e9::12206268795b181eafd1432facbb3a3c5711f1f8b743ea0e9c0050b32126b33071fa\",\n                        \"user\": \"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\"\n                    },\n                    \"createdEventBlob\": \"CgMyLjESswUKRQDfmXhgi77im\/nE2Cfrm\/ez20UcmQdCfiOe+tRowG7RQcoREiB8WBz8e4LBUO+YMdqDJnoMD9ucD3W2sMQYPVO+pPqnWRIZdXRpbGl0eS1jcmVkZW50aWFsLWFwcC12MBqDAQpAZTRiZWVkMWI4YWUwNTA2ZTYzZDZkYTA0YmZmYjQ0N2Y4ZjQwNjI2MWRkNjRiOWFiZjQ1N2M0NjU1ZDAzMWE2YRIHVXRpbGl0eRIKQ3JlZGVudGlhbBIDQXBwEgJWMBIHU2VydmljZRIEVXNlchoSVXNlclNlcnZpY2VSZXF1ZXN0Is8BaswBCmwKajpoYXV0aDBfMDA3YzY2MDE5OTkzMzAxZTNlZDQ5ZDBlMzZlOTo6MTIyMDYyNjg3OTViMTgxZWFmZDE0MzJmYWNiYjNhM2M1NzExZjFmOGI3NDNlYTBlOWMwMDUwYjMyMTI2YjMzMDcxZmEKXApaOlhoeWRyYXgtdmFsaWRhdG9yLTE6OjEyMjBjYmE4MDNiYTgwMmNhZTZhMDc4NGVkMzU5MGYzNzdiZThiZmZhMWEyMTQ3YWFlMGYyZTYwNGY0YWI4ZTkxNDEwKlhoeWRyYXgtdmFsaWRhdG9yLTE6OjEyMjBjYmE4MDNiYTgwMmNhZTZhMDc4NGVkMzU5MGYzNzdiZThiZmZhMWEyMTQ3YWFlMGYyZTYwNGY0YWI4ZTkxNDEwMmhhdXRoMF8wMDdjNjYwMTk5OTMzMDFlM2VkNDlkMGUzNmU5OjoxMjIwNjI2ODc5NWIxODFlYWZkMTQzMmZhY2JiM2EzYzU3MTFmMWY4Yjc0M2VhMGU5YzAwNTBiMzIxMjZiMzMwNzFmYTlmlus8rjsGAEIqCiYKJAgBEiCdWS3ceVWgWE6ppu2rjDh40ByGRsQfjd5c89CwKQ2zzhAe\",\n                    \"interfaceViews\": [],\n                    \"witnessParties\": [\n                        \"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\"\n                    ],\n                    \"signatories\": [\n                        \"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\"\n                    ],\n                    \"observers\": [\n                        \"auth0_007c66019993301e3ed49d0e36e9::12206268795b181eafd1432facbb3a3c5711f1f8b743ea0e9c0050b32126b33071fa\"\n                    ],\n                    \"createdAt\": \"2025-08-06T08:36:32.684646Z\",\n                    \"packageName\": \"utility-credential-app-v0\"\n                }\n            }\n        ],\n        \"offset\": 82464,\n        \"synchronizerId\": \"global-domain::1220e1e594cdb287aeac3e1e6d62e7d2db46b756a5d01656c26f1f1a151345bf2e53\",\n        \"traceContext\": {\n            \"traceparent\": \"00-fe0a2cb1a2f2fa7feb038a2af16553f1-0f529c0414423d83-01\",\n            \"tracestate\": null\n        },\n        \"recordTime\": \"2025-08-06T08:36:32.845319Z\"\n    }\n}```",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6uyyt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Request (cURL)\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl ^\""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/utility.validator.canton-test.drax.dev\/api\/json-api\/v2\/commands\/submit-and-wait-for-transaction"
+                            },
+                            {
+                                "type": "text",
+                                "text": "^\" ^\n  -H ^\"accept: application\/json, *\/*;q=0.8^\" ^\n  -H ^\"accept-language: en-US,en;q=0.9^\" ^\n  -H ^\"authorization: Bearer ---^\" ^\n  -H ^\"content-type: application\/json^\" ^\n  -H ^\"origin: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/utility.validator.canton-test.drax.dev"
+                            },
+                            {
+                                "type": "text",
+                                "text": "^\" ^\n  -H ^\"priority: u=1, i^\" ^\n  -H ^\"referer: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/utility.validator.canton-test.drax.dev\/credential\/onboarding"
+                            },
+                            {
+                                "type": "text",
+                                "text": "^\" ^\n  -H ^\"sec-ch-ua: ^\\^\"Not)A;Brand^\\^\";v=^\\^\"8^\\^\", ^\\^\"Chromium^\\^\";v=^\\^\"138^\\^\", ^\\^\"Google Chrome^\\^\";v=^\\^\"138^\\^\"^\" ^\n  -H ^\"sec-ch-ua-mobile: ?0^\" ^\n  -H ^\"sec-ch-ua-platform: ^\\^\"Windows^\\^\"^\" ^\n  -H ^\"sec-fetch-dest: empty^\" ^\n  -H ^\"sec-fetch-mode: cors^\" ^\n  -H ^\"sec-fetch-site: same-origin^\" ^\n  -H ^\"user-agent: Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36^\" ^\n  --data-raw ^\"^{^\\^\"commands^\\^\":^{^\\^\"commands^\\^\":^[^{^\\^\"CreateCommand^\\^\":^{^\\^\"templateId^\\^\":^\\^\"^#utility-credential-app-v0:Utility.Credential.App.V0.Service.User:UserServiceRequest^\\^\",^\\^\"createArguments^\\^\":^{^\\^\"operator^\\^\":^\\^\"auth0_007c66019993301e3ed49d0e36e9::12206268795b181eafd1432facbb3a3c5711f1f8b743ea0e9c0050b32126b33071fa^\\^\",^\\^\"user^\\^\":^\\^\"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410^\\^\"^}^}^}^],^\\^\"workflowId^\\^\":^\\^\"^\\^\",^\\^\"userId^\\^\":^\\^\"0be9f876-7e09-45f6-9348-374404829f49^\\^\",^\\^\"commandId^\\^\":^\\^\"bd63ee97fd93479017134523e042c23c68e3cb4a^\\^\",^\\^\"deduplicationPeriod^\\^\":^{^\\^\"DeduplicationDuration^\\^\":^{^\\^\"value^\\^\":^{^\\^\"seconds^\\^\":30,^\\^\"nanos^\\^\":0^}^}^},^\\^\"actAs^\\^\":^[^\\^\"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410^\\^\"^],^\\^\"readAs^\\^\":^[^],^\\^\"submissionId^\\^\":^\\^\"bcd780e7-0c81-4ce1-b01e-ff834f6b72c0^\\^\",^\\^\"disclosedContracts^\\^\":^[^],^\\^\"domainId^\\^\":^\\^\"^\\^\",^\\^\"packageIdSelectionPreference^\\^\":^[^\\^\"e4beed1b8ae0506e63d6da04bffb447f8f406261dd64b9abf457c4655d031a6a^\\^\",^\\^\"8209a411cf3988feeaf56d5534199b54864955f1175e30880628299506c36ea4^\\^\"^]^},^\\^\"transactionFormat^\\^\":^{^\\^\"eventFormat^\\^\":^{^\\^\"filtersByParty^\\^\":^{^\\^\"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410^\\^\":^{^\\^\"cumulative^\\^\":^[^{^\\^\"identifierFilter^\\^\":^{^\\^\"WildcardFilter^\\^\":^{^\\^\"value^\\^\":^{^\\^\"includeCreatedEventBlob^\\^\":true^}^}^}^}^]^}^},^\\^\"verbose^\\^\":false^},^\\^\"transactionShape^\\^\":^\\^\"TRANSACTION_SHAPE_ACS_DELTA^\\^\"^}^}^\""
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nResponse\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"transaction\": {\n        \"updateId\": \"122090ca4c30f782be4cf33f943f749d97dbf33465349d035ea4e5fa328e6b00bf98\",\n        \"commandId\": \"bd63ee97fd93479017134523e042c23c68e3cb4a\",\n        \"workflowId\": \"\",\n        \"effectiveAt\": \"2025-08-06T08:36:32.684646Z\",\n        \"events\": [\n            {\n                \"CreatedEvent\": {\n                    \"offset\": 82464,\n                    \"nodeId\": 0,\n                    \"contractId\": \"00df9978608bbee29bf9c4d827eb9bf7b3db451c9907427e239efad468c06ed141ca1112207c581cfc7b82c150ef9831da83267a0c0fdb9c0f75b6b0c4183d53bea4faa759\",\n                    \"templateId\": \"e4beed1b8ae0506e63d6da04bffb447f8f406261dd64b9abf457c4655d031a6a:Utility.Credential.App.V0.Service.User:UserServiceRequest\",\n                    \"contractKey\": null,\n                    \"createArgument\": {\n                        \"operator\": \"auth0_007c66019993301e3ed49d0e36e9::12206268795b181eafd1432facbb3a3c5711f1f8b743ea0e9c0050b32126b33071fa\",\n                        \"user\": \"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\"\n                    },\n                    \"createdEventBlob\": \"CgMyLjESswUKRQDfmXhgi77im\/nE2Cfrm\/ez20UcmQdCfiOe+tRowG7RQcoREiB8WBz8e4LBUO+YMdqDJnoMD9ucD3W2sMQYPVO+pPqnWRIZdXRpbGl0eS1jcmVkZW50aWFsLWFwcC12MBqDAQpAZTRiZWVkMWI4YWUwNTA2ZTYzZDZkYTA0YmZmYjQ0N2Y4ZjQwNjI2MWRkNjRiOWFiZjQ1N2M0NjU1ZDAzMWE2YRIHVXRpbGl0eRIKQ3JlZGVudGlhbBIDQXBwEgJWMBIHU2VydmljZRIEVXNlchoSVXNlclNlcnZpY2VSZXF1ZXN0Is8BaswBCmwKajpoYXV0aDBfMDA3YzY2MDE5OTkzMzAxZTNlZDQ5ZDBlMzZlOTo6MTIyMDYyNjg3OTViMTgxZWFmZDE0MzJmYWNiYjNhM2M1NzExZjFmOGI3NDNlYTBlOWMwMDUwYjMyMTI2YjMzMDcxZmEKXApaOlhoeWRyYXgtdmFsaWRhdG9yLTE6OjEyMjBjYmE4MDNiYTgwMmNhZTZhMDc4NGVkMzU5MGYzNzdiZThiZmZhMWEyMTQ3YWFlMGYyZTYwNGY0YWI4ZTkxNDEwKlhoeWRyYXgtdmFsaWRhdG9yLTE6OjEyMjBjYmE4MDNiYTgwMmNhZTZhMDc4NGVkMzU5MGYzNzdiZThiZmZhMWEyMTQ3YWFlMGYyZTYwNGY0YWI4ZTkxNDEwMmhhdXRoMF8wMDdjNjYwMTk5OTMzMDFlM2VkNDlkMGUzNmU5OjoxMjIwNjI2ODc5NWIxODFlYWZkMTQzMmZhY2JiM2EzYzU3MTFmMWY4Yjc0M2VhMGU5YzAwNTBiMzIxMjZiMzMwNzFmYTlmlus8rjsGAEIqCiYKJAgBEiCdWS3ceVWgWE6ppu2rjDh40ByGRsQfjd5c89CwKQ2zzhAe\",\n                    \"interfaceViews\": [],\n                    \"witnessParties\": [\n                        \"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\"\n                    ],\n                    \"signatories\": [\n                        \"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\"\n                    ],\n                    \"observers\": [\n                        \"auth0_007c66019993301e3ed49d0e36e9::12206268795b181eafd1432facbb3a3c5711f1f8b743ea0e9c0050b32126b33071fa\"\n                    ],\n                    \"createdAt\": \"2025-08-06T08:36:32.684646Z\",\n                    \"packageName\": \"utility-credential-app-v0\"\n                }\n            }\n        ],\n        \"offset\": 82464,\n        \"synchronizerId\": \"global-domain::1220e1e594cdb287aeac3e1e6d62e7d2db46b756a5d01656c26f1f1a151345bf2e53\",\n        \"traceContext\": {\n            \"traceparent\": \"00-fe0a2cb1a2f2fa7feb038a2af16553f1-0f529c0414423d83-01\",\n            \"tracestate\": null\n        },\n        \"recordTime\": \"2025-08-06T08:36:32.845319Z\"\n    }\n}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754469470.393099",
+        "client_msg_id": "08c8e694-9109-4e33-a3a3-e0ad8fa24dd3",
+        "text": "The response is not empty",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qp3Pc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The response is not empty"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754470134.667189",
+        "client_msg_id": "821a2db6-9867-4036-a7d9-be8685973d5b",
+        "text": "thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QN5Fg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754470146.367369",
+        "client_msg_id": "c3fdb257-2ac0-410d-8486-c02764ec6113",
+        "text": "so, that request gets rejected because there already is an active `UserService`",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BVukE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "so, that request gets rejected because there already is an active "
+                            },
+                            {
+                                "type": "text",
+                                "text": "UserService",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754470177.260629",
+        "client_msg_id": "d66148cd-2710-4428-84be-065925ada3aa",
+        "text": "we query for `UserService` in the UI (it's one of the `active-contracts` query, where in the payload we specify that we're querying for `UserService`)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "i6oWi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "we query for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "UserService",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " in the UI (it's one of the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "active-contracts",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " query, where in the payload we specify that we're querying for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "UserService",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ")"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754470190.449759",
+        "client_msg_id": "5ad1003d-1823-4188-b6cb-bdef50f799d6",
+        "text": "I'd like to confirm that the response from that query is empty",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7lNzP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'd like to confirm that the response from that query is empty"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U057HGB61RS"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754470509.431249",
+        "edited": {
+            "user": "U057HGB61RS",
+            "ts": "1754470562.000000"
+        },
+        "client_msg_id": "85cdccd8-e2a3-41c5-b5a4-276ddc2b3767",
+        "text": "~Yes. all \"active-contracts\" calls are returning empty~",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8Emzy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes. all \"active-contracts\" calls are returning empty",
+                                "style": {
+                                    "strike": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754470554.928899",
+        "client_msg_id": "4be5b344-4f07-4fe6-ada1-63a1f6a97958",
+        "text": "There is one that is returning this\n```[\n    {\n        \"workflowId\": \"\",\n        \"contractEntry\": {\n            \"JsActiveContract\": {\n                \"createdEvent\": {\n                    \"offset\": 82539,\n                    \"nodeId\": 8,\n                    \"contractId\": \"00aa08f59aaa7aa3ac013cba8adc65379551065f4f5aeec9562ee907335d945336ca111220019af1645e27e36dc14fb1aab2a3d64f52d838b97aca2cbe8d6c083f0380ff56\",\n                    \"templateId\": \"a5b055492fb8f08b2e7bc0fc94da6da50c39c2e1d7f24cd5ea8db12fc87c1332:Splice.Amulet:Amulet\",\n                    \"contractKey\": null,\n                    \"createArgument\": {\n                        \"dso\": \"DSO::1220e1e594cdb287aeac3e1e6d62e7d2db46b756a5d01656c26f1f1a151345bf2e53\",\n                        \"owner\": \"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\",\n                        \"amount\": {\n                            \"initialAmount\": \"124135155.9664002861\",\n                            \"createdAt\": {\n                                \"number\": \"35140\"\n                            },\n                            \"ratePerRound\": {\n                                \"rate\": \"0.0003805180\"\n                            }\n                        }\n                    },\n                    \"createdEventBlob\": \"\",\n                    \"interfaceViews\": [],\n                    \"witnessParties\": [\n                        \"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\"\n                    ],\n                    \"signatories\": [\n                        \"DSO::1220e1e594cdb287aeac3e1e6d62e7d2db46b756a5d01656c26f1f1a151345bf2e53\",\n                        \"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\"\n                    ],\n                    \"observers\": [],\n                    \"createdAt\": \"2025-08-06T08:51:45.157878Z\",\n                    \"packageName\": \"splice-amulet\"\n                },\n                \"synchronizerId\": \"global-domain::1220e1e594cdb287aeac3e1e6d62e7d2db46b756a5d01656c26f1f1a151345bf2e53\",\n                \"reassignmentCounter\": 0\n            }\n        }\n    }\n]```",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "C5gpR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "There is one that is returning this\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "[\n    {\n        \"workflowId\": \"\",\n        \"contractEntry\": {\n            \"JsActiveContract\": {\n                \"createdEvent\": {\n                    \"offset\": 82539,\n                    \"nodeId\": 8,\n                    \"contractId\": \"00aa08f59aaa7aa3ac013cba8adc65379551065f4f5aeec9562ee907335d945336ca111220019af1645e27e36dc14fb1aab2a3d64f52d838b97aca2cbe8d6c083f0380ff56\",\n                    \"templateId\": \"a5b055492fb8f08b2e7bc0fc94da6da50c39c2e1d7f24cd5ea8db12fc87c1332:Splice.Amulet:Amulet\",\n                    \"contractKey\": null,\n                    \"createArgument\": {\n                        \"dso\": \"DSO::1220e1e594cdb287aeac3e1e6d62e7d2db46b756a5d01656c26f1f1a151345bf2e53\",\n                        \"owner\": \"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\",\n                        \"amount\": {\n                            \"initialAmount\": \"124135155.9664002861\",\n                            \"createdAt\": {\n                                \"number\": \"35140\"\n                            },\n                            \"ratePerRound\": {\n                                \"rate\": \"0.0003805180\"\n                            }\n                        }\n                    },\n                    \"createdEventBlob\": \"\",\n                    \"interfaceViews\": [],\n                    \"witnessParties\": [\n                        \"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\"\n                    ],\n                    \"signatories\": [\n                        \"DSO::1220e1e594cdb287aeac3e1e6d62e7d2db46b756a5d01656c26f1f1a151345bf2e53\",\n                        \"hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\"\n                    ],\n                    \"observers\": [],\n                    \"createdAt\": \"2025-08-06T08:51:45.157878Z\",\n                    \"packageName\": \"splice-amulet\"\n                },\n                \"synchronizerId\": \"global-domain::1220e1e594cdb287aeac3e1e6d62e7d2db46b756a5d01656c26f1f1a151345bf2e53\",\n                \"reassignmentCounter\": 0\n            }\n        }\n    }\n]"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F098QCGTNNB",
+                "created": 1754470589,
+                "timestamp": 1754470589,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U057HGB61RS",
+                "user_team": "TBL1G8KHT",
+                "editable": false,
+                "size": 120706,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/TBL1G8KHT-F098QCGTNNB\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/TBL1G8KHT-F098QCGTNNB\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F098QCGTNNB-fc8efc4335\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F098QCGTNNB-fc8efc4335\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F098QCGTNNB-fc8efc4335\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 163,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F098QCGTNNB-fc8efc4335\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 217,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F098QCGTNNB-fc8efc4335\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F098QCGTNNB-fc8efc4335\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 325,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F098QCGTNNB-fc8efc4335\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 361,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F098QCGTNNB-fc8efc4335\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 434,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F098QCGTNNB-fc8efc4335\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 463,
+                "original_w": 1910,
+                "original_h": 863,
+                "thumb_tiny": "AwAWADDSKg+30paKKACkIJI4GPelpDncPTFAAQMdBikUAjggjpTqQDrnP40ALRRRQAUd+vFFFABTRGvOQD9adRQB\/9k=",
+                "permalink": "https:\/\/hydrax.slack.com\/files\/U05FZBDQ4RJ\/F098QCGTNNB\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/TBL1G8KHT-F098QCGTNNB-f2da9f956a",
+                "source_team": "TBL1G8KHT",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U057HGB61RS",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1754470593.589219",
+        "client_msg_id": "5da1c174-d6d0-4c9d-a4fa-8b3e517d39f4",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754472433.501999",
+        "client_msg_id": "942feb44-f037-4e21-8121-3cd1b8828a67",
+        "text": "thanks Tony.\n\nDid you by any chance restore your TestNet node after an inactivity period longer than 30 days?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OPeTb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks Tony.\n\nDid you by any chance restore your TestNet node after an inactivity period longer than 30 days?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754472618.832809",
+        "client_msg_id": "06318E13-6EE9-4765-B6CE-13FEDF3E35EB",
+        "text": "<@U06GRUXKVHB> do you know?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qZ02B",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U06GRUXKVHB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " do you know?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754472863.154999",
+        "client_msg_id": "bbef2440-4407-417f-8c9a-b6eb1058902f",
+        "text": "What we think is happening\n• our participant node has a `UserService` contract for that party\n• your node went off for some time and was restored with an empty ACS but using the same keys (i.e. your ledger doesn't contain the `UserService` contract we had initially established)\n• any new request for `UserService` gets rejected by us, because according to our ledger you already have one\n• my attempt to revoke the existing `UserService` fails because your participant (restored with empty ACS) rejects the transaction as it doesn't know the contract)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "P2U\/t",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "What we think is happening\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "our participant node has a "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "UserService",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " contract for that party"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "your node went off for some time and was restored with an empty ACS but using the same keys (i.e. your ledger doesn't contain the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "UserService",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " contract we had initially established)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "any new request for "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "UserService",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " gets rejected by us, because according to our ledger you already have one"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "my attempt to revoke the existing "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "UserService",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " fails because your participant (restored with empty ACS) rejects the transaction as it doesn't know the contract)"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U057HGB61RS"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754472898.625759",
+        "client_msg_id": "7b6f0d27-1ad4-44b4-9246-00ab257e62f6",
+        "text": "this might happen if you restored your node from an empty state (nuking the existing ACS)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hKPol",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "this might happen if you restored your node from an empty state (nuking the existing ACS)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06GRUXKVHB",
+        "type": "message",
+        "ts": "1754473661.551169",
+        "client_msg_id": "f1b843b8-aee8-433b-9d28-0d69a2fa02a8",
+        "text": "Yes, we restore our TestNet from node identity backup last month",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "fe525cefcf05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-13\/8874936574327_fe525cefcf056db1b910_72.jpg",
+            "first_name": "Bahri",
+            "real_name": "Bahri Rizaldi",
+            "display_name": "Bahri Rizaldi",
+            "team": "TBL1G8KHT",
+            "name": "bahri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dP\/iR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, we restore our TestNet from node identity backup last month"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754473788.202399",
+        "client_msg_id": "3f792a01-5bda-411c-b63e-d6c8271d5335",
+        "text": "thanks for confirming, then the ^ is what is currently happening",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Jk7lb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks for confirming, then the ^ is what is currently happening"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U057HGB61RS"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754473801.997749",
+        "client_msg_id": "b165a9b2-0ec6-4396-bd97-47a4ec884db0",
+        "text": "as a short-term mitigation, I suggest onboarding using a different party",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JN3V\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "as a short-term mitigation, I suggest onboarding using a different party"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754473813.308439",
+        "client_msg_id": "8af478f3-badb-4c4f-b129-4589432823a0",
+        "text": "I need to investigate if there is a way to restore consistent state",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "w3xGm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I need to investigate if there is a way to restore consistent state"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754473922.583569",
+        "client_msg_id": "670A85A2-AE5F-4CB3-AB4B-5310226685FA",
+        "text": "Got it. We’ll onboard with a different party. Let us know if you manage to find a fix",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AWgD4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Got it. We’ll onboard with a different party. Let us know if you manage to find a fix"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754473943.314139",
+        "client_msg_id": "B473F6E8-9399-4F9B-A7F6-EA63D0F32DEC",
+        "text": "At least this didn’t happen on mainnet :smile: ",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "V4dqj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "At least this "
+                            },
+                            {
+                                "type": "text",
+                                "text": "didn’t"
+                            },
+                            {
+                                "type": "text",
+                                "text": " happen on mainnet "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile",
+                                "unicode": "1f604"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754480296.435989",
+        "client_msg_id": "72d4eadf-6c31-4da9-b732-df1686e391de",
+        "text": "So, the only option to fix this is to perform a set of rather complex \"repair commands\" where\n• we export the relevant portions of our ACS and send them over\n• you import them into your participant node via the Canton console\nI suggest to not go through this process for the `TestNet` node. Using a new party or spinning up a fresh node is to be preferred, as data retention is not an issue here.\n\nFor `MainNet`, the recommendation is to recover the participant node from a backup, rather than recovering from keys with an empty ACS.\n\nShould the latter be unavoidable, we would need to go through repair commands.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "R0O2M",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So, the only option to fix this is to perform a set of rather complex \"repair commands\" where\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "we export the relevant portions of our ACS and send them over"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "you import them into your participant node via the Canton console"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nI suggest to not go through this process for the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "TestNet",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " node. Using a new party or spinning up a fresh node is to be preferred, as data retention is not an issue here.\n\nFor "
+                            },
+                            {
+                                "type": "text",
+                                "text": "MainNet",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", the recommendation is to recover the participant node from a backup, rather than recovering from keys with an empty ACS.\n\nShould the latter be unavoidable, we would need to go through repair commands."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754480757.685559",
+        "client_msg_id": "AE4CD34F-68BB-48EE-A13F-50FC895275DD",
+        "text": "Ic… yeah we can go with a new party to keep things simple for now. I’ll use another party to try again tomorrow \n\nHow can we prevent this issue in the future? Is it related to the node being offline for too long and not up to sync during migration?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JA2PP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ic"
+                            },
+                            {
+                                "type": "text",
+                                "text": "…"
+                            },
+                            {
+                                "type": "text",
+                                "text": " yeah we can go with a new party to keep things simple for now. I’ll use another party to try again tomorrow \n\nHow can we prevent this issue in the future? Is it related to the node being offline for too long and not up to sync during migration?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754480822.994849",
+        "client_msg_id": "1bdb2690-4994-41d8-9059-8387ad28ea8a",
+        "text": "yes, your node cannot be offline for longer than 30 days",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4bgKj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes, your node cannot be offline for longer than 30 days"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U057HGB61RS"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U06GRUXKVHB",
+        "type": "message",
+        "ts": "1754480896.537059",
+        "client_msg_id": "396a9fac-02bb-4d7b-b17f-26126f68a688",
+        "text": "<@U057HGB61RS> the reason we run recovery on TestNet was because of this <https:\/\/hydrax.slack.com\/archives\/C08AP9QR7K4\/p1752802884868859|issue>",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "fe525cefcf05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-13\/8874936574327_fe525cefcf056db1b910_72.jpg",
+            "first_name": "Bahri",
+            "real_name": "Bahri Rizaldi",
+            "display_name": "Bahri Rizaldi",
+            "team": "TBL1G8KHT",
+            "name": "bahri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "attachments": [
+            {
+                "from_url": "https:\/\/hydrax.slack.com\/archives\/C08AP9QR7K4\/p1752802884868859",
+                "ts": "1752802884.868859",
+                "author_id": "U06GRUXKVHB",
+                "channel_id": "C08AP9QR7K4",
+                "channel_team": "T07LSPYDRT4",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "message_blocks": [
+                    {
+                        "team": "TBL1G8KHT",
+                        "channel": "C08AP9QR7K4",
+                        "ts": "1752802884.868859",
+                        "message": {
+                            "blocks": [
+                                {
+                                    "type": "rich_text",
+                                    "block_id": "28wqM",
+                                    "elements": [
+                                        {
+                                            "type": "rich_text_section",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Hi, does anyone know what this error means? It has been causing crashes on the participant since the TestNet was upgraded to version 0.4.4.\n"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "rich_text_preformatted",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Giving up on retrying the operation 'singleBatch' due to shutdown. Last attempt was None with exception: Task slick.util.AsyncExecutor$PrioritizedRunnable$$anon$6@2018e671 rejected from slick.util.AsyncExecutorWithMetrics$$anon$1@18931a9c[Terminated"
+                                                }
+                                            ],
+                                            "border": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "id": 1,
+                "original_url": "https:\/\/hydrax.slack.com\/archives\/C08AP9QR7K4\/p1752802884868859",
+                "fallback": "[July 17th, 2025 6:41 PM] bahri: Hi, does anyone know what this error means? It has been causing crashes on the participant since the TestNet was upgraded to version 0.4.4.\n```Giving up on retrying the operation 'singleBatch' due to shutdown. Last attempt was None with exception: Task slick.util.AsyncExecutor$PrioritizedRunnable$$anon$6@2018e671 rejected from slick.util.AsyncExecutorWithMetrics$$anon$1@18931a9c[Terminated```",
+                "text": "Hi, does anyone know what this error means? It has been causing crashes on the participant since the TestNet was upgraded to version 0.4.4.\n```Giving up on retrying the operation 'singleBatch' due to shutdown. Last attempt was None with exception: Task slick.util.AsyncExecutor$PrioritizedRunnable$$anon$6@2018e671 rejected from slick.util.AsyncExecutorWithMetrics$$anon$1@18931a9c[Terminated```",
+                "author_name": "Bahri Rizaldi",
+                "author_link": "https:\/\/hydrax.slack.com\/team\/U06GRUXKVHB",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2025-05-13\/8874936574327_fe525cefcf056db1b910_48.jpg",
+                "author_subname": "Bahri Rizaldi",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "team_name": "Digital Asset",
+                "footer": "Thread in Slack Conversation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tGzbu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U057HGB61RS"
+                            },
+                            {
+                                "type": "text",
+                                "text": " the reason we run recovery on TestNet was because of this "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/hydrax.slack.com\/archives\/C08AP9QR7K4\/p1752802884868859",
+                                "text": "issue"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U057HGB61RS"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754481404.280469",
+        "client_msg_id": "E521160C-404F-41F4-A456-7BAFE8598C63",
+        "text": "<@U06GRUXKVHB> looking at the timestamp of the thread, our node is not down for 30 days I imagine?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jgHVp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U06GRUXKVHB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " looking at the timestamp of the thread, our node is not "
+                            },
+                            {
+                                "type": "text",
+                                "text": "down for 30 days I imagine"
+                            },
+                            {
+                                "type": "text",
+                                "text": "?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06GRUXKVHB",
+        "type": "message",
+        "ts": "1754481609.377999",
+        "client_msg_id": "3ee12052-c594-4798-91aa-c815bee3c30b",
+        "text": "No",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "fe525cefcf05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-13\/8874936574327_fe525cefcf056db1b910_72.jpg",
+            "first_name": "Bahri",
+            "real_name": "Bahri Rizaldi",
+            "display_name": "Bahri Rizaldi",
+            "team": "TBL1G8KHT",
+            "name": "bahri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Be\/pT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "No"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U057HGB61RS"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754481743.410579",
+        "client_msg_id": "8D856523-2461-4A51-9B00-58BB2AD91AE0",
+        "text": "Any idea what caused that issue? Read through the thread and it seems like resources (CPU, memory) related?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mx2XD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Any idea what caused that issue? Read through the thread and it seems like resources"
+                            },
+                            {
+                                "type": "text",
+                                "text": " (CPU, memory) "
+                            },
+                            {
+                                "type": "text",
+                                "text": "related?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06GRUXKVHB",
+        "type": "message",
+        "ts": "1754481964.098599",
+        "client_msg_id": "0c4d97e9-4c7c-4fe8-8f6d-28bc89d9559f",
+        "text": "Still no idea. But as Matteo mentioned, it's not recommended to recover using the node identity. I think moving forward, I’ll recover using the database backup first and use the node identity as a last resort.",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "fe525cefcf05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-13\/8874936574327_fe525cefcf056db1b910_72.jpg",
+            "first_name": "Bahri",
+            "real_name": "Bahri Rizaldi",
+            "display_name": "Bahri Rizaldi",
+            "team": "TBL1G8KHT",
+            "name": "bahri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0dBf\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Still no idea. But as Matteo mentioned, it's not recommended to recover using the node identity. I think moving forward, I’ll recover using the database backup first and use the node identity as a last resort."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U057HGB61RS"
+                ],
+                "count": 1
+            },
+            {
+                "name": "pray",
+                "users": [
+                    "U057HGB61RS"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754482765.408279",
+        "client_msg_id": "966AAE8E-7DA8-44CD-B70A-A2EBC45F10E9",
+        "text": "Thanks <@U06GRUXKVHB> . Yeah it’s fine since it’s just Testnet ",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RHch5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U06GRUXKVHB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Yeah "
+                            },
+                            {
+                                "type": "text",
+                                "text": "it’s"
+                            },
+                            {
+                                "type": "text",
+                                "text": " fine since "
+                            },
+                            {
+                                "type": "text",
+                                "text": "it’s"
+                            },
+                            {
+                                "type": "text",
+                                "text": " just Testnet "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U047U17D7KL",
+        "type": "message",
+        "ts": "1754486343.399939",
+        "client_msg_id": "2bd3ace0-5f0b-48bc-8b17-f6cbe8ec2c1c",
+        "text": "&gt; Just on a remote VM. \nAh! I’m no expert on deploying Docker Compose networks. However, I would _expect_ you would need to edit your `nginx.conf` to reflect the hosted names. That is, if I understand what <https:\/\/nginx.org\/en\/docs\/http\/server_names.html|server_name> means. The `nginx.conf` you sent maps calls for `wallet.localhost`, `ans.localhost`, `validator.localhost`,  `utility.localhost`, etc. to containers running within the Docker Compose network.\n\nI’m guessing you are navigating to something like `<https:\/\/utility.myaccount.myhostingservice.com>` and since that server name is not found in the `nginx.conf` file, it is defaulting to the wallet.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "16aeca7859e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-10-24\/4263109753253_16aeca7859e88c51a7d5_72.png",
+            "first_name": "Wallace",
+            "real_name": "Wallace Kelly",
+            "display_name": "Wallace Kelly",
+            "team": "T03T53E10",
+            "name": "wallace.kelly",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754344207.133119",
+        "parent_user_id": "U08TDHL1E0N",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Lq+0X",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Just on a remote VM. "
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nAh! I’m no expert on deploying Docker Compose networks. However, I would "
+                            },
+                            {
+                                "type": "text",
+                                "text": "expect",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " you would need to edit your "
+                            },
+                            {
+                                "type": "text",
+                                "text": "nginx.conf",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " to reflect the hosted names. That is, if I understand what "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/nginx.org\/en\/docs\/http\/server_names.html",
+                                "text": "server_name"
+                            },
+                            {
+                                "type": "text",
+                                "text": " means. The "
+                            },
+                            {
+                                "type": "text",
+                                "text": "nginx.conf",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " you sent maps calls for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "wallet.localhost",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", "
+                            },
+                            {
+                                "type": "text",
+                                "text": "ans.localhost",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", "
+                            },
+                            {
+                                "type": "text",
+                                "text": "validator.localhost",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ",  "
+                            },
+                            {
+                                "type": "text",
+                                "text": "utility.localhost",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", etc. to containers running within the Docker Compose network.\n\nI’m guessing you are navigating to something like "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/utility.myaccount.myhostingservice.com",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and since that server name is not found in the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "nginx.conf",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " file, it is defaulting to the wallet."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1754489052.791269",
+        "client_msg_id": "d975229d-8569-4247-b833-35675b46fd8c",
+        "text": "<@U08JYBDSK0V> To make sure we're clear: You can use the Splice Wallet UI to transfer to, and receive from, an external party, but the Splice wallet UI does not yet allow you to log in as an external party or display the balance and transactions of an external party.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "e46cf2f361cd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-06-02\/3638231569136_e46cf2f361cda890c6d5_72.jpg",
+            "first_name": "Wayne",
+            "real_name": "Wayne Collier",
+            "display_name": "Wayne Collier",
+            "team": "T03T53E10",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754241890.943689",
+        "parent_user_id": "U08JYBDSK0V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "62hR9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U08JYBDSK0V"
+                            },
+                            {
+                                "type": "text",
+                                "text": " To make sure we're clear: You can use the Splice Wallet UI to transfer to, and receive from, an external party, but the Splice wallet UI does not yet allow you to log in as an external party or display the balance and transactions of an external party."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08JYBDSK0V",
+        "type": "message",
+        "ts": "1754489292.454929",
+        "client_msg_id": "912a5fb4-fdee-445a-b730-31f28d323656",
+        "text": "Yes, that was my understanding. Thank you for the clarification.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7T5YE9MY",
+        "source_team": "T7T5YE9MY",
+        "user_profile": {
+            "avatar_hash": "18d9a68d3d08",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-24\/8650966444610_18d9a68d3d08e033fdb8_72.png",
+            "first_name": "François",
+            "real_name": "François Branciard",
+            "display_name": "Francois",
+            "team": "T7T5YE9MY",
+            "name": "francois.branciard",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754241890.943689",
+        "parent_user_id": "U08JYBDSK0V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sYio0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, that was my understanding. Thank you for the clarification."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "Is there an issue impacting the operator in mainnet?   The statuses in the utility all show the last billing as successful, but the last billed timestamps for our credentials are older than would be expected (some as old as 8\/4)  and our commercial agreement has a last billed about 2 hrs ago",
+        "files": [
+            {
+                "id": "F09989PBAQM",
+                "created": 1754503024,
+                "timestamp": 1754503024,
+                "name": "Screenshot 2025-08-06 at 12.56.33 PM.png",
+                "title": "Screenshot 2025-08-06 at 12.56.33 PM.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U05KJ4MUMU2",
+                "user_team": "T02P6LC6U01",
+                "editable": false,
+                "size": 151170,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T02P6LC6U01-F09989PBAQM\/screenshot_2025-08-06_at_12.56.33___pm.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T02P6LC6U01-F09989PBAQM\/download\/screenshot_2025-08-06_at_12.56.33___pm.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989PBAQM-23eaf75da4\/screenshot_2025-08-06_at_12.56.33___pm_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989PBAQM-23eaf75da4\/screenshot_2025-08-06_at_12.56.33___pm_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989PBAQM-23eaf75da4\/screenshot_2025-08-06_at_12.56.33___pm_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 54,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989PBAQM-23eaf75da4\/screenshot_2025-08-06_at_12.56.33___pm_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 72,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989PBAQM-23eaf75da4\/screenshot_2025-08-06_at_12.56.33___pm_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989PBAQM-23eaf75da4\/screenshot_2025-08-06_at_12.56.33___pm_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 108,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989PBAQM-23eaf75da4\/screenshot_2025-08-06_at_12.56.33___pm_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 119,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989PBAQM-23eaf75da4\/screenshot_2025-08-06_at_12.56.33___pm_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 143,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989PBAQM-23eaf75da4\/screenshot_2025-08-06_at_12.56.33___pm_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 153,
+                "original_w": 3816,
+                "original_h": 570,
+                "thumb_tiny": "AwAIADDTooooAKKKKADPOMfjSZO4DacevGKWigD\/2Q==",
+                "permalink": "https:\/\/brale.slack.com\/files\/U05FZBDQ4RJ\/F09989PBAQM\/screenshot_2025-08-06_at_12.56.33___pm.png",
+                "permalink_public": "https:\/\/slack-files.com\/T02P6LC6U01-F09989PBAQM-dc27fc80c5",
+                "source_team": "T02P6LC6U01",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F09989RHDUM",
+                "created": 1754503030,
+                "timestamp": 1754503030,
+                "name": "Screenshot 2025-08-06 at 12.53.17 PM.png",
+                "title": "Screenshot 2025-08-06 at 12.53.17 PM.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U05KJ4MUMU2",
+                "user_team": "T02P6LC6U01",
+                "editable": false,
+                "size": 548132,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T02P6LC6U01-F09989RHDUM\/screenshot_2025-08-06_at_12.53.17___pm.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T02P6LC6U01-F09989RHDUM\/download\/screenshot_2025-08-06_at_12.53.17___pm.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989RHDUM-71693ee7b7\/screenshot_2025-08-06_at_12.53.17___pm_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989RHDUM-71693ee7b7\/screenshot_2025-08-06_at_12.53.17___pm_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989RHDUM-71693ee7b7\/screenshot_2025-08-06_at_12.53.17___pm_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 143,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989RHDUM-71693ee7b7\/screenshot_2025-08-06_at_12.53.17___pm_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 191,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989RHDUM-71693ee7b7\/screenshot_2025-08-06_at_12.53.17___pm_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989RHDUM-71693ee7b7\/screenshot_2025-08-06_at_12.53.17___pm_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 287,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989RHDUM-71693ee7b7\/screenshot_2025-08-06_at_12.53.17___pm_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 319,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989RHDUM-71693ee7b7\/screenshot_2025-08-06_at_12.53.17___pm_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 383,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T02P6LC6U01-F09989RHDUM-71693ee7b7\/screenshot_2025-08-06_at_12.53.17___pm_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 408,
+                "original_w": 3312,
+                "original_h": 1320,
+                "thumb_tiny": "AwAUADDRwoOQBnuaUnAOBk+g70wo2CBs+9kfL0\/+vTgpBzxnv70AOozz0pAMZwBz1o\/AUAByFOBk0iFiuWUg+\/8A+s0PkowCg8dPWmQBlQgoqc9AAP5E0wIxOxBJC5WbYOO3T86kiPmKSwHbt14Bqsv3X\/6+f6irFt9w\/h\/6CKQDonMm7IHBA\/QH+tRiY77f5VzKvzHHoM063\/5af7w\/9BFQr\/rLL\/dP\/oNAFmY7YXOAcKTg9DUVlJ5sJbaq\/NjCjAqS4\/495f8AcP8AKoNN\/wCPdv8AeP8AIVXQXU\/\/2Q==",
+                "permalink": "https:\/\/brale.slack.com\/files\/U05FZBDQ4RJ\/F09989RHDUM\/screenshot_2025-08-06_at_12.53.17___pm.png",
+                "permalink_public": "https:\/\/slack-files.com\/T02P6LC6U01-F09989RHDUM-3eb3b7f2e9",
+                "source_team": "T02P6LC6U01",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U05KJ4MUMU2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rZdc+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is there an issue impacting the operator in mainnet?   The statuses in the utility all show the last billing as successful, but the last billed timestamps for our credentials are older than would be expected (some as old as 8\/4)  and our commercial agreement has a last billed about 2 hrs ago"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1754503113.099859",
+        "client_msg_id": "7d318366-05e2-4daa-be67-3021bab440c4",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1754503113.099859",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1754508119.351079",
+        "reply_users": [
+            "U02KJ7PKHN2",
+            "U05KJ4MUMU2"
+        ],
+        "replies": [
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754505158.286659"
+            },
+            {
+                "user": "U05KJ4MUMU2",
+                "ts": "1754508119.351079"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "gddacf9ce459",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/ddacf9ce459da7afa973d344cbdb5bc1.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "Matt",
+            "real_name": "Matt Franczak",
+            "display_name": "Matt",
+            "team": "T02P6LC6U01",
+            "name": "matt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754505158.286659",
+        "client_msg_id": "493a2286-74ea-4f4b-8239-3a7480bf3c1b",
+        "text": "Hi Matt, thanks for raising this.\n\nIt was indeed an issuer on our side, where tasks were suspended due to a validator upgrade during our maintenance window and we omitted the step necessary to restart them.\n\nIt should now be good, sorry for the inconvenience.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754503113.099859",
+        "parent_user_id": "U05KJ4MUMU2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "00H8\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Matt, thanks for raising this.\n\nIt was indeed an issuer on our side, where tasks were suspended due to a validator upgrade during our maintenance window and we omitted the step necessary to restart them.\n\nIt should now be good, sorry for the inconvenience."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U05KJ4MUMU2",
+        "type": "message",
+        "ts": "1754508119.351079",
+        "client_msg_id": "3a8ef1d7-dfc9-4969-b172-b4712a5ff5d1",
+        "text": "Looks like the billings are going through now - thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "gddacf9ce459",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/ddacf9ce459da7afa973d344cbdb5bc1.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "Matt",
+            "real_name": "Matt Franczak",
+            "display_name": "Matt",
+            "team": "T02P6LC6U01",
+            "name": "matt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754503113.099859",
+        "parent_user_id": "U05KJ4MUMU2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ie1Oh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Looks like the billings are going through now - thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754549468.881369",
+        "client_msg_id": "0015b006-3116-46be-ba96-6428fa3db038",
+        "text": "<@U02KJ7PKHN2> can offer a provider credential to `52bef554-b8c9-4378-ac24-6828a18e09f3::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410` on testnet?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "L92lg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U02KJ7PKHN2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " can offer a provider credential to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "52bef554-b8c9-4378-ac24-6828a18e09f3::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " on testnet?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

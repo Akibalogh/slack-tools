@@ -1,0 +1,1325 @@
+[
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1752572326.969059",
+        "client_msg_id": "1f462a8b-827a-4230-92a3-8edbd9c3676b",
+        "text": "After creating an external party, I sent 3 Canton Coin to it using a transfer offer.\nWhen I am using the <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/token-standard\/README.md#list-holdings|CLI tool> , I am able to see my 3 Canton Coin:\n\n```[\n  {\n    \"contractId\": \"00818181dd5ac53e5a7c902d8e8f594eadb4bef28d30ef7c96a47d5972e5de3862ca11122064dc113973b6d8b1e94f66489933b25baed071fd502c24d1918914f8784f1721\",\n    \"payload\": {\n      \"owner\": \"dfnsdev1::12208909c68165821e51dc034ba345df96c306c30463b19dca388875e5ce62851fc8\",\n      \"instrumentId\": {\n        \"admin\": \"DSO::1220be58c29e65de40bf273be1dc2b266d43a9a002ea5b18955aeef7aac881bb471a\",\n        \"id\": \"Amulet\"\n      },\n      \"amount\": \"3.0000000000\",\n      \"lock\": null,\n      \"meta\": {\n        \"values\": {\n          \"<http:\/\/amulet.splice.lfdecentralizedtrust.org\/created-in-round|amulet.splice.lfdecentralizedtrust.org\/created-in-round>\": \"1259\",\n          \"<http:\/\/amulet.splice.lfdecentralizedtrust.org\/rate-per-round|amulet.splice.lfdecentralizedtrust.org\/rate-per-round>\": \"0.000380518\"\n        }\n      }\n    }\n  }\n]```\nBut when I try to get the external party balance through the validator API, I get an 404 Error:\n`get \/api\/validator\/v0\/admin\/external-party\/balance?party_id=dfnsdev1::12208909c68165821e51dc034ba345df96c306c30463b19dca388875e5ce62851fc8`\n```{\"error\":\"No wallet for external party dfnsdev1::12208909c681...\"}```\nIs the validator API to get the external balance deprecated?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752572326.969059",
+        "reply_count": 6,
+        "reply_users_count": 1,
+        "latest_reply": "1752579260.164369",
+        "reply_users": [
+            "U06JBU6A20K"
+        ],
+        "replies": [
+            {
+                "user": "U06JBU6A20K",
+                "ts": "1752578746.539829"
+            },
+            {
+                "user": "U06JBU6A20K",
+                "ts": "1752578768.477699"
+            },
+            {
+                "user": "U06JBU6A20K",
+                "ts": "1752578879.706349"
+            },
+            {
+                "user": "U06JBU6A20K",
+                "ts": "1752579021.322369"
+            },
+            {
+                "user": "U06JBU6A20K",
+                "ts": "1752579069.401529"
+            },
+            {
+                "user": "U06JBU6A20K",
+                "ts": "1752579260.164369"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NeQKm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "After creating an external party, I sent 3 Canton Coin to it using a transfer offer.\nWhen I am using the "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/token-standard\/README.md#list-holdings",
+                                "text": "CLI tool"
+                            },
+                            {
+                                "type": "text",
+                                "text": " , I am able to see my 3 Canton Coin:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "[\n  {\n    \"contractId\": \"00818181dd5ac53e5a7c902d8e8f594eadb4bef28d30ef7c96a47d5972e5de3862ca11122064dc113973b6d8b1e94f66489933b25baed071fd502c24d1918914f8784f1721\",\n    \"payload\": {\n      \"owner\": \"dfnsdev1::12208909c68165821e51dc034ba345df96c306c30463b19dca388875e5ce62851fc8\",\n      \"instrumentId\": {\n        \"admin\": \"DSO::1220be58c29e65de40bf273be1dc2b266d43a9a002ea5b18955aeef7aac881bb471a\",\n        \"id\": \"Amulet\"\n      },\n      \"amount\": \"3.0000000000\",\n      \"lock\": null,\n      \"meta\": {\n        \"values\": {\n          \"amulet.splice.lfdecentralizedtrust.org\/created-in-round\": \"1259\",\n          \"amulet.splice.lfdecentralizedtrust.org\/rate-per-round\": \"0.000380518\"\n        }\n      }\n    }\n  }\n]"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nBut when I try to get the external party balance through the validator API, I get an 404 Error:\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "get \/api\/validator\/v0\/admin\/external-party\/balance?party_id=dfnsdev1::12208909c68165821e51dc034ba345df96c306c30463b19dca388875e5ce62851fc8",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"error\":\"No wallet for external party dfnsdev1::12208909c681...\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nIs the validator API to get the external balance deprecated?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1752578746.539829",
+        "client_msg_id": "9d4092f5-de93-488a-b790-a71cd0fe011e",
+        "text": "not that I am aware of.\nI have noticed before that this endpoint would return 404 if I did not pre-approve canton coin transfers for this external party.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752572326.969059",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nLowG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "not that I am aware of.\nI have noticed before that this endpoint would return 404 if I did not pre-approve canton coin transfers for this external party."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1752578768.477699",
+        "client_msg_id": "4a55c37b-44d1-45df-b982-943859c03078",
+        "text": "for this external party the goal was to not pre-approve canton coin transfers, and use transfer offer only",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752572326.969059",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "utQWi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "for this external party the goal was to not pre-approve canton coin transfers, and use transfer offer only"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1752578879.706349",
+        "client_msg_id": "5c9c35f8-b0bc-45ea-bfc2-a382703a3a88",
+        "text": "what is the plan long term? I feel it should somehow work for this use case?\nI can use the standard token listing API in the meantime though",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752572326.969059",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0xkYx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "what is the plan long term? I feel it should somehow work for this use case?\nI can use the standard token listing API in the meantime though"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1752579021.322369",
+        "client_msg_id": "75672492-7925-4db5-90d0-e23bc550bdf4",
+        "text": "So this is implicitly done when calling `\/v0\/admin\/external-party\/transfer-preapproval\/prepare-send` ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752572326.969059",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "19A6P",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So this is implicitly done when calling "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/v0\/admin\/external-party\/transfer-preapproval\/prepare-send",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1752579069.401529",
+        "client_msg_id": "562f8f72-e1fd-461f-8aea-36c5865918c3",
+        "text": "or this is basically the only thing that it is doing?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752572326.969059",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "af3bf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "or this is basically the only thing that it is doing?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1752579260.164369",
+        "client_msg_id": "b412f1c0-539e-428d-a018-806996f023d9",
+        "text": "got it! Thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752572326.969059",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zIJHq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "got it! Thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1752587235.866669",
+        "client_msg_id": "7a2c550d-2c9e-4c68-82ca-a8a97b86ef0b",
+        "text": "the active contracts endpoint on ledger API? Or ACS on the scan api? The active contracts on ledger API requires corresponding party's JWT which I won't have on my centralized backend",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752506669.507789",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UzLaa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the active contracts endpoint on ledger API? Or ACS on the scan api? The active contracts on ledger API requires corresponding party's JWT which I won't have on my centralized backend"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1752591276.091519",
+        "client_msg_id": "C9AF0E69-D4B2-431E-BCF0-E7D337819E2B",
+        "text": "I only need contract id but I think the scan is still too delayed and id need to have a retry loop to mitigate against spent amulet race condition ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752506669.507789",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zHL+u",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I only need contract id but I think the scan is still too delayed and id need to have a retry loop to mitigate against spent amulet race condition "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1752591284.768319",
+        "client_msg_id": "90EE47A2-D736-44B3-8A43-5BAA475A0E78",
+        "text": "So yea will probably just go with locking",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752506669.507789",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZKJkN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So yea will probably just go with locking"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1752594452.145559",
+        "client_msg_id": "83dfa9fd-cfcf-47e8-845f-8ecd159f0381",
+        "text": "Folks, does the `<http:\/\/localhost:80\/api\/validator\/v0\/admin\/participant\/identities>` includes all the users keys?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "reply_count": 25,
+        "reply_users_count": 4,
+        "latest_reply": "1753186664.579069",
+        "reply_users": [
+            "U0702NSFW0H",
+            "U07C122M72S",
+            "U03QSP8LP9T",
+            "UEHLS0JUB"
+        ],
+        "replies": [
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1752594455.449599"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1752594485.470689"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1752594750.844919"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1752607855.235599"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1752661616.948379"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1752661706.298449"
+            },
+            {
+                "user": "U07C122M72S",
+                "ts": "1752661905.171939"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1752662866.999219"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1752663145.663839"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1752663156.265329"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1752663243.270589"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1752663380.260389"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1752667322.620789"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1752669415.314219"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1752684882.984289"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1753178573.161389"
+            },
+            {
+                "user": "U07C122M72S",
+                "ts": "1753181560.955039"
+            },
+            {
+                "user": "U03QSP8LP9T",
+                "ts": "1753182321.234719"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1753182710.959949"
+            },
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1753182778.530719"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1753183194.320239"
+            },
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1753183227.384419"
+            },
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1753183272.610759"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1753184055.754659"
+            },
+            {
+                "user": "U03QSP8LP9T",
+                "ts": "1753186664.579069"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ERwLi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Folks, does the "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:80\/api\/validator\/v0\/admin\/participant\/identities",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " includes all the users keys?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1752594455.449599",
+        "client_msg_id": "b3a02afc-cd44-4701-91c9-0fbca3a70ca8",
+        "text": "Currently, I onboarded two users: validator user and another user, which I'm planning to use with the Utility.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mNn\/K",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Currently, I onboarded two users: validator user and another user, which I'm planning to use with the Utility."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1752594485.470689",
+        "client_msg_id": "80b5d339-6070-4a7e-9d77-f8729e0a726f",
+        "text": "both users are associated with Auth0 users",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2smJb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "both users are associated with Auth0 users"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1752594750.844919",
+        "client_msg_id": "fe281a5b-6e42-4172-b266-ad79f113f07f",
+        "text": "so the validator node identities are backup using <http:\/\/localhost:80\/api\/validator\/v0\/admin\/participant\/identities>\n\nwhat about the new user account? does I need to backup it?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ACa8D",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "so the validator node identities are backup using "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:80\/api\/validator\/v0\/admin\/participant\/identities"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nwhat about the new user account? does I need to backup it?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1752598958.316359",
+        "edited": {
+            "user": "U012DRCTM61",
+            "ts": "1752598971.000000"
+        },
+        "client_msg_id": "75ee537c-69d4-4dff-a052-252d1bf0441e",
+        "text": "what's the best practice for estimating traffic cost of a transaction? I know there's a rate per mb but getting the actual size in mb",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752598958.316359",
+        "reply_count": 0,
+        "reply_users_count": 0,
+        "latest_reply": "0000000000.000000",
+        "reply_users": [],
+        "replies": [],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "I1l8e",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "what's the best practice for estimating traffic cost of a transaction? I know there's a rate per mb but getting the actual size in mb"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1752599241.831099",
+        "client_msg_id": "5be0e126-3c86-4592-93fa-e2f04afc4bf1",
+        "text": "<@UEHLS0JUB> Reviving this thread a bit. Consider a typical application consuming the transaction stream and persisting the offset to resume on restarts. How should one cope with these migrations? Or can the old offset still be relied on even between migrations?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8oj8x",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Reviving this thread a bit. Consider a typical application consuming the transaction stream and persisting the offset to resume on restarts. How should one cope with these migrations? Or can the old offset still be relied on even between migrations?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1752599314.049879",
+        "client_msg_id": "2a6d5c8f-052e-4ae6-b8d5-984e9d40cdfc",
+        "text": "Then what’s the way to do it?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3acyd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Then what’s the way to do it?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1752599370.378279",
+        "client_msg_id": "5dcb0b5f-2d3e-4ea4-9e7d-4046409a0752",
+        "text": "Right, but ideally you would like to avoid duplicates",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Z6mV3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Right, but ideally you would like to avoid duplicates"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1752599443.809079",
+        "client_msg_id": "29b4d34c-746e-4c95-a633-e65435bea432",
+        "text": "I’m considering the typical case of an app that is just folding the transaction stream into its own state",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bTRnG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I’m considering the typical case of an app that is just folding the transaction stream into its own state"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1752599452.061379",
+        "client_msg_id": "16f94ecf-21bd-41ed-80b2-ce72bf1f127b",
+        "text": "Not talking about preserving history",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pYqpJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Not talking about preserving history"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1752599493.342959",
+        "client_msg_id": "806bad7a-4925-4ee8-85f6-9de29faec01a",
+        "text": "Not possible if your state depends on the transactions",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8hLuz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Not possible if your state depends on the transactions"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1752599507.979559",
+        "client_msg_id": "9408d494-a56a-4df1-8654-0e2c540ec652",
+        "text": "e.g. imagine you’re counting the fees paid on your transfers",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NoBrR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "e.g. imagine you’re counting the fees paid on your transfers"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1752600258.706259",
+        "client_msg_id": "6046badb-5e6c-4ca3-a6ff-2a91b61d0a64",
+        "text": "Is there a foolproof way to tell when you’re at the same spot? Like some snapshot id or something",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BS8qo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is there a foolproof way to tell when you’re at the same spot? Like some snapshot id or something"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U041YC9S6E7",
+        "type": "message",
+        "ts": "1752600470.743149",
+        "client_msg_id": "cd1fe0ba-0147-4525-9152-80155aac3545",
+        "text": "And how do you ensure you fully consumed the previous stream?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "0749b51d45ca",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9148503778496_0749b51d45cacaee6505_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Oliveira",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "daniel.oliveira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969597.264649",
+        "parent_user_id": "U041YC9S6E7",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WVy5x",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And how do you ensure you fully consumed the previous stream?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1752607855.235599",
+        "client_msg_id": "fd80a28a-6382-4f13-803b-b486e07cc86f",
+        "text": "CC: <@UEHLS0JUB> <@U03HMUTQ5F0>, can you help here? thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TZum+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CC: "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", can you help here? thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

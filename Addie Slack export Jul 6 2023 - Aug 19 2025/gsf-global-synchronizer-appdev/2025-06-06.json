@@ -1,0 +1,1211 @@
+[
+    {
+        "user": "UJUA0QH45",
+        "type": "message",
+        "ts": "1749199546.963009",
+        "client_msg_id": "ada31073-4662-44a0-ab5b-47617b048768",
+        "text": "I have a question related to the `changeToHoldingFeesRate` field of <https:\/\/docs.sync.global\/app_dev\/api\/splice-amulet\/Splice-Amulet.html#constr-splice-amulet-amuletexpiresummary-31721|AmuletExpireSummary>, how should it be interpreted and what does it relate to more broadly?\nI couldn't find it used in the scan_txlog.py script.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "060dc25df4b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9394671860016_060dc25df4b2903c88b8_72.png",
+            "first_name": "Antoine",
+            "real_name": "Antoine Le Calvez",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "antoine.lecalvez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749199546.963009",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1749220279.232719",
+        "reply_users": [
+            "UJUA0QH45",
+            "U07MUJ34JQ0"
+        ],
+        "replies": [
+            {
+                "user": "UJUA0QH45",
+                "ts": "1749213651.523569"
+            },
+            {
+                "user": "UJUA0QH45",
+                "ts": "1749214675.373479"
+            },
+            {
+                "user": "UJUA0QH45",
+                "ts": "1749216431.708809"
+            },
+            {
+                "user": "UJUA0QH45",
+                "ts": "1749216447.371709"
+            },
+            {
+                "user": "U07MUJ34JQ0",
+                "ts": "1749220279.232719"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gU\/D3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I have a question related to the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "changeToHoldingFeesRate",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " field of "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.sync.global\/app_dev\/api\/splice-amulet\/Splice-Amulet.html#constr-splice-amulet-amuletexpiresummary-31721",
+                                "text": "AmuletExpireSummary"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", how should it be interpreted and what does it relate to more broadly?\nI couldn't find it used in the scan_txlog.py script."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*paul.w* from *Deploi* was added to this channel by *wayne.collier*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749210864.580959",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eTJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "paul.w",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Deploi",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "wayne.collier",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UJUA0QH45",
+        "type": "message",
+        "ts": "1749213651.523569",
+        "client_msg_id": "a41c9667-2cdc-4447-af33-032c11383e9f",
+        "text": "So if someone uses an expired input, and I see this:\n```          \"balanceChanges\": [\n            [\n              \"party-a37947c1-8ce4-4a2a-a717-f2206cf0b6ab::1220b8301e18aa8a401d6e34e6c20f8b0243183c514373bca8f1b6b9270246341a9e\",\n              {\n                \"changeToInitialAmountAsOfRoundZero\": \"-16.2405825180\",\n                \"changeToHoldingFeesRate\": \"-0.0003805180\"\n              }\n            ]\n          ],```\nthen it means that one of the input, worth 16 CC was in fact expired, so the initial amount and holding fee charged should be changed according to that data?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "060dc25df4b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9394671860016_060dc25df4b2903c88b8_72.png",
+            "first_name": "Antoine",
+            "real_name": "Antoine Le Calvez",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "antoine.lecalvez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749199546.963009",
+        "parent_user_id": "UJUA0QH45",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mjX0y",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So if someone uses an expired input, and I see this:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "          \"balanceChanges\": [\n            [\n              \"party-a37947c1-8ce4-4a2a-a717-f2206cf0b6ab::1220b8301e18aa8a401d6e34e6c20f8b0243183c514373bca8f1b6b9270246341a9e\",\n              {\n                \"changeToInitialAmountAsOfRoundZero\": \"-16.2405825180\",\n                \"changeToHoldingFeesRate\": \"-0.0003805180\"\n              }\n            ]\n          ],"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "then it means that one of the input, worth 16 CC was in fact expired, so the initial amount and holding fee charged should be changed according to that data?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*francois.branciard* from *Kiln* was added to this channel by *wayne.collier*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749213946.330159",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "25m",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "francois.branciard",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Kiln",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "wayne.collier",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UJUA0QH45",
+        "type": "message",
+        "ts": "1749214675.373479",
+        "client_msg_id": "297cf9ab-0054-4867-ade6-c3238bb8257f",
+        "text": "the issue I have with that <https:\/\/www.cantonscan.com\/update\/12208955b2b0232821a7f63e333207be0a59301fd09dcfc5d5b7c30720c4ebe405fb|update> is that the holding fee I compute ignoring the expiry is `<tel:10540348600|1.0540348600>` , the transfer summary reports `<tel:10544153780|1.0544153780>` and the difference is ... `<tel:00003805180|0.0003805180>` which surprisingly is the _rate_",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "060dc25df4b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9394671860016_060dc25df4b2903c88b8_72.png",
+            "first_name": "Antoine",
+            "real_name": "Antoine Le Calvez",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "antoine.lecalvez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749199546.963009",
+        "parent_user_id": "UJUA0QH45",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fd+fY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the issue I have with that "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.cantonscan.com\/update\/12208955b2b0232821a7f63e333207be0a59301fd09dcfc5d5b7c30720c4ebe405fb",
+                                "text": "update"
+                            },
+                            {
+                                "type": "text",
+                                "text": " is that the holding fee I compute ignoring the expiry is "
+                            },
+                            {
+                                "type": "link",
+                                "url": "tel:10540348600",
+                                "text": "1.0540348600",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " , the transfer summary reports "
+                            },
+                            {
+                                "type": "link",
+                                "url": "tel:10544153780",
+                                "text": "1.0544153780",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and the difference is ... "
+                            },
+                            {
+                                "type": "link",
+                                "url": "tel:00003805180",
+                                "text": "0.0003805180",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " which surprisingly is the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "rate",
+                                "style": {
+                                    "italic": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UJUA0QH45",
+        "type": "message",
+        "ts": "1749216431.708809",
+        "client_msg_id": "36e2d101-5c14-4203-a309-701f2b8111f3",
+        "text": "I though the rate was X, so it's not a rate but the actual amount?\n\nAnd why then does the computed holding fee differs from the one actually charged?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "060dc25df4b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9394671860016_060dc25df4b2903c88b8_72.png",
+            "first_name": "Antoine",
+            "real_name": "Antoine Le Calvez",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "antoine.lecalvez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749199546.963009",
+        "parent_user_id": "UJUA0QH45",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "26vl2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I though the rate was X, so it's not a rate but the actual amount?\n\nAnd why then does the computed holding fee differs from the one actually charged?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UJUA0QH45",
+        "type": "message",
+        "ts": "1749216447.371709",
+        "edited": {
+            "user": "UJUA0QH45",
+            "ts": "1749216472.000000"
+        },
+        "client_msg_id": "5edbbab7-7ddc-4983-b23d-afdf441bcc89",
+        "text": "that computation worked for _all_ previous transfers (in the sense that inputs = outputs + computed fees)",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "060dc25df4b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9394671860016_060dc25df4b2903c88b8_72.png",
+            "first_name": "Antoine",
+            "real_name": "Antoine Le Calvez",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "antoine.lecalvez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749199546.963009",
+        "parent_user_id": "UJUA0QH45",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UIT5N",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "that computation worked for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "all",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " previous transfers (in the sense that inputs = outputs + computed fees)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U07MUJ34JQ0",
+        "type": "message",
+        "ts": "1749220279.232719",
+        "client_msg_id": "719e4dc7-f60b-42c9-9968-74daffb7c70b",
+        "text": "Keep:\n&gt; *Aunt Moritz*  [10:29 AM]\n&gt; I would recommend to ignore the change to initial amount as of round zero and the change to holding fees rate fields.\n&gt; Those were added because initially we thought people primarily care about tracking their effective amount as if holding fees were already deducted. Based on user feedback this does not actually seem to be the case, what people usually want to track is:\n&gt; 1. The actual amounts of holdings based on the amount when they were created ignoring any holding fees.\n&gt; 2. See holding fees when they are actually charged.\n&gt; 3. Maybe in some cases the accrued but not yet charged holding fees.\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07LSPYDRT4",
+        "source_team": "T07LSPYDRT4",
+        "user_profile": {
+            "avatar_hash": "gd42683d1cd6",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d42683d1cd6de81338326a75f7e18ab5.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-72.png",
+            "first_name": "Digital",
+            "real_name": "Digital Asset Support for GSF Operations",
+            "display_name": "Digital Asset GSF Contributions (Wayne Collier)",
+            "team": "T07LSPYDRT4",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749199546.963009",
+        "parent_user_id": "UJUA0QH45",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6VvLx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Keep:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Aunt Moritz",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  [10:29 AM]\nI would recommend to ignore the change to initial amount as of round zero and the change to holding fees rate fields.\nThose were added because initially we thought people primarily care about tracking their effective amount as if holding fees were already deducted. Based on user feedback this does not actually seem to be the case, what people usually want to track is:"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "The actual amounts of holdings based on the amount when they were created ignoring any holding fees."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "See holding fees when they are actually charged."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Maybe in some cases the accrued but not yet charged holding fees."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 1
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07MUJ34JQ0",
+        "type": "message",
+        "ts": "1749222828.280359",
+        "client_msg_id": "876bb402-0727-4207-a5f7-a78419fe1832",
+        "text": "ENABLING FEATURED APPLICATION MARKERS\n\n<https:\/\/github.com\/global-synchronizer-foundation\/cips\/blob\/main\/cip-0047\/cip-0047.md|CIP-0047> introduced the concept of Featured application activity markers.  The Splice team completed an implementation of this concept as part of Splice 0.4.0.  This implementation included changes to the Daml models.\n\nThis change may impact any application that aas implemented its own new Daml models with dependencies on the `splice-amulet` DAR package.\n\nThe Super Validators will begin to adopt the new CIP-0045 Daml model changes, and enable Featured Application Activity Markers, on the following schedule:\n\n```DevNet\n\tDaml models effective: Tuesday, June 10th\n\tFeatured App Markers enabled at CIP default value of $1: Tuesday, July 1st\n\nTestNet\n\tDaml models effective: Tuesday, June 24th\n\tFeatured App Markers enabled at CIP default value of $1: Tuesday, July 15th\n\nMainNet\n\tDaml models effective: Tuesday, July 8th\n\tFeatured App Markers enabled at CIP default value of $1: Tuesday, July 29th```\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07LSPYDRT4",
+        "source_team": "T07LSPYDRT4",
+        "user_profile": {
+            "avatar_hash": "gd42683d1cd6",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d42683d1cd6de81338326a75f7e18ab5.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-72.png",
+            "first_name": "Digital",
+            "real_name": "Digital Asset Support for GSF Operations",
+            "display_name": "Digital Asset GSF Contributions (Wayne Collier)",
+            "team": "T07LSPYDRT4",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "e27cK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ENABLING FEATURED APPLICATION MARKERS\n\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/global-synchronizer-foundation\/cips\/blob\/main\/cip-0047\/cip-0047.md",
+                                "text": "CIP-0047"
+                            },
+                            {
+                                "type": "text",
+                                "text": " introduced the concept of Featured application activity markers.  The Splice team completed an implementation of this concept as part of Splice 0.4.0.  This implementation included changes to the Daml models.\n\nThis change may impact any application that aas implemented its own new Daml models with dependencies on the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "splice-amulet",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " DAR package.\n\nThe Super Validators will begin to adopt the new CIP-0045 Daml model changes, and enable Featured Application Activity Markers, on the following schedule:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "DevNet\n\tDaml models effective: Tuesday, June 10th\n\tFeatured App Markers enabled at CIP default value of $1: Tuesday, July 1st\n\nTestNet\n\tDaml models effective: Tuesday, June 24th\n\tFeatured App Markers enabled at CIP default value of $1: Tuesday, July 15th\n\nMainNet\n\tDaml models effective: Tuesday, July 8th\n\tFeatured App Markers enabled at CIP default value of $1: Tuesday, July 29th"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*yury.korzun* from *PixelPlex* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749227133.093649",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AaqYf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yury.korzun",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PixelPlex",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*thibauld* from *fairmint* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749230805.533679",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RpP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thibauld",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "fairmint",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U2DCVHH2S",
+        "type": "message",
+        "ts": "1749233314.740539",
+        "client_msg_id": "3cecc7a6-3d1d-4209-a6d6-5d07e08415bc",
+        "text": "Hello Fellow App Devs, <http:\/\/syncinsights.io|syncinsights.io> is available for those who want to keep tabs on Canton network activity. It is not just a dashboarding tool, but a full self-service proactive analytics experience.\n\n• *Self-Service*: use natural language to access data ad-hoc for exploratory purposes and\/or or create custom dashboards. Also create custom columns of data using standard functions as well as more advanced window functions.\n• *Proactive*: the natural language interface can also be used to initiate AI workers for 1) real-time data monitoring or 2) automated report analysis, where a notification with a data payload is delivered.\nThe app leverages <http:\/\/Chata.ai|Chata.ai> underlying technology which does not hallucinate (no LLMs needed) and infers on CPU (no expensive GPU costs).  The technology can be used with structured data so if there are other app devs out there who may want to collaborate, please let us know.  Our core capabilities are definitely in the data &amp; AI space and would be great to team up with many of you with deep DeFi and Web3 experience\/capabilities.\n\nPlease DM me if any of the above is interesting",
+        "team": "T05FWTX7PMG",
+        "user_team": "T2DD6ACGP",
+        "source_team": "T2DD6ACGP",
+        "user_profile": {
+            "avatar_hash": "9bb5de1cfe52",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2016-09-19\/81446954629_9bb5de1cfe520dc52f12_72.jpg",
+            "first_name": "Kelly",
+            "real_name": "Kelly Cherniwchan",
+            "display_name": "kelly.cherniwchan",
+            "team": "T2DD6ACGP",
+            "name": "kelly.cherniwchan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749233314.740539",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1749233648.388419",
+        "reply_users": [
+            "U2DCVHH2S"
+        ],
+        "replies": [
+            {
+                "user": "U2DCVHH2S",
+                "ts": "1749233648.388419"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cEaLO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello Fellow App Devs, "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/syncinsights.io",
+                                "text": "syncinsights.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " is available for those who want to keep tabs on Canton network activity. It is not just a dashboarding tool, but a full self-service proactive analytics experience.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Self-Service",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ": use natural language to access data ad-hoc for exploratory purposes and\/or or create custom dashboards. Also create custom columns of data using standard functions as well as more advanced window functions."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Proactive",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ": the natural language interface can also be used to initiate AI workers for 1) real-time data monitoring or 2) automated report analysis, where a notification with a data payload is delivered."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThe app leverages "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/Chata.ai",
+                                "text": "Chata.ai"
+                            },
+                            {
+                                "type": "text",
+                                "text": " underlying technology which does not hallucinate (no LLMs needed) and infers on CPU (no expensive GPU costs).  The technology can be used with structured data so if there are other app devs out there who may want to collaborate, please let us know.  Our core capabilities are definitely in the data & AI space and would be great to team up with many of you with deep DeFi and Web3 experience\/capabilities.\n\nPlease DM me if any of the above is interesting"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "clap::skin-tone-3",
+                "users": [
+                    "U0736QAMJS2",
+                    "U04KJF6UTNU"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U07AZ0PEG5A",
+        "type": "message",
+        "ts": "1749233348.197769",
+        "client_msg_id": "e3a7b9fa-9555-478a-9dfc-ea6fdd898c74",
+        "text": "I found this today while doing some codegen with `daml`. There are other things that could be cleaned up to with this codegen command so frontend devs don’t have to post-process the packages. I’ll try to collect my notes once i have it working.\n\n• <https:\/\/github.com\/digital-asset\/daml\/issues\/21329>\n• <https:\/\/github.com\/digital-asset\/daml\/pull\/21330>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07AU0ZU6TC",
+        "source_team": "T07AU0ZU6TC",
+        "user_profile": {
+            "avatar_hash": "9a008d77fb0a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-24\/7778490382114_9a008d77fb0ac3254588_72.jpg",
+            "first_name": "Allen",
+            "real_name": "Allen",
+            "display_name": "bigboss",
+            "team": "T07AU0ZU6TC",
+            "name": "allen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749233348.197769",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1749574672.640469",
+        "reply_users": [
+            "U07AZ0PEG5A"
+        ],
+        "replies": [
+            {
+                "user": "U07AZ0PEG5A",
+                "ts": "1749574672.640469"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "ts": 1749232952,
+                "color": "36a64f",
+                "bot_id": "B07B3MUPVA7",
+                "bot_team_id": "T07AU0ZU6TC",
+                "app_unfurl_url": "https:\/\/github.com\/digital-asset\/daml\/issues\/21329",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "#21329 TypeScript codegen generates incorrect 'peer-dependencies' field instead of 'peerDependencies' in package.json",
+                "title": "#21329 TypeScript codegen generates incorrect 'peer-dependencies' field instead of 'peerDependencies' in package.json",
+                "title_link": "https:\/\/github.com\/digital-asset\/daml\/issues\/21329",
+                "footer": "<https:\/\/github.com\/digital-asset\/daml|digital-asset\/daml>"
+            },
+            {
+                "id": 2,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "ts": 1749233330,
+                "color": "36a64f",
+                "bot_id": "B07B3MUPVA7",
+                "bot_team_id": "T07AU0ZU6TC",
+                "app_unfurl_url": "https:\/\/github.com\/digital-asset\/daml\/pull\/21330",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "#21330 fix: correct 'peer-dependencies' field to 'peerDependencies' in TypeScript codegen",
+                "title": "#21330 fix: correct 'peer-dependencies' field to 'peerDependencies' in TypeScript codegen",
+                "title_link": "https:\/\/github.com\/digital-asset\/daml\/pull\/21330",
+                "footer": "<https:\/\/github.com\/digital-asset\/daml|digital-asset\/daml>"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dConr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I found this today while doing some codegen with "
+                            },
+                            {
+                                "type": "text",
+                                "text": "daml",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". There are other things that could be cleaned up to with this codegen command so frontend devs don’t have to post-process the packages. I’ll try to collect my notes once i have it working.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/github.com\/digital-asset\/daml\/issues\/21329"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/github.com\/digital-asset\/daml\/pull\/21330"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U08H5BYLACX"
+                ],
+                "count": 1
+            },
+            {
+                "name": "face_with_cowboy_hat",
+                "users": [
+                    "U07B6LKNBEV"
+                ],
+                "count": 1
+            },
+            {
+                "name": "fysi",
+                "users": [
+                    "U07B6LKNBEV"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F09133F5PUY",
+                "created": 1749233540,
+                "timestamp": 1749233540,
+                "name": "Screenshot 2025-06-06 at 12.10.39 PM.png",
+                "title": "Screenshot 2025-06-06 at 12.10.39 PM.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U2DCVHH2S",
+                "user_team": "T2DD6ACGP",
+                "editable": false,
+                "size": 91359,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T2DD6ACGP-F09133F5PUY\/screenshot_2025-06-06_at_12.10.39_pm.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T2DD6ACGP-F09133F5PUY\/download\/screenshot_2025-06-06_at_12.10.39_pm.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F09133F5PUY-c5be01055b\/screenshot_2025-06-06_at_12.10.39_pm_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F09133F5PUY-c5be01055b\/screenshot_2025-06-06_at_12.10.39_pm_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F09133F5PUY-c5be01055b\/screenshot_2025-06-06_at_12.10.39_pm_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 272,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F09133F5PUY-c5be01055b\/screenshot_2025-06-06_at_12.10.39_pm_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 363,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F09133F5PUY-c5be01055b\/screenshot_2025-06-06_at_12.10.39_pm_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F09133F5PUY-c5be01055b\/screenshot_2025-06-06_at_12.10.39_pm_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 544,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F09133F5PUY-c5be01055b\/screenshot_2025-06-06_at_12.10.39_pm_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 605,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F09133F5PUY-c5be01055b\/screenshot_2025-06-06_at_12.10.39_pm_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 726,
+                "original_w": 1001,
+                "original_h": 757,
+                "thumb_tiny": "AwAkADCCNQw5zT\/LX3\/Omw9DUlaJaGbeo3y19\/zoEKH1\/OnU5aU9Iji9SsygPgHIpCAKc\/8ArT9aa1QUSRd6kqOHoakrWOxEtwpy9DTacvQ1M\/hCO5Xl++ec0ynSffNNqSwoyaKKBi\/w0mTS\/wANJQAUUUUAf\/\/Z",
+                "permalink": "https:\/\/chataai.slack.com\/files\/U05FZBDQ4RJ\/F09133F5PUY\/screenshot_2025-06-06_at_12.10.39_pm.png",
+                "permalink_public": "https:\/\/slack-files.com\/T2DD6ACGP-F09133F5PUY-4426e300b3",
+                "source_team": "T2DD6ACGP",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F0905UA6DCK",
+                "created": 1749233544,
+                "timestamp": 1749233544,
+                "name": "Screenshot 2025-06-06 at 12.12.10 PM.png",
+                "title": "Screenshot 2025-06-06 at 12.12.10 PM.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U2DCVHH2S",
+                "user_team": "T2DD6ACGP",
+                "editable": false,
+                "size": 69714,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T2DD6ACGP-F0905UA6DCK\/screenshot_2025-06-06_at_12.12.10_pm.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T2DD6ACGP-F0905UA6DCK\/download\/screenshot_2025-06-06_at_12.12.10_pm.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F0905UA6DCK-532bdaa203\/screenshot_2025-06-06_at_12.12.10_pm_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F0905UA6DCK-532bdaa203\/screenshot_2025-06-06_at_12.12.10_pm_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F0905UA6DCK-532bdaa203\/screenshot_2025-06-06_at_12.12.10_pm_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 223,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F0905UA6DCK-532bdaa203\/screenshot_2025-06-06_at_12.12.10_pm_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 297,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F0905UA6DCK-532bdaa203\/screenshot_2025-06-06_at_12.12.10_pm_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F0905UA6DCK-532bdaa203\/screenshot_2025-06-06_at_12.12.10_pm_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 446,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F0905UA6DCK-532bdaa203\/screenshot_2025-06-06_at_12.12.10_pm_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 496,
+                "original_w": 839,
+                "original_h": 520,
+                "thumb_tiny": "AwAdADCqOnWnBckCm4Panr94UxDvKHqaPKX1NPqJ5Oqj86tpIhNsb8vvSHb2zSUVBYU4dKbRQMKKKcBkUANopTwaSgD\/2Q==",
+                "permalink": "https:\/\/chataai.slack.com\/files\/U05FZBDQ4RJ\/F0905UA6DCK\/screenshot_2025-06-06_at_12.12.10_pm.png",
+                "permalink_public": "https:\/\/slack-files.com\/T2DD6ACGP-F0905UA6DCK-eb4e79caa5",
+                "source_team": "T2DD6ACGP",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F090E0UCU9Y",
+                "created": 1749233642,
+                "timestamp": 1749233642,
+                "name": "Screenshot 2025-06-06 at 12.13.54 PM.png",
+                "title": "Screenshot 2025-06-06 at 12.13.54 PM.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U2DCVHH2S",
+                "user_team": "T2DD6ACGP",
+                "editable": false,
+                "size": 189978,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T2DD6ACGP-F090E0UCU9Y\/screenshot_2025-06-06_at_12.13.54_pm.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T2DD6ACGP-F090E0UCU9Y\/download\/screenshot_2025-06-06_at_12.13.54_pm.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F090E0UCU9Y-1f0faf10a8\/screenshot_2025-06-06_at_12.13.54_pm_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F090E0UCU9Y-1f0faf10a8\/screenshot_2025-06-06_at_12.13.54_pm_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F090E0UCU9Y-1f0faf10a8\/screenshot_2025-06-06_at_12.13.54_pm_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 332,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F090E0UCU9Y-1f0faf10a8\/screenshot_2025-06-06_at_12.13.54_pm_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 442,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F090E0UCU9Y-1f0faf10a8\/screenshot_2025-06-06_at_12.13.54_pm_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F090E0UCU9Y-1f0faf10a8\/screenshot_2025-06-06_at_12.13.54_pm_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 664,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F090E0UCU9Y-1f0faf10a8\/screenshot_2025-06-06_at_12.13.54_pm_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 737,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T2DD6ACGP-F090E0UCU9Y-1f0faf10a8\/screenshot_2025-06-06_at_12.13.54_pm_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 885,
+                "original_w": 1011,
+                "original_h": 932,
+                "thumb_tiny": "AwAsADCmEo2U5elBoAYVwM5pKefummUAPWUgAbV49RS+cf7iflUdFO7FZEgPHSg0gAIpdopDEPQ0zB9KkIA7UhA9BQAyin4HoKCBtJoAVaWmg0ZNMBWoNJnNBNACnrQ33TSZoJ4NID\/\/2Q==",
+                "permalink": "https:\/\/chataai.slack.com\/files\/U05FZBDQ4RJ\/F090E0UCU9Y\/screenshot_2025-06-06_at_12.13.54_pm.png",
+                "permalink_public": "https:\/\/slack-files.com\/T2DD6ACGP-F090E0UCU9Y-a8b34f878e",
+                "source_team": "T2DD6ACGP",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U2DCVHH2S",
+        "type": "message",
+        "ts": "1749233648.388419",
+        "client_msg_id": "20678f28-fcce-4cdd-8eb0-c0cfae76f7ce",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1749233314.740539",
+        "parent_user_id": "U2DCVHH2S",
+        "user_team": "T2DD6ACGP",
+        "source_team": "T2DD6ACGP",
+        "user_profile": {
+            "avatar_hash": "9bb5de1cfe52",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2016-09-19\/81446954629_9bb5de1cfe520dc52f12_72.jpg",
+            "first_name": "Kelly",
+            "real_name": "Kelly Cherniwchan",
+            "display_name": "kelly.cherniwchan",
+            "team": "T2DD6ACGP",
+            "name": "kelly.cherniwchan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

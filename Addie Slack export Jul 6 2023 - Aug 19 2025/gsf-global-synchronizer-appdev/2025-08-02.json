@@ -1,0 +1,172 @@
+[
+    {
+        "user": "U03NCGBFCDP",
+        "type": "message",
+        "ts": "1754125762.187809",
+        "edited": {
+            "user": "U03NCGBFCDP",
+            "ts": "1754125769.000000"
+        },
+        "client_msg_id": "7b7993a2-a576-4589-ba2b-ac0529533ca1",
+        "text": "Hi, there’s likely an issue in your hashing implementation. You can compare your hash with the one <https:\/\/github.com\/digital-asset\/canton\/blob\/main\/community\/ledger-api\/src\/main\/protobuf\/com\/daml\/ledger\/api\/v2\/interactive\/interactive_submission_service.proto#L147|returned> by the prepare endpoint. If they’re different you can set the <https:\/\/github.com\/digital-asset\/canton\/blob\/main\/community\/ledger-api\/src\/main\/protobuf\/com\/daml\/ledger\/api\/v2\/interactive\/interactive_submission_service.proto#L121|verbose_hashing> flag to true in the prepared transaction request and you’ll get a breakdown of how the hash was calculated in the <https:\/\/github.com\/digital-asset\/canton\/blob\/main\/community\/ledger-api\/src\/main\/protobuf\/com\/daml\/ledger\/api\/v2\/interactive\/interactive_submission_service.proto#L155|hashing_details> field. Hopefully that can help you pinpoint which part of your transaction is misencoded",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b8a2dd3941ff",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-07-01\/3748258869187_b8a2dd3941ff99aa9264_72.jpg",
+            "first_name": "Thibault",
+            "real_name": "Thibault Jeandet",
+            "display_name": "Thibault",
+            "team": "T03T53E10",
+            "name": "thibault.jeandet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754049245.373989",
+        "parent_user_id": "U08QALM68SF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wwGZW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, there’s likely an issue in your hashing implementation. You can compare your hash with the one "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/digital-asset\/canton\/blob\/main\/community\/ledger-api\/src\/main\/protobuf\/com\/daml\/ledger\/api\/v2\/interactive\/interactive_submission_service.proto#L147",
+                                "text": "returned"
+                            },
+                            {
+                                "type": "text",
+                                "text": " by the prepare endpoint. If they’re different you can set the "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/digital-asset\/canton\/blob\/main\/community\/ledger-api\/src\/main\/protobuf\/com\/daml\/ledger\/api\/v2\/interactive\/interactive_submission_service.proto#L121",
+                                "text": "verbose_hashing"
+                            },
+                            {
+                                "type": "text",
+                                "text": " flag to true in the prepared transaction request and you’ll get a breakdown of how the hash was calculated in the "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/digital-asset\/canton\/blob\/main\/community\/ledger-api\/src\/main\/protobuf\/com\/daml\/ledger\/api\/v2\/interactive\/interactive_submission_service.proto#L155",
+                                "text": "hashing_details"
+                            },
+                            {
+                                "type": "text",
+                                "text": " field. Hopefully that can help you pinpoint which part of your transaction is misencoded"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "Here’s a version with a few fixes that should work. I added comments wtih `\/\/ MODIFIED` where I made a change.\nI’m not familiar with go so there might be a better way to fix it :slightly_smiling_face:",
+        "files": [
+            {
+                "id": "F0987L998R5",
+                "created": 1754131235,
+                "timestamp": 1754131235,
+                "name": "transaction_util_fix.go",
+                "title": "transaction_util_fix.go",
+                "mimetype": "text\/plain",
+                "filetype": "go",
+                "pretty_type": "Go",
+                "user": "U03NCGBFCDP",
+                "user_team": "T03T53E10",
+                "editable": true,
+                "size": 16440,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T03T53E10-F0987L998R5\/transaction_util_fix.go?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T03T53E10-F0987L998R5\/download\/transaction_util_fix.go?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/daholdings.slack.com\/files\/U05FZBDQ4RJ\/F0987L998R5\/transaction_util_fix.go",
+                "permalink_public": "https:\/\/slack-files.com\/T03T53E10-F0987L998R5-1aa2e5908b",
+                "edit_link": "https:\/\/daholdings.slack.com\/files\/U05FZBDQ4RJ\/F0987L998R5\/transaction_util_fix.go\/edit",
+                "source_team": "T03T53E10",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U03NCGBFCDP",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MHx5U",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Here’s a version with a few fixes that should work. I added comments wtih "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/\/ MODIFIED",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " where I made a change.\nI’m not familiar with go so there might be a better way to fix it "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1754131262.851669",
+        "client_msg_id": "2ccb84c7-4d43-4d13-88e6-b99262d90c4f",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1754049245.373989",
+        "parent_user_id": "U08QALM68SF",
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b8a2dd3941ff",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-07-01\/3748258869187_b8a2dd3941ff99aa9264_72.jpg",
+            "first_name": "Thibault",
+            "real_name": "Thibault Jeandet",
+            "display_name": "Thibault",
+            "team": "T03T53E10",
+            "name": "thibault.jeandet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

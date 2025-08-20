@@ -1,0 +1,852 @@
+[
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1742207710.479009",
+        "client_msg_id": "61bb43d3-cbde-44b9-bf3a-10c87295944d",
+        "text": "Good morning! I have some more questions:\n• I have my local Canton Network running locally, with the local SV and validator. I followed the steps from <https:\/\/docs.token-std-dev.global.canton.network.digitalasset.com\/app_dev\/testing\/localnet.html|here>. The URLs I have found and used so far are\n    ◦ Validator API: <http:\/\/localhost:8080\/api\/validator\/>\n    ◦ Scan API: <http:\/\/scan.localhost:8080\/api\/scan\/>\nNow I want to use the *Ledger API* to retrieve the balance of an account. The path is `\/v2\/state\/active-contracts`. What is the URL?\n\n• According to the presentation _*Design Overview_ CIP for CN token standards*_, the metadata standard should cover the following ERC-20 token standard functions: *name(), symbol(), decimals(), totalSupply()*. However, there is no mention of the *decimals()* implementation on the API documentation: <https:\/\/github.com\/digital-asset\/cn-token-standard-proposal\/blob\/main\/cnrc-1-token-metadata\/openapi\/cnrc-token-metadata.yaml>. Will this be included? we need it to display the amounts of each token correctly.\n• In order to *prepare* a transaction for CantonCoin, we use this endpoint `v0\/admin\/external-party\/transfer-preapproval\/prepare-send` from the *Validator API.* I understand that for any token, instead of using that endpoint we should use the *Ledger API* and the endpoint `\/v2\/interactive-submission\/prepare`. However, to send a token transaction I wonder if we could reuse the endpoint `v0\/admin\/external-party\/transfer-preapproval\/submit-send` from the Validator API, as it just takes the signed raw transaction and sends it and doesn't seem to depend on the `instrument_id`. Is that possible, or it should be via the ledger API again? What concerns me about the Ledger API endpoint `\/v2\/interactive-submission\/execute` is that it requires the `party_signatures` as a separate parameter, and we would not be able to reuse our current sign &amp; send logic, which sends the rawTransaction already signed as a single `string`.\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741955248.029809",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4AJpu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Good morning! I have some more questions:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I have my local Canton Network running locally, with the local SV and validator. I followed the steps from "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/docs.token-std-dev.global.canton.network.digitalasset.com\/app_dev\/testing\/localnet.html",
+                                        "text": "here"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ". The URLs I have found and used so far are"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Validator API: "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "http:\/\/localhost:8080\/api\/validator\/"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Scan API: "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "http:\/\/scan.localhost:8080\/api\/scan\/"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Now I want to use the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Ledger API ",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "to retrieve the balance of an account. The path is "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/v2\/state\/active-contracts",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". What is the URL?\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "According to the presentation "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "Design Overview_ CIP for CN token standards",
+                                        "style": {
+                                            "bold": true,
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ", the metadata standard should cover the following ERC-20 token standard functions: "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "name(), symbol(), decimals(), totalSupply()",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ". However, there is no mention of the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "decimals()",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " implementation on the API documentation: "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/github.com\/digital-asset\/cn-token-standard-proposal\/blob\/main\/cnrc-1-token-metadata\/openapi\/cnrc-token-metadata.yaml"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ". Will this be included? we need it to display the amounts of each token correctly."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "In order to "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "prepare",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " a transaction for CantonCoin, we use this endpoint "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "v0\/admin\/external-party\/transfer-preapproval\/prepare-send",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " from the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "Validator API.",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " I understand that for any token, instead of using that endpoint we should use the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "Ledger API",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " and the endpoint "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "\/v2\/interactive-submission\/prepare",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ". However, to send a token transaction I wonder if we could reuse the endpoint "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "v0\/admin\/external-party\/transfer-preapproval\/submit-send",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " from the Validator API, as it just takes the signed raw transaction and sends it and doesn't seem to depend on the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "instrument_id",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ". Is that possible, or it should be via the ledger API again? What concerns me about the Ledger API endpoint "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "\/v2\/interactive-submission\/execute",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " is that it requires the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "party_signatures",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " as a separate parameter, and we would not be able to reuse our current sign & send logic, which sends the rawTransaction already signed as a single "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "string",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1742211242.483189",
+        "client_msg_id": "0875a1eb-8c57-4569-926a-e73831a6b790",
+        "text": "&gt; No you'll need the ledger API `execute` endpoint. Could you explain the exact issue with party_signatures? You already supply the signature as a separate string righ? So what exactly is the issue here?\nNo, we just supply one string, the rawTransaction signed. We don't supply the signatures as another parameter",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741955248.029809",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hPoId",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "No you'll need the ledger API "
+                            },
+                            {
+                                "type": "text",
+                                "text": "execute",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " endpoint. Could you explain the exact issue with party_signatures? You already supply the signature as a separate string righ? So what exactly is the issue here?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "No, we just supply one string, the rawTransaction signed. We don't supply the signatures as another parameter"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1742211897.928129",
+        "client_msg_id": "a1e73748-7298-42a9-931d-7595fb808cd4",
+        "text": "You are right, my bad. You can ignore that last question. We were internally base64 encoding this\n```submission: {\n        party_id\n        transaction,\n        signed_tx_hash,\n        public_key\n      }```\nAnd now it will change slightly with the array of signatures.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741955248.029809",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "84E+E",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You are right, my bad. You can ignore that last question. We were internally base64 encoding this\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "submission: {\n        party_id\n        transaction,\n        signed_tx_hash,\n        public_key\n      }"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And now it will change slightly with the array of signatures."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1742212734.745369",
+        "client_msg_id": "3fb9157b-3438-4d45-8231-1875a18be558",
+        "text": "Thanks for all the answers! very helpful",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741955248.029809",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2C4lf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for all the answers! very helpful"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "UEHLS0JUB"
+                ],
+                "count": 1
+            },
+            {
+                "name": "pray::skin-tone-2",
+                "users": [
+                    "U021EQM9HGV"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1742221185.473599",
+        "client_msg_id": "abd95f84-f444-48cb-8dd2-fd9d9abc1511",
+        "text": "Another question :pray: thanks in advance for your help.\n\nWe currently use this for party onboarding on CantonCoin:\n• `\/api\/validator\/v0\/admin\/external-party\/topology\/generate` for generating the topology\n• `\/api\/validator\/v0\/admin\/external-party\/setup-proposal` to set up the preapproval\n• If I understand correctly, the topology generation applies for all tokens, so the call to `\/api\/validator\/v0\/admin\/external-party\/topology\/generate` must be done once and covers CantonCoin and all other tokens, correct?\n• What about the second call, for the preapproval? how was it configured for this example? <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/scripts\/external-signing\/external-signing.py#L354> I see that the example takes the `party_id` as an argument, so the preapproval is done outside of the example.\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741955248.029809",
+        "parent_user_id": "USLACKBOT",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "color": "24292f",
+                "bot_id": "B023R9A62UF",
+                "bot_team_id": "T8Z8R9AFL",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/scripts\/external-signing\/external-signing.py#L354",
+                "is_app_unfurl": true,
+                "fallback": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/scripts\/external-signing\/external-signing.py|external-signing.py>",
+                "text": "```\nasync def handle_transfer_preapproval_send_token_standard(args, scan_client: ScanClient, ledger_client: LedgerClient):\n```",
+                "title": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/scripts\/external-signing\/external-signing.py|external-signing.py>",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Dp2LP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Another question "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray",
+                                "unicode": "1f64f"
+                            },
+                            {
+                                "type": "text",
+                                "text": " thanks in advance for your help.\n\nWe currently use this for party onboarding on CantonCoin:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "\/api\/validator\/v0\/admin\/external-party\/topology\/generate",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " for generating the topology"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "\/api\/validator\/v0\/admin\/external-party\/setup-proposal",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " to set up the preapproval"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "If I understand correctly, the topology generation applies for all tokens, so the call to "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "\/api\/validator\/v0\/admin\/external-party\/topology\/generate",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " must be done once and covers CantonCoin and all other tokens, correct?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "What about the second call, for the preapproval? how was it configured for this example? "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/scripts\/external-signing\/external-signing.py#L354"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " I see that the example takes the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "party_id",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " as an argument, so the preapproval is done outside of the example."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1742223696.755939",
+        "client_msg_id": "82d0f478-68a4-44dd-a553-78d89d961d30",
+        "text": "Got it, thanks Moritz!",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741955248.029809",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PpBL5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Got it, thanks Moritz!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1742224020.856209",
+        "client_msg_id": "c6b5511f-854e-48cd-9cd8-de38c49c5b0e",
+        "text": "Is it possible to consider adding this token preapproval to one of the existing standards? It would be very helpful for us to be able to handle the tokens in a generic way",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741955248.029809",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+pxBF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is it possible to consider adding this token preapproval to one of the existing standards? It would be very helpful for us to be able to handle the tokens in a generic way"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1742228381.906329",
+        "client_msg_id": "dfdc178d-9731-4a46-97c5-c80e3a9180fb",
+        "text": "Also, is it possible to consider adding the specification of the fees for token transactions to any of the standards? I understand this could be as difficult as the previous one that I asked, but this would also be of great value for us",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741955248.029809",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yHmne",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Also, is it possible to consider adding the specification of the fees for token transactions to any of the standards? I understand this could be as difficult as the previous one that I asked, but this would also be of great value for us"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U06JBU6A20K",
+        "text": "<@U06JBU6A20K> has joined the channel",
+        "inviter": "U05E23Y7YQ2",
+        "type": "message",
+        "ts": "1742228387.506569",
+        "team": "T05FWTX7PMG"
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1742228471.249569",
+        "client_msg_id": "e73e94c3-ea60-4d73-b4ca-4eb0a0a4f363",
+        "text": "Great. Thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741955248.029809",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FepUl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Great. Thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

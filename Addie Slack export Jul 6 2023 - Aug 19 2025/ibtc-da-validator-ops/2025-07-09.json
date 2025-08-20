@@ -1,0 +1,130 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752063260.612729",
+        "client_msg_id": "648AB07D-2610-47BB-A55C-16D35CC862AD",
+        "text": "Without introducing the centralized provider party, we could call CreateMarker and still set the beneficiary as that party, so reward minting automations work, and there is still no centralization risk. This makes sense to me. \n\nHaving the marker creation choice available however has a precondition, that the decparty is already a featured app provider (it has an instance of the relevant FARV1 contract - this is the definition of being featured ?). \nSo after launching the network, we should migrate the featured app right to the decparty before any minting happens, not just as to not miss out on rewards, but also as the Mint flow would not even work without a FARV1 contract, if there is a createMarker call in there, right? Actually, this is only true if DAML can’t handle failed external calls properly. I’m actually not sure if that is true, sorry\n\nI understand this is more a GSF\/DA BD question, but technically we could have temporarily 2 featured app provider parties while we migrate all rights and credentials to the decparty? \n\nOr general advice welcome as to how best to orchestrate this in your opinion  ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751268698.507789",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xNNbl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Without introducing the centralized provider party, we could call CreateMarker and still set the beneficiary as that party, so reward minting automations work, and there is still no centralization risk. This makes sense to me. \n\nHaving the marker creation choice available however has a precondition, that the decparty is already a featured app provider (it has an instance of the relevant FARV1 contract - this is the definition of being featured ?). \nSo after launching the network, we should migrate the featured app right to the decparty before any minting happens, not just as to not miss out on rewards, but also as the Mint flow would not even work without a FARV1 contract, if there is a createMarker call in there, right? Actually, this is only true if DAML can’t handle failed external calls properly. "
+                            },
+                            {
+                                "type": "text",
+                                "text": "I’m"
+                            },
+                            {
+                                "type": "text",
+                                "text": " actually not sure if that is true, sorry\n\nI understand this is more a GSF\/DA BD question, but technically we could have temporarily 2 featured app provider parties while we migrate all rights and credentials to the decparty? \n\nOr general advice welcome as to how best to orchestrate this in your opinion  "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752069648.666459",
+        "client_msg_id": "7179EE67-FFA9-4BF4-ADF5-B6A4C598040E",
+        "text": "Fun! ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751268698.507789",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vFH+0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Fun! "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752069669.466589",
+        "client_msg_id": "5493BD34-6D7B-4AB2-9684-62751513459A",
+        "text": "Okay, thank you",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751268698.507789",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7r+gA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Okay, thank you"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

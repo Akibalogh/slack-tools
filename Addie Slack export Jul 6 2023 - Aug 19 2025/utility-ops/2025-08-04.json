@@ -1,0 +1,562 @@
+[
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754291323.718039",
+        "client_msg_id": "68c84880-2c75-466c-97cd-79ad1da6834e",
+        "text": "Hi Francois.\n\nExternal parties are supported in the API, but not in the Utility UI.\n\nHowever, some of the choices exposed by the Utility which interact directly with Canton Coin (e.g. topping up a credential billing or a commercial agreement contract) take fairly short-lived templates as an input (e.g. an Amulet `OpenMiningRound`, which stays active ~ 20 mins).\n\nWhen calling these choices, your signing process needs to be sufficiently fast, otherwise by the time the signed command is submitted to the ledger the input contracts might have already been archived.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754241890.943689",
+        "parent_user_id": "U08JYBDSK0V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qr\/eR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Francois.\n\nExternal parties are supported in the API, but not in the Utility UI.\n\nHowever, some of the choices exposed by the Utility which interact directly with Canton Coin (e.g. topping up a credential billing or a commercial agreement contract) take fairly short-lived templates as an input (e.g. an Amulet "
+                            },
+                            {
+                                "type": "text",
+                                "text": "OpenMiningRound",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", which stays active ~ 20 mins).\n\nWhen calling these choices, your signing process needs to be sufficiently fast, otherwise by the time the signed command is submitted to the ledger the input contracts might have already been archived."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08JYBDSK0V",
+        "type": "message",
+        "ts": "1754293162.362279",
+        "client_msg_id": "c237ca53-6f3e-40aa-b7ed-ae1b16abd176",
+        "text": "Thank you. Is it possible to have the exhaustive list of API endpoints (validator 5003 and participant 7575) that are used by the Utility UI? This would allow us to secure ingress by filtering and whitelisting only the necessary endpoints. Perhaps this information could be included in release notes, since the Utility app source code is not open.\n\nCan we make the same statement about the Splice Wallet UI: \"_External parties are supported in the API, but not in the Splice Wallet UI\"?_\nAnd so, Splice Wallet UI and Utility UI only support 'Local Parties', right ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7T5YE9MY",
+        "source_team": "T7T5YE9MY",
+        "user_profile": {
+            "avatar_hash": "18d9a68d3d08",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-24\/8650966444610_18d9a68d3d08e033fdb8_72.png",
+            "first_name": "François",
+            "real_name": "François Branciard",
+            "display_name": "Francois",
+            "team": "T7T5YE9MY",
+            "name": "francois.branciard",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754241890.943689",
+        "parent_user_id": "U08JYBDSK0V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2PyCp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you. Is it possible to have the exhaustive list of API endpoints (validator 5003 and participant 7575) that are used by the Utility UI? This would allow us to secure ingress by filtering and whitelisting only the necessary endpoints. Perhaps this information could be included in release notes, since the Utility app source code is not open.\n\nCan we make the same statement about the Splice Wallet UI: \""
+                            },
+                            {
+                                "type": "text",
+                                "text": "External parties are supported in the API, but not in the Splice Wallet UI\"?",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nAnd so, Splice Wallet UI and Utility UI only support 'Local Parties', right ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08TDHL1E0N",
+        "type": "message",
+        "ts": "1754344207.133119",
+        "client_msg_id": "29ecd2bf-747d-4c70-9f91-39ae07af95d6",
+        "text": "Hey there, we have an issue getting to the utility frontend page (using docker compose) despite our utility container running smoothly and the DARs uploading successfully. When we get to that link, we just see the Canton Coin Wallet login page that is the web wallet UI basically. Wondering how we can debug this issue and resolve it, because we also have a similar issue with our CNS (Canton Name Service), and I suspect it's the same problem. Is it an nginx issue resolving all our UI's to the web wallet UI or compose.yaml or what is going on?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "g95ecd4e0c48",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/95ecd4e0c4881a53566a4ef205f84191.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "Jason",
+            "real_name": "Jason",
+            "display_name": "Jason",
+            "team": "T4WUR0THD",
+            "name": "jchen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754344207.133119",
+        "reply_count": 14,
+        "reply_users_count": 2,
+        "latest_reply": "1755037617.713299",
+        "reply_users": [
+            "U047U17D7KL",
+            "U08TDHL1E0N"
+        ],
+        "replies": [
+            {
+                "user": "U047U17D7KL",
+                "ts": "1754347031.938449"
+            },
+            {
+                "user": "U08TDHL1E0N",
+                "ts": "1754366920.585529"
+            },
+            {
+                "user": "U08TDHL1E0N",
+                "ts": "1754423001.524139"
+            },
+            {
+                "user": "U047U17D7KL",
+                "ts": "1754423018.696819"
+            },
+            {
+                "user": "U047U17D7KL",
+                "ts": "1754423039.662289"
+            },
+            {
+                "user": "U08TDHL1E0N",
+                "ts": "1754423055.524439"
+            },
+            {
+                "user": "U047U17D7KL",
+                "ts": "1754427135.689339"
+            },
+            {
+                "user": "U08TDHL1E0N",
+                "ts": "1754434122.526839"
+            },
+            {
+                "user": "U047U17D7KL",
+                "ts": "1754486343.399939"
+            },
+            {
+                "user": "U08TDHL1E0N",
+                "ts": "1754577612.465779"
+            },
+            {
+                "user": "U047U17D7KL",
+                "ts": "1754577927.639729"
+            },
+            {
+                "user": "U08TDHL1E0N",
+                "ts": "1754938228.935039"
+            },
+            {
+                "user": "U047U17D7KL",
+                "ts": "1754939062.726209"
+            },
+            {
+                "user": "U08TDHL1E0N",
+                "ts": "1755037617.713299"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PgHiL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey there, we have an issue getting to the utility frontend page (using docker compose) despite our utility container running smoothly and the DARs uploading successfully. When we get to that link, we just see the Canton Coin Wallet login page that is the web wallet UI basically. Wondering how we can debug this issue and resolve it, because we also have a similar issue with our CNS (Canton Name Service), and I suspect it's the same problem. Is it an nginx issue resolving all our UI's to the web wallet UI or compose.yaml or what is going on?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U047U17D7KL",
+        "type": "message",
+        "ts": "1754347031.938449",
+        "client_msg_id": "e2b0e5a8-994a-465f-8820-b206e12642d3",
+        "text": "If you post your nginx.conf and compose.yaml we could double-check them. Otherwise, we would have to speculate.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "16aeca7859e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-10-24\/4263109753253_16aeca7859e88c51a7d5_72.png",
+            "first_name": "Wallace",
+            "real_name": "Wallace Kelly",
+            "display_name": "Wallace Kelly",
+            "team": "T03T53E10",
+            "name": "wallace.kelly",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754344207.133119",
+        "parent_user_id": "U08TDHL1E0N",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IZkD\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If you post your nginx.conf and compose.yaml we could double-check them. Otherwise, we would have to speculate."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754361285.115469",
+        "edited": {
+            "user": "U057HGB61RS",
+            "ts": "1754361321.000000"
+        },
+        "client_msg_id": "9830b926-d20f-4a0b-8063-f5b799a37ed2",
+        "text": "<@U02KJ7PKHN2> I realised that the same issue is happening again on testnet. It's happening with both User Service & Provider Service\n\nParty:\n`hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410`",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "O8F2f",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U02KJ7PKHN2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I realised that the same issue is happening again on testnet. It's happening with both User Service & Provider Service\n\nParty:\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "hydrax-validator-1::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "here's my compose.yaml and ngnix.conf",
+        "files": [
+            {
+                "id": "F099E9Z8SAD",
+                "created": 1754366908,
+                "timestamp": 1754366908,
+                "name": "compose.yaml",
+                "title": "compose.yaml",
+                "mimetype": "text\/plain",
+                "filetype": "yaml",
+                "pretty_type": "YAML",
+                "user": "U08TDHL1E0N",
+                "user_team": "T4WUR0THD",
+                "editable": true,
+                "size": 7182,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T4WUR0THD-F099E9Z8SAD\/compose.yaml?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T4WUR0THD-F099E9Z8SAD\/download\/compose.yaml?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/elkcapitalmarkets.slack.com\/files\/U05FZBDQ4RJ\/F099E9Z8SAD\/compose.yaml",
+                "permalink_public": "https:\/\/slack-files.com\/T4WUR0THD-F099E9Z8SAD-1c5629ea7b",
+                "edit_link": "https:\/\/elkcapitalmarkets.slack.com\/files\/U05FZBDQ4RJ\/F099E9Z8SAD\/compose.yaml\/edit",
+                "source_team": "T4WUR0THD",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F099LAZQX40",
+                "created": 1754366910,
+                "timestamp": 1754366910,
+                "name": "nginx.conf",
+                "title": "nginx.conf",
+                "mimetype": "text\/plain",
+                "filetype": "text",
+                "pretty_type": "Plain Text",
+                "user": "U08TDHL1E0N",
+                "user_team": "T4WUR0THD",
+                "editable": true,
+                "size": 1359,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T4WUR0THD-F099LAZQX40\/nginx.conf?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T4WUR0THD-F099LAZQX40\/download\/nginx.conf?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/elkcapitalmarkets.slack.com\/files\/U05FZBDQ4RJ\/F099LAZQX40\/nginx.conf",
+                "permalink_public": "https:\/\/slack-files.com\/T4WUR0THD-F099LAZQX40-6c87c28112",
+                "edit_link": "https:\/\/elkcapitalmarkets.slack.com\/files\/U05FZBDQ4RJ\/F099LAZQX40\/nginx.conf\/edit",
+                "source_team": "T4WUR0THD",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U08TDHL1E0N",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ghuV8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "here's my compose.yaml and ngnix.conf"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1754366920.585529",
+        "client_msg_id": "874d54a9-42a7-4d1a-8d2b-ccafe20833f4",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1754344207.133119",
+        "parent_user_id": "U08TDHL1E0N",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "g95ecd4e0c48",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/95ecd4e0c4881a53566a4ef205f84191.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "Jason",
+            "real_name": "Jason",
+            "display_name": "Jason",
+            "team": "T4WUR0THD",
+            "name": "jchen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1754368746.649699",
+        "edited": {
+            "user": "U057HGB61RS",
+            "ts": "1754368768.000000"
+        },
+        "client_msg_id": "e42fb5b2-6031-4416-b4bb-c86dff6c5f72",
+        "text": "Noticed that the Utility APIs from the utility app differs from the documentation. Just wanted to understand if (1) a particular version is depreciated, (2) there's multiple way to query something or (3) other reasons.\n\n*Example:*\n• \/v0\/wallet\/token-standard\/transfers (from Utility App)\n• \/v0\/wallet\/transfer-offers (<https:\/\/docs.dev.sync.global\/app_dev\/validator_api\/index.html#transfer-offers>)\nThe above seems to be similar but yet are both v0 version of the API. I've also noticed there's \/v1\/ & \/v2\/ of APIs and am guessing that different API endpoints might be at different release versions?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754368746.649699",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1754385806.296239",
+        "reply_users": [
+            "U057HGB61RS",
+            "UU4AZ8EEQ"
+        ],
+        "replies": [
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754377588.752829"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754377610.930149"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754377660.402249"
+            },
+            {
+                "user": "UU4AZ8EEQ",
+                "ts": "1754385719.178859"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754385806.296239"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1TdW+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Noticed that the Utility APIs from the utility app differs from the documentation. Just wanted to understand if (1) a particular version is depreciated, (2) there's multiple way to query something or (3) other reasons.\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Example:",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "\/v0\/wallet\/token-standard\/transfers (from Utility App)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "\/v0\/wallet\/transfer-offers ("
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/docs.dev.sync.global\/app_dev\/validator_api\/index.html#transfer-offers"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ")"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThe above seems to be similar but yet are both v0 version of the API. I've also noticed there's \/v1\/ & \/v2\/ of APIs and am guessing that different API endpoints might be at different release versions?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

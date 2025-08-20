@@ -1,0 +1,1461 @@
+[
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1741084451.231819",
+        "client_msg_id": "54e02a69-48fe-4d8f-95ed-0b72cc3653c5",
+        "text": "Hello community! We were wondering if there are any resources for prebuilt Ansible or TerraForm scripts people have been using to manage their Canton node operations that are hosted, or perhaps they’d be willing to share. Thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741084451.231819",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1741099821.434659",
+        "reply_users": [
+            "U01DARYACCT"
+        ],
+        "replies": [
+            {
+                "user": "U01DARYACCT",
+                "ts": "1741099821.434659"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UFj7s",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello community! We were wondering if there are any resources for prebuilt Ansible or TerraForm scripts people have been using to manage their Canton node operations that are hosted, or perhaps they’d be willing to share. Thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741092762.943159",
+        "client_msg_id": "0bc79fe4-a7cb-424f-9385-57225bc6f670",
+        "text": "I am trying to upgrade our validator in mainnet to 0.3.11 from 0.3.10. Validator got stuck at the health check\n```...\n{\"@timestamp\":\"2025-03-04T12:48:50.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:54974: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-2\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"9eed10fff19f428f4942bf77e9828d27\"}\n{\"@timestamp\":\"2025-03-04T12:48:50.233Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries'. \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/connId=pool-main\",\"thread_name\":\"canton-env-ec-38\",\"level\":\"DEBUG\",\"level_value\":10000}\n{\"@timestamp\":\"2025-03-04T12:48:50.235Z\",\"@version\":\"1\",\"message\":\"The operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries' was not successful. Retrying after 15s. Result: Outcome(Right(false)). \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/connId=pool-main\",\"thread_name\":\"canton-env-ec-35\",\"level\":\"DEBUG\",\"level_value\":10000}\n{\"@timestamp\":\"2025-03-04T12:48:55.228Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42420: received a message \\n  Request tid:6a2d05a2f4e3744523587131d37de88b\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"6a2d05a2f4e3744523587131d37de88b\"}\n{\"@timestamp\":\"2025-03-04T12:48:55.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42420: sending response \\n  Request tid:6a2d05a2f4e3744523587131d37de88b\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"6a2d05a2f4e3744523587131d37de88b\"}\n{\"@timestamp\":\"2025-03-04T12:48:55.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42420: succeeded(OK)\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"6a2d05a2f4e3744523587131d37de88b\"}\n{\"@timestamp\":\"2025-03-04T12:48:55.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42420: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-1\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"6a2d05a2f4e3744523587131d37de88b\"}\n{\"@timestamp\":\"2025-03-04T12:49:00.228Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42436: received a message \\n  Request tid:a40f44779fd9bf5d78842104d297f075\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-2\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"a40f44779fd9bf5d78842104d297f075\"}\n{\"@timestamp\":\"2025-03-04T12:49:00.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42436: sending response \\n  Request tid:a40f44779fd9bf5d78842104d297f075\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-2\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"a40f44779fd9bf5d78842104d297f075\"}\n{\"@timestamp\":\"2025-03-04T12:49:00.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42436: succeeded(OK)\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-2\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"a40f44779fd9bf5d78842104d297f075\"}\n{\"@timestamp\":\"2025-03-04T12:49:00.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42436: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-3\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"a40f44779fd9bf5d78842104d297f075\"}\n{\"@timestamp\":\"2025-03-04T12:49:05.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60090: received a message \\n  Request tid:33305fec5a4b930e17a4ab700e1b4520\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"33305fec5a4b930e17a4ab700e1b4520\"}\n{\"@timestamp\":\"2025-03-04T12:49:05.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60090: sending response \\n  Request tid:33305fec5a4b930e17a4ab700e1b4520\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"33305fec5a4b930e17a4ab700e1b4520\"}\n{\"@timestamp\":\"2025-03-04T12:49:05.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60090: succeeded(OK)\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"33305fec5a4b930e17a4ab700e1b4520\"}\n{\"@timestamp\":\"2025-03-04T12:49:05.231Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60090: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-1\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"33305fec5a4b930e17a4ab700e1b4520\"}\n{\"@timestamp\":\"2025-03-04T12:49:05.235Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries'. \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/connId=pool-main\",\"thread_name\":\"canton-env-ec-35\",\"level\":\"DEBUG\",\"level_value\":10000}\n{\"@timestamp\":\"2025-03-04T12:49:05.237Z\",\"@version\":\"1\",\"message\":\"The operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries' was not successful. Retrying after 15s. Result: Outcome(Right(false)). \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/connId=pool-main\",\"thread_name\":\"canton-env-ec-33\",\"level\":\"DEBUG\",\"level_value\":10000}\n{\"@timestamp\":\"2025-03-04T12:49:10.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60092: received a message \\n  Request tid:44584e0bbe2556a2cedbd17cac12b8f3\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-3\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"44584e0bbe2556a2cedbd17cac12b8f3\"}\n{\"@timestamp\":\"2025-03-04T12:49:10.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60092: sending response \\n  Request tid:44584e0bbe2556a2cedbd17cac12b8f3\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-3\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"44584e0bbe2556a2cedbd17cac12b8f3\"}\n{\"@timestamp\":\"2025-03-04T12:49:10.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60092: succeeded(OK)\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-3\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"44584e0bbe2556a2cedbd17cac12b8f3\"}\n{\"@timestamp\":\"2025-03-04T12:49:10.231Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60092: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"44584e0bbe2556a2cedbd17cac12b8f3\"}\n{\"@timestamp\":\"2025-03-04T12:49:15.228Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41360: received a message \\n  Request tid:0a61d247d6cc8c55c3857cfc2d5d8ff9\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-1\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"0a61d247d6cc8c55c3857cfc2d5d8ff9\"}\n{\"@timestamp\":\"2025-03-04T12:49:15.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41360: sending response \\n  Request tid:0a61d247d6cc8c55c3857cfc2d5d8ff9\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-1\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"0a61d247d6cc8c55c3857cfc2d5d8ff9\"}\n{\"@timestamp\":\"2025-03-04T12:49:15.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41360: succeeded(OK)\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-1\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"0a61d247d6cc8c55c3857cfc2d5d8ff9\"}\n{\"@timestamp\":\"2025-03-04T12:49:15.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41360: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-2\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"0a61d247d6cc8c55c3857cfc2d5d8ff9\"}\n{\"@timestamp\":\"2025-03-04T12:49:20.228Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41362: received a message \\n  Request tid:beac188cac3fb44cb21c5321c146ad9e\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"beac188cac3fb44cb21c5321c146ad9e\"}\n{\"@timestamp\":\"2025-03-04T12:49:20.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41362: sending response \\n  Request tid:beac188cac3fb44cb21c5321c146ad9e\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"beac188cac3fb44cb21c5321c146ad9e\"}\n{\"@timestamp\":\"2025-03-04T12:49:20.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41362: succeeded(OK)\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"beac188cac3fb44cb21c5321c146ad9e\"}\n{\"@timestamp\":\"2025-03-04T12:49:20.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41362: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-1\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"beac188cac3fb44cb21c5321c146ad9e\"}\n{\"@timestamp\":\"2025-03-04T12:49:20.237Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries'. \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/connId=pool-main\",\"thread_name\":\"canton-env-ec-33\",\"level\":\"DEBUG\",\"level_value\":10000}\n{\"@timestamp\":\"2025-03-04T12:49:20.238Z\",\"@version\":\"1\",\"message\":\"The operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries' was not successful. Retrying after 15s. Result: Outcome(Right(false)). \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/connId=pool-main\",\"thread_name\":\"canton-env-ec-24\",\"level\":\"DEBUG\",\"level_value\":10000}\n...```",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "reply_count": 21,
+        "reply_users_count": 1,
+        "latest_reply": "1741094215.130859",
+        "reply_users": [
+            "UMMD9LAH1"
+        ],
+        "replies": [
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741092982.121469"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741093020.255699"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741093065.048319"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741093081.945489"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741093095.949429"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741093102.013239"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741093326.338909"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741093330.441789"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741093336.655499"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741093632.876089"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741093640.410849"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741093729.726789"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741093735.165669"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741093925.890839"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741093950.685489"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741094006.741599"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741094011.048859"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741094013.848189"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741094041.392569"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741094051.997389"
+            },
+            {
+                "user": "UMMD9LAH1",
+                "ts": "1741094215.130859"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Dfp3i",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I am trying to upgrade our validator in mainnet to 0.3.11 from 0.3.10. Validator got stuck at the health check\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "...\n{\"@timestamp\":\"2025-03-04T12:48:50.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:54974: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-2\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"9eed10fff19f428f4942bf77e9828d27\"}\n{\"@timestamp\":\"2025-03-04T12:48:50.233Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries'. \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/connId=pool-main\",\"thread_name\":\"canton-env-ec-38\",\"level\":\"DEBUG\",\"level_value\":10000}\n{\"@timestamp\":\"2025-03-04T12:48:50.235Z\",\"@version\":\"1\",\"message\":\"The operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries' was not successful. Retrying after 15s. Result: Outcome(Right(false)). \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/connId=pool-main\",\"thread_name\":\"canton-env-ec-35\",\"level\":\"DEBUG\",\"level_value\":10000}\n{\"@timestamp\":\"2025-03-04T12:48:55.228Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42420: received a message \\n  Request tid:6a2d05a2f4e3744523587131d37de88b\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"6a2d05a2f4e3744523587131d37de88b\"}\n{\"@timestamp\":\"2025-03-04T12:48:55.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42420: sending response \\n  Request tid:6a2d05a2f4e3744523587131d37de88b\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"6a2d05a2f4e3744523587131d37de88b\"}\n{\"@timestamp\":\"2025-03-04T12:48:55.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42420: succeeded(OK)\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"6a2d05a2f4e3744523587131d37de88b\"}\n{\"@timestamp\":\"2025-03-04T12:48:55.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42420: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-1\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"6a2d05a2f4e3744523587131d37de88b\"}\n{\"@timestamp\":\"2025-03-04T12:49:00.228Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42436: received a message \\n  Request tid:a40f44779fd9bf5d78842104d297f075\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-2\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"a40f44779fd9bf5d78842104d297f075\"}\n{\"@timestamp\":\"2025-03-04T12:49:00.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42436: sending response \\n  Request tid:a40f44779fd9bf5d78842104d297f075\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-2\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"a40f44779fd9bf5d78842104d297f075\"}\n{\"@timestamp\":\"2025-03-04T12:49:00.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42436: succeeded(OK)\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-2\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"a40f44779fd9bf5d78842104d297f075\"}\n{\"@timestamp\":\"2025-03-04T12:49:00.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:42436: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-3\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"a40f44779fd9bf5d78842104d297f075\"}\n{\"@timestamp\":\"2025-03-04T12:49:05.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60090: received a message \\n  Request tid:33305fec5a4b930e17a4ab700e1b4520\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"33305fec5a4b930e17a4ab700e1b4520\"}\n{\"@timestamp\":\"2025-03-04T12:49:05.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60090: sending response \\n  Request tid:33305fec5a4b930e17a4ab700e1b4520\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"33305fec5a4b930e17a4ab700e1b4520\"}\n{\"@timestamp\":\"2025-03-04T12:49:05.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60090: succeeded(OK)\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"33305fec5a4b930e17a4ab700e1b4520\"}\n{\"@timestamp\":\"2025-03-04T12:49:05.231Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60090: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-1\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"33305fec5a4b930e17a4ab700e1b4520\"}\n{\"@timestamp\":\"2025-03-04T12:49:05.235Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries'. \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/connId=pool-main\",\"thread_name\":\"canton-env-ec-35\",\"level\":\"DEBUG\",\"level_value\":10000}\n{\"@timestamp\":\"2025-03-04T12:49:05.237Z\",\"@version\":\"1\",\"message\":\"The operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries' was not successful. Retrying after 15s. Result: Outcome(Right(false)). \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/connId=pool-main\",\"thread_name\":\"canton-env-ec-33\",\"level\":\"DEBUG\",\"level_value\":10000}\n{\"@timestamp\":\"2025-03-04T12:49:10.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60092: received a message \\n  Request tid:44584e0bbe2556a2cedbd17cac12b8f3\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-3\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"44584e0bbe2556a2cedbd17cac12b8f3\"}\n{\"@timestamp\":\"2025-03-04T12:49:10.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60092: sending response \\n  Request tid:44584e0bbe2556a2cedbd17cac12b8f3\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-3\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"44584e0bbe2556a2cedbd17cac12b8f3\"}\n{\"@timestamp\":\"2025-03-04T12:49:10.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60092: succeeded(OK)\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-3\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"44584e0bbe2556a2cedbd17cac12b8f3\"}\n{\"@timestamp\":\"2025-03-04T12:49:10.231Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:60092: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"44584e0bbe2556a2cedbd17cac12b8f3\"}\n{\"@timestamp\":\"2025-03-04T12:49:15.228Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41360: received a message \\n  Request tid:0a61d247d6cc8c55c3857cfc2d5d8ff9\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-1\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"0a61d247d6cc8c55c3857cfc2d5d8ff9\"}\n{\"@timestamp\":\"2025-03-04T12:49:15.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41360: sending response \\n  Request tid:0a61d247d6cc8c55c3857cfc2d5d8ff9\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-1\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"0a61d247d6cc8c55c3857cfc2d5d8ff9\"}\n{\"@timestamp\":\"2025-03-04T12:49:15.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41360: succeeded(OK)\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-1\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"0a61d247d6cc8c55c3857cfc2d5d8ff9\"}\n{\"@timestamp\":\"2025-03-04T12:49:15.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41360: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-2\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"0a61d247d6cc8c55c3857cfc2d5d8ff9\"}\n{\"@timestamp\":\"2025-03-04T12:49:20.228Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41362: received a message \\n  Request tid:beac188cac3fb44cb21c5321c146ad9e\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"beac188cac3fb44cb21c5321c146ad9e\"}\n{\"@timestamp\":\"2025-03-04T12:49:20.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41362: sending response \\n  Request tid:beac188cac3fb44cb21c5321c146ad9e\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"beac188cac3fb44cb21c5321c146ad9e\"}\n{\"@timestamp\":\"2025-03-04T12:49:20.229Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41362: succeeded(OK)\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-4\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"beac188cac3fb44cb21c5321c146ad9e\"}\n{\"@timestamp\":\"2025-03-04T12:49:20.230Z\",\"@version\":\"1\",\"message\":\"Request grpc.health.v1.Health\/Check by \/10.30.84.122:41362: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant\",\"thread_name\":\"pool-8-thread-1\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"beac188cac3fb44cb21c5321c146ad9e\"}\n{\"@timestamp\":\"2025-03-04T12:49:20.237Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries'. \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/connId=pool-main\",\"thread_name\":\"canton-env-ec-33\",\"level\":\"DEBUG\",\"level_value\":10000}\n{\"@timestamp\":\"2025-03-04T12:49:20.238Z\",\"@version\":\"1\",\"message\":\"The operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries' was not successful. Retrying after 15s. Result: Outcome(Right(false)). \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/connId=pool-main\",\"thread_name\":\"canton-env-ec-24\",\"level\":\"DEBUG\",\"level_value\":10000}\n..."
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741092982.121469",
+        "client_msg_id": "fd10515e-c0dc-486f-b5cb-5641095b9386",
+        "text": "Once I turned off the participant the validator can come up, but then participant cannot come up anymore",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "S1\/7g",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Once I turned off the participant the validator can come up, but then participant cannot come up anymore"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741093020.255699",
+        "client_msg_id": "76f12ba2-e431-4bc0-852e-f27bcb2466a7",
+        "text": "with the same database related issue",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9bUbz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "with the same database related issue"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741093065.048319",
+        "client_msg_id": "88e8a5a9-1ee5-4a5b-9fe7-423140e094da",
+        "text": "```{\"@timestamp\":\"2025-03-04T12:57:26.693Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries'. \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/co │\n│ nnId=pool-main\",\"thread_name\":\"canton-env-ec-24\",\"level\":\"DEBUG\",\"level_value\":10000}```",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AN8OT",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"@timestamp\":\"2025-03-04T12:57:26.693Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries'. \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/co │\n│ nnId=pool-main\",\"thread_name\":\"canton-env-ec-24\",\"level\":\"DEBUG\",\"level_value\":10000}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741093081.945489",
+        "client_msg_id": "80721e6d-b380-44d8-a01f-67d15e5160f2",
+        "text": "I tried that as well",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kbeuF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I tried that as well"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741093095.949429",
+        "client_msg_id": "6e67452f-ba25-467a-9be5-d65de8c26dcf",
+        "text": "still getting the same error",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eqcEW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "still getting the same error"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741093102.013239",
+        "client_msg_id": "e383cdbe-de1a-4cb4-9a23-e071e9c1e494",
+        "text": "but I can try again",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dQ+Ba",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but I can try again"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741093326.338909",
+        "client_msg_id": "958fd87c-170f-4ed4-9ded-e09e96a86dd1",
+        "text": "``` {\"@timestamp\":\"2025-03-04T13:01:46.036Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries'. \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/co │\n│ nnId=pool-main\",\"thread_name\":\"canton-env-ec-33\",\"level\":\"DEBUG\",\"level_value\":10000}```",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iEokI",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " {\"@timestamp\":\"2025-03-04T13:01:46.036Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'com.digitalasset.canton.resource.DbLockedConnection.becomeActiveWithRetries'. \",\"logger_name\":\"c.d.c.r.DbLockedConnection:participant=participant\/co │\n│ nnId=pool-main\",\"thread_name\":\"canton-env-ec-33\",\"level\":\"DEBUG\",\"level_value\":10000}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741093330.441789",
+        "client_msg_id": "7c6ee305-8be3-48c9-baa7-319f930a9725",
+        "text": "same issue",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "f3I9R",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "same issue"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741093336.655499",
+        "client_msg_id": "5b8f1c60-72a0-4ed2-ace6-93183dcb75bd",
+        "text": "the second pod got stuck",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wXf1a",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the second pod got stuck"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F08G31W6XU2",
+                "created": 1741093628,
+                "timestamp": 1741093628,
+                "name": "participant.log",
+                "title": "participant.log",
+                "mimetype": "text\/plain",
+                "filetype": "text",
+                "pretty_type": "Plain Text",
+                "user": "UMMD9LAH1",
+                "user_team": "E063KN3P39C",
+                "editable": true,
+                "size": 381668,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T063KN3P39C-F08G31W6XU2\/participant.log?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T063KN3P39C-F08G31W6XU2\/download\/participant.log?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/grid-lukkaglobal.enterprise.slack.com\/files\/U05FZBDQ4RJ\/F08G31W6XU2\/participant.log",
+                "permalink_public": "https:\/\/slack-files.com\/T063KN3P39C-F08G31W6XU2-7d2521e6b6",
+                "edit_link": "https:\/\/grid-lukkaglobal.enterprise.slack.com\/files\/U05FZBDQ4RJ\/F08G31W6XU2\/participant.log\/edit",
+                "source_team": "E063KN3P39C",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "UMMD9LAH1",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1741093632.876089",
+        "client_msg_id": "0c819de6-198e-42de-8499-8265ae28e237",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F08GCF5Q081",
+                "created": 1741093637,
+                "timestamp": 1741093637,
+                "name": "validator.log",
+                "title": "validator.log",
+                "mimetype": "text\/plain",
+                "filetype": "text",
+                "pretty_type": "Plain Text",
+                "user": "UMMD9LAH1",
+                "user_team": "E063KN3P39C",
+                "editable": true,
+                "size": 99950,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T063KN3P39C-F08GCF5Q081\/validator.log?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T063KN3P39C-F08GCF5Q081\/download\/validator.log?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/grid-lukkaglobal.enterprise.slack.com\/files\/U05FZBDQ4RJ\/F08GCF5Q081\/validator.log",
+                "permalink_public": "https:\/\/slack-files.com\/T063KN3P39C-F08GCF5Q081-019507b04e",
+                "edit_link": "https:\/\/grid-lukkaglobal.enterprise.slack.com\/files\/U05FZBDQ4RJ\/F08GCF5Q081\/validator.log\/edit",
+                "source_team": "E063KN3P39C",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "UMMD9LAH1",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1741093640.410849",
+        "client_msg_id": "4b12bbfb-72e9-4e1b-bb45-e1bdb61285f4",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741093729.726789",
+        "client_msg_id": "792328dd-55aa-43ce-8a84-11616dc97748",
+        "text": "one sec",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WitJB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "one sec"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741093735.165669",
+        "client_msg_id": "ccaae876-257d-4fc1-8374-bbec79572f1d",
+        "text": "let me upload again",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TT+CL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "let me upload again"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F08GR6WAM9N",
+                "created": 1741093922,
+                "timestamp": 1741093922,
+                "name": "validator.log",
+                "title": "validator.log",
+                "mimetype": "text\/plain",
+                "filetype": "text",
+                "pretty_type": "Plain Text",
+                "user": "UMMD9LAH1",
+                "user_team": "E063KN3P39C",
+                "editable": true,
+                "size": 216247,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T063KN3P39C-F08GR6WAM9N\/validator.log?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T063KN3P39C-F08GR6WAM9N\/download\/validator.log?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/grid-lukkaglobal.enterprise.slack.com\/files\/U05FZBDQ4RJ\/F08GR6WAM9N\/validator.log",
+                "permalink_public": "https:\/\/slack-files.com\/T063KN3P39C-F08GR6WAM9N-8d705669d7",
+                "edit_link": "https:\/\/grid-lukkaglobal.enterprise.slack.com\/files\/U05FZBDQ4RJ\/F08GR6WAM9N\/validator.log\/edit",
+                "source_team": "E063KN3P39C",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "UMMD9LAH1",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1741093925.890839",
+        "client_msg_id": "d6eaf84e-ea68-434f-97b8-279c06ad76db",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741093950.685489",
+        "client_msg_id": "17f14537-3e4a-4510-9937-ab95286b1870",
+        "text": "the database is self hosted",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jMTx6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the database is self hosted"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741094006.741599",
+        "client_msg_id": "6cd748f6-3049-4370-853b-ca0a8baa1845",
+        "text": "a postgres stateful in k8s",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Belx5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "a postgres stateful in k8s"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741094011.048859",
+        "client_msg_id": "e785e524-7328-417c-a191-0ab2374fabde",
+        "text": "hmm",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ud+r8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hmm"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741094013.848189",
+        "client_msg_id": "b0a312d1-de0f-49e0-8be7-c4f4d6b6bcdd",
+        "text": "strange",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "486FZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "strange"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741094041.392569",
+        "edited": {
+            "user": "UMMD9LAH1",
+            "ts": "1741094042.000000"
+        },
+        "client_msg_id": "9a622c4b-7baa-4ed6-b088-443daa7fe757",
+        "text": "i see why",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IYlG6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "i see why"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741094051.997389",
+        "client_msg_id": "dfcb6a3a-4a4c-417b-ae94-568e72b75385",
+        "text": "maybe a typo when i deploy the helm",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "htBkq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "maybe a typo when i deploy the helm"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UMMD9LAH1",
+        "type": "message",
+        "ts": "1741094215.130859",
+        "client_msg_id": "82c02cec-230f-4525-aae1-64c29c44052a",
+        "text": "ok it is working now",
+        "team": "T05FWTX7PMG",
+        "user_team": "E063KN3P39C",
+        "source_team": "E063KN3P39C",
+        "user_profile": {
+            "avatar_hash": "ga3102fd375c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/edd012544f9bef6413e390c63b39ff13.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Yiguo",
+            "real_name": "Yiguo Wu",
+            "display_name": "Yiguo Wu",
+            "team": "E063KN3P39C",
+            "name": "y.wu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741092762.943159",
+        "parent_user_id": "UMMD9LAH1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZmmHz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ok it is working now"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "happy-yay",
+                "users": [
+                    "UEHLS0JUB"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U01DARYACCT",
+        "type": "message",
+        "ts": "1741099821.434659",
+        "client_msg_id": "aef2feed-da8c-4909-aa4f-8b7d69e5e5a6",
+        "text": "yes, we do, I'm not sure I can share it though, need to check internally",
+        "team": "T05FWTX7PMG",
+        "user_team": "E014GLQD2NN",
+        "source_team": "E014GLQD2NN",
+        "user_profile": {
+            "avatar_hash": "889d6e9cb5ee",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-10-04\/783644907056_889d6e9cb5ee13fbff83_72.jpg",
+            "first_name": "Stas",
+            "real_name": "Stas German",
+            "display_name": "stasge",
+            "team": "E014GLQD2NN",
+            "name": "stasge",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741084451.231819",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2OCQi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes, we do, I'm not sure I can share it though, need to check internally"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "ty",
+                "users": [
+                    "U03HMUTQ5F0"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "Repost: Hey, I am getting this error when I try to log into the UI with administrator user",
+        "files": [
+            {
+                "id": "F08G0GXDN1K",
+                "created": 1741104411,
+                "timestamp": 1741104411,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U0850LW3T40",
+                "user_team": "T06624X4C2F",
+                "editable": false,
+                "size": 33201,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T06624X4C2F-F08G0GXDN1K\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T06624X4C2F-F08G0GXDN1K\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T06624X4C2F-F08G0GXDN1K-f91c0cd9d8\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T06624X4C2F-F08G0GXDN1K-f91c0cd9d8\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T06624X4C2F-F08G0GXDN1K-f91c0cd9d8\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 189,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T06624X4C2F-F08G0GXDN1K-f91c0cd9d8\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 252,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T06624X4C2F-F08G0GXDN1K-f91c0cd9d8\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "original_w": 719,
+                "original_h": 377,
+                "thumb_tiny": "AwAZADC75A\/56SfnSiDBzvc\/U1LRQAzy\/wDaNKEx3Jp1FACbaQrweadSN90\/SgBaKKKACiiigApG+6fpS0jfdP0oA\/\/Z",
+                "permalink": "https:\/\/excellarworkspace.slack.com\/files\/U05FZBDQ4RJ\/F08G0GXDN1K\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T06624X4C2F-F08G0GXDN1K-3b62bd28a0",
+                "source_team": "T06624X4C2F",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U0850LW3T40",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "awONC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Repost: Hey, I am getting this error when I try to log into the UI with administrator user"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1741104417.507819",
+        "client_msg_id": "31ad0fb5-02a5-4158-9277-f975fc9220fb",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1741104417.507819",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1741130746.362039",
+        "reply_users": [
+            "U0850LW3T40"
+        ],
+        "replies": [
+            {
+                "user": "U0850LW3T40",
+                "ts": "1741104455.250739"
+            },
+            {
+                "user": "U0850LW3T40",
+                "ts": "1741130746.362039"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T06624X4C2F",
+        "source_team": "T06624X4C2F",
+        "user_profile": {
+            "avatar_hash": "517cf764c893",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-09\/8160596824481_517cf764c8935b682565_72.png",
+            "first_name": "Otito",
+            "real_name": "Otito Darl-Uzu",
+            "display_name": "Otito Darl-Uzu",
+            "team": "T06624X4C2F",
+            "name": "otito",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U06PM5EPA07"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F08G6A7DFDJ",
+                "created": 1741104451,
+                "timestamp": 1741104451,
+                "name": "_splice-validator-validator-1_logs (1).txt",
+                "title": "_splice-validator-validator-1_logs (1).txt",
+                "mimetype": "text\/plain",
+                "filetype": "text",
+                "pretty_type": "Plain Text",
+                "user": "U0850LW3T40",
+                "user_team": "T06624X4C2F",
+                "editable": false,
+                "size": 4290029,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T06624X4C2F-F08G6A7DFDJ\/_splice-validator-validator-1_logs__1_.txt?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T06624X4C2F-F08G6A7DFDJ\/download\/_splice-validator-validator-1_logs__1_.txt?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/excellarworkspace.slack.com\/files\/U05FZBDQ4RJ\/F08G6A7DFDJ\/_splice-validator-validator-1_logs__1_.txt",
+                "permalink_public": "https:\/\/slack-files.com\/T06624X4C2F-F08G6A7DFDJ-12532d784b",
+                "source_team": "T06624X4C2F",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U0850LW3T40",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1741104455.250739",
+        "client_msg_id": "b1035c3d-e01b-4eb0-b9d3-6cfb116c9366",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1741104417.507819",
+        "parent_user_id": "U0850LW3T40",
+        "user_team": "T06624X4C2F",
+        "source_team": "T06624X4C2F",
+        "user_profile": {
+            "avatar_hash": "517cf764c893",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-09\/8160596824481_517cf764c8935b682565_72.png",
+            "first_name": "Otito",
+            "real_name": "Otito Darl-Uzu",
+            "display_name": "Otito Darl-Uzu",
+            "team": "T06624X4C2F",
+            "name": "otito",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "subtype": "tombstone",
+        "text": "This message was deleted.",
+        "user": "USLACKBOT",
+        "hidden": true,
+        "type": "message",
+        "ts": "1741110411.097679",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T03T53E10",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741110411.097679",
+        "parent_user_id": "USLACKBOT",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1741288951.190599",
+        "reply_users": [
+            "U0702NSFW0H"
+        ],
+        "replies": [
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1741288440.050139"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1741288951.190599"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "user": "U0850LW3T40",
+        "type": "message",
+        "ts": "1741130746.362039",
+        "client_msg_id": "7915db9e-70e7-42ef-a23f-57f45d848dcd",
+        "text": "I will look over for an importKey thank you!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T06624X4C2F",
+        "source_team": "T06624X4C2F",
+        "user_profile": {
+            "avatar_hash": "517cf764c893",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-09\/8160596824481_517cf764c8935b682565_72.png",
+            "first_name": "Otito",
+            "real_name": "Otito Darl-Uzu",
+            "display_name": "Otito Darl-Uzu",
+            "team": "T06624X4C2F",
+            "name": "otito",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741104417.507819",
+        "parent_user_id": "U0850LW3T40",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Jo7CP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I will look over for an importKey thank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

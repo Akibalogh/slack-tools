@@ -1,0 +1,2203 @@
+[
+    {
+        "user": "U0724J67GSE",
+        "type": "message",
+        "ts": "1754307058.623029",
+        "client_msg_id": "52570996-bbce-448e-aacc-a982e914db74",
+        "text": "Have another question about the Quickstart. I created several OAuth2 users under the AppUser realm in Keycloak, and added a simple IoU template to the `\/quickstart\/daml\/iou` (in parallel with the `licensing` folder)\n```module IouTemplate.Iou where\n\ntemplate IouHolding\n  with\n    issuer : Party\n    owner : Party\n    currency : Text\n    amount : Decimal\n    observers : [Party]\n  where\n    signatory issuer, owner\n    observer observers\n\n    ensure amount &gt; 0.0\n\n    choice Iou_Split : (ContractId IouHolding, ContractId IouHolding)\n        with\n        splitAmount: Decimal\n      controller owner\n      do\n        let restAmount = amount - splitAmount\n        splitCid &lt;- create this with amount = splitAmount\n        restCid &lt;- create this with amount = restAmount\n        return (splitCid, restCid)```\nAnd try to submit a create command via the JSON Ledger API\n```<http:\/\/localhost:2975\/v2\/commands\/submit-and-wait>```\nwith this payload:\n```{\n    \"actAs\": [\n        \"63f4782e-8bc0-498a-998a-bf8caee2d867::1220afec1736aec0fdcf211f7d16cb0e9513cec13bba1a0737f7b066bf8b977c51b4\"\n    ],\n    \"userId\": \"92a520cb-2f09-4e55-b465-d178c6cfe5e4\",\n    \"commandId\": \"create-iou-1754302424\",\n    \"commands\": [\n        {\n            \"CreateCommand\": {\n                \"createArguments\": {\n                    \"observers\": [],\n                    \"issuer\": \"63f4782e-8bc0-498a-998a-bf8caee2d867::1220afec1736aec0fdcf211f7d16cb0e9513cec13bba1a0737f7b066bf8b977c51b4\",\n                    \"owner\": \"63f4782e-8bc0-498a-998a-bf8caee2d867::1220afec1736aec0fdcf211f7d16cb0e9513cec13bba1a0737f7b066bf8b977c51b4\",\n                    \"amount\": \"500\",\n                    \"currency\": \"USD\"\n                },\n                \"templateId\": \"#quickstart-iou:IouTemplate.Iou:IouHolding\"\n            }\n        }\n    ]\n}```\nAt this point I tried to get the Bearer Token from this API `<http:\/\/keycloak.localhost:8082\/realms\/AppUser\/protocol\/openid-connect\/token>` with this party's user name and password `63f4782e-8bc0-498a-998a-bf8caee2d867::1220afec1736aec0fdcf211f7d16cb0e9513cec13bba1a0737f7b066bf8b977c51b4` but the command returned this error, indicating that this authentication has failed.\n```Request failed with HTTP status code 403\nResponse body: {\"code\":\"NA\",\"cause\":\"A security-sensitive error has been received\",\"correlationId\":\"ec96936b50b5a45dac754d955376f792\",\"traceId\":\"ec96936b50b5a45dac754d955376f792\",\"context\":{},\"resources\":[],\"errorCategory\":-1,\"grpcCodeValue\":7,\"retryInfo\":null,\"definiteAnswer\":null}```\nThis is the decoded bearer token\n```{\n    \"alg\": \"RS256\",\n    \"typ\": \"JWT\",\n    \"kid\": \"eZ7Gro40xD6FxMT7Suxmjwvl5-YZKiQUMHLAeNQpRbw\"\n},\n{\n    \"exp\": 1754302845,\n    \"iat\": 1754302545,\n    \"jti\": \"33579c25-7c8c-4934-9e0c-f194c717c1b1\",\n    \"iss\": \"<http:\/\/keycloak.localhost:8082\/realms\/AppUser>\",\n    \"aud\": [\"<https:\/\/canton.network.global>\", \"account\"],\n    \"sub\": \"63f4782e-8bc0-498a-998a-bf8caee2d867\",\n    \"typ\": \"Bearer\",\n    \"azp\": \"app-user-unsafe\",\n    \"sid\": \"ac8676d3-bb03-4fa7-9b8d-76f1614126f2\",\n    \"acr\": \"1\",\n    \"allowed-origins\": [\"\/*\"],\n    \"realm_access\": {\n        \"roles\": [\n            \"offline_access\",\n            \"uma_authorization\",\n            \"default-roles-appuser\"\n        ]\n    },\n    \"resource_access\": {\n        \"account\": {\n            \"roles\": [\n                \"manage-account\",\n                \"manage-account-links\",\n                \"view-profile\"\n            ]\n        }\n    },\n    \"scope\": \"openid profile email\",\n    \"email_verified\": true,\n    \"name\": \"Anh Le\",\n    \"preferred_username\": \"alh\",\n    \"given_name\": \"Anh\",\n    \"family_name\": \"Le\",\n    \"email\": \"alh@app-user.localhost\"\n}```\nAny help is much appreciated!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "e3a9767538bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-10\/7272227989824_e3a9767538bfd906f0ba_72.png",
+            "first_name": "Hoang",
+            "real_name": "Hoang Anh Le",
+            "display_name": "Hoang-Anh",
+            "team": "T072736KDTK",
+            "name": "anh.le",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jZPIU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Have another question about the Quickstart. I created several OAuth2 users under the AppUser realm in Keycloak, and added a simple IoU template to the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/quickstart\/daml\/iou",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " (in parallel with the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "licensing",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " folder)\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "module IouTemplate.Iou where\n\ntemplate IouHolding\n  with\n    issuer : Party\n    owner : Party\n    currency : Text\n    amount : Decimal\n    observers : [Party]\n  where\n    signatory issuer, owner\n    observer observers\n\n    ensure amount > 0.0\n\n    choice Iou_Split : (ContractId IouHolding, ContractId IouHolding)\n        with\n        splitAmount: Decimal\n      controller owner\n      do\n        let restAmount = amount - splitAmount\n        splitCid <- create this with amount = splitAmount\n        restCid <- create this with amount = restAmount\n        return (splitCid, restCid)"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nAnd try to submit a create command via the JSON Ledger API\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:2975\/v2\/commands\/submit-and-wait"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "with this payload:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"actAs\": [\n        \"63f4782e-8bc0-498a-998a-bf8caee2d867::1220afec1736aec0fdcf211f7d16cb0e9513cec13bba1a0737f7b066bf8b977c51b4\"\n    ],\n    \"userId\": \"92a520cb-2f09-4e55-b465-d178c6cfe5e4\",\n    \"commandId\": \"create-iou-1754302424\",\n    \"commands\": [\n        {\n            \"CreateCommand\": {\n                \"createArguments\": {\n                    \"observers\": [],\n                    \"issuer\": \"63f4782e-8bc0-498a-998a-bf8caee2d867::1220afec1736aec0fdcf211f7d16cb0e9513cec13bba1a0737f7b066bf8b977c51b4\",\n                    \"owner\": \"63f4782e-8bc0-498a-998a-bf8caee2d867::1220afec1736aec0fdcf211f7d16cb0e9513cec13bba1a0737f7b066bf8b977c51b4\",\n                    \"amount\": \"500\",\n                    \"currency\": \"USD\"\n                },\n                \"templateId\": \"#quickstart-iou:IouTemplate.Iou:IouHolding\"\n            }\n        }\n    ]\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nAt this point I tried to get the Bearer Token from this API "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/keycloak.localhost:8082\/realms\/AppUser\/protocol\/openid-connect\/token",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " with this party's user name and password "
+                            },
+                            {
+                                "type": "text",
+                                "text": "63f4782e-8bc0-498a-998a-bf8caee2d867::1220afec1736aec0fdcf211f7d16cb0e9513cec13bba1a0737f7b066bf8b977c51b4",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " but the command returned this error, indicating that this authentication has failed.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Request failed with HTTP status code 403\nResponse body: {\"code\":\"NA\",\"cause\":\"A security-sensitive error has been received\",\"correlationId\":\"ec96936b50b5a45dac754d955376f792\",\"traceId\":\"ec96936b50b5a45dac754d955376f792\",\"context\":{},\"resources\":[],\"errorCategory\":-1,\"grpcCodeValue\":7,\"retryInfo\":null,\"definiteAnswer\":null}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThis is the decoded bearer token\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"alg\": \"RS256\",\n    \"typ\": \"JWT\",\n    \"kid\": \"eZ7Gro40xD6FxMT7Suxmjwvl5-YZKiQUMHLAeNQpRbw\"\n},\n{\n    \"exp\": 1754302845,\n    \"iat\": 1754302545,\n    \"jti\": \"33579c25-7c8c-4934-9e0c-f194c717c1b1\",\n    \"iss\": \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/keycloak.localhost:8082\/realms\/AppUser"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\",\n    \"aud\": [\""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/canton.network.global"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\", \"account\"],\n    \"sub\": \"63f4782e-8bc0-498a-998a-bf8caee2d867\",\n    \"typ\": \"Bearer\",\n    \"azp\": \"app-user-unsafe\",\n    \"sid\": \"ac8676d3-bb03-4fa7-9b8d-76f1614126f2\",\n    \"acr\": \"1\",\n    \"allowed-origins\": [\"\/*\"],\n    \"realm_access\": {\n        \"roles\": [\n            \"offline_access\",\n            \"uma_authorization\",\n            \"default-roles-appuser\"\n        ]\n    },\n    \"resource_access\": {\n        \"account\": {\n            \"roles\": [\n                \"manage-account\",\n                \"manage-account-links\",\n                \"view-profile\"\n            ]\n        }\n    },\n    \"scope\": \"openid profile email\",\n    \"email_verified\": true,\n    \"name\": \"Anh Le\",\n    \"preferred_username\": \"alh\",\n    \"given_name\": \"Anh\",\n    \"family_name\": \"Le\",\n    \"email\": \"alh@app-user.localhost\"\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nAny help is much appreciated!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1754310223.667159",
+        "client_msg_id": "cec80991-5244-4a49-a83c-5505a7e9fdff",
+        "text": "<@U08VA56KACF> confirming that the answers to 1 and 2 are correct.\n\nFor 3: you can batch topology transactions together with other topology txs but not with Daml transactions.\n\nNamespace delegation, party to participant and party to key mappings are topology transactions\n\nPreapproval is a Daml transaction,",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "e46cf2f361cd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-06-02\/3638231569136_e46cf2f361cda890c6d5_72.jpg",
+            "first_name": "Wayne",
+            "real_name": "Wayne Collier",
+            "display_name": "Wayne Collier",
+            "team": "T03T53E10",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753989126.689069",
+        "parent_user_id": "U08VA56KACF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pHfTx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U08VA56KACF"
+                            },
+                            {
+                                "type": "text",
+                                "text": " confirming that the answers to 1 and 2 are correct.\n\nFor 3: you can batch topology transactions together with other topology txs but not with Daml transactions.\n\nNamespace delegation, party to participant and party to key mappings are topology transactions\n\nPreapproval is a Daml transaction,"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U08VA56KACF"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08VA56KACF",
+        "type": "message",
+        "ts": "1754310556.741239",
+        "client_msg_id": "41491848-68bc-451c-b572-07bb433570e9",
+        "text": "<@U03KR77B7A5>",
+        "team": "T05FWTX7PMG",
+        "user_team": "E04H0T87YSF",
+        "source_team": "E04H0T87YSF",
+        "user_profile": {
+            "avatar_hash": "76775576209f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-24\/9106191602193_76775576209f1186107a_72.png",
+            "first_name": "Abhinav",
+            "real_name": "Abhinav SINGH",
+            "display_name": "Abhi",
+            "team": "E04H0T87YSF",
+            "name": "abhinav.singh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753989126.689069",
+        "parent_user_id": "U08VA56KACF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HZgvF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U03KR77B7A5"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U03KR77B7A5"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U03KR77B7A5",
+        "type": "message",
+        "ts": "1754310659.739779",
+        "client_msg_id": "39042f3d-70de-4b70-afdd-fa92b250a9eb",
+        "text": "Thanks for details <@U03HMUTQ5F0> !",
+        "team": "T05FWTX7PMG",
+        "user_team": "E04H0T87YSF",
+        "source_team": "E04H0T87YSF",
+        "user_profile": {
+            "avatar_hash": "ffb6716e2d8b",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-09-07\/4033574148135_ffb6716e2d8b04263103_72.png",
+            "first_name": "Hedi",
+            "real_name": "Hedi EDELBLOUTE",
+            "display_name": "Hedi",
+            "team": "E04H0T87YSF",
+            "name": "hedi.edelbloute",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753989126.689069",
+        "parent_user_id": "U08VA56KACF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7Fsnp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for details "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " !"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1754310838.048809",
+        "client_msg_id": "c18c474c-1fa7-4531-95d0-e5bfa9b675a5",
+        "text": "<@U029VP9KWFL> FYI",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "e46cf2f361cd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-06-02\/3638231569136_e46cf2f361cda890c6d5_72.jpg",
+            "first_name": "Wayne",
+            "real_name": "Wayne Collier",
+            "display_name": "Wayne Collier",
+            "team": "T03T53E10",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754049245.373989",
+        "parent_user_id": "U08QALM68SF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "g7xkp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U029VP9KWFL"
+                            },
+                            {
+                                "type": "text",
+                                "text": " FYI"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U029VP9KWFL"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U02SR6E8Z9S",
+        "type": "message",
+        "ts": "1754321416.175119",
+        "client_msg_id": "75c04825-149e-4c4a-a39d-0039d139ee08",
+        "text": "<@U0724J67GSE> I've been OOO much of last week. I just saw this.  I'll look into it.\n\nThanks for letting me know",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f9fc9f38d8d9",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-01-31\/3044385429553_f9fc9f38d8d90c37b2c2_72.jpg",
+            "first_name": "Curtis",
+            "real_name": "Curtis Hrischuk",
+            "display_name": "Curtis",
+            "team": "T03T53E10",
+            "name": "curtis.hrischuk",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "V7fGf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0724J67GSE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I've been OOO much of last week. I just saw this.  I'll look into it.\n\nThanks for letting me know"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U0724J67GSE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U03A0BJGHU4",
+        "type": "message",
+        "ts": "1754321494.242239",
+        "client_msg_id": "00ab4859-0c01-41d3-95ce-b6a67a034217",
+        "text": "Hello! I am trying to programmatically invoke the devnet faucet for an external party. I tried to exercise `AmuletRules_DevNet_Tap`  on the `AmuletRules` contract returned by scan API, but it fails as contract cannot be found on my validator node. I'm a bit confused how it works through the `WalletAppInstall` one, could I get any pointers ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E04H0T87YSF",
+        "source_team": "E04H0T87YSF",
+        "user_profile": {
+            "avatar_hash": "d2e9f0c2426f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-04-06\/3338536889991_d2e9f0c2426f3a429692_72.png",
+            "first_name": "Julien",
+            "real_name": "Julien NICOULAUD",
+            "display_name": "Julien NICOULAUD",
+            "team": "E04H0T87YSF",
+            "name": "julien.nicoulaud",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754321494.242239",
+        "reply_count": 9,
+        "reply_users_count": 3,
+        "latest_reply": "1754380591.540689",
+        "reply_users": [
+            "U7BSDJUJX",
+            "U03A0BJGHU4",
+            "UEHLS0JUB"
+        ],
+        "replies": [
+            {
+                "user": "U7BSDJUJX",
+                "ts": "1754327162.262139"
+            },
+            {
+                "user": "U03A0BJGHU4",
+                "ts": "1754327681.714239"
+            },
+            {
+                "user": "U03A0BJGHU4",
+                "ts": "1754328587.280989"
+            },
+            {
+                "user": "U7BSDJUJX",
+                "ts": "1754332160.698759"
+            },
+            {
+                "user": "U03A0BJGHU4",
+                "ts": "1754332271.769139"
+            },
+            {
+                "user": "U03A0BJGHU4",
+                "ts": "1754334101.469469"
+            },
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1754377147.247589"
+            },
+            {
+                "user": "U03A0BJGHU4",
+                "ts": "1754377952.063159"
+            },
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1754380591.540689"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HDC19",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello! I am trying to programmatically invoke the devnet faucet for an external party. I tried to exercise "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AmuletRules_DevNet_Tap",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  on the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AmuletRules",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " contract returned by scan API, but it fails as contract cannot be found on my validator node. I'm a bit confused how it works through the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "WalletAppInstall",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " one, could I get any pointers ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U035FSJL801",
+        "type": "message",
+        "ts": "1754322334.865669",
+        "client_msg_id": "ee873698-4c97-4470-a3c1-0970252646cc",
+        "text": "Hello!\nCan you please confirm Canton's coin type as it's not registered in <https:\/\/github.com\/satoshilabs\/slips\/blob\/master\/slip-0044.md|slip-044> ?\nI've seen mentions of `6767` but I'd like to be sure in order to properly set up the derivation.\nThanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "E04H0T87YSF",
+        "source_team": "E04H0T87YSF",
+        "user_profile": {
+            "avatar_hash": "018e7ecd9cb0",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-12\/8425756836311_018e7ecd9cb0f26448d5_72.png",
+            "first_name": "Victor",
+            "real_name": "Victor FORGEOUX",
+            "display_name": "Victor FORGEOUX",
+            "team": "E04H0T87YSF",
+            "name": "victor.forgeoux",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754322334.865669",
+        "reply_count": 4,
+        "reply_users_count": 3,
+        "latest_reply": "1754383908.588369",
+        "reply_users": [
+            "U02KJ7PKHN2",
+            "U04EKFH8ZAA",
+            "U035FSJL801"
+        ],
+        "replies": [
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754376001.128499"
+            },
+            {
+                "user": "U04EKFH8ZAA",
+                "ts": "1754383129.835349"
+            },
+            {
+                "user": "U04EKFH8ZAA",
+                "ts": "1754383821.977719"
+            },
+            {
+                "user": "U035FSJL801",
+                "ts": "1754383908.588369"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xfLnx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello!\nCan you please confirm Canton's coin type as it's not registered in "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/satoshilabs\/slips\/blob\/master\/slip-0044.md",
+                                "text": "slip-044"
+                            },
+                            {
+                                "type": "text",
+                                "text": " ?\nI've seen mentions of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "6767",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " but I'd like to be sure in order to properly set up the derivation.\nThanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U7BSDJUJX",
+        "type": "message",
+        "ts": "1754327162.262139",
+        "client_msg_id": "2e81879c-4169-467c-b540-b8f307229c0a",
+        "text": "First thing to try is using the `\/v0\/wallet\/tap` endpoint. This is how the vast majority of Splice's own integration tests tap",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f786aefa8934",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-06-25\/663881175331_f786aefa8934903bc5f0_72.jpg",
+            "first_name": "Stephen",
+            "real_name": "Stephen Compall",
+            "display_name": "stephen",
+            "team": "T03T53E10",
+            "name": "stephen.compall",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754321494.242239",
+        "parent_user_id": "U03A0BJGHU4",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Hm9xZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "First thing to try is using the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/v0\/wallet\/tap",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " endpoint. This is how the vast majority of Splice's own integration tests tap"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03A0BJGHU4",
+        "type": "message",
+        "ts": "1754327681.714239",
+        "client_msg_id": "620d38fe-d5fb-451a-b793-63884e2cc8f2",
+        "text": "This API will tap to the JWT's user `primaryParty` , is that correct ? In our case, we have a single API user. I will try creating a dedicated user for each end user and see if that works",
+        "team": "T05FWTX7PMG",
+        "user_team": "E04H0T87YSF",
+        "source_team": "E04H0T87YSF",
+        "user_profile": {
+            "avatar_hash": "d2e9f0c2426f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-04-06\/3338536889991_d2e9f0c2426f3a429692_72.png",
+            "first_name": "Julien",
+            "real_name": "Julien NICOULAUD",
+            "display_name": "Julien NICOULAUD",
+            "team": "E04H0T87YSF",
+            "name": "julien.nicoulaud",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754321494.242239",
+        "parent_user_id": "U03A0BJGHU4",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zqCpE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This API will tap to the JWT's user "
+                            },
+                            {
+                                "type": "text",
+                                "text": "primaryParty",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " , is that correct ? In our case, we have a single API user. I will try creating a dedicated user for each end user and see if that works"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03A0BJGHU4",
+        "type": "message",
+        "ts": "1754328587.280989",
+        "client_msg_id": "f232774e-ee55-4fba-b0d7-a0a5cec70510",
+        "text": "Mhh, testing with provided localnet docker compose, I am getting 401 on these internal APIs using the generated JWT that contains:\n```{\n  \"aud\": \"<https:\/\/canton.network.global>\",\n  \"sub\": \"ledger-api-user\"\n}```",
+        "team": "T05FWTX7PMG",
+        "user_team": "E04H0T87YSF",
+        "source_team": "E04H0T87YSF",
+        "user_profile": {
+            "avatar_hash": "d2e9f0c2426f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-04-06\/3338536889991_d2e9f0c2426f3a429692_72.png",
+            "first_name": "Julien",
+            "real_name": "Julien NICOULAUD",
+            "display_name": "Julien NICOULAUD",
+            "team": "E04H0T87YSF",
+            "name": "julien.nicoulaud",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754321494.242239",
+        "parent_user_id": "U03A0BJGHU4",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/Ga9R",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Mhh, testing with provided localnet docker compose, I am getting 401 on these internal APIs using the generated JWT that contains:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n  \"aud\": \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/canton.network.global"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\",\n  \"sub\": \"ledger-api-user\"\n}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U7BSDJUJX",
+        "type": "message",
+        "ts": "1754332160.698759",
+        "client_msg_id": "38b3c6bf-8726-4326-b002-b9b7d883bcd0",
+        "text": "There's nothing really special about tap vs other endpoints auth-wise; this suggests there's something wrong with your token",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f786aefa8934",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-06-25\/663881175331_f786aefa8934903bc5f0_72.jpg",
+            "first_name": "Stephen",
+            "real_name": "Stephen Compall",
+            "display_name": "stephen",
+            "team": "T03T53E10",
+            "name": "stephen.compall",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754321494.242239",
+        "parent_user_id": "U03A0BJGHU4",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ymh6x",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "There's nothing really special about tap vs other endpoints auth-wise; this suggests there's something wrong with your token"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03A0BJGHU4",
+        "type": "message",
+        "ts": "1754332271.769139",
+        "client_msg_id": "2831995d-0722-4caf-88be-cbb5fbfb972b",
+        "text": "Tried creating a dedicated user for the target party, generating a JWT and calling the API, still getting a 401. Splice logs contains:\n```{\"@timestamp\":\"2025-08-04T18:22:06.193Z\",\"@version\":\"1\",\"message\":\"HTTP POST \/api\/validator\/v0\/wallet\/tap from (172.18.0.1:39752): Rejected: AuthenticationFailedRejection(CredentialsMissing,Bearer realm=\\\"splice wallet realm\\\"),TransformationRejection(org.apache.pekko.http.scaladsl.server.directives.BasicDirectives$$Lambda\/0x0000793656baef40@48f62f11)\",\"logger_name\":\"o.l.s.a.a.HttpRequestLogger:validator=app-user-validator_backend\",\"thread_name\":\"canton-env-ec-42\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"198ffe47fedacd93ce7f7bb817869172\",\"span-name\":\"newSpan\",\"span-id\":\"630fb7236772fb5d\"}```\nI must be missing some claims, but <https:\/\/docs.dev.sync.global\/app_dev\/overview\/splice_app_apis.html#authentication|the doc> says you only need `aud` and `sub` :thinking_face:",
+        "team": "T05FWTX7PMG",
+        "user_team": "E04H0T87YSF",
+        "source_team": "E04H0T87YSF",
+        "user_profile": {
+            "avatar_hash": "d2e9f0c2426f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-04-06\/3338536889991_d2e9f0c2426f3a429692_72.png",
+            "first_name": "Julien",
+            "real_name": "Julien NICOULAUD",
+            "display_name": "Julien NICOULAUD",
+            "team": "E04H0T87YSF",
+            "name": "julien.nicoulaud",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754321494.242239",
+        "parent_user_id": "U03A0BJGHU4",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Fl7Mb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Tried creating a dedicated user for the target party, generating a JWT and calling the API, still getting a 401. Splice logs contains:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"@timestamp\":\"2025-08-04T18:22:06.193Z\",\"@version\":\"1\",\"message\":\"HTTP POST \/api\/validator\/v0\/wallet\/tap from (172.18.0.1:39752): Rejected: AuthenticationFailedRejection(CredentialsMissing,Bearer realm=\\\"splice wallet realm\\\"),TransformationRejection(org.apache.pekko.http.scaladsl.server.directives.BasicDirectives$$Lambda\/0x0000793656baef40@48f62f11)\",\"logger_name\":\"o.l.s.a.a.HttpRequestLogger:validator=app-user-validator_backend\",\"thread_name\":\"canton-env-ec-42\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"198ffe47fedacd93ce7f7bb817869172\",\"span-name\":\"newSpan\",\"span-id\":\"630fb7236772fb5d\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I must be missing some claims, but "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/app_dev\/overview\/splice_app_apis.html#authentication",
+                                "text": "the doc"
+                            },
+                            {
+                                "type": "text",
+                                "text": " says you only need "
+                            },
+                            {
+                                "type": "text",
+                                "text": "aud",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "sub",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "thinking_face",
+                                "unicode": "1f914"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03A0BJGHU4",
+        "type": "message",
+        "ts": "1754334101.469469",
+        "client_msg_id": "fe4f0ea2-fb2c-46ab-9ea1-0be6f3aa5a5f",
+        "text": "Oh wait no, the JWT was not passed at all in my code :facepalm2:  OK so now I can invoke the API with the correct user\/party, buts still fails:\n```{\"@timestamp\":\"2025-08-04T18:50:53.910Z\",\"@version\":\"1\",\"message\":\"Request to <http:\/\/splice:2903\/api\/validator\/v0\/wallet\/tap> resulted in a gRPC StatusRuntimeException: NOT_FOUND: No wallet found for user 'bob'?\",\"logger_name\":\"o.l.s.a.h.HttpErrorHandler:validator=app-user-validator_backend\",\"thread_name\":\"canton-env-ec-3294\",\"level\":\"INFO\",\"level_value\":20000,\"stack_trace\":\"io.grpc.StatusRuntimeException: NOT_FOUND: No wallet found for user 'bob::1220012855ffbd348a1869dd4d44570f3e7cc4ab4b08a328010b52cac9178e5a22d3'?\\n\\tat io.grpc.Status.asRuntimeException(Status.java:524)\\n\\tat org.lfdecentralizedtrust.splice.wallet.admin.http.HttpWalletHandlerUtil.$anonfun$getUserWallet$2(HttpWalletHandlerUtil.scala:72)\\n\\tat scala.Option.getOrElse(Option.scala:201)\\n\\tat org.lfdecentralizedtrust.splice.wallet.admin.http.HttpWalletHandlerUtil.$anonfun$getUserWallet$1(HttpWalletHandlerUtil.scala:70)\\n\\tat scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)\\n\\tat com.daml.executors.QueueAwareExecutorService$TrackingRunnable.run(QueueAwareExecutorService.scala:98)\\n\\tat com.daml.metrics.InstrumentedExecutorServiceMetrics$InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorServiceMetrics.scala:190)\\n\\tat java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1423)\\n\\tat java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)\\n\\tat java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)\\n\",\"trace-id\":\"adf04efc83babc72e75e5109fad9d442\",\"span-name\":\"newSpan\",\"span-id\":\"8116f80b0447128f\"}```\nI think the problem is the way I onboard users, all I do is execute the 3 topology transactions directly on the ledger. I expected the triggers to run, but after that I see no wallet automation running in logs, so I guess this is not sufficient and I should use <https:\/\/docs.dev.sync.global\/app_dev\/validator_api\/index.html#external-signing-api|these endpoints instead>",
+        "team": "T05FWTX7PMG",
+        "user_team": "E04H0T87YSF",
+        "source_team": "E04H0T87YSF",
+        "user_profile": {
+            "avatar_hash": "d2e9f0c2426f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-04-06\/3338536889991_d2e9f0c2426f3a429692_72.png",
+            "first_name": "Julien",
+            "real_name": "Julien NICOULAUD",
+            "display_name": "Julien NICOULAUD",
+            "team": "E04H0T87YSF",
+            "name": "julien.nicoulaud",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754321494.242239",
+        "parent_user_id": "U03A0BJGHU4",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "K8wNR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oh wait no, the JWT was not passed at all in my code "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "facepalm2",
+                                "display_team_id": "E04H0T87YSF",
+                                "display_url": "https:\/\/emoji.slack-edge.com\/T04H0T87YSF\/facepalm2\/b6badb4c58ed8f73.png"
+                            },
+                            {
+                                "type": "text",
+                                "text": "  OK so now I can invoke the API with the correct user\/party, buts still fails:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"@timestamp\":\"2025-08-04T18:50:53.910Z\",\"@version\":\"1\",\"message\":\"Request to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/splice:2903\/api\/validator\/v0\/wallet\/tap"
+                            },
+                            {
+                                "type": "text",
+                                "text": " resulted in a gRPC StatusRuntimeException: NOT_FOUND: No wallet found for user 'bob'?\",\"logger_name\":\"o.l.s.a.h.HttpErrorHandler:validator=app-user-validator_backend\",\"thread_name\":\"canton-env-ec-3294\",\"level\":\"INFO\",\"level_value\":20000,\"stack_trace\":\"io.grpc.StatusRuntimeException: NOT_FOUND: No wallet found for user 'bob::1220012855ffbd348a1869dd4d44570f3e7cc4ab4b08a328010b52cac9178e5a22d3'?\\n\\tat io.grpc.Status.asRuntimeException(Status.java:524)\\n\\tat org.lfdecentralizedtrust.splice.wallet.admin.http.HttpWalletHandlerUtil.$anonfun$getUserWallet$2(HttpWalletHandlerUtil.scala:72)\\n\\tat scala.Option.getOrElse(Option.scala:201)\\n\\tat org.lfdecentralizedtrust.splice.wallet.admin.http.HttpWalletHandlerUtil.$anonfun$getUserWallet$1(HttpWalletHandlerUtil.scala:70)\\n\\tat scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)\\n\\tat com.daml.executors.QueueAwareExecutorService$TrackingRunnable.run(QueueAwareExecutorService.scala:98)\\n\\tat com.daml.metrics.InstrumentedExecutorServiceMetrics$InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorServiceMetrics.scala:190)\\n\\tat java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1423)\\n\\tat java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)\\n\\tat java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)\\n\",\"trace-id\":\"adf04efc83babc72e75e5109fad9d442\",\"span-name\":\"newSpan\",\"span-id\":\"8116f80b0447128f\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think the problem is the way I onboard users, all I do is execute the 3 topology transactions directly on the ledger. I expected the triggers to run, but after that I see no wallet automation running in logs, so I guess this is not sufficient and I should use "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/app_dev\/validator_api\/index.html#external-signing-api",
+                                "text": "these endpoints instead"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1754342904.245929",
+        "client_msg_id": "01212dee-d483-4528-ac0b-4f6b26bbc33c",
+        "text": "Trying to verify some transfers we tried to initiate through the wallet web app with the \"token standard transfer\" option enabled. Can anyone confirm what contract templates we should be able to query for to verify the transfer was offered, accepted, or preapproved?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754342904.245929",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1754374546.038379",
+        "reply_users": [
+            "U07J3V9CS78",
+            "UEHLS0JUB"
+        ],
+        "replies": [
+            {
+                "user": "U07J3V9CS78",
+                "ts": "1754346870.034239"
+            },
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1754374546.038379"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TDTtB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Trying to verify some transfers we tried to initiate through the wallet web app with the \"token standard transfer\" option enabled. Can anyone confirm what contract templates we should be able to query for to verify the transfer was offered, accepted, or preapproved?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1754346870.034239",
+        "client_msg_id": "51af5862-6e25-471e-8639-a43f191923f7",
+        "text": "Mainly I want to know if `Splice.AmuletTransferInstruction` is used whether or not the receiving party has been configured to pre-approve transfers.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754342904.245929",
+        "parent_user_id": "U07J3V9CS78",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "X12dv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Mainly I want to know if "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Splice.AmuletTransferInstruction",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is used whether or not the receiving party has been configured to pre-approve transfers."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0122RHUD2A",
+        "type": "message",
+        "ts": "1754355790.814939",
+        "edited": {
+            "user": "U0122RHUD2A",
+            "ts": "1754356318.000000"
+        },
+        "client_msg_id": "420258f8-8fc3-4a4e-baad-f3c067c88aec",
+        "text": "1. get in the habit of checking canton log whenever you see error like this:\n```Request failed with HTTP status code 403\nResponse body: {\"code\":\"NA\",\"cause\":\"A security-sensitive error has been received\",\"correlationId\":\"ec96936b50b5a45dac754d955376f792\",\"traceId\":\"ec96936b50b5a45dac754d955376f792\",\"context\":{},\"resources\":[],\"errorCategory\":-1,\"grpcCodeValue\":7,\"retryInfo\":null,\"definiteAnswer\":null}```\nsearch by correlationId and very likely you will find more detail around the line you found explaining why you see the error",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f323bd2b8079",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-04-22\/1090389769617_f323bd2b807965503456_72.png",
+            "first_name": "Peter",
+            "real_name": "Peter Kvokacka",
+            "display_name": "peter.kvokacka",
+            "team": "T03T53E10",
+            "name": "peter.kvokacka",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6pm4W",
+                "elements": [
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "get in the habit of checking canton log whenever you see error like this:"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Request failed with HTTP status code 403\nResponse body: {\"code\":\"NA\",\"cause\":\"A security-sensitive error has been received\",\"correlationId\":\"ec96936b50b5a45dac754d955376f792\",\"traceId\":\"ec96936b50b5a45dac754d955376f792\",\"context\":{},\"resources\":[],\"errorCategory\":-1,\"grpcCodeValue\":7,\"retryInfo\":null,\"definiteAnswer\":null}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "search by correlationId and very likely you will find more detail around the line you found explaining why you see the error"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0122RHUD2A",
+        "type": "message",
+        "ts": "1754356083.754859",
+        "client_msg_id": "c5575ba3-ed60-4a53-8f69-e546e0a72c35",
+        "text": "2.  Did you assign rights to the ledger user `63f4782e-8bc0-498a-998a-bf8caee2d867`\nto act as the party `63f4782e-8bc0-498a-998a-bf8caee2d867::1220afec1736aec0fdcf211f7d16cb0e9513cec13bba1a0737f7b066bf8b977c51b4` ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f323bd2b8079",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-04-22\/1090389769617_f323bd2b807965503456_72.png",
+            "first_name": "Peter",
+            "real_name": "Peter Kvokacka",
+            "display_name": "peter.kvokacka",
+            "team": "T03T53E10",
+            "name": "peter.kvokacka",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FuhQ\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "2.  Did you assign rights to the ledger user "
+                            },
+                            {
+                                "type": "text",
+                                "text": "63f4782e-8bc0-498a-998a-bf8caee2d867",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nto act as the party "
+                            },
+                            {
+                                "type": "text",
+                                "text": "63f4782e-8bc0-498a-998a-bf8caee2d867::1220afec1736aec0fdcf211f7d16cb0e9513cec13bba1a0737f7b066bf8b977c51b4",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "3. in the payload\n```\"userId\": \"92a520cb-2f09-4e55-b465-d178c6cfe5e4\",```\nshould be the userId of the user you created and whose token you are sending with the request and you can as well omit it completely since you are sending jwt token.",
+        "files": [
+            {
+                "id": "F099DRZ297B",
+                "created": 1754358096,
+                "timestamp": 1754358096,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U0122RHUD2A",
+                "user_team": "T03T53E10",
+                "editable": false,
+                "size": 606184,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T03T53E10-F099DRZ297B\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T03T53E10-F099DRZ297B\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F099DRZ297B-f19e2d5f91\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F099DRZ297B-f19e2d5f91\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F099DRZ297B-f19e2d5f91\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 302,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F099DRZ297B-f19e2d5f91\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 402,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F099DRZ297B-f19e2d5f91\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F099DRZ297B-f19e2d5f91\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 603,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F099DRZ297B-f19e2d5f91\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 670,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F099DRZ297B-f19e2d5f91\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 804,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T03T53E10-F099DRZ297B-f19e2d5f91\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 858,
+                "original_w": 3308,
+                "original_h": 2772,
+                "thumb_tiny": "AwApADC0TdgcCDt\/epubvdtxDn6Nj86tBlJIB6cGl4oAqE3Y7QfgGNKPtZGcQf8Aj1WuKOKAIR52OY4\/++z\/AIUN5+PlSIH1LE\/0qbikoAT+LGDj1pcUxidx5pNxoESYoxUe7nGeaNxoAecDrxRht3UY+lM3H1pVJJFADXJ34xSAHOdxPtUtFAEdFSUUAR0q\/eFPooA\/\/9k=",
+                "permalink": "https:\/\/daholdings.slack.com\/files\/U05FZBDQ4RJ\/F099DRZ297B\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T03T53E10-F099DRZ297B-41f57c134e",
+                "source_team": "T03T53E10",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U0122RHUD2A",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "o8gHx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "3. in the payload\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\"userId\": \"92a520cb-2f09-4e55-b465-d178c6cfe5e4\","
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "should be the userId of the user you created and whose token you are sending with the request and you can as well omit it completely since you are sending jwt token."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1754358140.115029",
+        "edited": {
+            "user": "U0122RHUD2A",
+            "ts": "1754360974.000000"
+        },
+        "client_msg_id": "f74badbb-c6a9-4730-be6b-0af85f647d26",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f323bd2b8079",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-04-22\/1090389769617_f323bd2b807965503456_72.png",
+            "first_name": "Peter",
+            "real_name": "Peter Kvokacka",
+            "display_name": "peter.kvokacka",
+            "team": "T03T53E10",
+            "name": "peter.kvokacka",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U083R3AP1M1",
+        "type": "message",
+        "ts": "1754367393.832239",
+        "edited": {
+            "user": "U083R3AP1M1",
+            "ts": "1754367523.000000"
+        },
+        "client_msg_id": "cec788af-fcbb-46d7-a020-3f2a677c7776",
+        "text": "Hi all. is there a way to test the deployment of the current versions Quickstart UI\/Frontend onto devnet \/ or testnet nodes? Can i easily get the image and define it in the node config to deploy?\n\nWondering if its possible currently and what steps would be required if it is. More so wanting to test and practice deployment of UIs\/frontend to a node <@U02SR6E8Z9S> <@UL9TWDFL2> . Thinking to test using QS might be easier since its already developed or whether it’s easier to spin something up to test deployment. I am able to install the dars fine\n\nThanks for any pointers here",
+        "team": "T05FWTX7PMG",
+        "user_team": "T057SN2G1C2",
+        "source_team": "T057SN2G1C2",
+        "user_profile": {
+            "avatar_hash": "b1215cf047bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-04\/8124357279509_b1215cf047bf6e221c8f_72.png",
+            "first_name": "Brendan",
+            "real_name": "Brendan",
+            "display_name": "Brendan",
+            "team": "T057SN2G1C2",
+            "name": "brendan673",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754367393.832239",
+        "reply_count": 9,
+        "reply_users_count": 3,
+        "latest_reply": "1754489495.044469",
+        "reply_users": [
+            "U2KT900HE",
+            "U083R3AP1M1",
+            "U02SR6E8Z9S"
+        ],
+        "replies": [
+            {
+                "user": "U2KT900HE",
+                "ts": "1754367523.601649"
+            },
+            {
+                "user": "U2KT900HE",
+                "ts": "1754367597.996699"
+            },
+            {
+                "user": "U083R3AP1M1",
+                "ts": "1754368760.219469"
+            },
+            {
+                "user": "U083R3AP1M1",
+                "ts": "1754369103.365099"
+            },
+            {
+                "user": "U2KT900HE",
+                "ts": "1754373103.995619"
+            },
+            {
+                "user": "U02SR6E8Z9S",
+                "ts": "1754395616.484079"
+            },
+            {
+                "user": "U083R3AP1M1",
+                "ts": "1754454621.908129"
+            },
+            {
+                "user": "U083R3AP1M1",
+                "ts": "1754454950.257939"
+            },
+            {
+                "user": "U02SR6E8Z9S",
+                "ts": "1754489495.044469"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vLsmm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all. is there a way to test the deployment of the current versions Quickstart UI\/Frontend onto devnet \/ or testnet nodes? Can i easily get the image and define it in the node config to deploy?\n\nWondering if its possible currently and what steps would be required if it is. More so wanting to test and practice deployment of UIs\/frontend to a node "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02SR6E8Z9S"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UL9TWDFL2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " . Thinking to test using QS might be easier since its already developed or whether it’s easier to spin something up to test deployment. I am able to install the dars fine\n\nThanks for any pointers here"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "UL9TWDFL2"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U2KT900HE",
+        "type": "message",
+        "ts": "1754367523.601649",
+        "client_msg_id": "87d41e17-888d-443f-a30d-0f119470b99a",
+        "text": "Hi, we have it on our backlog to provide a 'deployment' that would dovetail into an existing validator deployment (already existing).\n\nThe alternative is to run the app locally - you would essentially pick the non-LocalNet components to run locally and configure them to talk to devnet. Keep in mind that you need to target a specific verison of Quickstart that relates to the version on dev\/test net (they are different). We have git tags that provide this information for historical Splice version compatibility.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4772b560949d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-27\/7646277389857_4772b560949d9bf6fce1_72.jpg",
+            "first_name": "Fil",
+            "real_name": "Fil Mackay",
+            "display_name": "Fil",
+            "team": "T03T53E10",
+            "name": "fil",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754367393.832239",
+        "parent_user_id": "U083R3AP1M1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ae64X",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, we have it on our backlog to provide a 'deployment' that would dovetail into an existing validator deployment (already existing).\n\nThe alternative is to run the app locally - you would essentially pick the non-LocalNet components to run locally and configure them to talk to devnet. Keep in mind that you need to target a specific verison of Quickstart that relates to the version on dev\/test net (they are different). We have git tags that provide this information for historical Splice version compatibility."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U083R3AP1M1"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U2KT900HE",
+        "type": "message",
+        "ts": "1754367597.996699",
+        "edited": {
+            "user": "U2KT900HE",
+            "ts": "1754367610.000000"
+        },
+        "client_msg_id": "21cd26f9-88cc-4686-b40a-eb30f4279e2e",
+        "text": "That would be up to you if you run it: locally in docker or in a Helm context? But at this point we have not mapped out all the manual steps. (we would need to make arbitrary selections on those choices)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4772b560949d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-27\/7646277389857_4772b560949d9bf6fce1_72.jpg",
+            "first_name": "Fil",
+            "real_name": "Fil Mackay",
+            "display_name": "Fil",
+            "team": "T03T53E10",
+            "name": "fil",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754367393.832239",
+        "parent_user_id": "U083R3AP1M1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/cER5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That would be up to you if you run it: locally in docker or in a Helm context? But at this point we have not mapped out all the manual steps. (we would need to make arbitrary selections on those choices)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U083R3AP1M1",
+        "type": "message",
+        "ts": "1754368760.219469",
+        "client_msg_id": "5954c74e-4a02-41ed-8121-ec00cc8ca21b",
+        "text": "I see, I think I understand what you mean! -, thanks <@U2KT900HE> -  I’m keen to just play around and maybe try it out ~  just a couple of follow ups if possible:\n\n1. any chance you can give me a few pointers\/examples on which specific ‘components’ would need configuring just so I stay on the right track?\n2. Is this solution (running locally to talk to nodes) workable if we want to deploy on mainnet? To your point on the versions, do we need to develop apps using older component versions to match what’s currently running on mainnet?\n    a. Otherwise is there another example or template or method to deploying a UI for an app, maybe assuming backend\/dar is complete \nUnsure if im tackling the problem in the right way and apologies if my questions don’t make sense! Let me know if so, thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "T057SN2G1C2",
+        "source_team": "T057SN2G1C2",
+        "user_profile": {
+            "avatar_hash": "b1215cf047bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-04\/8124357279509_b1215cf047bf6e221c8f_72.png",
+            "first_name": "Brendan",
+            "real_name": "Brendan",
+            "display_name": "Brendan",
+            "team": "T057SN2G1C2",
+            "name": "brendan673",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754367393.832239",
+        "parent_user_id": "U083R3AP1M1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "x7OZY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I see, I think I understand what you mean! -, thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U2KT900HE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " -  I’m keen to just play around and maybe try it out ~  just a couple of follow ups if possible:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "any chance you can give me a few pointers\/examples on which specific ‘components’ would need configuring just so I stay on the right track?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Is this solution (running locally to talk to nodes) workable if we want to deploy on mainnet? To your point on the versions, do we need to develop apps using older component versions to match what’s currently running on mainnet?"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Otherwise is there another example or template or method to deploying a UI for an app, maybe assuming backend\/dar is complete "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nUnsure if im tackling the problem in the right way and apologies if my questions don’t make sense! Let me know if so, thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U083R3AP1M1",
+        "type": "message",
+        "ts": "1754369103.365099",
+        "client_msg_id": "348ba0c6-3961-4280-80c3-50bccd6a0263",
+        "text": "I note that older versions of QS used to connect to devnet, if I look how how that connected to Devnet, would it help perhaps ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T057SN2G1C2",
+        "source_team": "T057SN2G1C2",
+        "user_profile": {
+            "avatar_hash": "b1215cf047bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-04\/8124357279509_b1215cf047bf6e221c8f_72.png",
+            "first_name": "Brendan",
+            "real_name": "Brendan",
+            "display_name": "Brendan",
+            "team": "T057SN2G1C2",
+            "name": "brendan673",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754367393.832239",
+        "parent_user_id": "U083R3AP1M1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DvMYb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I note that older versions of QS used to connect to devnet, if I look how how that connected to Devnet, would it help perhaps ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0724J67GSE",
+        "type": "message",
+        "ts": "1754369191.075919",
+        "client_msg_id": "3682aff5-44f5-4545-9cce-a2896293fe1d",
+        "text": "<@U0122RHUD2A> thanks for your great instructions and pointing me to the right track. Will do some testing today and let you know the result.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "e3a9767538bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-10\/7272227989824_e3a9767538bfd906f0ba_72.png",
+            "first_name": "Hoang",
+            "real_name": "Hoang Anh Le",
+            "display_name": "Hoang-Anh",
+            "team": "T072736KDTK",
+            "name": "anh.le",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SpLYT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0122RHUD2A"
+                            },
+                            {
+                                "type": "text",
+                                "text": " thanks for your great instructions and pointing me to the right track. Will do some testing today and let you know the result."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0122RHUD2A",
+        "type": "message",
+        "ts": "1754370884.684149",
+        "edited": {
+            "user": "U0122RHUD2A",
+            "ts": "1754372837.000000"
+        },
+        "client_msg_id": "a3f05f0b-82f3-4646-b32b-fbb61bbad08f",
+        "text": "no worries. Let me know if you need anything else. You can even try it directly in <https:\/\/docs.dev.sync.global\/app_dev\/testing\/localnet.html#swagger-ui|the swagger ui> if you want.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f323bd2b8079",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-04-22\/1090389769617_f323bd2b807965503456_72.png",
+            "first_name": "Peter",
+            "real_name": "Peter Kvokacka",
+            "display_name": "peter.kvokacka",
+            "team": "T03T53E10",
+            "name": "peter.kvokacka",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lfHYx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "no worries. Let me know if you need anything else. You can even try it directly in "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/app_dev\/testing\/localnet.html#swagger-ui",
+                                "text": "the swagger ui"
+                            },
+                            {
+                                "type": "text",
+                                "text": " if you want."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U2KT900HE",
+        "type": "message",
+        "ts": "1754373103.995619",
+        "edited": {
+            "user": "U2KT900HE",
+            "ts": "1754373378.000000"
+        },
+        "client_msg_id": "6aa76a26-4426-47dc-a1ee-2ec0c2162e44",
+        "text": "Yes. It was a bit confused because you only need a tiny fraction of the whole QS, in order to run an app against dev\/testnet. You might be able to glean some tips from  (but it's a bit dated): <https:\/\/github.com\/digital-asset\/cn-quickstart\/pull\/111\/commits\/ddc7657e67dcc638d83d56057cfc47c275f336a5>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4772b560949d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-27\/7646277389857_4772b560949d9bf6fce1_72.jpg",
+            "first_name": "Fil",
+            "real_name": "Fil Mackay",
+            "display_name": "Fil",
+            "team": "T03T53E10",
+            "name": "fil",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754367393.832239",
+        "parent_user_id": "U083R3AP1M1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "s227t",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes. It was a bit confused because you only need a tiny fraction of the whole QS, in order to run an app against dev\/testnet. You might be able to glean some tips from  (but it's a bit dated): "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/digital-asset\/cn-quickstart\/pull\/111\/commits\/ddc7657e67dcc638d83d56057cfc47c275f336a5"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U083R3AP1M1",
+                    "UL9TWDFL2"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*oskars.j* from *Deploi* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1754373826.491239",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+u7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "oskars.j",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Deploi",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1754374546.038379",
+        "client_msg_id": "b92dd0b4-d86f-4768-9558-ab493dd0e4b9",
+        "text": "AmuletTransferInstruction is only used for the offer\/accept flow. You may want to consider querying for the `TransferInstruction` interface though which also works for other assets following the token standard. For preapprovals there is no intermediate template, it just directly exercises TransferPreapproval_Send which then transfers the CC.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754342904.245929",
+        "parent_user_id": "U07J3V9CS78",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FJCrx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "AmuletTransferInstruction is only used for the offer\/accept flow. You may want to consider querying for the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "TransferInstruction",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " interface though which also works for other assets following the token standard. For preapprovals there is no intermediate template, it just directly exercises TransferPreapproval_Send which then transfers the CC."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1754376001.128499",
+        "client_msg_id": "f4d51ed5-f70d-4b43-b6e4-a0834d9a932c",
+        "text": "<@U04EKFH8ZAA> I remember you were looking at this at some point",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754322334.865669",
+        "parent_user_id": "U035FSJL801",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "X2p3y",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U04EKFH8ZAA"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I remember you were looking at this at some point"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1754377147.247589",
+        "client_msg_id": "bae27a59-e63f-4fa6-a354-16b08e9b1c9f",
+        "text": "Only the endpoints under \/external-party\/ works for external parties. If you want to tap you would need to do so directly against the ledger API through the external signing APIs.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754321494.242239",
+        "parent_user_id": "U03A0BJGHU4",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kj5hP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Only the endpoints under \/external-party\/ works for external parties. If you want to tap you would need to do so directly against the ledger API through the external signing APIs."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

@@ -1,0 +1,393 @@
+[
+    {
+        "subtype": "tombstone",
+        "text": "This message was deleted.",
+        "user": "USLACKBOT",
+        "hidden": true,
+        "type": "message",
+        "ts": "1751268698.507789",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T03T53E10",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751268698.507789",
+        "parent_user_id": "USLACKBOT",
+        "reply_count": 9,
+        "reply_users_count": 1,
+        "latest_reply": "1752069669.466589",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1751269182.622259"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1751443469.993039"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1751987812.959859"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1751988143.051219"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1751988348.769209"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1751988976.821709"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752063260.612729"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752069648.666459"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752069669.466589"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1751269182.622259",
+        "client_msg_id": "00dc7a89-501b-4b8f-b515-5f493eaac175",
+        "text": "Hey gm!\n\nSince Mainnet bootstrapping is a couple weeks away, we don't yet know the dec-party id. After some discussions with <@U9V802QQ6> we thought it's ok to start with our own validator just so we are unblocked on the featured app process, and then once ready, migrate over to the correct dec-party.\n\ncc <@U05FU0HPZ9T>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751268698.507789",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cTh32",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey gm!\n\nSince Mainnet bootstrapping is a couple weeks away, we don't yet know the dec-party id. After some discussions with "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U9V802QQ6"
+                            },
+                            {
+                                "type": "text",
+                                "text": " we thought it's ok to start with our own validator just so we are unblocked on the featured app process, and then once ready, migrate over to the correct dec-party.\n\ncc "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FU0HPZ9T"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1751289497.261109",
+        "client_msg_id": "f9b3b1d9-ef34-4ecd-b818-2da180293f0d",
+        "text": "Thanks for the PR reviews, <@UEHLS0JUB>!\n\nCouple questions and summary of next steps as I understand them, please let me know if im on the right path:\n• I need to update the bootstrap scala flow to use InstrumentId instead of InstrumentConfiguration\n• Add governance logic to \n    ◦ `createCmd ProviderServiceRequest` , will be accepted by the Operator\n    ◦ `exerciseCmd providerServiceCid ProviderService_CreateProviderConfiguration`\n    ◦ `createCmd Credential` (offer and accept? from provider to registrar)\n    ◦ `createCmd RegistrarServiceRequest` and in the same step `exerciseCmd providerServiceCid ProviderService_AcceptRegistrarServiceRequest`\n    ◦ `exerciseCmd registrarServiceCid RegistrarService_CreateAllocationFactory`\n    ◦ `exerciseCmd registrarServiceCid RegistrarService_CreateInstrumentConfiguration` (can be same step as prev)\n    ◦ generic `createCmd UserService_OfferPaidCredential` for offering it to third parties. (this means I also need  `createCmd UserServiceRequest` in some step above, to onboard the dec-party as a `user` as well)\nI also just noticed, that there are two separate credential requirements in this flow (provider and instrument configuration), and one of them I kept empty. How come the instrument config didn't need holder requirements to work? Unless my script is incomplete somehow.\n\nAsync I also started looking at FeaturedApp flow again, but thats for another thread and PR",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751289497.261109",
+        "reply_count": 8,
+        "reply_users_count": 1,
+        "latest_reply": "1752152274.217359",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1751450120.626059"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1751900754.388109"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752148416.891569"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752150577.200049"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752151817.935279"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752151906.127669"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752152109.389219"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752152274.217359"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+gRkl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for the PR reviews, "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!\n\nCouple questions and summary of next steps as I understand them, please let me know if im on the right path:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I need to update the bootstrap scala flow to use InstrumentId instead of InstrumentConfiguration"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Add governance logic to "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "createCmd ProviderServiceRequest",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " , will be accepted by the Operator"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "exerciseCmd providerServiceCid ProviderService_CreateProviderConfiguration",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "createCmd Credential",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " (offer and accept? from provider to registrar)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "createCmd RegistrarServiceRequest",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " and in the same step "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "exerciseCmd providerServiceCid ProviderService_AcceptRegistrarServiceRequest",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "exerciseCmd registrarServiceCid RegistrarService_CreateAllocationFactory",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "exerciseCmd registrarServiceCid RegistrarService_CreateInstrumentConfiguration",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " (can be same step as prev)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "generic "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "createCmd UserService_OfferPaidCredential",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " for offering it to third parties. (this means I also need  "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "createCmd UserServiceRequest",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " in some step above, to onboard the dec-party as a "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "user",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " as well)"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nI also just noticed, that there are two separate credential requirements in this flow (provider and instrument configuration), and one of them I kept empty. How come the instrument config didn't need holder requirements to work? Unless my script is incomplete somehow.\n\nAsync I also started looking at FeaturedApp flow again, but thats for another thread and PR"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

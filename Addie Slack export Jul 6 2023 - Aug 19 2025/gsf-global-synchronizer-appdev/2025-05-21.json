@@ -1,0 +1,616 @@
+[
+    {
+        "text": "Hi <@U02SR6E8Z9S>, our team are working on but hit the following issues\ncc <@U0724J67GSE> <@U07BCVCFF9R> <@U072N8X8RR9>\n\n:one: Get \"dexs\"\nWe're working on this git: <https:\/\/github.com\/digital-asset\/daml-finance-app\/blob\/main\/ui\/src\/pages\/defi\/Exchange.tsx>\nCurrently, we can't get \"dexs\" for History (_*details on the attached images below*_), could you help check and advise for next steps?\n\n:two: Set up environment\nGit: <https:\/\/github.com\/hyperledger-labs\/splice>\nWe have set up the environments as instructed in the `DEVELOPMENT.md` file.\nHowever, whenever I run commands related to `sbt`, I encounter an error stating that the `DAML_COMPILER_VERSION` variable is missing.\nIs running both `start-canton.sh` and `start-frontends.sh` simultaneously the correct approach?\n\n```sbt damlBuild\n\n[info] welcome to sbt 1.10.11 (Azul Systems, Inc. Java 17.0.11)\n[info] loading settings for project splice-build-build-build from metals.sbt...\n[info] loading project definition from \/Volumes\/Myspace\/canton-network\/splice\/project\/project\/project\n[info] loading settings for project splice-build-build from metals.sbt...\n[info] loading project definition from \/Volumes\/Myspace\/canton-network\/splice\/project\/project\n[success] Generated .bloop\/splice-build-build.json\n[success] Total time: 1 s, completed May 21, 2025, 9:30:43 AM\n[info] loading settings for project splice-build from metals.sbt, plugins.sbt...\n[info] loading project definition from \/Volumes\/Myspace\/canton-network\/splice\/project\n[success] Generated .bloop\/splice-build.json\n[info] compiling 1 Scala source to \/Volumes\/Myspace\/canton-network\/splice\/project\/target\/scala-2.12\/sbt-1.0\/classes ...\n[success] Total time: 2 s, completed May 21, 2025, 9:30:45 AM\n[info] loading settings for project root from build.sbt...\n[info] resolving key references (116963 settings) ...\njava.lang.ExceptionInInitializerError\n        at Dependencies$.&lt;init&gt;(Dependencies.scala:7)\n        at Dependencies$.&lt;clinit&gt;(Dependencies.scala)\n        at BuildCommon$.$anonfun$sbtSettings$25(BuildCommon.scala:251)\n        at sbt.internal.util.Init$Value.$anonfun$apply$2(Settings.scala:922)\n        at sbt.internal.util.EvaluateSettings.$anonfun$constant$1(INode.scala:212)\n        at sbt.internal.util.EvaluateSettings$MixedNode.evaluate0(INode.scala:229)\n        at sbt.internal.util.EvaluateSettings$INode.evaluate(INode.scala:171)\n        at sbt.internal.util.EvaluateSettings.$anonfun$submitEvaluate$1(INode.scala:88)\n        at sbt.internal.util.EvaluateSettings.sbt$internal$util$EvaluateSettings$$run0(INode.scala:100)\n        at sbt.internal.util.EvaluateSettings$$anon$3.run(INode.scala:95)\n        at java.base\/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n        at java.base\/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n        at java.base\/java.lang.Thread.run(Thread.java:840)\nCaused by: java.util.NoSuchElementException: key not found: DAML_COMPILER_VERSION\n        at scala.collection.MapLike.default(MapLike.scala:236)\n        at scala.collection.MapLike.default$(MapLike.scala:235)\n        at scala.collection.AbstractMap.default(Map.scala:65)\n        at scala.collection.MapLike.apply(MapLike.scala:144)\n        at scala.collection.MapLike.apply$(MapLike.scala:143)\n        at scala.collection.AbstractMap.apply(Map.scala:65)\n        at CantonDependencies$.&lt;init&gt;(CantonDependencies.scala:14)\n        at CantonDependencies$.&lt;clinit&gt;(CantonDependencies.scala)\n        ... 13 more\n[error] java.lang.ExceptionInInitializerError\n[error] Use 'last' for the full log.\n[warn] Project loading failed: (r)etry, (q)uit, (l)ast, or (i)gnore? (default: r)```",
+        "files": [
+            {
+                "id": "F08T3MWSTRR",
+                "created": 1747823127,
+                "timestamp": 1747823127,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U07UEV3B9LP",
+                "user_team": "T072736KDTK",
+                "editable": false,
+                "size": 377556,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F08T3MWSTRR\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F08T3MWSTRR\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08T3MWSTRR-23f01dd4d0\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08T3MWSTRR-23f01dd4d0\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08T3MWSTRR-23f01dd4d0\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 149,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08T3MWSTRR-23f01dd4d0\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 199,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08T3MWSTRR-23f01dd4d0\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08T3MWSTRR-23f01dd4d0\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 299,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08T3MWSTRR-23f01dd4d0\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 332,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08T3MWSTRR-23f01dd4d0\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 398,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08T3MWSTRR-23f01dd4d0\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 425,
+                "original_w": 1889,
+                "original_h": 784,
+                "thumb_tiny": "AwATADCkPvUUdSaM\/SgBMUq\/KQcZxRmkzQBI0u5SNijPcCo6KKBt33A9aKD1ooEFFFFABRRRQB\/\/2Q==",
+                "permalink": "https:\/\/devlabscrew.slack.com\/files\/U05FZBDQ4RJ\/F08T3MWSTRR\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T072736KDTK-F08T3MWSTRR-d695083982",
+                "source_team": "T072736KDTK",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F08TQS487K3",
+                "created": 1747823173,
+                "timestamp": 1747823173,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U07UEV3B9LP",
+                "user_team": "T072736KDTK",
+                "editable": false,
+                "size": 188306,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F08TQS487K3\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F08TQS487K3\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TQS487K3-38fc7bb5ee\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TQS487K3-38fc7bb5ee\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TQS487K3-38fc7bb5ee\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 184,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TQS487K3-38fc7bb5ee\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 245,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TQS487K3-38fc7bb5ee\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TQS487K3-38fc7bb5ee\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 367,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TQS487K3-38fc7bb5ee\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 408,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TQS487K3-38fc7bb5ee\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 490,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TQS487K3-38fc7bb5ee\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 522,
+                "original_w": 1823,
+                "original_h": 930,
+                "thumb_tiny": "AwAYADCpknvQFJGaSpE+5VCG7D6il2\/5zTqKAGcjjNMYnFS7Q2fnReehNIUAGd6N7AmgBlPU\/L1phpR0pDsPz7ijPv8ApTKKLhYUgE5zSMo28Gil7Gi4WP\/Z",
+                "permalink": "https:\/\/devlabscrew.slack.com\/files\/U05FZBDQ4RJ\/F08TQS487K3\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T072736KDTK-F08TQS487K3-3f93a2ca3c",
+                "source_team": "T072736KDTK",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U07UEV3B9LP",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2fASE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02SR6E8Z9S"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", our team are working on but hit the following issues\ncc "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0724J67GSE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U07BCVCFF9R"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U072N8X8RR9"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "one",
+                                "unicode": "0031-fe0f-20e3"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Get \"dexs\"\nWe're working on this git: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/digital-asset\/daml-finance-app\/blob\/main\/ui\/src\/pages\/defi\/Exchange.tsx"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nCurrently, we can't get \"dexs\" for History ("
+                            },
+                            {
+                                "type": "text",
+                                "text": "details on the attached images below",
+                                "style": {
+                                    "bold": true,
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "), could you help check and advise for next steps?\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "two",
+                                "unicode": "0032-fe0f-20e3"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Set up environment\nGit: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nWe have set up the environments as instructed in the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "DEVELOPMENT.md",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " file.\nHowever, whenever I run commands related to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "sbt",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", I encounter an error stating that the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "DAML_COMPILER_VERSION",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " variable is missing.\nIs running both "
+                            },
+                            {
+                                "type": "text",
+                                "text": "start-canton.sh",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "start-frontends.sh",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " simultaneously the correct approach?\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "sbt damlBuild\n\n[info] welcome to sbt 1.10.11 (Azul Systems, Inc. Java 17.0.11)\n[info] loading settings for project splice-build-build-build from metals.sbt...\n[info] loading project definition from \/Volumes\/Myspace\/canton-network\/splice\/project\/project\/project\n[info] loading settings for project splice-build-build from metals.sbt...\n[info] loading project definition from \/Volumes\/Myspace\/canton-network\/splice\/project\/project\n[success] Generated .bloop\/splice-build-build.json\n[success] Total time: 1 s, completed May 21, 2025, 9:30:43 AM\n[info] loading settings for project splice-build from metals.sbt, plugins.sbt...\n[info] loading project definition from \/Volumes\/Myspace\/canton-network\/splice\/project\n[success] Generated .bloop\/splice-build.json\n[info] compiling 1 Scala source to \/Volumes\/Myspace\/canton-network\/splice\/project\/target\/scala-2.12\/sbt-1.0\/classes ...\n[success] Total time: 2 s, completed May 21, 2025, 9:30:45 AM\n[info] loading settings for project root from build.sbt...\n[info] resolving key references (116963 settings) ...\njava.lang.ExceptionInInitializerError\n        at Dependencies$.<init>(Dependencies.scala:7)\n        at Dependencies$.<clinit>(Dependencies.scala)\n        at BuildCommon$.$anonfun$sbtSettings$25(BuildCommon.scala:251)\n        at sbt.internal.util.Init$Value.$anonfun$apply$2(Settings.scala:922)\n        at sbt.internal.util.EvaluateSettings.$anonfun$constant$1(INode.scala:212)\n        at sbt.internal.util.EvaluateSettings$MixedNode.evaluate0(INode.scala:229)\n        at sbt.internal.util.EvaluateSettings$INode.evaluate(INode.scala:171)\n        at sbt.internal.util.EvaluateSettings.$anonfun$submitEvaluate$1(INode.scala:88)\n        at sbt.internal.util.EvaluateSettings.sbt$internal$util$EvaluateSettings$$run0(INode.scala:100)\n        at sbt.internal.util.EvaluateSettings$$anon$3.run(INode.scala:95)\n        at java.base\/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n        at java.base\/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n        at java.base\/java.lang.Thread.run(Thread.java:840)\nCaused by: java.util.NoSuchElementException: key not found: DAML_COMPILER_VERSION\n        at scala.collection.MapLike.default(MapLike.scala:236)\n        at scala.collection.MapLike.default$(MapLike.scala:235)\n        at scala.collection.AbstractMap.default(Map.scala:65)\n        at scala.collection.MapLike.apply(MapLike.scala:144)\n        at scala.collection.MapLike.apply$(MapLike.scala:143)\n        at scala.collection.AbstractMap.apply(Map.scala:65)\n        at CantonDependencies$.<init>(CantonDependencies.scala:14)\n        at CantonDependencies$.<clinit>(CantonDependencies.scala)\n        ... 13 more\n[error] java.lang.ExceptionInInitializerError\n[error] Use 'last' for the full log.\n[warn] Project loading failed: (r)etry, (q)uit, (l)ast, or (i)gnore? (default: r)"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1747823362.098329",
+        "client_msg_id": "a091fc37-eef9-42f5-b642-16a7c4fc254f",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1747823362.098329",
+        "reply_count": 6,
+        "reply_users_count": 2,
+        "latest_reply": "1747994852.803309",
+        "reply_users": [
+            "U07UEV3B9LP",
+            "U07BCVCFF9R"
+        ],
+        "replies": [
+            {
+                "user": "U07UEV3B9LP",
+                "ts": "1747826635.980289"
+            },
+            {
+                "user": "U07UEV3B9LP",
+                "ts": "1747829268.420999"
+            },
+            {
+                "user": "U07BCVCFF9R",
+                "ts": "1747881685.478039"
+            },
+            {
+                "user": "U07UEV3B9LP",
+                "ts": "1747915129.092759"
+            },
+            {
+                "user": "U07BCVCFF9R",
+                "ts": "1747990993.029299"
+            },
+            {
+                "user": "U07BCVCFF9R",
+                "ts": "1747994852.803309"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "1c23caa19749",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-18\/8187655966162_1c23caa19749aac52ecf_72.png",
+            "first_name": "Ngọc",
+            "real_name": "Ngọc Thuỳ",
+            "display_name": "Thuỳ",
+            "team": "T072736KDTK",
+            "name": "thuy.nguyen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U07UEV3B9LP",
+        "type": "message",
+        "ts": "1747826635.980289",
+        "client_msg_id": "d2c93609-1e5e-4c8a-bfdd-8b64f94d02f5",
+        "text": "&gt; Can you move you Splice question to <#C08PC19QZA9|>?\nYes, I'll route this to Splice\nthanks so much for your advise and information :blush:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "1c23caa19749",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-18\/8187655966162_1c23caa19749aac52ecf_72.png",
+            "first_name": "Ngọc",
+            "real_name": "Ngọc Thuỳ",
+            "display_name": "Thuỳ",
+            "team": "T072736KDTK",
+            "name": "thuy.nguyen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747823362.098329",
+        "parent_user_id": "U07UEV3B9LP",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kFCXR",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Can you move you Splice question to "
+                            },
+                            {
+                                "type": "channel",
+                                "channel_id": "C08PC19QZA9"
+                            },
+                            {
+                                "type": "text",
+                                "text": "?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, I'll route this to Splice\nthanks so much for your advise and information "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "blush",
+                                "unicode": "1f60a"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07UEV3B9LP",
+        "type": "message",
+        "ts": "1747829268.420999",
+        "client_msg_id": "bcbe22e7-693e-4978-808b-cfd9fe5231be",
+        "text": "<@U04BDUU197Z> really appreciate if you can advise us on the Daml Finance questions ^^",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "1c23caa19749",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-18\/8187655966162_1c23caa19749aac52ecf_72.png",
+            "first_name": "Ngọc",
+            "real_name": "Ngọc Thuỳ",
+            "display_name": "Thuỳ",
+            "team": "T072736KDTK",
+            "name": "thuy.nguyen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747823362.098329",
+        "parent_user_id": "U07UEV3B9LP",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SarWx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U04BDUU197Z"
+                            },
+                            {
+                                "type": "text",
+                                "text": " really appreciate if you can advise us on the Daml Finance questions ^^"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "<@U02SR6E8Z9S> In the *daml-finance-app* folder, I am using version *2.10.0*. However, the default SDK version for new projects is *3.2.0-snapshot.20241106.0*",
+        "files": [
+            {
+                "id": "F08TJG7DAG2",
+                "created": 1747881416,
+                "timestamp": 1747881416,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U07BCVCFF9R",
+                "user_team": "T072736KDTK",
+                "editable": false,
+                "size": 10469,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F08TJG7DAG2\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F08TJG7DAG2\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TJG7DAG2-afe5544baf\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TJG7DAG2-afe5544baf\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TJG7DAG2-afe5544baf\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 53,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TJG7DAG2-afe5544baf\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 70,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TJG7DAG2-afe5544baf\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "original_w": 521,
+                "original_h": 76,
+                "thumb_tiny": "AwAHADCmpJXtmkw\/rQnSn9zQBGcg4JxRn\/a\/SiT71NHWgB2f9r9KacdjmiigD\/\/Z",
+                "permalink": "https:\/\/devlabscrew.slack.com\/files\/U05FZBDQ4RJ\/F08TJG7DAG2\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T072736KDTK-F08TJG7DAG2-676a23987c",
+                "source_team": "T072736KDTK",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F08TEFCFPFF",
+                "created": 1747881664,
+                "timestamp": 1747881664,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U07BCVCFF9R",
+                "user_team": "T072736KDTK",
+                "editable": false,
+                "size": 11807,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F08TEFCFPFF\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F08TEFCFPFF\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TEFCFPFF-6e3b90923c\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TEFCFPFF-6e3b90923c\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TEFCFPFF-6e3b90923c\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 54,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TEFCFPFF-6e3b90923c\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 72,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F08TEFCFPFF-6e3b90923c\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "original_w": 521,
+                "original_h": 78,
+                "thumb_tiny": "AwAHADCouSvajY\/qKWP7op\/enYRCVYHGaMN609vvfhSH71IZHtNBGKcKR6AP\/9k=",
+                "permalink": "https:\/\/devlabscrew.slack.com\/files\/U05FZBDQ4RJ\/F08TEFCFPFF\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T072736KDTK-F08TEFCFPFF-5ee4afc316",
+                "source_team": "T072736KDTK",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U07BCVCFF9R",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SBYY0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U02SR6E8Z9S"
+                            },
+                            {
+                                "type": "text",
+                                "text": " In the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "daml-finance-app",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " folder, I am using version "
+                            },
+                            {
+                                "type": "text",
+                                "text": "2.10.0",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". However, the default SDK version for new projects is "
+                            },
+                            {
+                                "type": "text",
+                                "text": "3.2.0-snapshot.20241106.0",
+                                "style": {
+                                    "bold": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1747881685.478039",
+        "client_msg_id": "0fc3f0de-5757-4d31-9e86-8568613fd829",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1747823362.098329",
+        "parent_user_id": "U07UEV3B9LP",
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "b9ba3b81041e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-07-11\/7407563435618_b9ba3b81041e797489a6_72.jpg",
+            "first_name": "Vu",
+            "real_name": "Vu Thanh Thao",
+            "display_name": "Vu Thanh Thao",
+            "team": "T072736KDTK",
+            "name": "thao.vu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

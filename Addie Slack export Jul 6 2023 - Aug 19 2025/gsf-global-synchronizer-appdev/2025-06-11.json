@@ -1,0 +1,258 @@
+[
+    {
+        "user": "U06LMNHCGHJ",
+        "type": "message",
+        "ts": "1749646189.193989",
+        "client_msg_id": "432f1ace-2dd4-42fd-8764-14a4e9bfb437",
+        "text": "Hey folks,\nIs anyone aware of any limits on creation of external parties per a single node\/validator?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "dfa8e066936b",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-18\/7292057193395_dfa8e066936b4a6ad82e_72.jpg",
+            "first_name": "Yury",
+            "real_name": "Yury Korzun",
+            "display_name": "yury.korzun",
+            "team": "T04NVD19L",
+            "name": "yury.korzun",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5FDIx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey folks,\nIs anyone aware of any limits on creation of external parties per a single node\/validator?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U05MA5XENTC",
+        "type": "message",
+        "ts": "1749647205.846449",
+        "client_msg_id": "2e59ce4d-ce75-4270-8375-f6e1f48af9c9",
+        "text": "Hello! I'm experiencing an issue creating a namespace delegation for external signing under Sandbox and a local node environment.\nI've rewritten the source-code from <https:\/\/docs.digitalasset-staging.com\/build\/3.3\/tutorials\/app-dev\/external_signing_onboarding#> to work in TypeScript, and it all seems to be going well, but when I submit the first transaction it fails immediately, telling me the signer key is not authorized - it seems counter-intuitive, because this transaction would be the one registering the signer key. I've copied the tutorial closely, besides that I'm using ED25519 signing. I create a key, I sign the hash of the namespace delegation transaction, and it gets submitted to the gRPC Admin API.\nWhat could I be doing wrong? Can someone help me debug this please? Thank you!\n\n025-06-09 09:34:59,305 [canton-env-ec-44] WARN  c.d.c.p.s.m.InMemorySyncPersistentState$$anon$1:participant=sandbox\/synchronizerId=mysynchronizer::1220aab437f5 - TOPOLOGY_UNAUTHORIZED_TRANSACTION(5,0): Topology transaction is not properly authorized: No delegation found for keys 12200c2778b0... err-context:{location=TopologyTransactionRejection.scala:35, reason=No delegation found for keys 12200c2778b0...}",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4LGZSN83",
+        "source_team": "T4LGZSN83",
+        "user_profile": {
+            "avatar_hash": "a0550ddca680",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-21\/8804955418144_a0550ddca68034292df8_72.jpg",
+            "first_name": "Helena",
+            "real_name": "Helena Assis",
+            "display_name": "Helena Assis",
+            "team": "T4LGZSN83",
+            "name": "hassis",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749647205.846449",
+        "reply_count": 4,
+        "reply_users_count": 2,
+        "latest_reply": "1755520879.463679",
+        "reply_users": [
+            "U05MA5XENTC",
+            "U08987JD1J9"
+        ],
+        "replies": [
+            {
+                "user": "U05MA5XENTC",
+                "ts": "1749655180.368139"
+            },
+            {
+                "user": "U05MA5XENTC",
+                "ts": "1749655890.377989"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755198945.376369"
+            },
+            {
+                "user": "U05MA5XENTC",
+                "ts": "1755520879.463679"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9DJ3+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello! I'm experiencing an issue creating a namespace delegation for external signing under Sandbox and a local node environment.\nI've rewritten the source-code from "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.digitalasset-staging.com\/build\/3.3\/tutorials\/app-dev\/external_signing_onboarding#"
+                            },
+                            {
+                                "type": "text",
+                                "text": " to work in TypeScript, and it all seems to be going well, but when I submit the first transaction it fails immediately, telling me the signer key is not authorized - it seems counter-intuitive, because this transaction would be the one registering the signer key. I've copied the tutorial closely, besides that I'm using ED25519 signing. I create a key, I sign the hash of the namespace delegation transaction, and it gets submitted to the gRPC Admin API.\nWhat could I be doing wrong? Can someone help me debug this please? Thank you!\n\n025-06-09 09:34:59,305 [canton-env-ec-44] WARN  c.d.c.p.s.m.InMemorySyncPersistentState$$anon$1:participant=sandbox\/synchronizerId=mysynchronizer::1220aab437f5 - TOPOLOGY_UNAUTHORIZED_TRANSACTION(5,0): Topology transaction is not properly authorized: No delegation found for keys 12200c2778b0... err-context:{location=TopologyTransactionRejection.scala:35, reason=No delegation found for keys 12200c2778b0...}"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U05MA5XENTC",
+        "type": "message",
+        "ts": "1749655180.368139",
+        "edited": {
+            "user": "U05MA5XENTC",
+            "ts": "1749655263.000000"
+        },
+        "client_msg_id": "b06f92e8-cb29-4269-9444-6bedce2d0881",
+        "text": "Taking a look here, I got stuck at 2 things:\n• I can't seem to find the .\/interactive_topology_util.sh, there's a .py version but it has no implementation for compute_canton_fingerprint_from_base64\n• I initially got issues using secp256r1, but if I change to ED25519 my transactions went through (before they were being outright denied). My biggest focus was  on this fingerprint function and I do believe it is correct, I want to test it to make sure but I think I'm misunderstanding some part of the process.\nThanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4LGZSN83",
+        "source_team": "T4LGZSN83",
+        "user_profile": {
+            "avatar_hash": "a0550ddca680",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-21\/8804955418144_a0550ddca68034292df8_72.jpg",
+            "first_name": "Helena",
+            "real_name": "Helena Assis",
+            "display_name": "Helena Assis",
+            "team": "T4LGZSN83",
+            "name": "hassis",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749647205.846449",
+        "parent_user_id": "U05MA5XENTC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PZrzr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Taking a look here, I got stuck at 2 things:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I can't seem to find the .\/interactive_topology_util.sh, there's a .py version but it has no implementation for compute_canton_fingerprint_from_base64"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I initially got issues using secp256r1, but if I change to ED25519 my transactions went through (before they were being outright denied). My biggest focus was  on this fingerprint function and I do believe it is correct, I want to test it to make sure but I think I'm misunderstanding some part of the process."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U03NCGBFCDP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U05MA5XENTC",
+        "type": "message",
+        "ts": "1749655890.377989",
+        "client_msg_id": "bc24bc9a-cfe1-4873-b472-ea5bcac4468a",
+        "text": "Initially I got confused and used secp256k1, Im using the elliptic library. I then realised and changed to P256, but no matter the format I provided the signature (DER, RAW) the transaction would get denied with a signature does not match. This is unimportant now as we can use ED25519 with no issues.\nBut after changing to ED25519 I actually got it to stop crashing at the signature stage and answer with the new TOPOLOGY_UNAUTHORIZER error.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4LGZSN83",
+        "source_team": "T4LGZSN83",
+        "user_profile": {
+            "avatar_hash": "a0550ddca680",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-21\/8804955418144_a0550ddca68034292df8_72.jpg",
+            "first_name": "Helena",
+            "real_name": "Helena Assis",
+            "display_name": "Helena Assis",
+            "team": "T4LGZSN83",
+            "name": "hassis",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749647205.846449",
+        "parent_user_id": "U05MA5XENTC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "V3skj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Initially I got confused and used secp256k1, Im using the elliptic library. I then realised and changed to P256, but no matter the format I provided the signature (DER, RAW) the transaction would get denied with a signature does not match. This is unimportant now as we can use ED25519 with no issues.\nBut after changing to ED25519 I actually got it to stop crashing at the signature stage and answer with the new TOPOLOGY_UNAUTHORIZER error."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

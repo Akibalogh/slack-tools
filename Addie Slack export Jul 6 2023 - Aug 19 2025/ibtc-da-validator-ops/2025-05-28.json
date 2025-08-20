@@ -1,0 +1,548 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748419751.693909",
+        "client_msg_id": "1e418049-c85c-4d15-8319-b0a825ca9a35",
+        "text": "Thanks for brainstorming with us on this yesterday :slightly_smiling_face:  We are clearing some things up, formalize it a bit again, and i'll send it over. (We are moving to a hybrid solution, incl setting pendingBalance on WDR creation, like you recommended)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748008267.844919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vCPlR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for brainstorming with us on this yesterday "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            },
+                            {
+                                "type": "text",
+                                "text": "  We are clearing some things up, formalize it a bit again, and i'll send it over. (We are moving to a hybrid solution, incl setting pendingBalance on WDR creation, like you recommended)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748430068.100349",
+        "client_msg_id": "ffd3b52d-ea2d-438d-84a9-87c7c784869e",
+        "text": "Hey <@UMW95BAT1> <@U9V802QQ6> <@UEHLS0JUB>! :slightly_smiling_face:\n\nHow do I pass in such complex types through the JSON API such as these ActionRequiringConfirmation?\n\n```data ActionRequiringConfirmation\n  = GovernanceConfirmationAction IBTCRulesGovernanceAction\n  | DepositConfirmationAction\n      {\n        depositConfirmationId : ContractId IBTCDepositAccount,\n        depositConfirmationAction : IBTCDepositAccount_CompleteDeposit\n      }\n  | WithdrawConfirmationAction\n      {\n        withdrawConfirmationId : ContractId IBTCWithdrawAccount,\n        withdrawConfirmationAction : IBTCWithdrawConfirmationAction\n      }\n  deriving (Show, Eq)```\nWhen I do\n```{\n    \"commands\": [\n        {\n            \"ExerciseCommand\": {\n                \"templateId\": \"{{govRulesFullTemplate}}\",\n                \"contractId\": \"{{govRulesContractId}}\",\n                \"choice\": \"IBTCGovernanceRules_ConfirmAction\",\n                \"choiceArgument\": {\n                    \"confirmer\": \"{{coordinatorParty}}\",\n                    \"action\": {\n                        \"DepositConfirmationAction\": {\n                            \"depositConfirmationId\": \"{{daContractId}}\",\n                            \"depositConfirmationAction\": {\n                                \"amount\": 2.0,\n                                \"bitcoinBlock\": 111\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    ],\n    \"actAs\": [\n        \"{{coordinatorParty}}\"\n    ],\n    \"userId\": \"app2\",\n    \"commandId\": \"cmd1235\",\n    \"disclosedContracts\": [\n        {\n            \"templateId\": \"{{govRulesTemplateId}}\",\n            \"contractId\": \"{{govRulesContractId}}\",\n            \"createdEventBlob\": \"{{govRulesCreatedEventBlob}}\",\n            \"synchronizerId\": \"\"\n        }\n    ]\n}```\nI get\n```{\n    \"code\": \"LEDGER_API_INTERNAL_ERROR\",\n    \"cause\": \"key not found: tag\",\n    \"correlationId\": null,\n    \"traceId\": null,\n    \"context\": {\n        \"throwableO\": \"Some(java.util.NoSuchElementException: key not found: tag)\"\n    },\n    \"resources\": [],\n    \"errorCategory\": 4,\n    \"grpcCodeValue\": 13,\n    \"retryInfo\": null,\n    \"definiteAnswer\": false\n}```\nWhich makes me think it's rather a problem with the Contracts themselves, but `daml test`s are green using this flow, so probably not?\nIn DAML its `confirmations &lt;- map (.confirmationCid) &lt;$&gt; mapA (\\p -&gt; submitWithDisclosures p [ibtcGovernanceRulesD] $ exerciseCmd ibtcGovernanceRules (IBTCGovernanceRules_ConfirmAction p action)) attestors` where `action` is\n```[...] DepositConfirmationAction with\n    depositConfirmationId\n    depositConfirmationAction = IBTCDepositAccount_CompleteDeposit with\n      amount = 42.0\n      bitcoinBlock = 1000```\nI also tried\n```                     \"action\": {\n                         \"ActionRequiringConfirmation\": {\n                             \"DepositConfirmationAction\": {\n                                 \"depositConfirmationId\": \"{{daContractId}}\",\n                                 \"depositConfirmationAction\": {\n                                     \"amount\": 2.0,\n                                     \"bitcoinBlock\": 111\n                                 }\n                             }\n                         }\n                     }```\nAnd just\n```                    \"action\": {\n                        \"depositConfirmationId\": \"{{daContractId}}\",\n                        \"depositConfirmationAction\": {\n                            \"amount\": 2.0,\n                            \"bitcoinBlock\": 111\n                        }\n                    }```\nAnd recreating a whole Exercise call and variations of this which was obviously a stretch:\n```                    \"action\": {\n                        \"depositConfirmationId\": \"{{daContractId}}\",\n                        \"depositConfirmationAction\": {\n                            \"ExerciseCommand\": {\n                                \"templateId\": \"#dibtc:IBTC.DepositAccount:IBTCDepositAccount\",\n                                \"contractId\": \"{{daContractId}}\",\n                                \"choice\": \"IBTCDepositAccount_CompleteDeposit\",\n                                \"choiceArgument\": {\n                                    \"amount\": 2.0,\n                                    \"bitcoinBlock\": 1000\n                                }\n                            }\n                        }\n                    }```\nI can share canton logs as well but maybe the answer is obvious to you from this alone. Thank you :pray:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748430068.100349",
+        "reply_count": 4,
+        "reply_users_count": 1,
+        "latest_reply": "1748439904.669979",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748430214.670089"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748430216.013309"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748433365.422399"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748439904.669979"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ggqxo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UMW95BAT1"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U9V802QQ6"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": "! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nHow do I pass in such complex types through the JSON API such as these ActionRequiringConfirmation?\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "data ActionRequiringConfirmation\n  = GovernanceConfirmationAction IBTCRulesGovernanceAction\n  | DepositConfirmationAction\n      {\n        depositConfirmationId : ContractId IBTCDepositAccount,\n        depositConfirmationAction : IBTCDepositAccount_CompleteDeposit\n      }\n  | WithdrawConfirmationAction\n      {\n        withdrawConfirmationId : ContractId IBTCWithdrawAccount,\n        withdrawConfirmationAction : IBTCWithdrawConfirmationAction\n      }\n  deriving (Show, Eq)"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nWhen I do\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"commands\": [\n        {\n            \"ExerciseCommand\": {\n                \"templateId\": \"{{govRulesFullTemplate}}\",\n                \"contractId\": \"{{govRulesContractId}}\",\n                \"choice\": \"IBTCGovernanceRules_ConfirmAction\",\n                \"choiceArgument\": {\n                    \"confirmer\": \"{{coordinatorParty}}\",\n                    \"action\": {\n                        \"DepositConfirmationAction\": {\n                            \"depositConfirmationId\": \"{{daContractId}}\",\n                            \"depositConfirmationAction\": {\n                                \"amount\": 2.0,\n                                \"bitcoinBlock\": 111\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    ],\n    \"actAs\": [\n        \"{{coordinatorParty}}\"\n    ],\n    \"userId\": \"app2\",\n    \"commandId\": \"cmd1235\",\n    \"disclosedContracts\": [\n        {\n            \"templateId\": \"{{govRulesTemplateId}}\",\n            \"contractId\": \"{{govRulesContractId}}\",\n            \"createdEventBlob\": \"{{govRulesCreatedEventBlob}}\",\n            \"synchronizerId\": \"\"\n        }\n    ]\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I get\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"code\": \"LEDGER_API_INTERNAL_ERROR\",\n    \"cause\": \"key not found: tag\",\n    \"correlationId\": null,\n    \"traceId\": null,\n    \"context\": {\n        \"throwableO\": \"Some(java.util.NoSuchElementException: key not found: tag)\"\n    },\n    \"resources\": [],\n    \"errorCategory\": 4,\n    \"grpcCodeValue\": 13,\n    \"retryInfo\": null,\n    \"definiteAnswer\": false\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nWhich makes me think it's rather a problem with the Contracts themselves, but "
+                            },
+                            {
+                                "type": "text",
+                                "text": "daml test",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "s are green using this flow, so probably not?\nIn DAML its "
+                            },
+                            {
+                                "type": "text",
+                                "text": "confirmations <- map (.confirmationCid) <$> mapA (\\p -> submitWithDisclosures p [ibtcGovernanceRulesD] $ exerciseCmd ibtcGovernanceRules (IBTCGovernanceRules_ConfirmAction p action)) attestors",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " where "
+                            },
+                            {
+                                "type": "text",
+                                "text": "action",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "[...] DepositConfirmationAction with\n    depositConfirmationId\n    depositConfirmationAction = IBTCDepositAccount_CompleteDeposit with\n      amount = 42.0\n      bitcoinBlock = 1000"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nI also tried\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "                     \"action\": {\n                         \"ActionRequiringConfirmation\": {\n                             \"DepositConfirmationAction\": {\n                                 \"depositConfirmationId\": \"{{daContractId}}\",\n                                 \"depositConfirmationAction\": {\n                                     \"amount\": 2.0,\n                                     \"bitcoinBlock\": 111\n                                 }\n                             }\n                         }\n                     }"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And just\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "                    \"action\": {\n                        \"depositConfirmationId\": \"{{daContractId}}\",\n                        \"depositConfirmationAction\": {\n                            \"amount\": 2.0,\n                            \"bitcoinBlock\": 111\n                        }\n                    }"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And recreating a whole Exercise call and variations of this which was obviously a stretch:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "                    \"action\": {\n                        \"depositConfirmationId\": \"{{daContractId}}\",\n                        \"depositConfirmationAction\": {\n                            \"ExerciseCommand\": {\n                                \"templateId\": \"#dibtc:IBTC.DepositAccount:IBTCDepositAccount\",\n                                \"contractId\": \"{{daContractId}}\",\n                                \"choice\": \"IBTCDepositAccount_CompleteDeposit\",\n                                \"choiceArgument\": {\n                                    \"amount\": 2.0,\n                                    \"bitcoinBlock\": 1000\n                                }\n                            }\n                        }\n                    }"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I can share canton logs as well but maybe the answer is obvious to you from this alone. Thank you "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray",
+                                "unicode": "1f64f"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748430214.670089",
+        "client_msg_id": "f36bcea8-5f52-42d5-ba1b-a3ace845e306",
+        "text": "Ah thank you I didn't find these docs",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748430068.100349",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Xy\/An",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ah thank you I didn't find these docs"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748430216.013309",
+        "client_msg_id": "3818dc97-8078-4678-9032-6e631c2af49d",
+        "text": "checking!!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748430068.100349",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "j\/bPr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "checking!!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748433365.422399",
+        "client_msg_id": "4d1b5b00-ed8a-4560-aa9c-aabd4a0d799d",
+        "text": "Awesome, works, thanks a lot",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748430068.100349",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yO3u\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Awesome, works, thanks a lot"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "partying_face",
+                "users": [
+                    "UEHLS0JUB"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "Governance module-based minting is fully mapped out, feels good",
+        "files": [
+            {
+                "id": "F08UQ4AU681",
+                "created": 1748439798,
+                "timestamp": 1748439798,
+                "name": "Screenshot 2025-05-28 at 15.43.11.png",
+                "title": "Screenshot 2025-05-28 at 15.43.11.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 48919,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08UQ4AU681\/screenshot_2025-05-28_at_15.43.11.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08UQ4AU681\/download\/screenshot_2025-05-28_at_15.43.11.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08UQ4AU681-4b51c8fecd\/screenshot_2025-05-28_at_15.43.11_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08UQ4AU681-4b51c8fecd\/screenshot_2025-05-28_at_15.43.11_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08UQ4AU681-4b51c8fecd\/screenshot_2025-05-28_at_15.43.11_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 261,
+                "thumb_360_h": 360,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08UQ4AU681-4b51c8fecd\/screenshot_2025-05-28_at_15.43.11_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "original_w": 347,
+                "original_h": 478,
+                "thumb_tiny": "AwAwACLRP+eaRevb86U\/55pN2O4\/76oAdRTd30\/OndaAIz1NJSnqaSgCQ03PufzFONJ+f5CgAHPc\/nThTeff9KUdKAGHqaSpNoNGwUAB\/wA8U3HHT\/x2lOf8ikx9PyNABj2\/8dpy9P8A62KQKR02\/lS\/N6j8qAFooooA\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08UQ4AU681\/screenshot_2025-05-28_at_15.43.11.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08UQ4AU681-3b2bc4c963",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "67N48",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Governance module-based minting is fully mapped out, feels good"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1748439904.669979",
+        "client_msg_id": "afe9e1ce-7cc8-410c-a74d-300bc672fd21",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1748430068.100349",
+        "parent_user_id": "U088UV6MKFE",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "reactions": [
+            {
+                "name": "wohoo",
+                "users": [
+                    "UEHLS0JUB"
+                ],
+                "count": 1
+            },
+            {
+                "name": "tada",
+                "users": [
+                    "U03HMUTQ5F0"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

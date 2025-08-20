@@ -4,11 +4,12 @@ A comprehensive tool for analyzing Slack conversations and calculating sales com
 
 ## Features
 
-- **Slack Data Analysis**: Analyzes private Slack channels ending with '-bitsafe' for sales deal tracking
+- **Multi-Platform Data Analysis**: Analyzes both Slack channels ending with '-bitsafe' AND Telegram group conversations for comprehensive sales tracking
+- **Telegram Integration**: **NEW!** Processes Telegram HTML export data to capture conversations not available in Slack
 - **Commission Calculation**: Calculates commission splits based on deal stage participation, message activity, and **in-person meeting contributions**
-- **Stage Detection**: Identifies deal stages using keyword matching and confidence scoring
-- **Google Calendar Integration**: **NEW!** Incorporates in-person meeting data from Google Calendar to provide complete sales activity tracking
-- **Strategic Context Analysis**: **NEW!** Recognizes the difference between tactical execution and strategic relationship building
+- **Stage Detection**: Identifies deal stages using keyword matching and confidence scoring across both Slack and Telegram
+- **Google Calendar Integration**: Incorporates in-person meeting data from Google Calendar to provide complete sales activity tracking
+- **Strategic Context Analysis**: Recognizes the difference between tactical execution and strategic relationship building
 - **Output Generation**: Creates detailed commission reports, justifications, and rationale files
 - **25% Rounding**: Ensures commission percentages are rounded to nearest 25% and sum to 100%
 
@@ -32,6 +33,41 @@ The system now includes **Google Calendar integration** and **strategic context 
 - **Credit Distribution**: Aki gets primary meeting credit, Addie gets supporting credit
 
 This rule ensures that strategic leadership and relationship ownership are properly recognized in commission calculations.
+
+## Telegram Integration
+
+**NEW!** The system now integrates Telegram conversation data alongside Slack data for comprehensive sales activity tracking:
+
+### How It Works
+
+1. **HTML Export Processing**: Parses Telegram HTML export files from `data/telegram/DataExport_2025-08-19/`
+2. **Company Matching**: Maps 82 HubSpot CRM companies to their corresponding Telegram groups
+3. **Message Analysis**: Processes Telegram messages for stage detection using the same keywords as Slack
+4. **Team Member Mapping**: Identifies internal team members by both Slack IDs and display names
+5. **Combined Analysis**: Integrates Telegram data with Slack and Calendar data for complete commission calculation
+
+### Telegram Group Patterns
+
+Most Telegram groups follow these naming patterns:
+- `Company <> BitSafe (iBTC, CBTC)` - Most common
+- `Company <> iBTC` - Second most common  
+- `Company / BitSafe` - Alternative format
+- `Company - Other` - Rare cases
+
+### Data Coverage
+
+- **Total HubSpot Companies**: 235
+- **Telegram Matches**: 82 companies (34.9% match rate)
+- **Key Companies**: P2P, ChainSafe, Copper, 7Ridge, Hashkey Cloud, Launchnodes, Republic, Gemini, BitGo, and many more
+
+### Impact on Commission Analysis
+
+Telegram integration provides a more complete picture of sales activities, especially for companies where:
+- Slack channels were deleted or not created
+- Primary communication happened via Telegram
+- International customers preferred Telegram over Slack
+
+**Example**: P2P analysis shows Aki with 77 Telegram messages vs minimal Slack activity, providing a much more accurate commission split.
 
 ### Strategic Context Analysis
 

@@ -1,0 +1,373 @@
+[
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1740650014.353219",
+        "client_msg_id": "8057ceb2-e969-4055-903c-570f008dd559",
+        "text": "Interrested to expose API ports with docker-compose deployment too. Bridge mode is no good for dynamic FW rules too. Would prefer to have host networking",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1740604575.748939",
+        "parent_user_id": "U06AKTJ3DP0",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lmWRK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Interrested to expose API ports with docker-compose deployment too. Bridge mode is no good for dynamic FW rules too. Would prefer to have host networking"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "tombstone",
+        "text": "This message was deleted.",
+        "user": "USLACKBOT",
+        "hidden": true,
+        "type": "message",
+        "ts": "1740655168.866699",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T03T53E10",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1740655168.866699",
+        "parent_user_id": "USLACKBOT",
+        "reply_count": 4,
+        "reply_users_count": 2,
+        "latest_reply": "1741391933.803079",
+        "reply_users": [
+            "U033CR4D6GK",
+            "U08987JD1J9"
+        ],
+        "replies": [
+            {
+                "user": "U033CR4D6GK",
+                "ts": "1740674356.067099"
+            },
+            {
+                "user": "U033CR4D6GK",
+                "ts": "1740679780.168909"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1741391630.313949"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1741391933.803079"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "user": "U033CR4D6GK",
+        "type": "message",
+        "ts": "1740674356.067099",
+        "client_msg_id": "7eeef168-4a13-4906-b4b7-1cad56147656",
+        "text": "Are there docs of the steps for a validator to follow during a network reset?\nAll I found was mention that resets happen every 3 months on DevNet at <https:\/\/docs.dev.sync.global\/validator_operator\/validator_onboarding.html>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T2DD6ACGP",
+        "source_team": "T2DD6ACGP",
+        "user_profile": {
+            "avatar_hash": "3bdf4f20970e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-20\/5612468535042_3bdf4f20970edeae39bf_72.png",
+            "first_name": "Chad",
+            "real_name": "Chad Clark",
+            "display_name": "Chad Clark",
+            "team": "T2DD6ACGP",
+            "name": "cclark",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1740655168.866699",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nyV\/1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Are there docs of the steps for a validator to follow during a network reset?\nAll I found was mention that resets happen every 3 months on DevNet at "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/validator_operator\/validator_onboarding.html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F08FES9C10C",
+                "mode": "tombstone"
+            }
+        ],
+        "upload": false,
+        "user": "U0821PFKM0V",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1740674798.454079"
+    },
+    {
+        "user": "U033CR4D6GK",
+        "type": "message",
+        "ts": "1740679780.168909",
+        "client_msg_id": "b6b54c30-54cc-46e2-a361-904c28733eba",
+        "text": "For a validator running in Kubernetes could that be done by: scale all the pods to zero, delete the database in postgres (or maybe `helm uninstall` instead), edit all the yaml files with the new MIGRATION_ID, and run the `helm upgrade` commands?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T2DD6ACGP",
+        "source_team": "T2DD6ACGP",
+        "user_profile": {
+            "avatar_hash": "3bdf4f20970e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-20\/5612468535042_3bdf4f20970edeae39bf_72.png",
+            "first_name": "Chad",
+            "real_name": "Chad Clark",
+            "display_name": "Chad Clark",
+            "team": "T2DD6ACGP",
+            "name": "cclark",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1740655168.866699",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OPCGK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "For a validator running in Kubernetes could that be done by: scale all the pods to zero, delete the database in postgres (or maybe "
+                            },
+                            {
+                                "type": "text",
+                                "text": "helm uninstall",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " instead), edit all the yaml files with the new MIGRATION_ID, and run the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "helm upgrade",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " commands?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*Kiln.fi* has joined this channel by invitation from *Global Synchronizer Foundation*.",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1740685696.773989",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/vH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Kiln.fi",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " has joined this channel by invitation from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Global Synchronizer Foundation",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U07G9D6TERE",
+        "type": "message",
+        "ts": "1740692039.712869",
+        "client_msg_id": "4997792a-f9d3-44b3-8eae-9ec569063d83",
+        "text": "I was trying to migrate one of our dev validators, but it kept failing and I was able to find this in the participant logs before the validator fails. Is the 500 coming from the Proof-Group-1 sequencer causing the validator not to start?\n\n```{\"@timestamp\":\"2025-02-27T21:25:44.498Z\",\"@version\":\"1\",\"message\":\"The operation 'global\/Proof-Group-1: com.digitalasset.canton.common.domain.grpc.SequencerInfoLoader.getBootstrapInfoDomainParametersWithRetry' was not successful. New kind of error: no success error (request infinite retries). Retrying after 3s. Result: Outcome(Left(DomainIsNotAvailableError(Domain 'global',Request failed for global. Is the server running? Did you configure the server address as 0.0.0.0? Are you using the right TLS settings? (details logged as DEBUG)\\n GrpcServiceUnavailable: UNAVAILABLE\/Health-check stream unexpectedly closed with Status{code=UNKNOWN, description=HTTP status code 500\\ninvalid content-type: text\/plain; charset=utf-8\\nheaders: Metadata(:status=500,content-type=text\/plain; charset=utf-8,date=Thu, 27 Feb 2025 21:25:44 GMT,content-length=21)\\nDATA-----------------------------\\nInternal Server Error, cause=null} for 'sequencer-health-check-service'\\n Request: get domain id and sequencer id))). \",\"logger_name\":\"c.d.c.c.d.g.SequencerInfoLoader:participant=participant\",\"thread_name\":\"canton-env-ec-71\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"a1ac112e069f7d5a1b80ae74e55c0788\"}```",
+        "team": "T05FWTX7PMG",
+        "user_team": "E06GBCB2YEB",
+        "source_team": "E06GBCB2YEB",
+        "user_profile": {
+            "avatar_hash": "g2b3fb5bcfe3",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/2b3fb5bcfe3e20b94d8d94fc75a69795.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0014-72.png",
+            "first_name": "Moustafa",
+            "real_name": "Moustafa Amer",
+            "display_name": "Moustafa Amer",
+            "team": "E06GBCB2YEB",
+            "name": "moustafa.amer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1740692039.712869",
+        "reply_count": 0,
+        "reply_users_count": 0,
+        "latest_reply": "0000000000.000000",
+        "reply_users": [],
+        "replies": [],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "naK\/J",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I was trying to migrate one of our dev validators, but it kept failing and I was able to find this in the participant logs before the validator fails. Is the 500 coming from the Proof-Group-1 sequencer causing the validator not to start?\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"@timestamp\":\"2025-02-27T21:25:44.498Z\",\"@version\":\"1\",\"message\":\"The operation 'global\/Proof-Group-1: com.digitalasset.canton.common.domain.grpc.SequencerInfoLoader.getBootstrapInfoDomainParametersWithRetry' was not successful. New kind of error: no success error (request infinite retries). Retrying after 3s. Result: Outcome(Left(DomainIsNotAvailableError(Domain 'global',Request failed for global. Is the server running? Did you configure the server address as 0.0.0.0? Are you using the right TLS settings? (details logged as DEBUG)\\n GrpcServiceUnavailable: UNAVAILABLE\/Health-check stream unexpectedly closed with Status{code=UNKNOWN, description=HTTP status code 500\\ninvalid content-type: text\/plain; charset=utf-8\\nheaders: Metadata(:status=500,content-type=text\/plain; charset=utf-8,date=Thu, 27 Feb 2025 21:25:44 GMT,content-length=21)\\nDATA-----------------------------\\nInternal Server Error, cause=null} for 'sequencer-health-check-service'\\n Request: get domain id and sequencer id))). \",\"logger_name\":\"c.d.c.c.d.g.SequencerInfoLoader:participant=participant\",\"thread_name\":\"canton-env-ec-71\",\"level\":\"INFO\",\"level_value\":20000,\"trace-id\":\"a1ac112e069f7d5a1b80ae74e55c0788\"}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*Otc* has joined this channel by invitation from *Global Synchronizer Foundation*.",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1740703162.941099",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "=k2k",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Otc",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " has joined this channel by invitation from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Global Synchronizer Foundation",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

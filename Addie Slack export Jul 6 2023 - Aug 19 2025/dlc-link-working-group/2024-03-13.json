@@ -1,0 +1,132 @@
+[
+    {
+        "user": "U05D57K22R1",
+        "type": "message",
+        "ts": "1710324356.726419",
+        "client_msg_id": "32432427-7a3a-4a57-b6ce-f5d7093023e1",
+        "text": "Hi team :wave:\n\nI'm working on some UI updates for Leather and I need help triggering the DLC link popup. Can anybody advise?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GSUTPJ2D",
+        "source_team": "T02GSUTPJ2D",
+        "user_profile": {
+            "avatar_hash": "697039495284",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-07-09\/7392441697781_6970394952842d3842a4_72.jpg",
+            "first_name": "Pete",
+            "real_name": "Pete Watters",
+            "display_name": "Pete Watters",
+            "team": "T02GSUTPJ2D",
+            "name": "pete",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1710324356.726419",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1710324474.737309",
+        "reply_users": [
+            "U05D57K22R1"
+        ],
+        "replies": [
+            {
+                "user": "U05D57K22R1",
+                "ts": "1710324474.737309"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xRGC7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi team "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wave",
+                                "unicode": "1f44b"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nI'm working on some UI updates for Leather and I need help triggering the DLC link popup. Can anybody advise?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05D57K22R1",
+        "type": "message",
+        "ts": "1710324474.737309",
+        "client_msg_id": "36f27b8e-ef81-4354-9835-a0e732f0a08c",
+        "text": "I am looking at the popup added <https:\/\/github.com\/leather-wallet\/extension\/pull\/3935\/|here> and tried to use some code in the tests to trigger it but I couldn't.\n\n```\/\/ Bitcoin Contract Request Test\n\nwindow.LeatherProvider.request('acceptBitcoinContractOffer', ...```\nDo you have any tips here?\n\nI just want an easy way to trigger demos of the DLC popups to make sure they have no visual bugs",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GSUTPJ2D",
+        "source_team": "T02GSUTPJ2D",
+        "user_profile": {
+            "avatar_hash": "697039495284",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-07-09\/7392441697781_6970394952842d3842a4_72.jpg",
+            "first_name": "Pete",
+            "real_name": "Pete Watters",
+            "display_name": "Pete Watters",
+            "team": "T02GSUTPJ2D",
+            "name": "pete",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1710324356.726419",
+        "parent_user_id": "U05D57K22R1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "R0Hdg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I am looking at the popup added "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/leather-wallet\/extension\/pull\/3935\/",
+                                "text": "here"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and tried to use some code in the tests to trigger it but I couldn't.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\/\/ Bitcoin Contract Request Test\n\nwindow.LeatherProvider.request('acceptBitcoinContractOffer', ..."
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nDo you have any tips here?\n\nI just want an easy way to trigger demos of the DLC popups to make sure they have no visual bugs"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

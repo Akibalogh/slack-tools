@@ -1,0 +1,243 @@
+[
+    {
+        "subtype": "bot_message",
+        "text": "*Deploi* has removed themselves from this channel.",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1753013880.482199",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BeY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Deploi",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " has removed themselves from this channel."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08LNCUMZFZ",
+        "type": "message",
+        "ts": "1753045338.725409",
+        "client_msg_id": "5b42fb68-b9bf-47de-bdf2-d2e290966def",
+        "text": "I still get `OK` from the ping URL, but the same 403 that Hoang-Anh pasted when I curl as <@UBJBWA21M> suggested.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07LSPYDRT4",
+        "source_team": "T07LSPYDRT4",
+        "user_profile": {
+            "avatar_hash": "42c1973fa2ac",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-08\/8853145187271_42c1973fa2ac213295ad_72.png",
+            "first_name": "David",
+            "real_name": "David Cohen",
+            "display_name": "David Cohen",
+            "team": "T07LSPYDRT4",
+            "name": "dnc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751744866.413069",
+        "parent_user_id": "U08LNCUMZFZ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "R318D",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I still get "
+                            },
+                            {
+                                "type": "text",
+                                "text": "OK",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from the ping URL, but the same 403 that Hoang-Anh pasted when I curl as "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UBJBWA21M"
+                            },
+                            {
+                                "type": "text",
+                                "text": " suggested."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1753078459.141479",
+        "client_msg_id": "709da2fc-1ea2-47d6-80a3-5fc4a02234a6",
+        "text": "You need to query <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/03bbae02019515d3b307f46a7213752001f0f59b\/token-standard\/splice-api-token-transfer-instruction-v1\/openapi\/transfer-instruction-v1.yaml#L37|https:\/\/github.com\/hyperledger-labs\/splice\/blob\/03bbae02019515d3b307f46a7213752001[…]en-transfer-instruction-v1\/openapi\/transfer-instruction-v1.yaml>\n\nHere's a corresponding `curl` call for the transfer factory that should be easy to adapt for your use-case:\n```curl --location '<https:\/\/scan.sv-1.test.global.canton.network.lcv.mpch.io\/registry\/transfer-instruction\/v1\/transfer-factory>' \\\n      --header 'Content-Type: application\/json' \\\n      --data '{\n      \"choiceArguments\": {\n          \"expectedAdmin\": \"DSO::1220e1e594cdb287aeac3e1e6d62e7d2db46b756a5d01656c26f1f1a151345bf2e53\",\n          \"extraArgs\": {\n              \"context\": {\n                  \"values\": {}\n              },\n              \"meta\": {\n                  \"values\": {}\n              }\n          },\n          \"transfer\": {\n              \"amount\": \"1\",\n              \"executeBefore\": \"2025-06-19T15:13:14.958Z\",\n              \"inputHoldingCids\": [\n                  \"009b3f7868d6b567787eb79966637b9dc16e7cf84ef9b851c38e9f6c9a7b7053beca101220f659f0e3f41e8f9aa9d62d5c943d2f1f36e34d3f1f7f07f10425601029dae63d\",\n                  \"000d9eaf3f89609621bd4153c9d73b4e25aa72a7e30036426007e603dc05e7a4c4ca101220260c1db1bbdfa7ad1768de27a050dfeccb9cee016888931d56c3a139699303af\",\n                  \"0043bcfdaf836b372424ed69aec9b9a51b7fde42752826ca838ea303497e7258b4ca1012207e2a7e998e3e62232992e466868055bacc8edc8019205398e97dad0a61a31a34\",\n                  \"006ee2f72a929e2841d74a6a6d4391fda682b4209a6efb29e12b993342167f457eca101220155a1467934c975641d076d67ec04de318608439f8133a4d8abb5477556b132d\",\n                  \"00123a644d7589bff42ab3d255f67901e9ffaa6c5d3e9338fdf9432261476b8fc9ca101220277eff816010b6538d18162e58d8824f5c5feb979f37fa54b65f76a8570f2598\",\n                  \"0092447f2d90ae6e696b920c9e9a5f21d495b41b28b0279916919a0f58c5b04153ca1012203bb17c37d0fbd64b6a6dfca51db2574df01e98e6b4c889eb4daff92e71c3fb06\",\n                  \"00a5243b70b1e7048a95c1d333d2e827ad0e2cf4bf34addb4cf29f51ef55e9cddeca101220f5fe391893debb9ace012e38e244d1af655b31e8d103819376b9aa06752fc842\",\n                  \"00ac0ea0c53987bb50883e69a31d8258ced89eabec02be00331adab73686b08020ca10122041e038979639c780a853fd324213c0a8062ea3e65efc0469eef654826749f925\",\n                  \"008d7f57c4562f1dcf24e31e9932f9b7bcc497eb2219c3caf215a99042711091b3ca101220daab36fae54373b629590ddf7c08b4c3bf288dbed9bcad0e477dd387637dcb09\",\n                  \"009a1a3ffa2b6fbab2dda419c24d99fa33effee1c75eaf2a9b67428fcf57c36e02ca111220dba8485450c88d5a269039efd5a1e1a60510a8c23279e28de393af39c6789326\"\n              ],\n              \"instrumentId\": {\n                  \"admin\": \"DSO::1220e1e594cdb287aeac3e1e6d62e7d2db46b756a5d01656c26f1f1a151345bf2e53\",\n                  \"id\": \"Amulet\"\n              },\n              \"lock\": null,\n              \"meta\": {\n                  \"values\": {}\n              },\n              \"receiver\": \"e4858213-0717-4446-a05c-dd3d5cab3978::122093817bb8d4105cba7d03334208c4a98d7463ca288c941136debb8990ad8241e4\",\n              \"requestedAt\": \"2025-06-18T15:13:16.357Z\",\n              \"sender\": \"e4858213-0717-4446-a05c-dd3d5cab3978::1220ccfc5a9f060fe5810f0344f088f12ae146b54e014b79afa973c3865d1d6fd00e\"\n          }\n      }\n  }' | jq```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752861600.149359",
+        "parent_user_id": "U08UW224T0E",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "color": "24292f",
+                "bot_id": "B01UJLRD05Q",
+                "bot_team_id": "T03T53E10",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/03bbae02019515d3b307f46a7213752001f0f59b\/token-standard\/splice-api-token-transfer-instruction-v1\/openapi\/transfer-instruction-v1.yaml#L37",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/03bbae02019515d3b307f46a7213752001f0f59b\/token-standard\/splice-api-token-transfer-instruction-v1\/openapi\/transfer-instruction-v1.yaml|transfer-instruction-v1.yaml>",
+                "text": "```\n  \/registry\/transfer-instruction\/v1\/{transferInstructionId}\/choice-contexts\/accept:\n```",
+                "title": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/03bbae02019515d3b307f46a7213752001f0f59b\/token-standard\/splice-api-token-transfer-instruction-v1\/openapi\/transfer-instruction-v1.yaml|transfer-instruction-v1.yaml>",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jmbRV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You need to query "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/03bbae02019515d3b307f46a7213752001f0f59b\/token-standard\/splice-api-token-transfer-instruction-v1\/openapi\/transfer-instruction-v1.yaml#L37",
+                                "text": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/03bbae02019515d3b307f46a7213752001[…]en-transfer-instruction-v1\/openapi\/transfer-instruction-v1.yaml"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nHere's a corresponding "
+                            },
+                            {
+                                "type": "text",
+                                "text": "curl",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " call for the transfer factory that should be easy to adapt for your use-case:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl --location '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-1.test.global.canton.network.lcv.mpch.io\/registry\/transfer-instruction\/v1\/transfer-factory"
+                            },
+                            {
+                                "type": "text",
+                                "text": "' \\\n      --header 'Content-Type: application\/json' \\\n      --data '{\n      \"choiceArguments\": {\n          \"expectedAdmin\": \"DSO::1220e1e594cdb287aeac3e1e6d62e7d2db46b756a5d01656c26f1f1a151345bf2e53\",\n          \"extraArgs\": {\n              \"context\": {\n                  \"values\": {}\n              },\n              \"meta\": {\n                  \"values\": {}\n              }\n          },\n          \"transfer\": {\n              \"amount\": \"1\",\n              \"executeBefore\": \"2025-06-19T15:13:14.958Z\",\n              \"inputHoldingCids\": [\n                  \"009b3f7868d6b567787eb79966637b9dc16e7cf84ef9b851c38e9f6c9a7b7053beca101220f659f0e3f41e8f9aa9d62d5c943d2f1f36e34d3f1f7f07f10425601029dae63d\",\n                  \"000d9eaf3f89609621bd4153c9d73b4e25aa72a7e30036426007e603dc05e7a4c4ca101220260c1db1bbdfa7ad1768de27a050dfeccb9cee016888931d56c3a139699303af\",\n                  \"0043bcfdaf836b372424ed69aec9b9a51b7fde42752826ca838ea303497e7258b4ca1012207e2a7e998e3e62232992e466868055bacc8edc8019205398e97dad0a61a31a34\",\n                  \"006ee2f72a929e2841d74a6a6d4391fda682b4209a6efb29e12b993342167f457eca101220155a1467934c975641d076d67ec04de318608439f8133a4d8abb5477556b132d\",\n                  \"00123a644d7589bff42ab3d255f67901e9ffaa6c5d3e9338fdf9432261476b8fc9ca101220277eff816010b6538d18162e58d8824f5c5feb979f37fa54b65f76a8570f2598\",\n                  \"0092447f2d90ae6e696b920c9e9a5f21d495b41b28b0279916919a0f58c5b04153ca1012203bb17c37d0fbd64b6a6dfca51db2574df01e98e6b4c889eb4daff92e71c3fb06\",\n                  \"00a5243b70b1e7048a95c1d333d2e827ad0e2cf4bf34addb4cf29f51ef55e9cddeca101220f5fe391893debb9ace012e38e244d1af655b31e8d103819376b9aa06752fc842\",\n                  \"00ac0ea0c53987bb50883e69a31d8258ced89eabec02be00331adab73686b08020ca10122041e038979639c780a853fd324213c0a8062ea3e65efc0469eef654826749f925\",\n                  \"008d7f57c4562f1dcf24e31e9932f9b7bcc497eb2219c3caf215a99042711091b3ca101220daab36fae54373b629590ddf7c08b4c3bf288dbed9bcad0e477dd387637dcb09\",\n                  \"009a1a3ffa2b6fbab2dda419c24d99fa33effee1c75eaf2a9b67428fcf57c36e02ca111220dba8485450c88d5a269039efd5a1e1a60510a8c23279e28de393af39c6789326\"\n              ],\n              \"instrumentId\": {\n                  \"admin\": \"DSO::1220e1e594cdb287aeac3e1e6d62e7d2db46b756a5d01656c26f1f1a151345bf2e53\",\n                  \"id\": \"Amulet\"\n              },\n              \"lock\": null,\n              \"meta\": {\n                  \"values\": {}\n              },\n              \"receiver\": \"e4858213-0717-4446-a05c-dd3d5cab3978::122093817bb8d4105cba7d03334208c4a98d7463ca288c941136debb8990ad8241e4\",\n              \"requestedAt\": \"2025-06-18T15:13:16.357Z\",\n              \"sender\": \"e4858213-0717-4446-a05c-dd3d5cab3978::1220ccfc5a9f060fe5810f0344f088f12ae146b54e014b79afa973c3865d1d6fd00e\"\n          }\n      }\n  }' | jq"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1753078578.122419",
+        "client_msg_id": "d259da47-990e-4822-974b-cea0a9a064bc",
+        "text": "Note that WalletAppInstall_TransferInstruction_Accept is more intended for the validator to be used internally. When you write your own code against the ledger API, I would recommend to directly exercise the token standard choices.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752861600.149359",
+        "parent_user_id": "U08UW224T0E",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "17Inc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Note that WalletAppInstall_TransferInstruction_Accept is more intended for the validator to be used internally. When you write your own code against the ledger API, I would recommend to directly exercise the token standard choices."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

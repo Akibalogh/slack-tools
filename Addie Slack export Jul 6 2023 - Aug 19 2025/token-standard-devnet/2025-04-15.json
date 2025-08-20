@@ -1,0 +1,759 @@
+[
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1744706704.727649",
+        "client_msg_id": "dd1d92e0-08d2-4b27-817b-f850371d3d6a",
+        "text": "Hi Canton team. I need some help on the token holdings retrieval. Details on the thread",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744706704.727649",
+        "reply_count": 8,
+        "reply_users_count": 1,
+        "latest_reply": "1744806084.297499",
+        "reply_users": [
+            "U06TMPD96M8"
+        ],
+        "replies": [
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1744707477.316789"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1744711728.576629"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1744713271.018629"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1744713308.849999"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1744713681.855359"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1744718192.375939"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1744719216.766579"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1744806084.297499"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iTs44",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Canton team. I need some help on the token holdings retrieval. Details on the thread"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1744707477.316789",
+        "client_msg_id": "4e2a4b41-ab86-4bbf-9fee-8f6932b76763",
+        "text": "I have a local canton network running. I configured it as indicated <https:\/\/docs.token-std-dev.global.canton.network.digitalasset.com\/app_dev\/testing\/localnet.html|here>.\n\nI wanted to retrieve the active contracts as an attempt to fetch the balance of an account on an instrument_id. This was taken from this <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/141eb25a21675b27f23f20ff49e184e317e7daf3\/scripts\/external-signing\/external-signing.py#L351|example>.\n\nSo, in order to query the Json Ledger API, I entered into the docker container of the supervalidator, as follows:\n```docker exec -it splice-sv-participant-1 \/bin\/bash```\nOnce there, I ran this:\n```curl --location '<http:\/\/localhost:7575\/v2\/state\/active-contracts>' \\\n--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.PTjniUk5i8d-g7zE-20de7UxBEkr7RQZ9J_qgPXOlQQ' \\\n--header 'Content-Type: application\/json' \\\n--data '{\n  \"filter\": {\n    \"filtersByParty\": {\n      \"thelma-test-1\": {\n        \"cumulative\": [\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          }\n        ]\n      }\n    }\n  },\n  \"verbose\": false,\n  \"activeAtOffset\": \"0\"\n}'```\nAnd the response is this:\n```{\"code\":\"PACKAGE_NAMES_NOT_FOUND\",\"cause\":\"The following package names do not match upgradable packages uploaded on this participant: [splice-api-token-holding-v1].\",\"correlationId\":null,\"traceId\":\"691d90e404c0a572d279d3b9f8382784\",\"context\":{\"participant\":\"'participant'\",\"filters\":\"{thelma-test-1: {templates: [], interfaces: ['#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding']}}\",\"category\":\"11\",\"tid\":\"691d90e404c0a572d279d3b9f8382784\",\"definite_answer\":\"false\"},\"resources\":[],\"errorCategory\":11,\"grpcCodeValue\":5,\"retryInfo\":null,\"definiteAnswer\":null}```\nSo I have 2 questions:\n1. Why is that package not found or how do I have to retrieve the info?\n2. On the <https:\/\/docs.google.com\/presentation\/d\/1PNyGMfILA-AKaTRsBP82kavFWG2W_8JNVgOaIKVsgq4\/edit?slide=id.g3141a90e67c_0_46#slide=id.g3141a90e67c_0_46|spreadsheet>, on the Holdings Standard slide, there is the Holding interface. Could you provide some example on how that interface is used from an Json Ledger API request? ",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744706704.727649",
+        "parent_user_id": "U06TMPD96M8",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "color": "24292f",
+                "bot_id": "B023R9A62UF",
+                "bot_team_id": "T8Z8R9AFL",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/141eb25a21675b27f23f20ff49e184e317e7daf3\/scripts\/external-signing\/external-signing.py#L351",
+                "is_app_unfurl": true,
+                "fallback": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/141eb25a21675b27f23f20ff49e184e317e7daf3\/scripts\/external-signing\/external-signing.py|external-signing.py>",
+                "text": "```\n    )\n```",
+                "title": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/141eb25a21675b27f23f20ff49e184e317e7daf3\/scripts\/external-signing\/external-signing.py|external-signing.py>",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "T4xnP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I have a local canton network running. I configured it as indicated "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.token-std-dev.global.canton.network.digitalasset.com\/app_dev\/testing\/localnet.html",
+                                "text": "here"
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n\nI wanted to retrieve the active contracts as an attempt to fetch the balance of an account on an instrument_id. This was taken from this "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/141eb25a21675b27f23f20ff49e184e317e7daf3\/scripts\/external-signing\/external-signing.py#L351",
+                                "text": "example"
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n\nSo, in order to query the Json Ledger API, I entered into the docker container of the supervalidator, as follows:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "docker exec -it splice-sv-participant-1 \/bin\/bash"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Once there, I ran this:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl --location '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:7575\/v2\/state\/active-contracts"
+                            },
+                            {
+                                "type": "text",
+                                "text": "' \\\n--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.PTjniUk5i8d-g7zE-20de7UxBEkr7RQZ9J_qgPXOlQQ' \\\n--header 'Content-Type: application\/json' \\\n--data '{\n  \"filter\": {\n    \"filtersByParty\": {\n      \"thelma-test-1\": {\n        \"cumulative\": [\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          }\n        ]\n      }\n    }\n  },\n  \"verbose\": false,\n  \"activeAtOffset\": \"0\"\n}'"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And the response is this:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"code\":\"PACKAGE_NAMES_NOT_FOUND\",\"cause\":\"The following package names do not match upgradable packages uploaded on this participant: [splice-api-token-holding-v1].\",\"correlationId\":null,\"traceId\":\"691d90e404c0a572d279d3b9f8382784\",\"context\":{\"participant\":\"'participant'\",\"filters\":\"{thelma-test-1: {templates: [], interfaces: ['#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding']}}\",\"category\":\"11\",\"tid\":\"691d90e404c0a572d279d3b9f8382784\",\"definite_answer\":\"false\"},\"resources\":[],\"errorCategory\":11,\"grpcCodeValue\":5,\"retryInfo\":null,\"definiteAnswer\":null}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nSo I have 2 questions:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Why is that package not found or how do I have to retrieve the info?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "On the "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/docs.google.com\/presentation\/d\/1PNyGMfILA-AKaTRsBP82kavFWG2W_8JNVgOaIKVsgq4\/edit?slide=id.g3141a90e67c_0_46#slide=id.g3141a90e67c_0_46",
+                                        "text": "spreadsheet"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ", on the Holdings Standard slide, there is the Holding interface. Could you provide some example on how that interface is used from an Json Ledger API request? "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1744711728.576629",
+        "client_msg_id": "34d16a5b-2103-4878-8d8f-019e87a00693",
+        "text": "This is the result of `GET \/v2\/parties\/`\n```{\"partyDetails\":[{\"party\":\"DSO::1220b45f1e20207aa690269c254c25f9e711d7db2468ee97ade37a8552559c954dac\",\"isLocal\":true,\"localMetadata\":{\"resourceVersion\":\"\",\"annotations\":{}},\"identityProviderId\":\"\"},{\"party\":\"sv::122004e1c2719bd45a3de22dbe7ee8cf0063b6d063de8fbe35983ec6e3d04047ecd4\",\"isLocal\":true,\"localMetadata\":{\"resourceVersion\":\"\",\"annotations\":{}},\"identityProviderId\":\"\"}],\"nextPageToken\":\"\"}```\nWhen I use either of them instead of `thelma-test-1` , I get an empty array as the result:\n```root@2d43d78c9608:\/app# curl --location '<http:\/\/localhost:7575\/v2\/state\/active-contracts>' \\\n--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.PTjniUk5i8d-g7zE-20de7UxBEkr7RQZ9J_qgPXOlQQ' \\\n--header 'Content-Type: application\/json' \\\n--data '{\n  \"filter\": {\n    \"filtersByParty\": {\n      \"DSO::1220b45f1e20207aa690269c254c25f9e711d7db2468ee97ade37a8552559c954dac\": {\n        \"cumulative\": [\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          }\n        ]\n      }\n    }\n  },\n  \"verbose\": false,\n  \"activeAtOffset\": \"0\"\n}'```\n\n```[]```",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744706704.727649",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GevGe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This is the result of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "GET \/v2\/parties\/",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"partyDetails\":[{\"party\":\"DSO::1220b45f1e20207aa690269c254c25f9e711d7db2468ee97ade37a8552559c954dac\",\"isLocal\":true,\"localMetadata\":{\"resourceVersion\":\"\",\"annotations\":{}},\"identityProviderId\":\"\"},{\"party\":\"sv::122004e1c2719bd45a3de22dbe7ee8cf0063b6d063de8fbe35983ec6e3d04047ecd4\",\"isLocal\":true,\"localMetadata\":{\"resourceVersion\":\"\",\"annotations\":{}},\"identityProviderId\":\"\"}],\"nextPageToken\":\"\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "When I use either of them instead of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "thelma-test-1",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " , I get an empty array as the result:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "root@2d43d78c9608:\/app# curl --location '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:7575\/v2\/state\/active-contracts"
+                            },
+                            {
+                                "type": "text",
+                                "text": "' \\\n--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.PTjniUk5i8d-g7zE-20de7UxBEkr7RQZ9J_qgPXOlQQ' \\\n--header 'Content-Type: application\/json' \\\n--data '{\n  \"filter\": {\n    \"filtersByParty\": {\n      \"DSO::1220b45f1e20207aa690269c254c25f9e711d7db2468ee97ade37a8552559c954dac\": {\n        \"cumulative\": [\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          }\n        ]\n      }\n    }\n  },\n  \"verbose\": false,\n  \"activeAtOffset\": \"0\"\n}'"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "[]"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1744713271.018629",
+        "client_msg_id": "81f11730-96ed-48c4-ba5b-2105633c4297",
+        "text": "```curl --location '<http:\/\/localhost:7575\/v2\/state\/active-contracts>' \\\n--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.PTjniUk5i8d-g7zE-20de7UxBEkr7RQZ9J_qgPXOlQQ' \\\n--header 'Content-Type: application\/json' \\\n--data '{\n  \"filter\": {\n    \"filtersByParty\": {\n      \"sv::122004e1c2719bd45a3de22dbe7ee8cf0063b6d063de8fbe35983ec6e3d04047ecd4\": {\n        \"cumulative\": [\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          }\n        ]\n      }\n    }\n  },\n  \"verbose\": false,\n  \"activeAtOffset\": \"0\"\n}'```\n```[]```\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744706704.727649",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0+MiB",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl --location '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:7575\/v2\/state\/active-contracts"
+                            },
+                            {
+                                "type": "text",
+                                "text": "' \\\n--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.PTjniUk5i8d-g7zE-20de7UxBEkr7RQZ9J_qgPXOlQQ' \\\n--header 'Content-Type: application\/json' \\\n--data '{\n  \"filter\": {\n    \"filtersByParty\": {\n      \"sv::122004e1c2719bd45a3de22dbe7ee8cf0063b6d063de8fbe35983ec6e3d04047ecd4\": {\n        \"cumulative\": [\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          }\n        ]\n      }\n    }\n  },\n  \"verbose\": false,\n  \"activeAtOffset\": \"0\"\n}'"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "[]"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1744713308.849999",
+        "client_msg_id": "061ca529-8049-4cb3-8cc0-b6c63932fa9c",
+        "text": "```curl --location '<http:\/\/localhost:7575\/v2\/state\/active-contracts>' \\\n--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.PTjniUk5i8d-g7zE-20de7UxBEkr7RQZ9J_qgPXOlQQ' \\\n--header 'Content-Type: application\/json' \\\n--data '{\n  \"filter\": {\n    \"filtersByParty\": {\n      \"thelma-test-1\": {\n        \"cumulative\": [\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          }\n        ]\n      }\n    }\n  },\n  \"verbose\": false,\n  \"activeAtOffset\": \"0\"\n}'```\n\n```[]```",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744706704.727649",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QGTJI",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl --location '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:7575\/v2\/state\/active-contracts"
+                            },
+                            {
+                                "type": "text",
+                                "text": "' \\\n--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.PTjniUk5i8d-g7zE-20de7UxBEkr7RQZ9J_qgPXOlQQ' \\\n--header 'Content-Type: application\/json' \\\n--data '{\n  \"filter\": {\n    \"filtersByParty\": {\n      \"thelma-test-1\": {\n        \"cumulative\": [\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          }\n        ]\n      }\n    }\n  },\n  \"verbose\": false,\n  \"activeAtOffset\": \"0\"\n}'"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "[]"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1744713681.855359",
+        "client_msg_id": "7fd27c37-de0f-4e2a-9dd6-ca4bcda86ec9",
+        "text": "Yeah, that might have happened. Do you know how can I get the balance of the amulet token with this query? following the token standard",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744706704.727649",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SuRf\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yeah, that might have happened. Do you know how can I get the balance of the amulet token with this query? following the token standard"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1744718192.375939",
+        "client_msg_id": "6ba43006-e702-4a62-8c6d-ad99f3f95633",
+        "text": "I see. Thanks for the clarification on activeAtOffset. Now I've tried getting the last offset:\n```curl \"<http:\/\/localhost:7575\/v2\/state\/ledger-end>\"```\n```{\"offset\":1876}```\nAnd getting the contracts of `thelma-test-1`:\n```curl --location '<http:\/\/localhost:7575\/v2\/state\/active-contracts>' --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.PTjniUk5i8d-g7zE-20de7UxBEkr7RQZ9J_qgPXOlQQ' --header 'Content-Type: application\/json' --data '{\n  \"filter\": {\n    \"filtersByParty\": {\n      \"thelma-test-1\": {\n        \"cumulative\": [\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          }\n        ]\n      }\n    }\n  },\n  \"verbose\": true,\n  \"activeAtOffset\": \"1872\"\n}'```\nBut it's still an empty response:\n```[]```\nCould it be related to the fact that `thelma-test-1`  is not listed when I query the parties?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744706704.727649",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TfaxW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I see. Thanks for the clarification on activeAtOffset. Now I've tried getting the last offset:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:7575\/v2\/state\/ledger-end"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\""
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"offset\":1876}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nAnd getting the contracts of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "thelma-test-1",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ":\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl --location '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:7575\/v2\/state\/active-contracts"
+                            },
+                            {
+                                "type": "text",
+                                "text": "' --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.PTjniUk5i8d-g7zE-20de7UxBEkr7RQZ9J_qgPXOlQQ' --header 'Content-Type: application\/json' --data '{\n  \"filter\": {\n    \"filtersByParty\": {\n      \"thelma-test-1\": {\n        \"cumulative\": [\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          }\n        ]\n      }\n    }\n  },\n  \"verbose\": true,\n  \"activeAtOffset\": \"1872\"\n}'"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But it's still an empty response:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "[]"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nCould it be related to the fact that "
+                            },
+                            {
+                                "type": "text",
+                                "text": "thelma-test-1",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  is not listed when I query the parties?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1744719216.766579",
+        "client_msg_id": "b7927eff-b496-43d7-8898-abdf4ba9cd06",
+        "text": "This worked. Thank you <@U04N0QS5SP8>!",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744706704.727649",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ye5fU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This worked. Thank you "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U04N0QS5SP8"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
