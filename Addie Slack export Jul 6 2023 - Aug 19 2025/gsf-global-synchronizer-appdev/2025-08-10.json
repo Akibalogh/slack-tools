@@ -1,0 +1,561 @@
+[
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1754854004.881979",
+        "client_msg_id": "3eb1e109-aa2b-45a1-806f-d822fd8ef253",
+        "text": "Hi,\n\nWhen using the external signing api here: <https:\/\/docs.dev.sync.global\/app_dev\/validator_api\/index.html#external-signing-api>\n\nIs there a way to set the \"featuredAppRight\" so that the transaction won't automatically set it to the operator party(I re-call reading in some other thread when submiting transaction through the wallet api it will do so)?\n\nMy user case is building our own wallet for external party and I want to set the feature app right to our own party id so we can get reward for it. I'm testing by self-granting featured app right on devnet.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754854004.881979",
+        "reply_count": 6,
+        "reply_users_count": 2,
+        "latest_reply": "1754929129.932899",
+        "reply_users": [
+            "UEHLS0JUB",
+            "U08987JD1J9"
+        ],
+        "replies": [
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1754891592.983769"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1754893644.267709"
+            },
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1754894276.144709"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1754928085.828979"
+            },
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1754928652.075329"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1754929129.932899"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uzq9r",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi,\n\nWhen using the external signing api here: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/app_dev\/validator_api\/index.html#external-signing-api"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nIs there a way to set the \"featuredAppRight\" so that the transaction won't automatically set it to the operator party(I re-call reading in some other thread when submiting transaction through the wallet api it will do so)?\n\nMy user case is building our own wallet for external party and I want to set the feature app right to our own party id so we can get reward for it. I'm testing by self-granting featured app right on devnet."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1754891592.983769",
+        "client_msg_id": "7ce528b3-e192-4a5b-9010-71897b76d8d7",
+        "text": "You may have a slight misunderstanding here. Setting the featured app right never changes who gets the rewards. That's controlled through the `provider` field in `AmuletRules_Transfer. The featured app right just has to match the provider set there.\nThe provider is usually fixed in the Daml models, e.g., for those APIs, the provider of the preapproval is the provider of the overall transfer. If you need something different, you may need to build your own Daml models.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754854004.881979",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "x8d7E",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You may have a slight misunderstanding here. Setting the featured app right never changes who gets the rewards. That's controlled through the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "provider",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " field in `AmuletRules_Transfer. The featured app right just has to match the provider set there.\nThe provider is usually fixed in the Daml models, e.g., for those APIs, the provider of the preapproval is the provider of the overall transfer. If you need something different, you may need to build your own Daml models."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1754893644.267709",
+        "client_msg_id": "972b009b-799a-40f8-8777-998d3bcd1bca",
+        "text": "&gt; the provider of the preapproval is the provider of the overall transfer\n\nThat mean the provider is the operator party of the validator, correct?\n\n&gt;  If you need something different, you may need to build your own Daml models.\nAny document or some guidance where I can start with this path? Does that mean we have to write our own DAR ? Because if we have to write our own DAR for this, then this mean that this DAR will need to deploy to every other participant we want to interact with ? Which make it becomes impossible for our wallet app ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754854004.881979",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SiQAO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "> the provider of the preapproval is the provider of the overall transfer\n\nThat mean the provider is the operator party of the validator, correct?\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " If you need something different, you may need to build your own Daml models."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Any document or some guidance where I can start with this path? Does that mean we have to write our own DAR ? Because if we have to write our own DAR for this, then this mean that this DAR will need to deploy to every other participant we want to interact with ? Which make it becomes impossible for our wallet app ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1754894276.144709",
+        "client_msg_id": "4c60b7ac-eebb-46f2-b269-714a52881f1c",
+        "text": "It's the operator party of the receiver's validator by default yes. People could setup a different provider in theory but it's always chosen by the receiver for preapprovals. See <https:\/\/hyperledger-labs.github.io\/splice\/background\/preapprovals.html> for more details.\n\n&gt; Does that mean we have to write our own DAR ? Because if we have to write our own DAR for this, then this mean that this DAR will need to deploy to every other participant we want to interact with ? Which make it becomes impossible for our wallet app ?\nDepends, you could set it up such that you create a featured app marker for your party and then execute the transfer preapproval without setting the featured right. The receiver doesn't necessarily need to vet your custom DAR that way.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754854004.881979",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "969TU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It's the operator party of the receiver's validator by default yes. People could setup a different provider in theory but it's always chosen by the receiver for preapprovals. See "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/hyperledger-labs.github.io\/splice\/background\/preapprovals.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": " for more details.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Does that mean we have to write our own DAR ? Because if we have to write our own DAR for this, then this mean that this DAR will need to deploy to every other participant we want to interact with ? Which make it becomes impossible for our wallet app ?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nDepends, you could set it up such that you create a featured app marker for your party and then execute the transfer preapproval without setting the featured right. The receiver doesn't necessarily need to vet your custom DAR that way."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "thread_broadcast",
+        "user": "U0PQ8E25D",
+        "thread_ts": "1754682223.960609",
+        "root": {
+            "user": "U047SRHJQ5T",
+            "type": "message",
+            "ts": "1754682223.960609",
+            "edited": {
+                "user": "U047SRHJQ5T",
+                "ts": "1754682262.000000"
+            },
+            "client_msg_id": "2887ffa1-d11c-49a5-af27-035cd325ea46",
+            "text": "When validating an allocation prior to settlement, why is it not necessary to check that the locked amulet is correct?  Does the token standard require the issuer\/DSO to guarantee that locked amulet corresponds correctly to the allocation?",
+            "team": "T05FWTX7PMG",
+            "user_team": "T02GGGURARK",
+            "source_team": "T02GGGURARK",
+            "user_profile": {
+                "avatar_hash": "gc547e35a01a",
+                "image_72": "https:\/\/secure.gravatar.com\/avatar\/c547e35a01a31d4b28cf33d79587f9e4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0023-72.png",
+                "first_name": "Ryan",
+                "real_name": "Ryan Trinkle",
+                "display_name": "Ryan Trinkle",
+                "team": "T02GGGURARK",
+                "name": "ryan.trinkle",
+                "is_restricted": false,
+                "is_ultra_restricted": false
+            },
+            "thread_ts": "1754682223.960609",
+            "reply_count": 3,
+            "reply_users_count": 2,
+            "latest_reply": "1754916969.465009",
+            "reply_users": [
+                "U0PQ8E25D",
+                "U047SRHJQ5T"
+            ],
+            "replies": [
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1754894697.230739"
+                },
+                {
+                    "user": "U0PQ8E25D",
+                    "ts": "1754894823.849319"
+                },
+                {
+                    "user": "U047SRHJQ5T",
+                    "ts": "1754916969.465009"
+                }
+            ],
+            "is_locked": false,
+            "subscribed": false,
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "Qv8pa",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "When validating an allocation prior to settlement, why is it not necessary to check that the locked amulet is correct?  Does the token standard require the issuer\/DSO to guarantee that locked amulet corresponds correctly to the allocation?"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "language": {
+                "locale": "en",
+                "is_reliable": true
+            }
+        },
+        "type": "message",
+        "ts": "1754894697.230739",
+        "client_msg_id": "f4c9addc-6f7a-4503-a0e6-1e7bc02969ad",
+        "text": "Yes, the expectation is that any correct implementation of the `Allocation` interface will results in exactly `transferLeg.amount` of `transferLeg.instrumentId` instrument to be transferred to `transferLeg.receiver`.\n\nValidating that expectation is part of auditing the .dars implementing the registry, which would typically be done by a security auditor.\n\nFor CC you can see that the `Transfer` specification created as part of executing the allocation sets the right receiver and amount: <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/472f947300fc19f8e0f5e4c9d098650b0ac0b8af\/daml\/splice-amulet\/daml\/Splice\/Amulet\/TwoStepTransfer.daml#L137-L147|https:\/\/github.com\/hyperledger-labs\/splice\/blob\/472f947300fc19f8e0f5e4c9d098650b0a[…]b8af\/daml\/splice-amulet\/daml\/Splice\/Amulet\/TwoStepTransfer.daml>\n\nAnd it calls the `AmuletRules_Transfer` (vai `exercisePaymentTransfer`) which would fail if the input amulet did not cover the amount being transferred.",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "color": "24292f",
+                "bot_id": "B01UJLRD05Q",
+                "bot_team_id": "T03T53E10",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/472f947300fc19f8e0f5e4c9d098650b0ac0b8af\/daml\/splice-amulet\/daml\/Splice\/Amulet\/TwoStepTransfer.daml#L137-L147",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/472f947300fc19f8e0f5e4c9d098650b0ac0b8af\/daml\/splice-amulet\/daml\/Splice\/Amulet\/TwoStepTransfer.daml|TwoStepTransfer.daml>",
+                "text": "```\n  let receiverOutput = TransferOutput with\n        receiver = receiver\n        amount = amount\n        receiverFeeRatio = 0.0  -- all fees are paid by the sender\n        lock = None\n  let amuletRulesTransfer = Splice.AmuletRules.Transfer with\n        sender\n        provider\n        inputs = [InputAmulet amuletCid]\n        outputs = [receiverOutput]\n        beneficiaries\n```",
+                "title": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/472f947300fc19f8e0f5e4c9d098650b0ac0b8af\/daml\/splice-amulet\/daml\/Splice\/Amulet\/TwoStepTransfer.daml|TwoStepTransfer.daml>",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lv0hV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, the expectation is that any correct implementation of the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Allocation",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " interface will results in exactly "
+                            },
+                            {
+                                "type": "text",
+                                "text": "transferLeg.amount",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "transferLeg.instrumentId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " instrument to be transferred to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "transferLeg.receiver",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n\nValidating that expectation is part of auditing the .dars implementing the registry, which would typically be done by a security auditor.\n\nFor CC you can see that the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Transfer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " specification created as part of executing the allocation sets the right receiver and amount: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/472f947300fc19f8e0f5e4c9d098650b0ac0b8af\/daml\/splice-amulet\/daml\/Splice\/Amulet\/TwoStepTransfer.daml#L137-L147",
+                                "text": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/472f947300fc19f8e0f5e4c9d098650b0a[…]b8af\/daml\/splice-amulet\/daml\/Splice\/Amulet\/TwoStepTransfer.daml"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nAnd it calls the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AmuletRules_Transfer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " (vai "
+                            },
+                            {
+                                "type": "text",
+                                "text": "exercisePaymentTransfer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ") which would fail if the input amulet did not cover the amount being transferred."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1754894823.849319",
+        "client_msg_id": "1bbc8aaa-2368-4b16-af93-b2d08dfb60ca",
+        "text": "<https:\/\/github.com\/hyperledger-labs\/splice\/issues\/1875> to extend the docs",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754682223.960609",
+        "parent_user_id": "U047SRHJQ5T",
+        "attachments": [
+            {
+                "image_url": "https:\/\/private-user-images.githubusercontent.com\/13766136\/476452700-f107d0cb-b564-4e85-958f-455dd246620a.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTQ4OTUxMjcsIm5iZiI6MTc1NDg5NDgyNywicGF0aCI6Ii8xMzc2NjEzNi80NzY0NTI3MDAtZjEwN2QwY2ItYjU2NC00ZTg1LTk1OGYtNDU1ZGQyNDY2MjBhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA4MTElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwODExVDA2NDcwN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWVkOGY5NDllNzY4M2RmZThlYjgxNTA1MjE1MDAwZWRmNjFhYWMwZGNmZWEyOTk1NzJjMmE3NmM1OWNlNjRhNDQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.Uy79gbEFwiJPtraMdcD6PrvtOB9sCNB9h24wIkeTgOU",
+                "image_width": 897,
+                "image_height": 937,
+                "image_bytes": 200476,
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "ts": 1754894802,
+                "color": "36a64f",
+                "bot_id": "B01UJLRD05Q",
+                "bot_team_id": "T03T53E10",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/issues\/1875",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "897x937px image",
+                "text": "<https:\/\/private-user-images.githubusercontent.com\/13766136\/476452700-f107d0cb-b564-4e85-958f-455dd246620a.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTQ4OTUxMjcsIm5iZiI6MTc1NDg5NDgyNywicGF0aCI6Ii8xMzc2NjEzNi80NzY0NTI3MDAtZjEwN2QwY2ItYjU2NC00ZTg1LTk1OGYtNDU1ZGQyNDY2MjBhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA4MTElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwODExVDA2NDcwN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWVkOGY5NDllNzY4M2RmZThlYjgxNTA1MjE1MDAwZWRmNjFhYWMwZGNmZWEyOTk1NzJjMmE3NmM1OWNlNjRhNDQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.Uy79gbEFwiJPtraMdcD6PrvtOB9sCNB9h24wIkeTgOU|[Image](https:\/\/private-user-images.githubusercontent.com\/13766136\/476452700-f107d0cb-b564-4e85-958f-455dd246620a.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTQ4OTUxMjcsIm5iZiI6MTc1NDg5NDgyNywicGF0aCI6Ii8xMzc2NjEzNi80NzY0NTI3MDAtZjEwN2QwY2ItYjU2NC00ZTg1LTk1OGYtNDU1ZGQyNDY2MjBhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA4MTElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwODExVDA2NDcwN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWVkOGY5NDllNzY4M2RmZThlYjgxNTA1MjE1MDAwZWRmNjFhYWMwZGNmZWEyOTk1NzJjMmE3NmM1OWNlNjRhNDQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.Uy79gbEFwiJPtraMdcD6PrvtOB9sCNB9h24wIkeTgOU)> \n\n# Raw Text\n\nRyan Trinkle  \n<https:\/\/daholdings.slack.com\/archives\/C08FQRCRFUN\/p1754682223960609|Friday at 21:43>  \nWhen validating an allocation prior to settlement, why is it not necessary to check that the locked amulet is correct? Does the token standard require the issuer\/DSO to guarantee that locked amulet corresponds correctly to the allocation? (edited)  \n1 reply  \nAlso sent to the channel\n\nsimon  \n<https:\/\/daholdings.slack.com\/archives\/C08FQRCRFUN\/p1754894697230739?thread_ts=1754682223.960609&cid=C08FQRCRFUN|Just now>  \nYes, the expectation is that any correct implementation of the Allocation interface will results in exactly transferLeg.amount of transferLeg.instrumentId instrument to be transferred to transferLeg.receiver.  \nValidating that expectation is part of auditing the .dars implementing the registry, which would typically be done by a security auditor.  \nFor CC you can see that the Transfer specification created as part of executing the allocation sets the right receiver and amount: <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/472f947300fc19f8e0f5e4c9d098650b0ac0b8af\/daml\/splice-amulet\/daml\/Splice\/Amulet\/TwoStepTransfer.daml#L137-L147|https:\/\/github.com\/hyperledger-labs\/splice\/blob\/472f947300fc19f8e0f5e4c9d098650b0a[…]b8af\/daml\/splice-amulet\/daml\/Splice\/Amulet\/TwoStepTransfer.daml>  \nAnd it calls the AmuletRules_Transfer (vai exercisePaymentTransfer) which would fail if the input amulet did not cover the amount being transferred.\n\n<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/472f947300fc19f8e0f5e4c9d098650b0ac0b8af\/daml\/splice-amulet\/daml\/Splice\/Amulet\/TwoStepTransfer.daml|TwoStepTransfer.daml>  \nlet receiverOutput = TransferOutput with  \nreceiver = receiver  \namount = amount  \nreceiverFeeRatio = 0.0 -- all fees are paid by the sender  \nlock = None  \nShow more  \n<https:\/\/github.com\/%5Bhyperledger-labs\/splice%5D(https:\/\/github.com\/hyperledger-labs\/splice)%7Chyperledger-labs\/splice|https:\/\/github.com\/[hyperledger-labs\/splice](https:\/\/github.com\/hyperledger-labs\/splice)|hyperledger-labs\/splice>hyperledger-labs\/splice | Added by <https:\/\/daholdings.slack.com\/services\/B01UJLRD05Q|GitHub>",
+                "title": "#1875 Add FAQ: what needs to be validated on an allocation",
+                "title_link": "https:\/\/github.com\/hyperledger-labs\/splice\/issues\/1875",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "fields": [
+                    {
+                        "value": "<https:\/\/github.com\/meiersi-da|@meiersi-da>",
+                        "title": "Assignees",
+                        "short": true
+                    },
+                    {
+                        "value": "documentation",
+                        "title": "Labels",
+                        "short": true
+                    }
+                ],
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EWuZb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/issues\/1875"
+                            },
+                            {
+                                "type": "text",
+                                "text": " to extend the docs"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

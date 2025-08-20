@@ -1,0 +1,2939 @@
+[
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753171584.012279",
+        "client_msg_id": "0650fd05-f5cd-4b5c-905b-7308764983e9",
+        "text": "<@U57BTEKR9> thanks, it seems it is what I am doing as well.\n\nThis is my request to `\/v2\/interactive-submission\/execute`\n\n```{\n      \"deduplicationPeriod\": {\n        \"Empty\": {}\n      },\n      \"hashingSchemeVersion\": \"HASHING_SCHEME_VERSION_V2\",\n      \"partySignatures\": {\n        \"signatures\": [\n          {\n            \"party\": \"dfnsdev1::1220b3c2143530e65a463f1844a4db4cc9f629f164d7f6af846bbee3801c91bd030e\",\n            \"signatures\": [\n              {\n                \"format\": \"SIGNATURE_FORMAT_RAW\",\n                \"signature\": \"CPjjxBaVGOzU9Aanf9bJJKUENt9LOaWSeALN8Kng0KtIJPLxOSKF9evmDXimPYoI8ibksjYIhzXX7KYFvHfiCQ==\",\n                \"signedBy\": \"1220b3c2143530e65a463f1844a4db4cc9f629f164d7f6af846bbee3801c91bd030e\",\n                \"signingAlgorithmSpec\": \"SIGNING_ALGORITHM_SPEC_ED25519\"\n              }\n            ]\n          }\n        ]\n      },\n      \"preparedTransaction\": \"....\",\n      \"submissionId\": \"ad945fbe-e38a-4500-9873-6e319dd09b04\",\n      \"userId\": \"tEmCmvYoAikZoswUe4ug5Cb2FfViLm2j@clients\"\n    }```\nthen I query with:\n\n```{\n      \"beginExclusive\": 0,\n      \"parties\": [\n        \"dfnsdev1::1220b3c2143530e65a463f1844a4db4cc9f629f164d7f6af846bbee3801c91bd030e\"\n      ],\n      \"userId\": \"tEmCmvYoAikZoswUe4ug5Cb2FfViLm2j@clients\"\n    }```\nbut does not return any completion object ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Efih6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U57BTEKR9"
+                            },
+                            {
+                                "type": "text",
+                                "text": " thanks, it seems it is what I am doing as well.\n\nThis is my request to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/v2\/interactive-submission\/execute",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n      \"deduplicationPeriod\": {\n        \"Empty\": {}\n      },\n      \"hashingSchemeVersion\": \"HASHING_SCHEME_VERSION_V2\",\n      \"partySignatures\": {\n        \"signatures\": [\n          {\n            \"party\": \"dfnsdev1::1220b3c2143530e65a463f1844a4db4cc9f629f164d7f6af846bbee3801c91bd030e\",\n            \"signatures\": [\n              {\n                \"format\": \"SIGNATURE_FORMAT_RAW\",\n                \"signature\": \"CPjjxBaVGOzU9Aanf9bJJKUENt9LOaWSeALN8Kng0KtIJPLxOSKF9evmDXimPYoI8ibksjYIhzXX7KYFvHfiCQ==\",\n                \"signedBy\": \"1220b3c2143530e65a463f1844a4db4cc9f629f164d7f6af846bbee3801c91bd030e\",\n                \"signingAlgorithmSpec\": \"SIGNING_ALGORITHM_SPEC_ED25519\"\n              }\n            ]\n          }\n        ]\n      },\n      \"preparedTransaction\": \"....\",\n      \"submissionId\": \"ad945fbe-e38a-4500-9873-6e319dd09b04\",\n      \"userId\": \"tEmCmvYoAikZoswUe4ug5Cb2FfViLm2j@clients\"\n    }"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nthen I query with:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n      \"beginExclusive\": 0,\n      \"parties\": [\n        \"dfnsdev1::1220b3c2143530e65a463f1844a4db4cc9f629f164d7f6af846bbee3801c91bd030e\"\n      ],\n      \"userId\": \"tEmCmvYoAikZoswUe4ug5Cb2FfViLm2j@clients\"\n    }"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nbut does not return any completion object ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03NCGBFCDP",
+        "type": "message",
+        "ts": "1753171874.821339",
+        "client_msg_id": "86fed0da-ac5e-46b8-a5fa-544c5c4a4d0a",
+        "text": "The participant logs would be useful here if you have them. I assume the “execute” call returns successfully? Also I’m guessing you’ve waited a little before calling the completion service? (the completion won’t be available immediately after execute returns)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b8a2dd3941ff",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-07-01\/3748258869187_b8a2dd3941ff99aa9264_72.jpg",
+            "first_name": "Thibault",
+            "real_name": "Thibault Jeandet",
+            "display_name": "Thibault",
+            "team": "T03T53E10",
+            "name": "thibault.jeandet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8\/h1d",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The participant logs would be useful here if you have them. I assume the “execute” call returns successfully? Also I’m guessing you’ve waited a little before calling the completion service? (the completion won’t be available immediately after execute returns)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753172157.294529",
+        "client_msg_id": "f9cbf390-9a4d-4a5e-8444-6967380aac71",
+        "text": "yes the execute call returns sucessfully, this is a canton coin transfer using the standard token api.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dLk8x",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes the execute call returns sucessfully, this is a canton coin transfer using the standard token api."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753172174.018229",
+        "client_msg_id": "27790da2-87ea-4fe0-bf16-d72462f25a50",
+        "text": "this party\/user did already a lot of transfers, so even if my latest transfer does not show up I would expect some history",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SXj4r",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "this party\/user did already a lot of transfers, so even if my latest transfer does not show up I would expect some history"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U03NCGBFCDP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U03NCGBFCDP",
+        "type": "message",
+        "ts": "1753172397.253959",
+        "client_msg_id": "d57af5bc-0ba8-401f-9519-091d7d17f7e5",
+        "text": "The doc for the userId field on completion request says\n\n```  \/\/ Required unless authentication is used with a user token.\n  \/\/ In that case, the token's user-id will be used for the request's user_id.```\nCan you check you’re calling it with a token for that user as well? (if you have auth enabled)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b8a2dd3941ff",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-07-01\/3748258869187_b8a2dd3941ff99aa9264_72.jpg",
+            "first_name": "Thibault",
+            "real_name": "Thibault Jeandet",
+            "display_name": "Thibault",
+            "team": "T03T53E10",
+            "name": "thibault.jeandet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pCKTt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The doc for the userId field on completion request says\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "  \/\/ Required unless authentication is used with a user token.\n  \/\/ In that case, the token's user-id will be used for the request's user_id."
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Can you check you’re calling it with a token for that user as well? (if you have auth enabled)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753172463.169649",
+        "client_msg_id": "e4d6a7d5-7e66-46cd-a2fa-53ea65efc10a",
+        "text": "yes I am extracting the userId from the auth token",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wsZ9N",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes I am extracting the userId from the auth token"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753172472.938459",
+        "client_msg_id": "3e3fed98-0343-45e2-b1a6-653adc99ac63",
+        "text": "thanks for the clarification I was finding that odd",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YxXdp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks for the clarification I was finding that odd"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753172483.854909",
+        "client_msg_id": "40e6946f-5f4a-4ac9-872c-9b39065e7743",
+        "text": "but the open api spec does not make this parameter optional",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "10Khh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but the open api spec does not make this parameter optional"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753172501.626989",
+        "client_msg_id": "7edc85b4-47d6-422f-bd3b-f510bca83f7e",
+        "text": "so the generated typescript client complains if I don’t pass anything",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "b2vgB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "so the generated typescript client complains if I don’t pass anything"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03NCGBFCDP",
+        "type": "message",
+        "ts": "1753172575.680479",
+        "client_msg_id": "a2db3248-4e36-4a5d-b397-f01757ee5c73",
+        "text": "Ok makes sense because the protobuf has it as a `string` field. <@U57BTEKR9> FYI we might want to make it optional in the proto if it’s only “semi required”",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b8a2dd3941ff",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-07-01\/3748258869187_b8a2dd3941ff99aa9264_72.jpg",
+            "first_name": "Thibault",
+            "real_name": "Thibault Jeandet",
+            "display_name": "Thibault",
+            "team": "T03T53E10",
+            "name": "thibault.jeandet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OC\/wu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ok makes sense because the protobuf has it as a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "string",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " field. "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U57BTEKR9"
+                            },
+                            {
+                                "type": "text",
+                                "text": " FYI we might want to make it optional in the proto if it’s only “semi required”"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03NCGBFCDP",
+        "type": "message",
+        "ts": "1753172640.392389",
+        "client_msg_id": "3c85e02c-8c62-4f25-b95a-9125b7e1daec",
+        "text": "Is it only for that party that you can’t see the completions? Or does it work for other parties (if you have any)?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b8a2dd3941ff",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-07-01\/3748258869187_b8a2dd3941ff99aa9264_72.jpg",
+            "first_name": "Thibault",
+            "real_name": "Thibault Jeandet",
+            "display_name": "Thibault",
+            "team": "T03T53E10",
+            "name": "thibault.jeandet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1\/SKv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is it only for that party that you can’t see the completions? Or does it work for other parties (if you have any)?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753172668.690839",
+        "client_msg_id": "83d7a240-dda2-4e8d-84b3-e915a331a99b",
+        "text": "so this party is an external party id.\nI am trying with my validator party id now",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Sqoaq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "so this party is an external party id.\nI am trying with my validator party id now"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U57BTEKR9",
+        "type": "message",
+        "ts": "1753173737.591879",
+        "edited": {
+            "user": "U57BTEKR9",
+            "ts": "1753173747.000000"
+        },
+        "client_msg_id": "5ecfd094-ed51-46e2-a2ec-04cb1459384e",
+        "text": "We are flabbergasted by the problem as your scenario should work. We need to get more creative in order to find out the root of the problem.\nCould you check if you can query pings similar to what i have done above?\n• you need to know the built-in participant party, for instance like this `curl <http:\/\/localhost:4444\/v2\/parties> | jq`  \n• use that party to query for the completions\n```curl --silent -d '{\"beginExclusive\":0,\"parties\":[\"participant1::122095e6f69fd62d787c1f05065496d87443be9909864de8b39273395701554216fc\"],\"userId\":\"PingService\"}' POST <http:\/\/localhost:4444\/v2\/commands\/completions> | jq```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "0403f790e122",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2017-05-02\/177042146320_0403f790e1220230dbe3_72.png",
+            "first_name": "Marcin",
+            "real_name": "Marcin Ziolek",
+            "display_name": "martino",
+            "team": "T03T53E10",
+            "name": "marcin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "07fsk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We are flabbergasted by the problem as your scenario should work. We need to get more creative in order to find out the root of the problem.\nCould you check if you can query pings similar to what i have done above?\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "you need to know the built-in participant party, for instance like this "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "curl ",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "http:\/\/localhost:4444\/v2\/parties",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " | jq",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "  "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "use that party to query for the completions"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl --silent -d '{\"beginExclusive\":0,\"parties\":[\"participant1::122095e6f69fd62d787c1f05065496d87443be9909864de8b39273395701554216fc\"],\"userId\":\"PingService\"}' POST "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:4444\/v2\/commands\/completions"
+                            },
+                            {
+                                "type": "text",
+                                "text": " | jq"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753173803.314149",
+        "client_msg_id": "8c31c996-aab7-471e-a7c5-fdee1380e967",
+        "text": "Ok I am currently going through the completion of my validator party id, it does return data",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nC24N",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ok I am currently going through the completion of my validator party id, it does return data"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753174081.750239",
+        "client_msg_id": "72bff7f2-1ee8-4de8-ad56-94cc08a4de30",
+        "text": "So the API does work normally for my validator party id, but it does not for an external party id (empty stream).\n\nConcerning your command, not sure it is supposed to work unauthenticated:\n\n```curl --silent -d '{\"beginExclusive\":0,\"parties\":[\"dfnsdev1::12209b43bea8836d8cb65f3e05515f44b19daf1cf9110096e407c50fb7134e0823ea\"],\"userId\":\"PingService\"}' POST <http:\/\/localhost:7575\/v2\/commands\/completions> | jq\n{\n  \"code\": \"NA\",\n  \"cause\": \"A security-sensitive error has been received\",\n  \"correlationId\": \"ee9de0fe8a783788994d8b657533839b\",\n  \"traceId\": \"ee9de0fe8a783788994d8b657533839b\",\n  \"context\": {},\n  \"resources\": [],\n  \"errorCategory\": -1,\n  \"grpcCodeValue\": 16,\n  \"retryInfo\": null,\n  \"definiteAnswer\": null\n}```",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gvAlE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So the API does work normally for my validator party id, but it does not for an external party id (empty stream).\n\nConcerning your command, not sure it is supposed to work unauthenticated:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl --silent -d '{\"beginExclusive\":0,\"parties\":[\"dfnsdev1::12209b43bea8836d8cb65f3e05515f44b19daf1cf9110096e407c50fb7134e0823ea\"],\"userId\":\"PingService\"}' POST "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:7575\/v2\/commands\/completions"
+                            },
+                            {
+                                "type": "text",
+                                "text": " | jq\n{\n  \"code\": \"NA\",\n  \"cause\": \"A security-sensitive error has been received\",\n  \"correlationId\": \"ee9de0fe8a783788994d8b657533839b\",\n  \"traceId\": \"ee9de0fe8a783788994d8b657533839b\",\n  \"context\": {},\n  \"resources\": [],\n  \"errorCategory\": -1,\n  \"grpcCodeValue\": 16,\n  \"retryInfo\": null,\n  \"definiteAnswer\": null\n}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U57BTEKR9",
+        "type": "message",
+        "ts": "1753174461.391689",
+        "client_msg_id": "e44ce973-e32b-4567-b948-ec154996d717",
+        "text": "yes, you need a token for that. I didn't include it because I wasn't sure if you have set it up in your dev environment or not",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "0403f790e122",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2017-05-02\/177042146320_0403f790e1220230dbe3_72.png",
+            "first_name": "Marcin",
+            "real_name": "Marcin Ziolek",
+            "display_name": "martino",
+            "team": "T03T53E10",
+            "name": "marcin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "X+UGg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes, you need a token for that. I didn't include it because I wasn't sure if you have set it up in your dev environment or not"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753174714.535099",
+        "client_msg_id": "42c819af-9c3e-44e5-9bc6-a83cc38535eb",
+        "text": "ok so the weirdest thing just happened.\nI am now able to get the history of completion for my external party id",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+1l5B",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ok so the weirdest thing just happened.\nI am now able to get the history of completion for my external party id"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753174730.103909",
+        "client_msg_id": "8edb36bf-1755-42e3-af3f-5c4598e84303",
+        "text": "it seems I am using exactly the same payload as before",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2uCq7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "it seems I am using exactly the same payload as before"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753174911.245849",
+        "client_msg_id": "faf0a39f-b3d3-4f9f-908e-7ad203c64ced",
+        "text": "weird thing is that the history starts at `\"2025-07-22T08:18:59.462929Z\"`",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Pjyk1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "weird thing is that the history starts at "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"2025-07-22T08:18:59.462929Z\"",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753174918.876049",
+        "client_msg_id": "c0e72ed4-5ed7-49ab-9f40-5e24e5116fb3",
+        "text": "while I have made a lot of transfer with this address",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "34Rvj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "while I have made a lot of transfer with this address"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U57BTEKR9",
+        "type": "message",
+        "ts": "1753174938.876199",
+        "client_msg_id": "8b158191-4fea-403c-a703-d3e1d8ca8372",
+        "text": "Do you run with an external PG database?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "0403f790e122",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2017-05-02\/177042146320_0403f790e1220230dbe3_72.png",
+            "first_name": "Marcin",
+            "real_name": "Marcin Ziolek",
+            "display_name": "martino",
+            "team": "T03T53E10",
+            "name": "marcin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IP1NP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Do you run with an external PG database?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753174972.703699",
+        "client_msg_id": "4ed1c933-574b-49b4-9ef5-5f65c601694d",
+        "text": "Saying something completely random here, but could querying the history for the validator party id kind of unlock the history for external party id?\nThis is the only thing that comes to mind right now",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XvyVr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Saying something completely random here, but could querying the history for the validator party id kind of unlock the history for external party id?\nThis is the only thing that comes to mind right now"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753175018.505709",
+        "client_msg_id": "eea3d0f1-124a-4245-8ae1-e1968ae128ce",
+        "text": "I am not sure about the PG database",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "brTuZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I am not sure about the PG database"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U57BTEKR9",
+        "type": "message",
+        "ts": "1753175051.993689",
+        "client_msg_id": "1989a950-bcd2-4c8b-90aa-c48dd9c70036",
+        "text": "the completion stream request is a read operation that leaves no trace in the database",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "0403f790e122",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2017-05-02\/177042146320_0403f790e1220230dbe3_72.png",
+            "first_name": "Marcin",
+            "real_name": "Marcin Ziolek",
+            "display_name": "martino",
+            "team": "T03T53E10",
+            "name": "marcin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ah5XK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the completion stream request is a read operation that leaves no trace in the database"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U57BTEKR9",
+        "type": "message",
+        "ts": "1753175079.117029",
+        "client_msg_id": "ab32f5ef-9088-40a9-8630-fba2dac38efd",
+        "text": "Did you spin up your canton environment yourself?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "0403f790e122",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2017-05-02\/177042146320_0403f790e1220230dbe3_72.png",
+            "first_name": "Marcin",
+            "real_name": "Marcin Ziolek",
+            "display_name": "martino",
+            "team": "T03T53E10",
+            "name": "marcin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "X1U7N",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Did you spin up your canton environment yourself?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753175088.263289",
+        "client_msg_id": "3df43c62-94ce-46cb-a98f-69a0046c8251",
+        "text": "our devops team did",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CjOj2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "our devops team did"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U57BTEKR9",
+        "type": "message",
+        "ts": "1753175092.736699",
+        "client_msg_id": "97ef4fd4-c8d0-4f42-ba9f-882a73c7641a",
+        "text": "I see",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "0403f790e122",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2017-05-02\/177042146320_0403f790e1220230dbe3_72.png",
+            "first_name": "Marcin",
+            "real_name": "Marcin Ziolek",
+            "display_name": "martino",
+            "team": "T03T53E10",
+            "name": "marcin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pz+Ou",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I see"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753175098.762569",
+        "client_msg_id": "75132b62-7529-497b-95f8-630c4f7f4a07",
+        "text": "cc <@U05TMRKRMC3>",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GEFSq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "cc "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05TMRKRMC3"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753175370.500879",
+        "client_msg_id": "a4278f1e-75fe-4d3f-98be-697d4ba41cc3",
+        "text": "So it seems there is a path forward to bind a `submissionId` with an `updateId`, however this would complexify quite a lot our logic as we would have to index the completion stream of each validator we are managing.\n\nDo you have a timeline to make the endpoint `\/v2\/interactive-submission\/execute`  synchronous?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WmFzO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So it seems there is a path forward to bind a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "submissionId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " with an "
+                            },
+                            {
+                                "type": "text",
+                                "text": "updateId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", however this would complexify quite a lot our logic as we would have to index the completion stream of each validator we are managing.\n\nDo you have a timeline to make the endpoint "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/v2\/interactive-submission\/execute",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  synchronous?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753175454.841539",
+        "client_msg_id": "88ba5690-2939-4c8e-8c31-fe95df9e1c08",
+        "text": "When starting an SV scratchnet, how is the latest Splice version determined? I'm trying to understand why a `0.4.5`-based scratchnet is using `splice-amulet-0.1.9` rather than `splice-amulet-0.1.11`. Thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753175454.841539",
+        "reply_count": 8,
+        "reply_users_count": 2,
+        "latest_reply": "1753177697.796849",
+        "reply_users": [
+            "UEHLS0JUB",
+            "U02KJ7PKHN2"
+        ],
+        "replies": [
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1753175595.002509"
+            },
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1753175661.989989"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1753175671.727759"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1753175685.348009"
+            },
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1753175838.535229"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1753176231.761069"
+            },
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1753176268.073189"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1753177697.796849"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5dTWt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "When starting an SV scratchnet, how is the latest Splice version determined? I'm trying to understand why a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "0.4.5",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "-based scratchnet is using "
+                            },
+                            {
+                                "type": "text",
+                                "text": "splice-amulet-0.1.9",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " rather than "
+                            },
+                            {
+                                "type": "text",
+                                "text": "splice-amulet-0.1.11",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1753175595.002509",
+        "client_msg_id": "f6a2d64f-1ced-4159-9fdc-ad9fdd698468",
+        "text": "In theory it should use the latest version available unless you overwrite `initialPackageConfig`",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753175454.841539",
+        "parent_user_id": "U02KJ7PKHN2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fgSnh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In theory it should use the latest version available unless you overwrite "
+                            },
+                            {
+                                "type": "text",
+                                "text": "initialPackageConfig",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1753175661.989989",
+        "client_msg_id": "4557c5d4-b39f-442a-b9d3-7c2dbf7c9b57",
+        "text": "Note that versions don't autoupgrade though. If you boostrapped on an older version and then upgraded to 0.4.5 this is expected",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753175454.841539",
+        "parent_user_id": "U02KJ7PKHN2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "T3dmb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Note that versions don't autoupgrade though. If you boostrapped on an older version and then upgraded to 0.4.5 this is expected"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753175671.727759",
+        "client_msg_id": "af28b0ec-e4cf-4464-8829-1561e3de500f",
+        "text": "thanks Moritz",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753175454.841539",
+        "parent_user_id": "U02KJ7PKHN2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qZY8x",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks Moritz"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753175685.348009",
+        "client_msg_id": "1de81551-68df-4452-ae58-f6b4c232a757",
+        "text": "yes, I think then we are probably in the latter scenario, will double-check",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753175454.841539",
+        "parent_user_id": "U02KJ7PKHN2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DGz79",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes, I think then we are probably in the latter scenario, will double-check"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1753175838.535229",
+        "client_msg_id": "c80ea8ce-3900-4407-886d-40470990c068",
+        "text": "you can vote on the package versions if you want to upgrade",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753175454.841539",
+        "parent_user_id": "U02KJ7PKHN2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oM6If",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "you can vote on the package versions if you want to upgrade"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753176231.761069",
+        "client_msg_id": "bcadb5bd-83c3-4e69-bc22-01391b6fbd78",
+        "text": "will give it a try! Is that a vote to change the `AmuletRules` config to set the specific package version?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753175454.841539",
+        "parent_user_id": "U02KJ7PKHN2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Dr5Ye",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "will give it a try! Is that a vote to change the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AmuletRules",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " config to set the specific package version?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1753176268.073189",
+        "client_msg_id": "537d703e-80fe-4559-81ae-1b0b9df3f5e3",
+        "text": "yep",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753175454.841539",
+        "parent_user_id": "U02KJ7PKHN2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HC6zQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yep"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U02KJ7PKHN2"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753177697.796849",
+        "client_msg_id": "e17f5feb-cb28-4134-8dd4-15c96cc5414f",
+        "text": "it worked, thanks :slightly_smiling_face:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753175454.841539",
+        "parent_user_id": "U02KJ7PKHN2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+uunP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "it worked, thanks "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U03NCGBFCDP",
+        "type": "message",
+        "ts": "1753177812.443239",
+        "client_msg_id": "2abe7b78-be32-4307-8a84-260e5ed1d3af",
+        "text": "It’s currently planned for Canton 3.4 which as far as I know is currently planned for fall.\nI also want to emphasize that relying on the completion event (or using the future synchronous version) comes with the caveat that it requires trusting that the completion is correct and therefore that the executing node is honest, when submitting transactions that are not self conflicting (for instance creating a contract or exercising a non-consuming choice). Otherwise a dishonest node could incorrectly respond with a completion saying that the transaction failed and trick the application into re-submitting.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b8a2dd3941ff",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-07-01\/3748258869187_b8a2dd3941ff99aa9264_72.jpg",
+            "first_name": "Thibault",
+            "real_name": "Thibault Jeandet",
+            "display_name": "Thibault",
+            "team": "T03T53E10",
+            "name": "thibault.jeandet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Dk4IW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It’s currently planned for Canton 3.4 which as far as I know is currently planned for fall.\nI also want to emphasize that relying on the completion event (or using the future synchronous version) comes with the caveat that it requires trusting that the completion is correct and therefore that the executing node is honest, when submitting transactions that are not self conflicting (for instance creating a contract or exercising a non-consuming choice). Otherwise a dishonest node could incorrectly respond with a completion saying that the transaction failed and trick the application into re-submitting."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753177977.895989",
+        "client_msg_id": "a78b9866-ac36-4a72-93f4-e5a589328496",
+        "text": "By `node` you mean the `participant node`  ?\nAs we are running it ourself, can it be trusted?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dDcMd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "By "
+                            },
+                            {
+                                "type": "text",
+                                "text": "node",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " you mean the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "participant node",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  ?\nAs we are running it ourself, can it be trusted?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03NCGBFCDP",
+        "type": "message",
+        "ts": "1753178256.221349",
+        "client_msg_id": "cec9804b-6ff3-417a-b64e-5f880e156ee8",
+        "text": "&gt; By `node` you mean the `participant node`  ?\nYes\n&gt; As we are running it ourself, can it be trusted?\nIf you run it yourself I’d expect that you can reasonably trust your own nodes yes (but that’s ultimately dependant on the security around your node deployment etc…). This becomes more relevant if you were to call execute on nodes you don’t operate for whatever reason",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b8a2dd3941ff",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-07-01\/3748258869187_b8a2dd3941ff99aa9264_72.jpg",
+            "first_name": "Thibault",
+            "real_name": "Thibault Jeandet",
+            "display_name": "Thibault",
+            "team": "T03T53E10",
+            "name": "thibault.jeandet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EshrF",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "By "
+                            },
+                            {
+                                "type": "text",
+                                "text": "node",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " you mean the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "participant node",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  ?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "As we are running it ourself, can it be trusted?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If you run it yourself I’d expect that you can reasonably trust your own nodes yes (but that’s ultimately dependant on the security around your node deployment etc…). This becomes more relevant if you were to call execute on nodes you don’t operate for whatever reason"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06JBU6A20K"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1753178573.161389",
+        "client_msg_id": "aef0efcc-26b7-4f1e-8549-57051a9e68f7",
+        "text": "Is this possible? ^ :thinking_face:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YMTKl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is this possible? ^ "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "thinking_face",
+                                "unicode": "1f914"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U03CV15QKV3",
+        "type": "message",
+        "ts": "1753181521.360009",
+        "edited": {
+            "user": "U03CV15QKV3",
+            "ts": "1753188180.000000"
+        },
+        "client_msg_id": "4c415872-0751-46a4-be94-0acc4cf99e92",
+        "text": "Hello, is it possible to delete `Daml party` from testnet validator (we used `v0\/admin\/external-party\/topology\/generate` with public_key)?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "529e48a7cd98",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-05-04\/3470177423334_529e48a7cd9826bf4ef2_72.jpg",
+            "first_name": "Pablo",
+            "real_name": "Pablo Kurskii",
+            "display_name": "Pablo Kurskii",
+            "team": "E02KFSNH6CV",
+            "name": "pablo.kurskii",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VaNtL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello, is it possible to delete "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Daml party",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from testnet validator (we used "
+                            },
+                            {
+                                "type": "text",
+                                "text": "v0\/admin\/external-party\/topology\/generate",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " with public_key)?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07C122M72S",
+        "type": "message",
+        "ts": "1753181560.955039",
+        "client_msg_id": "b8d71045-682b-4b5e-96d4-9c0a33cdb584",
+        "text": "<@U03HMUTQ5F0> we want to figure out how to decouple the user from the party (we want to have multiple users\/be able to switch users who sign into the party account for security\/management. Is there a way to do that ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "bf2bb589375f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-11\/7725981271265_bf2bb589375f79a74575_72.jpg",
+            "first_name": "Daniel",
+            "real_name": "Daniel Tal",
+            "display_name": "Dtal",
+            "team": "T04LUMR33S9",
+            "name": "danielt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "l4Qcm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " we want to figure out how to decouple the user from the party (we want to have multiple users\/be able to switch users who sign into the party account for security\/management. Is there a way to do that ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03QSP8LP9T",
+        "type": "message",
+        "ts": "1753182321.234719",
+        "client_msg_id": "6711c3a2-6c13-422e-8170-6ce6fbade68c",
+        "text": "There's some docs along those lines here: <https:\/\/docs.dev.sync.global\/validator_operator\/validator_users.html|https:\/\/docs.dev.sync.global\/validator_operator\/validator_users.html>\nThey are written in context of the operator party, but similar idea would be for any other party",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "3e3f866a63c0",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-25\/8942496437043_3e3f866a63c0d4454cbc_72.jpg",
+            "first_name": "Itai",
+            "real_name": "Itai Segall",
+            "display_name": "Itai Segall",
+            "team": "T03T53E10",
+            "name": "itai.segall",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dMmmg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "There's some docs along those lines here: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/validator_operator\/validator_users.html",
+                                "text": "https:\/\/docs.dev.sync.global\/validator_operator\/validator_users.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nThey are written in context of the operator party, but similar idea would be for any other party"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1753182710.959949",
+        "client_msg_id": "a6217fa0-5268-41e5-abe7-00a61063a98f",
+        "text": "How to create a new party and assign it to the auth0 user? should we use the API? Can you share more info please?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "thPRP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "How to create a new party and assign it to the auth0 user? should we use the API? Can you share more info please?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1753182778.530719",
+        "client_msg_id": "c61543b8-37da-483d-ac61-748ed803eb46",
+        "text": "create party using <https:\/\/docs.digitalasset-staging.com\/build\/3.3\/sdlc-howtos\/applications\/develop\/manage-daml-parties.html#how-to-create-a-new-local-party>. then use the user onboarding endpoint Itai linked the docs for",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0yiga",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "create party using "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.digitalasset-staging.com\/build\/3.3\/sdlc-howtos\/applications\/develop\/manage-daml-parties.html#how-to-create-a-new-local-party"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". then use the user onboarding endpoint Itai linked the docs for"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1753183194.320239",
+        "client_msg_id": "628c9b53-2917-4e48-bc74-4ba19dd2e56e",
+        "text": "can you share more about the user onboarding endpoint please? thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DPpGF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "can you share more about the user onboarding endpoint please? thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1753183227.384419",
+        "client_msg_id": "55efc161-319e-4863-8db6-5dc9407a14d3",
+        "text": "what more do you need? it takes a party and a user name and creates a user mapped to that party",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OEHQa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "what more do you need? it takes a party and a user name and creates a user mapped to that party"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1753183272.610759",
+        "client_msg_id": "9c4f98bc-e8f8-4690-a24d-cb5c15c08b3d",
+        "text": "openapi spec is here <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/1a2d3ddadd829d79f82b49af74b71639431043f5\/apps\/validator\/src\/main\/openapi\/validator-internal.yaml#L60>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "parent_user_id": "U0702NSFW0H",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "color": "24292f",
+                "bot_id": "B01UJLRD05Q",
+                "bot_team_id": "T03T53E10",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/1a2d3ddadd829d79f82b49af74b71639431043f5\/apps\/validator\/src\/main\/openapi\/validator-internal.yaml#L60",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/1a2d3ddadd829d79f82b49af74b71639431043f5\/apps\/validator\/src\/main\/openapi\/validator-internal.yaml|validator-internal.yaml>",
+                "text": "```\n    post:\n```",
+                "title": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/1a2d3ddadd829d79f82b49af74b71639431043f5\/apps\/validator\/src\/main\/openapi\/validator-internal.yaml|validator-internal.yaml>",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PEgwt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "openapi spec is here "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/1a2d3ddadd829d79f82b49af74b71639431043f5\/apps\/validator\/src\/main\/openapi\/validator-internal.yaml#L60"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1753184055.754659",
+        "client_msg_id": "a9473c0b-d8b3-4fda-8302-5be935e6d692",
+        "text": "``` curl -d '{\"partyIdHint\":\"Alice\"}' <http:\/\/localhost:7575\/v2\/parties>\nThe requested resource could not be found.```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fuXOT",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " curl -d '{\"partyIdHint\":\"Alice\"}' "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:7575\/v2\/parties"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nThe requested resource could not be found."
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U03QSP8LP9T",
+        "type": "message",
+        "ts": "1753186664.579069",
+        "client_msg_id": "23b9d6a5-bde6-4c81-aeb5-3ca47d76be87",
+        "text": "Can we please move this discussion to <#C08AP9QR7K4|validator-operations> where there's a much bigger community that can help?\nOr if you wish for DA to help, please reach out via DA's discretionary support email.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "3e3f866a63c0",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-25\/8942496437043_3e3f866a63c0d4454cbc_72.jpg",
+            "first_name": "Itai",
+            "real_name": "Itai Segall",
+            "display_name": "Itai Segall",
+            "team": "T03T53E10",
+            "name": "itai.segall",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752594452.145559",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lOzji",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Can we please move this discussion to "
+                            },
+                            {
+                                "type": "channel",
+                                "channel_id": "C08AP9QR7K4"
+                            },
+                            {
+                                "type": "text",
+                                "text": " where there's a much bigger community that can help?\nOr if you wish for DA to help, please reach out via DA's discretionary support email."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "ok_hand::skin-tone-4",
+                "users": [
+                    "U0702NSFW0H"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U05TMRKRMC3",
+        "type": "message",
+        "ts": "1753193010.392289",
+        "client_msg_id": "4cf97a2f-f4a3-407d-9163-ccdbf8789d26",
+        "text": "&gt; Do you run with an external PG database?\nWe are running postgres using the helm charts that are included with the rest of the canton stack.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "7968e5877763",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-09-25\/5949132792084_7968e5877763055fe96f_72.jpg",
+            "first_name": "Amar",
+            "real_name": "Amar Minhas",
+            "display_name": "mr mnh",
+            "team": "E08AQ7G00LC",
+            "name": "amar",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PGEWD",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Do you run with an external PG database?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nWe are running postgres using the helm charts that are included with the rest of the canton stack."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06JBU6A20K",
+        "type": "message",
+        "ts": "1753200169.613419",
+        "client_msg_id": "a6efd739-24ea-40b4-a458-7d377c6670e4",
+        "text": "<@U03NCGBFCDP> re `userId`\n\nI have regenerated the openapi typescript client after making userId optional.\nWhen I make a request without the userId but with the Bearer token, I get:\n\n```Invalid value for: body (Missing required field at 'userId')```\nSo unfortunately it does not look optional",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "282ef9b07068",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-12\/6627305599860_282ef9b0706839f03a92_72.jpg",
+            "first_name": "Adrien",
+            "real_name": "Adrien Moreau",
+            "display_name": "Adrn Mr",
+            "team": "E08AQ7G00LC",
+            "name": "adrienmoreau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BWBF3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U03NCGBFCDP"
+                            },
+                            {
+                                "type": "text",
+                                "text": " re "
+                            },
+                            {
+                                "type": "text",
+                                "text": "userId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nI have regenerated the openapi typescript client after making userId optional.\nWhen I make a request without the userId but with the Bearer token, I get:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Invalid value for: body (Missing required field at 'userId')"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nSo unfortunately it does not look optional"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03NCGBFCDP",
+        "type": "message",
+        "ts": "1753200820.282199",
+        "client_msg_id": "09ac90ff-b6fc-41b1-bbe6-ae500a64860f",
+        "text": "Huh maybe the comment is wrong then. Thanks for checking I'll have a closer look",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b8a2dd3941ff",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-07-01\/3748258869187_b8a2dd3941ff99aa9264_72.jpg",
+            "first_name": "Thibault",
+            "real_name": "Thibault Jeandet",
+            "display_name": "Thibault",
+            "team": "T03T53E10",
+            "name": "thibault.jeandet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752853785.377499",
+        "parent_user_id": "U06JBU6A20K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DcsqZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Huh maybe the comment is wrong then. Thanks for checking I'll have a closer look"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U06JBU6A20K"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

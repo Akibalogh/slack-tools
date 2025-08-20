@@ -1,0 +1,1245 @@
+[
+    {
+        "user": "U091C6C096K",
+        "type": "message",
+        "ts": "1754465018.527859",
+        "client_msg_id": "ccbed79c-62e9-4423-b5e9-6becc6045c0a",
+        "text": "hey Aunt.\nyeah we used exact this file '_transfer.ts_' as example to resolve the way how to create *Splice.Wallet.TransferOffer* and complete transfer as external party after internal party accepted offer _(it is not fired automatically after internal party accept) ._ \nUnfortunately we still see no possibility to  submit over rGPC Ledger API  choice exercise '*AcceptedTransferOffer_Complete*' as it requires  signatures of external party sender ( _that's ok we got it's private key)_ and wallet provider *( that's main problem)*.\n\nShould we activate *HTTP JSON API Service* (<https:\/\/docs.daml.com\/json-api\/index.html>) and work with it instead of gRPC for this exact case ?\n\nthanks.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "c25cf473a6d0",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-18\/9067564717620_c25cf473a6d053ecccc1_72.jpg",
+            "first_name": "Denis",
+            "real_name": "Denis Moroz",
+            "display_name": "denis.moroz",
+            "team": "T04NVD19L",
+            "name": "denis.moroz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754407817.401899",
+        "parent_user_id": "U06LMNHCGHJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1SYvy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hey Aunt.\nyeah we used exact this file '"
+                            },
+                            {
+                                "type": "text",
+                                "text": "transfer.ts",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "' as example to resolve the way how to create "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Splice.Wallet.TransferOffer ",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "and complete transfer as external party after internal party accepted offer"
+                            },
+                            {
+                                "type": "text",
+                                "text": " (it is not fired automatically after internal party accept) . ",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nUnfortunately we still see no possibility to  submit over rGPC Ledger API  choice exercise '"
+                            },
+                            {
+                                "type": "text",
+                                "text": "AcceptedTransferOffer_Complete",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "' as it requires  signatures of external party sender ("
+                            },
+                            {
+                                "type": "text",
+                                "text": " that's ok we got it's private key)",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and wallet provider "
+                            },
+                            {
+                                "type": "text",
+                                "text": "( that's main problem)",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n\nShould we activate "
+                            },
+                            {
+                                "type": "text",
+                                "text": "HTTP JSON API Service",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " ("
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.daml.com\/json-api\/index.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": ") and work with it instead of gRPC for this exact case ?\n\nthanks."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1754465050.585889",
+        "client_msg_id": "f932273b-bfb5-4f82-a34e-a837afa90533",
+        "text": "transfer.ts will never create a `TransferOffer`. It will create an `AmuletTransferInstruction`",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754407817.401899",
+        "parent_user_id": "U06LMNHCGHJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wTiUQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "transfer.ts will never create a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "TransferOffer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". It will create an "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AmuletTransferInstruction",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U091C6C096K",
+        "type": "message",
+        "ts": "1754465389.235459",
+        "client_msg_id": "d61a4400-509f-437f-b217-2e38a0342596",
+        "text": "correct. we just used it to realize the workflow.\nin our test scenario we:\n1. Execute over gRPC a call to create instance of *Splice.Wallet.TransferOffer* specifying sender, receiver, dso, amount.\n2. On UI of admin site internal party as receiver is able to see and accept this offer.\n3. No automatic *AcceptedTransferOffer_Complete* exercised by node.\nand we need to exercise *AcceptedTransferOffer_Complete* as  sender (external party)\n\nyou suggest to change our flow to not create `TransferOffer` but create `AmuletTransferInstruction`  instead ?\nthanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "c25cf473a6d0",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-18\/9067564717620_c25cf473a6d053ecccc1_72.jpg",
+            "first_name": "Denis",
+            "real_name": "Denis Moroz",
+            "display_name": "denis.moroz",
+            "team": "T04NVD19L",
+            "name": "denis.moroz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754407817.401899",
+        "parent_user_id": "U06LMNHCGHJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "q2tE3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "correct. we just used it to realize the workflow.\nin our test scenario we:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Execute over gRPC a call to create instance of "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "Splice.Wallet.TransferOffer ",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "specifying sender, receiver, dso, amount."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "On UI of admin site internal party as receiver is able to see and accept this offer."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "No automatic "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "AcceptedTransferOffer_Complete ",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "exercised by node."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and we need to exercise "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AcceptedTransferOffer_Complete ",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "as"
+                            },
+                            {
+                                "type": "text",
+                                "text": " ",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " sender (external party)\n\nyou suggest to change our flow to not create "
+                            },
+                            {
+                                "type": "text",
+                                "text": "TransferOffer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " but create "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AmuletTransferInstruction",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  instead ?\nthanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1754465428.976809",
+        "client_msg_id": "d668746c-bd64-46f3-a21c-66eead37d43c",
+        "text": "Yes ignore TransferOffer and follow the actual flow in transfer.ts. TransferOffer only exists for historical reasons at this point.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754407817.401899",
+        "parent_user_id": "U06LMNHCGHJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FPUKz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes ignore TransferOffer and follow the actual flow in transfer.ts. TransferOffer only exists for historical reasons at this point."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U091C6C096K"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "<@U0122RHUD2A> I see, thank you. After register my new user as a tenant I can see the License and can pay the renewal fee now",
+        "files": [
+            {
+                "id": "F0992KZGNTD",
+                "created": 1754467984,
+                "timestamp": 1754467984,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U0724J67GSE",
+                "user_team": "T072736KDTK",
+                "editable": false,
+                "size": 85432,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F0992KZGNTD\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F0992KZGNTD\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0992KZGNTD-4f367d6279\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0992KZGNTD-4f367d6279\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0992KZGNTD-4f367d6279\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 52,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0992KZGNTD-4f367d6279\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 69,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0992KZGNTD-4f367d6279\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0992KZGNTD-4f367d6279\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 104,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0992KZGNTD-4f367d6279\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 115,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0992KZGNTD-4f367d6279\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 138,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0992KZGNTD-4f367d6279\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 147,
+                "original_w": 1906,
+                "original_h": 274,
+                "thumb_tiny": "AwAHADDRKqynMYPsQOaRPlQBYioz90Y4p9FADQx3Y2Nj14xRuOM7G+nFOooAbuP9xuntQGJx8jDP04p1FAH\/2Q==",
+                "permalink": "https:\/\/devlabscrew.slack.com\/files\/U05FZBDQ4RJ\/F0992KZGNTD\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T072736KDTK-F0992KZGNTD-a7ab4b8f7c",
+                "source_team": "T072736KDTK",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F0991C1QRHU",
+                "created": 1754467999,
+                "timestamp": 1754467999,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U0724J67GSE",
+                "user_team": "T072736KDTK",
+                "editable": false,
+                "size": 12995,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F0991C1QRHU\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F0991C1QRHU\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0991C1QRHU-d60b15aec7\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0991C1QRHU-d60b15aec7\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0991C1QRHU-d60b15aec7\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 222,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0991C1QRHU-d60b15aec7\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "original_w": 370,
+                "original_h": 228,
+                "thumb_tiny": "AwAeADDRO7eCCNuDkfl\/9eo1M5lfOxY8YXPJz61KRmmhWwMsSe\/vQAfvNo5TdkZ9MU1RMA25lJx8vpnHfj1p4BHfNLg0AMAk2IC43DG4jvTk3BAHILY5NLg0YNAAemOefSmgYx8zcfTmnMNwwehpFQKMLwKYC59jRn2NGKMUgDPsaM+xoxRigD\/\/2Q==",
+                "permalink": "https:\/\/devlabscrew.slack.com\/files\/U05FZBDQ4RJ\/F0991C1QRHU\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T072736KDTK-F0991C1QRHU-0389b00c3a",
+                "source_team": "T072736KDTK",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F0997T8SVT6",
+                "created": 1754468184,
+                "timestamp": 1754468184,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U0724J67GSE",
+                "user_team": "T072736KDTK",
+                "editable": false,
+                "size": 36766,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F0997T8SVT6\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F0997T8SVT6\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0997T8SVT6-d98d734ffb\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0997T8SVT6-d98d734ffb\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0997T8SVT6-d98d734ffb\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 58,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0997T8SVT6-d98d734ffb\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 77,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0997T8SVT6-d98d734ffb\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0997T8SVT6-d98d734ffb\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 115,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0997T8SVT6-d98d734ffb\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 128,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0997T8SVT6-d98d734ffb\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 154,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0997T8SVT6-d98d734ffb\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 164,
+                "original_w": 1207,
+                "original_h": 193,
+                "thumb_tiny": "AwAIADDQLsCcqMD0yf6U4E45GDS0UANDHgEYPtmnUUUAFFFFAH\/\/2Q==",
+                "permalink": "https:\/\/devlabscrew.slack.com\/files\/U05FZBDQ4RJ\/F0997T8SVT6\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T072736KDTK-F0997T8SVT6-fb3534152d",
+                "source_team": "T072736KDTK",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XjzsE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0122RHUD2A"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I see, thank you. After register my new user as a tenant I can see the License and can pay the renewal fee now"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1754468212.194649",
+        "client_msg_id": "c59e01f6-857b-4d40-8021-ba8387a08f8f",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "e3a9767538bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-10\/7272227989824_e3a9767538bfd906f0ba_72.png",
+            "first_name": "Hoang",
+            "real_name": "Hoang Anh Le",
+            "display_name": "Hoang-Anh",
+            "team": "T072736KDTK",
+            "name": "anh.le",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U0724J67GSE",
+        "type": "message",
+        "ts": "1754468645.758759",
+        "edited": {
+            "user": "U0724J67GSE",
+            "ts": "1754468821.000000"
+        },
+        "client_msg_id": "a8f72eae-4a08-4edd-86d7-7e5b564c650d",
+        "text": "Hmm, does it mean that when ever I have new user in the system I must register their partyId as a new tenant after their use the canton wallet to onboard themselves?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "e3a9767538bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-10\/7272227989824_e3a9767538bfd906f0ba_72.png",
+            "first_name": "Hoang",
+            "real_name": "Hoang Anh Le",
+            "display_name": "Hoang-Anh",
+            "team": "T072736KDTK",
+            "name": "anh.le",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tWZWp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hmm, does it mean that when ever I have new user in the system I must register their partyId as a new tenant after their use the canton wallet to onboard themselves?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0122RHUD2A",
+        "type": "message",
+        "ts": "1754471231.088029",
+        "edited": {
+            "user": "U0122RHUD2A",
+            "ts": "1754471355.000000"
+        },
+        "client_msg_id": "78bce487-3c94-4d23-88c8-74285b8c688a",
+        "text": "Ohh you found a bug in our implementation. ClientId and issuerURL should have been unique in tenant registrations. We need to fix that. The idea is you have one party that represents one organisation. You can have multiple end users but you should have just one party - that means also one wallet per organisation. At least that's what we wanted to show in Quickstart. In your application you may have different needs and you may choose to implement it differently.\ncc: <@U0PQ8E25D>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f323bd2b8079",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-04-22\/1090389769617_f323bd2b807965503456_72.png",
+            "first_name": "Peter",
+            "real_name": "Peter Kvokacka",
+            "display_name": "peter.kvokacka",
+            "team": "T03T53E10",
+            "name": "peter.kvokacka",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "X4hvx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ohh you found a bug in our implementation. ClientId and issuerURL should have been unique in tenant registrations. We need to fix that. The idea is you have one party that represents one organisation. You can have multiple end users but you should have just one party - that means also one wallet per organisation. At least that's what we wanted to show in Quickstart. In your application you may have different needs and you may choose to implement it differently.\ncc: "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0PQ8E25D"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0724J67GSE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "X-post from utility-ops channel for appdev interest. About <https:\/\/docs.digitalasset.com\/overview\/3.3\/explanations\/canton\/external-party.html#local-and-external-parties|Local Parties and External Parties> . cc <@U02KJ7PKHN2>",
+        "files": [
+            {
+                "id": "F09934M78RZ",
+                "created": 1754472897,
+                "timestamp": 1754472897,
+                "name": "Capture d’écran 2025-08-06 à 11.32.11.png",
+                "title": "Capture d’écran 2025-08-06 à 11.32.11.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U08JYBDSK0V",
+                "user_team": "T7T5YE9MY",
+                "editable": false,
+                "size": 425316,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T7T5YE9MY-F09934M78RZ\/capture_d___e__cran_2025-08-06_a___11.32.11.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T7T5YE9MY-F09934M78RZ\/download\/capture_d___e__cran_2025-08-06_a___11.32.11.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T7T5YE9MY-F09934M78RZ-77aaa0056a\/capture_d___e__cran_2025-08-06_a___11.32.11_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T7T5YE9MY-F09934M78RZ-77aaa0056a\/capture_d___e__cran_2025-08-06_a___11.32.11_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T7T5YE9MY-F09934M78RZ-77aaa0056a\/capture_d___e__cran_2025-08-06_a___11.32.11_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 98,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T7T5YE9MY-F09934M78RZ-77aaa0056a\/capture_d___e__cran_2025-08-06_a___11.32.11_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 130,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T7T5YE9MY-F09934M78RZ-77aaa0056a\/capture_d___e__cran_2025-08-06_a___11.32.11_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T7T5YE9MY-F09934M78RZ-77aaa0056a\/capture_d___e__cran_2025-08-06_a___11.32.11_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 195,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T7T5YE9MY-F09934M78RZ-77aaa0056a\/capture_d___e__cran_2025-08-06_a___11.32.11_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 217,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T7T5YE9MY-F09934M78RZ-77aaa0056a\/capture_d___e__cran_2025-08-06_a___11.32.11_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 260,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T7T5YE9MY-F09934M78RZ-77aaa0056a\/capture_d___e__cran_2025-08-06_a___11.32.11_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 277,
+                "original_w": 2296,
+                "original_h": 622,
+                "thumb_tiny": "AwAOADC8Yxu\/1jAn3pFQMOJGPfhs8dqlO7jBHvxR83qPyoAi2YA3yMCeMbu9J5Z2sfOOBnnPT61Ng7uox6YpaAIvLGceY+fTdS+V\/wBNH\/OpKKAP\/9k=",
+                "permalink": "https:\/\/kilnfi.slack.com\/files\/U05FZBDQ4RJ\/F09934M78RZ\/capture_d___e__cran_2025-08-06_a___11.32.11.png",
+                "permalink_public": "https:\/\/slack-files.com\/T7T5YE9MY-F09934M78RZ-44d2d0f55a",
+                "source_team": "T7T5YE9MY",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U08JYBDSK0V",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zFBSQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "X-post from utility-ops channel for appdev interest. About "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.digitalasset.com\/overview\/3.3\/explanations\/canton\/external-party.html#local-and-external-parties",
+                                "text": "Local Parties and External Parties"
+                            },
+                            {
+                                "type": "text",
+                                "text": " . cc "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02KJ7PKHN2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1754472987.702219",
+        "client_msg_id": "d1e4b2fc-fc58-401f-abba-4ecddae431e0",
+        "team": "T05FWTX7PMG",
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T7T5YE9MY",
+        "source_team": "T7T5YE9MY",
+        "user_profile": {
+            "avatar_hash": "18d9a68d3d08",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-24\/8650966444610_18d9a68d3d08e033fdb8_72.png",
+            "first_name": "François",
+            "real_name": "François Branciard",
+            "display_name": "Francois",
+            "team": "T7T5YE9MY",
+            "name": "francois.branciard",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U057HGB61RS"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U0724J67GSE",
+        "type": "message",
+        "ts": "1754477551.809309",
+        "client_msg_id": "ae467966-65d0-4282-bb95-38671533c6a8",
+        "text": "So in the Quickstart an `end-user` must interact under the name of the `app-user` (or the organization) that he\/she belongs to, and payment is made through the organization's canton wallet (along with the organization's party Id). If I understand it correctly, an `end-user` does not have any assets of his own, also does not need to have a party Id and all his interactions are authorized using the app-user's access token?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "e3a9767538bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-10\/7272227989824_e3a9767538bfd906f0ba_72.png",
+            "first_name": "Hoang",
+            "real_name": "Hoang Anh Le",
+            "display_name": "Hoang-Anh",
+            "team": "T072736KDTK",
+            "name": "anh.le",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CyH\/W",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So in the Quickstart an "
+                            },
+                            {
+                                "type": "text",
+                                "text": "end-user",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " must interact under the name of the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "app-user",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " (or the organization) that he\/she belongs to, and payment is made through the organization's canton wallet (along with the organization's party Id). If I understand it correctly, an "
+                            },
+                            {
+                                "type": "text",
+                                "text": "end-user",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " does not have any assets of his own, also does not need to have a party Id and all his interactions are authorized using the app-user's access token?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0724J67GSE",
+        "type": "message",
+        "ts": "1754478201.182529",
+        "edited": {
+            "user": "U0724J67GSE",
+            "ts": "1754478245.000000"
+        },
+        "client_msg_id": "9ba957c9-3486-401a-a93f-83798ada4013",
+        "text": "This is more toward B2B app model",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "e3a9767538bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-10\/7272227989824_e3a9767538bfd906f0ba_72.png",
+            "first_name": "Hoang",
+            "real_name": "Hoang Anh Le",
+            "display_name": "Hoang-Anh",
+            "team": "T072736KDTK",
+            "name": "anh.le",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rQS3q",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This is more toward B2B app model"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0724J67GSE",
+        "type": "message",
+        "ts": "1754478846.425979",
+        "client_msg_id": "ba4bad61-087d-4aca-b062-cea294720d70",
+        "text": "If I want to build an app for direct consumers, for example a P2P exchange platform for tokenized RWA, should I implement the \"app user\" as the end-user, or there are some different ways to do it?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "e3a9767538bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-10\/7272227989824_e3a9767538bfd906f0ba_72.png",
+            "first_name": "Hoang",
+            "real_name": "Hoang Anh Le",
+            "display_name": "Hoang-Anh",
+            "team": "T072736KDTK",
+            "name": "anh.le",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ud1ym",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If I want to build an app for direct consumers, for example a P2P exchange platform for tokenized RWA, should I implement the \"app user\" as the end-user, or there are some different ways to do it?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02SR6E8Z9S",
+        "type": "message",
+        "ts": "1754489057.078319",
+        "client_msg_id": "30b10fd9-2a7a-461c-8ca8-c9175be202b2",
+        "text": "<@U0724J67GSE> great question.  There are two considerations here:\n• Retail user which has their own wallet that collects their assets.  In this case, the relationship is user-wallet-party and those are 1-1 relationships.  That situation requires the retail user being created as an external party and their signing keys are held externally by the wallet.  At the moment, this falls under a feature called <https:\/\/docs.digitalasset.com\/build\/3.3\/tutorials\/app-dev\/external_signing_submission.html#tutorial-externally-signed-transactions|External Signing>.    We recognize that this crosses several topics and are working on simplifying it.\n• Enterprise org which has several users that all fall under the same party ID. In this case, the org has its own internal account and may use a KMS for managing keys.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f9fc9f38d8d9",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-01-31\/3044385429553_f9fc9f38d8d90c37b2c2_72.jpg",
+            "first_name": "Curtis",
+            "real_name": "Curtis Hrischuk",
+            "display_name": "Curtis",
+            "team": "T03T53E10",
+            "name": "curtis.hrischuk",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cLK1K",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0724J67GSE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " great question.  There are two considerations here:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Retail user which has their own wallet that collects their assets.  In this case, the relationship is user-wallet-party and those are 1-1 relationships.  That situation requires the retail user being created as an external party and their signing keys are held externally by the wallet.  At the moment, this falls under a feature called "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/docs.digitalasset.com\/build\/3.3\/tutorials\/app-dev\/external_signing_submission.html#tutorial-externally-signed-transactions",
+                                        "text": "External Signing"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ".    We recognize that this crosses several topics and are working on simplifying it."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Enterprise org which has several users that all fall under the same party ID. In this case, the org has its own internal account and may use a KMS for managing keys."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U0724J67GSE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U02SR6E8Z9S",
+        "type": "message",
+        "ts": "1754489495.044469",
+        "client_msg_id": "6f25a1a5-82dd-40a9-930e-b303c1c91b18",
+        "text": "To run your stack (fronted, backend, validator connected to DevNet) for external (non-laptop) accessibility, you will need to run all of those services externally.  This is usually org specific so we don't provide support since every org does this differently.  Our approach internally for development testing is to use Docker compose with the images built by our CI\/CD system.    The good news is that all of the Docker images can usually run on a single computer server since it is just functional, integration testing.   This is normal stuff.\n\nWe have an item in the backlog to recreate LocalNet to run on an external server for a longer duration.  Would this be what you are looking for?\n\nTo deploy the app locally, you need those services running locally.  Normal micro-service or 3 layer deployment stuff.  Deploying the validator is described <https:\/\/docs.dev.sync.global\/validator_operator\/index.html#validators|here>.\n\nA difference is that you'll need to deploy your DAR files.  You probably know this ... This section <https:\/\/docs.digitalasset.com\/build\/3.3\/sdlc-howtos\/applications\/develop\/manage-daml-packages.html|How to upload a DAR archive file> is what you are looking for to upload a DAR to the validator's participant node.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f9fc9f38d8d9",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-01-31\/3044385429553_f9fc9f38d8d90c37b2c2_72.jpg",
+            "first_name": "Curtis",
+            "real_name": "Curtis Hrischuk",
+            "display_name": "Curtis",
+            "team": "T03T53E10",
+            "name": "curtis.hrischuk",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754367393.832239",
+        "parent_user_id": "U083R3AP1M1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9sS4a",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "To run your stack (fronted, backend, validator connected to DevNet) for external (non-laptop) accessibility, you will need to run all of those services externally.  This is usually org specific so we don't provide support since every org does this differently.  Our approach internally for development testing is to use Docker compose with the images built by our CI\/CD system.    The good news is that all of the Docker images can usually run on a single computer server since it is just functional, integration testing.   This is normal stuff.\n\nWe have an item in the backlog to recreate LocalNet to run on an external server for a longer duration.  Would this be what you are looking for?\n\nTo deploy the app locally, you need those services running locally.  Normal micro-service or 3 layer deployment stuff.  Deploying the validator is described "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/validator_operator\/index.html#validators",
+                                "text": "here"
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n\nA difference is that you'll need to deploy your DAR files.  You probably know this ... This section "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.digitalasset.com\/build\/3.3\/sdlc-howtos\/applications\/develop\/manage-daml-packages.html",
+                                "text": "How to upload a DAR archive file"
+                            },
+                            {
+                                "type": "text",
+                                "text": " is what you are looking for to upload a DAR to the validator's participant node."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02SR6E8Z9S",
+        "type": "message",
+        "ts": "1754489682.204649",
+        "client_msg_id": "4651e701-1a8c-4b48-80d7-43d8a68294a9",
+        "text": "Dear <https:\/\/github.com\/digital-asset\/cn-quickstart|Canton Network application quickstart> users,  a recent change requires you to run `direnv allow` again when you pull an update.    This is due to a behavior `direnv` has to ensure users are aware of any changes in an already allowed `.envrc` file.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f9fc9f38d8d9",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-01-31\/3044385429553_f9fc9f38d8d90c37b2c2_72.jpg",
+            "first_name": "Curtis",
+            "real_name": "Curtis Hrischuk",
+            "display_name": "Curtis",
+            "team": "T03T53E10",
+            "name": "curtis.hrischuk",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YvjDW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Dear "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/digital-asset\/cn-quickstart",
+                                "text": "Canton Network application quickstart"
+                            },
+                            {
+                                "type": "text",
+                                "text": " users,  a recent change requires you to run "
+                            },
+                            {
+                                "type": "text",
+                                "text": "direnv allow",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " again when you pull an update.    This is due to a behavior "
+                            },
+                            {
+                                "type": "text",
+                                "text": "direnv",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " has to ensure users are aware of any changes in an already allowed "
+                            },
+                            {
+                                "type": "text",
+                                "text": ".envrc",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " file."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U083R3AP1M1"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

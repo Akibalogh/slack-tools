@@ -1,0 +1,729 @@
+[
+    {
+        "user": "U08HF4RATC5",
+        "type": "message",
+        "ts": "1742477462.118439",
+        "client_msg_id": "0ea83d90-1fc5-4f90-8aba-c93064089aa6",
+        "text": "hey guys, still facing some error with regards to my *`splice-validator-validator-1`* docker container using docker compose on devnet\n\nAny idea on how to resolve the *`PARTICIPANT_IS_NOT_ACTIVE`* error?\n\nhere's some logs from the docker container:\n\n```{\"@timestamp\":\"2025-03-20T13:26:44.792Z\",\"@version\":\"1\",\"message\":\"Detected an error.\",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-24\",\"level\":\"INFO\",\"level_value\":20000,\"stack_trace\":\"io.grpc.StatusRuntimeException: FAILED_PRECONDITION: PARTICIPANT_IS_NOT_ACTIVE(9,28419d29): The participant is not yet active\\n\\tat io.grpc.Status.asRuntimeException(Status.java:532)\\n\\tat io.grpc.stub.ClientCalls$UnaryStreamToFuture.onClose(ClientCalls.java:538)\\n\\tat org.lfdecentralizedtrust.splice.admin.api.client.GrpcMetricsClientInterceptor$MonitoringClientCallListener.onClose(GrpcMetricsClientInterceptor.scala:87)\\n\\tat org.lfdecentralizedtrust.splice.admin.api.client.ApiClientRequestLogger$LoggingClientCallListener.onClose(ApiClientRequestLogger.scala:117)\\n\\tat io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:564)\\n\\tat io.grpc.internal.ClientCallImpl.access$100(ClientCallImpl.java:72)\\n\\tat io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:729)\\n\\tat io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:710)\\n\\tat io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)\\n\\tat io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)\\n\\tat com.daml.executors.QueueAwareExecutorService$TrackingRunnable.run(QueueAwareExecutorService.scala:98)\\n\\tat com.daml.metrics.InstrumentedExecutorServiceMetrics$InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorServiceMetrics.scala:190)\\n\\tat java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1395)\\n\\tat java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)\\n\\tat java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)\\n\",\"span-id\":\"3369d744b43e3c9a\",\"span-parent-id\":\"a0c238a5bf42c249\",\"trace-id\":\"dd2b6abc5f9fc08e7f09c4a33d2dd388\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-20T13:26:44.792Z\",\"@version\":\"1\",\"message\":\"The operation 'participant is connected to Domain 'global'' has failed with an exception. New kind of error: transient error (request infinite retries). Retrying after a number of 0 failures, and after 100 milliseconds. \",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-24\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"3369d744b43e3c9a\",\"span-parent-id\":\"a0c238a5bf42c249\",\"trace-id\":\"dd2b6abc5f9fc08e7f09c4a33d2dd388\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-20T13:26:44.893Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'participant is connected to Domain 'global''. \",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-24\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"3369d744b43e3c9a\",\"span-parent-id\":\"a0c238a5bf42c249\",\"trace-id\":\"dd2b6abc5f9fc08e7f09c4a33d2dd388\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-20T13:26:44.895Z\",\"@version\":\"1\",\"message\":\"Request (tid:f9ebb35f01c4e5ddb3709bbff3c919f3) com.digitalasset.canton.admin.participant.v30.DomainConnectivityService\/ReconnectDomain to participant:5002: sending request \",\"logger_name\":\"o.l.s.a.a.c.ApiClientRequestLogger:validator=validator_backend\",\"thread_name\":\"canton-env-ec-60\",\"level\":\"DEBUG\",\"level_value\":10000,\"span-id\":\"a0c238a5bf42c249\",\"trace-id\":\"dd2b6abc5f9fc08e7f09c4a33d2dd388\",\"span-name\":\"app_init\"}```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02BPBUH5",
+        "source_team": "T02BPBUH5",
+        "user_profile": {
+            "avatar_hash": "gdf556e6627e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/df556e6627e5d02490481e3fa0b3f1f5.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "Clement",
+            "real_name": "Clement Lee",
+            "display_name": "Clement Lee",
+            "team": "T02BPBUH5",
+            "name": "clement",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742445827.875669",
+        "parent_user_id": "U08HF4RATC5",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "48wa1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hey guys, still facing some error with regards to my "
+                            },
+                            {
+                                "type": "text",
+                                "text": "splice-validator-validator-1",
+                                "style": {
+                                    "bold": true,
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " docker container using docker compose on devnet\n\nAny idea on how to resolve the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PARTICIPANT_IS_NOT_ACTIVE",
+                                "style": {
+                                    "bold": true,
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " error?\n\nhere's some logs from the docker container:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"@timestamp\":\"2025-03-20T13:26:44.792Z\",\"@version\":\"1\",\"message\":\"Detected an error.\",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-24\",\"level\":\"INFO\",\"level_value\":20000,\"stack_trace\":\"io.grpc.StatusRuntimeException: FAILED_PRECONDITION: PARTICIPANT_IS_NOT_ACTIVE(9,28419d29): The participant is not yet active\\n\\tat io.grpc.Status.asRuntimeException(Status.java:532)\\n\\tat io.grpc.stub.ClientCalls$UnaryStreamToFuture.onClose(ClientCalls.java:538)\\n\\tat org.lfdecentralizedtrust.splice.admin.api.client.GrpcMetricsClientInterceptor$MonitoringClientCallListener.onClose(GrpcMetricsClientInterceptor.scala:87)\\n\\tat org.lfdecentralizedtrust.splice.admin.api.client.ApiClientRequestLogger$LoggingClientCallListener.onClose(ApiClientRequestLogger.scala:117)\\n\\tat io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:564)\\n\\tat io.grpc.internal.ClientCallImpl.access$100(ClientCallImpl.java:72)\\n\\tat io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:729)\\n\\tat io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:710)\\n\\tat io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)\\n\\tat io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)\\n\\tat com.daml.executors.QueueAwareExecutorService$TrackingRunnable.run(QueueAwareExecutorService.scala:98)\\n\\tat com.daml.metrics.InstrumentedExecutorServiceMetrics$InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorServiceMetrics.scala:190)\\n\\tat java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1395)\\n\\tat java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)\\n\\tat java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)\\n\",\"span-id\":\"3369d744b43e3c9a\",\"span-parent-id\":\"a0c238a5bf42c249\",\"trace-id\":\"dd2b6abc5f9fc08e7f09c4a33d2dd388\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-20T13:26:44.792Z\",\"@version\":\"1\",\"message\":\"The operation 'participant is connected to Domain 'global'' has failed with an exception. New kind of error: transient error (request infinite retries). Retrying after a number of 0 failures, and after 100 milliseconds. \",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-24\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"3369d744b43e3c9a\",\"span-parent-id\":\"a0c238a5bf42c249\",\"trace-id\":\"dd2b6abc5f9fc08e7f09c4a33d2dd388\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-20T13:26:44.893Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'participant is connected to Domain 'global''. \",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-24\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"3369d744b43e3c9a\",\"span-parent-id\":\"a0c238a5bf42c249\",\"trace-id\":\"dd2b6abc5f9fc08e7f09c4a33d2dd388\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-20T13:26:44.895Z\",\"@version\":\"1\",\"message\":\"Request (tid:f9ebb35f01c4e5ddb3709bbff3c919f3) com.digitalasset.canton.admin.participant.v30.DomainConnectivityService\/ReconnectDomain to participant:5002: sending request \",\"logger_name\":\"o.l.s.a.a.c.ApiClientRequestLogger:validator=validator_backend\",\"thread_name\":\"canton-env-ec-60\",\"level\":\"DEBUG\",\"level_value\":10000,\"span-id\":\"a0c238a5bf42c249\",\"trace-id\":\"dd2b6abc5f9fc08e7f09c4a33d2dd388\",\"span-name\":\"app_init\"}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1742483500.212819",
+        "client_msg_id": "ac7e5739-c362-4b66-83a3-973edfe1c7a2",
+        "text": "<@U08HF4RATC5> just did it. please try now",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742445827.875669",
+        "parent_user_id": "U08HF4RATC5",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lcA4K",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U08HF4RATC5"
+                            },
+                            {
+                                "type": "text",
+                                "text": " just did it. please try now"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U046V2U9RKQ",
+        "type": "message",
+        "ts": "1742504504.504829",
+        "edited": {
+            "user": "U046V2U9RKQ",
+            "ts": "1742504634.000000"
+        },
+        "client_msg_id": "3bc12b2f-4a08-4cc2-ad2f-2b8ec0586a06",
+        "text": "<@U04KJF6UTNU> can you please confirm that our request to whitelist `35.172.17.53` has been processed? We have followed the steps in the link you provided and are getting what appears to be a general timeout instead of individual responses for the existing nodes.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GGGURARK",
+        "source_team": "T02GGGURARK",
+        "user_profile": {
+            "avatar_hash": "fe83e162dc90",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-24\/4850136381494_fe83e162dc90ba1fc10d_72.jpg",
+            "first_name": "Nate",
+            "real_name": "Nate",
+            "display_name": "Nate",
+            "team": "T02GGGURARK",
+            "name": "nathan.homesley",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741898457.245119",
+        "parent_user_id": "U046V2U9RKQ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7QX+b",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U04KJF6UTNU"
+                            },
+                            {
+                                "type": "text",
+                                "text": " can you please confirm that our request to whitelist "
+                            },
+                            {
+                                "type": "text",
+                                "text": "35.172.17.53",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " has been processed? We have followed the steps in the link you provided and are getting what appears to be a general timeout instead of individual responses for the existing nodes."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U046V2U9RKQ",
+        "type": "message",
+        "ts": "1742504606.783319",
+        "client_msg_id": "2b29741b-b587-4773-aab2-979e8f2d2a77",
+        "text": "Related: you can begin the process to delist `54.161.12.127` as that one is no longer valid for us",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GGGURARK",
+        "source_team": "T02GGGURARK",
+        "user_profile": {
+            "avatar_hash": "fe83e162dc90",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-24\/4850136381494_fe83e162dc90ba1fc10d_72.jpg",
+            "first_name": "Nate",
+            "real_name": "Nate",
+            "display_name": "Nate",
+            "team": "T02GGGURARK",
+            "name": "nathan.homesley",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741898457.245119",
+        "parent_user_id": "U046V2U9RKQ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3N1Tc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Related: you can begin the process to delist "
+                            },
+                            {
+                                "type": "text",
+                                "text": "54.161.12.127",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " as that one is no longer valid for us"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1::skin-tone-3",
+                "users": [
+                    "U04KJF6UTNU"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08HF4RATC5",
+        "type": "message",
+        "ts": "1742516928.368579",
+        "client_msg_id": "61dcf24f-485b-45ad-bbf2-6a5c998fc24a",
+        "text": "Restarted my node, and looks like I still have the same error *`PARTICIPANT_IS_NOT_ACTIVE`* from the validator docker container logs",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02BPBUH5",
+        "source_team": "T02BPBUH5",
+        "user_profile": {
+            "avatar_hash": "gdf556e6627e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/df556e6627e5d02490481e3fa0b3f1f5.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "Clement",
+            "real_name": "Clement Lee",
+            "display_name": "Clement Lee",
+            "team": "T02BPBUH5",
+            "name": "clement",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742445827.875669",
+        "parent_user_id": "U08HF4RATC5",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "orCuL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Restarted my node, and looks like I still have the same error "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PARTICIPANT_IS_NOT_ACTIVE",
+                                "style": {
+                                    "bold": true,
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " ",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "from the validator docker container logs"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08HF4RATC5",
+        "type": "message",
+        "ts": "1742517301.841759",
+        "client_msg_id": "b632df12-2b77-48b5-9a37-8c170f65d854",
+        "text": "hey <@U04KJF6UTNU>, looks like 14\/16 SVs have whitelisted our IP address on Devnet however when starting the node using docker compose, the validator container is unhealthy with the following logs:\n\nAny idea why this is so?\n\n```{\"@timestamp\":\"2025-03-21T00:32:20.737Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'participant is connected to Domain 'global''. \",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-67\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"d5c3b8b5dd1adc5e\",\"span-parent-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-21T00:32:20.739Z\",\"@version\":\"1\",\"message\":\"Request (tid:788889bc7d43d304ff6b23a6b6dc8dbe) com.digitalasset.canton.admin.participant.v30.DomainConnectivityService\/ReconnectDomain to participant:5002: sending request \",\"logger_name\":\"o.l.s.a.a.c.ApiClientRequestLogger:validator=validator_backend\",\"thread_name\":\"canton-env-ec-58\",\"level\":\"DEBUG\",\"level_value\":10000,\"span-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"app_init\"}\n{\"@timestamp\":\"2025-03-21T00:33:24.514Z\",\"@version\":\"1\",\"message\":\"Request (tid:788889bc7d43d304ff6b23a6b6dc8dbe) com.digitalasset.canton.admin.participant.v30.DomainConnectivityService\/ReconnectDomain to participant:5002: failed with FAILED_PRECONDITION\/PARTICIPANT_IS_NOT_ACTIVE(9,788889bc): The participant is not yet active\",\"logger_name\":\"o.l.s.a.a.c.ApiClientRequestLogger:validator=validator_backend\",\"thread_name\":\"canton-env-ec-67\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"app_init\"}\n{\"@timestamp\":\"2025-03-21T00:33:24.516Z\",\"@version\":\"1\",\"message\":\"The operation 'participant is connected to Domain 'global'' failed with a retryable error (full stack trace omitted):\\ncategory=Some(InvalidGivenCurrentSystemStateOther)\\nErrorInfoDetail(PARTICIPANT_IS_NOT_ACTIVE,HashMap(participant -&gt; participant, serverResponse -&gt; Participant PAR::angelhack_devnet::12208d4fcf69... is not active, domain -&gt; global, category -&gt; 9, tid -&gt; 788889bc7d43d304ff6b23a6b6dc8dbe))\\nRequestInfoDetail(788889bc7d43d304ff6b23a6b6dc8dbe)\",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-60\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"d5c3b8b5dd1adc5e\",\"span-parent-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-21T00:33:24.517Z\",\"@version\":\"1\",\"message\":\"Retrying on same error kind transient error (request infinite retries) for StatusRuntimeException\/FAILED_PRECONDITION: PARTICIPANT_IS_NOT_ACTIVE(9,788889bc): The participant is not yet active\",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-60\",\"level\":\"DEBUG\",\"level_value\":10000,\"span-id\":\"d5c3b8b5dd1adc5e\",\"span-parent-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-21T00:33:24.517Z\",\"@version\":\"1\",\"message\":\"The operation 'participant is connected to Domain 'global'' has failed with an exception. Retrying after a number of 6 failures, and after 948 milliseconds. \",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-60\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"d5c3b8b5dd1adc5e\",\"span-parent-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-21T00:33:25.466Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'participant is connected to Domain 'global''. \",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-60\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"d5c3b8b5dd1adc5e\",\"span-parent-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-21T00:33:25.468Z\",\"@version\":\"1\",\"message\":\"Request (tid:e61c219dc195ad06c1f25430e66de619) com.digitalasset.canton.admin.participant.v30.DomainConnectivityService\/ReconnectDomain to participant:5002: sending request \",\"logger_name\":\"o.l.s.a.a.c.ApiClientRequestLogger:validator=validator_backend\",\"thread_name\":\"canton-env-ec-67\",\"level\":\"DEBUG\",\"level_value\":10000,\"span-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"app_init\"}```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02BPBUH5",
+        "source_team": "T02BPBUH5",
+        "user_profile": {
+            "avatar_hash": "gdf556e6627e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/df556e6627e5d02490481e3fa0b3f1f5.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "Clement",
+            "real_name": "Clement Lee",
+            "display_name": "Clement Lee",
+            "team": "T02BPBUH5",
+            "name": "clement",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741840243.696989",
+        "parent_user_id": "U08HF4RATC5",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "y+RKa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U04KJF6UTNU"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", looks like 14\/16 SVs have whitelisted our IP address on Devnet however when starting the node using docker compose, the validator container is unhealthy with the following logs:\n\nAny idea why this is so?\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"@timestamp\":\"2025-03-21T00:32:20.737Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'participant is connected to Domain 'global''. \",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-67\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"d5c3b8b5dd1adc5e\",\"span-parent-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-21T00:32:20.739Z\",\"@version\":\"1\",\"message\":\"Request (tid:788889bc7d43d304ff6b23a6b6dc8dbe) com.digitalasset.canton.admin.participant.v30.DomainConnectivityService\/ReconnectDomain to participant:5002: sending request \",\"logger_name\":\"o.l.s.a.a.c.ApiClientRequestLogger:validator=validator_backend\",\"thread_name\":\"canton-env-ec-58\",\"level\":\"DEBUG\",\"level_value\":10000,\"span-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"app_init\"}\n{\"@timestamp\":\"2025-03-21T00:33:24.514Z\",\"@version\":\"1\",\"message\":\"Request (tid:788889bc7d43d304ff6b23a6b6dc8dbe) com.digitalasset.canton.admin.participant.v30.DomainConnectivityService\/ReconnectDomain to participant:5002: failed with FAILED_PRECONDITION\/PARTICIPANT_IS_NOT_ACTIVE(9,788889bc): The participant is not yet active\",\"logger_name\":\"o.l.s.a.a.c.ApiClientRequestLogger:validator=validator_backend\",\"thread_name\":\"canton-env-ec-67\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"app_init\"}\n{\"@timestamp\":\"2025-03-21T00:33:24.516Z\",\"@version\":\"1\",\"message\":\"The operation 'participant is connected to Domain 'global'' failed with a retryable error (full stack trace omitted):\\ncategory=Some(InvalidGivenCurrentSystemStateOther)\\nErrorInfoDetail(PARTICIPANT_IS_NOT_ACTIVE,HashMap(participant -> participant, serverResponse -> Participant PAR::angelhack_devnet::12208d4fcf69... is not active, domain -> global, category -> 9, tid -> 788889bc7d43d304ff6b23a6b6dc8dbe))\\nRequestInfoDetail(788889bc7d43d304ff6b23a6b6dc8dbe)\",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-60\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"d5c3b8b5dd1adc5e\",\"span-parent-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-21T00:33:24.517Z\",\"@version\":\"1\",\"message\":\"Retrying on same error kind transient error (request infinite retries) for StatusRuntimeException\/FAILED_PRECONDITION: PARTICIPANT_IS_NOT_ACTIVE(9,788889bc): The participant is not yet active\",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-60\",\"level\":\"DEBUG\",\"level_value\":10000,\"span-id\":\"d5c3b8b5dd1adc5e\",\"span-parent-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-21T00:33:24.517Z\",\"@version\":\"1\",\"message\":\"The operation 'participant is connected to Domain 'global'' has failed with an exception. Retrying after a number of 6 failures, and after 948 milliseconds. \",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-60\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"d5c3b8b5dd1adc5e\",\"span-parent-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-21T00:33:25.466Z\",\"@version\":\"1\",\"message\":\"Now retrying operation 'participant is connected to Domain 'global''. \",\"logger_name\":\"o.l.s.e.ParticipantAdminConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-60\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"d5c3b8b5dd1adc5e\",\"span-parent-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"connect_domain\"}\n{\"@timestamp\":\"2025-03-21T00:33:25.468Z\",\"@version\":\"1\",\"message\":\"Request (tid:e61c219dc195ad06c1f25430e66de619) com.digitalasset.canton.admin.participant.v30.DomainConnectivityService\/ReconnectDomain to participant:5002: sending request \",\"logger_name\":\"o.l.s.a.a.c.ApiClientRequestLogger:validator=validator_backend\",\"thread_name\":\"canton-env-ec-67\",\"level\":\"DEBUG\",\"level_value\":10000,\"span-id\":\"4d8b643e3fa13591\",\"trace-id\":\"241d40d2c059d7c84a4a9bda5ce4cd0d\",\"span-name\":\"app_init\"}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08HF4RATC5",
+        "type": "message",
+        "ts": "1742517533.080849",
+        "client_msg_id": "1aa0328a-3115-4b60-b810-5b1dd88acad0",
+        "text": "Waited for 10mins and now the docker container logs shows the following error and the validator container is unhealthy\n\n```{\"@timestamp\":\"2025-03-21T00:37:47.493Z\",\"@version\":\"1\",\"message\":\"The operation 'refresh_scan_list' has failed with an exception. Total maximum number of retries 35 exceeded. Giving up. \",\"logger_name\":\"o.l.s.s.a.a.c.BftScanConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-59\",\"level\":\"INFO\",\"level_value\":20000,\"stack_trace\":\"io.grpc.StatusRuntimeException: UNAVAILABLE: Deliberately enforcing a retry on failed scans.\\n\\tat io.grpc.Status.asRuntimeException(Status.java:524)\\n\\tat org.lfdecentralizedtrust.splice.scan.admin.api.client.BftScanConnection.$anonfun$refreshAction$3(BftScanConnection.scala:117)\\n\\tat scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)\\n\\tat com.daml.executors.QueueAwareExecutorService$TrackingRunnable.run(QueueAwareExecutorService.scala:98)\\n\\tat com.daml.metrics.InstrumentedExecutorServiceMetrics$InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorServiceMetrics.scala:190)\\n\\tat java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1395)\\n\\tat java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)\\n\\tat java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)\\n\",\"span-id\":\"9233ec3df8f5363b\",\"trace-id\":\"4354ccb1d5ae035865232ceeb43e41ee\",\"span-name\":\"refresh_scan_list\"}```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02BPBUH5",
+        "source_team": "T02BPBUH5",
+        "user_profile": {
+            "avatar_hash": "gdf556e6627e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/df556e6627e5d02490481e3fa0b3f1f5.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "Clement",
+            "real_name": "Clement Lee",
+            "display_name": "Clement Lee",
+            "team": "T02BPBUH5",
+            "name": "clement",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741840243.696989",
+        "parent_user_id": "U08HF4RATC5",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "u5xIe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Waited for 10mins and now the docker container logs shows the following error and the validator container is unhealthy\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"@timestamp\":\"2025-03-21T00:37:47.493Z\",\"@version\":\"1\",\"message\":\"The operation 'refresh_scan_list' has failed with an exception. Total maximum number of retries 35 exceeded. Giving up. \",\"logger_name\":\"o.l.s.s.a.a.c.BftScanConnection:validator=validator_backend\",\"thread_name\":\"canton-env-ec-59\",\"level\":\"INFO\",\"level_value\":20000,\"stack_trace\":\"io.grpc.StatusRuntimeException: UNAVAILABLE: Deliberately enforcing a retry on failed scans.\\n\\tat io.grpc.Status.asRuntimeException(Status.java:524)\\n\\tat org.lfdecentralizedtrust.splice.scan.admin.api.client.BftScanConnection.$anonfun$refreshAction$3(BftScanConnection.scala:117)\\n\\tat scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)\\n\\tat com.daml.executors.QueueAwareExecutorService$TrackingRunnable.run(QueueAwareExecutorService.scala:98)\\n\\tat com.daml.metrics.InstrumentedExecutorServiceMetrics$InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorServiceMetrics.scala:190)\\n\\tat java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1395)\\n\\tat java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)\\n\\tat java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)\\n\\tat java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)\\n\",\"span-id\":\"9233ec3df8f5363b\",\"trace-id\":\"4354ccb1d5ae035865232ceeb43e41ee\",\"span-name\":\"refresh_scan_list\"}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08HF4RATC5",
+        "type": "message",
+        "ts": "1742517870.165049",
+        "edited": {
+            "user": "U08HF4RATC5",
+            "ts": "1742517890.000000"
+        },
+        "client_msg_id": "29c9443f-cd88-486d-b605-e3daf5d52a77",
+        "text": "yeap I did that with this command -> curl -X POST $SPONSOR_SV_URL\/api\/sv\/v0\/devnet\/onboard\/validator\/prepare\n\nSPONSOR_SV_URL=<https:\/\/sv.sv-1.dev.global.canton.network.sync.global>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02BPBUH5",
+        "source_team": "T02BPBUH5",
+        "user_profile": {
+            "avatar_hash": "gdf556e6627e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/df556e6627e5d02490481e3fa0b3f1f5.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "Clement",
+            "real_name": "Clement Lee",
+            "display_name": "Clement Lee",
+            "team": "T02BPBUH5",
+            "name": "clement",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741840243.696989",
+        "parent_user_id": "U08HF4RATC5",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7787v",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yeap I did that with this command -> curl -X POST $SPONSOR_SV_URL\/api\/sv\/v0\/devnet\/onboard\/validator\/prepare\n\nSPONSOR_SV_URL="
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/sv.sv-1.dev.global.canton.network.sync.global"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01DARYACCT",
+        "type": "message",
+        "ts": "1742519078.352009",
+        "client_msg_id": "BB411BA6-6B2D-4F7E-8352-E91AAE8502C2",
+        "text": "Is migration id set to 1?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E014GLQD2NN",
+        "source_team": "E014GLQD2NN",
+        "user_profile": {
+            "avatar_hash": "889d6e9cb5ee",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-10-04\/783644907056_889d6e9cb5ee13fbff83_72.jpg",
+            "first_name": "Stas",
+            "real_name": "Stas German",
+            "display_name": "stasge",
+            "team": "E014GLQD2NN",
+            "name": "stasge",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742445827.875669",
+        "parent_user_id": "U08HF4RATC5",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ecGuQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is migration id set to 1?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08HF4RATC5",
+        "type": "message",
+        "ts": "1742519251.129199",
+        "client_msg_id": "1711f48c-9bb6-4cfb-b61e-d3e52a57b19e",
+        "text": "I am currently using migration id 0",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02BPBUH5",
+        "source_team": "T02BPBUH5",
+        "user_profile": {
+            "avatar_hash": "gdf556e6627e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/df556e6627e5d02490481e3fa0b3f1f5.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "Clement",
+            "real_name": "Clement Lee",
+            "display_name": "Clement Lee",
+            "team": "T02BPBUH5",
+            "name": "clement",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742445827.875669",
+        "parent_user_id": "U08HF4RATC5",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ei5XG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I am currently using migration id 0"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08HF4RATC5",
+        "type": "message",
+        "ts": "1742519261.733419",
+        "client_msg_id": "a49eb419-fc75-4e74-9223-800622b56c97",
+        "text": "let me update it to migration id 1",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02BPBUH5",
+        "source_team": "T02BPBUH5",
+        "user_profile": {
+            "avatar_hash": "gdf556e6627e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/df556e6627e5d02490481e3fa0b3f1f5.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "Clement",
+            "real_name": "Clement Lee",
+            "display_name": "Clement Lee",
+            "team": "T02BPBUH5",
+            "name": "clement",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742445827.875669",
+        "parent_user_id": "U08HF4RATC5",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5R\/nR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "let me update it to migration id 1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08HF4RATC5",
+        "type": "message",
+        "ts": "1742519761.541079",
+        "client_msg_id": "72a86b74-1d95-442f-b871-5bccaf35a063",
+        "text": "hey <@U01DARYACCT>, setting migration id 1 resolved the issue! Appreciate the help :pray:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02BPBUH5",
+        "source_team": "T02BPBUH5",
+        "user_profile": {
+            "avatar_hash": "gdf556e6627e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/df556e6627e5d02490481e3fa0b3f1f5.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "Clement",
+            "real_name": "Clement Lee",
+            "display_name": "Clement Lee",
+            "team": "T02BPBUH5",
+            "name": "clement",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742445827.875669",
+        "parent_user_id": "U08HF4RATC5",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lFpbr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01DARYACCT"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", setting migration id 1 resolved the issue! Appreciate the help "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray",
+                                "unicode": "1f64f"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "ok_hand",
+                "users": [
+                    "U01DARYACCT"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08HF4RATC5",
+        "type": "message",
+        "ts": "1742519826.481009",
+        "client_msg_id": "a2ba51a9-29f9-471b-a1e5-b00fa8cac1c5",
+        "text": "hey <@U03HMUTQ5F0>, my devnet validator node is now running fine!\n\nWas previously running with migration id=0 instead of migration id=1",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02BPBUH5",
+        "source_team": "T02BPBUH5",
+        "user_profile": {
+            "avatar_hash": "gdf556e6627e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/df556e6627e5d02490481e3fa0b3f1f5.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "Clement",
+            "real_name": "Clement Lee",
+            "display_name": "Clement Lee",
+            "team": "T02BPBUH5",
+            "name": "clement",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741840243.696989",
+        "parent_user_id": "U08HF4RATC5",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qaWdd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", my devnet validator node is now running fine!\n\nWas previously running with migration id=0 instead of migration id=1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "raised_hands::skin-tone-3",
+                "users": [
+                    "U04KJF6UTNU"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

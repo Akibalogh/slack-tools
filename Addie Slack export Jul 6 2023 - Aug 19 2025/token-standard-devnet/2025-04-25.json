@@ -1,0 +1,138 @@
+[
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1745581960.019719",
+        "client_msg_id": "bd670f86-3799-470f-b38c-4af6c2beeeea",
+        "text": "Hello! now with the version `0.4.0-snapshot.20250423.9136.0.v130d2648` and the same request, I get this:\n\n```The request content was malformed:\nDecodingFailure at .choiceArguments: Missing required field```\nAs a reference for the expected payload, I use this (Splice CLI, branch canton-3.3):\n\n<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/token-standard\/cli\/src\/commands\/transfer.ts#L38>\n\nMaybe I'm looking at an outdated reference? where can I find the current one?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745340160.382419",
+        "parent_user_id": "U06TMPD96M8",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "color": "24292f",
+                "bot_id": "B023R9A62UF",
+                "bot_team_id": "T8Z8R9AFL",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/token-standard\/cli\/src\/commands\/transfer.ts#L38",
+                "is_app_unfurl": true,
+                "fallback": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/token-standard\/cli\/src\/commands\/transfer.ts|transfer.ts>",
+                "text": "```\nexport async function transfer(\n```",
+                "title": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/token-standard\/cli\/src\/commands\/transfer.ts|transfer.ts>",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "J9+23",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello! now with the version "
+                            },
+                            {
+                                "type": "text",
+                                "text": "0.4.0-snapshot.20250423.9136.0.v130d2648",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and the same request, I get this:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The request content was malformed:\nDecodingFailure at .choiceArguments: Missing required field"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nAs a reference for the expected payload, I use this (Splice CLI, branch canton-3.3):\n\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/canton-3.3\/token-standard\/cli\/src\/commands\/transfer.ts#L38"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nMaybe I'm looking at an outdated reference? where can I find the current one?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1745582709.060149",
+        "client_msg_id": "14045968-9ab6-4cb0-a57d-fa578b111b3c",
+        "text": "worked now! thank you",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745340160.382419",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "h1Snc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "worked now! thank you"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

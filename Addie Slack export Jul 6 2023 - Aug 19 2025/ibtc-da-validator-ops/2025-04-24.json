@@ -1,0 +1,705 @@
+[
+    {
+        "subtype": "tombstone",
+        "text": "This message was deleted.",
+        "user": "USLACKBOT",
+        "hidden": true,
+        "type": "message",
+        "ts": "1745485517.515419",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T03T53E10",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485517.515419",
+        "parent_user_id": "USLACKBOT",
+        "reply_count": 13,
+        "reply_users_count": 1,
+        "latest_reply": "1745523038.043439",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745505282.223109"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745505848.983489"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745506001.650389"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745506091.911879"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745507830.942889"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745507866.367599"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745507872.615609"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745507927.809749"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745507949.555719"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745508031.410649"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745522438.058139"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745522484.815919"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745523038.043439"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745505282.223109",
+        "client_msg_id": "d10912af-d9f4-4158-85dd-9b8c6236562f",
+        "text": "Thank you, it was very useful indeed, and these as well.\n\nRegarding canton bootstrap scripts. It seems to me based on the docs (<https:\/\/docs.daml.com\/2.6.5\/tools\/canton-console.html#interact-with-the-sandbox>, and <https:\/\/docs.daml.com\/2.6.5\/canton\/tutorials\/getting_started.html#automation-using-bootstrap-scripts>), that I can't pass in `--bootstrap` to the `daml sandbox` directly. I think I'll have to change the docker entrypoint to first start the sandbox, then separately pass in the script to the underlying canton instance.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485517.515419",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "orU\/7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you, it was very useful indeed, and these as well.\n\nRegarding canton bootstrap scripts. It seems to me based on the docs ("
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.daml.com\/2.6.5\/tools\/canton-console.html#interact-with-the-sandbox"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", and "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.daml.com\/2.6.5\/canton\/tutorials\/getting_started.html#automation-using-bootstrap-scripts"
+                            },
+                            {
+                                "type": "text",
+                                "text": "), that I can't pass in "
+                            },
+                            {
+                                "type": "text",
+                                "text": "--bootstrap",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " to the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "daml sandbox",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " directly. I think I'll have to change the docker entrypoint to first start the sandbox, then separately pass in the script to the underlying canton instance."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745505848.983489",
+        "client_msg_id": "72762e53-d75d-46bd-bbeb-f1169149401b",
+        "text": "I see, so I can technically just define the parties on the participant in the config file, without having a bootstrap script in scala at all.\n\nCan I set up Users this way too?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485517.515419",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jp8yj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I see, so I can technically just define the parties on the participant in the config file, without having a bootstrap script in scala at all.\n\nCan I set up Users this way too?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745506001.650389",
+        "client_msg_id": "711d8a04-9143-4e7c-abea-492aeb497a51",
+        "text": "so there is no way around starting the daml sandbox and then running the script in another process -- it seems to me based on `daml sandbox --help` and `daml sandbox --canton-help` , since i cant define everything i need in the conf",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485517.515419",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8l8jA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "so there is no way around starting the daml sandbox and then running the script in another process -- it seems to me based on "
+                            },
+                            {
+                                "type": "text",
+                                "text": "daml sandbox --help",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "daml sandbox --canton-help",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " , since i cant define everything i need in the conf"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745506091.911879",
+        "client_msg_id": "a465d2d0-851b-43b0-9446-212be281dcb4",
+        "text": "oooh i see. let me try, thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485517.515419",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4fVox",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "oooh i see. let me try, thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745507830.942889",
+        "client_msg_id": "cc7f48ac-cfa5-4d63-ac06-cc3af2297623",
+        "text": "so a little update on this: it seems i need to download canton separately to run it directly? The SDK does not contain a standalone version of `canton`",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485517.515419",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HNZZV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "so a little update on this: it seems i need to download canton separately to run it directly? The SDK does not contain a standalone version of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "canton",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745507866.367599",
+        "client_msg_id": "f7ad1b10-acf9-41ce-8b5e-2b30be568814",
+        "text": "which is surprising if it runs it under the hood",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485517.515419",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "F+01Y",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "which is surprising if it runs it under the hood"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745507872.615609",
+        "client_msg_id": "5116c54d-914a-4ff4-8590-b4c5deeff62f",
+        "text": "but i'll just install it directly",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485517.515419",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "j0iCd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but i'll just install it directly"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745507927.809749",
+        "client_msg_id": "11cd9a8b-169d-4c3c-8fd2-a1a1bc626ceb",
+        "text": "well for docker i actually made a fresh image, and just installed the daml-sdk inside it",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485517.515419",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Dnn\/E",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "well for docker i actually made a fresh image, and just installed the daml-sdk inside it"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745507949.555719",
+        "client_msg_id": "167c643d-1c2b-4140-b6b7-4d2b27f590de",
+        "text": "but even locally on my computer, i cant seem to find a runnable `canton` bin with just the sdk installed",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485517.515419",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VZ3iu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but even locally on my computer, i cant seem to find a runnable "
+                            },
+                            {
+                                "type": "text",
+                                "text": "canton",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " bin with just the sdk installed"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745508031.410649",
+        "client_msg_id": "f287aaa2-fe23-4eea-8d83-5bf6471d98fc",
+        "text": "but now that you mention it, i might just use one of digital asset's images as base",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485517.515419",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7kzRT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but now that you mention it, i might just use one of digital asset's images as base"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745522438.058139",
+        "client_msg_id": "fc729d61-ba97-4140-b0a8-11a8483e53c1",
+        "text": "Ended up creating this multi-step flow, not sure if totally necessary, but it works :smile:\n\n```FROM digitalasset\/daml-sdk:3.3.0-snapshot.20250417.0 AS daml-build\n\n# Create app directory\nWORKDIR \/app\n\n# Copy project files\nCOPY simple-contract \/app\/simple-contract\nCOPY dars \/app\/dars\n\n# Fix permissions\nUSER root\nRUN mkdir -p \/app\/simple-contract\/.daml\/interfaces\/daml\/Experiments \\\n  &amp;&amp; chown -R daml:daml \/app\n\nUSER daml\n\n# Build the DAML project\nRUN cd \/app\/simple-contract &amp;&amp; daml build\n\n# Generate TypeScript bindings\nRUN mkdir -p \/app\/daml.js \\\n  &amp;&amp; daml codegen js -o \/app\/daml.js \/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\n\nFROM <http:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/canton:0.3.21|ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/canton:0.3.21>\n\nCOPY simple-topology.conf \/app\/app.conf\n\nCOPY --from=daml-build \/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar \/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\n\n# Copy JS bindings\n# COPY --from=daml-build \/app\/daml.js \/app\/daml.js\n\nEXPOSE 6865\nEXPOSE 7575\n\nCMD [\"--dar\", \"\/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\"]```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485517.515419",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+zH7b",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ended up creating this multi-step flow, not sure if totally necessary, but it works "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile",
+                                "unicode": "1f604"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "FROM digitalasset\/daml-sdk:3.3.0-snapshot.20250417.0 AS daml-build\n\n# Create app directory\nWORKDIR \/app\n\n# Copy project files\nCOPY simple-contract \/app\/simple-contract\nCOPY dars \/app\/dars\n\n# Fix permissions\nUSER root\nRUN mkdir -p \/app\/simple-contract\/.daml\/interfaces\/daml\/Experiments \\\n  && chown -R daml:daml \/app\n\nUSER daml\n\n# Build the DAML project\nRUN cd \/app\/simple-contract && daml build\n\n# Generate TypeScript bindings\nRUN mkdir -p \/app\/daml.js \\\n  && daml codegen js -o \/app\/daml.js \/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\n\nFROM ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/canton:0.3.21\n\nCOPY simple-topology.conf \/app\/app.conf\n\nCOPY --from=daml-build \/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar \/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\n\n# Copy JS bindings\n# COPY --from=daml-build \/app\/daml.js \/app\/daml.js\n\nEXPOSE 6865\nEXPOSE 7575\n\nCMD [\"--dar\", \"\/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\"]"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745522484.815919",
+        "client_msg_id": "3d09ce7a-55d5-47d0-a735-e61404feea0a",
+        "text": "Not fully cleaned up, but you get the gist of it",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485517.515419",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "o6tzf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Not fully cleaned up, but you get the gist of it"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745523038.043439",
+        "client_msg_id": "24b26364-5ba9-47e0-84ed-2536748358fa",
+        "text": "okay, danke",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745485517.515419",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MGU1v",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "okay, danke"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,986 @@
+[
+    {
+        "subtype": "bot_message",
+        "text": "*gnarcin* from *Homeblack* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1752922258.023059",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NOzv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "gnarcin",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Homeblack",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U03DGSX17HP",
+        "type": "message",
+        "ts": "1752924484.973499",
+        "client_msg_id": "e84a3742-7864-48f9-80bf-f73650c8f975",
+        "text": "Hi,\nWe are trying to deploy the node devnet validator node. Can the party_id and participant_identifier be the same? What needs to be set for PARTICIPANT_IDENTIFIER in the env file of deployment release?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03D47QTA58",
+        "source_team": "T03D47QTA58",
+        "user_profile": {
+            "avatar_hash": "7436f6474400",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-04-27\/3446313315699_7436f6474400f3b63a00_72.png",
+            "first_name": "Rohan",
+            "real_name": "Rohan",
+            "display_name": "Rohan",
+            "team": "T03D47QTA58",
+            "name": "rohan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UkeEA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi,\nWe are trying to deploy the node devnet validator node. Can the party_id and participant_identifier be the same? What needs to be set for PARTICIPANT_IDENTIFIER in the env file of deployment release?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07UFMLQ6M9",
+        "type": "message",
+        "ts": "1752926664.992669",
+        "client_msg_id": "815e421f-3194-41f2-af0e-84609a93de01",
+        "text": "<@U03DGSX17HP> You don't have to set it. If you use `-p` as one of the arguments of the start.sh command, then it will be set automatically as stated in the source of start.sh:\n\n`-p &lt;party_hint&gt;: The party hint to use for the validator operator, by default also your participant identifier.`\n\n```if [ -n \"${participant_id}\" ]; then\n  export PARTICIPANT_IDENTIFIER=${participant_id}\nelse\n  export PARTICIPANT_IDENTIFIER=${party_hint}\nfi ```\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07U960EDNJ",
+        "source_team": "T07U960EDNJ",
+        "user_profile": {
+            "avatar_hash": "6c68dc53e993",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-01\/7990629713536_6c68dc53e99326d3558f_72.png",
+            "first_name": "Jan",
+            "real_name": "Jan Willem Veldhuis",
+            "display_name": "JW",
+            "team": "T07U960EDNJ",
+            "name": "jan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752926664.992669",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1752931503.284659",
+        "reply_users": [
+            "U03DGSX17HP"
+        ],
+        "replies": [
+            {
+                "user": "U03DGSX17HP",
+                "ts": "1752931503.284659"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "n+bLm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U03DGSX17HP"
+                            },
+                            {
+                                "type": "text",
+                                "text": " You don't have to set it. If you use "
+                            },
+                            {
+                                "type": "text",
+                                "text": "-p",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " as one of the arguments of the start.sh command, then it will be set automatically as stated in the source of start.sh:\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "-p <party_hint>: The party hint to use for the validator operator, by default also your participant identifier.",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "if [ -n \"${participant_id}\" ]; then\n  export PARTICIPANT_IDENTIFIER=${participant_id}\nelse\n  export PARTICIPANT_IDENTIFIER=${party_hint}\nfi "
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03DGSX17HP",
+        "type": "message",
+        "ts": "1752931503.284659",
+        "client_msg_id": "492e5f8d-76b7-43d6-ac56-c39f2da75f33",
+        "text": "Thanks <@U07UFMLQ6M9>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03D47QTA58",
+        "source_team": "T03D47QTA58",
+        "user_profile": {
+            "avatar_hash": "7436f6474400",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-04-27\/3446313315699_7436f6474400f3b63a00_72.png",
+            "first_name": "Rohan",
+            "real_name": "Rohan",
+            "display_name": "Rohan",
+            "team": "T03D47QTA58",
+            "name": "rohan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752926664.992669",
+        "parent_user_id": "U07UFMLQ6M9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hwgrV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U07UFMLQ6M9"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1::skin-tone-2",
+                "users": [
+                    "U07UFMLQ6M9"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U03DGSX17HP",
+        "type": "message",
+        "ts": "1752931567.191519",
+        "edited": {
+            "user": "U03DGSX17HP",
+            "ts": "1752931599.000000"
+        },
+        "client_msg_id": "2d1c7195-6715-40e9-a8e0-301ce0432b62",
+        "text": "Hi! Could you please add the following IP addresses to the allowlist for validator onboarding:\n\n1. devnet: 34.100.225.196\n2. testnet: 34.93.252.226\n3. mainnet: 34.93.120.9",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03D47QTA58",
+        "source_team": "T03D47QTA58",
+        "user_profile": {
+            "avatar_hash": "7436f6474400",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-04-27\/3446313315699_7436f6474400f3b63a00_72.png",
+            "first_name": "Rohan",
+            "real_name": "Rohan",
+            "display_name": "Rohan",
+            "team": "T03D47QTA58",
+            "name": "rohan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752931567.191519",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1753255394.306229",
+        "reply_users": [
+            "U03DGSX17HP",
+            "U08987JD1J9"
+        ],
+        "replies": [
+            {
+                "user": "U03DGSX17HP",
+                "ts": "1753214964.331469"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1753215057.202969"
+            },
+            {
+                "user": "U03DGSX17HP",
+                "ts": "1753215822.764219"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1753215870.950899"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1753255394.306229"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "h0aJ\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi! Could you please add the following IP addresses to the allowlist for validator onboarding:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "devnet: 34.100.225.196"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "testnet: 34.93.252.226"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "mainnet: 34.93.120.9"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U095FB31DLH",
+        "type": "message",
+        "ts": "1752937586.251119",
+        "edited": {
+            "user": "U095FB31DLH",
+            "ts": "1752938484.000000"
+        },
+        "client_msg_id": "ff447793-ebac-485a-a0fd-0e6ebed97a21",
+        "text": "Hi all,\n\nJust configuring AKS instance. Am I being silly here or something, but where do I find my Migration ID? It says I can find it on the sv-network link, but I don't know which of those I'm supposed to use? Is the migration ID just \"\"migration_id\": 0\" as I'm going into DevNet? And how do I get the Sponsor_SV_URL?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752937586.251119",
+        "reply_count": 3,
+        "reply_users_count": 2,
+        "latest_reply": "1752939200.444859",
+        "reply_users": [
+            "U07UFMLQ6M9",
+            "U095FB31DLH"
+        ],
+        "replies": [
+            {
+                "user": "U07UFMLQ6M9",
+                "ts": "1752939142.528159"
+            },
+            {
+                "user": "U095FB31DLH",
+                "ts": "1752939182.131459"
+            },
+            {
+                "user": "U07UFMLQ6M9",
+                "ts": "1752939200.444859"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "opsiS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all,\n\nJust configuring AKS instance. Am I being silly here or something, but where do I find my Migration ID? It says I can find it on the sv-network link, but I don't know which of those I'm supposed to use? Is the migration ID just \"\"migration_id\": 0\" as I'm going into DevNet? And how do I get the Sponsor_SV_URL?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "<https:\/\/sync.global\/sv-network\/|https:\/\/sync.global\/sv-network\/> ",
+        "files": [
+            {
+                "id": "F096KQCH0TU",
+                "created": 1752939080,
+                "timestamp": 1752939080,
+                "name": "IMG_5500.jpg",
+                "title": "IMG_5500",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U07UFMLQ6M9",
+                "user_team": "T07U960EDNJ",
+                "editable": false,
+                "size": 40721,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T07U960EDNJ-F096KQCH0TU\/img_5500.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T07U960EDNJ-F096KQCH0TU\/download\/img_5500.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096KQCH0TU-d9a1fdf4cf\/img_5500_64.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096KQCH0TU-d9a1fdf4cf\/img_5500_80.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096KQCH0TU-d9a1fdf4cf\/img_5500_360.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 139,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096KQCH0TU-d9a1fdf4cf\/img_5500_480.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 185,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096KQCH0TU-d9a1fdf4cf\/img_5500_160.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096KQCH0TU-d9a1fdf4cf\/img_5500_720.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 278,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096KQCH0TU-d9a1fdf4cf\/img_5500_800.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 309,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096KQCH0TU-d9a1fdf4cf\/img_5500_960.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 371,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096KQCH0TU-d9a1fdf4cf\/img_5500_1024.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 396,
+                "original_w": 1206,
+                "original_h": 466,
+                "thumb_tiny": "AwATADC\/ICOfMKjgdM96cAQ2C+cjgHH+fSlPTjJ+lM53kZcZ6HjH4UAOQgjG4MRwSPWlyM4zzTUDAZLMc9jjj8qU5yeuOPSgBdw3YyM+lLTH3EZXcPYY5py5IBIwfSgBaQAAkgDJ6mlooAKKKKACiiigD\/\/Z",
+                "permalink": "https:\/\/alumlabsworkspace.slack.com\/files\/U05FZBDQ4RJ\/F096KQCH0TU\/img_5500.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T07U960EDNJ-F096KQCH0TU-aefa34bdc8",
+                "source_team": "T07U960EDNJ",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F096ENZA6JX",
+                "created": 1752939126,
+                "timestamp": 1752939126,
+                "name": "IMG_5501.jpg",
+                "title": "IMG_5501",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U07UFMLQ6M9",
+                "user_team": "T07U960EDNJ",
+                "editable": false,
+                "size": 102960,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T07U960EDNJ-F096ENZA6JX\/img_5501.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T07U960EDNJ-F096ENZA6JX\/download\/img_5501.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096ENZA6JX-331a3bd5b4\/img_5501_64.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096ENZA6JX-331a3bd5b4\/img_5501_80.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096ENZA6JX-331a3bd5b4\/img_5501_360.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 246,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096ENZA6JX-331a3bd5b4\/img_5501_480.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 328,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096ENZA6JX-331a3bd5b4\/img_5501_160.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096ENZA6JX-331a3bd5b4\/img_5501_720.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 493,
+                "thumb_720_h": 720,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096ENZA6JX-331a3bd5b4\/img_5501_800.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 1169,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096ENZA6JX-331a3bd5b4\/img_5501_960.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 657,
+                "thumb_960_h": 960,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T07U960EDNJ-F096ENZA6JX-331a3bd5b4\/img_5501_1024.jpg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 700,
+                "thumb_1024_h": 1024,
+                "original_w": 1206,
+                "original_h": 1763,
+                "thumb_tiny": "AwAwACFfsT524TI6nnn9KUWMhAPyc+5\/wq5LLHCQZGwTnHGaWOZJCwVuV6gjGKAKX2CT\/pn+Z\/woNky43GIZ4GWPX8q0M8ZzSYVwDwwByO9AGd\/Z0395PzP+FH9nTf3k\/M\/4Vp0UANeNHxvRWx0yM0LGiZ2Iq564GKZPIEAB28gn5gT0qNJWk7xlCAD8p6nj+dAFmiowm\/lgpGcjjGeMc\/rUgAAwOAKACiiigBj5PQ4Ht3\/z\/nFJsRgCUBOO4pxBUfLj1xTVckEsuB7Z\/wAKQhQqgYCgD2FKhwxXJOBmmgHOec4xg45p6+\/WmAtFFFAz\/9k=",
+                "permalink": "https:\/\/alumlabsworkspace.slack.com\/files\/U05FZBDQ4RJ\/F096ENZA6JX\/img_5501.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T07U960EDNJ-F096ENZA6JX-6aa3830850",
+                "source_team": "T07U960EDNJ",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U07UFMLQ6M9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "m9VQp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/sync.global\/sv-network\/",
+                                "text": "https:\/\/sync.global\/sv-network\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1752939142.528159",
+        "client_msg_id": "56A0D0A3-CF5B-4BD4-A030-9ED6447F9322",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1752937586.251119",
+        "parent_user_id": "U095FB31DLH",
+        "user_team": "T07U960EDNJ",
+        "source_team": "T07U960EDNJ",
+        "user_profile": {
+            "avatar_hash": "6c68dc53e993",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-01\/7990629713536_6c68dc53e99326d3558f_72.png",
+            "first_name": "Jan",
+            "real_name": "Jan Willem Veldhuis",
+            "display_name": "JW",
+            "team": "T07U960EDNJ",
+            "name": "jan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "reactions": [
+            {
+                "name": "woman-facepalming",
+                "users": [
+                    "U095FB31DLH"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U095FB31DLH",
+        "type": "message",
+        "ts": "1752939182.131459",
+        "client_msg_id": "f030b9a3-e958-4c85-90ed-bfe861227a99",
+        "text": "I honestly thought it would be more difficult than that",
+        "team": "T05FWTX7PMG",
+        "user_team": "T095FB30QQ1",
+        "source_team": "T095FB30QQ1",
+        "user_profile": {
+            "avatar_hash": "g087e192df05",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/087e192df05033f5fde273a699c55539.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "rich",
+            "real_name": "rich",
+            "display_name": "",
+            "team": "T095FB30QQ1",
+            "name": "rich",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752937586.251119",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Hgpw\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I honestly thought it would be more difficult than that"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "laughing",
+                "users": [
+                    "U07UFMLQ6M9"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U07UFMLQ6M9",
+        "type": "message",
+        "ts": "1752939200.444859",
+        "client_msg_id": "7A48A102-999B-41F4-B110-473A887C518F",
+        "text": "And you can get the SV URI from your sponsor. ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07U960EDNJ",
+        "source_team": "T07U960EDNJ",
+        "user_profile": {
+            "avatar_hash": "6c68dc53e993",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-01\/7990629713536_6c68dc53e99326d3558f_72.png",
+            "first_name": "Jan",
+            "real_name": "Jan Willem Veldhuis",
+            "display_name": "JW",
+            "team": "T07U960EDNJ",
+            "name": "jan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752937586.251119",
+        "parent_user_id": "U095FB31DLH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PWRS5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And you can get the SV URI from your sponsor. "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0967K37H3Q",
+        "type": "message",
+        "ts": "1752942170.714779",
+        "client_msg_id": "a7da5937-673a-46a8-9264-0d2a16df0e29",
+        "text": "Add the following IP addresses to the allowlist:\n`207.244.199.62` – DevNet\n`213.255.246.125` – MainNet",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0967K37CH4",
+        "source_team": "T0967K37CH4",
+        "user_profile": {
+            "avatar_hash": "d8f2510d68b8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-25\/9249349190403_d8f2510d68b8b29c8b9f_72.jpg",
+            "first_name": "yarnik",
+            "real_name": "yarnik",
+            "display_name": "",
+            "team": "T0967K37CH4",
+            "name": "yarnik",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752942170.714779",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1754148752.001609",
+        "reply_users": [
+            "U0967K37H3Q",
+            "U0821PFKM0V"
+        ],
+        "replies": [
+            {
+                "user": "U0967K37H3Q",
+                "ts": "1753386306.447899"
+            },
+            {
+                "user": "U0821PFKM0V",
+                "ts": "1753387434.388909"
+            },
+            {
+                "user": "U0967K37H3Q",
+                "ts": "1753441262.609269"
+            },
+            {
+                "user": "U0821PFKM0V",
+                "ts": "1753443872.329719"
+            },
+            {
+                "user": "U0967K37H3Q",
+                "ts": "1754148752.001609"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5bNpA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Add the following IP addresses to the allowlist:\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "207.244.199.62",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " – DevNet\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "213.255.246.125",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " – MainNet"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U0821PFKM0V"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U03NX7CC3BN",
+        "type": "message",
+        "ts": "1752942254.138929",
+        "client_msg_id": "1e3f4940-cac3-416d-9357-d1bf7c3fdb76",
+        "text": "Can we also please add my colleagues to this and outreach channels:\n\n<@U03P2UFNRPW> <@U043SDRGUA1> <@U06RCRKQSKS>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03P7E7PN2D",
+        "source_team": "T03P7E7PN2D",
+        "user_profile": {
+            "avatar_hash": "1cc81d83213e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-09-21\/5954088157872_1cc81d83213e34fe1be1_72.jpg",
+            "first_name": "Evgeny",
+            "real_name": "Evgeny Garanin",
+            "display_name": "Evgeny Garanin",
+            "team": "T03P7E7PN2D",
+            "name": "evgeny",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752616402.523159",
+        "parent_user_id": "U03NX7CC3BN",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hzKX8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Can we also please add my colleagues to this and outreach channels:\n\n"
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03P2UFNRPW"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U043SDRGUA1"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U06RCRKQSKS"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*stanley* from *Lombard* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1752946840.324789",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "C2f",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "stanley",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Lombard",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U09660FKNDU",
+        "type": "message",
+        "ts": "1752953834.972599",
+        "client_msg_id": "1da6575b-a0af-4757-8bb9-fd94a3554985",
+        "text": "Hi! Could you please add the following IP address to the allowlist for devnet validator\n167.99.58.34",
+        "team": "T05FWTX7PMG",
+        "user_team": "T09660FKKD4",
+        "source_team": "T09660FKKD4",
+        "user_profile": {
+            "avatar_hash": "1c8f63dd974b",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-21\/9214723216519_1c8f63dd974bae7692f0_72.jpg",
+            "first_name": "Tati",
+            "real_name": "Tati MSE",
+            "display_name": "",
+            "team": "T09660FKKD4",
+            "name": "tanya",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ttcjK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi! Could you please add the following IP address to the allowlist for devnet validator\n167.99.58.34"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "retention_threshold",
+        "user": "USLACKBOT",
+        "type": "message",
+        "ts": "1752984000.000000",
+        "text": "Some older messages are unavailable. Due to the retention policies of an organization in this channel, all their messages and files from before this date have been deleted.",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8wQe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Some older messages are unavailable. Due to the retention policies of an organization in this channel, all their messages and files from before this date have been deleted."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,79 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1751900754.388109",
+        "client_msg_id": "697b6297-610b-41e9-b937-bf7c4a9098b9",
+        "text": "I have a PR for this finally:\n<https:\/\/github.com\/DLC-link\/canton\/pull\/10\/files>\n\nNot tried on DevNet yet, as first I have to add this to the rust as well. But maybe you could spot any glaring issues before I do any of that :pray:\n\nI was paying attention to not using any utility packages directly, but now I do have some values in the SetupUtility function that I don't return at all :shrug: Not even sure I _need_ to return them (e.g. allocationFactoryCid, etc.) as we wouldnt use this returned data",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751289497.261109",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VshBl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I have a PR for this finally:\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton\/pull\/10\/files"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nNot tried on DevNet yet, as first I have to add this to the rust as well. But maybe you could spot any glaring issues before I do any of that "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray",
+                                "unicode": "1f64f"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nI was paying attention to not using any utility packages directly, but now I do have some values in the SetupUtility function that I don't return at all "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "shrug",
+                                "unicode": "1f937"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Not even sure I "
+                            },
+                            {
+                                "type": "text",
+                                "text": "need",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " to return them (e.g. allocationFactoryCid, etc.) as we wouldnt use this returned data"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

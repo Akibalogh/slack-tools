@@ -1,0 +1,2486 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753861521.458209",
+        "client_msg_id": "4f6aa1bf-88fc-4dd7-ac2f-f7d06c152c32",
+        "text": "{\n    \"round\": 3864,\n    \"effective_unlocked_qty\": \"115754599.9356914339\",\n    \"effective_locked_qty\": \"<tel:00000000000|0.0000000000>\",\n    \"total_holding_fees\": \"<tel:00000000000|0.0000000000>\"\n}",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qb1Z2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"round\": 3864,\n    \"effective_unlocked_qty\": \"115754599.9356914339\",\n    \"effective_locked_qty\": \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "tel:00000000000",
+                                "text": "0.0000000000"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\",\n    \"total_holding_fees\": \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "tel:00000000000",
+                                "text": "0.0000000000"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"\n}"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753861528.901199",
+        "client_msg_id": "4b4ec7a8-55ac-4e08-995f-5160d764df85",
+        "text": "effective_unlocked_qty is what we need",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LFVhY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "effective_unlocked_qty is what we need"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753871629.574919",
+        "edited": {
+            "user": "U088UV6MKFE",
+            "ts": "1753871876.000000"
+        },
+        "client_msg_id": "810fc920-9a5b-4062-8201-b2b5de742c7c",
+        "text": "# Incident Report\n\n## Incident\nBillings have drastically slowed down at 07.19 6AM CET.\nAki noticed it on the dashboard this morning, a full day later.\n\n## Symptoms\nBilling backend took about 50 minutes to run a full loop of billings on our users.\nReading and submitting txs timed out, or took 20-30 seconds to run. Validator node was throwing errors.\n\n## Cause\nAfter a lot of digging, it became evident that the database pod of our k8s cluster is overloaded\/throttling.\nBased on resource usage metrics and the times, it was obviously related to the recently installed and started ChataAI backend and our user onboardings 12 hours before the Incident.\n\n## Solution\nWe turned off chata-ai backend service on the cluster.\n\n## Notes\nBefore we knew the root cause, we experimented with the following solutions:\n• Parallel requests to the API. Obviously caused even more throttling\n• Removed all users whose balance is known to be zero from the env config. This is still in effect.\n## Next steps\n• We are talking with IEU to scale our pods up, to facilitate Chata AI if we want to.\n• We need better monitoring\/alerting. This incident would have been 'hard' to catch, as nothing was 'erroring' mostly, just being terribly slow for a while. However, the 503 Errors from the Billing app in the end stages could have triggered PagerDuty alerts.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753871629.574919",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1753876091.615629",
+        "reply_users": [
+            "U05FU0HPZ9T",
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1753874763.021399"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1753875358.675899"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1753875415.519999"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1753875431.074209"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753876091.615629"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iz8aE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "# Incident Report\n\n## Incident\nBillings have drastically slowed down at 07.19 6AM CET.\nAki noticed it on the dashboard this morning, a full day later.\n\n## Symptoms\nBilling backend took about 50 minutes to run a full loop of billings on our users.\nReading and submitting txs timed out, or took 20-30 seconds to run. Validator node was throwing errors.\n\n## Cause\nAfter a lot of digging, it became evident that the database pod of our k8s cluster is overloaded\/throttling.\nBased on resource usage metrics and the times, it was obviously related to the recently installed and started ChataAI backend and our user onboardings 12 hours before the Incident.\n\n## Solution\nWe turned off chata-ai backend service on the cluster.\n\n## Notes\nBefore we knew the root cause, we experimented with the following solutions:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Parallel requests to the API. Obviously caused even more throttling"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Removed all users whose balance is known to be zero from the env config. This is still in effect."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n## Next steps\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "We are talking with IEU to scale our pods up, to facilitate Chata AI if we want to."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "We need better monitoring\/alerting. This incident would have been 'hard' to catch, as nothing was 'erroring' mostly, just being terribly slow for a while. However, the 503 Errors from the Billing app in the end stages could have triggered PagerDuty alerts."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F098390RWS1",
+                "created": 1753871683,
+                "timestamp": 1753871683,
+                "name": "list",
+                "title": "Incidents",
+                "mimetype": "application\/vnd.slack-list",
+                "filetype": "list",
+                "pretty_type": "List",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": true,
+                "size": 0,
+                "mode": "list",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "list_metadata": {
+                    "schema": [
+                        {
+                            "id": "Col098390T561",
+                            "name": "Name",
+                            "key": "name",
+                            "type": "text",
+                            "is_primary_column": true
+                        },
+                        {
+                            "id": "Col098390T59B",
+                            "name": "Message",
+                            "key": "message",
+                            "type": "message",
+                            "is_primary_column": false
+                        },
+                        {
+                            "id": "Col098390T6UD",
+                            "name": "Reporter",
+                            "key": "reporter",
+                            "type": "user",
+                            "is_primary_column": false
+                        }
+                    ],
+                    "views": [
+                        {
+                            "id": "View098390U79B",
+                            "name": "Record",
+                            "type": "record",
+                            "is_locked": false,
+                            "position": "1753871683",
+                            "columns": [
+                                {
+                                    "visible": true,
+                                    "key": "name",
+                                    "id": "Col098390T561",
+                                    "position": "5000000000"
+                                },
+                                {
+                                    "visible": true,
+                                    "key": "message",
+                                    "id": "Col098390T59B",
+                                    "position": "5000000001"
+                                },
+                                {
+                                    "visible": true,
+                                    "key": "reporter",
+                                    "id": "Col098390T6UD",
+                                    "position": "5000000002"
+                                }
+                            ],
+                            "date_created": 1753871683,
+                            "created_by": "U088UV6MKFE",
+                            "stick_column_left": false
+                        },
+                        {
+                            "id": "View098390UH61",
+                            "name": "All items",
+                            "type": "table",
+                            "is_locked": false,
+                            "position": "1753871684",
+                            "columns": [
+                                {
+                                    "visible": true,
+                                    "key": "name",
+                                    "id": "Col098390T561",
+                                    "position": "5000000000"
+                                },
+                                {
+                                    "visible": true,
+                                    "key": "message",
+                                    "id": "Col098390T59B",
+                                    "position": "5000000001"
+                                },
+                                {
+                                    "visible": true,
+                                    "key": "reporter",
+                                    "id": "Col098390T6UD",
+                                    "position": "5000000002"
+                                }
+                            ],
+                            "date_created": 1753871684,
+                            "created_by": "U088UV6MKFE",
+                            "stick_column_left": false,
+                            "is_all_items_view": true,
+                            "default_view_key": "all_items",
+                            "show_completed_items": true
+                        }
+                    ],
+                    "integrations": [],
+                    "icon": "",
+                    "description": "",
+                    "description_blocks": [],
+                    "is_trial": false,
+                    "creation_source": {
+                        "type": "template",
+                        "reference_id": "add_to_new_list"
+                    }
+                },
+                "list_limits": {
+                    "over_row_maximum": false,
+                    "row_count_limit": 1000,
+                    "row_count": 2,
+                    "archived_row_count": 0,
+                    "over_column_maximum": false,
+                    "column_count": 3,
+                    "column_count_limit": 30,
+                    "over_view_maximum": false,
+                    "view_count": 2,
+                    "view_count_limit": 50,
+                    "max_attachments_per_cell": 10
+                },
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098390RWS1\/list?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098390RWS1\/download\/list?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/bit-safe.slack.com\/lists\/T05FWTX7PMG\/F098390RWS1",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F098390RWS1-996c8599ee",
+                "last_editor": "U088UV6MKFE",
+                "list_csv_download_url": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098390RWS1\/csv\/list?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "updated": 1753871706,
+                "is_starred": false,
+                "skipped_shares": true,
+                "teams_shared_with": [],
+                "is_restricted_sharing_enabled": false,
+                "has_rich_preview": false,
+                "file_access": "visible",
+                "access": "write",
+                "org_or_workspace_access": "none",
+                "is_ai_suggested": false
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1753871758.651569"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U05FZBDQ4RJ",
+        "text": "<@U05FZBDQ4RJ> has joined the channel",
+        "inviter": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753871807.537629"
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753871895.384389",
+        "client_msg_id": "961fb7e0-41dc-4f8f-85b2-aead814e067b",
+        "text": "(how terrible that there is no Markdown on slack?)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753871895.384389",
+        "reply_count": 4,
+        "reply_users_count": 2,
+        "latest_reply": "1753872150.598299",
+        "reply_users": [
+            "U05FZBDQ4RJ",
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1753871930.500089"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753871972.930409"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753871982.084059"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1753872150.598299"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1753872150.770232",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "aI4B4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "(how terrible that there is no Markdown on slack?)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1753871930.500089",
+        "edited": {
+            "user": "U05FZBDQ4RJ",
+            "ts": "1753871951.000000"
+        },
+        "client_msg_id": "484F0423-36B9-4381-A4D0-CE77A2AACF4F",
+        "text": "I believe _*there is*_",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753871895.384389",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZHYcu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I believe "
+                            },
+                            {
+                                "type": "text",
+                                "text": "there is",
+                                "style": {
+                                    "bold": true,
+                                    "italic": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753871972.930409",
+        "client_msg_id": "a3eafca5-7cc9-4b2c-bd13-8189214f7ebf",
+        "text": "_there are some *formatting* options_",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753871895.384389",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ykxAS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "there are some ",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "formatting",
+                                "style": {
+                                    "bold": true,
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " options",
+                                "style": {
+                                    "italic": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753871982.084059",
+        "client_msg_id": "b327f0ff-9242-45b6-9c83-975b1157c9d9",
+        "text": "but no\n# header",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753871895.384389",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mbvst",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but no\n# header"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1753872150.598299",
+        "client_msg_id": "F3751A78-2B9B-4D8E-8590-B85F8BA608AE",
+        "text": "Ah yes, true ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753871895.384389",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZEDBA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ah yes, true "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753874763.021399",
+        "client_msg_id": "61244db0-01a8-42be-b000-a2915911e399",
+        "text": "Nice report, thanks <@U088UV6MKFE>.\n\nI'm guessing it was mentioned already, but I'd recommend we get some monitoring and alerting up before we reactivate chata, and before we ask IEU to make any changes.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753871629.574919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zCohl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Nice report, thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n\nI'm guessing it was mentioned already, but I'd recommend we get some monitoring and alerting up before we reactivate chata, and before we ask IEU to make any changes."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753875358.675899",
+        "client_msg_id": "2f1abffa-2cd3-4a18-ac90-128a76f31220",
+        "text": "Actually, since this is so critical and we've got other manual ways to create parties, I would recommend we throw up some basic monitoring before we launch anything else including the self-service app. \n\nIt could be as simple as an API that checks the number of transfers in the last 10 minutes and make sure it's roughly the right number. And calls a pager duty alert if needed. For the simplest solution, it could even be bundled into our current health check stack",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753871629.574919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "v0YGq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Actually, since this is so critical and we've got other manual ways to create parties, I would recommend we throw up some basic monitoring before we launch anything else including the self-service app. \n\nIt could be as simple as an API that checks the number of transfers in the last 10 minutes and make sure it's roughly the right number. And calls a pager duty alert if needed. For the simplest solution, it could even be bundled into our current health check stack"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753875415.519999",
+        "edited": {
+            "user": "U05FU0HPZ9T",
+            "ts": "1753875472.000000"
+        },
+        "client_msg_id": "820a9ab5-0e0e-4a25-90d6-6342d29c83b3",
+        "text": "Throw it right up on status.dlc.link. which is already connected to pager duty and doesn't have many false alarms these days. Can even throw up Aki's graph :)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753871629.574919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rJ+73",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Throw it right up on status.dlc.link. which is already connected to pager duty and doesn't have many false alarms these days. Can even throw up Aki's graph :)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753875431.074209",
+        "client_msg_id": "08df3038-0816-481b-b98b-f5695de2576f",
+        "text": "<@U093Q4FPEJG> <@U088UV6MKFE>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753871629.574919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "G\/Fo1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U093Q4FPEJG"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753875595.664219",
+        "client_msg_id": "8a894c60-5a42-4172-aa1c-8b710ce6819a",
+        "text": "I apologize everyone I didn't have slack notifications turned on. Fixed now. \n\nBut good job resolving! I left some comments on the incident report, thanks Robert for posting that. Not an easy one to have predicted at all. But important lesson learned about installing apps in the Canton ecosystem.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tB7pM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I apologize everyone I didn't have slack notifications turned on. Fixed now. \n\nBut good job resolving! I left some comments on the incident report, thanks Robert for posting that. Not an easy one to have predicted at all. But important lesson learned about installing apps in the Canton ecosystem."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753875657.562909",
+        "edited": {
+            "user": "U05FU0HPZ9T",
+            "ts": "1753875698.000000"
+        },
+        "client_msg_id": "9936722c-3728-496c-b610-0b663efdaf23",
+        "text": "And why we should probably get off IEU as well, as they are really not providing us any high availability support.\n\nAnother thought <@U088UV6MKFE> would be to do that system backup, so we can recover if needed. Might be nice to walk through it with <@U093Q4FPEJG> together for knowledge sharing",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IdZ81",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And why we should probably get off IEU as well, as they are really not providing us any high availability support.\n\nAnother thought "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " would be to do that system backup, so we can recover if needed. Might be nice to walk through it with "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U093Q4FPEJG"
+                            },
+                            {
+                                "type": "text",
+                                "text": " together for knowledge sharing"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U088UV6MKFE",
+                    "U093Q4FPEJG"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753876091.615629",
+        "client_msg_id": "456E2838-79DF-449A-8F3C-52EC9D74A21E",
+        "text": "Sounds good, and agreed. Catching this a day late is very late",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753871629.574919",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "F3var",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sounds good, and agreed. Catching this a day late is very late"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753880791.650609",
+        "client_msg_id": "cced7d92-94d9-4afb-8596-1f561c54b12f",
+        "text": "If you get any email dismiss it, I just testing the alerting",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XtDPd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If you get any email dismiss it, I just testing the alerting"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753884601.550399",
+        "edited": {
+            "user": "U088UV6MKFE",
+            "ts": "1753884609.000000"
+        },
+        "client_msg_id": "d6215c50-42d1-4ad2-b7e2-57e22527c755",
+        "text": "<@U093Q4FPEJG> when you have a sec, could you write a little summary of the new monitoring setup here in this channel? :pray:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TN0JD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U093Q4FPEJG"
+                            },
+                            {
+                                "type": "text",
+                                "text": " when you have a sec, could you write a little summary of the new monitoring setup here in this channel? "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray",
+                                "unicode": "1f64f"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753885420.864669",
+        "client_msg_id": "f822a1eb-c67e-4850-a712-eae0b9d4973b",
+        "text": "Yep,\n\nSo as a quick fix I just deployed LogTail as an Add-on to the canton-billing-backend. It aggregates the logs in a searchable, transformable format. So we can get error logs pretty easily. It takes 30$ per month. You can access it by clicking on the link next to the add-on.\n\nAlso I added Alerting, sadly the plan only contains one user to send the alerts. Since I'm the most responsible for the service I set myself. I will also notify you when I get the alert. The alert checks the error logs at any point it gets error logs it will trigger. Right now there is a false positive alert, but once I set up the alerting properly I will fix the error.\n\nThe LogTail is super-slow. That's why it is a temporary solution. In the future it will make sense to move to AWS.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bQUAI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yep,\n\nSo as a quick fix I just deployed LogTail as an Add-on to the canton-billing-backend. It aggregates the logs in a searchable, transformable format. So we can get error logs pretty easily. It takes 30$ per month. You can access it by clicking on the link next to the add-on.\n\nAlso I added Alerting, sadly the plan only contains one user to send the alerts. Since I'm the most responsible for the service I set myself. I will also notify you when I get the alert. The alert checks the error logs at any point it gets error logs it will trigger. Right now there is a false positive alert, but once I set up the alerting properly I will fix the error.\n\nThe LogTail is super-slow. That's why it is a temporary solution. In the future it will make sense to move to AWS."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "Few images how it looks like.",
+        "files": [
+            {
+                "id": "F098UB5RWGG",
+                "created": 1753886631,
+                "timestamp": 1753886631,
+                "name": "Screenshot From 2025-07-30 16-41-47.png",
+                "title": "Screenshot From 2025-07-30 16-41-47.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U093Q4FPEJG",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 18070,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098UB5RWGG\/screenshot_from_2025-07-30_16-41-47.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098UB5RWGG\/download\/screenshot_from_2025-07-30_16-41-47.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098UB5RWGG-801e44e26f\/screenshot_from_2025-07-30_16-41-47_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098UB5RWGG-801e44e26f\/screenshot_from_2025-07-30_16-41-47_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098UB5RWGG-801e44e26f\/screenshot_from_2025-07-30_16-41-47_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 149,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098UB5RWGG-801e44e26f\/screenshot_from_2025-07-30_16-41-47_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 199,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098UB5RWGG-801e44e26f\/screenshot_from_2025-07-30_16-41-47_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098UB5RWGG-801e44e26f\/screenshot_from_2025-07-30_16-41-47_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 298,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098UB5RWGG-801e44e26f\/screenshot_from_2025-07-30_16-41-47_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 331,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098UB5RWGG-801e44e26f\/screenshot_from_2025-07-30_16-41-47_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 397,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098UB5RWGG-801e44e26f\/screenshot_from_2025-07-30_16-41-47_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 424,
+                "original_w": 1131,
+                "original_h": 468,
+                "thumb_tiny": "AwAUADCjS0UUxBRRjjNLjg\/SgYmKSnAZbA9aG6\/hQA3NGaSigBc0ZpKKAFyaM0lFAH\/\/2Q==",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F098UB5RWGG\/screenshot_from_2025-07-30_16-41-47.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F098UB5RWGG-f9f7062dad",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F0986DKH3D0",
+                "created": 1753886634,
+                "timestamp": 1753886634,
+                "name": "Screenshot From 2025-07-30 16-42-47.png",
+                "title": "Screenshot From 2025-07-30 16-42-47.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U093Q4FPEJG",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 190353,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F0986DKH3D0\/screenshot_from_2025-07-30_16-42-47.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F0986DKH3D0\/download\/screenshot_from_2025-07-30_16-42-47.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0986DKH3D0-8f6326f5a8\/screenshot_from_2025-07-30_16-42-47_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0986DKH3D0-8f6326f5a8\/screenshot_from_2025-07-30_16-42-47_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0986DKH3D0-8f6326f5a8\/screenshot_from_2025-07-30_16-42-47_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 265,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0986DKH3D0-8f6326f5a8\/screenshot_from_2025-07-30_16-42-47_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 353,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0986DKH3D0-8f6326f5a8\/screenshot_from_2025-07-30_16-42-47_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0986DKH3D0-8f6326f5a8\/screenshot_from_2025-07-30_16-42-47_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 529,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0986DKH3D0-8f6326f5a8\/screenshot_from_2025-07-30_16-42-47_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 588,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0986DKH3D0-8f6326f5a8\/screenshot_from_2025-07-30_16-42-47_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 706,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0986DKH3D0-8f6326f5a8\/screenshot_from_2025-07-30_16-42-47_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 753,
+                "original_w": 1669,
+                "original_h": 1227,
+                "thumb_tiny": "AwAkADClSUtGPcUxB+NJTgFxyaDtxx1zQA2lUgEbhkemaMe4ox70DCkpaSgQox3B\/OgY5yD7c0lFACnGeOlJRRQAtJS0lABRRRQAUUUUAf\/Z",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F0986DKH3D0\/screenshot_from_2025-07-30_16-42-47.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F0986DKH3D0-25f7626026",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F09823FKG9Z",
+                "created": 1753886638,
+                "timestamp": 1753886638,
+                "name": "Screenshot From 2025-07-30 16-43-27.png",
+                "title": "Screenshot From 2025-07-30 16-43-27.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U093Q4FPEJG",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 398736,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F09823FKG9Z\/screenshot_from_2025-07-30_16-43-27.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F09823FKG9Z\/download\/screenshot_from_2025-07-30_16-43-27.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09823FKG9Z-ffef34da1d\/screenshot_from_2025-07-30_16-43-27_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09823FKG9Z-ffef34da1d\/screenshot_from_2025-07-30_16-43-27_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09823FKG9Z-ffef34da1d\/screenshot_from_2025-07-30_16-43-27_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 265,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09823FKG9Z-ffef34da1d\/screenshot_from_2025-07-30_16-43-27_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 353,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09823FKG9Z-ffef34da1d\/screenshot_from_2025-07-30_16-43-27_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09823FKG9Z-ffef34da1d\/screenshot_from_2025-07-30_16-43-27_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 529,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09823FKG9Z-ffef34da1d\/screenshot_from_2025-07-30_16-43-27_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 588,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09823FKG9Z-ffef34da1d\/screenshot_from_2025-07-30_16-43-27_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 706,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09823FKG9Z-ffef34da1d\/screenshot_from_2025-07-30_16-43-27_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 753,
+                "original_w": 1669,
+                "original_h": 1227,
+                "thumb_tiny": "AwAkADClSUtKcZ6jv2piEAJHWkqQEBeoz\/u0hI55HXjigBpI7Z\/OlJXHAbP1\/wDrUpI2jBBx\/s00nP8A+rFABRk+popKAHb2\/vN+dJk88nmhRk0HGeOlAASTjJJx0oJLHJJJ96SgdaAFqQj5sZPVqjqVvvn\/AHmoAUAiMkM3T19qY2VBIJ+8RUn\/ACyP0\/pUcnQ\/75\/pQArAiIHc3UcZ9qYxJOSSfrUj\/wCpH1H8qiagD\/\/Z",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F09823FKG9Z\/screenshot_from_2025-07-30_16-43-27.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F09823FKG9Z-9fbc9d1cc8",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/9olL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Few images how it looks like."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1753886642.757019",
+        "client_msg_id": "e241cb74-8f8c-4381-b05f-3ba0bf852584",
+        "thread_ts": "1753886642.757019",
+        "reply_count": 3,
+        "reply_users_count": 1,
+        "latest_reply": "1753899623.184159",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753899581.010919"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753899602.540559"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753899623.184159"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753886669.875929",
+        "client_msg_id": "5952f991-7f6a-4522-a070-197295b6b152",
+        "text": "I resolved the error so I only get notified if there is a real issue.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ohLtt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I resolved the error so I only get notified if there is a real issue."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753887261.091769",
+        "client_msg_id": "4c8d2d18-517f-498d-b76e-79f2532c2b73",
+        "text": "Since we raped the canton-billing backend today, I would do a little maintenance on it tomorrow and mostly test on devnet. After we can think about deploying the canton-billing-admin.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DClk4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Since we raped the canton-billing backend today, I would do a little maintenance on it tomorrow and mostly test on devnet. After we can think about deploying the canton-billing-admin."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753888516.866729",
+        "client_msg_id": "31903c79-a594-4cfc-b7a3-d5cb0b6f4057",
+        "text": "The homa page just AI generated I saw it at least once. Didnt really care about yet, but yes later we can fix the buttons or make anything with the home page",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753799259.272929",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GeNlB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The homa page just AI generated I saw it at least once. Didnt really care about yet, but yes later we can fix the buttons or make anything with the home page"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753889670.319169",
+        "client_msg_id": "e6ff27a1-af49-4418-afd0-7b567ec983b3",
+        "text": "I got the alert notification and the error: `LOCAL_VERDICT_INACTIVE_CONTRACTS(11,0): Rejected transaction is referring to inactive contracts`\n<@U088UV6MKFE> It is only one, but maybe it means something",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753889670.319169",
+        "reply_count": 7,
+        "reply_users_count": 3,
+        "latest_reply": "1753901841.858249",
+        "reply_users": [
+            "U05FZBDQ4RJ",
+            "U093Q4FPEJG",
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1753890083.572119"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1753890460.287279"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1753890479.994659"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1753890504.458339"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753898765.512659"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753899289.463139"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1753901841.858249"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1753901841.858249",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6Akzg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I got the alert notification and the error: "
+                            },
+                            {
+                                "type": "text",
+                                "text": "LOCAL_VERDICT_INACTIVE_CONTRACTS(11,0): Rejected transaction is referring to inactive contracts",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " It is only one, but maybe it means something"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1753890083.572119",
+        "client_msg_id": "F485C685-DA52-4853-B73E-F8820F38D353",
+        "text": "I don’t think they made any decisions - just going to investigate it.\n\nSo I would imagine it’s a technical error ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753889670.319169",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nTGps",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I "
+                            },
+                            {
+                                "type": "text",
+                                "text": "don’t"
+                            },
+                            {
+                                "type": "text",
+                                "text": " think they made any decisions - just going to investigate it.\n\nSo I would imagine "
+                            },
+                            {
+                                "type": "text",
+                                "text": "it’s"
+                            },
+                            {
+                                "type": "text",
+                                "text": " a technical error "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753890460.287279",
+        "client_msg_id": "0f50db5a-6a13-4151-b708-a81c2aa12c56",
+        "text": "<@U05FZBDQ4RJ> Nothing urgent. There was like 86 transfer made in this cycle and only 3 throw this error and there wasn't any error since than.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753889670.319169",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Cmwoa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U05FZBDQ4RJ"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Nothing urgent. There was like 86 transfer made in this cycle and only 3 throw this error and there wasn't any error since than."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753890479.994659",
+        "client_msg_id": "83444d28-da4f-4956-8db7-922708805c8f",
+        "text": "I just set the error alerting to 0, so if any error happens I get notified",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753889670.319169",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Lx+Tz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I just set the error alerting to 0, so if any error happens I get notified"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1753890504.458339",
+        "client_msg_id": "E38218EF-87F8-41AB-8260-B53A6D2AF019",
+        "text": "Ok great! \n\nThank you Ser.\n\nI’ll KIT if I hear anything, but likely will take at least a few weeks for any binding decisions to be made",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753889670.319169",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "s0gZV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ok great! \n\nThank you Ser.\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "I’ll"
+                            },
+                            {
+                                "type": "text",
+                                "text": " KIT if I hear anything, but likely will take at least a few weeks for any binding decisions to be made"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U093Q4FPEJG"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753890526.740609",
+        "client_msg_id": "2927e144-81f3-463a-b6c1-a7a77b582c3c",
+        "text": "I just deployed a new UI where I make it more realistic to the current state.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753799259.272929",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SDSu8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I just deployed a new UI where I make it more realistic to the current state."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753898765.512659",
+        "client_msg_id": "8016764d-b880-444a-9a2a-6c5bb17acd5c",
+        "text": "Thanks, ill check",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753889670.319169",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tZs3k",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks, ill check"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753899289.463139",
+        "client_msg_id": "aad37e08-0a61-40c6-982b-88e0b4a9071e",
+        "text": "is this recurring, or just happened once?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753889670.319169",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tINjM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "is this recurring, or just happened once?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753899581.010919",
+        "client_msg_id": "da9c6b37-c97c-4288-9067-5075e1f3a7ca",
+        "text": "this is great. neat app! Hopefully there wont be any errors tonight.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753886642.757019",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iQqgT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "this is great. neat app! Hopefully there wont be any errors tonight."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753899602.540559",
+        "client_msg_id": "b97827ba-db63-43e7-9ef9-c446c4ee69f9",
+        "text": "Im quite confident now, that chata has been shut off, since the app was running no issues for a week before",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753886642.757019",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DqEdr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Im quite confident now, that chata has been shut off, since the app was running no issues for a week before"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753899623.184159",
+        "client_msg_id": "4f9e1bbb-ac06-42fc-b542-a86e122cc6d6",
+        "text": "but yes we should migrate to smth more robust, before we do any big changes",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753886642.757019",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fiLZ0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but yes we should migrate to smth more robust, before we do any big changes"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753901841.858249",
+        "client_msg_id": "1CE2AEB6-30A5-44C3-835E-08796F4A1187",
+        "text": "Happened once. Since then their wasnt any error. ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753889670.319169",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7rmAB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Happened once. Since then their wasnt any error. "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753901876.718009",
+        "client_msg_id": "2573C3A7-EA6B-42F4-8037-E46607183979",
+        "text": "Infra thread",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753901876.718009",
+        "reply_count": 3,
+        "reply_users_count": 2,
+        "latest_reply": "1753902889.671319",
+        "reply_users": [
+            "U093Q4FPEJG",
+            "U05FU0HPZ9T"
+        ],
+        "replies": [
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1753902011.848709"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1753902508.773989"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1753902889.671319"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1753906809.741829",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oHOoR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Infra thread"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753902011.848709",
+        "client_msg_id": "AC6B8044-329F-44D7-AEB8-5B5047A83A36",
+        "text": "We just realised (maybe again), we have very few control over the IEU catalyst. So if we want to do this canton seriously we have to move away and self host it. \n\nI have a friend who can help us as a contractor to make it happen faster.\n\n<@U088UV6MKFE> <@U05FU0HPZ9T> What do you think? ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753901876.718009",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fZeQT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "W"
+                            },
+                            {
+                                "type": "text",
+                                "text": "e just realised (maybe again), we have very few control over the IEU catalyst. So if we want to do this canton seriously we have to move away and self host it. \n\nI have a friend who can help us as a contractor to make it happen faster.\n\n"
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FU0HPZ9T"
+                            },
+                            {
+                                "type": "text",
+                                "text": " What do you think? "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753902508.773989",
+        "client_msg_id": "d5acd4ba-0679-4de0-b76a-ca48145ae58d",
+        "text": "Cool idea <@U093Q4FPEJG> I think we could be very open to that. Would help speed things up and let us stay focused on app development. \n\nWant to set up an intro call with the person?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753901876.718009",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+s8KS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Cool idea "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U093Q4FPEJG"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I think we could be very open to that. Would help speed things up and let us stay focused on app development. \n\nWant to set up an intro call with the person?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "fire",
+                "users": [
+                    "U05FZBDQ4RJ"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753902889.671319",
+        "client_msg_id": "C21E975E-FB0E-4004-83B8-2F09C7F239C8",
+        "text": "Yes. I ping him",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753901876.718009",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "36d9O",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes. I ping him"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753939171.081019",
+        "edited": {
+            "user": "U05FU0HPZ9T",
+            "ts": "1753940089.000000"
+        },
+        "client_msg_id": "137424de-43dc-4671-9b18-0dc077804c96",
+        "text": "Hey team, I made some updates to the health dashboard tonight, <https:\/\/status.dlc.link>\n\nThis now pulls canton reward data using the wallet API, similar to Aki’s app. It also draws a chart. It pulls about 1 hour of rewards data every 5 minutes, and sees if there are two rounds with less than 5000 in rewards in a row. if there are, it will call the pagerduty alert.\n\nI wanted to add this to the system Ferenc put in place, as it has pagerduty already built in.\n\nI merged the PR, but here it is for review. <https:\/\/github.com\/DLC-link\/health-dashboard\/pull\/96> & <https:\/\/github.com\/DLC-link\/health-dashboard\/pull\/97>\n\nUnfortunately it’s pretty long, cause there was quite a bit of code. But i did some testing.\n\nwe can consider how all these alerts and systems play together when we sync up together",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753939171.081019",
+        "reply_count": 8,
+        "reply_users_count": 3,
+        "latest_reply": "1753971095.513439",
+        "reply_users": [
+            "U088UV6MKFE",
+            "U05FU0HPZ9T",
+            "U05FZBDQ4RJ"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753961680.742459"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753961688.153149"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753961844.873059"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753961865.681809"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1753970873.019599"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1753970979.310509"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1753971037.841079"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1753971095.513439"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1753971095.684351",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4M0VP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey team, I made some updates to the health dashboard tonight, "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/status.dlc.link"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nThis now pulls canton reward data using the wallet API, similar to Aki’s app. It also draws a chart. It pulls about 1 hour of rewards data every 5 minutes, and sees if there are two rounds with less than 5000 in rewards in a row. if there are, it will call the pagerduty alert.\n\nI wanted to add this to the system Ferenc put in place, as it has pagerduty already built in.\n\nI merged the PR, but here it is for review. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/health-dashboard\/pull\/96"
+                            },
+                            {
+                                "type": "text",
+                                "text": " & "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/health-dashboard\/pull\/97"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nUnfortunately it’s pretty long, cause there was quite a bit of code. But i did some testing.\n\nwe can consider how all these alerts and systems play together when we sync up together"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "fire",
+                "users": [
+                    "U05FZBDQ4RJ"
+                ],
+                "count": 1
+            },
+            {
+                "name": "tada",
+                "users": [
+                    "U05FZBDQ4RJ"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "Hey <@U088UV6MKFE> btw i noticed these messages when i booted up the status page health dashboard. I didn’t have the energy to look into it, but maybe you know what’s up",
+        "files": [
+            {
+                "id": "F098R6MM7L1",
+                "created": 1753939381,
+                "timestamp": 1753939381,
+                "name": "Screenshot 2025-07-30 at 22.22.43.png",
+                "title": "Screenshot 2025-07-30 at 22.22.43.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U05FU0HPZ9T",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 681845,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098R6MM7L1\/screenshot_2025-07-30_at_22.22.43.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098R6MM7L1\/download\/screenshot_2025-07-30_at_22.22.43.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R6MM7L1-eb58ed1b6c\/screenshot_2025-07-30_at_22.22.43_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R6MM7L1-eb58ed1b6c\/screenshot_2025-07-30_at_22.22.43_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R6MM7L1-eb58ed1b6c\/screenshot_2025-07-30_at_22.22.43_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 122,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R6MM7L1-eb58ed1b6c\/screenshot_2025-07-30_at_22.22.43_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 163,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R6MM7L1-eb58ed1b6c\/screenshot_2025-07-30_at_22.22.43_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R6MM7L1-eb58ed1b6c\/screenshot_2025-07-30_at_22.22.43_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 244,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R6MM7L1-eb58ed1b6c\/screenshot_2025-07-30_at_22.22.43_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 271,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R6MM7L1-eb58ed1b6c\/screenshot_2025-07-30_at_22.22.43_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 326,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R6MM7L1-eb58ed1b6c\/screenshot_2025-07-30_at_22.22.43_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 347,
+                "original_w": 2772,
+                "original_h": 940,
+                "thumb_tiny": "AwARADDQGAGIPfk8UigBeOOvpTgTzx9OaaCcHGT15BFMBcn0bnPHHFKOnp\/ShQQOTk0KCByxb60gFH1zQKKKACiiigAooooAKKKKAP\/Z",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F098R6MM7L1\/screenshot_2025-07-30_at_22.22.43.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F098R6MM7L1-9418478410",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U05FU0HPZ9T",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0Ja1O",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " btw i noticed these messages when i booted up the status page health dashboard. I didn’t have the energy to look into it, but maybe you know what’s up"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1753939410.328859",
+        "client_msg_id": "3d0597cf-2aa2-4683-aca6-1f36132179b6"
+    }
+]

@@ -1,0 +1,619 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747300781.958539",
+        "client_msg_id": "3f2fcb85-bbd0-458d-8710-6dfce581fbd4",
+        "text": "What would be the best way to automate initial bootstrapping of some contract instances?\n\nTopology, including the decentralized-registrar party is done in the <http:\/\/bootstrap.sc|bootstrap.sc> flow for the sandbox. But where would you recommend I run for example the initial `create Rules` for a given contract, in this environment? (I know, in prod, this is an orchestrated off-ledger thing. )\n\nThe brute-force would be to run it as actual API calls on integration-testing startup, but I wonder if I could still leverage `daml script` instead, so the bootstrapped state is actually shipped with the docker image\n\n<@UEHLS0JUB>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747300781.958539",
+        "reply_count": 10,
+        "reply_users_count": 1,
+        "latest_reply": "1747309913.363259",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747301058.690079"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747301109.022959"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747301116.949579"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747301118.234819"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747304896.401619"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747304961.797889"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747304971.499909"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747305694.836029"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747309844.515439"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747309913.363259"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "X6nFh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "What would be the best way to automate initial bootstrapping of some contract instances?\n\nTopology, including the decentralized-registrar party is done in the "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/bootstrap.sc",
+                                "text": "bootstrap.sc"
+                            },
+                            {
+                                "type": "text",
+                                "text": " flow for the sandbox. But where would you recommend I run for example the initial "
+                            },
+                            {
+                                "type": "text",
+                                "text": "create Rules",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " for a given contract, in this environment? (I know, in prod, this is an orchestrated off-ledger thing. )\n\nThe brute-force would be to run it as actual API calls on integration-testing startup, but I wonder if I could still leverage "
+                            },
+                            {
+                                "type": "text",
+                                "text": "daml script",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " instead, so the bootstrapped state is actually shipped with the docker image\n\n"
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747301058.690079",
+        "client_msg_id": "b81c27f9-a507-4f49-bfb8-4e760afe0075",
+        "text": "Oh but can i do that in the bootstrap script? Create daml contracts, etc?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747300781.958539",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "W20aF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oh but can i do that in the bootstrap script? Create daml contracts, etc?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747301109.022959",
+        "client_msg_id": "91a65d68-387b-4133-9045-d0a2aebf2929",
+        "text": "Oh, right",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747300781.958539",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4EDs3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oh, right"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747301116.949579",
+        "client_msg_id": "284b1602-f87e-4ed7-a2e3-27fa0c168106",
+        "text": "ok! i'll try",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747300781.958539",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4nSkC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ok! i'll try"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747301118.234819",
+        "client_msg_id": "1751073e-4c8b-4570-93eb-d9ead1a1a17a",
+        "text": "thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747300781.958539",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QN5Fg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747304896.401619",
+        "client_msg_id": "d7503e9c-c577-45b4-bcbb-017b86b1f5a8",
+        "text": "So that worked nicely, could create a Rules contract, but now how do I do\n\n`Some ibtcRulesD &lt;- queryDisclosure registrar ibtcRules` in a bootstrap, and\/or how will I make this visible to other parties so they can exercise the choice on it",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747300781.958539",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ddF0\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So that worked nicely, could create a Rules contract, but now how do I do\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Some ibtcRulesD <- queryDisclosure registrar ibtcRules",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " in a bootstrap, and\/or how will I make this visible to other parties so they can exercise the choice on it"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747304961.797889",
+        "client_msg_id": "dbf3f62a-2e0f-4ee6-ad61-3e1189e30683",
+        "text": "what if the user is on another participant?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747300781.958539",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xjlgm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "what if the user is on another participant?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747304971.499909",
+        "client_msg_id": "4ed01c8b-88cf-4c79-822c-eb3971dd14e3",
+        "text": "i can do with the same, just curious",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747300781.958539",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nr+u7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "i can do with the same, just curious"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747305694.836029",
+        "client_msg_id": "01f5e242-3fc4-409c-b0bb-ba11f3713329",
+        "text": "thanks, got it",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747300781.958539",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0PfVi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks, got it"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747309844.515439",
+        "client_msg_id": "15444bde-eea6-4b0d-9a96-424a2d1c8c58",
+        "text": "So, im trying to use `disclosedContracts`:\n\n```{\n    \"commands\": [\n        {\n            \"ExerciseCommand\": {\n                \"templateId\": \"#simple-contract:Experiments.SimpleContract:SimpleContractRules\",\n                \"contractId\": \"00b105a574b7e060f4fe38669fa3675ab0a35c78d5851e4b7cfe48c27f23f6d3b1ca1112205fda5f5729124864cc08f4d55404b04a51d48e087065ba993f89790a05fbf4fd\",\n                \"choice\": \"SimpleContractRules_CreateSC\",\n                \"choiceArgument\": {\n                    \"owner\": \"{{userParty}}\"\n                }\n            }\n        }\n    ],\n    \"actAs\": [\n        \"{{userParty}}\"\n    ],\n    \"userId\": \"app2\",\n    \"commandId\": \"cmd123\",\n    \"applicationId\": \"xxxx\",\n    \"disclosedContracts\": [\n        {\n            \"templateId\": \"ef5298ab78bce3ed896b0f960c12f747e7bc79b479749e3580790c18ef04597d:Experiments.SimpleContract:SimpleContractRules\",\n            \"contractId\": \"00b105a574b7e060f4fe38669fa3675ab0a35c78d5851e4b7cfe48c27f23f6d3b1ca1112205fda5f5729124864cc08f4d55404b04a51d48e087065ba993f89790a05fbf4fd\",\n            \"createdEventBlob\": \"\",\n            \"synchronizerId\": \"\"\n        }\n    ]\n}```\nBut get:\n\n```{\n    \"code\": \"MISSING_FIELD\",\n    \"cause\": \"The submitted command is missing a mandatory field: DisclosedContract.createdEventBlob\",\n    \"correlationId\": \"4112bbae-59de-4b64-a4b3-829b8de79f19\",\n    \"traceId\": \"5bde31ac6f95319f1108b14a63f50e46\",\n    \"context\": {\n        \"participant\": \"'participant1'\",\n        \"category\": \"8\",\n        \"tid\": \"5bde31ac6f95319f1108b14a63f50e46\",\n        \"definite_answer\": \"false\",\n        \"field_name\": \"DisclosedContract.createdEventBlob\"\n    },\n    \"resources\": [],\n    \"errorCategory\": 8,\n    \"grpcCodeValue\": 3,\n    \"retryInfo\": null,\n    \"definiteAnswer\": null\n}```\nWhere do I get that blob?\n\nI tried `\/events\/events-by-contract-id\/` after getting the contractId from `\/active-contracts`, but the blob is empty string in both of these responses",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747300781.958539",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MKhVa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So, im trying to use "
+                            },
+                            {
+                                "type": "text",
+                                "text": "disclosedContracts",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ":\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"commands\": [\n        {\n            \"ExerciseCommand\": {\n                \"templateId\": \"#simple-contract:Experiments.SimpleContract:SimpleContractRules\",\n                \"contractId\": \"00b105a574b7e060f4fe38669fa3675ab0a35c78d5851e4b7cfe48c27f23f6d3b1ca1112205fda5f5729124864cc08f4d55404b04a51d48e087065ba993f89790a05fbf4fd\",\n                \"choice\": \"SimpleContractRules_CreateSC\",\n                \"choiceArgument\": {\n                    \"owner\": \"{{userParty}}\"\n                }\n            }\n        }\n    ],\n    \"actAs\": [\n        \"{{userParty}}\"\n    ],\n    \"userId\": \"app2\",\n    \"commandId\": \"cmd123\",\n    \"applicationId\": \"xxxx\",\n    \"disclosedContracts\": [\n        {\n            \"templateId\": \"ef5298ab78bce3ed896b0f960c12f747e7bc79b479749e3580790c18ef04597d:Experiments.SimpleContract:SimpleContractRules\",\n            \"contractId\": \"00b105a574b7e060f4fe38669fa3675ab0a35c78d5851e4b7cfe48c27f23f6d3b1ca1112205fda5f5729124864cc08f4d55404b04a51d48e087065ba993f89790a05fbf4fd\",\n            \"createdEventBlob\": \"\",\n            \"synchronizerId\": \"\"\n        }\n    ]\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But get:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"code\": \"MISSING_FIELD\",\n    \"cause\": \"The submitted command is missing a mandatory field: DisclosedContract.createdEventBlob\",\n    \"correlationId\": \"4112bbae-59de-4b64-a4b3-829b8de79f19\",\n    \"traceId\": \"5bde31ac6f95319f1108b14a63f50e46\",\n    \"context\": {\n        \"participant\": \"'participant1'\",\n        \"category\": \"8\",\n        \"tid\": \"5bde31ac6f95319f1108b14a63f50e46\",\n        \"definite_answer\": \"false\",\n        \"field_name\": \"DisclosedContract.createdEventBlob\"\n    },\n    \"resources\": [],\n    \"errorCategory\": 8,\n    \"grpcCodeValue\": 3,\n    \"retryInfo\": null,\n    \"definiteAnswer\": null\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Where do I get that blob?\n\nI tried "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/events\/events-by-contract-id\/",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " after getting the contractId from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/active-contracts",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", but the blob is empty string in both of these responses"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747309913.363259",
+        "client_msg_id": "7e774c26-c816-40cb-8b61-890148f7d851",
+        "text": "I guess `includeCreatedEventBlob` somewhere",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747300781.958539",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "h54EQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I guess "
+                            },
+                            {
+                                "type": "text",
+                                "text": "includeCreatedEventBlob",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " somewhere"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

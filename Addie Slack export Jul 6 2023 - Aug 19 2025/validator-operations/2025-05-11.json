@@ -1,0 +1,366 @@
+[
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1746983564.936119",
+        "client_msg_id": "a603c64e-ca00-4593-9fbd-6f412ff8da6d",
+        "text": "how does everyone manage the DAR file installing right now? do you port forward to CI\/local laptop and upload file? or do you copy file to k8s pod , run an extra temporary pod to faciliate the upload.\n\nI'm working on an simple UI to manage dar file and package(upload a zip file, the app handle the dar file upload, and an optinal post-script setup you can configure to run).\n\nAnyone interested in trying out this app?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746983564.936119",
+        "reply_count": 4,
+        "reply_users_count": 4,
+        "latest_reply": "1749538236.417469",
+        "reply_users": [
+            "U01TZB7MFFA",
+            "UFM12NUJG",
+            "U0807N2S1ED",
+            "U08987JD1J9"
+        ],
+        "replies": [
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1746986751.759179"
+            },
+            {
+                "user": "UFM12NUJG",
+                "ts": "1746988147.371029"
+            },
+            {
+                "user": "U0807N2S1ED",
+                "ts": "1746989398.667379"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1749538236.417469"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3zZVI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "how does everyone manage the DAR file installing right now? do you port forward to CI\/local laptop and upload file? or do you copy file to k8s pod , run an extra temporary pod to faciliate the upload.\n\nI'm working on an simple UI to manage dar file and package(upload a zip file, the app handle the dar file upload, and an optinal post-script setup you can configure to run).\n\nAnyone interested in trying out this app?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1746986751.759179",
+        "client_msg_id": "87b40d49-fd67-4f0a-9b2a-b03545576c9e",
+        "text": "Isn't it possible to upload dar files using existing Helm chart ? I remember seeing an undocumented appDars in one of the Helm charts",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746983564.936119",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Z8G0w",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Isn't it possible to upload dar files using existing Helm chart ? I remember seeing an undocumented appDars in one of the Helm charts"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UFM12NUJG",
+        "type": "message",
+        "ts": "1746988147.371029",
+        "client_msg_id": "98ca05ef-ded4-42dd-9177-e5e61760f65d",
+        "text": "I use Kubectl copy into pod and run Canton script to load it",
+        "team": "T05FWTX7PMG",
+        "user_team": "T2DD6ACGP",
+        "source_team": "T2DD6ACGP",
+        "user_profile": {
+            "avatar_hash": "c478785fdc28",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-01-27\/533773004673_c478785fdc280fe3897c_72.jpg",
+            "first_name": "Sherman",
+            "real_name": "Sherman Yang",
+            "display_name": "Sherman",
+            "team": "T2DD6ACGP",
+            "name": "syang",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746983564.936119",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9aSyv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I use Kubectl copy into pod and run Canton script to load it"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0807N2S1ED",
+        "type": "message",
+        "ts": "1746989398.667379",
+        "client_msg_id": "26479D9C-06DC-460F-B352-A3C1FBC06022",
+        "text": "I use a port-forward + shell\/python script for automation.\n\nAnd am interested in trying the UI!\nI assume it needs to be deployed on the validator’s namespace?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "347689e9a8e7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-21\/8063333581635_347689e9a8e72915af1b_72.jpg",
+            "first_name": "Charles",
+            "real_name": "Charles Desmonty",
+            "display_name": "charles.desmonty",
+            "team": "T02CQ0UDY",
+            "name": "charles.desmonty",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746983564.936119",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KfE1k",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I use a port-forward + shell\/python script for automation.\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "And am"
+                            },
+                            {
+                                "type": "text",
+                                "text": " interested in trying the UI"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nI assume it needs to be deployed on the validator’s namespace?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "Which application are we accessing when performing a backup?",
+        "files": [
+            {
+                "id": "F08RFURHK39",
+                "created": 1747019562,
+                "timestamp": 1747019562,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U069QDTQV8S",
+                "user_team": "T065T8729K4",
+                "editable": false,
+                "size": 113882,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T065T8729K4-F08RFURHK39\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T065T8729K4-F08RFURHK39\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RFURHK39-520cccccb9\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RFURHK39-520cccccb9\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RFURHK39-520cccccb9\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 344,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RFURHK39-520cccccb9\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 458,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RFURHK39-520cccccb9\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RFURHK39-520cccccb9\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 687,
+                "original_w": 751,
+                "original_h": 717,
+                "thumb_tiny": "AwAtADC+VXJ4\/WnbsDpSHOTwv50c+i\/nQAu72o3e1IPfH4Gl+X2oAN1KDmjI9aMg0ANIyTRtPpSkgHk\/rSbh6\/rQAbT6UYPpRuHr+tG4ev60AG0+lKoIoDA9DmlzQAhPPWkz\/tU4rzSbaADP+1SZ\/wBqnbaTaKADP+1Sg0bRQBigD\/\/Z",
+                "permalink": "https:\/\/hashkeycloud.slack.com\/files\/U05FZBDQ4RJ\/F08RFURHK39\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T065T8729K4-F08RFURHK39-a5b8dace4e",
+                "source_team": "T065T8729K4",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F08RUN3PQMR",
+                "created": 1747019612,
+                "timestamp": 1747019612,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U069QDTQV8S",
+                "user_team": "T065T8729K4",
+                "editable": false,
+                "size": 73848,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T065T8729K4-F08RUN3PQMR\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T065T8729K4-F08RUN3PQMR\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RUN3PQMR-a0c48a488e\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RUN3PQMR-a0c48a488e\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RUN3PQMR-a0c48a488e\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 185,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RUN3PQMR-a0c48a488e\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 247,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RUN3PQMR-a0c48a488e\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RUN3PQMR-a0c48a488e\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 370,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RUN3PQMR-a0c48a488e\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 411,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RUN3PQMR-a0c48a488e\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 494,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T065T8729K4-F08RUN3PQMR-a0c48a488e\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 527,
+                "original_w": 1118,
+                "original_h": 575,
+                "thumb_tiny": "AwAYADDRI56kfjSj60H8aB+NAC0ZHrRSfnQAjAOuMkfQ0ixhWzuY\/U04UtO4CEUClopAFJilooAQUtFFAH\/\/2Q==",
+                "permalink": "https:\/\/hashkeycloud.slack.com\/files\/U05FZBDQ4RJ\/F08RUN3PQMR\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T065T8729K4-F08RUN3PQMR-771657fd61",
+                "source_team": "T065T8729K4",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U069QDTQV8S",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sLaLs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Which application are we accessing when performing a backup?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1747019628.023669",
+        "client_msg_id": "c8a6eea1-bf59-4b3f-9b5f-df62e7b70054",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1746786793.658049",
+        "parent_user_id": "U069QDTQV8S",
+        "user_team": "T065T8729K4",
+        "source_team": "T065T8729K4",
+        "user_profile": {
+            "avatar_hash": "fcbb420e26d6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-12-12\/6315982222583_fcbb420e26d61573ac99_72.jpg",
+            "first_name": "JamesWang-HashKey",
+            "real_name": "JamesWang-HashKey Cloud",
+            "display_name": "JamesWang-HashKey Cloud",
+            "team": "T065T8729K4",
+            "name": "wangzezheng",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

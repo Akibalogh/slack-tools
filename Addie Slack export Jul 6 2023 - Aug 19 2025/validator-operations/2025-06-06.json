@@ -1,0 +1,1722 @@
+[
+    {
+        "user": "U08JYBDSK0V",
+        "type": "message",
+        "ts": "1749196649.601889",
+        "client_msg_id": "6e8d979c-da9e-4745-aa71-4d74fbbf7baf",
+        "text": "<@U03HMUTQ5F0>  can I get added as well to global-synchronizer appdev channel ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7T5YE9MY",
+        "source_team": "T7T5YE9MY",
+        "user_profile": {
+            "avatar_hash": "18d9a68d3d08",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-24\/8650966444610_18d9a68d3d08e033fdb8_72.png",
+            "first_name": "François",
+            "real_name": "François Branciard",
+            "display_name": "Francois",
+            "team": "T7T5YE9MY",
+            "name": "francois.branciard",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wASul",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": "  can I get added as well to global-synchronizer appdev channel ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U03HMUTQ5F0"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08JYBDSK0V",
+        "type": "message",
+        "ts": "1749198434.058719",
+        "edited": {
+            "user": "U08JYBDSK0V",
+            "ts": "1749199799.000000"
+        },
+        "client_msg_id": "2a4934f2-00f5-4a2a-969f-3b5332609f5a",
+        "text": "I delete global pre-approval then set specific config but it not seems to work.\non `\/v0\/admin\/transfer-preapprovals\/by-party\/{receiver-party}`I have:\n```{\"error\":\"No TransferPreapproval found for party:  ........```\nMy pod config looks good with :\n\n```\n      ADDITIONAL_CONFIG_AUTO_ACCEPT_TRANSFERS:             canton.validator-apps.validator_backend.auto-accept-transfers {\n                                                             \"WALLET A\" {\n                                                               from-parties = [\"WALLET B\"]\n                                                             }\n                                                           }```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7T5YE9MY",
+        "source_team": "T7T5YE9MY",
+        "user_profile": {
+            "avatar_hash": "18d9a68d3d08",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-24\/8650966444610_18d9a68d3d08e033fdb8_72.png",
+            "first_name": "François",
+            "real_name": "François Branciard",
+            "display_name": "Francois",
+            "team": "T7T5YE9MY",
+            "name": "francois.branciard",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749108815.938089",
+        "parent_user_id": "U08JYBDSK0V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "349E+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I delete global pre-approval then set specific config but it not seems to work.\non "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/v0\/admin\/transfer-preapprovals\/by-party\/{receiver-party}",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "I have:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"error\":\"No TransferPreapproval found for party:  ........"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "My pod config looks good with :\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n      ADDITIONAL_CONFIG_AUTO_ACCEPT_TRANSFERS:             canton.validator-apps.validator_backend.auto-accept-transfers {\n                                                             \"WALLET A\" {\n                                                               from-parties = [\"WALLET B\"]\n                                                             }\n                                                           }"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06HUQ2M0FP",
+        "type": "message",
+        "ts": "1749201629.416079",
+        "client_msg_id": "73eb5569-d965-457b-876d-97a3b3113e64",
+        "text": "while testing something on our testnet validator we ended up losing two databases: `cantonnet_validator` and `cantonnet`\n• what are these?\n• how to recover from this, or re-create them?\n• any consequences?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T06JA04320H",
+        "source_team": "T06JA04320H",
+        "user_profile": {
+            "avatar_hash": "0e740ba4aa10",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-13\/7568247767955_0e740ba4aa106800e8d0_72.jpg",
+            "first_name": "Eduardo",
+            "real_name": "Eduardo Furtado Sa",
+            "display_name": "Eduardo Sa (T-RIZE)",
+            "team": "T06JA04320H",
+            "name": "eduardo.furtado",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749201629.416079",
+        "reply_count": 11,
+        "reply_users_count": 2,
+        "latest_reply": "1749326159.929399",
+        "reply_users": [
+            "U01TZB7MFFA",
+            "U06HUQ2M0FP"
+        ],
+        "replies": [
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749203713.200889"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749203724.332279"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749203739.748089"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749203812.598969"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749203823.049919"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749203849.818099"
+            },
+            {
+                "user": "U06HUQ2M0FP",
+                "ts": "1749221880.368429"
+            },
+            {
+                "user": "U06HUQ2M0FP",
+                "ts": "1749224435.500559"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749326125.666459"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749326146.657789"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749326159.929399"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Fomy5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "while testing something on our testnet validator we ended up losing two databases: "
+                            },
+                            {
+                                "type": "text",
+                                "text": "cantonnet_validator",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "cantonnet",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "what are these?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "how to recover from this, or re-create them?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "any consequences?"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749202158.688519",
+        "client_msg_id": "4603a4be-a98a-4926-92e9-3936b102c019",
+        "text": "Hello. Does anyone have some helm to deploy Participant Query Service ? All I have is there : <https:\/\/docs.daml.com\/query\/pqs-user-guide.html#>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749202158.688519",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1749217099.616549",
+        "reply_users": [
+            "U01TZB7MFFA"
+        ],
+        "replies": [
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749204095.011609"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749217099.616549"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "J1VQz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello. Does anyone have some helm to deploy Participant Query Service ? All I have is there : "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.daml.com\/query\/pqs-user-guide.html#"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749203713.200889",
+        "client_msg_id": "56f009c3-3853-44d1-83c6-0848ad13af01",
+        "text": "cantonnet is a stub one AFAIR. But the validator one, if you loose it, you loose your wallet, transaction history, parties, ...",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749201629.416079",
+        "parent_user_id": "U06HUQ2M0FP",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "o72ri",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "cantonnet is a stub one AFAIR. But the validator one, if you loose it, you loose your wallet, transaction history, parties, ..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749203724.332279",
+        "client_msg_id": "2b0bac5d-5acf-4394-9386-fb7d186b5a26",
+        "text": "that one has to be backed-up",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749201629.416079",
+        "parent_user_id": "U06HUQ2M0FP",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZcK7a",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "that one has to be backed-up"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749203739.748089",
+        "client_msg_id": "4b54fd9e-f346-47f3-a960-d92e663bf801",
+        "text": "on mainnet, not having backups of it is a no-go",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749201629.416079",
+        "parent_user_id": "U06HUQ2M0FP",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uYAME",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "on mainnet, not having backups of it is a no-go"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749203812.598969",
+        "edited": {
+            "user": "U01TZB7MFFA",
+            "ts": "1749207762.000000"
+        },
+        "client_msg_id": "ad49d8d9-2c80-4450-9d8a-8e52c15457d2",
+        "text": "Also, make sure your PV\/PVC are set in \"Retain\" mode, could be \"Delete\" by default, which means that destroying the service would delete the DB storage too",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749201629.416079",
+        "parent_user_id": "U06HUQ2M0FP",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yNGs7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Also, make sure your PV\/PVC are set in \"Retain\" mode, could be \"Delete\" by default, which means that destroying the service would delete the DB storage too"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749203823.049919",
+        "client_msg_id": "7e7fed4c-f62b-45f1-b0e1-2884924d2330",
+        "text": "(if you use PG on K8S)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749201629.416079",
+        "parent_user_id": "U06HUQ2M0FP",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "g1zew",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "(if you use PG on K8S)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749203849.818099",
+        "client_msg_id": "ef4bf61b-6977-43cb-a3d7-95378eb317db",
+        "text": "Take a look here for docs : <https:\/\/github.com\/hyperledger-labs\/splice\/issues\/440>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749201629.416079",
+        "parent_user_id": "U06HUQ2M0FP",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "ts": 1749052906,
+                "color": "36a64f",
+                "bot_id": "B01UDMMA9FX",
+                "bot_team_id": "T02CQ0UDY",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/issues\/440",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "#440 Postgres PVC reclaim policy, could Delete the database by mistake",
+                "text": "Depending on how K8S clusters are deployed and using which hosting provider, we could have bad surprises\n\nPostgres, if used in a K8S cluster, deploys a `StatefulSet` , which also creates a `PersistentVolume` for its data and a `PersistentVolumeClaim` to link the volume to the host that runs postgres container.\n\nThis persistent volume is created using a statefulset and its volumeClaimTemplates\n\n`cluster\/helm\/splice-postgres\/templates\/postgres.yaml`  \n`StatefulSet`  \n`volumeClaimTemplates`  \n`specs`  \n`PersistentVolumeClaim`\n\nIf the `StatefulSet` is deleted (by mistake for example),and its PV\/PVC has no `volumeReclaimPolicy` set, it would default to the `StorageClass` `reclaimPolicy`  \nIf the `StorageClass` `reclaimPolicy` is `Delete`, the PV and PVC are automaticaly deleted (bye bye data)\n\nThat could be OK for devnet & testnet where tests are done from time to time for Disaster Recovery.  \nBut for mainnet, it would be better to set the PVC `volumeReclaimPolicy` to `Retain` and make it overridable to `Delete` via a value",
+                "title": "#440 Postgres PVC reclaim policy, could Delete the database by mistake",
+                "title_link": "https:\/\/github.com\/hyperledger-labs\/splice\/issues\/440",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "fields": [
+                    {
+                        "value": "2",
+                        "title": "Comments",
+                        "short": true
+                    },
+                    {
+                        "value": "<https:\/\/github.com\/hyperledger-labs\/splice\/milestone\/1|Community>",
+                        "title": "Milestone",
+                        "short": true
+                    }
+                ],
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WirgL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Take a look here for docs : "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/issues\/440"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749204095.011609",
+        "client_msg_id": "e9015f39-94ac-415c-b88c-9ea0cb6ec93c",
+        "text": "mostly a docker repo, and shell commands to run",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749202158.688519",
+        "parent_user_id": "U01TZB7MFFA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0ozkL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "mostly a docker repo, and shell commands to run"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U04JX22CUTF",
+        "type": "message",
+        "ts": "1749209218.431319",
+        "client_msg_id": "E24304C4-DA12-47DF-8B6B-B51D53E1EDA8",
+        "text": "<@UEHLS0JUB> <@U03HMUTQ5F0> would be grateful if you help me know the best person or the best channel to ask these questions. Not getting any response on these questions and the question below it.\nThanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "TMCLAM45B",
+        "source_team": "TMCLAM45B",
+        "user_profile": {
+            "avatar_hash": "20342bdf1e9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-06\/5072696717877_20342bdf1e9c13a82f31_72.jpg",
+            "first_name": "Brij",
+            "real_name": "Brij Chauhan",
+            "display_name": "",
+            "team": "TMCLAM45B",
+            "name": "brindrajsinh.chauhan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748969879.137169",
+        "parent_user_id": "U04JX22CUTF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lLr0+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " would be grateful if you help me know the best person or the best channel to ask these questions. Not getting any response on these questions and the question below it.\nThanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06GS5TQWGL",
+        "type": "message",
+        "ts": "1749215124.515369",
+        "client_msg_id": "602072c7-1741-4be3-99cd-f8069545f0b5",
+        "text": "Hi! We recently setup and tested our canton node validator on the `dev` network and are about to deploy the node validators on `test` and `main`. I verified that our IPs are whitelisted and I would like to request the onboarding secrets, could someone please advise me on how to request these? Thanks a lot!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T06E4HX7DGC",
+        "source_team": "T06E4HX7DGC",
+        "user_profile": {
+            "avatar_hash": "22e547071ee8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-03-03\/6736618463347_22e547071ee8c797fed8_72.png",
+            "first_name": "Don",
+            "real_name": "Don van der Krogt",
+            "display_name": "Don van der Krogt",
+            "team": "T06E4HX7DGC",
+            "name": "donvanderkrogt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749215124.515369",
+        "reply_count": 5,
+        "reply_users_count": 3,
+        "latest_reply": "1749216940.193879",
+        "reply_users": [
+            "U08U64U3LMC",
+            "U06GS5TQWGL",
+            "U01TZB7MFFA"
+        ],
+        "replies": [
+            {
+                "user": "U08U64U3LMC",
+                "ts": "1749215289.319239"
+            },
+            {
+                "user": "U06GS5TQWGL",
+                "ts": "1749215431.789489"
+            },
+            {
+                "user": "U06GS5TQWGL",
+                "ts": "1749215473.555439"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749215567.800069"
+            },
+            {
+                "user": "U06GS5TQWGL",
+                "ts": "1749216940.193879"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YbRTG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi! We recently setup and tested our canton node validator on the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "dev",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " network and are about to deploy the node validators on "
+                            },
+                            {
+                                "type": "text",
+                                "text": "test",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "main",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". I verified that our IPs are whitelisted and I would like to request the onboarding secrets, could someone please advise me on how to request these? Thanks a lot!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08U64U3LMC",
+        "type": "message",
+        "ts": "1749215289.319239",
+        "client_msg_id": "7b1dd923-34d7-4279-8d3d-85bd35e00148",
+        "text": "You need to request your sponsor for the onboarding secrets",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08U64U2X4N",
+        "source_team": "T08U64U2X4N",
+        "user_profile": {
+            "avatar_hash": "gc00dd9578aa",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/46d1216a2dea3625e61a110593f5d253.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0011-72.png",
+            "first_name": "ruddyg",
+            "real_name": "ruddyg",
+            "display_name": "Ruddy G.",
+            "team": "T08U64U2X4N",
+            "name": "ruddyg",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749215124.515369",
+        "parent_user_id": "U06GS5TQWGL",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8gPz\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You need to request your sponsor for the onboarding secrets"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06GS5TQWGL",
+        "type": "message",
+        "ts": "1749215431.789489",
+        "client_msg_id": "1564934d-94b1-4822-b25e-6aa24b584607",
+        "text": "In our case that's Digital Asset (DA-2)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T06E4HX7DGC",
+        "source_team": "T06E4HX7DGC",
+        "user_profile": {
+            "avatar_hash": "22e547071ee8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-03-03\/6736618463347_22e547071ee8c797fed8_72.png",
+            "first_name": "Don",
+            "real_name": "Don van der Krogt",
+            "display_name": "Don van der Krogt",
+            "team": "T06E4HX7DGC",
+            "name": "donvanderkrogt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749215124.515369",
+        "parent_user_id": "U06GS5TQWGL",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lZagZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In our case that's Digital Asset (DA-2)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06GS5TQWGL",
+        "type": "message",
+        "ts": "1749215473.555439",
+        "client_msg_id": "57e1ddca-b49a-4fbe-968d-9952712c47f5",
+        "text": "I'm general in touch with <@U04110QSCHL>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T06E4HX7DGC",
+        "source_team": "T06E4HX7DGC",
+        "user_profile": {
+            "avatar_hash": "22e547071ee8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-03-03\/6736618463347_22e547071ee8c797fed8_72.png",
+            "first_name": "Don",
+            "real_name": "Don van der Krogt",
+            "display_name": "Don van der Krogt",
+            "team": "T06E4HX7DGC",
+            "name": "donvanderkrogt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749215124.515369",
+        "parent_user_id": "U06GS5TQWGL",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yACxy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'm general in touch with "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U04110QSCHL"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749215567.800069",
+        "client_msg_id": "dd7376d9-872f-4f54-bb09-1b04c9abb7ac",
+        "text": "<@U06GS5TQWGL> that would be <@U04KJF6UTNU> or <@U03HMUTQ5F0> I suppose",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749215124.515369",
+        "parent_user_id": "U06GS5TQWGL",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sme4M",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U06GS5TQWGL"
+                            },
+                            {
+                                "type": "text",
+                                "text": " that would be "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U04KJF6UTNU"
+                            },
+                            {
+                                "type": "text",
+                                "text": " or "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I suppose"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U06GS5TQWGL"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U06GS5TQWGL",
+        "type": "message",
+        "ts": "1749216940.193879",
+        "client_msg_id": "68cc88ac-2c59-4042-bc2f-a405da0a06bd",
+        "text": "Hi <@U04KJF6UTNU>, <@U03HMUTQ5F0> is this something you could help me with?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T06E4HX7DGC",
+        "source_team": "T06E4HX7DGC",
+        "user_profile": {
+            "avatar_hash": "22e547071ee8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-03-03\/6736618463347_22e547071ee8c797fed8_72.png",
+            "first_name": "Don",
+            "real_name": "Don van der Krogt",
+            "display_name": "Don van der Krogt",
+            "team": "T06E4HX7DGC",
+            "name": "donvanderkrogt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749215124.515369",
+        "parent_user_id": "U06GS5TQWGL",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "s9qKR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U04KJF6UTNU"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " is this something you could help me with?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749217099.616549",
+        "client_msg_id": "197ec86a-175b-44fa-ac5d-a8a9befc76bc",
+        "text": "Thanks <@U02SR6E8Z9S>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749202158.688519",
+        "parent_user_id": "U01TZB7MFFA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7xvWF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02SR6E8Z9S"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749218833.336669",
+        "client_msg_id": "9225077f-cfdd-456e-818d-576e4cf5d6ca",
+        "text": "OK, let's say Canton is still in its infancy. But don't do that in 1y when more big players would be in or you'll have a developper revolution",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749011896.354709",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7oONT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "OK, let's say Canton is still in its infancy. But don't do that in 1y when more big players would be in or you'll have a developper revolution"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749218857.674039",
+        "client_msg_id": "568f248c-890e-465d-ad4a-26606e4985ec",
+        "text": "Packages versions should be sanctified. No bump =&gt; no break",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749011896.354709",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "G29ih",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Packages versions should be sanctified. No bump => no break"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08H5BYLACX",
+        "type": "message",
+        "ts": "1749219090.097529",
+        "client_msg_id": "B80201E5-DE09-4E03-AEC0-59994EFA5751",
+        "text": "I am experiencing that efficiency as I wait to be able to upload a dar.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T073DDGB63C",
+        "source_team": "T073DDGB63C",
+        "user_profile": {
+            "avatar_hash": "g46d97e3567e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/46d97e3567ec9b6955d79e24abbb38c4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-72.png",
+            "first_name": "Leonid",
+            "real_name": "Leonid Rozenberg",
+            "display_name": "Leonid Rozenberg",
+            "team": "T073DDGB63C",
+            "name": "leo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749011896.354709",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RrO76",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I am experiencing that efficiency as I wait to be able to upload a dar."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*andy* from *AIApollo* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749219507.376319",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7f+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "andy",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AIApollo",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06HUQ2M0FP",
+        "type": "message",
+        "ts": "1749221880.368429",
+        "client_msg_id": "de282dda-73fd-4e23-9c3d-1c0524b8bf96",
+        "text": "Thanks! on miannet we do have backups.\nBut if this DB is lost the wallet is lost?  From my understanding the validator identities were enough to restore the wallet?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T06JA04320H",
+        "source_team": "T06JA04320H",
+        "user_profile": {
+            "avatar_hash": "0e740ba4aa10",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-13\/7568247767955_0e740ba4aa106800e8d0_72.jpg",
+            "first_name": "Eduardo",
+            "real_name": "Eduardo Furtado Sa",
+            "display_name": "Eduardo Sa (T-RIZE)",
+            "team": "T06JA04320H",
+            "name": "eduardo.furtado",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749201629.416079",
+        "parent_user_id": "U06HUQ2M0FP",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gd2El",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks! on miannet we do have backups.\nBut if this DB is lost the wallet is lost?  From my understanding the validator identities were enough to restore the wallet?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06HUQ2M0FP",
+        "type": "message",
+        "ts": "1749224435.500559",
+        "client_msg_id": "03dabb1b-52b6-4d4b-8b12-9df96c456b0c",
+        "text": "Indeed the wallet is down for the testnet node. I'm gonna see if I have a backup for it. Otherwise, should I jsut relaunch a new node?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T06JA04320H",
+        "source_team": "T06JA04320H",
+        "user_profile": {
+            "avatar_hash": "0e740ba4aa10",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-13\/7568247767955_0e740ba4aa106800e8d0_72.jpg",
+            "first_name": "Eduardo",
+            "real_name": "Eduardo Furtado Sa",
+            "display_name": "Eduardo Sa (T-RIZE)",
+            "team": "T06JA04320H",
+            "name": "eduardo.furtado",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749201629.416079",
+        "parent_user_id": "U06HUQ2M0FP",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VOJkS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Indeed the wallet is down for the testnet node. I'm gonna see if I have a backup for it. Otherwise, should I jsut relaunch a new node?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "thread_broadcast",
+        "user": "U08SNA0TUCT",
+        "thread_ts": "1744761892.831349",
+        "root": {
+            "user": "U08LNCUMZFZ",
+            "type": "message",
+            "ts": "1744761892.831349",
+            "client_msg_id": "e609ac39-ebad-4212-a7f8-785e17aba37c",
+            "text": "Hello, I'm new here and new to Canton networks.  I'm trying to spin up a devnet validator.\n\nI believe my IP was proposed for white listing last week.  However I'm unable to confirm this, because I can't `curl` any of the SV nodes.  I get either `403 Forbidden` or no response (timeout) depending on which nodes I attempt to reach.\n\nThe IP I asked to white list is `35.211.249.102`\nSome of the URLs I've tried (from that IP according to `<http:\/\/ifconfig.me|ifconfig.me>`) include\n`curl -X POST <https:\/\/sv.sv-2.dev.global.canton.network.digitalasset.com\/api\/sv\/v0\/devnet\/onboard\/validator\/prepare>`\n`curl -X POST <https:\/\/sv.sv-1.dev.global.canton.network.sync.global\/api\/sv\/v0\/devnet\/onboard\/validator\/prepare>`\n`curl -sSL <https:\/\/scan.sv-1.dev.global.canton.network.sync.global\/api\/scan\/v0\/scans>`\n`curl -sSL <https:\/\/scan.sv-2.dev.global.canton.network.digitalasset.com\/api\/scan\/v0\/scans>`\n\nThese requests just time out.  So I'm not sure if the problem is that my IP isn't whitelisted, or I have the IP wrong, or something else on my end.  Any help is appreciated... thanks in advance.",
+            "team": "T05FWTX7PMG",
+            "user_team": "T07LSPYDRT4",
+            "source_team": "T07LSPYDRT4",
+            "user_profile": {
+                "avatar_hash": "42c1973fa2ac",
+                "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-08\/8853145187271_42c1973fa2ac213295ad_72.png",
+                "first_name": "David",
+                "real_name": "David Cohen",
+                "display_name": "David Cohen",
+                "team": "T07LSPYDRT4",
+                "name": "dnc",
+                "is_restricted": false,
+                "is_ultra_restricted": false
+            },
+            "thread_ts": "1744761892.831349",
+            "reply_count": 3,
+            "reply_users_count": 3,
+            "latest_reply": "1749294061.717649",
+            "reply_users": [
+                "U08LNCUMZFZ",
+                "U08SNA0TUCT",
+                "U08U64U3LMC"
+            ],
+            "replies": [
+                {
+                    "user": "U08LNCUMZFZ",
+                    "ts": "1744767362.661369"
+                },
+                {
+                    "user": "U08SNA0TUCT",
+                    "ts": "1749245892.238279"
+                },
+                {
+                    "user": "U08U64U3LMC",
+                    "ts": "1749294061.717649"
+                }
+            ],
+            "is_locked": false,
+            "subscribed": false,
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "nXABh",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "Hello, I'm new here and new to Canton networks.  I'm trying to spin up a devnet validator.\n\nI believe my IP was proposed for white listing last week.  However I'm unable to confirm this, because I can't "
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "curl",
+                                    "style": {
+                                        "code": true
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": " any of the SV nodes.  I get either "
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "403 Forbidden",
+                                    "style": {
+                                        "code": true
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": " or no response (timeout) depending on which nodes I attempt to reach.\n\nThe IP I asked to white list is "
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "35.211.249.102",
+                                    "style": {
+                                        "code": true
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "\nSome of the URLs I've tried (from that IP according to "
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "ifconfig.me",
+                                    "style": {
+                                        "code": true
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": ") include\n"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "curl -X POST ",
+                                    "style": {
+                                        "code": true
+                                    }
+                                },
+                                {
+                                    "type": "link",
+                                    "url": "https:\/\/sv.sv-2.dev.global.canton.network.digitalasset.com\/api\/sv\/v0\/devnet\/onboard\/validator\/prepare",
+                                    "style": {
+                                        "code": true
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "\n"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "curl -X POST ",
+                                    "style": {
+                                        "code": true
+                                    }
+                                },
+                                {
+                                    "type": "link",
+                                    "url": "https:\/\/sv.sv-1.dev.global.canton.network.sync.global\/api\/sv\/v0\/devnet\/onboard\/validator\/prepare",
+                                    "style": {
+                                        "code": true
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "\n"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "curl -sSL ",
+                                    "style": {
+                                        "code": true
+                                    }
+                                },
+                                {
+                                    "type": "link",
+                                    "url": "https:\/\/scan.sv-1.dev.global.canton.network.sync.global\/api\/scan\/v0\/scans",
+                                    "style": {
+                                        "code": true
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "\n"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "curl -sSL ",
+                                    "style": {
+                                        "code": true
+                                    }
+                                },
+                                {
+                                    "type": "link",
+                                    "url": "https:\/\/scan.sv-2.dev.global.canton.network.digitalasset.com\/api\/scan\/v0\/scans",
+                                    "style": {
+                                        "code": true
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "\n\nThese requests just time out.  So I'm not sure if the problem is that my IP isn't whitelisted, or I have the IP wrong, or something else on my end.  Any help is appreciated... thanks in advance."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "language": {
+                "locale": "en",
+                "is_reliable": true
+            }
+        },
+        "type": "message",
+        "ts": "1749245892.238279",
+        "client_msg_id": "3d4a9ae7-873c-4673-978c-cdeede7c4765",
+        "text": "<@U04KJF6UTNU> - It seems I am in same situation. I am running the curl command from cloud shell and getting 403. `curl -X POST <https:\/\/scan.sv-1.dev.global.canton.network.digitalasset.com\/api\/sv\/v0\/devnet\/onboard\/validator\/prepare>` . Is it the same issue as David and I can only do this after whitelisting IP?",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dEtoC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U04KJF6UTNU"
+                            },
+                            {
+                                "type": "text",
+                                "text": " - It seems I am in same situation. I am running the curl command from cloud shell and getting 403. "
+                            },
+                            {
+                                "type": "text",
+                                "text": "curl -X POST ",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-1.dev.global.canton.network.digitalasset.com\/api\/sv\/v0\/devnet\/onboard\/validator\/prepare",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " . Is it the same issue as David and I can only do this after whitelisting IP?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*stan* from *NODERS* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749277749.833119",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "N\/r",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "stan",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "NODERS",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

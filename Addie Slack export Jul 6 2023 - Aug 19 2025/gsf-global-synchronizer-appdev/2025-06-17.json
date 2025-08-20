@@ -1,0 +1,580 @@
+[
+    {
+        "user": "U037Y3RFC1Z",
+        "type": "message",
+        "ts": "1750172298.426309",
+        "client_msg_id": "76d506fe-387a-49d2-9341-fc669a9c062d",
+        "text": "Hi All,\n\nI had a question from my interpretation I was seeking clarity on.\n\nFor CN tokens, there will in fact be authentication needed from each validator to see balances and transaction history?\n\nFor example in our platform a user adds their partyId and we are able to sync full transaction history for all Canton movements. Would there now be an api key or additional authentication method needed to pull their data for CN tokens per the documentation I am reviewing?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7C92V0SX",
+        "source_team": "T7C92V0SX",
+        "user_profile": {
+            "avatar_hash": "ac1aaf538e92",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-24\/9083989141975_ac1aaf538e92b62f1fa6_72.jpg",
+            "first_name": "Jesse",
+            "real_name": "Jesse Farese",
+            "display_name": "jesse.farese",
+            "team": "T7C92V0SX",
+            "name": "jesse.farese",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750172298.426309",
+        "reply_count": 7,
+        "reply_users_count": 1,
+        "latest_reply": "1750177852.759819",
+        "reply_users": [
+            "U037Y3RFC1Z"
+        ],
+        "replies": [
+            {
+                "user": "U037Y3RFC1Z",
+                "ts": "1750172351.407669"
+            },
+            {
+                "user": "U037Y3RFC1Z",
+                "ts": "1750172494.233549"
+            },
+            {
+                "user": "U037Y3RFC1Z",
+                "ts": "1750172682.105659"
+            },
+            {
+                "user": "U037Y3RFC1Z",
+                "ts": "1750172683.969219"
+            },
+            {
+                "user": "U037Y3RFC1Z",
+                "ts": "1750172893.723329"
+            },
+            {
+                "user": "U037Y3RFC1Z",
+                "ts": "1750173087.735059"
+            },
+            {
+                "user": "U037Y3RFC1Z",
+                "ts": "1750177852.759819"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mn5S1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi All,\n\nI had a question from my interpretation I was seeking clarity on.\n\nFor CN tokens, there will in fact be authentication needed from each validator to see balances and transaction history?\n\nFor example in our platform a user adds their partyId and we are able to sync full transaction history for all Canton movements. Would there now be an api key or additional authentication method needed to pull their data for CN tokens per the documentation I am reviewing?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "Bullet number two I am looking at in reference to fully authenticated, but want to ensure I understand correctly in how we need to go about pulling balances and movements.",
+        "files": [
+            {
+                "id": "F0927LX8QP3",
+                "created": 1750172309,
+                "timestamp": 1750172309,
+                "name": "Screenshot 2025-06-17 at 10.58.26 AM.png",
+                "title": "Screenshot 2025-06-17 at 10.58.26 AM.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U037Y3RFC1Z",
+                "user_team": "T7C92V0SX",
+                "editable": false,
+                "size": 120147,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T7C92V0SX-F0927LX8QP3\/screenshot_2025-06-17_at_10.58.26___am.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T7C92V0SX-F0927LX8QP3\/download\/screenshot_2025-06-17_at_10.58.26___am.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T7C92V0SX-F0927LX8QP3-c200a2a0e8\/screenshot_2025-06-17_at_10.58.26___am_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T7C92V0SX-F0927LX8QP3-c200a2a0e8\/screenshot_2025-06-17_at_10.58.26___am_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T7C92V0SX-F0927LX8QP3-c200a2a0e8\/screenshot_2025-06-17_at_10.58.26___am_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 178,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T7C92V0SX-F0927LX8QP3-c200a2a0e8\/screenshot_2025-06-17_at_10.58.26___am_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 238,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T7C92V0SX-F0927LX8QP3-c200a2a0e8\/screenshot_2025-06-17_at_10.58.26___am_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T7C92V0SX-F0927LX8QP3-c200a2a0e8\/screenshot_2025-06-17_at_10.58.26___am_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 356,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T7C92V0SX-F0927LX8QP3-c200a2a0e8\/screenshot_2025-06-17_at_10.58.26___am_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 396,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T7C92V0SX-F0927LX8QP3-c200a2a0e8\/screenshot_2025-06-17_at_10.58.26___am_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 475,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T7C92V0SX-F0927LX8QP3-c200a2a0e8\/screenshot_2025-06-17_at_10.58.26___am_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 507,
+                "original_w": 1075,
+                "original_h": 532,
+                "thumb_tiny": "AwAXADDQIIP33\/Kk\/wCBv+X\/ANaiQZ7fpTQORgfpQA8DPPmN+NAU8\/vT+lAz3bNLn\/OaAFGAMbs\/WlznpSZ+lLzQAxwetNCH2qRvu0DoKAGqrD6U7n3paKAEyfSlFFFAH\/\/Z",
+                "permalink": "https:\/\/bitwavecorp.slack.com\/files\/U05FZBDQ4RJ\/F0927LX8QP3\/screenshot_2025-06-17_at_10.58.26___am.png",
+                "permalink_public": "https:\/\/slack-files.com\/T7C92V0SX-F0927LX8QP3-370015b84e",
+                "source_team": "T7C92V0SX",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U037Y3RFC1Z",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bbCo6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Bullet number two I am looking at in reference to fully authenticated, but want to ensure I understand correctly in how we need to go about pulling balances and movements."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1750172351.407669",
+        "client_msg_id": "4b075e71-2ed9-4cec-82db-9eea44033e65",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1750172298.426309",
+        "parent_user_id": "U037Y3RFC1Z",
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T7C92V0SX",
+        "source_team": "T7C92V0SX",
+        "user_profile": {
+            "avatar_hash": "ac1aaf538e92",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-24\/9083989141975_ac1aaf538e92b62f1fa6_72.jpg",
+            "first_name": "Jesse",
+            "real_name": "Jesse Farese",
+            "display_name": "jesse.farese",
+            "team": "T7C92V0SX",
+            "name": "jesse.farese",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U037Y3RFC1Z",
+        "type": "message",
+        "ts": "1750172494.233549",
+        "client_msg_id": "c939ba71-0220-4bc1-adc5-cf91e20b31c7",
+        "text": "Thanks Wayne, so there will in fact be no way to crawl all of the token data unless we have access they had granted? And in doing so we would only see their CN token movement?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7C92V0SX",
+        "source_team": "T7C92V0SX",
+        "user_profile": {
+            "avatar_hash": "ac1aaf538e92",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-24\/9083989141975_ac1aaf538e92b62f1fa6_72.jpg",
+            "first_name": "Jesse",
+            "real_name": "Jesse Farese",
+            "display_name": "jesse.farese",
+            "team": "T7C92V0SX",
+            "name": "jesse.farese",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750172298.426309",
+        "parent_user_id": "U037Y3RFC1Z",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mTqzk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks Wayne, so there will in fact be no way to crawl all of the token data unless we have access they had granted? And in doing so we would only see their CN token movement?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U037Y3RFC1Z",
+        "type": "message",
+        "ts": "1750172682.105659",
+        "client_msg_id": "66d4b9c9-aca1-4cee-8954-33ffa54ca09f",
+        "text": "great, thank you\n\nI'm going to continue reading through and may reach out as I have more questions.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7C92V0SX",
+        "source_team": "T7C92V0SX",
+        "user_profile": {
+            "avatar_hash": "ac1aaf538e92",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-24\/9083989141975_ac1aaf538e92b62f1fa6_72.jpg",
+            "first_name": "Jesse",
+            "real_name": "Jesse Farese",
+            "display_name": "jesse.farese",
+            "team": "T7C92V0SX",
+            "name": "jesse.farese",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750172298.426309",
+        "parent_user_id": "U037Y3RFC1Z",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vk15V",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "great, thank you\n\nI'm going to continue reading through and may reach out as I have more questions."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U037Y3RFC1Z",
+        "type": "message",
+        "ts": "1750172683.969219",
+        "client_msg_id": "b19950f9-7064-4095-93bb-c507fe542acf",
+        "text": "I have a follow-up as well with you <@U02SR6E8Z9S> around this in which I'll email that full list.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7C92V0SX",
+        "source_team": "T7C92V0SX",
+        "user_profile": {
+            "avatar_hash": "ac1aaf538e92",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-24\/9083989141975_ac1aaf538e92b62f1fa6_72.jpg",
+            "first_name": "Jesse",
+            "real_name": "Jesse Farese",
+            "display_name": "jesse.farese",
+            "team": "T7C92V0SX",
+            "name": "jesse.farese",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750172298.426309",
+        "parent_user_id": "U037Y3RFC1Z",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "joqjp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I have a follow-up as well with you "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02SR6E8Z9S"
+                            },
+                            {
+                                "type": "text",
+                                "text": " around this in which I'll email that full list."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U037Y3RFC1Z",
+        "type": "message",
+        "ts": "1750172893.723329",
+        "client_msg_id": "427c2feb-6073-48f3-85db-ad57f97c17e1",
+        "text": "Seems like Option 2 would be simpler in which case we would provide the partyId we want to have access and they would provision on their end correct?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7C92V0SX",
+        "source_team": "T7C92V0SX",
+        "user_profile": {
+            "avatar_hash": "ac1aaf538e92",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-24\/9083989141975_ac1aaf538e92b62f1fa6_72.jpg",
+            "first_name": "Jesse",
+            "real_name": "Jesse Farese",
+            "display_name": "jesse.farese",
+            "team": "T7C92V0SX",
+            "name": "jesse.farese",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750172298.426309",
+        "parent_user_id": "U037Y3RFC1Z",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rqvB0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Seems like Option 2 would be simpler in which case we would provide the partyId we want to have access and they would provision on their end correct?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U037Y3RFC1Z",
+        "type": "message",
+        "ts": "1750173087.735059",
+        "client_msg_id": "15d0019d-e01f-48dc-b62a-8fbb6be9aa0a",
+        "text": "Understood, appreciate the insight",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7C92V0SX",
+        "source_team": "T7C92V0SX",
+        "user_profile": {
+            "avatar_hash": "ac1aaf538e92",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-24\/9083989141975_ac1aaf538e92b62f1fa6_72.jpg",
+            "first_name": "Jesse",
+            "real_name": "Jesse Farese",
+            "display_name": "jesse.farese",
+            "team": "T7C92V0SX",
+            "name": "jesse.farese",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750172298.426309",
+        "parent_user_id": "U037Y3RFC1Z",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6gKff",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Understood, appreciate the insight"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1750174264.718219",
+        "edited": {
+            "user": "U06TMPD96M8",
+            "ts": "1750174503.000000"
+        },
+        "client_msg_id": "b2c1b13d-664b-4f7b-a40a-b13c63b9505f",
+        "text": "Hello. How can I get the transfer instruction off-ledger API URL on Testnet for the Amulet instrument? Locally it was on `<http:\/\/localhost:5012>` which is the `scan` node of the supervalidator. I would like to do this call: `https:\/\/{url}\/registry\/transfer-instruction\/v1\/transfer-factory`",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750174264.718219",
+        "reply_count": 10,
+        "reply_users_count": 1,
+        "latest_reply": "1750323371.366639",
+        "reply_users": [
+            "U06TMPD96M8"
+        ],
+        "replies": [
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1750259885.931379"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1750259889.887799"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1750263104.999029"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1750263218.078679"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1750264149.513039"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1750264252.252369"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1750264256.075379"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1750264516.477139"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1750264573.353139"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1750323371.366639"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ER1VB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello. How can I get the transfer instruction off-ledger API URL on Testnet for the Amulet instrument? Locally it was on "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:5012",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " which is the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "scan",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " node of the supervalidator. I would like to do this call: "
+                            },
+                            {
+                                "type": "text",
+                                "text": "https:\/\/{url}\/registry\/transfer-instruction\/v1\/transfer-factory",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U037Y3RFC1Z",
+        "type": "message",
+        "ts": "1750177852.759819",
+        "client_msg_id": "388321d5-c795-45ae-8baa-f850faa5cc4a",
+        "text": "Thank you Curtis, will explore option 2 above in our internal conversations as we dive deeper in",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7C92V0SX",
+        "source_team": "T7C92V0SX",
+        "user_profile": {
+            "avatar_hash": "ac1aaf538e92",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-24\/9083989141975_ac1aaf538e92b62f1fa6_72.jpg",
+            "first_name": "Jesse",
+            "real_name": "Jesse Farese",
+            "display_name": "jesse.farese",
+            "team": "T7C92V0SX",
+            "name": "jesse.farese",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750172298.426309",
+        "parent_user_id": "U037Y3RFC1Z",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Abmoc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you Curtis, will explore option 2 above in our internal conversations as we dive deeper in"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

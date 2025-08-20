@@ -1,0 +1,1817 @@
+[
+    {
+        "text": "Hi BD Team,\nYou can find the link to the canton admin UI here: <https:\/\/canton-billing-admin-bfaa44c93632.herokuapp.com\/>\n\nFeatures:\n• Create client, if you type a name like anything, it will create two clients, one for the holder called \"anything\" and one for the minter called \"anything-minter\". The creation is fault-tolerant. If you type anything three times, the system will recognize, that anything already exists and won't duplicate it.\n• List clients, that's simple list all the parties on Canton mainnet. (That page isn't that usefull unless you want to browse the existing parties)\n• Search clients, here you can search for clients. If you type anything it will check for the client_id and external_client_id, so if you have black-sand and black-manta, and you search for black, it will result 4 clients, black-sand and black-manta and their minter accounts. \n    ◦ Also you can choose between \"All clients\" or \"Local clients only\". All clients will list all the matchings from the whole Canton network mainnet. Local clients only result only our clients sits on our node.\n    ◦ There is a hack to list all our clients like put the \"::\" into the search and choose Local clients only. \n    ◦ The image displays 1800, that is the number of parties on the whole canton mainnet. The Clients found is the number of matching entries.\n• If you click on one of the elements in the list you can see the details of the client. \n    ◦ The \"Database Entry Exists\" means that the client is in our database, so we have 100% power over the client. If it is not in the database, that is NOT a problem, because we still have access to it, but that is a deprecated way of handling clients.\n    ◦ All the new clients created on the UI will present in the database.\n• If you click on the Update client, you can change the values of the client, like External ID and other metadata values.\n*Important*\nThe UI is behind Keycloak authentication. If you don't have access to it, reach me and I can create an account for you.",
+        "files": [
+            {
+                "id": "F098R36P3HC",
+                "created": 1754307894,
+                "timestamp": 1754307894,
+                "name": "Screenshot From 2025-08-03 11-19-24.png",
+                "title": "Screenshot From 2025-08-03 11-19-24.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U093Q4FPEJG",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 138657,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098R36P3HC\/screenshot_from_2025-08-03_11-19-24.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098R36P3HC\/download\/screenshot_from_2025-08-03_11-19-24.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R36P3HC-79a2edc9a3\/screenshot_from_2025-08-03_11-19-24_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R36P3HC-79a2edc9a3\/screenshot_from_2025-08-03_11-19-24_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R36P3HC-79a2edc9a3\/screenshot_from_2025-08-03_11-19-24_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 325,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R36P3HC-79a2edc9a3\/screenshot_from_2025-08-03_11-19-24_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 434,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R36P3HC-79a2edc9a3\/screenshot_from_2025-08-03_11-19-24_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R36P3HC-79a2edc9a3\/screenshot_from_2025-08-03_11-19-24_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 650,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R36P3HC-79a2edc9a3\/screenshot_from_2025-08-03_11-19-24_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 723,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098R36P3HC-79a2edc9a3\/screenshot_from_2025-08-03_11-19-24_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 867,
+                "original_w": 963,
+                "original_h": 870,
+                "thumb_tiny": "AwAsADDR57UfNzz+lG1WxuUHHTIoQEDBCgDgY9O1AgO7t\/Kgbu\/P0FL83HI9+KMH1796Bh+BpDSjPcg\/QUNQA0lhgjkZ5FITJgY25zzk9qUjockYPYZzS9G6Ejp06UwAF8rnaBjnnvSjgctk0A5x8pH1pOecp9Md6QDsj1prUo6\/dxSNTAQvsx8pbPpSGbHVG\/AflTWcqxA9M\/zpiTuyEnHTP8\/8KduoE3mghSFY7vQdKeM96qwTvIQGx0PT8P8AGp8n1pWAfSN2puT60UWA\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F098R36P3HC\/screenshot_from_2025-08-03_11-19-24.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F098R36P3HC-a7d6ef810f",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F099FT1HZSL",
+                "created": 1754307898,
+                "timestamp": 1754307898,
+                "name": "Screenshot From 2025-08-04 13-43-43.png",
+                "title": "Screenshot From 2025-08-04 13-43-43.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U093Q4FPEJG",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 133734,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F099FT1HZSL\/screenshot_from_2025-08-04_13-43-43.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F099FT1HZSL\/download\/screenshot_from_2025-08-04_13-43-43.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F099FT1HZSL-de80fc3f14\/screenshot_from_2025-08-04_13-43-43_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F099FT1HZSL-de80fc3f14\/screenshot_from_2025-08-04_13-43-43_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F099FT1HZSL-de80fc3f14\/screenshot_from_2025-08-04_13-43-43_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 264,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F099FT1HZSL-de80fc3f14\/screenshot_from_2025-08-04_13-43-43_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 352,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F099FT1HZSL-de80fc3f14\/screenshot_from_2025-08-04_13-43-43_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F099FT1HZSL-de80fc3f14\/screenshot_from_2025-08-04_13-43-43_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 528,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F099FT1HZSL-de80fc3f14\/screenshot_from_2025-08-04_13-43-43_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 587,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F099FT1HZSL-de80fc3f14\/screenshot_from_2025-08-04_13-43-43_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 704,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F099FT1HZSL-de80fc3f14\/screenshot_from_2025-08-04_13-43-43_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 751,
+                "original_w": 1707,
+                "original_h": 1252,
+                "thumb_tiny": "AwAkADDSycnjikp3rTaYC4oxS5FGRSATFJQzNngAj1JpKYh56U2nHpTaEMKKKSgQUUUUwHnpTKeelMpIYUUUUxBRRRQB\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F099FT1HZSL\/screenshot_from_2025-08-04_13-43-43.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F099FT1HZSL-f6da8f3f4b",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F098DH2966T",
+                "created": 1754307900,
+                "timestamp": 1754307900,
+                "name": "Screenshot From 2025-08-04 13-43-50.png",
+                "title": "Screenshot From 2025-08-04 13-43-50.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U093Q4FPEJG",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 271040,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098DH2966T\/screenshot_from_2025-08-04_13-43-50.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098DH2966T\/download\/screenshot_from_2025-08-04_13-43-50.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2966T-892eac30f5\/screenshot_from_2025-08-04_13-43-50_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2966T-892eac30f5\/screenshot_from_2025-08-04_13-43-50_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2966T-892eac30f5\/screenshot_from_2025-08-04_13-43-50_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 264,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2966T-892eac30f5\/screenshot_from_2025-08-04_13-43-50_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 352,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2966T-892eac30f5\/screenshot_from_2025-08-04_13-43-50_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2966T-892eac30f5\/screenshot_from_2025-08-04_13-43-50_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 528,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2966T-892eac30f5\/screenshot_from_2025-08-04_13-43-50_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 587,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2966T-892eac30f5\/screenshot_from_2025-08-04_13-43-50_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 704,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2966T-892eac30f5\/screenshot_from_2025-08-04_13-43-50_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 751,
+                "original_w": 1707,
+                "original_h": 1252,
+                "thumb_tiny": "AwAkADDSycnjik2jdu5zjHXinetJj2zQAYoxSjOBnrRQAmKQjFOpG6UwFPSk\/h6Z46etKelJ2644pAJnIzsOR24o6kfJ06dOKQkAZMvBGc5H+f8A9dAIwF8zJPfjJoAdgYxgelDdKQOmAN4PHXIpW6UAKelNzinHpTTQAbjRuNJRQAu40E5FJR2pgf\/Z",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F098DH2966T\/screenshot_from_2025-08-04_13-43-50.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F098DH2966T-28036ed12d",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F098VG5RRNG",
+                "created": 1754307904,
+                "timestamp": 1754307904,
+                "name": "Screenshot From 2025-08-04 13-44-05.png",
+                "title": "Screenshot From 2025-08-04 13-44-05.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U093Q4FPEJG",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 231743,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098VG5RRNG\/screenshot_from_2025-08-04_13-44-05.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098VG5RRNG\/download\/screenshot_from_2025-08-04_13-44-05.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098VG5RRNG-4d53547425\/screenshot_from_2025-08-04_13-44-05_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098VG5RRNG-4d53547425\/screenshot_from_2025-08-04_13-44-05_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098VG5RRNG-4d53547425\/screenshot_from_2025-08-04_13-44-05_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 264,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098VG5RRNG-4d53547425\/screenshot_from_2025-08-04_13-44-05_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 352,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098VG5RRNG-4d53547425\/screenshot_from_2025-08-04_13-44-05_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098VG5RRNG-4d53547425\/screenshot_from_2025-08-04_13-44-05_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 528,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098VG5RRNG-4d53547425\/screenshot_from_2025-08-04_13-44-05_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 587,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098VG5RRNG-4d53547425\/screenshot_from_2025-08-04_13-44-05_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 704,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098VG5RRNG-4d53547425\/screenshot_from_2025-08-04_13-44-05_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 751,
+                "original_w": 1707,
+                "original_h": 1252,
+                "thumb_tiny": "AwAkADDSycnjik2855p3rSAc5ycY6UAGKMUtFACYoIxS0h6UwFpOByTjj1paQ\/dPzbeOvpSARQqgBcAY4GaN6cfMORkc9RQSA+N+Dj7vFKCOfmzQAgdDjDqc9MHrSnpS0h6UALQOlFA6UAFFFFABSN0paRulAH\/\/2Q==",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F098VG5RRNG\/screenshot_from_2025-08-04_13-44-05.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F098VG5RRNG-18eaa4f690",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F098TU05R7C",
+                "created": 1754307909,
+                "timestamp": 1754307909,
+                "name": "Screenshot From 2025-08-04 13-44-25.png",
+                "title": "Screenshot From 2025-08-04 13-44-25.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U093Q4FPEJG",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 156320,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098TU05R7C\/screenshot_from_2025-08-04_13-44-25.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098TU05R7C\/download\/screenshot_from_2025-08-04_13-44-25.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098TU05R7C-dde5342c29\/screenshot_from_2025-08-04_13-44-25_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098TU05R7C-dde5342c29\/screenshot_from_2025-08-04_13-44-25_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098TU05R7C-dde5342c29\/screenshot_from_2025-08-04_13-44-25_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 264,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098TU05R7C-dde5342c29\/screenshot_from_2025-08-04_13-44-25_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 352,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098TU05R7C-dde5342c29\/screenshot_from_2025-08-04_13-44-25_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098TU05R7C-dde5342c29\/screenshot_from_2025-08-04_13-44-25_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 528,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098TU05R7C-dde5342c29\/screenshot_from_2025-08-04_13-44-25_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 587,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098TU05R7C-dde5342c29\/screenshot_from_2025-08-04_13-44-25_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 704,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098TU05R7C-dde5342c29\/screenshot_from_2025-08-04_13-44-25_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 751,
+                "original_w": 1707,
+                "original_h": 1252,
+                "thumb_tiny": "AwAkADDSycnjimsSFOGVT6sKf60goAbuXONy5+tKMMMgg\/SnUUAJim7MEnJ59zT6Q9KdwFPSkHrSnpTaAHUU3NGTRYB34UjdKTJpM0APPSmU89KZQgCiiimIKKKKAP\/Z",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F098TU05R7C\/screenshot_from_2025-08-04_13-44-25.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F098TU05R7C-9391e32f98",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F098DH2Q8K1",
+                "created": 1754307913,
+                "timestamp": 1754307913,
+                "name": "Screenshot From 2025-08-04 13-44-30.png",
+                "title": "Screenshot From 2025-08-04 13-44-30.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U093Q4FPEJG",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 171901,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098DH2Q8K1\/screenshot_from_2025-08-04_13-44-30.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098DH2Q8K1\/download\/screenshot_from_2025-08-04_13-44-30.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2Q8K1-9fa034a43c\/screenshot_from_2025-08-04_13-44-30_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2Q8K1-9fa034a43c\/screenshot_from_2025-08-04_13-44-30_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2Q8K1-9fa034a43c\/screenshot_from_2025-08-04_13-44-30_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 264,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2Q8K1-9fa034a43c\/screenshot_from_2025-08-04_13-44-30_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 352,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2Q8K1-9fa034a43c\/screenshot_from_2025-08-04_13-44-30_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2Q8K1-9fa034a43c\/screenshot_from_2025-08-04_13-44-30_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 528,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2Q8K1-9fa034a43c\/screenshot_from_2025-08-04_13-44-30_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 587,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2Q8K1-9fa034a43c\/screenshot_from_2025-08-04_13-44-30_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 704,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098DH2Q8K1-9fa034a43c\/screenshot_from_2025-08-04_13-44-30_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 751,
+                "original_w": 1707,
+                "original_h": 1252,
+                "thumb_tiny": "AwAkADDSycnjikp3rTaYBjB+tLilopAJikpx6UymA89KbTj0ptCAUtjtmjd7UlJQIVgSchiB6DFJRRTAeelMp56UykhhRRRTEFFFFAH\/2Q==",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F098DH2Q8K1\/screenshot_from_2025-08-04_13-44-30.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F098DH2Q8K1-53d9064506",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eQ\/UP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi BD Team,\nYou can find the link to the canton admin UI here: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/canton-billing-admin-bfaa44c93632.herokuapp.com\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nFeatures:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Create client, if you type a name like anything, it will create two clients, one for the holder called \"anything\" and one for the minter called \"anything-minter\". The creation is fault-tolerant. If you type anything three times, the system will recognize, that anything already exists and won't duplicate it."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "List clients, that's simple list all the parties on Canton mainnet. (That page isn't that usefull unless you want to browse the existing parties)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Search clients, here you can search for clients. If you type anything it will check for the client_id and external_client_id, so if you have black-sand and black-manta, and you search for black, it will result 4 clients, black-sand and black-manta and their minter accounts. "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Also you can choose between \"All clients\" or \"Local clients only\". All clients will list all the matchings from the whole Canton network mainnet. Local clients only result only our clients sits on our node."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "There is a hack to list all our clients like put the \"::\" into the search and choose Local clients only. "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "The image displays 1800, that is the number of parties on the whole canton mainnet. The Clients found is the number of matching entries."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "If you click on one of the elements in the list you can see the details of the client. "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "The \"Database Entry Exists\" means that the client is in our database, so we have 100% power over the client. If it is not in the database, that is NOT a problem, because we still have access to it, but that is a deprecated way of handling clients."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "All the new clients created on the UI will present in the database."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "If you click on the Update client, you can change the values of the client, like External ID and other metadata values."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Important",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nThe UI is behind Keycloak authentication. If you don't have access to it, reach me and I can create an account for you."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1754308622.068479",
+        "client_msg_id": "fb4bd7ea-dab6-4b08-a874-837df8e0992a",
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U088UV6MKFE",
+                    "U092B2GUASF",
+                    "U091F8WHDC3"
+                ],
+                "count": 3
+            },
+            {
+                "name": "fire",
+                "users": [
+                    "U088UV6MKFE",
+                    "U05FZBDQ4RJ",
+                    "U08JNLKMH60",
+                    "U091F8WHDC3",
+                    "U05FU0HPZ9T"
+                ],
+                "count": 5
+            },
+            {
+                "name": "raised_hands::skin-tone-5",
+                "users": [
+                    "U08JNLKMH60"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1754322065.332629",
+        "client_msg_id": "14705d4c-e632-4399-8282-f7e8d408f712",
+        "text": "Trakx Closed Won! Congrats <@U092DKJ8L4Q>! :partying_face:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oCKkb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Trakx Closed Won! Congrats "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U092DKJ8L4Q"
+                            },
+                            {
+                                "type": "text",
+                                "text": "! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "partying_face",
+                                "unicode": "1f973"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "blush",
+                "users": [
+                    "U092DKJ8L4Q",
+                    "U091F8WHDC3"
+                ],
+                "count": 2
+            },
+            {
+                "name": "partyparrot",
+                "users": [
+                    "U092B2GUASF",
+                    "U091F8WHDC3"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*Akos, you have 26 documents out for signature today!*\n1. <https:\/\/app.hellosign.com\/home\/manage?guid=50aadb566ebdf59f4e1faf1d98ce0ec11da95822|CBTC Early Bird Holder Credential> sent to <mailto:pathrock@pathrocknetwork.org|pathrock@pathrocknetwork.org> 28 days ago\n2. <https:\/\/app.hellosign.com\/home\/manage?guid=80bbaf872303a68c6b8e663db0bc3a0c443326ea|CBTC Early Bird Holder Credential> sent to <mailto:oliver@registerlabs.io|oliver@registerlabs.io> 27 days ago\n3. <https:\/\/app.hellosign.com\/home\/manage?guid=3588e1d7a1f49feeaca03e9d9c6ea3cca313c4ea|CBTC Early Bird Holder Credential> sent to <mailto:tiago.dias@unlockit.io|tiago.dias@unlockit.io> 27 days ago\n4. <https:\/\/app.hellosign.com\/home\/manage?guid=81d34c132e1140ca353c1b092d1a05c125f6c529|CBTC Early Bird Holder Credential> sent to <mailto:kinga.bosse@mpch.com|kinga.bosse@mpch.com> 26 days ago\n5. <https:\/\/app.hellosign.com\/home\/manage?guid=6bac23ed4e6728cd86c10f0147c21587f9cc13c5|CBTC Early Bird Holder Credential> sent to <mailto:mbertin@gomaestro.org|mbertin@gomaestro.org> 26 days ago\n6. <https:\/\/app.hellosign.com\/home\/manage?guid=1514c3e044c77db9736ccc8f72241821301067e3|CBTC Early Bird Holder Credential> sent to <mailto:jon.knipper@republic.com|jon.knipper@republic.com> 24 days ago\n7. <https:\/\/app.hellosign.com\/home\/manage?guid=5a9ae484c71ae00e2edd7e862d36a27a3ab11392|CBTC Early Bird Holder Credential> sent to <mailto:alex.loktev@p2p.org|alex.loktev@p2p.org> 24 days ago\n8. <https:\/\/app.hellosign.com\/home\/manage?guid=21b3e58ceaf280dbee9686674108923a719b9d59|CBTC Early Bird Minter Credential> sent to j@ordinals.foundation 18 days ago\n9. <https:\/\/app.hellosign.com\/home\/manage?guid=4ab5569d30c33de489ed0330888b98e56d2f52f0|CBTC Early Bird Minter Credential> sent to <mailto:john.liatos@xbto.com|john.liatos@xbto.com> 18 days ago\n10. <https:\/\/app.hellosign.com\/home\/manage?guid=b12383be43ab8f19b707d61c94965ca03c8b2096|CBTC Early Bird Minter Credential> sent to <mailto:y@fivenorthgroup.com|y@fivenorthgroup.com> 16 days ago\n11. <https:\/\/app.hellosign.com\/home\/manage?guid=612cb3259668b31653cfc764b8d4543df92c1d3e|CBTC Early Bird Minter Credential> sent to <mailto:joe@nethermind.io|joe@nethermind.io> 16 days ago\n12. <https:\/\/app.hellosign.com\/home\/manage?guid=6a6cc30f15fb9b69241a86bcd853d54676a5190b|CBTC Early Bird Minter Credential> sent to <mailto:owen.simonin@meria.com|owen.simonin@meria.com> 16 days ago\n13. <https:\/\/app.hellosign.com\/home\/manage?guid=8da12aaa0aee5108a1c872689f458379f4ba45b1|CBTC Early Bird Minter Credential> sent to <mailto:kinga.bosse@mpch.com|kinga.bosse@mpch.com> 16 days ago\n14. <https:\/\/app.hellosign.com\/home\/manage?guid=eb8f90407cbb1190b7112c693a3c1fad9938496b|CBTC Early Bird Minter Credential> sent to <mailto:jon.knipper@republic.com|jon.knipper@republic.com> 16 days ago\n15. <https:\/\/app.hellosign.com\/home\/manage?guid=2995b115c21e650bf826118b53ab08bec70d03ad|CBTC Early Bird Holder Credential> sent to <mailto:khaled@round13.com|khaled@round13.com> 16 days ago\n16. <https:\/\/app.hellosign.com\/home\/manage?guid=241c498f4356e91c8eb09e6c911afaf6b42eea23|CBTC Early Bird Minter Credential> sent to <mailto:khaled@round13.com|khaled@round13.com> 16 days ago\n17. <https:\/\/app.hellosign.com\/home\/manage?guid=1e666404ac6fb93193c597134955623d03425c9b|CBTC Early Bird Holder Credential> sent to <mailto:khaled@round13.com|khaled@round13.com> 14 days ago\n18. <https:\/\/app.hellosign.com\/home\/manage?guid=b321abf6cb3af6cd4ced1f214b580670e7f35b13|CBTC Early Bird Minter Credential> sent to <mailto:khaled@round13.com|khaled@round13.com> 14 days ago\n19. <https:\/\/app.hellosign.com\/home\/manage?guid=62121a674efbad2d6de00d4428fa4156f9f671aa|CBTC Early Bird Minter Credential> sent to <mailto:hatcher@chainsafe.io|hatcher@chainsafe.io> 14 days ago\n20. <https:\/\/app.hellosign.com\/home\/manage?guid=d70f4bbf3f39a97985218b55f63ab4763c36ab36|CBTC Early Bird Minter Credential> sent to <mailto:owen.simonin@meria.com|owen.simonin@meria.com> 14 days ago",
+        "type": "message",
+        "ts": "1754328283.389709",
+        "bot_id": "B095UTUK0UW",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yh08",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Akos, you have 26 documents out for signature today!",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n1. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=50aadb566ebdf59f4e1faf1d98ce0ec11da95822",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:pathrock@pathrocknetwork.org",
+                                "text": "pathrock@pathrocknetwork.org"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 28 days ago\n2. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=80bbaf872303a68c6b8e663db0bc3a0c443326ea",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:oliver@registerlabs.io",
+                                "text": "oliver@registerlabs.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 27 days ago\n3. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=3588e1d7a1f49feeaca03e9d9c6ea3cca313c4ea",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:tiago.dias@unlockit.io",
+                                "text": "tiago.dias@unlockit.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 27 days ago\n4. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=81d34c132e1140ca353c1b092d1a05c125f6c529",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:kinga.bosse@mpch.com",
+                                "text": "kinga.bosse@mpch.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 26 days ago\n5. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=6bac23ed4e6728cd86c10f0147c21587f9cc13c5",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:mbertin@gomaestro.org",
+                                "text": "mbertin@gomaestro.org"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 26 days ago\n6. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=1514c3e044c77db9736ccc8f72241821301067e3",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:jon.knipper@republic.com",
+                                "text": "jon.knipper@republic.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 24 days ago\n7. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=5a9ae484c71ae00e2edd7e862d36a27a3ab11392",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:alex.loktev@p2p.org",
+                                "text": "alex.loktev@p2p.org"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 24 days ago\n8. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=21b3e58ceaf280dbee9686674108923a719b9d59",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to j@ordinals.foundation 18 days ago\n9. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=4ab5569d30c33de489ed0330888b98e56d2f52f0",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:john.liatos@xbto.com",
+                                "text": "john.liatos@xbto.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 18 days ago\n10. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=b12383be43ab8f19b707d61c94965ca03c8b2096",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:y@fivenorthgroup.com",
+                                "text": "y@fivenorthgroup.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 16 days ago\n11. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=612cb3259668b31653cfc764b8d4543df92c1d3e",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:joe@nethermind.io",
+                                "text": "joe@nethermind.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 16 days ago\n12. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=6a6cc30f15fb9b69241a86bcd853d54676a5190b",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:owen.simonin@meria.com",
+                                "text": "owen.simonin@meria.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 16 days ago\n13. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=8da12aaa0aee5108a1c872689f458379f4ba45b1",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:kinga.bosse@mpch.com",
+                                "text": "kinga.bosse@mpch.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 16 days ago\n14. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=eb8f90407cbb1190b7112c693a3c1fad9938496b",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:jon.knipper@republic.com",
+                                "text": "jon.knipper@republic.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 16 days ago\n15. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=2995b115c21e650bf826118b53ab08bec70d03ad",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:khaled@round13.com",
+                                "text": "khaled@round13.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 16 days ago\n16. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=241c498f4356e91c8eb09e6c911afaf6b42eea23",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:khaled@round13.com",
+                                "text": "khaled@round13.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 16 days ago\n17. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=1e666404ac6fb93193c597134955623d03425c9b",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:khaled@round13.com",
+                                "text": "khaled@round13.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 14 days ago\n18. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=b321abf6cb3af6cd4ced1f214b580670e7f35b13",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:khaled@round13.com",
+                                "text": "khaled@round13.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 14 days ago\n19. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=62121a674efbad2d6de00d4428fa4156f9f671aa",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:hatcher@chainsafe.io",
+                                "text": "hatcher@chainsafe.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 14 days ago\n20. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=d70f4bbf3f39a97985218b55f63ab4763c36ab36",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:owen.simonin@meria.com",
+                                "text": "owen.simonin@meria.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 14 days ago"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "21. <https:\/\/app.hellosign.com\/home\/manage?guid=0aff5797837e1df7ac73cd3bcd1b5a86113832a2|CBTC Early Bird Holder Credential> sent to <mailto:lionel@trakx.io|lionel@trakx.io> 7 days ago\n22. <https:\/\/app.hellosign.com\/home\/manage?guid=c78d787c2839f8eb9ae21f2bcccde3f7fca72394|CBTC Early Bird Minter Credential> sent to <mailto:lionel@trakx.io|lionel@trakx.io> 6 days ago\n23. <https:\/\/app.hellosign.com\/home\/manage?guid=93e3c5c991cd857803e2a1e17404d7bb2b703e58|CBTC Early Bird Holder Credential> sent to <mailto:brandon@blacksand.xyz|brandon@blacksand.xyz> 4 days ago\n24. <https:\/\/app.hellosign.com\/home\/manage?guid=d07f2df92c3530c1619d6281582dd65c9aa1e5c5|CBTC Early Bird Minter Credential> sent to <mailto:brandon@blacksand.xyz|brandon@blacksand.xyz> 4 days ago\n25. <https:\/\/app.hellosign.com\/home\/manage?guid=b1e6747c6bcb4f254284d434d053ba2b06f83607|CBTC Early Bird Holder Credential> sent to <mailto:daniel.schrader@finoa.io|daniel.schrader@finoa.io> 3 days ago\n26. <https:\/\/app.hellosign.com\/home\/manage?guid=5b3ad866546d112e84ef9e2d1b3251257b387b6c|CBTC Early Bird Minter Credential> sent to <mailto:daniel.schrader@finoa.io|daniel.schrader@finoa.io> 3 days ago\n&gt;&gt; <https:\/\/app.hellosign.com\/home\/manage|Manage Documents On HelloSign>",
+        "type": "message",
+        "ts": "1754328283.412949",
+        "bot_id": "B095UTUK0UW",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Diu3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "21. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=0aff5797837e1df7ac73cd3bcd1b5a86113832a2",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:lionel@trakx.io",
+                                "text": "lionel@trakx.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 7 days ago\n22. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=c78d787c2839f8eb9ae21f2bcccde3f7fca72394",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:lionel@trakx.io",
+                                "text": "lionel@trakx.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 6 days ago\n23. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=93e3c5c991cd857803e2a1e17404d7bb2b703e58",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:brandon@blacksand.xyz",
+                                "text": "brandon@blacksand.xyz"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 4 days ago\n24. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=d07f2df92c3530c1619d6281582dd65c9aa1e5c5",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:brandon@blacksand.xyz",
+                                "text": "brandon@blacksand.xyz"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 4 days ago\n25. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=b1e6747c6bcb4f254284d434d053ba2b06f83607",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:daniel.schrader@finoa.io",
+                                "text": "daniel.schrader@finoa.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 3 days ago\n26. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=5b3ad866546d112e84ef9e2d1b3251257b387b6c",
+                                "text": "CBTC Early Bird Minter Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " sent to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:daniel.schrader@finoa.io",
+                                "text": "daniel.schrader@finoa.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 3 days ago"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "> "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage",
+                                "text": "Manage Documents On HelloSign"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1754335674.718209",
+        "client_msg_id": "2b4fc657-6ed6-49c0-9e7a-74f8fed48d52",
+        "text": "Hi <@U088UV6MKFE> <@U093Q4FPEJG>!\n\nLooks like a customer accidentally sent 120k + 200k to this addy:\n<https:\/\/www.cantonscan.com\/party\/send-cantonwallet%3A%3A1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2>\n\nCould you transfer 200k over to this? <https:\/\/www.cantonscan.com\/party\/send-cantonwallet-minter%3A%3A1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754335674.718209",
+        "reply_count": 16,
+        "reply_users_count": 2,
+        "latest_reply": "1754392337.233399",
+        "reply_users": [
+            "U05FZBDQ4RJ",
+            "U093Q4FPEJG"
+        ],
+        "replies": [
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1754335694.836809"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754335865.964729"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754339669.944649"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1754339813.381189"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754339845.811579"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1754339869.143289"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754340568.216289"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754371481.342229"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1754391244.192529"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1754391347.090049"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754391969.056769"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1754392034.894929"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1754392062.529469"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1754392075.694999"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754392205.834439"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754392337.233399"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1754392363.368582",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mSEDT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U093Q4FPEJG"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!\n\nLooks like a customer accidentally sent 120k + 200k to this addy:\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.cantonscan.com\/party\/send-cantonwallet%3A%3A1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nCould you transfer 200k over to this? "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.cantonscan.com\/party\/send-cantonwallet-minter%3A%3A1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1754335694.836809",
+        "client_msg_id": "66c87089-acd9-4fcc-8a88-f9db2d9e9a61",
+        "text": "And if you give us a way to make transfers ourselves, we won't bother you in the future :slightly_smiling_face:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754335674.718209",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GVkeq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And if you give us a way to make transfers ourselves, we won't bother you in the future "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754335865.964729",
+        "client_msg_id": "0cc2ea8f-1b5c-4c74-8790-d840fa213abd",
+        "text": "I will look into this tomorrow morning.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754335674.718209",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yy\/1i",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I will look into this tomorrow morning."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U05FZBDQ4RJ"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754339669.944649",
+        "client_msg_id": "a8d718a1-e002-4e3c-9776-c54485db2371",
+        "text": "<@U05FZBDQ4RJ> I could get the username\/password of the send-cantonwallet from the json list, but I don't find them for the minter account",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754335674.718209",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VT4aN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U05FZBDQ4RJ"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I could get the username\/password of the send-cantonwallet from the json list, but I don't find them for the minter account"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1754339813.381189",
+        "client_msg_id": "8954F414-1B00-4F12-B2C2-FDAE6D19C25D",
+        "text": "Sorry, not sure what that means?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754335674.718209",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NQ5Sd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sorry, not sure what that means?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754339845.811579",
+        "client_msg_id": "d25bd8f8-9cf5-40a1-a3f2-75e861d23123",
+        "text": "Who created the the accounts for send-cantonwallet?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754335674.718209",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ENdcW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Who created the the accounts for send-cantonwallet?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1754339869.143289",
+        "client_msg_id": "053A9D4E-6D2D-4FC4-9100-AF29B6CB20C3",
+        "text": "I’m not sure",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754335674.718209",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9dzop",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I’m not sure"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754340568.216289",
+        "client_msg_id": "d6bca284-1948-45c1-8ae2-024d48899eaa",
+        "text": "Okay, I will send it tomorrow.\n\nI already sent like 2 CC to the minter account, but the cantonscan did NOT updated yet. I sent 2 CC to validate whether it sent the amount correctly. I could login into the send-cantonwallet's wallet, and I saw the balance and the transaction as well, but I couldn't login into the send-cantonwallet-minter wallet because I don't have the username\/password. Since I couldn't login I do NOT see the balance. The cantonscan amount isn't updated yet. So I can't validate that the send-cantonwallet-minter get that 2 CC. Tomorrow morning when I wake up, hopefully I will see the updated amount on cantonscan which validate the 2 CC transaction so I can send the rest of the 200k.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754335674.718209",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4Wu3S",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Okay, I will send it tomorrow.\n\nI already sent like 2 CC to the minter account, but the cantonscan did NOT updated yet. I sent 2 CC to validate whether it sent the amount correctly. I could login into the send-cantonwallet's wallet, and I saw the balance and the transaction as well, but I couldn't login into the send-cantonwallet-minter wallet because I don't have the username\/password. Since I couldn't login I do NOT see the balance. The cantonscan amount isn't updated yet. So I can't validate that the send-cantonwallet-minter get that 2 CC. Tomorrow morning when I wake up, hopefully I will see the updated amount on cantonscan which validate the 2 CC transaction so I can send the rest of the 200k."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "Akos's document <https:\/\/app.hellosign.com\/home\/manage?guid=50aadb566ebdf59f4e1faf1d98ce0ec11da95822|CBTC Early Bird Holder Credential> was just signed by <mailto:pathrock@pathrocknetwork.org|pathrock@pathrocknetwork.org>!",
+        "type": "message",
+        "ts": "1754341062.582239",
+        "bot_id": "B095UTUK0UW",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EOx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Akos's document "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/app.hellosign.com\/home\/manage?guid=50aadb566ebdf59f4e1faf1d98ce0ec11da95822",
+                                "text": "CBTC Early Bird Holder Credential"
+                            },
+                            {
+                                "type": "text",
+                                "text": " was just signed by "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:pathrock@pathrocknetwork.org",
+                                "text": "pathrock@pathrocknetwork.org"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "Tokens moved out.",
+        "files": [
+            {
+                "id": "F098WK3LJBF",
+                "created": 1754371464,
+                "timestamp": 1754371464,
+                "name": "Screenshot From 2025-08-05 07-23-51.png",
+                "title": "Screenshot From 2025-08-05 07-23-51.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U093Q4FPEJG",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 103161,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098WK3LJBF\/screenshot_from_2025-08-05_07-23-51.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F098WK3LJBF\/download\/screenshot_from_2025-08-05_07-23-51.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098WK3LJBF-f9f9ea64f9\/screenshot_from_2025-08-05_07-23-51_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098WK3LJBF-f9f9ea64f9\/screenshot_from_2025-08-05_07-23-51_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098WK3LJBF-f9f9ea64f9\/screenshot_from_2025-08-05_07-23-51_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 168,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098WK3LJBF-f9f9ea64f9\/screenshot_from_2025-08-05_07-23-51_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 223,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098WK3LJBF-f9f9ea64f9\/screenshot_from_2025-08-05_07-23-51_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098WK3LJBF-f9f9ea64f9\/screenshot_from_2025-08-05_07-23-51_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 335,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098WK3LJBF-f9f9ea64f9\/screenshot_from_2025-08-05_07-23-51_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 372,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098WK3LJBF-f9f9ea64f9\/screenshot_from_2025-08-05_07-23-51_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 447,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F098WK3LJBF-f9f9ea64f9\/screenshot_from_2025-08-05_07-23-51_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 477,
+                "original_w": 1551,
+                "original_h": 722,
+                "thumb_tiny": "AwAXADCgAM85\/ClIHbNFLk4xnigBtHNOAz\/+ugKT0x1xycUAJk0hJPWlooAWikooAKVsbjjpnikooAWkoooA\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F098WK3LJBF\/screenshot_from_2025-08-05_07-23-51.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F098WK3LJBF-3884547b59",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U093Q4FPEJG",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1qnJE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Tokens moved out."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1754371481.342229",
+        "client_msg_id": "d4dad5c4-1432-4903-9a28-c35aa7ae167a",
+        "thread_ts": "1754335674.718209",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754374243.009209",
+        "client_msg_id": "a4bd3be0-a71e-44ca-aabc-4ce0e9e51a49",
+        "text": "Question about the canton-billing amount calculation. We do the transfers in every 10 min and we calculate the amount what we charge in the following way:\n\n`fee\/min * minutes since last transaction * 20` where the 20 is the USD\/CC converstion. If the client never had a transaction before we set the `minutes since last transaction` to 10 by default as a \"first transaction\".\n\nBUT, If the client just run out of CC tokens we can't charge the wallet for a while. This keep increasing the `minutes since last transaction`, so once the client send funds again we will do a huge charge. For example in average we send ~1.12 CC tokens per transfer, but there are clients right now where the system tries to send 800+ CC tokens because based on the calculation that is the amount since the last transaction. Once that client send funds to the wallet, the system will do the 800 CC token charge.\n\nProposal: If the `minutes since last transaction` is higher than 60 minutes we just have to set it to 60 minutes as a maximum value what we send in a transfer. What do you think?\n<@U05FZBDQ4RJ>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754374243.009209",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1754379044.530519",
+        "reply_users": [
+            "U05FZBDQ4RJ",
+            "U093Q4FPEJG"
+        ],
+        "replies": [
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1754378569.906219"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754379044.530519"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1754379044.530519",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MVsbh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Question about the canton-billing amount calculation. We do the transfers in every 10 min and we calculate the amount what we charge in the following way:\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "fee\/min * minutes since last transaction * 20",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " where the 20 is the USD\/CC converstion. If the client never had a transaction before we set the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "minutes since last transaction",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " to 10 by default as a \"first transaction\".\n\nBUT, If the client just run out of CC tokens we can't charge the wallet for a while. This keep increasing the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "minutes since last transaction",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", so once the client send funds again we will do a huge charge. For example in average we send ~1.12 CC tokens per transfer, but there are clients right now where the system tries to send 800+ CC tokens because based on the calculation that is the amount since the last transaction. Once that client send funds to the wallet, the system will do the 800 CC token charge.\n\nProposal: If the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "minutes since last transaction",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is higher than 60 minutes we just have to set it to 60 minutes as a maximum value what we send in a transfer. What do you think?\n"
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FZBDQ4RJ"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

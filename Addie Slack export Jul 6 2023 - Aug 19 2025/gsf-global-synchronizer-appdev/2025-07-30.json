@@ -1,0 +1,941 @@
+[
+    {
+        "user": "U05GE9B1K3P",
+        "type": "message",
+        "ts": "1753868163.152519",
+        "client_msg_id": "0cd98f7a-9372-4589-880c-537c7d6ced03",
+        "text": "Hey. QQ re developing against ledger API. Assuming i'm a dev. Do I need to act with validator operator partyID creds to interact with ledger API or would a non-operator partyID creds suffice ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05G287EAP4",
+        "source_team": "T05G287EAP4",
+        "user_profile": {
+            "avatar_hash": "gc94e77d7c98",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/c94e77d7c983bb9fe8090ded05f3ea5f.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "Kamil",
+            "real_name": "Kamil",
+            "display_name": "Kamil",
+            "team": "T05G287EAP4",
+            "name": "kamil",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753868163.152519",
+        "reply_count": 3,
+        "reply_users_count": 2,
+        "latest_reply": "1753873788.306419",
+        "reply_users": [
+            "UEHLS0JUB",
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1753869436.079849"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753873737.569839"
+            },
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1753873788.306419"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WC3nc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey. QQ re developing against ledger API. Assuming i'm a dev. Do I need to act with validator operator partyID creds to interact with ledger API or would a non-operator partyID creds suffice ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1753869436.079849",
+        "client_msg_id": "f62e004a-f088-479f-92d1-ab009f4175e0",
+        "text": "depends on which endpoint you're using. Some require admin claims, some don't see <https:\/\/docs.daml.com\/app-dev\/authorization.html#access-tokens-and-rights> for an overview",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753868163.152519",
+        "parent_user_id": "U05GE9B1K3P",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "04B6o",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "depends on which endpoint you're using. Some require admin claims, some don't see "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.daml.com\/app-dev\/authorization.html#access-tokens-and-rights"
+                            },
+                            {
+                                "type": "text",
+                                "text": " for an overview"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "gratitude-thank-you",
+                "users": [
+                    "U05GE9B1K3P"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753873737.569839",
+        "client_msg_id": "b617b7be-e761-4a7b-bb62-4933e8e1dbca",
+        "text": "Related question to this:\nSetting primaryParty for a user means readAs and actAs rights implicitly as well? Or do they always have to be set explicitly?\nAnd I guess also related: setting actAs rights implicitly means readAs rights as well?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753868163.152519",
+        "parent_user_id": "U05GE9B1K3P",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ylH87",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Related question to this:\nSetting primaryParty for a user means readAs and actAs rights implicitly as well? Or do they always have to be set explicitly?\nAnd I guess also related: setting actAs rights implicitly means readAs rights as well?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1753873788.306419",
+        "client_msg_id": "ddd9b727-bc29-47aa-93a7-197929edfc80",
+        "text": "primaryParty doesn't imply anything, it doesn't grant any rights but it is often used by tooling to interpret which party the user intends to use. E.g., the splice wallet UI always shows you the wallet for that party.\nactAs does imply readAs",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753868163.152519",
+        "parent_user_id": "U05GE9B1K3P",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CFzmr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "primaryParty doesn't imply anything, it doesn't grant any rights but it is often used by tooling to interpret which party the user intends to use. E.g., the splice wallet UI always shows you the wallet for that party.\nactAs does imply readAs"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            },
+            {
+                "name": "gratitude-thank-you",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08FCND9P1Q",
+        "type": "message",
+        "ts": "1753900459.204819",
+        "client_msg_id": "99fd59c5-c4d6-4699-9245-a772dbfaa10b",
+        "text": "re <https:\/\/docs.sync.global\/release_notes.html> Splice 4.5 changes, where a new optional (but actually required?) `expectedDso` argument has been added to several core `Amulet` choices, including `ComputeFees` , `Transfer`, `BuyMemberTraffic` : when is this going to start being enforced? It's already hitting mainnet, but it's not clear how and when we are migrating to this new API requirement.",
+        "team": "T05FWTX7PMG",
+        "user_team": "EJ0K0BDC0",
+        "source_team": "EJ0K0BDC0",
+        "user_profile": {
+            "avatar_hash": "da13c9f3e103",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-20\/9076489873526_da13c9f3e103ebf65adf_72.jpg",
+            "first_name": "Michael",
+            "real_name": "Michael Gaare",
+            "display_name": "mgaare",
+            "team": "EJ0K0BDC0",
+            "name": "mgaare",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753900459.204819",
+        "reply_count": 12,
+        "reply_users_count": 3,
+        "latest_reply": "1753967033.297579",
+        "reply_users": [
+            "U03HMUTQ5F0",
+            "U08FCND9P1Q",
+            "U0PQ8E25D"
+        ],
+        "replies": [
+            {
+                "user": "U03HMUTQ5F0",
+                "ts": "1753910148.929099"
+            },
+            {
+                "user": "U03HMUTQ5F0",
+                "ts": "1753910250.118929"
+            },
+            {
+                "user": "U08FCND9P1Q",
+                "ts": "1753916076.350619"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1753939393.382559"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1753939558.937849"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1753940765.082569"
+            },
+            {
+                "user": "U08FCND9P1Q",
+                "ts": "1753944993.481779"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1753945513.356619"
+            },
+            {
+                "user": "U08FCND9P1Q",
+                "ts": "1753945640.518979"
+            },
+            {
+                "user": "U08FCND9P1Q",
+                "ts": "1753945665.851579"
+            },
+            {
+                "user": "U0PQ8E25D",
+                "ts": "1753945686.206449"
+            },
+            {
+                "user": "U03HMUTQ5F0",
+                "ts": "1753967033.297579"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pPDJX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "re "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.sync.global\/release_notes.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Splice 4.5 changes, where a new optional (but actually required?) "
+                            },
+                            {
+                                "type": "text",
+                                "text": "expectedDso",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " argument has been added to several core "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Amulet",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " choices, including "
+                            },
+                            {
+                                "type": "text",
+                                "text": "ComputeFees",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " , "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Transfer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", "
+                            },
+                            {
+                                "type": "text",
+                                "text": "BuyMemberTraffic",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " : when is this going to start being enforced? It's already hitting mainnet, but it's not clear how and when we are migrating to this new API requirement."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01VDC391QS",
+        "type": "message",
+        "ts": "1753908295.163859",
+        "client_msg_id": "1eeedcb9-4b08-4ac5-9f99-febe8cdafe73",
+        "text": "Repost some questions about the Transfer Preapproval (with answers) from another channel:\n\nIn the transfer_preapproval contract, there is an item `expiresAt` .\n1. What happens when this transfer_preapproval expires?\n2. Will it be automatically renewed or one needs to create a new one?\n3. How is the expired contract, archived or will it be there forever? If not archived, I assume the validator-api would return the one still not expired.\nAnswers (Thanks <@U0PQ8E25D>)\nOn 1,\non expiry the deadlines checks on the choices change: <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818b49fdb\/daml\/splice-amulet\/daml\/Splice\/AmuletRules.daml#L1470>\nNo more _Send, but _Expire becomes available\n\nOn 2,\nRenewal happens automatically if the pre-approval lists the validator operator party as the provider: <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/apps\/validator\/src\/main\/scala[%E2%80%A6]lice\/validator\/automation\/RenewTransferPreapprovalTrigger.scala|https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/apps\/validator\/src\/main\/scala[…]lice\/validator\/automation\/RenewTransferPreapprovalTrigger.scala>\nThis applies to external parties as well.\n\nOn 3,\n<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818b49fdb\/apps\/sv\/src\/main\/scala\/org\/lfdecentralizedtrust\/splice\/sv\/automation\/delegatebased\/ExpireTransferPreapprovalsTrigger.scala#L53|https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818[…]utomation\/delegatebased\/ExpireTransferPreapprovalsTrigger.scala> running on the SV app takes care of calling the expiry choice.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4bb76c154e8c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-28\/2014447818772_4bb76c154e8c3b7720ce_72.jpg",
+            "first_name": "kc.tam",
+            "real_name": "kc.tam",
+            "display_name": "kc",
+            "team": "T03T53E10",
+            "name": "kc.tam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0aeqQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Repost some questions about the Transfer Preapproval (with answers) from another channel:\n\nIn the transfer_preapproval contract, there is an item "
+                            },
+                            {
+                                "type": "text",
+                                "text": "expiresAt",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " .\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "What happens when this transfer_preapproval expires?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Will it be automatically renewed or one needs to create a new one?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "How is the expired contract, archived or will it be there forever? If not archived, I assume the validator-api would return the one still not expired."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nAnswers (Thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0PQ8E25D"
+                            },
+                            {
+                                "type": "text",
+                                "text": ")\nOn 1,\non expiry the deadlines checks on the choices change: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818b49fdb\/daml\/splice-amulet\/daml\/Splice\/AmuletRules.daml#L1470"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nNo more _Send, but _Expire becomes available\n\nOn 2,\nRenewal happens automatically if the pre-approval lists the validator operator party as the provider: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/apps\/validator\/src\/main\/scala[%E2%80%A6]lice\/validator\/automation\/RenewTransferPreapprovalTrigger.scala",
+                                "text": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/apps\/validator\/src\/main\/scala[…]lice\/validator\/automation\/RenewTransferPreapprovalTrigger.scala"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nThis applies to external parties as well.\n\nOn 3,\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818b49fdb\/apps\/sv\/src\/main\/scala\/org\/lfdecentralizedtrust\/splice\/sv\/automation\/delegatebased\/ExpireTransferPreapprovalsTrigger.scala#L53",
+                                "text": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/0a0bd500df73dbc90874ac394ef14f5818[…]utomation\/delegatebased\/ExpireTransferPreapprovalsTrigger.scala"
+                            },
+                            {
+                                "type": "text",
+                                "text": " running on the SV app takes care of calling the expiry choice."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1753910148.929099",
+        "client_msg_id": "d11ec9b4-12b6-49f8-aa93-0002769b378a",
+        "text": "<@U08FCND9P1Q> Thanks for calling this out.\n\nI'll ask the SVs to decide when they're going to vote the relevant dar files into effect, and get those dates (DevNet, TestNet and MainNet) added to the <https:\/\/docs.google.com\/document\/d\/1QhLL5bL0u8temBL86y957VbWDtZJhH9udH-_C7nBlvc\/edit?tab=t.0#heading=h.ripdn5ydglli|long term schedule>. You can also ask Cumberland's own SV team to propose a vote to put these into effect.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "e46cf2f361cd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-06-02\/3638231569136_e46cf2f361cda890c6d5_72.jpg",
+            "first_name": "Wayne",
+            "real_name": "Wayne Collier",
+            "display_name": "Wayne Collier",
+            "team": "T03T53E10",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753900459.204819",
+        "parent_user_id": "U08FCND9P1Q",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2O\/zm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U08FCND9P1Q"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Thanks for calling this out.\n\nI'll ask the SVs to decide when they're going to vote the relevant dar files into effect, and get those dates (DevNet, TestNet and MainNet) added to the "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.google.com\/document\/d\/1QhLL5bL0u8temBL86y957VbWDtZJhH9udH-_C7nBlvc\/edit?tab=t.0#heading=h.ripdn5ydglli",
+                                "text": "long term schedule"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can also ask Cumberland's own SV team to propose a vote to put these into effect."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03HMUTQ5F0",
+        "type": "message",
+        "ts": "1753910250.118929",
+        "edited": {
+            "user": "U03HMUTQ5F0",
+            "ts": "1753910259.000000"
+        },
+        "client_msg_id": "afd75846-e765-44f8-a098-992e8530bad7",
+        "text": "(It's actually possible those have already taken effect; I'll confirm asap)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "e46cf2f361cd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-06-02\/3638231569136_e46cf2f361cda890c6d5_72.jpg",
+            "first_name": "Wayne",
+            "real_name": "Wayne Collier",
+            "display_name": "Wayne Collier",
+            "team": "T03T53E10",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753900459.204819",
+        "parent_user_id": "U08FCND9P1Q",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cfgUs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "(It's actually possible those have already taken effect; I'll confirm asap)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08FCND9P1Q",
+        "type": "message",
+        "ts": "1753916076.350619",
+        "client_msg_id": "43A2A449-629F-4A08-8D41-CB4D7BC5BA10",
+        "text": "<@U03HMUTQ5F0> If I understand this correctly, this is a breaking change for anyone who calls those choices from their own daml, and would break our app in that case. If that’s true then I believe we have to update our own smart contracts and distribute a DAR to all our users in some time window before these changes are activated. Is that right?",
+        "team": "T05FWTX7PMG",
+        "user_team": "EJ0K0BDC0",
+        "source_team": "EJ0K0BDC0",
+        "user_profile": {
+            "avatar_hash": "da13c9f3e103",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-20\/9076489873526_da13c9f3e103ebf65adf_72.jpg",
+            "first_name": "Michael",
+            "real_name": "Michael Gaare",
+            "display_name": "mgaare",
+            "team": "EJ0K0BDC0",
+            "name": "mgaare",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753900459.204819",
+        "parent_user_id": "U08FCND9P1Q",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "prQXK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " If I understand this correctly"
+                            },
+                            {
+                                "type": "text",
+                                "text": ","
+                            },
+                            {
+                                "type": "text",
+                                "text": " this is a breaking change for anyone who calls those choices from their own daml, and would break our app in that case"
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            },
+                            {
+                                "type": "text",
+                                "text": " If "
+                            },
+                            {
+                                "type": "text",
+                                "text": "that’s"
+                            },
+                            {
+                                "type": "text",
+                                "text": " true then I believe we have to update our own smart contracts and distribute a DAR to all our users in some time window before these changes are activated"
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            },
+                            {
+                                "type": "text",
+                                "text": " Is that right"
+                            },
+                            {
+                                "type": "text",
+                                "text": "?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1753939393.382559",
+        "client_msg_id": "7b045ea4-0ae6-4f19-927a-4c6101c6c764",
+        "text": "<@U08FCND9P1Q>: yes in case you have an app on your own that statically links to the `splice-` .dars you will need to update these .dars.\n\nHave you considered switching from the static links against splice templates to dynamic ones based on the token standard interfaces? These links get resolved at runtime, and thus make consuming an upgrade to `splice-` .dars in most cases a no-op.\n\n Out of curiosity: what kind of workflows does your app manage? What choices does it call?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753900459.204819",
+        "parent_user_id": "U08FCND9P1Q",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iBa5z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U08FCND9P1Q"
+                            },
+                            {
+                                "type": "text",
+                                "text": ": yes in case you have an app on your own that statically links to the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "splice-",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " .dars you will need to update these .dars.\n\nHave you considered switching from the static links against splice templates to dynamic ones based on the token standard interfaces? These links get resolved at runtime, and thus make consuming an upgrade to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "splice-",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " .dars in most cases a no-op.\n\n Out of curiosity: what kind of workflows does your app manage? What choices does it call?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1753939558.937849",
+        "client_msg_id": "3e5cdbd9-bcb7-44d3-8da4-36a841cd0a55",
+        "text": "(That said: right now SVs do not unvet the old .dars that you link against. So even if these models are voted in your app does not break. You should be able to test that on a <https:\/\/docs.dev.sync.global\/app_dev\/testing\/localnet.html|LocalNet deployment yourself>; and observe it on DevNet before this change hits MainNet.\n\nIt is still important to upgrade eventually; and I expect that in the future SVs will become more strict wrt unvetting the older versions of the splice .dars.)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753900459.204819",
+        "parent_user_id": "U08FCND9P1Q",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZpPS7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "(That said: right now SVs do not unvet the old .dars that you link against. So even if these models are voted in your app does not break. You should be able to test that on a "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/app_dev\/testing\/localnet.html",
+                                "text": "LocalNet deployment yourself"
+                            },
+                            {
+                                "type": "text",
+                                "text": "; and observe it on DevNet before this change hits MainNet.\n\nIt is still important to upgrade eventually; and I expect that in the future SVs will become more strict wrt unvetting the older versions of the splice .dars.)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0PQ8E25D",
+        "type": "message",
+        "ts": "1753940765.082569",
+        "edited": {
+            "user": "U0PQ8E25D",
+            "ts": "1753940775.000000"
+        },
+        "client_msg_id": "1a9ad0a1-32f5-45ce-81ff-b7938c8d9e8c",
+        "text": "Ah I guess this is the GasStatation\/3trade\/Denex app, correct? Yeah, for that one the token standard interfaces are not yet powerful enough. What seems missing is something like multi-use allocation to replace the `LockedAmulet`s.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c6facf15dae2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-25\/1906342699428_c6facf15dae249470e71_72.jpg",
+            "first_name": "Simon",
+            "real_name": "Simon Meier",
+            "display_name": "simon",
+            "team": "T03T53E10",
+            "name": "simon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753900459.204819",
+        "parent_user_id": "U08FCND9P1Q",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5ynFH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ah I guess this is the GasStatation\/3trade\/Denex app, correct? Yeah, for that one the token standard interfaces are not yet powerful enough. What seems missing is something like multi-use allocation to replace the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "LockedAmulet",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "s."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08FCND9P1Q",
+        "type": "message",
+        "ts": "1753944993.481779",
+        "client_msg_id": "1B221D06-AEA0-46C3-80E1-6D76A5B9F7A5",
+        "text": "Yes, that’s correct",
+        "team": "T05FWTX7PMG",
+        "user_team": "EJ0K0BDC0",
+        "source_team": "EJ0K0BDC0",
+        "user_profile": {
+            "avatar_hash": "da13c9f3e103",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-20\/9076489873526_da13c9f3e103ebf65adf_72.jpg",
+            "first_name": "Michael",
+            "real_name": "Michael Gaare",
+            "display_name": "mgaare",
+            "team": "EJ0K0BDC0",
+            "name": "mgaare",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753900459.204819",
+        "parent_user_id": "U08FCND9P1Q",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "G1rsV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, that’s correct"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,997 @@
+[
+    {
+        "user": "U02T94QS4U8",
+        "type": "message",
+        "ts": "1753048548.932149",
+        "client_msg_id": "b9456902-5518-4142-9eff-81040c9042f7",
+        "text": "Hi Allen, I just confirmed your issue, and I am also unable to access that manifest:\n```curl -I <https:\/\/digitalasset-canton-network-utility-docker.jfrog.io\/v2\/frontend\/manifests\/0.7.4>\nHTTP\/1.1 401\nDate: Sun, 20 Jul 2025 21:31:29 GMT\nContent-Type: application\/json;charset=ISO-8859-1\nContent-Length: 87\nConnection: keep-alive\nDocker-Distribution-Api-Version: registry\/2.0\nWWW-Authenticate: Bearer realm=\"<https:\/\/digitalasset-canton-network-utility-docker.jfrog.io\/artifactory\/api\/docker\/canton-network-utility-docker\/v2\/token>\",service=\"<http:\/\/digitalasset-canton-network-utility-docker.jfrog.io|digitalasset-canton-network-utility-docker.jfrog.io>\",scope=\"repository:frontend:pull\"\nStrict-Transport-Security: max-age=31536000; includeSubDomains```\nI am assessing if this is a simple matter of adding a further repository to a personal Docker configuration, or something else.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "a99ae484969c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-01-04\/2896756929638_a99ae484969cde100fe0_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Minton",
+            "display_name": "Ben",
+            "team": "T03T53E10",
+            "name": "ben.minton",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752872629.680669",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RNg\/d",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Allen, I just confirmed your issue, and I am also unable to access that manifest:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl -I "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/digitalasset-canton-network-utility-docker.jfrog.io\/v2\/frontend\/manifests\/0.7.4"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nHTTP\/1.1 401\nDate: Sun, 20 Jul 2025 21:31:29 GMT\nContent-Type: application\/json;charset=ISO-8859-1\nContent-Length: 87\nConnection: keep-alive\nDocker-Distribution-Api-Version: registry\/2.0\nWWW-Authenticate: Bearer realm=\""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/digitalasset-canton-network-utility-docker.jfrog.io\/artifactory\/api\/docker\/canton-network-utility-docker\/v2\/token"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\",service=\"digitalasset-canton-network-utility-docker.jfrog.io\",scope=\"repository:frontend:pull\"\nStrict-Transport-Security: max-age=31536000; includeSubDomains"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I am assessing if this is a simple matter of adding a further repository to a personal Docker configuration, or something else."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U053W8T4G4U"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U053W8T4G4U",
+        "type": "message",
+        "ts": "1753048819.970529",
+        "client_msg_id": "068791D0-B804-45E5-84B9-60CE93D29DCF",
+        "text": "Hi <@U02T94QS4U8> Appreciate the response. Looping in <@UE6GFQQ20> and <@U08TDHL1E0N> - let us know if there are any needs our end ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "5ebbc5392782",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-18\/5128315541605_5ebbc5392782eddbde84_72.png",
+            "first_name": "Allen",
+            "real_name": "Allen Fok",
+            "display_name": "",
+            "team": "T4WUR0THD",
+            "name": "afok",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752872629.680669",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Jwm+0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02T94QS4U8"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Appreciate the response. Looping in "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UE6GFQQ20"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U08TDHL1E0N"
+                            },
+                            {
+                                "type": "text",
+                                "text": " - let us know if there are any needs our end "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1::skin-tone-2",
+                "users": [
+                    "U02T94QS4U8"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U02T94QS4U8",
+        "type": "message",
+        "ts": "1753049338.925949",
+        "edited": {
+            "user": "U02T94QS4U8",
+            "ts": "1753050161.000000"
+        },
+        "client_msg_id": "16954de6-3ab2-4546-9635-198c4bc8be19",
+        "text": "<@U053W8T4G4U> Try this and let me know the result:\n\n*# Ensure you are logged into Docker etc as per usual*\n$ docker pull <http:\/\/digitalasset-docker.jfrog.io\/frontend:0.7.4|digitalasset-docker.jfrog.io\/frontend:0.7.4>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "a99ae484969c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-01-04\/2896756929638_a99ae484969cde100fe0_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Minton",
+            "display_name": "Ben",
+            "team": "T03T53E10",
+            "name": "ben.minton",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752872629.680669",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hrgJN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U053W8T4G4U"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Try this and let me know the result:\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "# Ensure you are logged into Docker etc as per usual",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n$ docker pull "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/digitalasset-docker.jfrog.io\/frontend:0.7.4",
+                                "text": "digitalasset-docker.jfrog.io\/frontend:0.7.4"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02T94QS4U8",
+        "type": "message",
+        "ts": "1753049585.986179",
+        "client_msg_id": "66fda556-b6fa-41c2-83c4-69907e0f2c39",
+        "text": "*# Next delete that Image*\n$ docker image rm <http:\/\/digitalasset-docker.jfrog.io\/frontend:0.7.4>\n\n*# Grab different repo Image*\n$ docker pull <http:\/\/digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4|digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4>\n0.7.4: Pulling from frontend\n37d4f09ce8c1: Pull complete\n00c092e678e1: Pull complete\n50f0a3105ace: Pull complete\na0716d83e062: Pull complete\nca3e09f230d0: Pull complete\na9de1fc016ef: Pull complete\n9f5c4f8e19e5: Pull complete\nb383e4ac5f84: Pull complete\n8ffbc0578cde: Pull complete\n7ae795c89757: Pull complete\nbb205777864f: Pull complete\nDigest: sha256:36e0ee731edbf57b0d575b434186ab6e727bf3e9b276412e28f80ce49ec1c122\nStatus: Downloaded newer image for <http:\/\/digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4|digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4>\n<http:\/\/digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4|digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "a99ae484969c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-01-04\/2896756929638_a99ae484969cde100fe0_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Minton",
+            "display_name": "Ben",
+            "team": "T03T53E10",
+            "name": "ben.minton",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752872629.680669",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BrfhG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "# Next delete that Image",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n$ docker image rm "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/digitalasset-docker.jfrog.io\/frontend:0.7.4"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "# Grab different repo Image",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n$ docker pull "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4",
+                                "text": "digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n0.7.4: Pulling from frontend\n37d4f09ce8c1: Pull complete\n00c092e678e1: Pull complete\n50f0a3105ace: Pull complete\na0716d83e062: Pull complete\nca3e09f230d0: Pull complete\na9de1fc016ef: Pull complete\n9f5c4f8e19e5: Pull complete\nb383e4ac5f84: Pull complete\n8ffbc0578cde: Pull complete\n7ae795c89757: Pull complete\nbb205777864f: Pull complete\nDigest: sha256:36e0ee731edbf57b0d575b434186ab6e727bf3e9b276412e28f80ce49ec1c122\nStatus: Downloaded newer image for "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4",
+                                "text": "digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4",
+                                "text": "digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02T94QS4U8",
+        "type": "message",
+        "ts": "1753051502.610449",
+        "client_msg_id": "270fed12-f9a4-4090-9cb0-a384919a4769",
+        "text": "If neither of those work, then you will need to be onboarded to the DA JFrog platform for access. Let me know and I will help you further.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "a99ae484969c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-01-04\/2896756929638_a99ae484969cde100fe0_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Minton",
+            "display_name": "Ben",
+            "team": "T03T53E10",
+            "name": "ben.minton",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752872629.680669",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FukFc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If neither of those work, then you will need to be onboarded to the DA JFrog platform for access. Let me know and I will help you further."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U053W8T4G4U",
+        "type": "message",
+        "ts": "1753051634.386369",
+        "client_msg_id": "2DCF7C73-B039-4448-86DE-D45F8E4FFAFE",
+        "text": "We will try the above and revert. For contingency, what’s needed to onboard to the DA Jfrog platform ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "5ebbc5392782",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-18\/5128315541605_5ebbc5392782eddbde84_72.png",
+            "first_name": "Allen",
+            "real_name": "Allen Fok",
+            "display_name": "",
+            "team": "T4WUR0THD",
+            "name": "afok",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752872629.680669",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7oyne",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We will try the above and revert. For contingency, "
+                            },
+                            {
+                                "type": "text",
+                                "text": "what’s"
+                            },
+                            {
+                                "type": "text",
+                                "text": " needed to onboard to the DA Jfrog platform "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UE6GFQQ20",
+        "type": "message",
+        "ts": "1753051707.571909",
+        "edited": {
+            "user": "UE6GFQQ20",
+            "ts": "1753051719.000000"
+        },
+        "client_msg_id": "2990DC94-9C3C-4CD3-9F68-199FD7940201",
+        "text": "I’ll try it but I do think we will need to login to the artifactory\/repository first and then do the pull. Which means we will need a login to the repository which we don’t have. ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "gbc010b76fea",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/61bc010b76fea5114ee3321f5276ec4a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "Ajay",
+            "real_name": "Ajay Patel",
+            "display_name": "",
+            "team": "T4WUR0THD",
+            "name": "apatel",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752872629.680669",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ufhGk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I’ll try it but I do think we will need "
+                            },
+                            {
+                                "type": "text",
+                                "text": "to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "login to the artifactory\/repository first and then do the pull. Which means we will need a login to the repository which we don’t have. "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02T94QS4U8",
+        "type": "message",
+        "ts": "1753052195.462269",
+        "client_msg_id": "0c4770b7-e16e-4023-b071-f54cf105607a",
+        "text": "You will need to raise a new case (Email <mailto:da-support@digitalasset.com|da-support@digitalasset.com>) with the following details of *all* parties who require access.\nFirst_Name, Last_Name; Company Email\n\n• Customer Support then contacts an internal party to gain permission to enable your access\n• If they reply Yes, then you make an account on the DA JFrog platform\n• Let us know when that has been done\n• Customer Support then add you to the relevant Access Group(s)\n• You resume the required workflow",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "a99ae484969c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-01-04\/2896756929638_a99ae484969cde100fe0_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Minton",
+            "display_name": "Ben",
+            "team": "T03T53E10",
+            "name": "ben.minton",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752872629.680669",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "l8BTO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You will need to raise a new case (Email "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:da-support@digitalasset.com",
+                                "text": "da-support@digitalasset.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": ") with the following details of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "all",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " parties who require access.\nFirst_Name, Last_Name; Company Email\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Customer Support then contacts an internal party to gain permission to enable your access"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "If they reply Yes, then you make an account on the DA JFrog platform"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Let us know when that has been done"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Customer Support then add you to the relevant Access Group(s)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "You resume the required workflow"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UE6GFQQ20",
+        "type": "message",
+        "ts": "1753060824.167219",
+        "client_msg_id": "fbdca8d7-4b80-45d6-9d18-4fbbbf12a39b",
+        "text": "As I suspected, we do need access to the repository:\n[canton@daycanton02 ~]$ docker pull <http:\/\/digitalasset-docker.jfrog.io\/frontend:0.7.4|digitalasset-docker.jfrog.io\/frontend:0.7.4>\nError response from daemon: Head \"<https:\/\/digitalasset-docker.jfrog.io\/v2\/frontend\/manifests\/0.7.4>\": unknown: Authentication is required\n[canton@daycanton02 ~]$ docker image ls\nREPOSITORY                                                                  TAG       IMAGE ID       CREATED         SIZE\npostgres                                                                    14        91f7cb8c1381   6 weeks ago     426MB\n<http:\/\/gcr.io\/k8s-minikube\/kicbase|gcr.io\/k8s-minikube\/kicbase>                                                 v0.0.47   795ea6a69ce6   8 weeks ago     1.31GB\nhello-world                                                                 latest    74cc54e27dc4   6 months ago    10.1kB\nnginx                                                                       1.27.1    9527c0f683c3   11 months ago   188MB\n<http:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/validator-app|ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/validator-app>        0.4.3     578f52ae5509   45 years ago    964MB\n<http:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/ans-web-ui|ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/ans-web-ui>           0.4.3     5640c361ad13   45 years ago    195MB\n<http:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/wallet-web-ui|ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/wallet-web-ui>        0.4.3     892f9b4df6f2   45 years ago    196MB\n<http:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/canton-participant|ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/canton-participant>   0.4.3     d301aa199b09   45 years ago    801MB\n[canton@daycanton02 ~]$ docker pull <http:\/\/digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4|digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4>\nError response from daemon: Head \"<https:\/\/digitalasset-canton-network-utility-docker.jfrog.io\/v2\/frontend\/manifests\/0.7.4>\": unknown: Authentication is required\n[canton@daycanton02 ~]$",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "gbc010b76fea",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/61bc010b76fea5114ee3321f5276ec4a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "Ajay",
+            "real_name": "Ajay Patel",
+            "display_name": "",
+            "team": "T4WUR0THD",
+            "name": "apatel",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752872629.680669",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bPXsg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "As I suspected, we do need access to the repository:\n[canton@daycanton02 ~]$ docker pull "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/digitalasset-docker.jfrog.io\/frontend:0.7.4",
+                                "text": "digitalasset-docker.jfrog.io\/frontend:0.7.4"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nError response from daemon: Head \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/digitalasset-docker.jfrog.io\/v2\/frontend\/manifests\/0.7.4"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\": unknown: Authentication is required\n[canton@daycanton02 ~]$ docker image ls\nREPOSITORY                                                                  TAG       IMAGE ID       CREATED         SIZE\npostgres                                                                    14        91f7cb8c1381   6 weeks ago     426MB\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/gcr.io\/k8s-minikube\/kicbase",
+                                "text": "gcr.io\/k8s-minikube\/kicbase"
+                            },
+                            {
+                                "type": "text",
+                                "text": "                                                 v0.0.47   795ea6a69ce6   8 weeks ago     1.31GB\nhello-world                                                                 latest    74cc54e27dc4   6 months ago    10.1kB\nnginx                                                                       1.27.1    9527c0f683c3   11 months ago   188MB\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/validator-app",
+                                "text": "ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/validator-app"
+                            },
+                            {
+                                "type": "text",
+                                "text": "        0.4.3     578f52ae5509   45 years ago    964MB\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/ans-web-ui",
+                                "text": "ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/ans-web-ui"
+                            },
+                            {
+                                "type": "text",
+                                "text": "           0.4.3     5640c361ad13   45 years ago    195MB\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/wallet-web-ui",
+                                "text": "ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/wallet-web-ui"
+                            },
+                            {
+                                "type": "text",
+                                "text": "        0.4.3     892f9b4df6f2   45 years ago    196MB\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/canton-participant",
+                                "text": "ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/canton-participant"
+                            },
+                            {
+                                "type": "text",
+                                "text": "   0.4.3     d301aa199b09   45 years ago    801MB\n[canton@daycanton02 ~]$ docker pull "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4",
+                                "text": "digitalasset-canton-network-utility-docker.jfrog.io\/frontend:0.7.4"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nError response from daemon: Head \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/digitalasset-canton-network-utility-docker.jfrog.io\/v2\/frontend\/manifests\/0.7.4"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\": unknown: Authentication is required\n[canton@daycanton02 ~]$"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UE6GFQQ20",
+        "type": "message",
+        "ts": "1753060836.410779",
+        "client_msg_id": "35571403-9f74-48df-a604-bc30723d052b",
+        "text": "I'll submit a case. Thanks for your help.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "gbc010b76fea",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/61bc010b76fea5114ee3321f5276ec4a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "Ajay",
+            "real_name": "Ajay Patel",
+            "display_name": "",
+            "team": "T4WUR0THD",
+            "name": "apatel",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752872629.680669",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LjBSq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'll submit a case. Thanks for your help."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1::skin-tone-2",
+                "users": [
+                    "U02T94QS4U8"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "UE6GFQQ20",
+        "type": "message",
+        "ts": "1753061696.420229",
+        "client_msg_id": "9b384274-4a81-4d23-a00e-e7b5c6dac773",
+        "text": "Sent an email to <mailto:da-support@digitalasset.com|da-support@digitalasset.com> asking for access. Just an FYI, the DA case number is <https:\/\/support.digitalasset.com\/s\/case\/500Pq00000e4y4zIAA|#00009808>.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "gbc010b76fea",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/61bc010b76fea5114ee3321f5276ec4a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "Ajay",
+            "real_name": "Ajay Patel",
+            "display_name": "",
+            "team": "T4WUR0THD",
+            "name": "apatel",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752872629.680669",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fZju+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sent an email to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:da-support@digitalasset.com",
+                                "text": "da-support@digitalasset.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " asking for access. Just an FYI, the DA case number is "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/support.digitalasset.com\/s\/case\/500Pq00000e4y4zIAA",
+                                "text": "#00009808",
+                                "unsafe": true
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02T94QS4U8",
+        "type": "message",
+        "ts": "1753061885.865929",
+        "client_msg_id": "9cc73d15-d438-4d38-85af-a105d5648688",
+        "text": "Thank you, we will get to that within 30 minutes.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "a99ae484969c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-01-04\/2896756929638_a99ae484969cde100fe0_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Minton",
+            "display_name": "Ben",
+            "team": "T03T53E10",
+            "name": "ben.minton",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752872629.680669",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "F6YO8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you, we will get to that within 30 minutes."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "done-stamp",
+                "users": [
+                    "U02T94QS4U8"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "Server timeout errors are still frequently encountered in auto topup",
+        "files": [
+            {
+                "id": "F096824TY23",
+                "created": 1753065011,
+                "timestamp": 1753065011,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U06GRUXKVHB",
+                "user_team": "TBL1G8KHT",
+                "editable": false,
+                "size": 147411,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/TBL1G8KHT-F096824TY23\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/TBL1G8KHT-F096824TY23\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F096824TY23-6dfcdddcb3\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F096824TY23-6dfcdddcb3\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F096824TY23-6dfcdddcb3\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 164,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F096824TY23-6dfcdddcb3\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 219,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F096824TY23-6dfcdddcb3\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F096824TY23-6dfcdddcb3\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 328,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F096824TY23-6dfcdddcb3\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 365,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F096824TY23-6dfcdddcb3\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 438,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F096824TY23-6dfcdddcb3\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 467,
+                "original_w": 1655,
+                "original_h": 755,
+                "thumb_tiny": "AwAWADCgA2Me\/Sgk4zkUbdzfKrYPQdTSBWOMKeenFFhCnIOfl\/AUm4+35UvlnPKt0yflpMDByTn0xRYBM\/5xQTn0\/KkooGPyCcsxyAMfKDTaSigAooooAKKKKAP\/2Q==",
+                "permalink": "https:\/\/hydrax.slack.com\/files\/U05FZBDQ4RJ\/F096824TY23\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/TBL1G8KHT-F096824TY23-975124e74c",
+                "source_team": "TBL1G8KHT",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U06GRUXKVHB",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WG2Sv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Server timeout errors are still frequently encountered in auto topup"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1753065036.880119",
+        "client_msg_id": "abca585c-1a76-406a-b25c-bcda689ebfd5",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1752828428.235319",
+        "parent_user_id": "U057HGB61RS",
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "fe525cefcf05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-13\/8874936574327_fe525cefcf056db1b910_72.jpg",
+            "first_name": "Bahri",
+            "real_name": "Bahri Rizaldi",
+            "display_name": "Bahri Rizaldi",
+            "team": "TBL1G8KHT",
+            "name": "bahri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U057HGB61RS"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

@@ -1,0 +1,1000 @@
+[
+    {
+        "user": "U08QALM68SF",
+        "type": "message",
+        "ts": "1751459808.226779",
+        "client_msg_id": "7a636404-aa12-49fc-b3bf-fa0ea5ea9ad4",
+        "text": "Hi, I'm using the scan api route from <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/apps\/scan\/src\/main\/openapi\/scan.yaml#L795> to retrieve the nonce for an party.\nHowever, I encounter an error when calling:\n```<https:\/\/scan.sv-1.dev.global.canton.network.fivenorth.io\/api\/scan\/v0\/transfer-command-counter\/pixelplex-wallet-1::122082afcfb4c142fe02f5efea5c060c7f3716204e3fe9a8e5c205c64a1a1392617e>```\nThe response I get is:\n```{\n  \"error\": \"No TransferCommandCounter found for party: pixelplex-wallet-1::122082afcfb4c142fe02f5efea5c060c7f3716204e3fe9a8e5c205c64a1a1392617e, use 0 for the nonce\"\n}```\nIt seems that there is no existing TransferCommandCounter for this party, but i did transfers before via wallet ui. How to get nonce for party?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "7e3168e191ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-30\/8829788550835_7e3168e191adcf78a96f_72.jpg",
+            "first_name": "Dmitry",
+            "real_name": "Dmitry Krylou",
+            "display_name": "d.krylou",
+            "team": "T04NVD19L",
+            "name": "d.krylou",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751459808.226779",
+        "reply_count": 3,
+        "reply_users_count": 1,
+        "latest_reply": "1751460586.434259",
+        "reply_users": [
+            "U08QALM68SF"
+        ],
+        "replies": [
+            {
+                "user": "U08QALM68SF",
+                "ts": "1751460409.863449"
+            },
+            {
+                "user": "U08QALM68SF",
+                "ts": "1751460572.247159"
+            },
+            {
+                "user": "U08QALM68SF",
+                "ts": "1751460586.434259"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "t5LhV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, I'm using the scan api route from "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/apps\/scan\/src\/main\/openapi\/scan.yaml#L795"
+                            },
+                            {
+                                "type": "text",
+                                "text": " to retrieve the nonce for an party.\nHowever, I encounter an error when calling:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-1.dev.global.canton.network.fivenorth.io\/api\/scan\/v0\/transfer-command-counter\/pixelplex-wallet-1::122082afcfb4c142fe02f5efea5c060c7f3716204e3fe9a8e5c205c64a1a1392617e"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The response I get is:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n  \"error\": \"No TransferCommandCounter found for party: pixelplex-wallet-1::122082afcfb4c142fe02f5efea5c060c7f3716204e3fe9a8e5c205c64a1a1392617e, use 0 for the nonce\"\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It seems that there is no existing TransferCommandCounter for this party, but i did transfers before via wallet ui. How to get nonce for party?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08QALM68SF",
+        "type": "message",
+        "ts": "1751460409.863449",
+        "client_msg_id": "f1af7d2c-41ab-4161-90b7-b336feeb9bf0",
+        "text": "Thanks. I wanna get nonce for external party and this route return error too",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "7e3168e191ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-30\/8829788550835_7e3168e191adcf78a96f_72.jpg",
+            "first_name": "Dmitry",
+            "real_name": "Dmitry Krylou",
+            "display_name": "d.krylou",
+            "team": "T04NVD19L",
+            "name": "d.krylou",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751459808.226779",
+        "parent_user_id": "U08QALM68SF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8nokK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks. I wanna get nonce for external party and this route return error too"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08QALM68SF",
+        "type": "message",
+        "ts": "1751460572.247159",
+        "client_msg_id": "8a91e376-474f-4d67-9b08-4d7bb61cf121",
+        "text": "i using \/v0\/admin\/external-party\/transfer-preapproval\/prepare-send to send CC from external party",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "7e3168e191ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-30\/8829788550835_7e3168e191adcf78a96f_72.jpg",
+            "first_name": "Dmitry",
+            "real_name": "Dmitry Krylou",
+            "display_name": "d.krylou",
+            "team": "T04NVD19L",
+            "name": "d.krylou",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751459808.226779",
+        "parent_user_id": "U08QALM68SF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cH7eu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "i using \/v0\/admin\/external-party\/transfer-preapproval\/prepare-send to send CC from external party"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08QALM68SF",
+        "type": "message",
+        "ts": "1751460586.434259",
+        "client_msg_id": "25c6fbed-6c00-40ee-99cf-ad772f2043fa",
+        "text": "for this i need to know nonce",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "7e3168e191ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-30\/8829788550835_7e3168e191adcf78a96f_72.jpg",
+            "first_name": "Dmitry",
+            "real_name": "Dmitry Krylou",
+            "display_name": "d.krylou",
+            "team": "T04NVD19L",
+            "name": "d.krylou",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751459808.226779",
+        "parent_user_id": "U08QALM68SF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rJ9R1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "for this i need to know nonce"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08RYE73P8A",
+        "type": "message",
+        "ts": "1751460688.837929",
+        "client_msg_id": "f68065e2-1dfc-4f1c-9279-9f82ea94ad83",
+        "text": "Hi everyone!\nI'm currently facing two issues while working with the Ledger and Topology Manager, and I’d appreciate any guidance.\n1. *gRPC `AllocateParty` Error*\n I'm trying to call the `AllocateParty` method via gRPC. At the first time the request unable to complete and if i will resend request i get the following error:\n```code: 10\nmessage: Allocation for party yuwuu23h2jsise::122082afcfb4... is already inflight```\nwhere is yuwuu23h2jsise - is the party hint\n\n2. E*xternal Party Topology Submission Error*\n I'm also attempting to create topology for an external user using the `\/api\/validator\/v0\/admin\/external-party\/topology\/submit` endpoint, but I keep getting a timeout error. Here's the relevant stack trace and payload:\n```Requesting \/api\/validator\/v0\/admin\/external-party\/topology\/submit with params: {...}\nError: {\"error\":\"The server is taking too long to respond to the request at \n<http:\/\/validator:5003\/api\/validator\/v0\/admin\/external-party\/topology\/submit>\"}```\nIn the logs i see ERROR: duplicate key value violates unique constraint \"user_wallet_txlog_store_si_ti_ei_key\"\n\nWe are facing this problem firstly. Yesterday everything worked fine.\n\nDo you have any ideas on what might be causing the timeout? Could it be a problem on the validator side, or am I sending something incorrectly?\nThanks in advance for your help!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "bb95fe6ce815",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-14\/8881373286503_bb95fe6ce8152b94e8ec_72.jpg",
+            "first_name": "Ilya",
+            "real_name": "Ilya Okulov",
+            "display_name": "i.okulov",
+            "team": "T04NVD19L",
+            "name": "i.okulov",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751460688.837929",
+        "reply_count": 0,
+        "reply_users_count": 0,
+        "latest_reply": "0000000000.000000",
+        "reply_users": [],
+        "replies": [],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jUkNB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi everyone!\nI'm currently facing two issues while working with the Ledger and Topology Manager, and I’d appreciate any guidance.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "gRPC ",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "AllocateParty",
+                                        "style": {
+                                            "bold": true,
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " Error",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " I'm trying to call the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AllocateParty",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " method via gRPC. At the first time the request unable to complete and if i will resend request i get the following error:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "code: 10\nmessage: Allocation for party yuwuu23h2jsise::122082afcfb4... is already inflight"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "where is yuwuu23h2jsise - is the party hint\n\n2. E"
+                            },
+                            {
+                                "type": "text",
+                                "text": "xternal Party Topology Submission Error",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n I'm also attempting to create topology for an external user using the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/api\/validator\/v0\/admin\/external-party\/topology\/submit",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " endpoint, but I keep getting a timeout error. Here's the relevant stack trace and payload:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Requesting \/api\/validator\/v0\/admin\/external-party\/topology\/submit with params: {...}\nError: {\"error\":\"The server is taking too long to respond to the request at \n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/validator:5003\/api\/validator\/v0\/admin\/external-party\/topology\/submit"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nIn the logs i see ERROR: duplicate key value violates unique constraint \"user_wallet_txlog_store_si_ti_ei_key\"\n\nWe are facing this problem firstly. Yesterday everything worked fine.\n\nDo you have any ideas on what might be causing the timeout? Could it be a problem on the validator side, or am I sending something incorrectly?\nThanks in advance for your help!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1751472375.981729",
+        "client_msg_id": "057b868d-1e5b-4183-a027-5e0b54818c53",
+        "text": "Hello team! I have some questions about App reward coupons.\n\nIn <https:\/\/www.cantonscan.com\/update\/122029182d98783efbe433d37de5aa780a4655e15d594e6a15333d3744389acc3e94|this CantonCoin transfer> I see a created event for the template `AppRewardCoupon`. It has `\"featured\": \"false\"`. This is <https:\/\/www.cantonscan.com\/update\/122019bfd5ac0541b8a6f13576f1b6b0acca64219e9189186abe222241a6301d2b18|another CantonCoin transfer> that was done via the Canton Utility through our invoicing app. Here such events have `\"featured\": \"true\"`.\n\nMy questions are:\n\n• Does this mean that all CantonCoin transfers generate `AppRewardCoupon`s?\n• Is the `featured` field the one that indicates if the coupon can be actually redeemed to get rewards?\n• What makes the `featured` field true?\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751472375.981729",
+        "reply_count": 6,
+        "reply_users_count": 4,
+        "latest_reply": "1751548819.586279",
+        "reply_users": [
+            "U03BD2N7FTK",
+            "U06TMPD96M8",
+            "U03JLTQU1CJ",
+            "U07J3V9CS78"
+        ],
+        "replies": [
+            {
+                "user": "U03BD2N7FTK",
+                "ts": "1751482281.928839"
+            },
+            {
+                "user": "U03BD2N7FTK",
+                "ts": "1751483476.726259"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1751539573.355909"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1751540570.284149"
+            },
+            {
+                "user": "U03JLTQU1CJ",
+                "ts": "1751547052.423039"
+            },
+            {
+                "user": "U07J3V9CS78",
+                "ts": "1751548819.586279"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7oKhH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello team! I have some questions about App reward coupons.\n\nIn "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.cantonscan.com\/update\/122029182d98783efbe433d37de5aa780a4655e15d594e6a15333d3744389acc3e94",
+                                "text": "this CantonCoin transfer"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I see a created event for the template "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AppRewardCoupon",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". It has "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"featured\": \"false\"",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". This is "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.cantonscan.com\/update\/122019bfd5ac0541b8a6f13576f1b6b0acca64219e9189186abe222241a6301d2b18",
+                                "text": "another CantonCoin transfer"
+                            },
+                            {
+                                "type": "text",
+                                "text": " that was done via the Canton Utility through our invoicing app. Here such events have "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"featured\": \"true\"",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n\nMy questions are:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Does this mean that all CantonCoin transfers generate "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "AppRewardCoupon",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "s?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Is the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "featured",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " field the one that indicates if the coupon can be actually redeemed to get rewards?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "What makes the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "featured",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " field true?"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*thomas.ozenda* from *ZodiaCustody* was added to this channel by *wayne.collier*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1751478191.237309",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SWm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thomas.ozenda",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "ZodiaCustody",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "wayne.collier",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U03BD2N7FTK",
+        "type": "message",
+        "ts": "1751482281.928839",
+        "edited": {
+            "user": "U03BD2N7FTK",
+            "ts": "1751482384.000000"
+        },
+        "client_msg_id": "f5d2dfba-6bcd-49cb-9214-13e40d3e2432",
+        "text": "This may be a silly set of questions. The provider part and app reward generation of transactions isn't clear to me. Let's say we have two parties\n• Alice: who is a featured app party\n• Bob: a regular user\nGiven Bob's transactions' sender is the validator. Without any setup and previous interaction between Alice and Bob, can Bob make a transaction with Alice which will create a feature=true reward coupon?\n\nDoes Alice have to create a template, which Bob 'onboards' to, in order to ensure that the provider is Alice in transactions and thus earn rewards?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "12784629c0b3",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-04-14\/3394800746148_12784629c0b3744a7a6b_72.jpg",
+            "first_name": "Rory",
+            "real_name": "Rory O'Reilly",
+            "display_name": "Rory O'Reilly",
+            "team": "E02KFSNH6CV",
+            "name": "rory.oreilly",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751472375.981729",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/MEIH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This may be a silly set of questions. The provider part and app reward generation of transactions isn't clear to me. Let's say we have two parties\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Alice: who is a featured app party"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Bob: a regular user"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Given Bob's transactions' sender is the validator. Without any setup and previous interaction between Alice and Bob, can Bob make a transaction with Alice which will create a feature=true reward coupon?\n\nDoes Alice have to create a template, which Bob 'onboards' to, in order to ensure that the provider is Alice in transactions and thus earn rewards?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03BD2N7FTK",
+        "type": "message",
+        "ts": "1751483476.726259",
+        "client_msg_id": "a0fae53e-59d6-4c62-97ac-5158fe113061",
+        "text": "That makes sense. And in a transaction the provider has to be the app's party in order for a transaction to earn the feature app rewards?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "12784629c0b3",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-04-14\/3394800746148_12784629c0b3744a7a6b_72.jpg",
+            "first_name": "Rory",
+            "real_name": "Rory O'Reilly",
+            "display_name": "Rory O'Reilly",
+            "team": "E02KFSNH6CV",
+            "name": "rory.oreilly",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751472375.981729",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Dccry",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That makes sense. And in a transaction the provider has to be the app's party in order for a transaction to earn the feature app rewards?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*jeff* from *SBC* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1751488189.949389",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NpI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "jeff",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "SBC",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05E23Y7YQ2",
+        "type": "message",
+        "ts": "1751498256.167149",
+        "client_msg_id": "bf7af221-b06e-40af-a612-17d6373a04c5",
+        "text": "When trying to transfer canton coins from my SV to another party ID via the wallet UI I'm getting this error (auto approve checkbox is checked)\n```{\n  \"error\" : \"CONTRACT_NOT_FOUND(11,22b4bc1f): Contract could not be found with id 00e123a8ca4761acffe5a09044874bb23aff20d9e9f6a5293489b48d77f96234cfca10122062b08ab1578985c959eaba2f3492ab986d6b9ba818a54bc77f6233c7d7abfa50\"\n}```\nIs there a known issue here?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E08AQ7G00LC",
+        "source_team": "E08AQ7G00LC",
+        "user_profile": {
+            "avatar_hash": "d6e136b92948",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-06-26\/5483248171218_d6e136b92948b5f2dd1f_72.jpg",
+            "first_name": "Noah",
+            "real_name": "Noah Cornwell",
+            "display_name": "Noah Cornwell",
+            "team": "E08AQ7G00LC",
+            "name": "noah",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751498256.167149",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1751527208.230199",
+        "reply_users": [
+            "U05E23Y7YQ2"
+        ],
+        "replies": [
+            {
+                "user": "U05E23Y7YQ2",
+                "ts": "1751527085.402539"
+            },
+            {
+                "user": "U05E23Y7YQ2",
+                "ts": "1751527208.230199"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hFJv2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "When trying to transfer canton coins from my SV to another party ID via the wallet UI I'm getting this error (auto approve checkbox is checked)\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n  \"error\" : \"CONTRACT_NOT_FOUND(11,22b4bc1f): Contract could not be found with id 00e123a8ca4761acffe5a09044874bb23aff20d9e9f6a5293489b48d77f96234cfca10122062b08ab1578985c959eaba2f3492ab986d6b9ba818a54bc77f6233c7d7abfa50\"\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is there a known issue here?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08H5BYLACX",
+        "type": "message",
+        "ts": "1751509597.358509",
+        "client_msg_id": "e48ba96f-2c82-4b7d-a238-f3a075e82d24",
+        "text": "Are the splice testing dars (such as <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/daml\/splice-amulet-test\/daml.yaml|splice-amulet-test>) packaged anywhere? I think they are a useful resource for understanding how that stuff works and demonstrates how to setup an testing infrastructure so that we can write more contracts against amulet.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T073DDGB63C",
+        "source_team": "T073DDGB63C",
+        "user_profile": {
+            "avatar_hash": "g46d97e3567e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/46d97e3567ec9b6955d79e24abbb38c4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-72.png",
+            "first_name": "Leonid",
+            "real_name": "Leonid Rozenberg",
+            "display_name": "Leonid Rozenberg",
+            "team": "T073DDGB63C",
+            "name": "leo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751509597.358509",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1751548692.577179",
+        "reply_users": [
+            "U08H5BYLACX"
+        ],
+        "replies": [
+            {
+                "user": "U08H5BYLACX",
+                "ts": "1751548692.577179"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zGqJE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Are the splice testing dars (such as "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/daml\/splice-amulet-test\/daml.yaml",
+                                "text": "splice-amulet-test"
+                            },
+                            {
+                                "type": "text",
+                                "text": ") packaged anywhere? I think they are a useful resource for understanding how that stuff works and demonstrates how to setup an testing infrastructure so that we can write more contracts against amulet."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

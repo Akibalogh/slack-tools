@@ -1,0 +1,1936 @@
+[
+    {
+        "user": "U03A0BJGHU4",
+        "type": "message",
+        "ts": "1754377952.063159",
+        "client_msg_id": "d3b7183b-7902-4d58-888c-9a9d0eb0915e",
+        "text": "OK, that was my first attempt actually, I tried to exercise `AmuletRules.AmuletRules_DevNet_Tap` , getting the `AmuletRules`  contract id from the scan API. But when I do this, I am getting:\n```unknown module 991842eee48ec3caa3a649e8f47e3544dd7b688ce4b363aa934a83db7dada427:Splice.AmuletRules while looking for template or interface 991842eee48ec3caa3a649e8f47e3544dd7b688ce4b363aa934a83db7dada427:Splice.AmuletRules:AmuletRules```",
+        "team": "T05FWTX7PMG",
+        "user_team": "E04H0T87YSF",
+        "source_team": "E04H0T87YSF",
+        "user_profile": {
+            "avatar_hash": "d2e9f0c2426f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-04-06\/3338536889991_d2e9f0c2426f3a429692_72.png",
+            "first_name": "Julien",
+            "real_name": "Julien NICOULAUD",
+            "display_name": "Julien NICOULAUD",
+            "team": "E04H0T87YSF",
+            "name": "julien.nicoulaud",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754321494.242239",
+        "parent_user_id": "U03A0BJGHU4",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZOHuW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "OK, that was my first attempt actually, I tried to exercise "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AmuletRules.AmuletRules_DevNet_Tap",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " , getting the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AmuletRules",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  contract id from the scan API. But when I do this, I am getting:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "unknown module 991842eee48ec3caa3a649e8f47e3544dd7b688ce4b363aa934a83db7dada427:Splice.AmuletRules while looking for template or interface 991842eee48ec3caa3a649e8f47e3544dd7b688ce4b363aa934a83db7dada427:Splice.AmuletRules:AmuletRules"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1754380591.540689",
+        "client_msg_id": "5934dedc-b2fa-4508-8953-01246e8621ea",
+        "text": "The module name is just `Splice.AmuletRules`. Looks like you are including the package id in the module name",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754321494.242239",
+        "parent_user_id": "U03A0BJGHU4",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YIoEx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The module name is just "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Splice.AmuletRules",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Looks like you are including the package id in the module name"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U04EKFH8ZAA",
+        "type": "message",
+        "ts": "1754383129.835349",
+        "client_msg_id": "dd0d6a38-6f30-42f5-a91a-929edbb68fbe",
+        "text": "Hi <@U035FSJL801>\nI prepared it a while ago (<https:\/\/github.com\/satoshilabs\/slips\/commit\/5d0faf8b16bed65de7703b28dd253db1867906ed>), but decided to wait on certain internal alignments. Let me raise it internally, and I’ll get back to you later today.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "14114fd65821",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-12-12\/4505349747844_14114fd6582195ed840b_72.png",
+            "first_name": "Marc",
+            "real_name": "Marc Juchli",
+            "display_name": "Marc",
+            "team": "T03T53E10",
+            "name": "marc.juchli",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754322334.865669",
+        "parent_user_id": "U035FSJL801",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CXEB1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U035FSJL801"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nI prepared it a while ago ("
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/satoshilabs\/slips\/commit\/5d0faf8b16bed65de7703b28dd253db1867906ed"
+                            },
+                            {
+                                "type": "text",
+                                "text": "), but decided to wait on certain internal alignments. Let me raise it internally, and I’ll get back to you later today."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U04EKFH8ZAA",
+        "type": "message",
+        "ts": "1754383821.977719",
+        "client_msg_id": "f75b2f33-baa5-463b-8488-a2cf16d64fcf",
+        "text": "PR is open: <https:\/\/github.com\/satoshilabs\/slips\/pull\/1916>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "14114fd65821",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-12-12\/4505349747844_14114fd6582195ed840b_72.png",
+            "first_name": "Marc",
+            "real_name": "Marc Juchli",
+            "display_name": "Marc",
+            "team": "T03T53E10",
+            "name": "marc.juchli",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754322334.865669",
+        "parent_user_id": "U035FSJL801",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "ts": 1754383671,
+                "color": "36a64f",
+                "bot_id": "B01UJLRD05Q",
+                "bot_team_id": "T03T53E10",
+                "app_unfurl_url": "https:\/\/github.com\/satoshilabs\/slips\/pull\/1916",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "#1916 Canton",
+                "text": "The Canton Network team is in the process of providing tooling regarding wallets: <https:\/\/github.com\/hyperledger-labs\/splice-wallet-kernel|https:\/\/github.com\/hyperledger-labs\/splice-wallet-kernel>.",
+                "title": "#1916 Canton",
+                "title_link": "https:\/\/github.com\/satoshilabs\/slips\/pull\/1916",
+                "footer": "<https:\/\/github.com\/satoshilabs\/slips|satoshilabs\/slips>",
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KXmY3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "PR is open: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/satoshilabs\/slips\/pull\/1916"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U035FSJL801",
+        "type": "message",
+        "ts": "1754383908.588369",
+        "client_msg_id": "68465599-2021-4b37-96d5-1c6fe1a90105",
+        "text": "Thanks for confirming <@U04EKFH8ZAA> and also <@U02KJ7PKHN2>",
+        "team": "T05FWTX7PMG",
+        "user_team": "E04H0T87YSF",
+        "source_team": "E04H0T87YSF",
+        "user_profile": {
+            "avatar_hash": "018e7ecd9cb0",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-12\/8425756836311_018e7ecd9cb0f26448d5_72.png",
+            "first_name": "Victor",
+            "real_name": "Victor FORGEOUX",
+            "display_name": "Victor FORGEOUX",
+            "team": "E04H0T87YSF",
+            "name": "victor.forgeoux",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754322334.865669",
+        "parent_user_id": "U035FSJL801",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "X2cvP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for confirming "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U04EKFH8ZAA"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and also "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02KJ7PKHN2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02SR6E8Z9S",
+        "type": "message",
+        "ts": "1754395616.484079",
+        "client_msg_id": "89120b48-64b3-4e25-9f70-a96c965e4c50",
+        "text": "<@U083R3AP1M1> could you please provide a little more detail about what you are trying to do?  I can interpret this in a couple of different ways.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f9fc9f38d8d9",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-01-31\/3044385429553_f9fc9f38d8d90c37b2c2_72.jpg",
+            "first_name": "Curtis",
+            "real_name": "Curtis Hrischuk",
+            "display_name": "Curtis",
+            "team": "T03T53E10",
+            "name": "curtis.hrischuk",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754367393.832239",
+        "parent_user_id": "U083R3AP1M1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4Maa7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U083R3AP1M1"
+                            },
+                            {
+                                "type": "text",
+                                "text": " could you please provide a little more detail about what you are trying to do?  I can interpret this in a couple of different ways."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08QALM68SF",
+        "type": "message",
+        "ts": "1754399328.740789",
+        "client_msg_id": "b7870ae6-d07d-4725-93dc-1099d4baf6f0",
+        "text": "Hi, while parsing an update from the Scan API, I encountered a problem with ValidatorRewardCoupon and ValidatorRight. Specifically, the creation of ValidatorRight contract was missing before the transfer for:\n\nUpdate ID (DevNet):\n1220f800444c0235aed764c70de77c60dbb07434d47ac91f16308b53c13b83b2010a\n\nAddress:\nDigital_Asset-load_test-08::1220e8265a854b380288f324141724bf7b828848debe90622bf490e78e1901faeab1\n\nUsed ValidatorRight contract:\n0055d71596dc0b522e30a3596a7c6d3c29bf30a7e813a7156906c92b5914f028d5ca111220fee613d6fe2e452523fe0a6083ef4cc12ec1c0385c1d09e2d14923a9c6d18f4a\n\nHowever, in a subsequent update, I successfully located and parsed the creation of ValidatorRight for another users.\n\nAre all ValidatorRight contracts supposed to be available in every Scan API?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "7e3168e191ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-30\/8829788550835_7e3168e191adcf78a96f_72.jpg",
+            "first_name": "Dmitry",
+            "real_name": "Dmitry Krylou",
+            "display_name": "d.krylou",
+            "team": "T04NVD19L",
+            "name": "d.krylou",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754399328.740789",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1754411838.942859",
+        "reply_users": [
+            "U02SR6E8Z9S",
+            "U08QALM68SF"
+        ],
+        "replies": [
+            {
+                "user": "U02SR6E8Z9S",
+                "ts": "1754404648.130389"
+            },
+            {
+                "user": "U02SR6E8Z9S",
+                "ts": "1754406264.187499"
+            },
+            {
+                "user": "U08QALM68SF",
+                "ts": "1754407136.985249"
+            },
+            {
+                "user": "U08QALM68SF",
+                "ts": "1754407255.242939"
+            },
+            {
+                "user": "U02SR6E8Z9S",
+                "ts": "1754411838.942859"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wLeVi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, while parsing an update from the Scan API, I encountered a problem with ValidatorRewardCoupon and ValidatorRight. Specifically, the creation of ValidatorRight contract was missing before the transfer for:\n\nUpdate ID (DevNet):\n1220f800444c0235aed764c70de77c60dbb07434d47ac91f16308b53c13b83b2010a\n\nAddress:\nDigital_Asset-load_test-08::1220e8265a854b380288f324141724bf7b828848debe90622bf490e78e1901faeab1\n\nUsed ValidatorRight contract:\n0055d71596dc0b522e30a3596a7c6d3c29bf30a7e813a7156906c92b5914f028d5ca111220fee613d6fe2e452523fe0a6083ef4cc12ec1c0385c1d09e2d14923a9c6d18f4a\n\nHowever, in a subsequent update, I successfully located and parsed the creation of ValidatorRight for another users.\n\nAre all ValidatorRight contracts supposed to be available in every Scan API?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02SR6E8Z9S",
+        "type": "message",
+        "ts": "1754404648.130389",
+        "client_msg_id": "5cd1823e-6c38-4d73-88d6-a992fd7af481",
+        "text": "Checking around",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f9fc9f38d8d9",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-01-31\/3044385429553_f9fc9f38d8d90c37b2c2_72.jpg",
+            "first_name": "Curtis",
+            "real_name": "Curtis Hrischuk",
+            "display_name": "Curtis",
+            "team": "T03T53E10",
+            "name": "curtis.hrischuk",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754399328.740789",
+        "parent_user_id": "U08QALM68SF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FlgWs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Checking around"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02SR6E8Z9S",
+        "type": "message",
+        "ts": "1754406264.187499",
+        "client_msg_id": "46b0ba86-dba7-4422-a2ea-99fb29f801af",
+        "text": "<@U08QALM68SF> all Scan API instances should surface the same data for the same query.\n\nIt does sound like you are making queries for different ~users~ parties though.  Is it possible the partyID had a typo?  You may want to investigate further.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f9fc9f38d8d9",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-01-31\/3044385429553_f9fc9f38d8d90c37b2c2_72.jpg",
+            "first_name": "Curtis",
+            "real_name": "Curtis Hrischuk",
+            "display_name": "Curtis",
+            "team": "T03T53E10",
+            "name": "curtis.hrischuk",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754399328.740789",
+        "parent_user_id": "U08QALM68SF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6Iw6P",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U08QALM68SF"
+                            },
+                            {
+                                "type": "text",
+                                "text": " all Scan API instances should surface the same data for the same query.\n\nIt does sound like you are making queries for different "
+                            },
+                            {
+                                "type": "text",
+                                "text": "users ",
+                                "style": {
+                                    "strike": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "parties though.  Is it possible the partyID had a typo?  You may want to investigate further."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08QALM68SF",
+        "type": "message",
+        "ts": "1754407136.985249",
+        "client_msg_id": "e4df0e90-553a-40b6-8d4e-976f44cf14de",
+        "text": "I use v1\/updates to load updates from scan api and parse. While parsing i look for ValidatoraRigth creation. After I didn't found ValidatorRight for transfer and search this contract by contract_id in each updates and didn't found them too",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "7e3168e191ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-30\/8829788550835_7e3168e191adcf78a96f_72.jpg",
+            "first_name": "Dmitry",
+            "real_name": "Dmitry Krylou",
+            "display_name": "d.krylou",
+            "team": "T04NVD19L",
+            "name": "d.krylou",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754399328.740789",
+        "parent_user_id": "U08QALM68SF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DfdwF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I use v1\/updates to load updates from scan api and parse. While parsing i look for ValidatoraRigth creation. After I didn't found ValidatorRight for transfer and search this contract by contract_id in each updates and didn't found them too"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08QALM68SF",
+        "type": "message",
+        "ts": "1754407255.242939",
+        "client_msg_id": "e941a4fa-f809-4abc-a68a-b272f97a856d",
+        "text": "For this I use only creation events",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "7e3168e191ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-30\/8829788550835_7e3168e191adcf78a96f_72.jpg",
+            "first_name": "Dmitry",
+            "real_name": "Dmitry Krylou",
+            "display_name": "d.krylou",
+            "team": "T04NVD19L",
+            "name": "d.krylou",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754399328.740789",
+        "parent_user_id": "U08QALM68SF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MV3ON",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "For this I use only creation events"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06LMNHCGHJ",
+        "type": "message",
+        "ts": "1754407817.401899",
+        "client_msg_id": "38939993-b9fc-4a61-af07-2abc9b40773e",
+        "text": "Hi all,\nwe faced a technical difficulty to transfer tokens from external party to internal party over Ledger API (gRPC).\nthe essence:\n1. we are able to create *Splice.Wallet.TransferOffer* with external party as sender and internal party as receiver.\n2. on UI of web application we able to see this Transfer offer as receiver (internal party) and accept it.\n3. then nothing happens cause node is not able to exercise *Splice.Wallet.TransferOffer.AcceptedTransferOffer_Complete* as sender (external party) and wallet provider.\n4. as internal party we able to see the list of such accepted offers :\n\t`\"accepted_offers\": [`\n\t\t`{`\n\t\t    `\"template_id\": \"940b9fd181c0cf358dd8c38934a8c908d2a3ee5a4728f72481b4de6720f3f8d5:Splice.Wallet.TransferOffer:AcceptedTransferOffer\",`\n\t\t    `\"contract_id\": \"0033cdf4cb2e5256624584774bfc9bace4ff8c02710bfafc0627d60f009463f403ca111220f38e928208512ff4d7638f5bb255e64ba0e45d3978e646e3c5e2e3b79b409411\",`\n\t\t    `\"payload\": {`\n\t\t        `\"dso\": \"DSO::1220be58c29e65de40bf273be1dc2b266d43a9a002ea5b18955aeef7aac881bb471a\",`\n\t\t        `\"trackingId\": \"3f565337-a603-4a64-a3dd-338d4ddaecbf\",`\n\t\t        `\"expiresAt\": \"2025-08-10T00:00:00Z\",`\n\t\t        `\"receiver\": \"google-oauth2_007c100877396107883419739::1220f53a94b97552a4d33a29dbc4b334c922b65fd4eb69d3ab560d726a41cf9ccf86\",`\n\t\t        `\"amount\": {`\n\t\t            `\"amount\": \"12.45\",`\n\t\t            `\"unit\": \"AmuletUnit\"`\n\t\t        `},`\n\t\t        `\"sender\": \"dev_test_sender_email_com::122035334a67f4de9d2aecdd5b83485cbaee20682e3f0491bdf12b0a32d81cc93c90\"`\n\t\t    `},    ...........`\n---------------------------------------------------------------------------------------------------------------------------------------------\n\nwe are looking for the way to exercise *Splice.Wallet.TransferOffer.AcceptedTransferOffer_Complete* over Ledger API ( gRPC):\n1. we need to resolve *TransferInput* (Amulet Rules ?).\n2. resolve *PaymentTransferContext*.\n3. seems as wallet provider we can use dso, but it makes problems to sign transaction over *InteractiveSubmissionService* as we can't obtain wallet provider's private key.\nInteractive Submission of choice exercise requires 2 signatures :\n `choice AcceptedTransferOffer_Complete : AcceptedTransferOffer_CompleteResult`\n      `with`\n        `inputs : [TransferInput]`\n        `transferContext : PaymentTransferContext`\n        `walletProvider : Party`\n      `controller sender, walletProvider`\n      `do ....`\n\n  Did anyone ever faced such problem or can advice on any other way how is it possible to transfer tokens from external to internal party with no preapproval activated by internal party ?\n  thanks.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "dfa8e066936b",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-18\/7292057193395_dfa8e066936b4a6ad82e_72.jpg",
+            "first_name": "Yury",
+            "real_name": "Yury Korzun",
+            "display_name": "yury.korzun",
+            "team": "T04NVD19L",
+            "name": "yury.korzun",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754407817.401899",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1754465428.976809",
+        "reply_users": [
+            "UEHLS0JUB",
+            "U091C6C096K"
+        ],
+        "replies": [
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1754463009.458899"
+            },
+            {
+                "user": "U091C6C096K",
+                "ts": "1754465018.527859"
+            },
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1754465050.585889"
+            },
+            {
+                "user": "U091C6C096K",
+                "ts": "1754465389.235459"
+            },
+            {
+                "user": "UEHLS0JUB",
+                "ts": "1754465428.976809"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tnGWw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all,\nwe faced a technical difficulty to transfer tokens from external party to internal party over Ledger API (gRPC).\nthe essence:\n1. we are able to create "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Splice.Wallet.TransferOffer",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " with external party as sender and internal party as receiver.\n2. on UI of web application we able to see this Transfer offer as receiver (internal party) and accept it.\n3. then nothing happens cause node is not able to exercise "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Splice.Wallet.TransferOffer.AcceptedTransferOffer_Complete",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " as sender (external party) and wallet provider.\n4. as internal party we able to see the list of such accepted offers :\n\t"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"accepted_offers\": [",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\t\t{",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\t\t    \"template_id\": \"940b9fd181c0cf358dd8c38934a8c908d2a3ee5a4728f72481b4de6720f3f8d5:Splice.Wallet.TransferOffer:AcceptedTransferOffer\",",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\t\t    \"contract_id\": \"0033cdf4cb2e5256624584774bfc9bace4ff8c02710bfafc0627d60f009463f403ca111220f38e928208512ff4d7638f5bb255e64ba0e45d3978e646e3c5e2e3b79b409411\",",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\t\t    \"payload\": {",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\t\t        \"dso\": \"DSO::1220be58c29e65de40bf273be1dc2b266d43a9a002ea5b18955aeef7aac881bb471a\",",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\t\t        \"trackingId\": \"3f565337-a603-4a64-a3dd-338d4ddaecbf\",",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\t\t        \"expiresAt\": \"2025-08-10T00:00:00Z\",",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\t\t        \"receiver\": \"google-oauth2_007c100877396107883419739::1220f53a94b97552a4d33a29dbc4b334c922b65fd4eb69d3ab560d726a41cf9ccf86\",",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\t\t        \"amount\": {",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\t\t            \"amount\": \"12.45\",",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\t\t            \"unit\": \"AmuletUnit\"",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\t\t        },",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\t\t        \"sender\": \"dev_test_sender_email_com::122035334a67f4de9d2aecdd5b83485cbaee20682e3f0491bdf12b0a32d81cc93c90\"",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\t\t    },    ...........",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n---------------------------------------------------------------------------------------------------------------------------------------------\n\nwe are looking for the way to exercise "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Splice.Wallet.TransferOffer.AcceptedTransferOffer_Complete",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " over Ledger API ( gRPC):\n1. we need to resolve "
+                            },
+                            {
+                                "type": "text",
+                                "text": "TransferInput",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " (Amulet Rules ?).\n2. resolve "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PaymentTransferContext",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n3. seems as wallet provider we can use dso, but it makes problems to sign transaction over "
+                            },
+                            {
+                                "type": "text",
+                                "text": "InteractiveSubmissionService",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " as we can't obtain wallet provider's private key.\nInteractive Submission of choice exercise requires 2 signatures :\n "
+                            },
+                            {
+                                "type": "text",
+                                "text": "choice AcceptedTransferOffer_Complete : AcceptedTransferOffer_CompleteResult",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "      with",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "        inputs : [TransferInput]",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "        transferContext : PaymentTransferContext",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "        walletProvider : Party",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "      controller sender, walletProvider",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "      do ....",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n  Did anyone ever faced such problem or can advice on any other way how is it possible to transfer tokens from external to internal party with no preapproval activated by internal party ?\n  thanks."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02SR6E8Z9S",
+        "type": "message",
+        "ts": "1754411838.942859",
+        "client_msg_id": "7aa4c390-9f2f-4961-8e7c-c42b5e0a7eca",
+        "text": "<@U08QALM68SF> why not use \/v2\/updates?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f9fc9f38d8d9",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-01-31\/3044385429553_f9fc9f38d8d90c37b2c2_72.jpg",
+            "first_name": "Curtis",
+            "real_name": "Curtis Hrischuk",
+            "display_name": "Curtis",
+            "team": "T03T53E10",
+            "name": "curtis.hrischuk",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754399328.740789",
+        "parent_user_id": "U08QALM68SF",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HTIua",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U08QALM68SF"
+                            },
+                            {
+                                "type": "text",
+                                "text": " why not use \/v2\/updates?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06LMNHCGHJ",
+        "type": "message",
+        "ts": "1754413749.074819",
+        "client_msg_id": "6ef4649b-54cf-4e40-98e0-df43576b36b2",
+        "text": "Please invite <@U091C6C096K> to this channel. Thanks in advance",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NVD19L",
+        "source_team": "T04NVD19L",
+        "user_profile": {
+            "avatar_hash": "dfa8e066936b",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-18\/7292057193395_dfa8e066936b4a6ad82e_72.jpg",
+            "first_name": "Yury",
+            "real_name": "Yury Korzun",
+            "display_name": "yury.korzun",
+            "team": "T04NVD19L",
+            "name": "yury.korzun",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9PqBi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Please invite "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U091C6C096K"
+                            },
+                            {
+                                "type": "text",
+                                "text": " to this channel. Thanks in advance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "done",
+                "users": [
+                    "U0821PFKM0V"
+                ],
+                "count": 1
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U091C6C096K"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*mike* from *Figment* was added to this channel by *wayne.collier*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1754433074.290349",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ySek",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "mike",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Figment",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "wayne.collier",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U083R3AP1M1",
+        "type": "message",
+        "ts": "1754454621.908129",
+        "edited": {
+            "user": "U083R3AP1M1",
+            "ts": "1754454657.000000"
+        },
+        "client_msg_id": "35f344e0-9f06-428b-8d39-6abb72e48869",
+        "text": "Hi <@U02SR6E8Z9S> For the moment I just wanted to deploy a frontend for an app which would allow parties to login and use. Similar to how I guess Utility is deployed and used by everybody. How else did you interpret this? Just wondering just so I can be a bit more clear.\n\nJust trying to emulate how we’d go about deploying our  app in future on devnet \/ test\/mainnet, maybe assuming same stack as QS",
+        "team": "T05FWTX7PMG",
+        "user_team": "T057SN2G1C2",
+        "source_team": "T057SN2G1C2",
+        "user_profile": {
+            "avatar_hash": "b1215cf047bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-04\/8124357279509_b1215cf047bf6e221c8f_72.png",
+            "first_name": "Brendan",
+            "real_name": "Brendan",
+            "display_name": "Brendan",
+            "team": "T057SN2G1C2",
+            "name": "brendan673",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754367393.832239",
+        "parent_user_id": "U083R3AP1M1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dNrc3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02SR6E8Z9S"
+                            },
+                            {
+                                "type": "text",
+                                "text": " For the moment I just wanted to deploy a frontend for an app which would allow parties to login and use. Similar to how I guess Utility is deployed and used by everybody. How else did you interpret this? Just wondering just so I can be a bit more clear.\n\nJust trying to emulate how we’d go about deploying our  app in future on devnet \/ test\/mainnet, maybe assuming same stack as QS"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U083R3AP1M1",
+        "type": "message",
+        "ts": "1754454950.257939",
+        "edited": {
+            "user": "U083R3AP1M1",
+            "ts": "1754456416.000000"
+        },
+        "client_msg_id": "591c1394-1ac9-4828-ab7f-20650ecbd947",
+        "text": "and the reasons to attempt this is to understand a bit more on how the backend interacts directly with the deployed participant nodes of dev\/test\/mainnet, rather than testing only using LocalNet, if that makes sense",
+        "team": "T05FWTX7PMG",
+        "user_team": "T057SN2G1C2",
+        "source_team": "T057SN2G1C2",
+        "user_profile": {
+            "avatar_hash": "b1215cf047bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-04\/8124357279509_b1215cf047bf6e221c8f_72.png",
+            "first_name": "Brendan",
+            "real_name": "Brendan",
+            "display_name": "Brendan",
+            "team": "T057SN2G1C2",
+            "name": "brendan673",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754367393.832239",
+        "parent_user_id": "U083R3AP1M1",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8FeE4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and the reasons to attempt this is to understand a bit more on how the backend interacts directly with the deployed participant nodes of dev\/test\/mainnet, rather than testing only using LocalNet, if that makes sense"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0724J67GSE",
+        "type": "message",
+        "ts": "1754455941.129989",
+        "client_msg_id": "6ddc2da8-0078-4644-9f9f-fd17cf478b01",
+        "text": "<@U0122RHUD2A> I managed to create an IoU contract via the ledger API with the correct access key, thank you!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "e3a9767538bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-10\/7272227989824_e3a9767538bfd906f0ba_72.png",
+            "first_name": "Hoang",
+            "real_name": "Hoang Anh Le",
+            "display_name": "Hoang-Anh",
+            "team": "T072736KDTK",
+            "name": "anh.le",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fCoyT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0122RHUD2A"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I managed to create an IoU contract via the ledger API with the correct access key, thank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0122RHUD2A"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "I also successfully created a new AppInstallRequest using the same `submit-and-wait` API with the new user (`23660983-a219-41b3-83a6-40cba080afa1`, instead of the `app-user` account. This is the payload:\n```{\n    \"commands\": [\n        {\n            \"CreateCommand\": {\n                \"templateId\": \"#quickstart-licensing:Licensing.AppInstall:AppInstallRequest\",\n                \"createArguments\": {\n                    \"dso\": \"DSO::1220a08b4218b63c7b7928dd87dfe662e6cb1120f0f5824f54b9079aaf70ed7c5290\",\n                    \"provider\": \"app_provider_QS-ALH-01::1220e7019e729ad5a8c5f98d59b6fe3a84580941913d54cf6f11ddd3d17cf5d328fa\",\n                    \"user\": \"23660983-a219-41b3-83a6-40cba080afa1::1220a82d9167bb3f9f7d574cc07dd98dc8165344f486a9b3b9fdc199d2c331919277\",\n                    \"meta\": {\n                        \"values\": []\n                    }\n                }\n            }\n        }\n    ],\n    \"workflowId\": \"create-app-install-request\",\n    \"applicationId\": \"92a520cb-2f09-4e55-b465-d178c6cfe5e4\",\n    \"commandId\": \"create-app-install-request-1754449257\",\n    \"deduplicationPeriod\": {\n        \"Empty\": {}\n    },\n    \"actAs\": [\n        \"23660983-a219-41b3-83a6-40cba080afa1::1220a82d9167bb3f9f7d574cc07dd98dc8165344f486a9b3b9fdc199d2c331919277\"\n    ],\n    \"readAs\": [\n        \"23660983-a219-41b3-83a6-40cba080afa1::1220a82d9167bb3f9f7d574cc07dd98dc8165344f486a9b3b9fdc199d2c331919277\"\n    ],\n    \"submissionId\": \"create-app-install-request\",\n    \"disclosedContracts\": [],\n    \"domainId\": \"\",\n    \"packageIdSelectionPreference\": []\n}```\nThe request seems to shows up correctly on the AppProvider's AppInstall dashboard (img 1), so I can Accept and create a License for it (img 2 &amp; 3). However when I logged in to the AppUser dashboard my License Renewal Request is nowhere to be found, although the License and LicenseRenewalRequest contracts are still active.\n\nAnything special I need to do to make it works?",
+        "files": [
+            {
+                "id": "F099TK896AC",
+                "created": 1754459323,
+                "timestamp": 1754459323,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U0724J67GSE",
+                "user_team": "T072736KDTK",
+                "editable": false,
+                "size": 43106,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F099TK896AC\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F099TK896AC\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F099TK896AC-428c061ddb\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F099TK896AC-428c061ddb\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F099TK896AC-428c061ddb\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 77,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F099TK896AC-428c061ddb\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 102,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F099TK896AC-428c061ddb\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F099TK896AC-428c061ddb\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 154,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F099TK896AC-428c061ddb\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 171,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F099TK896AC-428c061ddb\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 205,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F099TK896AC-428c061ddb\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 218,
+                "original_w": 1191,
+                "original_h": 254,
+                "thumb_tiny": "AwALADDQwC545\/3fSnA56E+vIoCgdABn0o2L\/dH5UAByM8nj2pN3AOTz0+U0uBu3YGemaAAOgA+lACMdoySfwGaFO7OCePVcU6mhEByFXPXOKAP\/2Q==",
+                "permalink": "https:\/\/devlabscrew.slack.com\/files\/U05FZBDQ4RJ\/F099TK896AC\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T072736KDTK-F099TK896AC-22d90bb471",
+                "source_team": "T072736KDTK",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F0993LLN44D",
+                "created": 1754459407,
+                "timestamp": 1754459407,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U0724J67GSE",
+                "user_team": "T072736KDTK",
+                "editable": false,
+                "size": 29485,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F0993LLN44D\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F0993LLN44D\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0993LLN44D-ba456434f1\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0993LLN44D-ba456434f1\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0993LLN44D-ba456434f1\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 56,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0993LLN44D-ba456434f1\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 74,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0993LLN44D-ba456434f1\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0993LLN44D-ba456434f1\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 111,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0993LLN44D-ba456434f1\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 123,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0993LLN44D-ba456434f1\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 148,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0993LLN44D-ba456434f1\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 158,
+                "original_w": 1231,
+                "original_h": 190,
+                "thumb_tiny": "AwAIADDR2Ddu+bPX7xp1FFABRRRQAU1mYMoVNwPU5xinUUAf\/9k=",
+                "permalink": "https:\/\/devlabscrew.slack.com\/files\/U05FZBDQ4RJ\/F0993LLN44D\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T072736KDTK-F0993LLN44D-4d7b0b3015",
+                "source_team": "T072736KDTK",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F0991TFT5H9",
+                "created": 1754459433,
+                "timestamp": 1754459433,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U0724J67GSE",
+                "user_team": "T072736KDTK",
+                "editable": false,
+                "size": 28044,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F0991TFT5H9\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F0991TFT5H9\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0991TFT5H9-6dae01b8dd\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0991TFT5H9-6dae01b8dd\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0991TFT5H9-6dae01b8dd\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 51,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0991TFT5H9-6dae01b8dd\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 68,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0991TFT5H9-6dae01b8dd\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0991TFT5H9-6dae01b8dd\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 102,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0991TFT5H9-6dae01b8dd\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 114,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0991TFT5H9-6dae01b8dd\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 136,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F0991TFT5H9-6dae01b8dd\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 145,
+                "original_w": 1205,
+                "original_h": 171,
+                "thumb_tiny": "AwAHADDRCYOec5J+8cU4Z5z+FFFACHd2A\/OjnPIGPXNLRQAHODjrRRRQB\/\/Z",
+                "permalink": "https:\/\/devlabscrew.slack.com\/files\/U05FZBDQ4RJ\/F0991TFT5H9\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T072736KDTK-F0991TFT5H9-6abfdf9ab7",
+                "source_team": "T072736KDTK",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F09974CAQ3W",
+                "created": 1754459824,
+                "timestamp": 1754459824,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U0724J67GSE",
+                "user_team": "T072736KDTK",
+                "editable": false,
+                "size": 27327,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F09974CAQ3W\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F09974CAQ3W\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09974CAQ3W-d7563707a5\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09974CAQ3W-d7563707a5\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09974CAQ3W-d7563707a5\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 55,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09974CAQ3W-d7563707a5\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 74,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09974CAQ3W-d7563707a5\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09974CAQ3W-d7563707a5\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 111,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09974CAQ3W-d7563707a5\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 123,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09974CAQ3W-d7563707a5\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 148,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09974CAQ3W-d7563707a5\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 158,
+                "original_w": 1525,
+                "original_h": 235,
+                "thumb_tiny": "AwAIADDRAbdyRj0x\/wDXp34UUUAH4UfhRRQAfhRRRQB\/\/9k=",
+                "permalink": "https:\/\/devlabscrew.slack.com\/files\/U05FZBDQ4RJ\/F09974CAQ3W\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T072736KDTK-F09974CAQ3W-dbe851d41a",
+                "source_team": "T072736KDTK",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F09915606LW",
+                "created": 1754460115,
+                "timestamp": 1754460115,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U0724J67GSE",
+                "user_team": "T072736KDTK",
+                "editable": false,
+                "size": 69487,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F09915606LW\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F09915606LW\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09915606LW-88ee2a9892\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09915606LW-88ee2a9892\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09915606LW-88ee2a9892\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 155,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09915606LW-88ee2a9892\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 206,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09915606LW-88ee2a9892\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09915606LW-88ee2a9892\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 310,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09915606LW-88ee2a9892\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 344,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09915606LW-88ee2a9892\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 413,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F09915606LW-88ee2a9892\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 440,
+                "original_w": 1088,
+                "original_h": 468,
+                "thumb_tiny": "AwAVADCiXYtnP6UbyCSD1PpQT6fypM0xWDccYzxQCR0JpKKAFyfU0ZPrSUUDF70E5oPWkoAWikooAWkoooA\/\/9k=",
+                "permalink": "https:\/\/devlabscrew.slack.com\/files\/U05FZBDQ4RJ\/F09915606LW\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T072736KDTK-F09915606LW-61759f96b2",
+                "source_team": "T072736KDTK",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F098Q6C5MB9",
+                "created": 1754460211,
+                "timestamp": 1754460211,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U0724J67GSE",
+                "user_team": "T072736KDTK",
+                "editable": false,
+                "size": 82929,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F098Q6C5MB9\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T072736KDTK-F098Q6C5MB9\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F098Q6C5MB9-2f37ad7d1a\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F098Q6C5MB9-2f37ad7d1a\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F098Q6C5MB9-2f37ad7d1a\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 179,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F098Q6C5MB9-2f37ad7d1a\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 239,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F098Q6C5MB9-2f37ad7d1a\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F098Q6C5MB9-2f37ad7d1a\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 359,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F098Q6C5MB9-2f37ad7d1a\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 399,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F098Q6C5MB9-2f37ad7d1a\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 478,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T072736KDTK-F098Q6C5MB9-2f37ad7d1a\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 510,
+                "original_w": 1088,
+                "original_h": 542,
+                "thumb_tiny": "AwAYADCjuORyfrijcf8AIpOKSmIXJPejJ9aSigYoYjoSKMn1pKKAFB55J\/CjPrn86SigQpOT1NBYkYJJpKKACiiigZ\/\/2Q==",
+                "permalink": "https:\/\/devlabscrew.slack.com\/files\/U05FZBDQ4RJ\/F098Q6C5MB9\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T072736KDTK-F098Q6C5MB9-32b8ac8951",
+                "source_team": "T072736KDTK",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "n7Z+x",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I also successfully created a new AppInstallRequest using the same "
+                            },
+                            {
+                                "type": "text",
+                                "text": "submit-and-wait",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " API with the new user ("
+                            },
+                            {
+                                "type": "text",
+                                "text": "23660983-a219-41b3-83a6-40cba080afa1",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", instead of the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "app-user",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " account. This is the payload:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"commands\": [\n        {\n            \"CreateCommand\": {\n                \"templateId\": \"#quickstart-licensing:Licensing.AppInstall:AppInstallRequest\",\n                \"createArguments\": {\n                    \"dso\": \"DSO::1220a08b4218b63c7b7928dd87dfe662e6cb1120f0f5824f54b9079aaf70ed7c5290\",\n                    \"provider\": \"app_provider_QS-ALH-01::1220e7019e729ad5a8c5f98d59b6fe3a84580941913d54cf6f11ddd3d17cf5d328fa\",\n                    \"user\": \"23660983-a219-41b3-83a6-40cba080afa1::1220a82d9167bb3f9f7d574cc07dd98dc8165344f486a9b3b9fdc199d2c331919277\",\n                    \"meta\": {\n                        \"values\": []\n                    }\n                }\n            }\n        }\n    ],\n    \"workflowId\": \"create-app-install-request\",\n    \"applicationId\": \"92a520cb-2f09-4e55-b465-d178c6cfe5e4\",\n    \"commandId\": \"create-app-install-request-1754449257\",\n    \"deduplicationPeriod\": {\n        \"Empty\": {}\n    },\n    \"actAs\": [\n        \"23660983-a219-41b3-83a6-40cba080afa1::1220a82d9167bb3f9f7d574cc07dd98dc8165344f486a9b3b9fdc199d2c331919277\"\n    ],\n    \"readAs\": [\n        \"23660983-a219-41b3-83a6-40cba080afa1::1220a82d9167bb3f9f7d574cc07dd98dc8165344f486a9b3b9fdc199d2c331919277\"\n    ],\n    \"submissionId\": \"create-app-install-request\",\n    \"disclosedContracts\": [],\n    \"domainId\": \"\",\n    \"packageIdSelectionPreference\": []\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThe request seems to shows up correctly on the AppProvider's AppInstall dashboard (img 1), so I can Accept and create a License for it (img 2 & 3). However when I logged in to the AppUser dashboard my License Renewal Request is nowhere to be found, although the License and LicenseRenewalRequest contracts are still active.\n\nAnything special I need to do to make it works?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1754460319.119619",
+        "client_msg_id": "e1871242-7790-45df-a364-32ed32d38302",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "e3a9767538bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-10\/7272227989824_e3a9767538bfd906f0ba_72.png",
+            "first_name": "Hoang",
+            "real_name": "Hoang Anh Le",
+            "display_name": "Hoang-Anh",
+            "team": "T072736KDTK",
+            "name": "anh.le",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U0122RHUD2A",
+        "type": "message",
+        "ts": "1754461629.220209",
+        "edited": {
+            "user": "U0122RHUD2A",
+            "ts": "1754463115.000000"
+        },
+        "client_msg_id": "0c23d5a7-c7c6-4858-91a2-3834010598dc",
+        "text": "This functionality is working as expected. Please review the Tenant Registrations tab. The backend service registers AppUser as a new tenant and associates it with partyId. When a user authenticates to the QS UI with a JWT issued by the same issuer and clientId defined in the tenant registration, they are automatically mapped to that partyId in Quickstart Application and on the ledger. As a result, if you log in as “app-user,” you can only see data from the registered party, so you will not see any data created by other parties.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f323bd2b8079",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-04-22\/1090389769617_f323bd2b807965503456_72.png",
+            "first_name": "Peter",
+            "real_name": "Peter Kvokacka",
+            "display_name": "peter.kvokacka",
+            "team": "T03T53E10",
+            "name": "peter.kvokacka",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vxCpH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This functionality is working as expected. Please review the Tenant Registrations tab. The backend service registers AppUser as a new tenant and associates it with partyId. When a user authenticates to the QS UI with a JWT issued by the same issuer and clientId defined in the tenant registration, they are automatically mapped to that partyId in Quickstart Application and on the ledger. As a result, if you log in as “app-user,” you can only see data from the registered party, so you will not see any data created by other parties."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U0724J67GSE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U0122RHUD2A",
+        "type": "message",
+        "ts": "1754462318.861489",
+        "client_msg_id": "0834b586-1428-47fe-8b3c-a0fcb85a3d99",
+        "text": "Note that the JWT token used for QS UI login is strictly for authenticating the user within the Quickstart application and is not forwarded to the ledger. The backend service always communicates with the ledger under the `AUTH_APP_PROVIDER_VALIDATOR_USER_ID` identity. To enforce tenant isolation, all ledger queries and transactions are filtered by the partyId associated (derived indirectly from the clientId and issuerUri specified in the tenant registration) with the end user.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "f323bd2b8079",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-04-22\/1090389769617_f323bd2b807965503456_72.png",
+            "first_name": "Peter",
+            "real_name": "Peter Kvokacka",
+            "display_name": "peter.kvokacka",
+            "team": "T03T53E10",
+            "name": "peter.kvokacka",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753956107.329089",
+        "parent_user_id": "U0724J67GSE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5fW6L",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Note that the JWT token used for QS UI login is strictly for authenticating the user within the Quickstart application and is not forwarded to the ledger. The backend service always communicates with the ledger under the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AUTH_APP_PROVIDER_VALIDATOR_USER_ID",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " identity. To enforce tenant isolation, all ledger queries and transactions are filtered by the partyId associated (derived indirectly from the clientId and issuerUri specified in the tenant registration) with the end user."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UEHLS0JUB",
+        "type": "message",
+        "ts": "1754463009.458899",
+        "client_msg_id": "a6d559be-07d6-4d5e-8025-1774603a36b4",
+        "text": "Don't use the legacy transfers here, use the token standard transfers. They do support a two step transfer which just has a offer\/accept step without a complete step. You can look at the token standard reference CLI as an example for how to do that <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/token-standard\/cli\/src\/commands\/transfer.ts>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "b0027c1735a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-09-14\/762628454406_b0027c1735a1db92fbe4_72.jpg",
+            "first_name": "Moritz",
+            "real_name": "Moritz Kiefer",
+            "display_name": "Aunt Moritz",
+            "team": "T03T53E10",
+            "name": "moritz.kiefer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754407817.401899",
+        "parent_user_id": "U06LMNHCGHJ",
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "color": "24292f",
+                "bot_id": "B01UJLRD05Q",
+                "bot_team_id": "T03T53E10",
+                "app_unfurl_url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/token-standard\/cli\/src\/commands\/transfer.ts",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/token-standard\/cli\/src\/commands\/transfer.ts|transfer.ts>",
+                "text": "```\n\/\/ Copyright (c) 2024 Digital Asset (Switzerland) GmbH and\/or its affiliates. All rights reserved.\n\/\/ SPDX-License-Identifier: Apache-2.0\nimport {\n  createLedgerApiClient,\n  filtersByParty,\n  submitExerciseCommand,\n} from \"..\/apis\/ledger-api-utils\";\nimport { HoldingInterface } from \"..\/constants\";\nimport { CommandOptions } from \"..\/token-standard-cli\";\nimport { ExerciseCommand } from \"canton-json-api-v2-openapi\";\nimport dayjs from \"dayjs\";\nimport {\n  createConfiguration,\n  DefaultApi as TransferFactoryAPI,\n  ServerConfiguration,\n} from \"transfer-instruction-openapi\";\n\ninterface TransferCommandOptions {\n  sender: string;\n  receiver: string;\n  amount: string;\n  \/\/ paths to keys\n  publicKey: string;\n  privateKey: string;\n  instrumentAdmin: string; \/\/ TODO (#907): replace with registry call\n  instrumentId: string;\n  transferFactoryRegistryUrl: string;\n  userId: string;\n}\n\nexport async function transfer(\n  opts: CommandOptions & TransferCommandOptions,\n): Promise<void> {\n  try {\n    const {\n      sender,\n      receiver,\n      amount,\n      privateKey,\n      publicKey,\n      userId,\n      instrumentAdmin,\n      instrumentId,\n      transferFactoryRegistryUrl,\n    } = opts;\n    const ledgerClient = createLedgerApiClient(opts);\n    const transferRegistryConfig = createConfiguration({\n      baseServer: new ServerConfiguration(transferFactoryRegistryUrl, {}),\n    });\n    const transferRegistryClient = new TransferFactoryAPI(\n      transferRegistryConfig,\n    );\n\n    const ledgerEndOffset = await ledgerClient.getV2StateLedgerEnd();\n    const senderHoldings = await ledgerClient.postV2StateActiveContracts({\n      filter: {\n        filtersByParty: filtersByParty(sender, [HoldingInterface], false),\n      },\n      verbose: false,\n      activeAtOffset: ledgerEndOffset.offset,\n    });\n    if (senderHoldings.length === 0) {\n      throw new Error(\"Sender has no holdings, so transfer can't be executed.\");\n    }\n    const holdings = senderHoldings.map(\n      (h) => h[\"contractEntry\"][\"JsActiveContract\"],\n    );\n    const inputHoldingCids = holdings.map(\n      (h) => h[\"createdEvent\"][\"contractId\"],\n    );\n\n    const now = dayjs();\n    const choiceArgs: any = {\n      expectedAdmin: instrumentAdmin,\n      transfer: {\n        sender,\n        receiver,\n        amount,\n        instrumentId: { admin: instrumentAdmin, id: instrumentId },\n        lock: null,\n        requestedAt: now,\n        executeBefore: now.add(24, \"hour\").toISOString(),\n        inputHoldingCids,\n        meta: { values: {} },\n      },\n      extraArgs: {\n        context: { values: {} },\n        meta: { values: {} },\n      },\n    };\n\n    const transferFactory = await transferRegistryClient.getTransferFactory({\n      choiceArguments: choiceArgs,\n    });\n    choiceArgs.extraArgs.context =\n      transferFactory.choiceContext.choiceContextData;\n\n    const exercise: ExerciseCommand = {\n      templateId:\n        \"#splice-api-token-transfer-instruction-v1:Splice.Api.Token.TransferInstructionV1:TransferFactory\",\n      contractId: transferFactory.factoryId,\n      choice: \"TransferFactory_Transfer\",\n      choiceArgument: choiceArgs,\n    };\n    const completion = await submitExerciseCommand(\n      ledgerClient,\n      exercise,\n      transferFactory.choiceContext.disclosedContracts,\n      sender,\n      userId,\n      publicKey,\n      privateKey,\n    );\n    const result = { ...completion, status: \"success\" };\n\n    console.log(JSON.stringify(result, null, 2));\n  } catch (e) {\n    console.error(\"Failed to execute transfer:\", e);\n  }\n}\n\n```",
+                "title": "<https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/token-standard\/cli\/src\/commands\/transfer.ts|transfer.ts>",
+                "footer": "<https:\/\/github.com\/hyperledger-labs\/splice|hyperledger-labs\/splice>",
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/3R7M",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Don't use the legacy transfers here, use the token standard transfers. They do support a two step transfer which just has a offer\/accept step without a complete step. You can look at the token standard reference CLI as an example for how to do that "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/main\/token-standard\/cli\/src\/commands\/transfer.ts"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U06LMNHCGHJ"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

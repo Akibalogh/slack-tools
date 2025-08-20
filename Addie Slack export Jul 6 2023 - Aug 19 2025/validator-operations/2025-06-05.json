@@ -1,0 +1,3011 @@
+[
+    {
+        "user": "U08JYBDSK0V",
+        "type": "message",
+        "ts": "1749108815.938089",
+        "client_msg_id": "700ef60d-a09f-4a20-8039-b92db859c87d",
+        "text": "Hi validators, is there a way to revoke global pre-approval done on a Validator ? I made it with wallet UI with the button “PRE-APPROVE INCOMING DIRECT TRANSFER OF CANTON COIN”. I want to test on testnet specific and targeted approval with configuration of _`autoAcceptTransfers`_<https:\/\/docs.dev.sync.global\/validator_operator\/validator_helm.html#configuring-sweeps-and-auto-accepts-of-transfer-offers| config>, so I want to revoke before.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7T5YE9MY",
+        "source_team": "T7T5YE9MY",
+        "user_profile": {
+            "avatar_hash": "18d9a68d3d08",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-24\/8650966444610_18d9a68d3d08e033fdb8_72.png",
+            "first_name": "François",
+            "real_name": "François Branciard",
+            "display_name": "Francois",
+            "team": "T7T5YE9MY",
+            "name": "francois.branciard",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749108815.938089",
+        "reply_count": 4,
+        "reply_users_count": 2,
+        "latest_reply": "1749198434.058719",
+        "reply_users": [
+            "U08987JD1J9",
+            "U08JYBDSK0V"
+        ],
+        "replies": [
+            {
+                "user": "U08987JD1J9",
+                "ts": "1749109380.889839"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1749109388.254379"
+            },
+            {
+                "user": "U08JYBDSK0V",
+                "ts": "1749109514.001959"
+            },
+            {
+                "user": "U08JYBDSK0V",
+                "ts": "1749198434.058719"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jMaFV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi validators, is there a way to revoke global pre-approval done on a Validator ? I made it with wallet UI with the button “PRE-APPROVE INCOMING DIRECT TRANSFER OF CANTON COIN”. I want to test on testnet specific and targeted approval with configuration of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "autoAcceptTransfers",
+                                "style": {
+                                    "italic": true,
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/validator_operator\/validator_helm.html#configuring-sweeps-and-auto-accepts-of-transfer-offers",
+                                "text": " config"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", so I want to revoke before."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1749109380.889839",
+        "client_msg_id": "9db5e25a-4e75-4b63-b1d8-4664b88c0dbd",
+        "text": "you would need to do\n\n*DELETE* \/v0\/admin\/transfer-preapprovals\/by-party\/{receiver-party}",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749108815.938089",
+        "parent_user_id": "U08JYBDSK0V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "blV8j",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "you would need to do\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "DELETE",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " \/v0\/admin\/transfer-preapprovals\/by-party\/{receiver-party}"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1749109388.254379",
+        "client_msg_id": "af3e2b86-2835-4e2a-98a5-6e5eb062b869",
+        "text": "<https:\/\/docs.dev.sync.global\/app_dev\/validator_api\/index.html>\n\n<https:\/\/rest.wiki\/?https:\/\/raw.githubusercontent.com\/hyperledger-labs\/splice\/refs\/heads\/main\/apps\/validator\/src\/main\/openapi\/validator-internal.yaml>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749108815.938089",
+        "parent_user_id": "U08JYBDSK0V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lXCjZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/app_dev\/validator_api\/index.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/rest.wiki\/?https:\/\/raw.githubusercontent.com\/hyperledger-labs\/splice\/refs\/heads\/main\/apps\/validator\/src\/main\/openapi\/validator-internal.yaml"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08JYBDSK0V",
+        "type": "message",
+        "ts": "1749109514.001959",
+        "client_msg_id": "ae37bcbf-f4fb-4492-b8e4-01254738c664",
+        "text": "Thank you <@U08987JD1J9>, I will try it.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7T5YE9MY",
+        "source_team": "T7T5YE9MY",
+        "user_profile": {
+            "avatar_hash": "18d9a68d3d08",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-24\/8650966444610_18d9a68d3d08e033fdb8_72.png",
+            "first_name": "François",
+            "real_name": "François Branciard",
+            "display_name": "Francois",
+            "team": "T7T5YE9MY",
+            "name": "francois.branciard",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749108815.938089",
+        "parent_user_id": "U08JYBDSK0V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "203dd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U08987JD1J9"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", I will try it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0657NCJTL6",
+        "type": "message",
+        "ts": "1749113494.391299",
+        "client_msg_id": "ee1ae6a6-ea89-48c0-b639-67abc9feadfb",
+        "text": "Hi, when the sunset of V1 is planned? does anyone know the specific date?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TG7HQBZHC",
+        "source_team": "TG7HQBZHC",
+        "user_profile": {
+            "avatar_hash": "23a8ab0e9c1f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-13\/6182401578549_23a8ab0e9c1f2dcedf48_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Zipnik",
+            "display_name": "alex.zipnik",
+            "team": "TG7HQBZHC",
+            "name": "alex.zipnik",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749113494.391299",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1749114126.721009",
+        "reply_users": [
+            "U01TZB7MFFA",
+            "U0657NCJTL6"
+        ],
+        "replies": [
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749113660.695729"
+            },
+            {
+                "user": "U0657NCJTL6",
+                "ts": "1749113810.674249"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749113867.537909"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749113880.928429"
+            },
+            {
+                "user": "U0657NCJTL6",
+                "ts": "1749114126.721009"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cQ7zl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, when the sunset of V1 is planned? does anyone know the specific date?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0657NCJTL6",
+        "type": "message",
+        "ts": "1749113621.487389",
+        "client_msg_id": "ebc65884-d9f6-40db-bda2-41bbf158c0f5",
+        "text": "Another question:\nWe want to run e2e tests on our CI on regular basis with Canton.\nIs there a way to do it? maybe run Canton containers? did someone do it?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TG7HQBZHC",
+        "source_team": "TG7HQBZHC",
+        "user_profile": {
+            "avatar_hash": "23a8ab0e9c1f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-13\/6182401578549_23a8ab0e9c1f2dcedf48_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Zipnik",
+            "display_name": "alex.zipnik",
+            "team": "TG7HQBZHC",
+            "name": "alex.zipnik",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749113621.487389",
+        "reply_count": 8,
+        "reply_users_count": 2,
+        "latest_reply": "1749638916.531469",
+        "reply_users": [
+            "U0657NCJTL6",
+            "U01TZB7MFFA"
+        ],
+        "replies": [
+            {
+                "user": "U0657NCJTL6",
+                "ts": "1749120755.409799"
+            },
+            {
+                "user": "U0657NCJTL6",
+                "ts": "1749633144.830599"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749633578.113079"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749633662.617629"
+            },
+            {
+                "user": "U0657NCJTL6",
+                "ts": "1749638609.793709"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749638733.500819"
+            },
+            {
+                "user": "U0657NCJTL6",
+                "ts": "1749638883.662459"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1749638916.531469"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LC\/uE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Another question:\nWe want to run e2e tests on our CI on regular basis with Canton.\nIs there a way to do it? maybe run Canton containers? did someone do it?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749113660.695729",
+        "client_msg_id": "33840ac7-1871-4daf-a833-ea0fcd1ce8ba",
+        "text": "You mean JSON API v1 ?  With canton 3.4, 6 month from now AFAIK",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749113494.391299",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AFpYc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You mean JSON API v1 ?  With canton 3.4, 6 month from now AFAIK"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1::skin-tone-3",
+                "users": [
+                    "U0657NCJTL6"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U0657NCJTL6",
+        "type": "message",
+        "ts": "1749113810.674249",
+        "client_msg_id": "a0041958-925e-405b-954c-a1ae360a62c0",
+        "text": "Thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "TG7HQBZHC",
+        "source_team": "TG7HQBZHC",
+        "user_profile": {
+            "avatar_hash": "23a8ab0e9c1f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-13\/6182401578549_23a8ab0e9c1f2dcedf48_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Zipnik",
+            "display_name": "alex.zipnik",
+            "team": "TG7HQBZHC",
+            "name": "alex.zipnik",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749113494.391299",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AjPto",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749113867.537909",
+        "client_msg_id": "fa3f96e5-759f-4d11-a767-073b49491c7e",
+        "text": "But some of our devs saw something broken in v1 on canton 3.3  \/ splice 0.4.0 about filters AFAIR",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749113494.391299",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EygsC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But some of our devs saw something broken in v1 on canton 3.3  \/ splice 0.4.0 about filters AFAIR"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749113880.928429",
+        "client_msg_id": "cc2c7240-7df1-445f-a82c-fc90f4240c67",
+        "text": "So even if it is still there ...",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749113494.391299",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ywmA\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So even if it is still there ..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0657NCJTL6",
+        "type": "message",
+        "ts": "1749114126.721009",
+        "client_msg_id": "ef4b6aa6-7736-4bc4-95b7-8f3c4326e08c",
+        "text": "Oh yeah, worked around those broken filters",
+        "team": "T05FWTX7PMG",
+        "user_team": "TG7HQBZHC",
+        "source_team": "TG7HQBZHC",
+        "user_profile": {
+            "avatar_hash": "23a8ab0e9c1f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-13\/6182401578549_23a8ab0e9c1f2dcedf48_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Zipnik",
+            "display_name": "alex.zipnik",
+            "team": "TG7HQBZHC",
+            "name": "alex.zipnik",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749113494.391299",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lWwbj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oh yeah, worked around those broken filters"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0657NCJTL6",
+        "type": "message",
+        "ts": "1749120755.409799",
+        "client_msg_id": "da8d75f4-f9a4-404b-b26c-b29fa2d2b144",
+        "text": "Thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "TG7HQBZHC",
+        "source_team": "TG7HQBZHC",
+        "user_profile": {
+            "avatar_hash": "23a8ab0e9c1f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-13\/6182401578549_23a8ab0e9c1f2dcedf48_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Zipnik",
+            "display_name": "alex.zipnik",
+            "team": "TG7HQBZHC",
+            "name": "alex.zipnik",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749113621.487389",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AjPto",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06BXPXULH4",
+        "type": "message",
+        "ts": "1749122071.380239",
+        "client_msg_id": "2da0774c-3e94-407f-8eab-06387f326a8c",
+        "text": "<@U03HMUTQ5F0> can you please confirm the necessary steps in case of a total wipeout? :pray:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NMQYT5QQ",
+        "source_team": "T04NMQYT5QQ",
+        "user_profile": {
+            "avatar_hash": "e054a18ad2db",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-01-09\/6436264963798_e054a18ad2db52ea3e2a_72.png",
+            "first_name": "Carsten",
+            "real_name": "Carsten Hermann",
+            "display_name": "Carsten Hermann",
+            "team": "T04NMQYT5QQ",
+            "name": "carsten.hermann",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749055690.999719",
+        "parent_user_id": "U06BXPXULH4",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0jPfw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " can you please confirm the necessary steps in case of a total wipeout? "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray",
+                                "unicode": "1f64f"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02MB2DBSBV",
+        "type": "message",
+        "ts": "1749124047.388969",
+        "client_msg_id": "5810e8e9-b9d7-4074-aa9b-beb0bf8fe877",
+        "text": "Hey, is there someone we should ping to process this request?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7T5YE9MY",
+        "source_team": "T7T5YE9MY",
+        "user_profile": {
+            "avatar_hash": "961dbcecff3a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-08-31\/4028778024737_961dbcecff3a3cfd75ef_72.jpg",
+            "first_name": "Matthieu",
+            "real_name": "Matthieu Moquet",
+            "display_name": "MattKetmo",
+            "team": "T7T5YE9MY",
+            "name": "matthieu.moquet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749052248.968299",
+        "parent_user_id": "U02MB2DBSBV",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4qoEg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey, is there someone we should ping to process this request?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08U64U3LMC",
+        "type": "message",
+        "ts": "1749126358.507549",
+        "client_msg_id": "217172b0-31c5-4f47-9aaf-d5f2875cf00c",
+        "text": "By the way, governance data can also be seen at <https:\/\/docs.dev.global.canton.network.sync.global\/voterequests> . Latest one being *Upgrade Daml models, to apply CIPs 47 &amp; 56*. I am personally excited to start playing with the new Token Standard.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08U64U2X4N",
+        "source_team": "T08U64U2X4N",
+        "user_profile": {
+            "avatar_hash": "gc00dd9578aa",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/46d1216a2dea3625e61a110593f5d253.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0011-72.png",
+            "first_name": "ruddyg",
+            "real_name": "ruddyg",
+            "display_name": "Ruddy G.",
+            "team": "T08U64U2X4N",
+            "name": "ruddyg",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749126358.507549",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1749127239.991229",
+        "reply_users": [
+            "U01DARYACCT"
+        ],
+        "replies": [
+            {
+                "user": "U01DARYACCT",
+                "ts": "1749127239.991229"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uOGRT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "By the way, governance data can also be seen at "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.global.canton.network.sync.global\/voterequests"
+                            },
+                            {
+                                "type": "text",
+                                "text": " . Latest one being "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Upgrade Daml models, to apply CIPs 47 & 56",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". I am personally excited to start playing with the new Token Standard."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "rocket",
+                "users": [
+                    "U08USC3615M"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U06BXPXULH4",
+        "type": "message",
+        "ts": "1749126897.248659",
+        "client_msg_id": "4B5F4684-87BA-4687-B960-7E84CC0FB42A",
+        "text": "Thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NMQYT5QQ",
+        "source_team": "T04NMQYT5QQ",
+        "user_profile": {
+            "avatar_hash": "e054a18ad2db",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-01-09\/6436264963798_e054a18ad2db52ea3e2a_72.png",
+            "first_name": "Carsten",
+            "real_name": "Carsten Hermann",
+            "display_name": "Carsten Hermann",
+            "team": "T04NMQYT5QQ",
+            "name": "carsten.hermann",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749055690.999719",
+        "parent_user_id": "U06BXPXULH4",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rcxlo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01DARYACCT",
+        "type": "message",
+        "ts": "1749127239.991229",
+        "client_msg_id": "1273AF26-4442-4A3C-92A9-84325EB5EAA9",
+        "text": "To be precise: the endpoint provides information on ongoing vote requests but not historical ones.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E014GLQD2NN",
+        "source_team": "E014GLQD2NN",
+        "user_profile": {
+            "avatar_hash": "889d6e9cb5ee",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-10-04\/783644907056_889d6e9cb5ee13fbff83_72.jpg",
+            "first_name": "Stas",
+            "real_name": "Stas German",
+            "display_name": "stasge",
+            "team": "E014GLQD2NN",
+            "name": "stasge",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749126358.507549",
+        "parent_user_id": "U08U64U3LMC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "P0oZA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "To be precise: the endpoint provides information on ongoing vote requests but not historical ones."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "truth",
+                "users": [
+                    "U03HMUTQ5F0"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "Hello we are testing the recovery from identity dump for dev net using the new 0.4.0 version and we are getting this error:\n&gt; ```{\"@timestamp\":\"2025-06-05T12:36:09.941Z\",\"@version\":\"1\",\"message\":\"The operation 'Check whether Required dars are uploaded' has failed with an exception. Retrying after a number of 39 failures, and after 3697 milliseconds. \",\"logger_name\":\"o.l.s.s.ParticipantPartyMigrator:validator=validator_backend\",\"thread_name\":\"canton-env-ec-23\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"22f868e7d70d599e\",\"span-parent-id\":\"4a11d9e122b05fa0\",\"trace-id\":\"49d01eca7b4dd28e0e3d50a22c2b4a24\",\"span-name\":\"dars_uploaded\"}```\nLonger stacktrace in file\nAny idea of what might be causing this?",
+        "files": [
+            {
+                "id": "F08VC68KRFV",
+                "created": 1749127628,
+                "timestamp": 1749127628,
+                "name": "error.log",
+                "title": "error.log",
+                "mimetype": "text\/plain",
+                "filetype": "text",
+                "pretty_type": "Plain Text",
+                "user": "UHX3ED37W",
+                "user_team": "TFSSVGK6F",
+                "editable": true,
+                "size": 5823,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/TFSSVGK6F-F08VC68KRFV\/error.log?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/TFSSVGK6F-F08VC68KRFV\/download\/error.log?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/intellecteu.slack.com\/files\/U05FZBDQ4RJ\/F08VC68KRFV\/error.log",
+                "permalink_public": "https:\/\/slack-files.com\/TFSSVGK6F-F08VC68KRFV-7532b930a9",
+                "edit_link": "https:\/\/intellecteu.slack.com\/files\/U05FZBDQ4RJ\/F08VC68KRFV\/error.log\/edit",
+                "source_team": "TFSSVGK6F",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "UHX3ED37W",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "m\/R61",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello we are testing the recovery from identity dump for dev net using the new 0.4.0 version and we are getting this error:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"@timestamp\":\"2025-06-05T12:36:09.941Z\",\"@version\":\"1\",\"message\":\"The operation 'Check whether Required dars are uploaded' has failed with an exception. Retrying after a number of 39 failures, and after 3697 milliseconds. \",\"logger_name\":\"o.l.s.s.ParticipantPartyMigrator:validator=validator_backend\",\"thread_name\":\"canton-env-ec-23\",\"level\":\"INFO\",\"level_value\":20000,\"span-id\":\"22f868e7d70d599e\",\"span-parent-id\":\"4a11d9e122b05fa0\",\"trace-id\":\"49d01eca7b4dd28e0e3d50a22c2b4a24\",\"span-name\":\"dars_uploaded\"}"
+                            }
+                        ],
+                        "border": 1
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Longer stacktrace in file\nAny idea of what might be causing this?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1749127733.273989",
+        "client_msg_id": "940036cc-4d35-4f79-af9b-364e27c69855",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1749127733.273989",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1749137630.829279",
+        "reply_users": [
+            "UHX3ED37W"
+        ],
+        "replies": [
+            {
+                "user": "UHX3ED37W",
+                "ts": "1749137016.426909"
+            },
+            {
+                "user": "UHX3ED37W",
+                "ts": "1749137630.829279"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "89572047e3a9",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-02-05\/937771079712_89572047e3a9ea385fef_72.png",
+            "first_name": "",
+            "real_name": "Farid Aly",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "farid.aly",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U08TT70NSR2",
+        "type": "message",
+        "ts": "1749129229.041179",
+        "client_msg_id": "1f1d8be3-1c2b-4f96-9b35-712004de6eb2",
+        "text": "<@U07RAA1UGJK> <@U03QSP8LP9T> any insight?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T064QR7KSMS",
+        "source_team": "T064QR7KSMS",
+        "user_profile": {
+            "avatar_hash": "g86f5ce3f8ac",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/86f5ce3f8acf1fee7a6ce71922b95ac9.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-72.png",
+            "first_name": "Andy",
+            "real_name": "Andy Mei",
+            "display_name": "",
+            "team": "T064QR7KSMS",
+            "name": "andy.mei",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748606482.727899",
+        "parent_user_id": "U08TT70NSR2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wfVvl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U07RAA1UGJK"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03QSP8LP9T"
+                            },
+                            {
+                                "type": "text",
+                                "text": " any insight?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749129409.046119",
+        "client_msg_id": "6e39b230-a413-4bb1-8adf-05a0c06ed9e8",
+        "text": "Hey folks, is there any UI or tool available to retrieve all transactions from the validator to an external wallet? Alternatively, does anyone have a script to query the validator for this, ideally covering the past couple of months.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "reply_count": 30,
+        "reply_users_count": 6,
+        "latest_reply": "1749638598.875489",
+        "reply_users": [
+            "U0702NSFW0H",
+            "U08AG8GNV0B",
+            "U038NJU34F2",
+            "U08JYBDSK0V",
+            "U08FTDY23HN",
+            "U089Z230N7R"
+        ],
+        "replies": [
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749129415.128599"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749129461.371849"
+            },
+            {
+                "user": "U08AG8GNV0B",
+                "ts": "1749129809.512969"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749129887.885139"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130209.932979"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130231.533999"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130238.330899"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130252.268039"
+            },
+            {
+                "user": "U038NJU34F2",
+                "ts": "1749130267.945969"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130401.420949"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130416.204349"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130464.502849"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130473.270509"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130515.517729"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130562.765839"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130592.853939"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130604.804249"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130624.723269"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130681.628349"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130753.913299"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749130821.944119"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749135083.262469"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749135167.918289"
+            },
+            {
+                "user": "U08AG8GNV0B",
+                "ts": "1749135228.756259"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1749135497.890399"
+            },
+            {
+                "user": "U08JYBDSK0V",
+                "ts": "1749196649.601889"
+            },
+            {
+                "user": "U08FTDY23HN",
+                "ts": "1749464564.220419"
+            },
+            {
+                "user": "U089Z230N7R",
+                "ts": "1749568205.359029"
+            },
+            {
+                "user": "U089Z230N7R",
+                "ts": "1749635495.447939"
+            },
+            {
+                "user": "U089Z230N7R",
+                "ts": "1749638598.875489"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sw2G1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey folks, is there any UI or tool available to retrieve all transactions from the validator to an external wallet? Alternatively, does anyone have a script to query the validator for this, ideally covering the past couple of months."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749129415.128599",
+        "client_msg_id": "f450b326-94f2-4dd4-a8a9-d53bb4cedf98",
+        "text": "CC: <@U03HMUTQ5F0>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FAhDL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CC: "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749129461.371849",
+        "client_msg_id": "35c3d332-5416-4d4f-a408-7549144ef827",
+        "text": "btw, is `api\/validator\/v0\/wallet\/transactions` the right API?... is there any limit in historical data?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dU6mO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "btw, is "
+                            },
+                            {
+                                "type": "text",
+                                "text": "api\/validator\/v0\/wallet\/transactions",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " the right API?... is there any limit in historical data?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08AG8GNV0B",
+        "type": "message",
+        "ts": "1749129809.512969",
+        "edited": {
+            "user": "U08AG8GNV0B",
+            "ts": "1749129987.000000"
+        },
+        "client_msg_id": "B4C230F6-CA5C-4834-8CC2-7749C660B933",
+        "text": "can confirm using that transaction endpoint is confusing. possible but complex :joy:  - good to know about that endpoint!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08A9NBLPHC",
+        "source_team": "T08A9NBLPHC",
+        "user_profile": {
+            "avatar_hash": "e6f97c3ebd5a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-01-27\/8379301531456_e6f97c3ebd5a276ee463_72.png",
+            "first_name": "Tom",
+            "real_name": "Tom S",
+            "display_name": "Tom (Sekoya Labs)",
+            "team": "T08A9NBLPHC",
+            "name": "tom",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "a5mEy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "can confirm using that "
+                            },
+                            {
+                                "type": "text",
+                                "text": "transaction "
+                            },
+                            {
+                                "type": "text",
+                                "text": "endpoint is confusing. possible but complex "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "joy",
+                                "unicode": "1f602"
+                            },
+                            {
+                                "type": "text",
+                                "text": "  - good to know about that endpoint!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749129887.885139",
+        "client_msg_id": "16687c14-48c4-4a93-be86-e807c1661576",
+        "text": "&gt; The easiest approach is to filter the \/updates history by partyID. (edited)\nwhere? what's the API endpoint?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OxImp",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The easiest approach is to filter the \/updates history by partyID. (edited)"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "where? what's the API endpoint?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130209.932979",
+        "client_msg_id": "d8b64436-9bb3-4e9d-b7eb-5ddc1ee70bd1",
+        "text": "we don't run a scan app",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "r5Mhd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "we don't run a scan app"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130231.533999",
+        "client_msg_id": "79a9f25a-71d4-4858-833e-ebaddb8f56c7",
+        "text": "oh god! ok ok",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+Lmdc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "oh god! ok ok"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130238.330899",
+        "client_msg_id": "e3f11aa8-ce91-49a9-b1b1-dd8876848571",
+        "text": ":smile:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QmSgQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "smile",
+                                "unicode": "1f604"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130252.268039",
+        "client_msg_id": "64c68b2d-40bf-43fd-93cc-d2e124771d7e",
+        "text": "yes! we can run... but currently we don't",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "U\/VkT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes! we can run... but currently we don't"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U038NJU34F2",
+        "type": "message",
+        "ts": "1749130267.945969",
+        "client_msg_id": "1C457751-E4B0-49CA-9B3F-2CBA5450D660",
+        "text": "Hey <@U0702NSFW0H> - Bitwave is a featured app on the network and an accounting tool that enables the tracking of all transactions on Canton. \n\nOur integration will pull all activity since inception and we have a bunch of other functionalities that I’d be happy to share as well.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7C92V0SX",
+        "source_team": "T7C92V0SX",
+        "user_profile": {
+            "avatar_hash": "2346687c6f9d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-03-21\/3256613749927_2346687c6f9d81c27256_72.jpg",
+            "first_name": "Adam",
+            "real_name": "Adam Keller",
+            "display_name": "",
+            "team": "T7C92V0SX",
+            "name": "adam.keller",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SjZKJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0702NSFW0H"
+                            },
+                            {
+                                "type": "text",
+                                "text": " - Bitwave is a featured app on the network and an accounting tool that enables the tracking of all transactions on Canton. \n\nOur integration will pull all activity since inception and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "we"
+                            },
+                            {
+                                "type": "text",
+                                "text": " have a bunch of other functionalities that "
+                            },
+                            {
+                                "type": "text",
+                                "text": "I’d"
+                            },
+                            {
+                                "type": "text",
+                                "text": " be happy to share as well."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130401.420949",
+        "client_msg_id": "e1c342e8-5349-406f-990d-bd312afb227a",
+        "text": "currently we don't run the Scan API!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CIgGl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "currently we don't run the Scan API!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130416.204349",
+        "client_msg_id": "c3dc0326-9a79-467a-a763-70987d5528c5",
+        "text": "We will deploy it together with the other services",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DfoQd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We will deploy it together with the other services"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130464.502849",
+        "client_msg_id": "86c6722d-323a-405b-af56-d30f8c6db17e",
+        "text": "oh yes, we can access it",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OImaZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "oh yes, we can access it"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130473.270509",
+        "client_msg_id": "d2c3834a-939f-42e3-87fd-7b98d985365f",
+        "text": "``` curl -X POST <https:\/\/scan.sv-1.global.canton.network.c7.digital\/v1\/updates>  -H \"Content-Type: application\/json\"\n&lt;html&gt;\n&lt;head&gt;&lt;title&gt;405 Not Allowed&lt;\/title&gt;&lt;\/head&gt;\n&lt;body&gt;\n&lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;\/h1&gt;&lt;\/center&gt;\n&lt;hr&gt;&lt;center&gt;nginx\/1.26.3&lt;\/center&gt;\n&lt;\/body&gt;\n&lt;\/html&gt;```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1+J\/H",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " curl -X POST "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-1.global.canton.network.c7.digital\/v1\/updates"
+                            },
+                            {
+                                "type": "text",
+                                "text": "  -H \"Content-Type: application\/json\"\n<html>\n<head><title>405 Not Allowed<\/title><\/head>\n<body>\n<center><h1>405 Not Allowed<\/h1><\/center>\n<hr><center>nginx\/1.26.3<\/center>\n<\/body>\n<\/html>"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130515.517729",
+        "client_msg_id": "bc481933-a385-47c3-b91b-5ba1959ae266",
+        "text": "yes our mainnet node is whitelisted",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zCmWM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes our mainnet node is whitelisted"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130562.765839",
+        "edited": {
+            "user": "U0702NSFW0H",
+            "ts": "1749130569.000000"
+        },
+        "client_msg_id": "75364914-1c61-41c1-bfd3-3bed4fafed69",
+        "text": "the endpoints are responding:\n```curl <https:\/\/scan.sv-2.global.canton.network.digitalasset.com>\n<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" \/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" \/>\n    <meta name=\"theme-color\" content=\"#000000\" \/>\n    <link rel=\"preconnect\" href=\"<https:\/\/fonts.googleapis.com>\" \/>\n    <link rel=\"preconnect\" href=\"<https:\/\/fonts.gstatic.com>\" crossorigin \/>\n    <link\n      href=\"<https:\/\/fonts.googleapis.com\/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@500;700&display=swap>\"\n      rel=\"stylesheet\"\n    \/>\n\n    <!--\n      Frontend configuration. Not part of the bundled application code,\n      so that operators can change the config without having to rebuild\n      the application.\n     -->\n    <script src=\"\/config.js\"><\/script>\n    <script type=\"module\" crossorigin src=\"\/assets\/index-BzPpTfsu.js\"><\/script>\n    <link rel=\"stylesheet\" crossorigin href=\"\/assets\/index-Cj-tVDnD.css\">\n  <\/head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.<\/noscript>\n    <div id=\"root\"><\/div>\n  <\/body>\n<\/html>```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "76Fbc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the endpoints are responding:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-2.global.canton.network.digitalasset.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" \/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" \/>\n    <meta name=\"theme-color\" content=\"#000000\" \/>\n    <link rel=\"preconnect\" href=\""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/fonts.googleapis.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\" \/>\n    <link rel=\"preconnect\" href=\""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/fonts.gstatic.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\" crossorigin \/>\n    <link\n      href=\""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/fonts.googleapis.com\/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@500;700&display=swap"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"\n      rel=\"stylesheet\"\n    \/>\n\n    <!--\n      Frontend configuration. Not part of the bundled application code,\n      so that operators can change the config without having to rebuild\n      the application.\n     -->\n    <script src=\"\/config.js\"><\/script>\n    <script type=\"module\" crossorigin src=\"\/assets\/index-BzPpTfsu.js\"><\/script>\n    <link rel=\"stylesheet\" crossorigin href=\"\/assets\/index-Cj-tVDnD.css\">\n  <\/head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.<\/noscript>\n    <div id=\"root\"><\/div>\n  <\/body>\n<\/html>"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130592.853939",
+        "client_msg_id": "bd41a41d-b468-4b2f-bec6-ffa5a4131826",
+        "text": "I'm doing the request from the same network where our mainnet node is deployed",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7gz+P",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'm doing the request from the same network where our mainnet node is deployed"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130604.804249",
+        "client_msg_id": "cee5e606-e0cd-455d-ad01-d25bd187952a",
+        "text": "I'm getting answers as you can see above",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KP3Ht",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'm getting answers as you can see above"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130624.723269",
+        "client_msg_id": "a45c7a4e-4cc9-4ad8-abfc-f09e67976825",
+        "text": "from my laptop, i'm unable to get any answer :slightly_smiling_face:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "S+bIl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "from my laptop, i'm unable to get any answer "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130681.628349",
+        "client_msg_id": "1ceed30e-e002-4806-b906-26f0fed88655",
+        "text": "yes, makes sense",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4Dq+b",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes, makes sense"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130753.913299",
+        "client_msg_id": "5d226c23-58c4-4102-bdd0-d321ae243c81",
+        "text": "still getting 405:\n\n```curl -X POST <https:\/\/scan.sv-1.global.canton.network.c7.digital\/api\/v1\/updates>   -H \"Content-Type: application\/json\"   -d '{\n    \"after\": {\n        \"after_migration_id\": 1,\n        \"after_record_time\": \"2025-06-05T00:00:00Z\"\n    },\n    \"page_size\": 1,\n    \"daml_value_encoding\": \"compact_json\"\n  }'\n&lt;html&gt;\n&lt;head&gt;&lt;title&gt;405 Not Allowed&lt;\/title&gt;&lt;\/head&gt;\n&lt;body&gt;\n&lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;\/h1&gt;&lt;\/center&gt;\n&lt;hr&gt;&lt;center&gt;nginx\/1.26.3&lt;\/center&gt;\n&lt;\/body&gt;\n&lt;\/html&gt;```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oqxUU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "still getting 405:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl -X POST "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-1.global.canton.network.c7.digital\/api\/v1\/updates"
+                            },
+                            {
+                                "type": "text",
+                                "text": "   -H \"Content-Type: application\/json\"   -d '{\n    \"after\": {\n        \"after_migration_id\": 1,\n        \"after_record_time\": \"2025-06-05T00:00:00Z\"\n    },\n    \"page_size\": 1,\n    \"daml_value_encoding\": \"compact_json\"\n  }'\n<html>\n<head><title>405 Not Allowed<\/title><\/head>\n<body>\n<center><h1>405 Not Allowed<\/h1><\/center>\n<hr><center>nginx\/1.26.3<\/center>\n<\/body>\n<\/html>"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749130821.944119",
+        "client_msg_id": "4597da51-ea66-409a-8062-aafba12d1d46",
+        "text": "yes, I'm",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6aQr2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes, I'm"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*gaurav* from *Hashrupt* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749134860.865749",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iZNZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "gaurav",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Hashrupt",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749135083.262469",
+        "client_msg_id": "c5966e82-3eca-49d8-aeb7-2d2511a4d22b",
+        "text": "it works :smile:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0FlJA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "it works "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile",
+                                "unicode": "1f604"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749135167.918289",
+        "client_msg_id": "0272507d-3884-47ba-b3b5-9680d58cdaf5",
+        "text": "yes, please! I might need to create a simple app to get our historical transactions!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hGzoa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes, please! I might need to create a simple app to get our historical transactions!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08AG8GNV0B",
+        "type": "message",
+        "ts": "1749135228.756259",
+        "client_msg_id": "F0216557-D9D7-4679-A40D-BAE77C35F7F3",
+        "text": "<@U03HMUTQ5F0> can I get added as well? ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08A9NBLPHC",
+        "source_team": "T08A9NBLPHC",
+        "user_profile": {
+            "avatar_hash": "e6f97c3ebd5a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-01-27\/8379301531456_e6f97c3ebd5a276ee463_72.png",
+            "first_name": "Tom",
+            "real_name": "Tom S",
+            "display_name": "Tom (Sekoya Labs)",
+            "team": "T08A9NBLPHC",
+            "name": "tom",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UqI\/S",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " can I get added as well? "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U03HMUTQ5F0"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1749135497.890399",
+        "client_msg_id": "a9170880-54f2-4fe2-93cc-054e0ac10290",
+        "text": "oh thanks! that will help me to create my python script!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "91bJD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "oh thanks! that will help me to create my python script!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "Here is the list of existing dars",
+        "files": [
+            {
+                "id": "F090745KYDQ",
+                "created": 1749136965,
+                "timestamp": 1749136965,
+                "name": "dars.txt",
+                "title": "dars.txt",
+                "mimetype": "text\/plain",
+                "filetype": "text",
+                "pretty_type": "Plain Text",
+                "user": "UHX3ED37W",
+                "user_team": "TFSSVGK6F",
+                "editable": true,
+                "size": 3803,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/TFSSVGK6F-F090745KYDQ\/dars.txt?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/TFSSVGK6F-F090745KYDQ\/download\/dars.txt?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/intellecteu.slack.com\/files\/U05FZBDQ4RJ\/F090745KYDQ\/dars.txt",
+                "permalink_public": "https:\/\/slack-files.com\/TFSSVGK6F-F090745KYDQ-d24db28dfa",
+                "edit_link": "https:\/\/intellecteu.slack.com\/files\/U05FZBDQ4RJ\/F090745KYDQ\/dars.txt\/edit",
+                "source_team": "TFSSVGK6F",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "UHX3ED37W",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7N6RS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Here is the list of existing dars"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1749137016.426909",
+        "client_msg_id": "81ae97e7-8401-41ab-8228-e529a504bbf8",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1749127733.273989",
+        "parent_user_id": "UHX3ED37W",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "89572047e3a9",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-02-05\/937771079712_89572047e3a9ea385fef_72.png",
+            "first_name": "",
+            "real_name": "Farid Aly",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "farid.aly",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "UHX3ED37W",
+        "type": "message",
+        "ts": "1749137630.829279",
+        "client_msg_id": "9138db38-b339-4b35-9b72-bd9134fc105d",
+        "text": "Thanks for looking into this quickly\nThis is validator was just created for testing so no need",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "89572047e3a9",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-02-05\/937771079712_89572047e3a9ea385fef_72.png",
+            "first_name": "",
+            "real_name": "Farid Aly",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "farid.aly",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749127733.273989",
+        "parent_user_id": "UHX3ED37W",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eYCfp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for looking into this quickly\nThis is validator was just created for testing so no need"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1749137830.460439",
+        "client_msg_id": "34b2b5ac-6590-4aed-82cd-d5eb6b5d6d75",
+        "text": "thank you <@UEHLS0JUB> .\n\nwe're setting a dev env for a team.  i was wondering if the ledger API(port 7575 is safe to expose for web dev instead? it offers seems all functionality of grpc endpoint, while it also support authentication.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749083297.996059",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7b27S",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thank you "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " .\n\nwe're setting a dev env for a team.  i was wondering if the ledger API(port 7575 is safe to expose for web dev instead? it offers seems all functionality of grpc endpoint, while it also support authentication."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01DARYACCT",
+        "type": "message",
+        "ts": "1749182020.466659",
+        "client_msg_id": "cb28ebf8-a16c-4549-becf-c3d06a202d27",
+        "text": "<@U01TZB7MFFA> <https:\/\/github.com\/hyperledger-labs\/splice\/issues\/927>",
+        "team": "T05FWTX7PMG",
+        "user_team": "E014GLQD2NN",
+        "source_team": "E014GLQD2NN",
+        "user_profile": {
+            "avatar_hash": "889d6e9cb5ee",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-10-04\/783644907056_889d6e9cb5ee13fbff83_72.jpg",
+            "first_name": "Stas",
+            "real_name": "Stas German",
+            "display_name": "stasge",
+            "team": "E014GLQD2NN",
+            "name": "stasge",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749028213.543099",
+        "parent_user_id": "U01TZB7MFFA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ydLjW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U01TZB7MFFA"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/issues\/927"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08S2SBQN7R",
+        "type": "message",
+        "ts": "1749185427.997919",
+        "client_msg_id": "c15d6f2d-39b8-4bdf-8a70-7f0ac9b55b11",
+        "text": "Can somebody get me invited to the engineering channel, or wherever I can ask engineering-related questions? <@U03HMUTQ5F0> <@U02SR6E8Z9S>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08P4C3EP26",
+        "source_team": "T08P4C3EP26",
+        "user_profile": {
+            "avatar_hash": "cabbba0f98c1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-15\/8894157012086_cabbba0f98c1ee1ffebf_72.png",
+            "first_name": "Paul",
+            "real_name": "Paul Wilkinson",
+            "display_name": "Paul",
+            "team": "T08P4C3EP26",
+            "name": "paul.w",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749185427.997919",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1749189257.635369",
+        "reply_users": [
+            "U01DARYACCT",
+            "U08S2SBQN7R"
+        ],
+        "replies": [
+            {
+                "user": "U01DARYACCT",
+                "ts": "1749185879.547239"
+            },
+            {
+                "user": "U08S2SBQN7R",
+                "ts": "1749189257.635369"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WhXfC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Can somebody get me invited to the engineering channel, or wherever I can ask engineering-related questions? "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02SR6E8Z9S"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01DARYACCT",
+        "type": "message",
+        "ts": "1749185879.547239",
+        "client_msg_id": "5e8ed861-3f74-43d4-9540-c2e1670b3e94",
+        "text": "I'd say this is the right channel unless you mean something different",
+        "team": "T05FWTX7PMG",
+        "user_team": "E014GLQD2NN",
+        "source_team": "E014GLQD2NN",
+        "user_profile": {
+            "avatar_hash": "889d6e9cb5ee",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-10-04\/783644907056_889d6e9cb5ee13fbff83_72.jpg",
+            "first_name": "Stas",
+            "real_name": "Stas German",
+            "display_name": "stasge",
+            "team": "E014GLQD2NN",
+            "name": "stasge",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749185427.997919",
+        "parent_user_id": "U08S2SBQN7R",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WImIW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'd say this is the right channel unless you mean something different"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "thread_broadcast",
+        "user": "U08S2SBQN7R",
+        "thread_ts": "1749185427.997919",
+        "root": {
+            "user": "U08S2SBQN7R",
+            "type": "message",
+            "ts": "1749185427.997919",
+            "client_msg_id": "c15d6f2d-39b8-4bdf-8a70-7f0ac9b55b11",
+            "text": "Can somebody get me invited to the engineering channel, or wherever I can ask engineering-related questions? <@U03HMUTQ5F0> <@U02SR6E8Z9S>",
+            "team": "T05FWTX7PMG",
+            "user_team": "T08P4C3EP26",
+            "source_team": "T08P4C3EP26",
+            "user_profile": {
+                "avatar_hash": "cabbba0f98c1",
+                "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-15\/8894157012086_cabbba0f98c1ee1ffebf_72.png",
+                "first_name": "Paul",
+                "real_name": "Paul Wilkinson",
+                "display_name": "Paul",
+                "team": "T08P4C3EP26",
+                "name": "paul.w",
+                "is_restricted": false,
+                "is_ultra_restricted": false
+            },
+            "thread_ts": "1749185427.997919",
+            "reply_count": 2,
+            "reply_users_count": 2,
+            "latest_reply": "1749189257.635369",
+            "reply_users": [
+                "U01DARYACCT",
+                "U08S2SBQN7R"
+            ],
+            "replies": [
+                {
+                    "user": "U01DARYACCT",
+                    "ts": "1749185879.547239"
+                },
+                {
+                    "user": "U08S2SBQN7R",
+                    "ts": "1749189257.635369"
+                }
+            ],
+            "is_locked": false,
+            "subscribed": false,
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "WhXfC",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "Can somebody get me invited to the engineering channel, or wherever I can ask engineering-related questions? "
+                                },
+                                {
+                                    "type": "user",
+                                    "user_id": "U03HMUTQ5F0"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": " "
+                                },
+                                {
+                                    "type": "user",
+                                    "user_id": "U02SR6E8Z9S"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "language": {
+                "locale": "en",
+                "is_reliable": true
+            }
+        },
+        "type": "message",
+        "ts": "1749189257.635369",
+        "client_msg_id": "53c4e010-f6ce-466f-986d-f32a4502a9e1",
+        "text": "Hi all,\nI’m trying to get choices working in our node\/ts back end. We are on SDK 3.3-snapshot. I’m creating the contract using submit-and-wait. How do I get the contract id?\n\nThe typescript packages for 3.3 aren’t working for me so I haven’t been able stream updates using the updateId and completionOffset returned by submit-and-wait.\n\n  \"@daml\/ledger\": \"3.3.0-snapshot.20250409.13730.0.v6972616a\",\n  \"@daml\/types\": \"3.3.0-snapshot.20250409.13730.0.v6972616a\",\n\nI also tried the ledger v2 apis but \/create is giving me a 404.\n\nCan somebody point me in the right direction?",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7uQuS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all,\nI’m trying to get choices working in our node\/ts back end. We are on SDK 3.3-snapshot. I’m creating the contract using submit-and-wait. How do I get the contract id?\n\nThe typescript packages for 3.3 aren’t working for me so I haven’t been able stream updates using the updateId and completionOffset returned by submit-and-wait.\n\n  \"@daml\/ledger\": \"3.3.0-snapshot.20250409.13730.0.v6972616a\",\n  \"@daml\/types\": \"3.3.0-snapshot.20250409.13730.0.v6972616a\",\n\nI also tried the ledger v2 apis but \/create is giving me a 404.\n\nCan somebody point me in the right direction?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1749190116.414929",
+        "client_msg_id": "d57ee2eb-f397-46f4-89be-d95e9330c851",
+        "text": "thanks Aunt. i already saw some different, the gRPC offer way more detail in some endpoint, especially around dar file.\n\nwe're already going back to grpc now and will also setup vpn to protect the ledger json REST API.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749083297.996059",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pRo9B",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks Aunt. i already saw some different, the gRPC offer way more detail in some endpoint, especially around dar file.\n\nwe're already going back to grpc now and will also setup vpn to protect the ledger json REST API."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

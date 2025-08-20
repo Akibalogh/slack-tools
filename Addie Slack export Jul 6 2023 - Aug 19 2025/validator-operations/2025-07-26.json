@@ -1,0 +1,189 @@
+[
+    {
+        "text": "Hi Team, i've started devnet instance using docker compose with this command\n```sudo .\/start.sh -s \"<https:\/\/sv.sv-1.dev.global.canton.network.fivenorth.io>\" -o \"*******\" -p \"cypherock-devnet-1\" -m \"0\" -w```\nip is whitelisted and still facing the instance status unhealthy\n```CONTAINER ID   IMAGE                                                                             COMMAND                  CREATED          STATUS                      PORTS                                 NAMES\n3c042b899002   nginx:1.27.1                                                                      \"\/docker-entrypoint.…\"   17 minutes ago   Up 17 minutes (healthy)     0.0.0.0:80-&gt;80\/tcp, [::]:80-&gt;80\/tcp   splice-validator-nginx-1\nf5e7b46d904d   <http:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/validator-app:0.4.8|ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/validator-app:0.4.8>        \"\/usr\/bin\/tini -- \/a…\"   17 minutes ago   Up 17 minutes (unhealthy)   5003\/tcp, 10013\/tcp                   splice-validator-validator-1\n7b0ed4610e3e   <http:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/canton-participant:0.4.8|ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/canton-participant:0.4.8>   \"\/usr\/bin\/tini -- \/a…\"   17 minutes ago   Up 17 minutes (healthy)     5001-5002\/tcp, 7575\/tcp, 10013\/tcp    splice-validator-participant-1\nf104b986703b   <http:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/ans-web-ui:0.4.8|ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/ans-web-ui:0.4.8>           \"\/usr\/bin\/tini -- \/c…\"   17 minutes ago   Up 17 minutes (healthy)     80\/tcp                                splice-validator-ans-web-ui-1\n498e85e3c53a   postgres:14                                                                       \"\/postgres-entrypoin…\"   17 minutes ago   Up 17 minutes (healthy)     5432\/tcp                              splice-validator-postgres-splice-1\n07bc23f2f9bf   <http:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/wallet-web-ui:0.4.8|ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/wallet-web-ui:0.4.8>        \"\/usr\/bin\/tini -- \/c…\"   17 minutes ago   Up 17 minutes (healthy)     80\/tcp                                splice-validator-wallet-web-ui-1```\nhere are the logs for `splice-validator-validator-1`",
+        "files": [
+            {
+                "id": "F097FFU9519",
+                "created": 1753514114,
+                "timestamp": 1753514114,
+                "name": "logs.txt",
+                "title": "logs.txt",
+                "mimetype": "text\/plain",
+                "filetype": "text",
+                "pretty_type": "Plain Text",
+                "user": "U03D1BMST6H",
+                "user_team": "T03D47QTA58",
+                "editable": true,
+                "size": 231757,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T03D47QTA58-F097FFU9519\/logs.txt?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T03D47QTA58-F097FFU9519\/download\/logs.txt?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/cypherock-workspace.slack.com\/files\/U05FZBDQ4RJ\/F097FFU9519\/logs.txt",
+                "permalink_public": "https:\/\/slack-files.com\/T03D47QTA58-F097FFU9519-67ce830847",
+                "edit_link": "https:\/\/cypherock-workspace.slack.com\/files\/U05FZBDQ4RJ\/F097FFU9519\/logs.txt\/edit",
+                "source_team": "T03D47QTA58",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U03D1BMST6H",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LGS90",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Team, i've started devnet instance using docker compose with this command\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "sudo .\/start.sh -s \""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/sv.sv-1.dev.global.canton.network.fivenorth.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\" -o \"*******\" -p \"cypherock-devnet-1\" -m \"0\" -w"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ip is whitelisted and still facing the instance status unhealthy\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CONTAINER ID   IMAGE                                                                             COMMAND                  CREATED          STATUS                      PORTS                                 NAMES\n3c042b899002   nginx:1.27.1                                                                      \"\/docker-entrypoint.…\"   17 minutes ago   Up 17 minutes (healthy)     0.0.0.0:80->80\/tcp, [::]:80->80\/tcp   splice-validator-nginx-1\nf5e7b46d904d   ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/validator-app:0.4.8        \"\/usr\/bin\/tini -- \/a…\"   17 minutes ago   Up 17 minutes (unhealthy)   5003\/tcp, 10013\/tcp                   splice-validator-validator-1\n7b0ed4610e3e   ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/canton-participant:0.4.8   \"\/usr\/bin\/tini -- \/a…\"   17 minutes ago   Up 17 minutes (healthy)     5001-5002\/tcp, 7575\/tcp, 10013\/tcp    splice-validator-participant-1\nf104b986703b   ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/ans-web-ui:0.4.8           \"\/usr\/bin\/tini -- \/c…\"   17 minutes ago   Up 17 minutes (healthy)     80\/tcp                                splice-validator-ans-web-ui-1\n498e85e3c53a   postgres:14                                                                       \"\/postgres-entrypoin…\"   17 minutes ago   Up 17 minutes (healthy)     5432\/tcp                              splice-validator-postgres-splice-1\n07bc23f2f9bf   ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/wallet-web-ui:0.4.8        \"\/usr\/bin\/tini -- \/c…\"   17 minutes ago   Up 17 minutes (healthy)     80\/tcp                                splice-validator-wallet-web-ui-1"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "here are the logs for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "splice-validator-validator-1",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1753514126.591429",
+        "client_msg_id": "5b016f86-b744-4f9d-b586-5257dd20c854",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1753514126.591429",
+        "reply_count": 11,
+        "reply_users_count": 3,
+        "latest_reply": "1753779927.739279",
+        "reply_users": [
+            "U03DGSX17HP",
+            "U08987JD1J9",
+            "U03D1BMST6H"
+        ],
+        "replies": [
+            {
+                "user": "U03DGSX17HP",
+                "ts": "1753777385.028719"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1753779373.543969"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1753779374.447769"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1753779417.880919"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1753779424.837889"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1753779445.409499"
+            },
+            {
+                "user": "U03D1BMST6H",
+                "ts": "1753779463.148319"
+            },
+            {
+                "user": "U03D1BMST6H",
+                "ts": "1753779722.409899"
+            },
+            {
+                "user": "U03D1BMST6H",
+                "ts": "1753779737.420419"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1753779910.948619"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1753779927.739279"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T03D47QTA58",
+        "source_team": "T03D47QTA58",
+        "user_profile": {
+            "avatar_hash": "227a73f2fbba",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-05-13\/3545060370128_227a73f2fbbae9d17e77_72.jpg",
+            "first_name": "Suraj",
+            "real_name": "Suraj Tiwari",
+            "display_name": "Suraj Tiwari",
+            "team": "T03D47QTA58",
+            "name": "suraj",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

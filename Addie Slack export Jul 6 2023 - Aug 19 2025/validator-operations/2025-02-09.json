@@ -1,0 +1,230 @@
+[
+    {
+        "user": "U01DARYACCT",
+        "type": "message",
+        "ts": "1739166257.280329",
+        "client_msg_id": "a8ce1aea-dd4c-4125-9c09-1f577642b648",
+        "text": "I have questions about \"autoAcceptTransfer\" and \"pre-approve incoming direct transfers of canton coin\"\n• I'm guessing that autoAcceptTransfer is an active acceptance while the other one would work even if a validator is offline. Is this correct?\n• Regardless of whether the above is correct or not, are there any other difference\/benefits between the two options other than ability to whitelist senders when using autoAcceptTransfer option?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E014GLQD2NN",
+        "source_team": "E014GLQD2NN",
+        "user_profile": {
+            "avatar_hash": "889d6e9cb5ee",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-10-04\/783644907056_889d6e9cb5ee13fbff83_72.jpg",
+            "first_name": "Stas",
+            "real_name": "Stas German",
+            "display_name": "stasge",
+            "team": "E014GLQD2NN",
+            "name": "stasge",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1739166257.280329",
+        "reply_count": 6,
+        "reply_users_count": 1,
+        "latest_reply": "1739435903.548639",
+        "reply_users": [
+            "U01DARYACCT"
+        ],
+        "replies": [
+            {
+                "user": "U01DARYACCT",
+                "ts": "1739173603.518719"
+            },
+            {
+                "user": "U01DARYACCT",
+                "ts": "1739173613.441179"
+            },
+            {
+                "user": "U01DARYACCT",
+                "ts": "1739173724.799789"
+            },
+            {
+                "user": "U01DARYACCT",
+                "ts": "1739174859.743559"
+            },
+            {
+                "user": "U01DARYACCT",
+                "ts": "1739434222.540779"
+            },
+            {
+                "user": "U01DARYACCT",
+                "ts": "1739435903.548639"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DxawA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I have questions about \"autoAcceptTransfer\" and \"pre-approve incoming direct transfers of canton coin\"\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I'm guessing that autoAcceptTransfer is an active acceptance while the other one would work even if a validator is offline. Is this correct?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Regardless of whether the above is correct or not, are there any other difference\/benefits between the two options other than ability to whitelist senders when using autoAcceptTransfer option?"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01DARYACCT",
+        "type": "message",
+        "ts": "1739173603.518719",
+        "client_msg_id": "be6b0b75-ef11-46f0-88cd-4d5f33348e79",
+        "text": "I see. Thank you.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E014GLQD2NN",
+        "source_team": "E014GLQD2NN",
+        "user_profile": {
+            "avatar_hash": "889d6e9cb5ee",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-10-04\/783644907056_889d6e9cb5ee13fbff83_72.jpg",
+            "first_name": "Stas",
+            "real_name": "Stas German",
+            "display_name": "stasge",
+            "team": "E014GLQD2NN",
+            "name": "stasge",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1739166257.280329",
+        "parent_user_id": "U01DARYACCT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dlLI0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I see. Thank you."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01DARYACCT",
+        "type": "message",
+        "ts": "1739173613.441179",
+        "client_msg_id": "482fab16-f7e4-41d3-9958-46d5bbae672c",
+        "text": "keep\n&gt; Aunt Moritz  [4:21 PM]\n&gt; Auto accept is equivalent to clicking the accept button in the UI. So there are three Daml transactions involved: create offer (requires the sender to be confirm but not the receiver), accept offer (requires confirmation from both), transfer (requires confirmation from both).\n&gt; Pre-approve sets up the preapproval once but then the transfer is only a single transaction to transfer (requires confirmation from both).\n&gt; Pre-approval is better in terms of traffic costs and it works well with external signing for the receiver.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E014GLQD2NN",
+        "source_team": "E014GLQD2NN",
+        "user_profile": {
+            "avatar_hash": "889d6e9cb5ee",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-10-04\/783644907056_889d6e9cb5ee13fbff83_72.jpg",
+            "first_name": "Stas",
+            "real_name": "Stas German",
+            "display_name": "stasge",
+            "team": "E014GLQD2NN",
+            "name": "stasge",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1739166257.280329",
+        "parent_user_id": "U01DARYACCT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4hKRe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "keep\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Aunt Moritz  [4:21 PM]\nAuto accept is equivalent to clicking the accept button in the UI. So there are three Daml transactions involved: create offer (requires the sender to be confirm but not the receiver), accept offer (requires confirmation from both), transfer (requires confirmation from both).\nPre-approve sets up the preapproval once but then the transfer is only a single transaction to transfer (requires confirmation from both).\nPre-approval is better in terms of traffic costs and it works well with external signing for the receiver."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01DARYACCT",
+        "type": "message",
+        "ts": "1739173724.799789",
+        "client_msg_id": "0d5fe387-10eb-4741-980b-8885bc2ef522",
+        "text": "I would guess that in case of pre-approval receiving validator app doesn't have to be alive (but the participant still has to be alive)?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E014GLQD2NN",
+        "source_team": "E014GLQD2NN",
+        "user_profile": {
+            "avatar_hash": "889d6e9cb5ee",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2019-10-04\/783644907056_889d6e9cb5ee13fbff83_72.jpg",
+            "first_name": "Stas",
+            "real_name": "Stas German",
+            "display_name": "stasge",
+            "team": "E014GLQD2NN",
+            "name": "stasge",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1739166257.280329",
+        "parent_user_id": "U01DARYACCT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "C5A5l",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I would guess that in case of pre-approval receiving validator app doesn't have to be alive (but the participant still has to be alive)?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

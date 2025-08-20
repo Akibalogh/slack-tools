@@ -1,0 +1,510 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753606847.919829",
+        "client_msg_id": "74e7bb23-88a6-4813-a448-21d7a0cfd737",
+        "text": "Cool. Let me know how I can help. What's the local development flow look like rn? I will be flying today so also limited time, but somehow we should get it out there",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ESjtT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Cool. Let me know how I can help. What's the local development flow look like rn? I will be flying today so also limited time, but somehow we should get it out there"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753607076.092619",
+        "client_msg_id": "e181693d-ca62-4c02-8ddf-6781b6456941",
+        "text": "how do you imagine we launch the -admin project, both backend\/frontend together, single docker with nginx entrypoint?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uRgWx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "how do you imagine we launch the -admin project, both backend\/frontend together, single docker with nginx entrypoint?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753617188.248789",
+        "client_msg_id": "85b11ec1-7b78-4f87-9559-0f8bf1d653a0",
+        "text": "Stable branch: <https:\/\/github.com\/DLC-link\/canton-billing-admin\/tree\/frontend-v2-vibe-code>\n\nThe local development:\nThere is a docker-compose with a postgres, you can start it, then billing-admin with cargo run and then cd into the frontend v2 and npm i &amp;&amp; npm run dev. The <http:\/\/env.rs|env.rs> has the configuration and default values, there is two default which is filled with XXX, because I didn't want to push it out. That should be good for local development for now.\n\nDeployment:\nYes you can use single docker with nginx proxy_pass, but later I want to change it to embed the static files into the binary and serve them from there. But that is not urgent.\n\nThere is a branch for the canton-billing as well: <https:\/\/github.com\/DLC-link\/canton-billing\/pull\/4> It still uses the env var, but also reads from the database, so backward compatible.\n\nHeads up about monday:\nI will drive, because my flight was delayed and I wasn't brave enough to drive from 6AM. So I started to drive late to make it in a day.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KYy4X",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Stable branch: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton-billing-admin\/tree\/frontend-v2-vibe-code"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nThe local development:\nThere is a docker-compose with a postgres, you can start it, then billing-admin with cargo run and then cd into the frontend v2 and npm i && npm run dev. The "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/env.rs",
+                                "text": "env.rs"
+                            },
+                            {
+                                "type": "text",
+                                "text": " has the configuration and default values, there is two default which is filled with XXX, because I didn't want to push it out. That should be good for local development for now.\n\nDeployment:\nYes you can use single docker with nginx proxy_pass, but later I want to change it to embed the static files into the binary and serve them from there. But that is not urgent.\n\nThere is a branch for the canton-billing as well: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton-billing\/pull\/4"
+                            },
+                            {
+                                "type": "text",
+                                "text": " It still uses the env var, but also reads from the database, so backward compatible.\n\nHeads up about monday:\nI will drive, because my flight was delayed and I wasn't brave enough to drive from 6AM. So I started to drive late to make it in a day."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "fire",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753617222.401339",
+        "client_msg_id": "e6b6fede-7f56-444e-80d8-8e89a6a941bf",
+        "text": "If you need help, just ping me and I will try to answer it or stop and answer it.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fhwzX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If you need help, just ping me and I will try to answer it or stop and answer it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753621625.461749",
+        "client_msg_id": "CF1C4E22-FBA4-4955-AA18-6F605A7F738C",
+        "text": "External ID can be optional. Because ad far as I saw we add it as annotation and I didnt use it anywhere in the system. What is the purpose of it? cc <@U088UV6MKFE> ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ttN69",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "External ID can be optional. Because ad far as I saw we add it as annotation and I didnt use it anywhere in the system. What is the purpose of it? cc "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753622095.376809",
+        "client_msg_id": "b563525e-d21e-4926-8980-b00f9fa1f3aa",
+        "text": "Its planned to be used to know:\n• the actual 'holder' of this credential. \n• where to send rewards back to\nIf it's not there, we will do these two things off-ledger",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rTpiB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Its planned to be used to know:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "the actual 'holder' of this credential. "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "where to send rewards back to"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nIf it's not there, we will do these two things off-ledger"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753647436.968769",
+        "edited": {
+            "user": "U093Q4FPEJG",
+            "ts": "1753647658.000000"
+        },
+        "client_msg_id": "b09dfca8-286b-4607-b481-cd23ccee9c00",
+        "text": "I did a few modifications so it is much easier to build.\n\n• If you go into the frontend-v2 folder and do a `nvm use`  (to use the right node), `npm i`  and `npm run build` it will create the frontend-v2\/build.\n• The rust will compile all the static files from the frontend-v2\/build into the binary so we don't have to copy paste them, we only move the binary and we get the files as well.\n• The rust serve the files on root `\/` so if you do localhost:8080 it will open the frontend-v2.\n• I added a Dockerfile, but it's not mandatory. It shows you how you can build it.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "isB3h",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I did a few modifications so it is much easier to build.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "If you go into the frontend-v2 folder and do a "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "nvm use",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "  (to use the right node), "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "npm i",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "  and "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "npm run build",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " it will create the frontend-v2\/build."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "The rust will compile all the static files from the frontend-v2\/build into the binary so we don't have to copy paste them, we only move the binary and we get the files as well."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "The rust serve the files on root "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "\/",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " so if you do localhost:8080 it will open the frontend-v2."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I added a Dockerfile, but it's not mandatory. It shows you how you can build it."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753649018.076789",
+        "client_msg_id": "9963e145-0934-456e-b07b-2cdabf4270fb",
+        "text": "Last note:\n• I modified the frontend-v2 api base, so if you build it to custom domain that should be good to go.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vGsLT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Last note:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I modified the frontend-v2 api base, so if you build it to custom domain that should be good to go."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    }
+]

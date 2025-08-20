@@ -1,0 +1,209 @@
+[
+    {
+        "user": "U08LNCUMZFZ",
+        "type": "message",
+        "ts": "1751744866.413069",
+        "client_msg_id": "c4cc6c0b-9cd5-4207-a21d-7f4eddd3f47b",
+        "text": "After updating my local copy of `cn-quickstart` ( via `git pull origin`), I can no longer build it.  For example, `make install-daml-sdk` fails with\n```Could not resolve all files for configuration ':backend:runtimeClasspath'.\n&gt; Could not resolve com.daml:transcode-codegen-java-runtime:0.0.1-main.20250423.81.473.vde10c4f.\n  Required by:\n      project :backend\n   &gt; Could not resolve com.daml:transcode-codegen-java-runtime:0.0.1-main.20250423.81.473.vde10c4f.\n      &gt; Could not get resource '<https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codegen-java-runtime\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codegen-java-runtime-0.0.1-main.20250423.81.473.vde10c4f.pom>'.```\nI do have credentials for jfrog. I've confirmed that `curl --netrc <https:\/\/digitalasset.jfrog.io\/artifactory\/api\/system\/ping>` responds \"OK\".\n\nCould it be that I don't have permission to download the latest version of jfrog artifacts?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07LSPYDRT4",
+        "source_team": "T07LSPYDRT4",
+        "user_profile": {
+            "avatar_hash": "42c1973fa2ac",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-08\/8853145187271_42c1973fa2ac213295ad_72.png",
+            "first_name": "David",
+            "real_name": "David Cohen",
+            "display_name": "David Cohen",
+            "team": "T07LSPYDRT4",
+            "name": "dnc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751744866.413069",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1753099836.423799",
+        "reply_users": [
+            "U08LNCUMZFZ",
+            "U0724J67GSE"
+        ],
+        "replies": [
+            {
+                "user": "U08LNCUMZFZ",
+                "ts": "1751750724.793599"
+            },
+            {
+                "user": "U0724J67GSE",
+                "ts": "1751966789.035609"
+            },
+            {
+                "user": "U08LNCUMZFZ",
+                "ts": "1753045338.725409"
+            },
+            {
+                "user": "U0724J67GSE",
+                "ts": "1753082188.020079"
+            },
+            {
+                "user": "U08LNCUMZFZ",
+                "ts": "1753099836.423799"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UVjQ6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "After updating my local copy of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "cn-quickstart",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " ( via "
+                            },
+                            {
+                                "type": "text",
+                                "text": "git pull origin",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "), I can no longer build it.  For example, "
+                            },
+                            {
+                                "type": "text",
+                                "text": "make install-daml-sdk",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " fails with\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Could not resolve all files for configuration ':backend:runtimeClasspath'.\n> Could not resolve com.daml:transcode-codegen-java-runtime:0.0.1-main.20250423.81.473.vde10c4f.\n  Required by:\n      project :backend\n   > Could not resolve com.daml:transcode-codegen-java-runtime:0.0.1-main.20250423.81.473.vde10c4f.\n      > Could not get resource '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/digitalasset.jfrog.io\/artifactory\/libs-release-local\/com\/daml\/transcode-codegen-java-runtime\/0.0.1-main.20250423.81.473.vde10c4f\/transcode-codegen-java-runtime-0.0.1-main.20250423.81.473.vde10c4f.pom"
+                            },
+                            {
+                                "type": "text",
+                                "text": "'."
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I do have credentials for jfrog. I've confirmed that "
+                            },
+                            {
+                                "type": "text",
+                                "text": "curl --netrc ",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/digitalasset.jfrog.io\/artifactory\/api\/system\/ping",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " responds \"OK\".\n\nCould it be that I don't have permission to download the latest version of jfrog artifacts?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08LNCUMZFZ",
+        "type": "message",
+        "ts": "1751750724.793599",
+        "client_msg_id": "67f011e6-12b3-45fb-93c9-88e03af9c17d",
+        "text": "In case anyone else runs into this, try checking out the `splice-0.4.1` tag of the c-quickstart repo.  With that version, I'm not seeing the error.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07LSPYDRT4",
+        "source_team": "T07LSPYDRT4",
+        "user_profile": {
+            "avatar_hash": "42c1973fa2ac",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-08\/8853145187271_42c1973fa2ac213295ad_72.png",
+            "first_name": "David",
+            "real_name": "David Cohen",
+            "display_name": "David Cohen",
+            "team": "T07LSPYDRT4",
+            "name": "dnc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751744866.413069",
+        "parent_user_id": "U08LNCUMZFZ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KEt5T",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In case anyone else runs into this, try checking out the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "splice-0.4.1",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " tag of the c-quickstart repo.  With that version, I'm not seeing the error."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

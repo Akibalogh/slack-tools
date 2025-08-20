@@ -1,0 +1,193 @@
+[
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1748604824.859439",
+        "edited": {
+            "user": "U06TMPD96M8",
+            "ts": "1748605209.000000"
+        },
+        "client_msg_id": "323e9bc2-672b-4eb1-ba05-84fc46426ba4",
+        "text": "Following up on this. I see that the `TransferFactory_Transfer` event contains, among other data, the transfer `amount` and the `instrument`. However, the applied fees are only available in the `AmuletRules_Transfer` event. I'm trying to do a generic parsing for transfers of any instrument. To do so, I would like to know the following:\n1. Is this logic correct? If the instrument of the `TransferFactory_Transfer` event is `Amulet`, then look for the corresponding `AmuletRules_Transfer` event to gather the complete transaction details (fees, rewards, etc)\n2. When integrating a new instrument, we would need to know its corresponding event `choice` in order to look for the complete details, like we do for `Amulet` and the `AmuletRules_Transfer` event? Is there a more generic approach to not having to know the `choice` and the structure of the choice event for all instruments?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748529354.544649",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2tFJw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Following up on this. I see that the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "TransferFactory_Transfer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " event contains, among other data, the transfer "
+                            },
+                            {
+                                "type": "text",
+                                "text": "amount",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "instrument",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". However, the applied fees are only available in the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AmuletRules_Transfer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " event. I'm trying to do a generic parsing for transfers of any instrument. To do so, I would like to know the following:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Is this logic correct? If the instrument of the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "TransferFactory_Transfer",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " event is "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "Amulet",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ", then look for the corresponding "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "AmuletRules_Transfer",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " event to gather the complete transaction details (fees, rewards, etc)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "When integrating a new instrument, we would need to know its corresponding event "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "choice",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " in order to look for the complete details, like we do for "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "Amulet",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " and the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "AmuletRules_Transfer",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " event? Is there a more generic approach to not having to know the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "choice",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " and the structure of the choice event for all instruments?"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    }
+]

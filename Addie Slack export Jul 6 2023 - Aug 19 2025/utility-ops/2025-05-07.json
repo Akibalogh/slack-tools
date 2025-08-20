@@ -1,0 +1,339 @@
+[
+    {
+        "user": "U079U0X6G0Z",
+        "type": "message",
+        "ts": "1746601547.716749",
+        "client_msg_id": "ac4f0b08-842f-4b3d-9252-e6c61f8744e3",
+        "text": "<@U07RLFAF3TP> works properly, thx!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05G287EAP4",
+        "source_team": "T05G287EAP4",
+        "user_profile": {
+            "avatar_hash": "f8c447047a44",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-21\/9229571218452_f8c447047a449af13a99_72.png",
+            "first_name": "Lukasz",
+            "real_name": "Lukasz Wojnowski",
+            "display_name": "Lukasz Wojnowski",
+            "team": "T05G287EAP4",
+            "name": "lukasz.wojnowski",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746033578.099489",
+        "parent_user_id": "U079U0X6G0Z",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZIDTO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U07RLFAF3TP"
+                            },
+                            {
+                                "type": "text",
+                                "text": " works properly, thx!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U07RLFAF3TP",
+                    "U04BDUU197Z"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U04RWTP1TA5",
+        "type": "message",
+        "ts": "1746614547.795739",
+        "client_msg_id": "14e71b6e-c8d5-4b14-8776-abe8e3913c95",
+        "text": "Hi Ben, it started working after my last patch to the participant service. (I think, i'm not 100p sure)\n\nThis is the backend config I added to k8s for health checks\n```apiVersion: <http:\/\/cloud.google.com\/v1|cloud.google.com\/v1>\nkind: BackendConfig\nmetadata:\n  name: participant-backend-config\n  namespace: validator\nspec:\n  healthCheck:\n    checkIntervalSec: 15\n    timeoutSec: 5\n    healthyThreshold: 1\n    unhealthyThreshold: 2\n    type: HTTP\n    requestPath: \/api\/json-api\/v2\/version\n    port: 7575```\nI added the following to participant-values.yaml\n```jsonApiServerPathPrefix: \"\/api\/json-api\"\npod:\n  annotations:\n    <http:\/\/cloud.google.com\/backend-config|cloud.google.com\/backend-config>: '{\"default\": \"participant-backend-config\"}'```\nAnd then I ran this command to patch the service as well (service manifest below)\n```apiVersion: v1\nkind: Service\nmetadata:\n  name: participant\n  namespace: validator\n  annotations:\n    <http:\/\/cloud.google.com\/backend-config|cloud.google.com\/backend-config>: '{\"default\": \"participant-backend-config\"}'```\n```kubectl patch service participant -n validator --patch-file participant-service-patch.yaml```\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7C92V0SX",
+        "source_team": "T7C92V0SX",
+        "user_profile": {
+            "avatar_hash": "fe1f628a036c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-03-31\/5047504318020_fe1f628a036c4d88e09c_72.png",
+            "first_name": "Raag",
+            "real_name": "Raag Naidu",
+            "display_name": "raag.naidu",
+            "team": "T7C92V0SX",
+            "name": "raag.naidu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746556269.925909",
+        "parent_user_id": "U04RWTP1TA5",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iGQO0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Ben, it started working after my last patch to the participant service. (I think, i'm not 100p sure)\n\nThis is the backend config I added to k8s for health checks\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "apiVersion: cloud.google.com\/v1\nkind: BackendConfig\nmetadata:\n  name: participant-backend-config\n  namespace: validator\nspec:\n  healthCheck:\n    checkIntervalSec: 15\n    timeoutSec: 5\n    healthyThreshold: 1\n    unhealthyThreshold: 2\n    type: HTTP\n    requestPath: \/api\/json-api\/v2\/version\n    port: 7575"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nI added the following to participant-values.yaml\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "jsonApiServerPathPrefix: \"\/api\/json-api\"\npod:\n  annotations:\n    cloud.google.com\/backend-config: '{\"default\": \"participant-backend-config\"}'"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nAnd then I ran this command to patch the service as well (service manifest below)\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "apiVersion: v1\nkind: Service\nmetadata:\n  name: participant\n  namespace: validator\n  annotations:\n    cloud.google.com\/backend-config: '{\"default\": \"participant-backend-config\"}'"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "kubectl patch service participant -n validator --patch-file participant-service-patch.yaml"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0657NCJTL6",
+        "type": "message",
+        "ts": "1746685604.183869",
+        "client_msg_id": "f70aaac7-8659-41d3-af69-abdd551403a1",
+        "text": "Hi, we've installed everything from scratch but something isn't working.\nThe `Credentials` on the provider is spinning.\nI see a call to `active-contracts` fails:\n```{\n    \"code\": \"NA\",\n    \"cause\": \"A security-sensitive error has been received\",\n    \"correlationId\": \"6c8e909e1df6dd34077283023c945cc5\",\n    \"traceId\": \"6c8e909e1df6dd34077283023c945cc5\",\n    \"context\": {},\n    \"resources\": [],\n    \"errorCategory\": -1,\n    \"grpcCodeValue\": 7,\n    \"retryInfo\": null,\n    \"definiteAnswer\": null\n}```\nPlease advise.",
+        "team": "T05FWTX7PMG",
+        "user_team": "TG7HQBZHC",
+        "source_team": "TG7HQBZHC",
+        "user_profile": {
+            "avatar_hash": "23a8ab0e9c1f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-13\/6182401578549_23a8ab0e9c1f2dcedf48_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Zipnik",
+            "display_name": "alex.zipnik",
+            "team": "TG7HQBZHC",
+            "name": "alex.zipnik",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746685604.183869",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1746686389.677299",
+        "reply_users": [
+            "U0657NCJTL6"
+        ],
+        "replies": [
+            {
+                "user": "U0657NCJTL6",
+                "ts": "1746686389.677299"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vuViD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, we've installed everything from scratch but something isn't working.\nThe "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Credentials",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " on the provider is spinning.\nI see a call to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "active-contracts ",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "fails:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"code\": \"NA\",\n    \"cause\": \"A security-sensitive error has been received\",\n    \"correlationId\": \"6c8e909e1df6dd34077283023c945cc5\",\n    \"traceId\": \"6c8e909e1df6dd34077283023c945cc5\",\n    \"context\": {},\n    \"resources\": [],\n    \"errorCategory\": -1,\n    \"grpcCodeValue\": 7,\n    \"retryInfo\": null,\n    \"definiteAnswer\": null\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nPlease advise."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U03T4L2ENVA",
+        "text": "<@U03T4L2ENVA> has joined the channel",
+        "inviter": "U7U2XB4BG",
+        "type": "message",
+        "ts": "1746686071.285489",
+        "team": "T05FWTX7PMG"
+    },
+    {
+        "user": "U0657NCJTL6",
+        "type": "message",
+        "ts": "1746686389.677299",
+        "client_msg_id": "81f6e84c-1d5b-4af8-8fe8-d29510a4253e",
+        "text": "Thanks.\nLooks like the issue does not reproduce this morning.\n<@U03T4L2ENVA> fyi",
+        "team": "T05FWTX7PMG",
+        "user_team": "TG7HQBZHC",
+        "source_team": "TG7HQBZHC",
+        "user_profile": {
+            "avatar_hash": "23a8ab0e9c1f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-13\/6182401578549_23a8ab0e9c1f2dcedf48_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Zipnik",
+            "display_name": "alex.zipnik",
+            "team": "TG7HQBZHC",
+            "name": "alex.zipnik",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746685604.183869",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4ACso",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks.\nLooks like the issue does not reproduce this morning.\n"
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03T4L2ENVA"
+                            },
+                            {
+                                "type": "text",
+                                "text": " fyi"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U03T4L2ENVA"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

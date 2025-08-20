@@ -1,0 +1,631 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750058937.911719",
+        "client_msg_id": "58590180-fae1-4d5a-8364-7ef4645f1e0a",
+        "text": "yes nice, I was thinking something similar. We have an API used for fetching configurations and other data for all sorts of things, so we might just put it there. But the Attestors could also work indeed",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749819630.142829",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OTayC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes nice, I was thinking something similar. We have an API used for fetching configurations and other data for all sorts of things, so we might just put it there. But the Attestors could also work indeed"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750059639.797199",
+        "client_msg_id": "b31c23e6-7091-458d-ae96-6fb20bb7c9ec",
+        "text": "Thanks!\n\nUnfortunately if I specify _any_ keys in that list, I get this error (this is when I specify just one, but i get a similar error if i specify both):\n```2025-06-16 09:36:09,266 [canton-env-ec-139] INFO  c.d.c.p.s.m.InMemorySyncPersistentState$$anon$1:participant=participant2\/synchronizerId=synchronizer::122048da0b97 tid:fef49d749364b0d01f8a6021fede749c - TOPOLOGY_NO_APPROPRIATE_SIGNING_KEY_IN_STORE(11,fef49d74): Could not find an appropriate signing key to issue the topology transaction err-context:{location=TopologyManager.scala:612, required=ReferencedAuthorizations(namespaces = 1220d49dc1fe..., extraKeys = Set(12205d46b825..., 1220be48ed80..., 12208ae4cb17...)), unusable=List(1220dda47715...)} ```\nI wonder if the 'store' is reset between script runs, or if there is one other step missing here...",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749627205.924459",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dq59b",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks!\n\nUnfortunately if I specify "
+                            },
+                            {
+                                "type": "text",
+                                "text": "any",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " keys in that list, I get this error (this is when I specify just one, but i get a similar error if i specify both):\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "2025-06-16 09:36:09,266 [canton-env-ec-139] INFO  c.d.c.p.s.m.InMemorySyncPersistentState$$anon$1:participant=participant2\/synchronizerId=synchronizer::122048da0b97 tid:fef49d749364b0d01f8a6021fede749c - TOPOLOGY_NO_APPROPRIATE_SIGNING_KEY_IN_STORE(11,fef49d74): Could not find an appropriate signing key to issue the topology transaction err-context:{location=TopologyManager.scala:612, required=ReferencedAuthorizations(namespaces = 1220d49dc1fe..., extraKeys = Set(12205d46b825..., 1220be48ed80..., 12208ae4cb17...)), unusable=List(1220dda47715...)} "
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nI wonder if the 'store' is reset between script runs, or if there is one other step missing here..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F091Z4KJXUH",
+                "created": 1750059900,
+                "timestamp": 1750059900,
+                "name": "canton.log",
+                "title": "canton.log",
+                "mimetype": "application\/octet-stream",
+                "filetype": "binary",
+                "pretty_type": "Binary",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 5200161,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F091Z4KJXUH\/canton.log?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F091Z4KJXUH\/download\/canton.log?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F091Z4KJXUH\/canton.log",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F091Z4KJXUH-8620b17731",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1750059907.665709",
+        "client_msg_id": "375c41b6-34ae-4807-9689-c6a26592d094",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1749627205.924459",
+        "parent_user_id": "U088UV6MKFE",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750059937.573169",
+        "client_msg_id": "84bea774-556f-4e4a-852f-2729cf89ad11",
+        "text": "And here is how its signed: <https:\/\/github.com\/DLC-link\/canton\/blob\/06a0065431439b29ab9788ca315689a2a37e9000\/releases\/0.0.1\/step_2\/02_SignProposals.sc#L76>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749627205.924459",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8n7KB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And here is how its signed: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton\/blob\/06a0065431439b29ab9788ca315689a2a37e9000\/releases\/0.0.1\/step_2\/02_SignProposals.sc#L76"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750060043.740869",
+        "client_msg_id": "4675b11a-156d-45ba-ae43-d28ab5a5f5d3",
+        "text": "Its worth noting that when I run these in the same 'canton' instance, it works without specifying anything. So obviously then it can load the implicit keys itself. But when its in this separate script, something is lost",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749627205.924459",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hg3xZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Its worth noting that when I run these in the same 'canton' instance, it works without specifying anything. So obviously then it can load the implicit keys itself. But when its in this separate script, something is lost"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750065469.301009",
+        "client_msg_id": "1b23697b-2e22-447a-b89a-940ef56f9d70",
+        "text": "Huh well I might need more links to figure this out :slightly_smiling_face:\n\nHow is the `app` object created in these scripts, or how else should I set it up?\nSimilarly for other methods, like `createCredential`  and `getProviderOnboardingRequirements`, `getRegistrarOnboardingRequirements` , `getHolderOnboardingRequirements` -- I think I can figure these out slowly based on the choice arguments, but maybe you could just share?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749625037.555849",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+F0K6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Huh well I might need more links to figure this out "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nHow is the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "app",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " object created in these scripts, or how else should I set it up?\nSimilarly for other methods, like "
+                            },
+                            {
+                                "type": "text",
+                                "text": "createCredential",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "getProviderOnboardingRequirements",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", "
+                            },
+                            {
+                                "type": "text",
+                                "text": "getRegistrarOnboardingRequirements",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " , "
+                            },
+                            {
+                                "type": "text",
+                                "text": "getHolderOnboardingRequirements",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " -- I think I can figure these out slowly based on the choice arguments, but maybe you could just share?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750080000.682639",
+        "client_msg_id": "1ca89a5e-7d62-457a-9ec1-3d92ec0a4eeb",
+        "text": "How do I update a User using the `participant.ledger_api.users.update`?\n\nHow do I create such a FieldMask?\n```val attestor1 = participant1.parties.find(\"attestor1\")\n\nparticipant1.ledger_api.users.create(id = \"CoordinatorUser\", actAs = Set(attestor1), readAs = Set(attestor1), primaryParty = Some(attestor1), participantAdmin = false, annotations = Map(\"description\" -&gt; \"Attestor Coordinator\"))\n\nval partyId = participant1.parties.find(\"decentralized-party\")\n\n\/\/ this doesnt work\nparticipant1.ledger_api.users.update(id = \"CoordinatorUser\", modifier = Seq(actAs = Set(attestor1, partyId), readAs = Set(attestor1, partyId)))```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750080000.682639",
+        "reply_count": 0,
+        "reply_users_count": 0,
+        "latest_reply": "0000000000.000000",
+        "reply_users": [],
+        "replies": [],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YjEHe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "How do I update a User using the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "participant.ledger_api.users.update",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "?\n\nHow do I create such a FieldMask?\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "val attestor1 = participant1.parties.find(\"attestor1\")\n\nparticipant1.ledger_api.users.create(id = \"CoordinatorUser\", actAs = Set(attestor1), readAs = Set(attestor1), primaryParty = Some(attestor1), participantAdmin = false, annotations = Map(\"description\" -> \"Attestor Coordinator\"))\n\nval partyId = participant1.parties.find(\"decentralized-party\")\n\n\/\/ this doesnt work\nparticipant1.ledger_api.users.update(id = \"CoordinatorUser\", modifier = Seq(actAs = Set(attestor1, partyId), readAs = Set(attestor1, partyId)))"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750081258.215719",
+        "client_msg_id": "9c03fd61-acca-4a22-9e60-6fdcc4f676e4",
+        "text": "So it worked (i think) to split it into one more step, at least I see them show up successfully now:\n\n```participant1.topology.party_to_participant_mappings.list(synchronizerId, filterParty = partyId.filterString)\nres2: Seq[topology.ListPartyToParticipantResult] = Vector(\n  ListPartyToParticipantResult(\n    context = BaseResult(\n      storeId = Synchronizer(\n        id = synchronizer::1220579fdb53...\n      ),\n      validFrom = 2025-06-16T13:34:14.136888Z,\n      validUntil = None,\n      sequenced = 2025-06-16T13:34:13.886888Z,\n      operation = Replace,\n      transactionHash = &lt;ByteString@6d94a966 size=34 contents=\"\\022  q=\\312\\273\\034\\236\\202\\037m$\\347\\343.\\220\\261\\036\\2657.fH\\222\\210\\326*\\034B\\311#\\314\\316\"&gt;,\n      serial = PositiveNumeric(value = 1),\n      signedBy = Vector(\n        1220ef05a65a...,\n        122076bc5427...,\n        12200b970374...,\n        122087457c63...,\n        1220f1780246...\n      )\n    ),\n    item = PartyToParticipant(\n      decentralized-party::1220dea5d467...,\n      PositiveNumeric(2),\n      Vector(\n        HostingParticipant(\n          PAR::participant1::122076bc5427...,\n          Confirmation\n        ),\n        HostingParticipant(\n          PAR::participant2::122087457c63...,\n          Confirmation\n        ),\n        HostingParticipant(\n          PAR::participant3::1220ef05a65a...,\n          Confirmation\n        )\n      )\n    )\n  )\n)\n\n@\nparticipant1.topology.party_to_key_mappings.list(synchronizerId, filterParty = partyId.filterString)\nres3: Seq[topology.ListPartyToKeyMappingResult] = Vector(\n  ListPartyToKeyMappingResult(\n    context = BaseResult(\n      storeId = Synchronizer(\n        id = synchronizer::1220579fdb53...\n      ),\n      validFrom = 2025-06-16T13:34:15.334245Z,\n      validUntil = None,\n      sequenced = 2025-06-16T13:34:15.084245Z,\n      operation = Replace,\n      transactionHash = &lt;ByteString@b1f36e5 size=34 contents=\"\\022 \\374\\'\\211gH\\220\\215(-nB8$\\206\\336\\265.\\254$\\302\\016j:\\2311\\341`\\025]\\340;N\"&gt;,\n      serial = PositiveNumeric(value = 1),\n      signedBy = Vector(\n        12200b970374...,\n        1220f1780246...,\n        12206e9e917a...,\n        12209e6c67ca...,\n        1220c02981b1...\n      )\n    ),\n    item = PartyToKeyMapping(\n      decentralized-party::1220dea5d467...,\n      PositiveNumeric(2),\n      Vector(\n        SigningPublicKey(\n          id = 1220c02981b1...,\n          format = DER-encoded X.509 SubjectPublicKeyInfo,\n          keySpec = EC-Curve25519,\n          usage = Set(signing, proof-of-ownership)\n        ),\n        SigningPublicKey(\n          id = 12206e9e917a...,\n          format = DER-encoded X.509 SubjectPublicKeyInfo,\n          keySpec = EC-Curve25519,\n          usage = Set(signing, proof-of-ownership)\n        ),\n        SigningPublicKey(\n          id = 12209e6c67ca...,\n          format = DER-encoded X.509 SubjectPublicKeyInfo,\n          keySpec = EC-Curve25519,\n          usage = Set(signing, proof-of-ownership)\n        )\n      )\n    )\n  )\n)```\nBut now my contract creation submissions are failing :smile: Haven't touched those (but i might have to?) Gosh\n\n```2025-06-16 15:34:27,842 [canton-env-ec-42] DEBUG c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Request com.daml.ledger.api.v2.interactive.InteractiveSubmissionService\/ExecuteSubmission by \/127.0.0.1:55484: received a message ExecuteSubmissionRequest(\n  PreparedTransaction(\n    DamlTransaction(\n      2.1,\n      0,\n      Node(\n        0,\n        V1(\n          Node(\n            Create(\n              Create(\n                2.1,\n                002a8e7b044fc64dfc043ca24a0e4237651ddd1745039fb4b2060fb85aaefe5a32,\n                dibtc,\n                Identifier(3f38aa871509a9c147dfcb558156a28ee91ed51be040c27d26a71c397172932d, IBTC.DepositAccount, IBTCDepositAccountRules),\n                Value(\n                  Record(\n                    Record(\n                      Identifier(3f38aa871509a9c147dfcb558156a28ee91ed51be040c27d26a71c397172932d, IBTC.DepositAccount, IBTCDepositAccountRules),\n                      Vector(\n                        RecordField(registrar, Value(Party(decentralized-party::1220dea5d467fe2b963f97c47df06de7a48a07cb44094b26419141ea50cfce95643a))),\n                        RecordField(operator, Value(Party(operator::122076bc54279160bd83ed6748a0add312d83299cee2e25c6989bb68ef973a727c15))),\n                        RecordField(\n                          instrument,\n                          Value(\n                            Record(\n                              Record(\n                                Identifier(a83fb2d68f6f220f10da4e92146ff919ca9228fd467441e4c870b904ae9d516f, Utility.Registry.Holding.V0.Types, InstrumentIdentifier),\n                                Vector(\n                                  RecordField(source, Value(Party(decentralized-party::1220dea5d467fe2b963f97c47df06de7a48a07cb44094b26419141ea50cfce95643a))),\n                                  RecordField(id, Value(Text(cBTC))),\n                                  RecordField(scheme, Value(Text(Internal)))\n                                )\n                              )\n                            )\n                          )\n                        )\n                      )\n                    )\n                  )\n                ),\n                decentralized-party::1220dea5d467fe2b963f97c47df06de7a48a07cb44094b26419141ea50cfce95643a,\n                decentralized-party::1220dea5d467fe2b963f97c47df06de7a48a07cb44094b26419141ea50cfce95643a\n              )\n            )\n          )\n        )\n      ),\n      NodeSeed(0, ByteString)\n    ),\n    Metadata(\n      SubmitterInfo(decentralized-party::1220dea5d467fe2b963f97c47df06de7a48a07cb44094b26419141ea50cfce95643a, create-daR),\n      synchronizer::1220579fdb53b33a7fa4f6bd6f3b4da2c807985ba091c286692dafdf0eade29533a0,\n      0,\n      5dea6a84-6f78-4fd5-8e3d-dc392be824e9,\n      1750080858721796L,\n      Vector(),\n      None,\n      None,\n      Vector()\n    )\n  ),\n  PartySignatures(\n    SinglePartySignatures(\n      decentralized-party::1220dea5d467fe2b963f97c47df06de7a48a07cb44094b26419141ea50cfce95643a,\n      Vector(\n        Signature(SIGNATURE_FORMAT_CONCAT, ByteString, 12206e9e917a8547dabdd2d85e8a3d6b06cb4bfc85e150fb49d316303383dd8616ef, SIGNING_ALGORITHM_SPEC_ED25519),\n        Signature(SIGNATURE_FORMAT_CONCAT, ByteString, 12209e6c67caa2a1f3397ef114c1738fc63a9b69039dff2b1936c1d3a5359dde4aad, SIGNING_ALGORITHM_SPEC_ED25519),\n        Signature(SIGNATURE_FORMAT_CONCAT, ByteString, 1220c02981b1a813bd7ad008317fa8a5bda5e5e6c78bc3de0481a6762cc685971ff4, SIGNING_ALGORITHM_SPEC_ED25519)\n      )\n    )\n  ),\n  Empty,\n  bfec7d86-6d74-4972-8b7b-33320c539704,\n  CoordinatorUser,\n  HASHING_SCHEME_VERSION_V2,\n  None\n)\n  Request tid:22f0c25bed3e69512d3c2d39bdc503e2\n2025-06-16 15:34:27,848 [canton-env-ec-42] INFO  c.d.c.p.a.s.c.i.InteractiveSubmissionServiceImpl:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Requesting execution of daml transaction with submission ID bfec7d86-6d74-4972-8b7b-33320c539704\n2025-06-16 15:34:27,858 [canton-env-ec-145] DEBUG c.d.c.p.p.s.r.AdmissibleSynchronizersComputation:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Topology queried for the following synchronizers: Set(synchronizer::1220579fdb53...)\n2025-06-16 15:34:27,858 [canton-env-ec-145] DEBUG c.d.c.p.p.s.r.AdmissibleSynchronizersComputation:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Synchronizers with all submitters: Set(synchronizer::1220579fdb53...)\n2025-06-16 15:34:27,858 [canton-env-ec-145] DEBUG c.d.c.p.p.s.r.AdmissibleSynchronizersComputation:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Synchronizers with all informees: Set(synchronizer::1220579fdb53...)\n2025-06-16 15:34:27,858 [canton-env-ec-145] DEBUG c.d.c.p.p.s.r.AdmissibleSynchronizersComputation:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Checking whether one synchronizer in Set(synchronizer::1220579fdb53...) is suitable for submission\n2025-06-16 15:34:27,858 [canton-env-ec-171] DEBUG c.d.c.p.p.s.r.TransactionRoutingProcessor:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Choosing the synchronizer as single-synchronizer workflow for create-daR\n2025-06-16 15:34:27,861 [canton-env-ec-42] DEBUG c.d.c.p.s.CantonSyncService:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Received submit-transaction create-daR from ledger-api server\n2025-06-16 15:34:27,884 [canton-env-ec-152] DEBUG c.d.c.p.p.s.r.TransactionRoutingProcessor:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Routing the transaction to synchronizer synchronizer::1220579fdb53...\n2025-06-16 15:34:27,887 [canton-env-ec-171] DEBUG c.d.c.p.p.TransactionProcessor:participant=participant1\/synchronizerId=synchronizer::1220579fdb53 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Transaction: Preparing request submitters decentralized-party::1220dea5d467..., command-id create-daR\n2025-06-16 15:34:27,889 [canton-env-ec-161] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1\/synchronizerId=synchronizer::1220579fdb53 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Invalid signature for decentralized-party::1220dea5d467...: InvalidSignature(\n  signature = Signature(signature = 6dca4ce97754, signedBy = 12206e9e917a...),\n  bytes = ef9e145f9c93,\n  error = \"Failed to verify signature: java.security.GeneralSecurityException: Signature check failed.\"\n)\n2025-06-16 15:34:27,889 [canton-env-ec-161] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1\/synchronizerId=synchronizer::1220579fdb53 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Invalid signature for decentralized-party::1220dea5d467...: InvalidSignature(\n  signature = Signature(signature = 849808171079, signedBy = 12209e6c67ca...),\n  bytes = ef9e145f9c93,\n  error = \"Failed to verify signature: java.security.GeneralSecurityException: Signature check failed.\"\n)\n2025-06-16 15:34:27,889 [canton-env-ec-161] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1\/synchronizerId=synchronizer::1220579fdb53 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Invalid signature for decentralized-party::1220dea5d467...: InvalidSignature(\n  signature = Signature(signature = 77c3c9aa9b22, signedBy = 1220c02981b1...),\n  bytes = ef9e145f9c93,\n  error = \"Failed to verify signature: java.security.GeneralSecurityException: Signature check failed.\"\n)\n2025-06-16 15:34:27,891 [canton-env-ec-171] INFO  c.d.c.p.s.CantonSyncService:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - INVALID_EXTERNAL_SIGNATURE(8,22f0c25b): Provided external signatures are invalid: Received 0 valid signatures (3 invalid), but expected at least 2 valid for decentralized-party::1220dea5d467... err-context:{commandId=create-daR, details=Received 0 valid signatures (3 invalid), but expected at least 2 valid for decentralized-party::1220dea5d467..., location=TransactionRoutingProcessor.scala:370, synchronizerId=synchronizer::1220579fdb53..., userId=CoordinatorUser} \n2025-06-16 15:34:27,903 [canton-env-ec-171] INFO  c.d.c.p.a.s.c.i.InteractiveSubmissionServiceImpl:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Rejected: Submission failed with error INVALID_EXTERNAL_SIGNATURE(8,22f0c25b): Provided external signatures are invalid: Received 0 valid signatures (3 invalid), but expected at least 2 valid for decentralized-party::1220dea5d467...```\ni'll send logs in a minute",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749627205.924459",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tXfOX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So it worked (i think) to split it into one more step, at least I see them show up successfully now:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "participant1.topology.party_to_participant_mappings.list(synchronizerId, filterParty = partyId.filterString)\nres2: Seq[topology.ListPartyToParticipantResult] = Vector(\n  ListPartyToParticipantResult(\n    context = BaseResult(\n      storeId = Synchronizer(\n        id = synchronizer::1220579fdb53...\n      ),\n      validFrom = 2025-06-16T13:34:14.136888Z,\n      validUntil = None,\n      sequenced = 2025-06-16T13:34:13.886888Z,\n      operation = Replace,\n      transactionHash = <ByteString@6d94a966 size=34 contents=\"\\022  q=\\312\\273\\034\\236\\202\\037m$\\347\\343.\\220\\261\\036\\2657.fH\\222\\210\\326*\\034B\\311#\\314\\316\">,\n      serial = PositiveNumeric(value = 1),\n      signedBy = Vector(\n        1220ef05a65a...,\n        122076bc5427...,\n        12200b970374...,\n        122087457c63...,\n        1220f1780246...\n      )\n    ),\n    item = PartyToParticipant(\n      decentralized-party::1220dea5d467...,\n      PositiveNumeric(2),\n      Vector(\n        HostingParticipant(\n          PAR::participant1::122076bc5427...,\n          Confirmation\n        ),\n        HostingParticipant(\n          PAR::participant2::122087457c63...,\n          Confirmation\n        ),\n        HostingParticipant(\n          PAR::participant3::1220ef05a65a...,\n          Confirmation\n        )\n      )\n    )\n  )\n)\n\n@\nparticipant1.topology.party_to_key_mappings.list(synchronizerId, filterParty = partyId.filterString)\nres3: Seq[topology.ListPartyToKeyMappingResult] = Vector(\n  ListPartyToKeyMappingResult(\n    context = BaseResult(\n      storeId = Synchronizer(\n        id = synchronizer::1220579fdb53...\n      ),\n      validFrom = 2025-06-16T13:34:15.334245Z,\n      validUntil = None,\n      sequenced = 2025-06-16T13:34:15.084245Z,\n      operation = Replace,\n      transactionHash = <ByteString@b1f36e5 size=34 contents=\"\\022 \\374\\'\\211gH\\220\\215(-nB8$\\206\\336\\265.\\254$\\302\\016j:\\2311\\341`\\025]\\340;N\">,\n      serial = PositiveNumeric(value = 1),\n      signedBy = Vector(\n        12200b970374...,\n        1220f1780246...,\n        12206e9e917a...,\n        12209e6c67ca...,\n        1220c02981b1...\n      )\n    ),\n    item = PartyToKeyMapping(\n      decentralized-party::1220dea5d467...,\n      PositiveNumeric(2),\n      Vector(\n        SigningPublicKey(\n          id = 1220c02981b1...,\n          format = DER-encoded X.509 SubjectPublicKeyInfo,\n          keySpec = EC-Curve25519,\n          usage = Set(signing, proof-of-ownership)\n        ),\n        SigningPublicKey(\n          id = 12206e9e917a...,\n          format = DER-encoded X.509 SubjectPublicKeyInfo,\n          keySpec = EC-Curve25519,\n          usage = Set(signing, proof-of-ownership)\n        ),\n        SigningPublicKey(\n          id = 12209e6c67ca...,\n          format = DER-encoded X.509 SubjectPublicKeyInfo,\n          keySpec = EC-Curve25519,\n          usage = Set(signing, proof-of-ownership)\n        )\n      )\n    )\n  )\n)"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But now my contract creation submissions are failing "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile",
+                                "unicode": "1f604"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Haven't touched those (but i might have to?) Gosh\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "2025-06-16 15:34:27,842 [canton-env-ec-42] DEBUG c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Request com.daml.ledger.api.v2.interactive.InteractiveSubmissionService\/ExecuteSubmission by \/127.0.0.1:55484: received a message ExecuteSubmissionRequest(\n  PreparedTransaction(\n    DamlTransaction(\n      2.1,\n      0,\n      Node(\n        0,\n        V1(\n          Node(\n            Create(\n              Create(\n                2.1,\n                002a8e7b044fc64dfc043ca24a0e4237651ddd1745039fb4b2060fb85aaefe5a32,\n                dibtc,\n                Identifier(3f38aa871509a9c147dfcb558156a28ee91ed51be040c27d26a71c397172932d, IBTC.DepositAccount, IBTCDepositAccountRules),\n                Value(\n                  Record(\n                    Record(\n                      Identifier(3f38aa871509a9c147dfcb558156a28ee91ed51be040c27d26a71c397172932d, IBTC.DepositAccount, IBTCDepositAccountRules),\n                      Vector(\n                        RecordField(registrar, Value(Party(decentralized-party::1220dea5d467fe2b963f97c47df06de7a48a07cb44094b26419141ea50cfce95643a))),\n                        RecordField(operator, Value(Party(operator::122076bc54279160bd83ed6748a0add312d83299cee2e25c6989bb68ef973a727c15))),\n                        RecordField(\n                          instrument,\n                          Value(\n                            Record(\n                              Record(\n                                Identifier(a83fb2d68f6f220f10da4e92146ff919ca9228fd467441e4c870b904ae9d516f, Utility.Registry.Holding.V0.Types, InstrumentIdentifier),\n                                Vector(\n                                  RecordField(source, Value(Party(decentralized-party::1220dea5d467fe2b963f97c47df06de7a48a07cb44094b26419141ea50cfce95643a))),\n                                  RecordField(id, Value(Text(cBTC))),\n                                  RecordField(scheme, Value(Text(Internal)))\n                                )\n                              )\n                            )\n                          )\n                        )\n                      )\n                    )\n                  )\n                ),\n                decentralized-party::1220dea5d467fe2b963f97c47df06de7a48a07cb44094b26419141ea50cfce95643a,\n                decentralized-party::1220dea5d467fe2b963f97c47df06de7a48a07cb44094b26419141ea50cfce95643a\n              )\n            )\n          )\n        )\n      ),\n      NodeSeed(0, ByteString)\n    ),\n    Metadata(\n      SubmitterInfo(decentralized-party::1220dea5d467fe2b963f97c47df06de7a48a07cb44094b26419141ea50cfce95643a, create-daR),\n      synchronizer::1220579fdb53b33a7fa4f6bd6f3b4da2c807985ba091c286692dafdf0eade29533a0,\n      0,\n      5dea6a84-6f78-4fd5-8e3d-dc392be824e9,\n      1750080858721796L,\n      Vector(),\n      None,\n      None,\n      Vector()\n    )\n  ),\n  PartySignatures(\n    SinglePartySignatures(\n      decentralized-party::1220dea5d467fe2b963f97c47df06de7a48a07cb44094b26419141ea50cfce95643a,\n      Vector(\n        Signature(SIGNATURE_FORMAT_CONCAT, ByteString, 12206e9e917a8547dabdd2d85e8a3d6b06cb4bfc85e150fb49d316303383dd8616ef, SIGNING_ALGORITHM_SPEC_ED25519),\n        Signature(SIGNATURE_FORMAT_CONCAT, ByteString, 12209e6c67caa2a1f3397ef114c1738fc63a9b69039dff2b1936c1d3a5359dde4aad, SIGNING_ALGORITHM_SPEC_ED25519),\n        Signature(SIGNATURE_FORMAT_CONCAT, ByteString, 1220c02981b1a813bd7ad008317fa8a5bda5e5e6c78bc3de0481a6762cc685971ff4, SIGNING_ALGORITHM_SPEC_ED25519)\n      )\n    )\n  ),\n  Empty,\n  bfec7d86-6d74-4972-8b7b-33320c539704,\n  CoordinatorUser,\n  HASHING_SCHEME_VERSION_V2,\n  None\n)\n  Request tid:22f0c25bed3e69512d3c2d39bdc503e2\n2025-06-16 15:34:27,848 [canton-env-ec-42] INFO  c.d.c.p.a.s.c.i.InteractiveSubmissionServiceImpl:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Requesting execution of daml transaction with submission ID bfec7d86-6d74-4972-8b7b-33320c539704\n2025-06-16 15:34:27,858 [canton-env-ec-145] DEBUG c.d.c.p.p.s.r.AdmissibleSynchronizersComputation:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Topology queried for the following synchronizers: Set(synchronizer::1220579fdb53...)\n2025-06-16 15:34:27,858 [canton-env-ec-145] DEBUG c.d.c.p.p.s.r.AdmissibleSynchronizersComputation:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Synchronizers with all submitters: Set(synchronizer::1220579fdb53...)\n2025-06-16 15:34:27,858 [canton-env-ec-145] DEBUG c.d.c.p.p.s.r.AdmissibleSynchronizersComputation:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Synchronizers with all informees: Set(synchronizer::1220579fdb53...)\n2025-06-16 15:34:27,858 [canton-env-ec-145] DEBUG c.d.c.p.p.s.r.AdmissibleSynchronizersComputation:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Checking whether one synchronizer in Set(synchronizer::1220579fdb53...) is suitable for submission\n2025-06-16 15:34:27,858 [canton-env-ec-171] DEBUG c.d.c.p.p.s.r.TransactionRoutingProcessor:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Choosing the synchronizer as single-synchronizer workflow for create-daR\n2025-06-16 15:34:27,861 [canton-env-ec-42] DEBUG c.d.c.p.s.CantonSyncService:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Received submit-transaction create-daR from ledger-api server\n2025-06-16 15:34:27,884 [canton-env-ec-152] DEBUG c.d.c.p.p.s.r.TransactionRoutingProcessor:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Routing the transaction to synchronizer synchronizer::1220579fdb53...\n2025-06-16 15:34:27,887 [canton-env-ec-171] DEBUG c.d.c.p.p.TransactionProcessor:participant=participant1\/synchronizerId=synchronizer::1220579fdb53 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Transaction: Preparing request submitters decentralized-party::1220dea5d467..., command-id create-daR\n2025-06-16 15:34:27,889 [canton-env-ec-161] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1\/synchronizerId=synchronizer::1220579fdb53 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Invalid signature for decentralized-party::1220dea5d467...: InvalidSignature(\n  signature = Signature(signature = 6dca4ce97754, signedBy = 12206e9e917a...),\n  bytes = ef9e145f9c93,\n  error = \"Failed to verify signature: java.security.GeneralSecurityException: Signature check failed.\"\n)\n2025-06-16 15:34:27,889 [canton-env-ec-161] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1\/synchronizerId=synchronizer::1220579fdb53 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Invalid signature for decentralized-party::1220dea5d467...: InvalidSignature(\n  signature = Signature(signature = 849808171079, signedBy = 12209e6c67ca...),\n  bytes = ef9e145f9c93,\n  error = \"Failed to verify signature: java.security.GeneralSecurityException: Signature check failed.\"\n)\n2025-06-16 15:34:27,889 [canton-env-ec-161] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1\/synchronizerId=synchronizer::1220579fdb53 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Invalid signature for decentralized-party::1220dea5d467...: InvalidSignature(\n  signature = Signature(signature = 77c3c9aa9b22, signedBy = 1220c02981b1...),\n  bytes = ef9e145f9c93,\n  error = \"Failed to verify signature: java.security.GeneralSecurityException: Signature check failed.\"\n)\n2025-06-16 15:34:27,891 [canton-env-ec-171] INFO  c.d.c.p.s.CantonSyncService:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - INVALID_EXTERNAL_SIGNATURE(8,22f0c25b): Provided external signatures are invalid: Received 0 valid signatures (3 invalid), but expected at least 2 valid for decentralized-party::1220dea5d467... err-context:{commandId=create-daR, details=Received 0 valid signatures (3 invalid), but expected at least 2 valid for decentralized-party::1220dea5d467..., location=TransactionRoutingProcessor.scala:370, synchronizerId=synchronizer::1220579fdb53..., userId=CoordinatorUser} \n2025-06-16 15:34:27,903 [canton-env-ec-171] INFO  c.d.c.p.a.s.c.i.InteractiveSubmissionServiceImpl:participant=participant1 tid:22f0c25bed3e69512d3c2d39bdc503e2 - Rejected: Submission failed with error INVALID_EXTERNAL_SIGNATURE(8,22f0c25b): Provided external signatures are invalid: Received 0 valid signatures (3 invalid), but expected at least 2 valid for decentralized-party::1220dea5d467..."
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "i'll send logs in a minute"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750081358.137959",
+        "client_msg_id": "c07b3a1a-1c61-4c94-8016-bc97ba62e653",
+        "text": "Based on the error, or on the PartyToKeyMapping?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749627205.924459",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mbXDb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Based on the error, or on the PartyToKeyMapping?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750081442.812599",
+        "client_msg_id": "535bbb9e-8844-43fc-8f60-d037ad857558",
+        "text": "Ah I think even the PTK itself looks weird. It has 5 sigs",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749627205.924459",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5LlFG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ah I think even the PTK itself looks weird. It has 5 sigs"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750081445.260929",
+        "client_msg_id": "aff30db6-0f93-4c42-8122-07674038604b",
+        "text": "ok checking",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749627205.924459",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yr6af",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ok checking"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

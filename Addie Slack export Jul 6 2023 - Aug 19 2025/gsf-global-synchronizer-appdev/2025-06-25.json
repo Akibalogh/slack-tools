@@ -1,0 +1,454 @@
+[
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1750852296.570029",
+        "client_msg_id": "75825653-e180-4a67-8235-a36ae93b3fb9",
+        "text": "hey! yes, it works :ok_hand:",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750780046.377649",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wFrt7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hey! yes, it works "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "ok_hand",
+                                "unicode": "1f44c"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "party_blob",
+                "users": [
+                    "U0PQ8E25D"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "UJUA0QH45",
+        "type": "message",
+        "ts": "1750864581.039219",
+        "edited": {
+            "user": "UJUA0QH45",
+            "ts": "1750864592.000000"
+        },
+        "client_msg_id": "d781a715-0f63-45af-b0aa-4b0a65fe9b87",
+        "text": "For some reason, the last update with migration_id=2 is not returned by the Scan API.\n\nHere's what we have seen in our database (and also seen by <https:\/\/www.cantonscan.com\/update\/1220652536bb5363a371ccd24dd807ae1acd98ef8dac88317995f168bc8164fa4617|cantonscan>):\n\n```                              update_id                               |          record_time          | migration_id\n----------------------------------------------------------------------+-------------------------------+--------------\n 12206a5bb4c3fb0cb7c7ef1576ed47319f4ce1c5384940bf9538da44371a780d61fc | 2025-06-25 13:00:23.037703+00 |            2\n 1220652536bb5363a371ccd24dd807ae1acd98ef8dac88317995f168bc8164fa4617 | 2025-06-25 13:00:23.738386+00 |            2\n 122021282491e6a98a6b3dd17facae3cba89d57cd4e93f3b2773e70118dc859b89cc | 2025-06-25 13:44:34.094025+00 |            3```\nAnd here's what the node returns:\n\n```$ curl -s -H \"Content-Type: application\/json\" -XPOST <https:\/\/scan.sv-1.global.canton.network.digitalasset.com\/api\/scan\/v1\/updates> -d '{\"after\": {\"after_record_time\": \"2025-06-25T13:00:23Z\", \"after_migration_id\": 2}, \"page_size\": 2}' | jq \".transactions | .[] | [.record_time,.update_id]\"\n[\n  \"2025-06-25T13:00:23.037688Z\",\n  \"12203fa022c223f0b2df1eefaeba8f1d3c7f983ee0ab5c6b65e23630c01c2beedfb0\"\n]\n[\n  \"2025-06-25T13:44:34.094025Z\",\n  \"122021282491e6a98a6b3dd17facae3cba89d57cd4e93f3b2773e70118dc859b89cc\"\n]```\nI tried both <https:\/\/scan.sv-1.global.canton.network.digitalasset.com\/api\/scan\/v1\/updates> and <https:\/\/scan.sv-2.global.canton.network.digitalasset.com\/api\/scan\/v1\/updates>.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "060dc25df4b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9394671860016_060dc25df4b2903c88b8_72.png",
+            "first_name": "Antoine",
+            "real_name": "Antoine Le Calvez",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "antoine.lecalvez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750864581.039219",
+        "reply_count": 4,
+        "reply_users_count": 2,
+        "latest_reply": "1751008245.846649",
+        "reply_users": [
+            "U08AG8GNV0B",
+            "UJUA0QH45"
+        ],
+        "replies": [
+            {
+                "user": "U08AG8GNV0B",
+                "ts": "1750864984.227479"
+            },
+            {
+                "user": "UJUA0QH45",
+                "ts": "1750865029.376679"
+            },
+            {
+                "user": "UJUA0QH45",
+                "ts": "1750920676.307579"
+            },
+            {
+                "user": "UJUA0QH45",
+                "ts": "1751008245.846649"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tVZmi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "For some reason, the last update with migration_id=2 is not returned by the Scan API.\n\nHere's what we have seen in our database (and also seen by "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.cantonscan.com\/update\/1220652536bb5363a371ccd24dd807ae1acd98ef8dac88317995f168bc8164fa4617",
+                                "text": "cantonscan"
+                            },
+                            {
+                                "type": "text",
+                                "text": "):\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "                              update_id                               |          record_time          | migration_id\n----------------------------------------------------------------------+-------------------------------+--------------\n 12206a5bb4c3fb0cb7c7ef1576ed47319f4ce1c5384940bf9538da44371a780d61fc | 2025-06-25 13:00:23.037703+00 |            2\n 1220652536bb5363a371ccd24dd807ae1acd98ef8dac88317995f168bc8164fa4617 | 2025-06-25 13:00:23.738386+00 |            2\n 122021282491e6a98a6b3dd17facae3cba89d57cd4e93f3b2773e70118dc859b89cc | 2025-06-25 13:44:34.094025+00 |            3"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nAnd here's what the node returns:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "$ curl -s -H \"Content-Type: application\/json\" -XPOST "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-1.global.canton.network.digitalasset.com\/api\/scan\/v1\/updates"
+                            },
+                            {
+                                "type": "text",
+                                "text": " -d '{\"after\": {\"after_record_time\": \"2025-06-25T13:00:23Z\", \"after_migration_id\": 2}, \"page_size\": 2}' | jq \".transactions | .[] | [.record_time,.update_id]\"\n[\n  \"2025-06-25T13:00:23.037688Z\",\n  \"12203fa022c223f0b2df1eefaeba8f1d3c7f983ee0ab5c6b65e23630c01c2beedfb0\"\n]\n[\n  \"2025-06-25T13:44:34.094025Z\",\n  \"122021282491e6a98a6b3dd17facae3cba89d57cd4e93f3b2773e70118dc859b89cc\"\n]"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nI tried both "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-1.global.canton.network.digitalasset.com\/api\/scan\/v1\/updates"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-2.global.canton.network.digitalasset.com\/api\/scan\/v1\/updates"
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08AG8GNV0B",
+        "type": "message",
+        "ts": "1750864984.227479",
+        "edited": {
+            "user": "U08AG8GNV0B",
+            "ts": "1750865014.000000"
+        },
+        "client_msg_id": "2b3b0c90-1876-4152-8505-94a5f57b4609",
+        "text": "*we are on migration 3 now for mainnet",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08A9NBLPHC",
+        "source_team": "T08A9NBLPHC",
+        "user_profile": {
+            "avatar_hash": "e6f97c3ebd5a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-01-27\/8379301531456_e6f97c3ebd5a276ee463_72.png",
+            "first_name": "Tom",
+            "real_name": "Tom S",
+            "display_name": "Tom (Sekoya Labs)",
+            "team": "T08A9NBLPHC",
+            "name": "tom",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750864581.039219",
+        "parent_user_id": "UJUA0QH45",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "u\/DTo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "*we are on migration 3 now for mainnet"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UJUA0QH45",
+        "type": "message",
+        "ts": "1750865029.376679",
+        "client_msg_id": "015d3bf4-dfe7-4e52-a531-5ca3e02693ab",
+        "text": "Yes, I know, but shouldn't the API call above also return update `1220652536bb5363a371ccd24dd807ae1acd98ef8dac88317995f168bc8164fa4617`?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "060dc25df4b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9394671860016_060dc25df4b2903c88b8_72.png",
+            "first_name": "Antoine",
+            "real_name": "Antoine Le Calvez",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "antoine.lecalvez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750864581.039219",
+        "parent_user_id": "UJUA0QH45",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8gqTz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, I know, but shouldn't the API call above also return update "
+                            },
+                            {
+                                "type": "text",
+                                "text": "1220652536bb5363a371ccd24dd807ae1acd98ef8dac88317995f168bc8164fa4617",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1750884090.238759",
+        "client_msg_id": "de7c4173-feb3-4487-b95c-4927992233f6",
+        "text": "is there a validator\/sv api endpoint that returns validator info similar to the JSON available at the <https:\/\/sync.global\/sv-network\/|SV info page>\nWondering if there is a way to programmatically determine the current migration ID of a running validator",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750884090.238759",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1750899200.564019",
+        "reply_users": [
+            "U07J3V9CS78"
+        ],
+        "replies": [
+            {
+                "user": "U07J3V9CS78",
+                "ts": "1750899200.564019"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "x3sMO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "is there a validator\/sv api endpoint that returns validator info similar to the JSON available at the "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/sync.global\/sv-network\/",
+                                "text": "SV info page"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nWondering if there is a way to programmatically determine the current migration ID of a running validator"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1750899200.564019",
+        "client_msg_id": "5a832854-5465-4e27-b0a6-ae8bb56437d7",
+        "text": "Thanks. I did see that as well. it looks like that endpoint also dumps a snapshot which contains a NodeIdentitiesDump and ParticipantUsersData, so I was wondering if there was something lighter. Ideally I was wondering if the JSON on that SV Info page comes from a particular endpoint I could hit on our own validator.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750884090.238759",
+        "parent_user_id": "U07J3V9CS78",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "t6U9V",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks. I did see that as well. it looks like that endpoint also dumps a snapshot which contains a NodeIdentitiesDump and ParticipantUsersData, so I was wondering if there was something lighter. Ideally I was wondering if the JSON on that SV Info page comes from a particular endpoint I could hit on our own validator."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UJUA0QH45",
+        "type": "message",
+        "ts": "1750920676.307579",
+        "client_msg_id": "1b6c5db9-1305-4242-a172-31fb3c5327fc",
+        "text": "very interesting, how can consumers of the Scan API like ourselves detect such \"rollbacks\"?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "060dc25df4b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9394671860016_060dc25df4b2903c88b8_72.png",
+            "first_name": "Antoine",
+            "real_name": "Antoine Le Calvez",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "antoine.lecalvez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750864581.039219",
+        "parent_user_id": "UJUA0QH45",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zef8a",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "very interesting, how can consumers of the Scan API like ourselves detect such \"rollbacks\"?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

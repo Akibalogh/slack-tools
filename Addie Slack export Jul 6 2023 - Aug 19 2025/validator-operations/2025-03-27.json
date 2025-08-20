@@ -1,0 +1,664 @@
+[
+    {
+        "user": "U087Q971716",
+        "type": "message",
+        "ts": "1743059384.682619",
+        "client_msg_id": "78add98a-66ca-4f78-a3be-33245b14c781",
+        "text": "Hi team,\nAll the SV's have whitelisted our IP, but we are getting this error on validator pod when we run the kubernetes setup.\nI have checked the common issues that might cause this, migration Id is set to 1 and we havent yet used any oidc provider. What could be causing this issue?\n```validator_backend app initialization: Initialization failed, so exiting; check the application logs for details\njava.lang.RuntimeException: validator_backend app initialization: Initialize app failed\n        at org.lfdecentralizedtrust.splice.environment.NodeBase.$anonfun$appInitStep$3(NodeBase.scala:330)\n        at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:475)\n        at com.daml.executors.QueueAwareExecutorService$TrackingRunnable.run(QueueAwareExecutorService.scala:98)\n        at com.daml.metrics.InstrumentedExecutorServiceMetrics$InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorServiceMetrics.scala:190)\n        at java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1395)\n        at java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)\n        at java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)\n        at java.base\/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)\n        at java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)\n        at java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)\nCaused by: java.lang.RuntimeException: validator_backend app initialization: Initialize node failed\n        ... 10 more\nCaused by: java.lang.RuntimeException: validator_backend app initialization: Ensure validator is onboarded failed\n        ... 10 more\nCaused by: org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller$UnsupportedContentTypeException: Unsupported Content-Type [Some(text\/html)], supported: application\/json\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller$UnsupportedContentTypeException$.apply(Unmarshaller.scala:214)\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller$EnhancedFromEntityUnmarshaller$.$anonfun$forContentTypes$3(Unmarshaller.scala:129)\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller$$anon$1.apply(Unmarshaller.scala:72)\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller$EnhancedUnmarshaller$.$anonfun$flatMapWithInput$3(Unmarshaller.scala:110)\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller$$anon$1.apply(Unmarshaller.scala:72)\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller.$anonfun$transform$3(Unmarshaller.scala:37)\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller$$anon$1.apply(Unmarshaller.scala:72)\n        at <http:\/\/org.apache.pekko.http.scaladsl.unmarshalling.Unmarshal.to|org.apache.pekko.http.scaladsl.unmarshalling.Unmarshal.to>(Unmarshal.scala:35)\n        at org.lfdecentralizedtrust.splice.http.v0.external.common_admin.CommonAdminClient.$anonfun$getVersion$2(CommonAdminClient.scala:94)\n        at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)\n        ... 8 more```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07DE2TU0DQ",
+        "source_team": "T07DE2TU0DQ",
+        "user_profile": {
+            "avatar_hash": "gf30d33ca361",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/f30d33ca361deed88f42ffe337e1b636.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Preethi",
+            "real_name": "Preethi Chamarthi",
+            "display_name": "Preethi Chamarthi",
+            "team": "T07DE2TU0DQ",
+            "name": "jaya.preethi",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743059384.682619",
+        "reply_count": 4,
+        "reply_users_count": 1,
+        "latest_reply": "1743154687.513909",
+        "reply_users": [
+            "U087Q971716"
+        ],
+        "replies": [
+            {
+                "user": "U087Q971716",
+                "ts": "1743062118.302749"
+            },
+            {
+                "user": "U087Q971716",
+                "ts": "1743063122.045079"
+            },
+            {
+                "user": "U087Q971716",
+                "ts": "1743139947.707209"
+            },
+            {
+                "user": "U087Q971716",
+                "ts": "1743154687.513909"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KX9F3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi team,\nAll the SV's have whitelisted our IP, but we are getting this error on validator pod when we run the kubernetes setup.\nI have checked the common issues that might cause this, migration Id is set to 1 and we havent yet used any oidc provider. What could be causing this issue?\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "validator_backend app initialization: Initialization failed, so exiting; check the application logs for details\njava.lang.RuntimeException: validator_backend app initialization: Initialize app failed\n        at org.lfdecentralizedtrust.splice.environment.NodeBase.$anonfun$appInitStep$3(NodeBase.scala:330)\n        at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:475)\n        at com.daml.executors.QueueAwareExecutorService$TrackingRunnable.run(QueueAwareExecutorService.scala:98)\n        at com.daml.metrics.InstrumentedExecutorServiceMetrics$InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorServiceMetrics.scala:190)\n        at java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1395)\n        at java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)\n        at java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)\n        at java.base\/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)\n        at java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)\n        at java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)\nCaused by: java.lang.RuntimeException: validator_backend app initialization: Initialize node failed\n        ... 10 more\nCaused by: java.lang.RuntimeException: validator_backend app initialization: Ensure validator is onboarded failed\n        ... 10 more\nCaused by: org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller$UnsupportedContentTypeException: Unsupported Content-Type [Some(text\/html)], supported: application\/json\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller$UnsupportedContentTypeException$.apply(Unmarshaller.scala:214)\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller$EnhancedFromEntityUnmarshaller$.$anonfun$forContentTypes$3(Unmarshaller.scala:129)\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller$$anon$1.apply(Unmarshaller.scala:72)\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller$EnhancedUnmarshaller$.$anonfun$flatMapWithInput$3(Unmarshaller.scala:110)\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller$$anon$1.apply(Unmarshaller.scala:72)\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller.$anonfun$transform$3(Unmarshaller.scala:37)\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshaller$$anon$1.apply(Unmarshaller.scala:72)\n        at org.apache.pekko.http.scaladsl.unmarshalling.Unmarshal.to(Unmarshal.scala:35)\n        at org.lfdecentralizedtrust.splice.http.v0.external.common_admin.CommonAdminClient.$anonfun$getVersion$2(CommonAdminClient.scala:94)\n        at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)\n        ... 8 more"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "Sure",
+        "files": [
+            {
+                "id": "F08KCDDCGSJ",
+                "created": 1743062071,
+                "timestamp": 1743062071,
+                "name": "validator_logs.txt",
+                "title": "validator_logs.txt",
+                "mimetype": "text\/plain",
+                "filetype": "text",
+                "pretty_type": "Plain Text",
+                "user": "U087Q971716",
+                "user_team": "T07DE2TU0DQ",
+                "editable": true,
+                "size": 555833,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T07DE2TU0DQ-F08KCDDCGSJ\/validator_logs.txt?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T07DE2TU0DQ-F08KCDDCGSJ\/download\/validator_logs.txt?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "permalink": "https:\/\/launchnodesworkspace.slack.com\/files\/U05FZBDQ4RJ\/F08KCDDCGSJ\/validator_logs.txt",
+                "permalink_public": "https:\/\/slack-files.com\/T07DE2TU0DQ-F08KCDDCGSJ-d0846354f9",
+                "edit_link": "https:\/\/launchnodesworkspace.slack.com\/files\/U05FZBDQ4RJ\/F08KCDDCGSJ\/validator_logs.txt\/edit",
+                "source_team": "T07DE2TU0DQ",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U087Q971716",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3dmZ7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sure"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1743062118.302749",
+        "client_msg_id": "104ba53f-705b-4160-8e1e-cfdeb0b24b4c",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1743059384.682619",
+        "parent_user_id": "U087Q971716",
+        "user_team": "T07DE2TU0DQ",
+        "source_team": "T07DE2TU0DQ",
+        "user_profile": {
+            "avatar_hash": "gf30d33ca361",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/f30d33ca361deed88f42ffe337e1b636.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Preethi",
+            "real_name": "Preethi Chamarthi",
+            "display_name": "Preethi Chamarthi",
+            "team": "T07DE2TU0DQ",
+            "name": "jaya.preethi",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U087Q971716",
+        "type": "message",
+        "ts": "1743063122.045079",
+        "client_msg_id": "2bf17045-6fd9-4627-b366-3b3c4b57401f",
+        "text": "Ah, got it. Thanks, will retry",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07DE2TU0DQ",
+        "source_team": "T07DE2TU0DQ",
+        "user_profile": {
+            "avatar_hash": "gf30d33ca361",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/f30d33ca361deed88f42ffe337e1b636.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Preethi",
+            "real_name": "Preethi Chamarthi",
+            "display_name": "Preethi Chamarthi",
+            "team": "T07DE2TU0DQ",
+            "name": "jaya.preethi",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743059384.682619",
+        "parent_user_id": "U087Q971716",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uAUsY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ah, got it. Thanks, will retry"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U04RWTP1TA5",
+        "type": "message",
+        "ts": "1743073977.445029",
+        "client_msg_id": "2eda5e76-58d4-44f5-896d-09aa6bd1222f",
+        "text": "Hi, could someone please help whitelisting this IP for testnet?\n34.41.120.193",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7C92V0SX",
+        "source_team": "T7C92V0SX",
+        "user_profile": {
+            "avatar_hash": "fe1f628a036c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-03-31\/5047504318020_fe1f628a036c4d88e09c_72.png",
+            "first_name": "Raag",
+            "real_name": "Raag Naidu",
+            "display_name": "raag.naidu",
+            "team": "T7C92V0SX",
+            "name": "raag.naidu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743073977.445029",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1743084662.714679",
+        "reply_users": [
+            "U04RWTP1TA5"
+        ],
+        "replies": [
+            {
+                "user": "U04RWTP1TA5",
+                "ts": "1743081089.741679"
+            },
+            {
+                "user": "U04RWTP1TA5",
+                "ts": "1743084662.714679"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7CHLH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, could someone please help whitelisting this IP for testnet?\n34.41.120.193"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1::skin-tone-3",
+                "users": [
+                    "U04KJF6UTNU"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U04RWTP1TA5",
+        "type": "message",
+        "ts": "1743081089.741679",
+        "client_msg_id": "3782390c-bc5b-4a2f-8a20-3d5ecdfc54ca",
+        "text": "Yes! This will be for a validator",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7C92V0SX",
+        "source_team": "T7C92V0SX",
+        "user_profile": {
+            "avatar_hash": "fe1f628a036c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-03-31\/5047504318020_fe1f628a036c4d88e09c_72.png",
+            "first_name": "Raag",
+            "real_name": "Raag Naidu",
+            "display_name": "raag.naidu",
+            "team": "T7C92V0SX",
+            "name": "raag.naidu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743073977.445029",
+        "parent_user_id": "U04RWTP1TA5",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/KHi5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes! This will be for a validator"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1::skin-tone-3",
+                "users": [
+                    "U04KJF6UTNU"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U04RWTP1TA5",
+        "type": "message",
+        "ts": "1743084662.714679",
+        "client_msg_id": "86df54db-c69d-4a4d-a946-731212e27b5f",
+        "text": "Awesome, thanks Sophia!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7C92V0SX",
+        "source_team": "T7C92V0SX",
+        "user_profile": {
+            "avatar_hash": "fe1f628a036c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-03-31\/5047504318020_fe1f628a036c4d88e09c_72.png",
+            "first_name": "Raag",
+            "real_name": "Raag Naidu",
+            "display_name": "raag.naidu",
+            "team": "T7C92V0SX",
+            "name": "raag.naidu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743073977.445029",
+        "parent_user_id": "U04RWTP1TA5",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "aEsbD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Awesome, thanks Sophia!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "blush",
+                "users": [
+                    "U04KJF6UTNU"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*ari.pine* from *Blockfills* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1743084686.426189",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yGqkE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ari.pine",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Blockfills",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*thibaut.houedan* from *Lithium Digital Personal* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1743085826.169869",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "r1t",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thibaut.houedan",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Lithium Digital Personal",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*princewill* from *Lithiumdigital* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1743089283.942679",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Kh9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "princewill",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Lithiumdigital",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "tombstone",
+        "text": "This message was deleted.",
+        "user": "USLACKBOT",
+        "hidden": true,
+        "type": "message",
+        "ts": "1743101942.975629",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T03T53E10",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743101942.975629",
+        "parent_user_id": "USLACKBOT",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1743102016.968039",
+        "reply_users": [
+            "U0740Q6GD0R"
+        ],
+        "replies": [
+            {
+                "user": "U0740Q6GD0R",
+                "ts": "1743102016.968039"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "user": "U0740Q6GD0R",
+        "type": "message",
+        "ts": "1743102016.968039",
+        "client_msg_id": "493391a2-9f32-4254-bdae-2fbdd24ff392",
+        "text": "the redirect URI should only apply to the UI apps, things that happen in-browser. the validator backend -&gt; participant communications should just be requesting a JWT from the auth provider, and will not have a concept of redirects",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04534YLV4K",
+        "source_team": "T04534YLV4K",
+        "user_profile": {
+            "avatar_hash": "gea9b158eb67",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/ea9b158eb67645211fb665cae1dfebc2.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "Thomas",
+            "real_name": "Thomas",
+            "display_name": "Thomas",
+            "team": "T04534YLV4K",
+            "name": "thomas",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743101942.975629",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4Spej",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the redirect URI should only apply to the UI apps, things that happen in-browser. the validator backend -> participant communications should just be requesting a JWT from the auth provider, and will not have a concept of redirects"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "ty",
+                "users": [
+                    "U9V802QQ6"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U087Q971716",
+        "type": "message",
+        "ts": "1743139947.707209",
+        "client_msg_id": "26273616-0402-4b32-85c8-090d79da8ab7",
+        "text": "Hi Team, I was following the instructions for kubernetes based deployment of a validator node; according to the documentation, for configuring the cluster ingress, we need to create a file named istio-gateway-values.yaml in which we need to provide a set of IPs in loadBalancerSourceRanges. Are those IPs fixed\/related to network or we need to set the IPs according to our setup?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07DE2TU0DQ",
+        "source_team": "T07DE2TU0DQ",
+        "user_profile": {
+            "avatar_hash": "gf30d33ca361",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/f30d33ca361deed88f42ffe337e1b636.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Preethi",
+            "real_name": "Preethi Chamarthi",
+            "display_name": "Preethi Chamarthi",
+            "team": "T07DE2TU0DQ",
+            "name": "jaya.preethi",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743059384.682619",
+        "parent_user_id": "U087Q971716",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8aNQC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Team, I was following the instructions for kubernetes based deployment of a validator node; according to the documentation, for configuring the cluster ingress, we need to create a file named istio-gateway-values.yaml in which we need to provide a set of IPs in loadBalancerSourceRanges. Are those IPs fixed\/related to network or we need to set the IPs according to our setup?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

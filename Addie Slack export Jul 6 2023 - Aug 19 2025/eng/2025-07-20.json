@@ -1,0 +1,756 @@
+[
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1752996589.509899",
+        "client_msg_id": "5A1FA4FC-9FA9-4A69-A414-C057BC2FA65F",
+        "text": "The Monday will be tricky, because I will be kind of homeless. So I will pop up in random times in random places to work. But I work today. Mainly I’m trying to understand the IT tests. But if you have anything more important, let me know.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752904228.965289",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HEwzB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The Monday will be tricky, because I will be kind of homeless. So I will pop up in random times in random places to work. But I work today. Mainly I’m trying to understand the IT tests. But if you have anything more important, let me know."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1752996905.283729",
+        "client_msg_id": "E6592D38-0855-4444-9D14-FD1C21E86BA2",
+        "text": "It seems AWS Cloudwatch can easily read from file so I add file logging to the Go service.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752904228.965289",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eXvqu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It seems AWS Cloudwatch can easily read from file so I add file logging to the Go service."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753010170.978829",
+        "client_msg_id": "29053e34-167c-462f-84f7-0a472ec6ac79",
+        "text": "Cool, thanks <@U093Q4FPEJG>. No worries about working tmrw.\n\nI think for alerting, maybe we want to use prometheus? Ideally we want alerts if error logs start happening, OR if the success logs stop happening, and I think prometheus is best for this. Or can cloudwatch alert if it seems the success logs stop?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752904228.965289",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oz6og",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Cool, thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U093Q4FPEJG"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". No worries about working tmrw.\n\nI think for alerting, maybe we want to use prometheus? Ideally we want alerts if error logs start happening, OR if the success logs stop happening, and I think prometheus is best for this. Or can cloudwatch alert if it seems the success logs stop?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753014811.028159",
+        "client_msg_id": "68F501B8-3B42-487D-BC5A-738BDB680FB5",
+        "text": "Hmm the docs don’t mention party updates, but maybe sending the same Post request with new data will update it. I will try",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752948397.667209",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "un8Dc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hmm the docs "
+                            },
+                            {
+                                "type": "text",
+                                "text": "don’t"
+                            },
+                            {
+                                "type": "text",
+                                "text": " mention party updates, but maybe sending the same Post request with new data will update it. I will try"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753016261.085689",
+        "client_msg_id": "A84AE141-7A65-4E24-A0A7-EEBBA566DDCD",
+        "text": "Prometheus is a metrics aggregator, so for that we need Loki which collects the logs and Grafana which provides the Dashboard. ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752904228.965289",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MBzhv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Prometheus is a metrics aggregator, so for that we need Loki which collects the logs and Grafana which provides the Dashboard. "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753016361.251679",
+        "client_msg_id": "7BA5C895-C5B8-46F4-AF7C-2E6CD77FFAD3",
+        "text": "There are Prometheus alerts, it can ping PagerDuty as well",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752904228.965289",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YY3Wv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "There are Prometheus alerts, it can ping PagerDuty as well"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753017221.905159",
+        "client_msg_id": "E35823A1-FE25-456A-9FCC-0CA71F7A3E62",
+        "text": "But as far as I know those are based on metrics, not logs. ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752904228.965289",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tE3rX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But as far as I know those are based on metrics, not logs. "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753017416.969959",
+        "client_msg_id": "55789972-E314-4AFE-B93B-FDEBFD4BF11B",
+        "text": "Yeah that’s true, we would need to add Prometheus metrics to the go",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752904228.965289",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/J6WO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yeah "
+                            },
+                            {
+                                "type": "text",
+                                "text": "that’s"
+                            },
+                            {
+                                "type": "text",
+                                "text": " true, we would need to add Prometheus metrics to the go"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753037223.003859",
+        "client_msg_id": "01924924-94cf-40d5-aed5-275797be524f",
+        "text": "This week we should also consider making access to all these canton services, like our wallets \/ utilties, etc, require being on a VPN.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "L1RG0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This week we should also consider making access to all these canton services, like our wallets \/ utilties, etc, require being on a VPN."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753038192.029559",
+        "client_msg_id": "7cc0f904-d3fc-4421-a934-06c234cc0fc8",
+        "text": "we can’t do 2FA in keycloak from what you’ve seen, can we <@U088UV6MKFE>?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ta2VA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "we can’t do 2FA in keycloak from what you’ve seen, can we "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": "?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753038455.207149",
+        "client_msg_id": "7CAA482B-FDF7-4386-BEA0-81BD27E60B26",
+        "text": "We can",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bmpUL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We can"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753038920.233129",
+        "client_msg_id": "7b9e577d-996c-4860-bacb-119396e8e300",
+        "text": "yeah i was thinking we would add prometheus metrics collecting to the code. Loki also looks cool!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752904228.965289",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "C+L8z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yeah i was thinking we would add prometheus metrics collecting to the code. Loki also looks cool!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753038939.034289",
+        "client_msg_id": "bc3ede36-cc3f-40f3-8b6c-87b65043b240",
+        "text": "might be a good idea! let’s look tmrw. don’t lock us out :slightly_smiling_face:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "U2Gvf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "might be a good idea! let’s look tmrw. don’t lock us out "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753038967.602689",
+        "edited": {
+            "user": "U05FU0HPZ9T",
+            "ts": "1753039356.000000"
+        },
+        "client_msg_id": "cb53ce38-443c-4f77-98b6-cb23e8e4a857",
+        "text": "but theoretically now, even tho canton coin would be super hard to steal and do anything useful with, we could get ransom-attacked. so it would be good to lock some stuff down",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mO+AD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but theoretically now, even tho canton coin would be super hard to steal and do anything useful with, we could get ransom-attacked. so it would be good to lock some stuff down"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753054591.713439",
+        "client_msg_id": "0a82cec4-ea35-41b3-b6da-48ef84c163b1",
+        "text": "Ripple thread - Good news: <https:\/\/github.com\/DLC-link\/dlc-attestor-stack\/actions\/runs\/16405238033\/job\/46350387515>\nIt still fail, but it could set the Vault funded.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753054591.713439",
+        "reply_count": 6,
+        "reply_users_count": 2,
+        "latest_reply": "1753090847.198339",
+        "reply_users": [
+            "U093Q4FPEJG",
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1753090429.679079"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753090754.960979"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753090806.113599"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753090811.007779"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1753090825.042969"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1753090847.198339"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mNG0g",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ripple thread - Good news: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/dlc-attestor-stack\/actions\/runs\/16405238033\/job\/46350387515"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nIt still fail, but it could set the Vault funded."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753054792.097139",
+        "edited": {
+            "user": "U093Q4FPEJG",
+            "ts": "1753054908.000000"
+        },
+        "client_msg_id": "4a08f374-ff65-4c68-98af-cf557da6340e",
+        "text": "My opinion on these tools, most of them are self-hosted. This requires maintenance. I usually try to go to a direction where someone else maintain these things rather than me if it's not expensive. Cloudwatch is maintained by AWS, as I read all we need to do, we have to add the cloudwatch-agent and determine the files location where the logs are located and we unlocked the whole featureset of AWS Cloudwatch.\nI'm not against the Prom\/Loki\/Grafana stack, but it is something what we have to maintain and keep up-to-date.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752904228.965289",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "o09Hs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "My opinion on these tools, most of them are self-hosted. This requires maintenance. I usually try to go to a direction where someone else maintain these things rather than me if it's not expensive. Cloudwatch is maintained by AWS, as I read all we need to do, we have to add the cloudwatch-agent and determine the files location where the logs are located and we unlocked the whole featureset of AWS Cloudwatch.\nI'm not against the Prom\/Loki\/Grafana stack, but it is something what we have to maintain and keep up-to-date."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U088UV6MKFE",
+                    "U05FU0HPZ9T"
+                ],
+                "count": 2
+            }
+        ]
+    }
+]

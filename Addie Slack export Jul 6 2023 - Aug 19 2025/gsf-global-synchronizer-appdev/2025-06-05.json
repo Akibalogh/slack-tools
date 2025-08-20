@@ -1,0 +1,775 @@
+[
+    {
+        "user": "UJUA0QH45",
+        "type": "message",
+        "ts": "1749119739.482119",
+        "client_msg_id": "1f993c80-7adb-44b8-8c81-a9476e2066b7",
+        "text": "I am running into issues computing the output fee for this <https:\/\/www.cantonscan.com\/update\/1220c1fbb39bd47787238a15e6a4bd3640d0c6c853de4c5797a86ac19e1b21fd8db5|update>.\n\nMy maths are:\n• 0 in locking fees as there's no lock\n• 1.08 CC in transfer creation fee (based on the parameters as of round 34984)\n• 113.5299436558 CC in transfer fee based on an output amount of 487,299.4365579091 CC (based on the parameters as of round 34984)\nFor a total of 114.6099436558 CC in output fees, yet the transfer summary says the output fees were 115.2753982011 CC.\nThere's an unexplained difference of 0.6654545453 CC that I can't figure out, the logic I used worked for all previous transfers, is there anything special with this one?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "060dc25df4b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9394671860016_060dc25df4b2903c88b8_72.png",
+            "first_name": "Antoine",
+            "real_name": "Antoine Le Calvez",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "antoine.lecalvez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749119739.482119",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1749455373.031119",
+        "reply_users": [
+            "UJUA0QH45"
+        ],
+        "replies": [
+            {
+                "user": "UJUA0QH45",
+                "ts": "1749126350.409599"
+            },
+            {
+                "user": "UJUA0QH45",
+                "ts": "1749455373.031119"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YmyGQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I am running into issues computing the output fee for this "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.cantonscan.com\/update\/1220c1fbb39bd47787238a15e6a4bd3640d0c6c853de4c5797a86ac19e1b21fd8db5",
+                                "text": "update"
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n\nMy maths are:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "0 in locking fees as there's no lock"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "1.08 CC in transfer creation fee (based on the parameters as of round 34984)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "113.5299436558 CC in transfer fee based on an output amount of ",
+                                        "style": {
+                                            "unlink": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "487,299.4365579091 CC (based on the parameters as of round 34984)"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nFor a total of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "114.6099436558",
+                                "style": {
+                                    "unlink": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " CC in output fees, yet the transfer summary says the output fees were "
+                            },
+                            {
+                                "type": "text",
+                                "text": "115.2753982011",
+                                "style": {
+                                    "unlink": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " CC.\nThere's an unexplained difference of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "0.6654545453",
+                                "style": {
+                                    "unlink": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " CC that I can't figure out, the logic I used worked for all previous transfers, is there anything special with this one?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UJUA0QH45",
+        "type": "message",
+        "ts": "1749126350.409599",
+        "edited": {
+            "user": "UJUA0QH45",
+            "ts": "1749130977.000000"
+        },
+        "client_msg_id": "b4782520-9441-45ed-8e30-96f89767b54e",
+        "text": "I think I figured it out, it's something to do with rounding when converting the fee structure from USD to CC",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "060dc25df4b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9394671860016_060dc25df4b2903c88b8_72.png",
+            "first_name": "Antoine",
+            "real_name": "Antoine Le Calvez",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "antoine.lecalvez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749119739.482119",
+        "parent_user_id": "UJUA0QH45",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BvVXK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think I figured it out, it's something to do with rounding when converting the fee structure from USD to CC"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "tombstone",
+        "text": "This message was deleted.",
+        "user": "USLACKBOT",
+        "hidden": true,
+        "type": "message",
+        "ts": "1749135131.897529",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T03T53E10",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749135131.897529",
+        "parent_user_id": "USLACKBOT",
+        "reply_count": 5,
+        "reply_users_count": 1,
+        "latest_reply": "1749157222.336379",
+        "reply_users": [
+            "U063ECF2URZ"
+        ],
+        "replies": [
+            {
+                "user": "U063ECF2URZ",
+                "ts": "1749146921.241019"
+            },
+            {
+                "user": "U063ECF2URZ",
+                "ts": "1749147731.490829"
+            },
+            {
+                "user": "U063ECF2URZ",
+                "ts": "1749148072.076739"
+            },
+            {
+                "user": "U063ECF2URZ",
+                "ts": "1749153612.880649"
+            },
+            {
+                "user": "U063ECF2URZ",
+                "ts": "1749157222.336379"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*andre* from *xLabs* was added to this channel by *wayne.collier*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749135225.013769",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5kY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "andre",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "xLabs",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "wayne.collier",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*tom* from *Sekoya Labs* was added to this channel by *wayne.collier*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749135284.968369",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "=bymz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "tom",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Sekoya Labs",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "wayne.collier",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U063ECF2URZ",
+        "type": "message",
+        "ts": "1749146921.241019",
+        "client_msg_id": "b2c313e2-46a1-494c-bed8-2b7d918b11d5",
+        "text": "<@U062C7J7TNF> long time no see :slightly_smiling_face:\nUltimately, we're looking for a way to monetize our service via CC subscriptions. Would then all of it be handled by the validator\/wallet automations?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03NWTF768Z",
+        "source_team": "T03NWTF768Z",
+        "user_profile": {
+            "avatar_hash": "f9fbbfdb4c8d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-16\/6200926379382_f9fbbfdb4c8de44315f3_72.jpg",
+            "first_name": "Ivan",
+            "real_name": "Ivan Rylach",
+            "display_name": "Ivan",
+            "team": "T03NWTF768Z",
+            "name": "ivan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749135131.897529",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GBtzS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U062C7J7TNF"
+                            },
+                            {
+                                "type": "text",
+                                "text": " long time no see "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nUltimately, we're looking for a way to monetize our service via CC subscriptions. Would then all of it be handled by the validator\/wallet automations?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*stephane.loeuillet* from *Kaiko* was added to this channel by *wayne.collier*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749147357.639749",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DUL7+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "stephane.loeuillet",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Kaiko",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "wayne.collier",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1749147369.352099",
+        "client_msg_id": "a55c5eb0-0a55-4515-aea7-09609c105506",
+        "text": "Hello",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "u07ZN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave::skin-tone-2",
+                "users": [
+                    "U047U17D7KL"
+                ],
+                "count": 1
+            },
+            {
+                "name": "wave",
+                "users": [
+                    "U062C7J7TNF",
+                    "U03QSP8LP9T",
+                    "U03HMUTQ5F0",
+                    "UBJBWA21M"
+                ],
+                "count": 4
+            }
+        ]
+    },
+    {
+        "user": "U063ECF2URZ",
+        "type": "message",
+        "ts": "1749147731.490829",
+        "client_msg_id": "dde7c17d-317d-4373-ba36-8b0e2170385c",
+        "text": "&gt; If you are using the CN Utilities to do this\n<@U047U17D7KL> Yeah, we're open to it. Is there a more detailed guide for <https:\/\/docs.digitalasset.com\/connect\/0.5\/credential-user-guide\/service-monetization>?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03NWTF768Z",
+        "source_team": "T03NWTF768Z",
+        "user_profile": {
+            "avatar_hash": "f9fbbfdb4c8d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-16\/6200926379382_f9fbbfdb4c8de44315f3_72.jpg",
+            "first_name": "Ivan",
+            "real_name": "Ivan Rylach",
+            "display_name": "Ivan",
+            "team": "T03NWTF768Z",
+            "name": "ivan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749135131.897529",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Gd7Lr",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If you are using the CN Utilities to do this"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U047U17D7KL"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Yeah, we're open to it. Is there a more detailed guide for "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.digitalasset.com\/connect\/0.5\/credential-user-guide\/service-monetization"
+                            },
+                            {
+                                "type": "text",
+                                "text": "?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U063ECF2URZ",
+        "type": "message",
+        "ts": "1749148072.076739",
+        "client_msg_id": "2c44b906-6bdc-49e1-9d18-82b56494c206",
+        "text": "Specifically, how do we use CN Utility in this context?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03NWTF768Z",
+        "source_team": "T03NWTF768Z",
+        "user_profile": {
+            "avatar_hash": "f9fbbfdb4c8d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-16\/6200926379382_f9fbbfdb4c8de44315f3_72.jpg",
+            "first_name": "Ivan",
+            "real_name": "Ivan Rylach",
+            "display_name": "Ivan",
+            "team": "T03NWTF768Z",
+            "name": "ivan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749135131.897529",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cHsOU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Specifically, how do we use CN Utility in this context?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U063ECF2URZ",
+        "type": "message",
+        "ts": "1749153612.880649",
+        "client_msg_id": "9e4e2e06-78db-4437-8ea5-487b1ef0d054",
+        "text": "Thank you <@U062C7J7TNF>!\n&gt; The other option to earn app rewards is via `FeaturedAppActivityMarkers` \nJust to confirm, an app would need to be marked as Featured first, right?\nAnd thank you for the sample subscription code!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03NWTF768Z",
+        "source_team": "T03NWTF768Z",
+        "user_profile": {
+            "avatar_hash": "f9fbbfdb4c8d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-16\/6200926379382_f9fbbfdb4c8de44315f3_72.jpg",
+            "first_name": "Ivan",
+            "real_name": "Ivan Rylach",
+            "display_name": "Ivan",
+            "team": "T03NWTF768Z",
+            "name": "ivan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749135131.897529",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "W7lai",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U062C7J7TNF"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The other option to earn app rewards is via "
+                            },
+                            {
+                                "type": "text",
+                                "text": "FeaturedAppActivityMarkers",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Just to confirm, an app would need to be marked as Featured first, right?\nAnd thank you for the sample subscription code!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U063ECF2URZ",
+        "type": "message",
+        "ts": "1749157222.336379",
+        "client_msg_id": "6ef6956d-8ae1-413f-968d-b243f2ccc6e6",
+        "text": "<@U062C7J7TNF> are there any cons of using CN Utility for subscription vs building a custom one?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03NWTF768Z",
+        "source_team": "T03NWTF768Z",
+        "user_profile": {
+            "avatar_hash": "f9fbbfdb4c8d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-16\/6200926379382_f9fbbfdb4c8de44315f3_72.jpg",
+            "first_name": "Ivan",
+            "real_name": "Ivan Rylach",
+            "display_name": "Ivan",
+            "team": "T03NWTF768Z",
+            "name": "ivan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749135131.897529",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gjLDf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U062C7J7TNF"
+                            },
+                            {
+                                "type": "text",
+                                "text": " are there any cons of using CN Utility for subscription vs building a custom one?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

@@ -1,0 +1,110 @@
+[
+    {
+        "user": "U08EPUD7KST",
+        "type": "message",
+        "ts": "1754140655.718399",
+        "edited": {
+            "user": "U08EPUD7KST",
+            "ts": "1754140719.000000"
+        },
+        "client_msg_id": "1da7ddfd-6e7b-4819-ab55-f634b756c896",
+        "text": "We use microsoft entraID as our Idp and it expect the scope to be in the format {resource-identifier}\/{scope}. The utility UI send the scope daml_ledger_api  and openid scopes statically. Is it possible to have a config variable on the utility-ui  \"eg: AUTH_SCOPE\" that can override the static scope? right now we are getting this error.\n```AADSTS650053: The application 'Canton Utility Web UI - devnet' asked for scope 'daml_ledger_api' that doesn't exist on the resource '00000003-0000-0000-c000-000000000000'. Contact the app vendor. Trace ID: 5b25e3a8-b68c-4434-9c4b-a1abff6f1300 Correlation ID: 65b99451-03b7-4323-ba2c-b58de70a4573 Timestamp: 2025-08-02 12:16:07Z```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08EPUD6K7H",
+        "source_team": "T08EPUD6K7H",
+        "user_profile": {
+            "avatar_hash": "9dd7152e7efc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-26\/8512005772325_9dd7152e7efcf0f782d6_72.png",
+            "first_name": "Thibaut",
+            "real_name": "Thibaut HOUEDAN",
+            "display_name": "Thibaut",
+            "team": "T08EPUD6K7H",
+            "name": "thibaut",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754140655.718399",
+        "reply_count": 10,
+        "reply_users_count": 2,
+        "latest_reply": "1754398083.198809",
+        "reply_users": [
+            "U08EPUD7KST",
+            "U02KJ7PKHN2"
+        ],
+        "replies": [
+            {
+                "user": "U08EPUD7KST",
+                "ts": "1754396231.211869"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754396558.640439"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754396577.279349"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754396598.396689"
+            },
+            {
+                "user": "U08EPUD7KST",
+                "ts": "1754396896.692129"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754396915.713719"
+            },
+            {
+                "user": "U08EPUD7KST",
+                "ts": "1754397052.798109"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754397104.647739"
+            },
+            {
+                "user": "U08EPUD7KST",
+                "ts": "1754397821.695839"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754398083.198809"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7BoDs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We use microsoft entraID as our Idp and it expect the scope to be in the format {resource-identifier}\/{scope}. The utility UI send the scope daml_ledger_api  and openid scopes statically. Is it possible to have a config variable on the utility-ui  \"eg: AUTH_SCOPE\" that can override the static scope? right now we are getting this error.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "AADSTS650053: The application 'Canton Utility Web UI - devnet' asked for scope 'daml_ledger_api' that doesn't exist on the resource '00000003-0000-0000-c000-000000000000'. Contact the app vendor. Trace ID: 5b25e3a8-b68c-4434-9c4b-a1abff6f1300 Correlation ID: 65b99451-03b7-4323-ba2c-b58de70a4573 Timestamp: 2025-08-02 12:16:07Z"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

@@ -1,0 +1,2135 @@
+[
+    {
+        "user": "US2685U22",
+        "type": "message",
+        "ts": "1751958852.977119",
+        "edited": {
+            "user": "US2685U22",
+            "ts": "1751959589.000000"
+        },
+        "client_msg_id": "687ba471-2b68-45e3-b467-f39b70acb785",
+        "text": "Hello all, I'm trying to run a validator on mainnet on docker, and failing.\nDo you have an idea what the problem might be?\n```SPONSOR_SV_URL=<https:\/\/scan.sv-1.global.canton.network.digitalasset.com>                                                                                                                \nubuntu@prd-canton-validator:~\/splice-node\/docker-compose\/validator$ .\/start.sh -s \"$SPONSOR_SV_URL\" -o \"<received from sv>\" -p \"<our-validator-name>\" -m \"3\" -w                                                        \nINFO: SCAN address not provided, deriving it from the sponsor SV address: <https:\/\/scan.sv-1.global.canton.network.digitalasset.com>                                                                                                                         \nINFO: Using version 0.4.2                                                                                                                                                                                                                                  \n[+] Running 6\/7                                                                                                                                                                                                                                            \n ✔ Network splice-validator_splice_validator     Created                                                                                                                                                                                              0.0s \n ✔ Container splice-validator-ans-web-ui-1       Healthy                                                                                                                                                                                             30.9s \n ✔ Container splice-validator-postgres-splice-1  Healthy                                                                                                                                                                                              6.9s \n ✔ Container splice-validator-wallet-web-ui-1    Healthy                                                                                                                                                                                             30.8s \n ⠼ Container splice-validator-validator-1        Waiting                                                                                                                                                                                            105.3s \n ✔ Container splice-validator-participant-1      Healthy                                                                                                                                                                                             22.3s \n ✔ Container splice-validator-nginx-1            Healthy                                                                                                                                                                                             11.7s \ncontainer splice-validator-validator-1 is unhealthy                                                                                                                                                                                                        ```\nbottom line: container splice-validator-validator-1 is unhealthy\n\n** NOTE: I did not change any configuration file (.env etc)\nAlso, the SPONSOR_SV_URL I took from <https:\/\/sync.global\/sv-network\/> - mainnet",
+        "team": "T05FWTX7PMG",
+        "user_team": "TQUFKT34J",
+        "source_team": "TQUFKT34J",
+        "user_profile": {
+            "avatar_hash": "8c410a9546d8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-03-16\/991176373042_8c410a9546d8193a2ba8_72.jpg",
+            "first_name": "Uri",
+            "real_name": "Uri Tidhar",
+            "display_name": "Uri Tidhar",
+            "team": "TQUFKT34J",
+            "name": "uri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751958852.977119",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1751965473.276349",
+        "reply_users": [
+            "US2685U22"
+        ],
+        "replies": [
+            {
+                "user": "US2685U22",
+                "ts": "1751965473.276349"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mmedv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello all, I'm trying to run a validator on mainnet on docker, and failing.\nDo you have an idea what the problem might be?\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "SPONSOR_SV_URL="
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-1.global.canton.network.digitalasset.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": "                                                                                                                \nubuntu@prd-canton-validator:~\/splice-node\/docker-compose\/validator$ .\/start.sh -s \"$SPONSOR_SV_URL\" -o \"<received from sv>\" -p \"<our-validator-name>\" -m \"3\" -w                                                        \nINFO: SCAN address not provided, deriving it from the sponsor SV address: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-1.global.canton.network.digitalasset.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": "                                                                                                                         \nINFO: Using version 0.4.2                                                                                                                                                                                                                                  \n[+] Running 6\/7                                                                                                                                                                                                                                            \n ✔ Network splice-validator_splice_validator     Created                                                                                                                                                                                              0.0s \n ✔ Container splice-validator-ans-web-ui-1       Healthy                                                                                                                                                                                             30.9s \n ✔ Container splice-validator-postgres-splice-1  Healthy                                                                                                                                                                                              6.9s \n ✔ Container splice-validator-wallet-web-ui-1    Healthy                                                                                                                                                                                             30.8s \n ⠼ Container splice-validator-validator-1        Waiting                                                                                                                                                                                            105.3s \n ✔ Container splice-validator-participant-1      Healthy                                                                                                                                                                                             22.3s \n ✔ Container splice-validator-nginx-1            Healthy                                                                                                                                                                                             11.7s \ncontainer splice-validator-validator-1 is unhealthy                                                                                                                                                                                                        "
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "bottom line: container splice-validator-validator-1 is unhealthy\n\n** NOTE: I did not change any configuration file (.env etc)\nAlso, the SPONSOR_SV_URL I took from "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/sync.global\/sv-network\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": " - mainnet"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03T4L2ENVA",
+        "type": "message",
+        "ts": "1751959888.870899",
+        "client_msg_id": "6964e145-8070-404c-9d85-a4aac3b2a84c",
+        "text": "Hi, When using KMS in the Participant is it still required to backup the node-identities periodically?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TG7HQBZHC",
+        "source_team": "TG7HQBZHC",
+        "user_profile": {
+            "avatar_hash": "1dfa195436d3",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-27\/8667440393250_1dfa195436d3be2157dd_72.png",
+            "first_name": "Omri",
+            "real_name": "Omri Maya",
+            "display_name": "Omri Maya",
+            "team": "TG7HQBZHC",
+            "name": "omri.maya",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751959888.870899",
+        "reply_count": 9,
+        "reply_users_count": 4,
+        "latest_reply": "1755085730.081829",
+        "reply_users": [
+            "U08987JD1J9",
+            "U03T4L2ENVA",
+            "U07D7DPUDPY",
+            "U03HMUTQ5F0"
+        ],
+        "replies": [
+            {
+                "user": "U08987JD1J9",
+                "ts": "1751965551.016909"
+            },
+            {
+                "user": "U03T4L2ENVA",
+                "ts": "1751965933.194589"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1751966015.375459"
+            },
+            {
+                "user": "U03T4L2ENVA",
+                "ts": "1751966036.727779"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1751966176.960169"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1751966268.311799"
+            },
+            {
+                "user": "U07D7DPUDPY",
+                "ts": "1755067233.012889"
+            },
+            {
+                "user": "U03HMUTQ5F0",
+                "ts": "1755084661.061179"
+            },
+            {
+                "user": "U07D7DPUDPY",
+                "ts": "1755085730.081829"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0sJH2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, When using KMS in the Participant is it still required to backup the node-identities periodically?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U04DW9WV3L6",
+        "type": "message",
+        "ts": "1751965288.187919",
+        "client_msg_id": "1c1ab2de-ecc9-4a9e-a980-f6b58e2f44f2",
+        "text": "Hey team, could you please whitelist the following IPs for us for testnet:\n\n91.134.97.33\n152.228.231.40\n\nThanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03ML5A0DJA",
+        "source_team": "T03ML5A0DJA",
+        "user_profile": {
+            "avatar_hash": "34d54109a228",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-30\/8967493801651_34d54109a2282b676492_72.png",
+            "first_name": "Suryansh",
+            "real_name": "Suryansh Luganodes",
+            "display_name": "Suryansh Luganodes",
+            "team": "T03ML5A0DJA",
+            "name": "suryansh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751965288.187919",
+        "reply_count": 8,
+        "reply_users_count": 2,
+        "latest_reply": "1754577909.891559",
+        "reply_users": [
+            "U07Q6FC7LR1",
+            "U04KJF6UTNU"
+        ],
+        "replies": [
+            {
+                "user": "U07Q6FC7LR1",
+                "ts": "1751993871.173659"
+            },
+            {
+                "user": "U07Q6FC7LR1",
+                "ts": "1752578165.026899"
+            },
+            {
+                "user": "U07Q6FC7LR1",
+                "ts": "1753192665.374799"
+            },
+            {
+                "user": "U04KJF6UTNU",
+                "ts": "1753270562.537989"
+            },
+            {
+                "user": "U07Q6FC7LR1",
+                "ts": "1753818661.175079"
+            },
+            {
+                "user": "U04KJF6UTNU",
+                "ts": "1753820018.243669"
+            },
+            {
+                "user": "U07Q6FC7LR1",
+                "ts": "1754465969.131619"
+            },
+            {
+                "user": "U07Q6FC7LR1",
+                "ts": "1754577909.891559"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+LIZl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey team, could you please whitelist the following IPs for us for testnet:\n\n91.134.97.33\n152.228.231.40\n\nThanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "US2685U22",
+        "type": "message",
+        "ts": "1751965473.276349",
+        "edited": {
+            "user": "US2685U22",
+            "ts": "1751965480.000000"
+        },
+        "client_msg_id": "620bf92c-b1d8-47a9-8cd2-b233248b3cd0",
+        "text": "Thank you <@U03HMUTQ5F0>, it was the wrong SV URL, now it works",
+        "team": "T05FWTX7PMG",
+        "user_team": "TQUFKT34J",
+        "source_team": "TQUFKT34J",
+        "user_profile": {
+            "avatar_hash": "8c410a9546d8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-03-16\/991176373042_8c410a9546d8193a2ba8_72.jpg",
+            "first_name": "Uri",
+            "real_name": "Uri Tidhar",
+            "display_name": "Uri Tidhar",
+            "team": "TQUFKT34J",
+            "name": "uri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751958852.977119",
+        "parent_user_id": "US2685U22",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nFH4q",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", it was the wrong SV URL, now it works"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U03HMUTQ5F0"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1751965551.016909",
+        "client_msg_id": "3de17e0f-ee08-4a97-a7d8-a17c5ea7dda1",
+        "text": "Hi <@U03T4L2ENVA> off-topic. Curios how are you using KMS now? do you have an enterprise license or you are writing your own kms driver",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751959888.870899",
+        "parent_user_id": "U03T4L2ENVA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hMEbE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03T4L2ENVA"
+                            },
+                            {
+                                "type": "text",
+                                "text": " off-topic. Curios how are you using KMS now? do you have an enterprise license or you are writing your own kms driver"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1751965631.050539",
+        "client_msg_id": "c575b605-6f21-4ce9-b6eb-55f3cf84da6d",
+        "text": "The log above looks likely that authentication info is wrong or so. try to check your auth id\/client secret, especially ledger user and audience field.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751899157.730579",
+        "parent_user_id": "U07L91D4REC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ftXO\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The log above looks likely that authentication info is wrong or so. try to check your auth id\/client secret, especially ledger user and audience field."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "bulb",
+                "users": [
+                    "U07L91D4REC"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1751965647.845449",
+        "client_msg_id": "4f3970ec-7164-4273-8e5d-0c8e7bd9eb0d",
+        "text": "but full log will be more helpful as Wayne said.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751899157.730579",
+        "parent_user_id": "U07L91D4REC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oVbWZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but full log will be more helpful as Wayne said."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03T4L2ENVA",
+        "type": "message",
+        "ts": "1751965933.194589",
+        "client_msg_id": "414c282e-2b84-4f91-9105-972bc81e5b29",
+        "text": "Participant helm values\n\n```kms:\n  type: aws\n  region: eu-central-1\n  multi-region-key: false\n  audit-logging: false\n\nadditionalEnvVars:\n  - name: \"AWS_ACCESS_KEY_ID\"\n    valueFrom:\n      secretKeyRef:\n        key: AWS_ACCESS_KEY_ID\n        name: canton-aws-secrets\n  - name: \"AWS_SECRET_ACCESS_KEY\"\n    valueFrom:\n      secretKeyRef:\n        key: AWS_SECRET_ACCESS_KEY\n        name: canton-aws-secret```",
+        "team": "T05FWTX7PMG",
+        "user_team": "TG7HQBZHC",
+        "source_team": "TG7HQBZHC",
+        "user_profile": {
+            "avatar_hash": "1dfa195436d3",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-27\/8667440393250_1dfa195436d3be2157dd_72.png",
+            "first_name": "Omri",
+            "real_name": "Omri Maya",
+            "display_name": "Omri Maya",
+            "team": "TG7HQBZHC",
+            "name": "omri.maya",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751959888.870899",
+        "parent_user_id": "U03T4L2ENVA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kInFi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Participant helm values\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "kms:\n  type: aws\n  region: eu-central-1\n  multi-region-key: false\n  audit-logging: false\n\nadditionalEnvVars:\n  - name: \"AWS_ACCESS_KEY_ID\"\n    valueFrom:\n      secretKeyRef:\n        key: AWS_ACCESS_KEY_ID\n        name: canton-aws-secrets\n  - name: \"AWS_SECRET_ACCESS_KEY\"\n    valueFrom:\n      secretKeyRef:\n        key: AWS_SECRET_ACCESS_KEY\n        name: canton-aws-secret"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1751966015.375459",
+        "client_msg_id": "86e1f333-e801-480f-91a6-287e4d6a2e38",
+        "text": "yea, but you don't need to sign a canton enteprise license at all ?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751959888.870899",
+        "parent_user_id": "U03T4L2ENVA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6TLJa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yea, but you don't need to sign a canton enteprise license at all ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U03T4L2ENVA",
+        "type": "message",
+        "ts": "1751966036.727779",
+        "edited": {
+            "user": "U03T4L2ENVA",
+            "ts": "1751966038.000000"
+        },
+        "client_msg_id": "be8bab11-5fd6-4169-bfdf-1c762fd6ae1b",
+        "text": ":open_mouth: Not that im aware off",
+        "team": "T05FWTX7PMG",
+        "user_team": "TG7HQBZHC",
+        "source_team": "TG7HQBZHC",
+        "user_profile": {
+            "avatar_hash": "1dfa195436d3",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-27\/8667440393250_1dfa195436d3be2157dd_72.png",
+            "first_name": "Omri",
+            "real_name": "Omri Maya",
+            "display_name": "Omri Maya",
+            "team": "TG7HQBZHC",
+            "name": "omri.maya",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751959888.870899",
+        "parent_user_id": "U03T4L2ENVA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qvUW7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "open_mouth",
+                                "unicode": "1f62e"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Not that im aware off"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1751966176.960169",
+        "client_msg_id": "ae1e9e98-6ec0-44ab-af8e-4decc46937bb",
+        "text": "interesting",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751959888.870899",
+        "parent_user_id": "U03T4L2ENVA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "M9bhH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "interesting"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1751966268.311799",
+        "client_msg_id": "696765c4-56cd-4d6e-ae23-4982ee3106fd",
+        "text": "Hey <@U0PQ8E25D> Can we  use the KMS like this? I was under assumption we need an enterprise license? Or else we have to use KMS driver, which mean write our own driver adapter for it.\n\nI really want to use KMS.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751959888.870899",
+        "parent_user_id": "U03T4L2ENVA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8o4S0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0PQ8E25D"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Can we  use the KMS like this? I was under assumption we need an enterprise license? Or else we have to use KMS driver, which mean write our own driver adapter for it.\n\nI really want to use KMS."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U087Q971716",
+        "type": "message",
+        "ts": "1751969932.408989",
+        "client_msg_id": "6b6470f1-557a-4188-b9ee-f82f256aafa9",
+        "text": "Hi Team, we performed devnet reset on 3rd of july by following the instructions mentioned in the document, after the reset our validator and wallet is working as expected but we are facing issues with the utility app; while requesting the credentials in the utility app, we are getting below error:\n```{\"code\":404,\"body\":{\"code\":\"UNKNOWN_INFORMEES\",\"cause\":\"The participant is not connected to any synchronizer where the given informees are known.\",\"correlationId\":null,\"traceId\":\"01c731bd5ef95d06e3e60e79f37c63b5\",\"context\":{\"participant\":\"participant\",\"unknownInformees\":\"Set(auth0_007c65f857f1c3d599cb6df73775::12205bba10e5119890e1c2c1dca3a63ef996920ca6bf70075cca3a6d70c4aeeb9da9)\",\"category\":\"11\",\"tid\":\"01c731bd5ef95d06e3e60e79f37c63b5\",\"definite_answer\":\"false\"},\"resources\":[],\"errorCategory\":11,\"grpcCodeValue\":5,\"retryInfo\":null,\"definiteAnswer\":null},\"headers\":{\"content-length\":\"539\",\"content-type\":\"application\/json\",\"date\":\"Tue, 08 Jul 2025 09:55:19 GMT\",\"strict-transport-security\":\"max-age=31536000; includeSubDomains\"}}```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07DE2TU0DQ",
+        "source_team": "T07DE2TU0DQ",
+        "user_profile": {
+            "avatar_hash": "gf30d33ca361",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/f30d33ca361deed88f42ffe337e1b636.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Preethi",
+            "real_name": "Preethi Chamarthi",
+            "display_name": "Preethi Chamarthi",
+            "team": "T07DE2TU0DQ",
+            "name": "jaya.preethi",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969932.408989",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1751977103.571789",
+        "reply_users": [
+            "U087Q971716"
+        ],
+        "replies": [
+            {
+                "user": "U087Q971716",
+                "ts": "1751970773.072879"
+            },
+            {
+                "user": "U087Q971716",
+                "ts": "1751977103.571789"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fe3Iu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Team, we performed devnet reset on 3rd of july by following the instructions mentioned in the document, after the reset our validator and wallet is working as expected but we are facing issues with the utility app; while requesting the credentials in the utility app, we are getting below error:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"code\":404,\"body\":{\"code\":\"UNKNOWN_INFORMEES\",\"cause\":\"The participant is not connected to any synchronizer where the given informees are known.\",\"correlationId\":null,\"traceId\":\"01c731bd5ef95d06e3e60e79f37c63b5\",\"context\":{\"participant\":\"participant\",\"unknownInformees\":\"Set(auth0_007c65f857f1c3d599cb6df73775::12205bba10e5119890e1c2c1dca3a63ef996920ca6bf70075cca3a6d70c4aeeb9da9)\",\"category\":\"11\",\"tid\":\"01c731bd5ef95d06e3e60e79f37c63b5\",\"definite_answer\":\"false\"},\"resources\":[],\"errorCategory\":11,\"grpcCodeValue\":5,\"retryInfo\":null,\"definiteAnswer\":null},\"headers\":{\"content-length\":\"539\",\"content-type\":\"application\/json\",\"date\":\"Tue, 08 Jul 2025 09:55:19 GMT\",\"strict-transport-security\":\"max-age=31536000; includeSubDomains\"}}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U087Q971716",
+        "type": "message",
+        "ts": "1751970773.072879",
+        "client_msg_id": "a4a42bad-9322-40cf-b65f-a7a90a11ff63",
+        "text": "Done, Thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07DE2TU0DQ",
+        "source_team": "T07DE2TU0DQ",
+        "user_profile": {
+            "avatar_hash": "gf30d33ca361",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/f30d33ca361deed88f42ffe337e1b636.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Preethi",
+            "real_name": "Preethi Chamarthi",
+            "display_name": "Preethi Chamarthi",
+            "team": "T07DE2TU0DQ",
+            "name": "jaya.preethi",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969932.408989",
+        "parent_user_id": "U087Q971716",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "K2Em4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Done, Thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08JP88KPLM",
+        "type": "message",
+        "ts": "1751972951.494909",
+        "client_msg_id": "bd274af0-2539-4c15-a5f3-a42db83bc2e2",
+        "text": "One more question.\n\nThe official guide includes the Validator Node, Participant Node, and Wallet UI \/ CNS UI.\n\nJust to confirm: Validator Node operators aren't responsible for the Participant Node or Wallet\/CNS UI, correct?\nOur understanding:\n• Validator Node: run by us (infra provider)\n• Participant Node: managed by the app developer\n• Wallet UI \/ CNS UI: used by end users\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "EF5BKVCT1",
+        "source_team": "EF5BKVCT1",
+        "user_profile": {
+            "avatar_hash": "848a957ad461",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-06\/8855466309508_848a957ad4614df4958d_72.jpg",
+            "first_name": "Kojiro",
+            "real_name": "Kojiro Hirate",
+            "display_name": "kojiro.hirate",
+            "team": "EF5BKVCT1",
+            "name": "kojiro.hirate",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751353778.675539",
+        "parent_user_id": "U08JP88KPLM",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9pgQb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "One more question.\n\nThe official guide includes the Validator Node, Participant Node, and Wallet UI \/ CNS UI.\n\nJust to confirm: Validator Node operators aren't responsible for the Participant Node or Wallet\/CNS UI, correct?\nOur understanding:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Validator Node: run by us (infra provider)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Participant Node: managed by the app developer"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Wallet UI \/ CNS UI: used by end users"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "tombstone",
+        "text": "This message was deleted.",
+        "user": "USLACKBOT",
+        "hidden": true,
+        "type": "message",
+        "ts": "1751976892.714109",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T03T53E10",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751976892.714109",
+        "parent_user_id": "USLACKBOT",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1751979622.681599",
+        "reply_users": [
+            "U08RL7F5VQD",
+            "U092NF1BX9C"
+        ],
+        "replies": [
+            {
+                "user": "U08RL7F5VQD",
+                "ts": "1751977015.189249"
+            },
+            {
+                "user": "U092NF1BX9C",
+                "ts": "1751979622.681599"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "user": "U08RL7F5VQD",
+        "type": "message",
+        "ts": "1751977015.189249",
+        "client_msg_id": "70ca394e-6a11-4d9d-a35e-ed6485924d93",
+        "text": "I think you've mentioned the wrong person :sweat_smile:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08R84XCX8F",
+        "source_team": "T08R84XCX8F",
+        "user_profile": {
+            "avatar_hash": "ad744635e269",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-09\/8870303570853_ad744635e269f41f4ffa_72.webp",
+            "first_name": "Ivan",
+            "real_name": "Ivan Wijaya",
+            "display_name": "Ivan",
+            "team": "T08R84XCX8F",
+            "name": "ivan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751976892.714109",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/6jlR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think you've mentioned the wrong person "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "sweat_smile",
+                                "unicode": "1f605"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U087Q971716",
+        "type": "message",
+        "ts": "1751977103.571789",
+        "client_msg_id": "44406409-ffb0-4ee6-a61a-812732c190d9",
+        "text": "Apologies, accepted the invite",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07DE2TU0DQ",
+        "source_team": "T07DE2TU0DQ",
+        "user_profile": {
+            "avatar_hash": "gf30d33ca361",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/f30d33ca361deed88f42ffe337e1b636.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Preethi",
+            "real_name": "Preethi Chamarthi",
+            "display_name": "Preethi Chamarthi",
+            "team": "T07DE2TU0DQ",
+            "name": "jaya.preethi",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751969932.408989",
+        "parent_user_id": "U087Q971716",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "b55qV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Apologies, accepted the invite"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "ty",
+                "users": [
+                    "U03HMUTQ5F0"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U092NF1BX9C",
+        "type": "message",
+        "ts": "1751979622.681599",
+        "client_msg_id": "f4c877db-58cb-4774-aec6-ac1cd553d32d",
+        "text": "So many Ivans :smile: ok! I didn’t know that, thank you!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T092NF1BT46",
+        "source_team": "T092NF1BT46",
+        "user_profile": {
+            "avatar_hash": "d06c30f5f248",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-30\/9111427220743_d06c30f5f248c1a5679d_72.png",
+            "first_name": "Ivan",
+            "real_name": "Ivan R",
+            "display_name": "",
+            "team": "T092NF1BT46",
+            "name": "ivan.reif",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751976892.714109",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ux1t0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So many Ivans "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile",
+                                "unicode": "1f604"
+                            },
+                            {
+                                "type": "text",
+                                "text": " ok! I didn’t know that, thank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*skylar* from *Gate* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1751981169.588559",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "a2yI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "skylar",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Gate",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0954CSLZTJ",
+        "type": "message",
+        "ts": "1751981387.967289",
+        "client_msg_id": "fce4bc57-a9d8-4247-8c17-de056b94e08a",
+        "text": "Hey Team, Good to meet everyone here.\n\nSending in a request to get our Devnet IP Whitelisted\n47.239.94.17\n\nAlso, we would need help with creating the SV Endpoint. Thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0954CSLRJ4",
+        "source_team": "T0954CSLRJ4",
+        "user_profile": {
+            "avatar_hash": "55359ad04729",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-07\/9153373084389_55359ad047290a1a531d_72.jpg",
+            "first_name": "Skylar",
+            "real_name": "Skylar",
+            "display_name": "",
+            "team": "T0954CSLRJ4",
+            "name": "skylar",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yBsVg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey Team, Good to meet everyone here.\n\nSending in a request to get our Devnet IP Whitelisted\n47.239.94.17\n\nAlso, we would need help with creating the SV Endpoint. Thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07P273SJN9",
+        "type": "message",
+        "ts": "1751983675.351389",
+        "client_msg_id": "d745c2fa-b13e-4b70-b437-2ad06c17665e",
+        "text": "Hello can you whitelist on TestNet our test node ? : 212.47.234.124",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05CXBWDX7C",
+        "source_team": "T05CXBWDX7C",
+        "user_profile": {
+            "avatar_hash": "d5202b7f0560",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-17\/8463304045987_d5202b7f05601fff6387_72.png",
+            "first_name": "Loic",
+            "real_name": "Loic",
+            "display_name": "Loic",
+            "team": "T05CXBWDX7C",
+            "name": "loic.fregeac",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751983675.351389",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1751986017.349829",
+        "reply_users": [
+            "U07P273SJN9"
+        ],
+        "replies": [
+            {
+                "user": "U07P273SJN9",
+                "ts": "1751984554.359489"
+            },
+            {
+                "user": "U07P273SJN9",
+                "ts": "1751986017.349829"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xlyjK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello can you whitelist on TestNet our test node ? : 212.47.234.124"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07P273SJN9",
+        "type": "message",
+        "ts": "1751984554.359489",
+        "client_msg_id": "01981451-ce9d-48a7-8eed-26c0196230d7",
+        "text": "Sure if a replacement is good that can be really great",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05CXBWDX7C",
+        "source_team": "T05CXBWDX7C",
+        "user_profile": {
+            "avatar_hash": "d5202b7f0560",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-17\/8463304045987_d5202b7f05601fff6387_72.png",
+            "first_name": "Loic",
+            "real_name": "Loic",
+            "display_name": "Loic",
+            "team": "T05CXBWDX7C",
+            "name": "loic.fregeac",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751983675.351389",
+        "parent_user_id": "U07P273SJN9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "v6gYJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sure if a replacement is good that can be really great"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07L91D4REC",
+        "type": "message",
+        "ts": "1751985065.368209",
+        "client_msg_id": "aa5e7558-e826-4014-bbb3-322fa8f6d9cb",
+        "text": "Thank you <@U08987JD1J9>!",
+        "team": "T05FWTX7PMG",
+        "user_team": "TCR380WSE",
+        "source_team": "TCR380WSE",
+        "user_profile": {
+            "avatar_hash": "59c0b6948da2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-02\/7668781980292_59c0b6948da2c826b961_72.png",
+            "first_name": "Julio",
+            "real_name": "Julio Pedrosa",
+            "display_name": "Julio Pedrosa",
+            "team": "TCR380WSE",
+            "name": "julio.pedrosa",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751899157.730579",
+        "parent_user_id": "U07L91D4REC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rQ1GE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U08987JD1J9"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U04JX22CUTF",
+        "type": "message",
+        "ts": "1751985528.266469",
+        "edited": {
+            "user": "U04JX22CUTF",
+            "ts": "1751985537.000000"
+        },
+        "client_msg_id": "1cf455c1-fda2-428b-8cd0-cdb2794d83c4",
+        "text": "Hey, could someone help me whitelist this IP for the testnet `3.22.56.60`\nThank you",
+        "team": "T05FWTX7PMG",
+        "user_team": "TMCLAM45B",
+        "source_team": "TMCLAM45B",
+        "user_profile": {
+            "avatar_hash": "20342bdf1e9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-06\/5072696717877_20342bdf1e9c13a82f31_72.jpg",
+            "first_name": "Brij",
+            "real_name": "Brij Chauhan",
+            "display_name": "",
+            "team": "TMCLAM45B",
+            "name": "brindrajsinh.chauhan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751985528.266469",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1752055949.696189",
+        "reply_users": [
+            "U04JX22CUTF"
+        ],
+        "replies": [
+            {
+                "user": "U04JX22CUTF",
+                "ts": "1752055949.696189"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "L9WqK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey, could someone help me whitelist this IP for the testnet "
+                            },
+                            {
+                                "type": "text",
+                                "text": "3.22.56.60",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nThank you"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07P273SJN9",
+        "type": "message",
+        "ts": "1751986017.349829",
+        "client_msg_id": "9dcdb6bf-9107-4c73-9684-ce496303936e",
+        "text": "Thank you",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05CXBWDX7C",
+        "source_team": "T05CXBWDX7C",
+        "user_profile": {
+            "avatar_hash": "d5202b7f0560",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-17\/8463304045987_d5202b7f05601fff6387_72.png",
+            "first_name": "Loic",
+            "real_name": "Loic",
+            "display_name": "Loic",
+            "team": "T05CXBWDX7C",
+            "name": "loic.fregeac",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751983675.351389",
+        "parent_user_id": "U07P273SJN9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ztrU8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1751993188.658219",
+        "client_msg_id": "f66b4f14-9fbf-4c22-a8e0-6a985bafa870",
+        "text": "Is it correct that mainnet is adopting the DAML to support FeaturedApp Activity markers today, but will require a later vote to `Enabled featured application markers` in the AmuletRules?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751993188.658219",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1751993359.864229",
+        "reply_users": [
+            "U07J3V9CS78"
+        ],
+        "replies": [
+            {
+                "user": "U07J3V9CS78",
+                "ts": "1751993359.864229"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Nuqkh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is it correct that mainnet is adopting the DAML to support FeaturedApp Activity markers today, but will require a later vote to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Enabled featured application markers",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " in the AmuletRules?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1751993359.864229",
+        "client_msg_id": "7222e0e5-b3a6-4676-98d2-dc34de5bfe2d",
+        "text": "ie: I see on the schedule `Featured App Markers enabled at CIP default value of $1 on MainNet` for July 29th. My understanding of the CIP is that is the point at which SV's will begin converting Activity Markers into reward coupons?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751993188.658219",
+        "parent_user_id": "U07J3V9CS78",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IamUo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ie: I see on the schedule "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Featured App Markers enabled at CIP default value of $1 on MainNet",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " for July 29th. My understanding of the CIP is that is the point at which SV's will begin converting Activity Markers into reward coupons?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U03HMUTQ5F0"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U07Q6FC7LR1",
+        "type": "message",
+        "ts": "1751993871.173659",
+        "client_msg_id": "257e9124-07ed-4e17-8523-a9f4374f1b3d",
+        "text": "Hello <@U04KJF6UTNU>! can you please whitelist this IP instead (this is our gateway):\n`141.95.107.202`",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03ML5A0DJA",
+        "source_team": "T03ML5A0DJA",
+        "user_profile": {
+            "avatar_hash": "ed79e1d76609",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-10-03\/7835373638497_ed79e1d76609c7836413_72.jpg",
+            "first_name": "Chandra",
+            "real_name": "Chandra Kiran Reddy Avula",
+            "display_name": "CK",
+            "team": "T03ML5A0DJA",
+            "name": "chandrakiran",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751965288.187919",
+        "parent_user_id": "U04DW9WV3L6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wGcOt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U04KJF6UTNU"
+                            },
+                            {
+                                "type": "text",
+                                "text": "! can you please whitelist this IP instead (this is our gateway):\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "141.95.107.202",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08TDHL1E0N",
+        "type": "message",
+        "ts": "1752004499.227359",
+        "client_msg_id": "9302eb0d-c7f6-4cd9-a125-613fdd97e9dc",
+        "text": "it's not, sadly docker deployment constantly has had issues for us\n\n<https:\/\/elkcapitalmarkets.slack.com\/archives\/C08AP9QR7K4\/p1751394955309529>\n\nwe have more logs here",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "g95ecd4e0c48",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/95ecd4e0c4881a53566a4ef205f84191.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "Jason",
+            "real_name": "Jason",
+            "display_name": "Jason",
+            "team": "T4WUR0THD",
+            "name": "jchen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751038540.610819",
+        "parent_user_id": "U08TDHL1E0N",
+        "attachments": [
+            {
+                "from_url": "https:\/\/elkcapitalmarkets.slack.com\/archives\/C08AP9QR7K4\/p1751394955309529",
+                "ts": "1751394955.309529",
+                "author_id": "U08TDHL1E0N",
+                "channel_id": "C08AP9QR7K4",
+                "channel_team": "T07LSPYDRT4",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "message_blocks": [
+                    {
+                        "team": "T4WUR0THD",
+                        "channel": "C08AP9QR7K4",
+                        "ts": "1751394955.309529",
+                        "message": {
+                            "blocks": [
+                                {
+                                    "type": "rich_text",
+                                    "block_id": "gcSz9",
+                                    "elements": [
+                                        {
+                                            "type": "rich_text_section",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "hey there, when we run the validator containers with docker compose it works fine, but when we run it with the "
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": "-a",
+                                                    "style": {
+                                                        "code": true
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " flag, it starts giving this error\n\nwondering if anyone is familiar w this issue?\n\n"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "rich_text_preformatted",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "{\"@timestamp\":\"2025-07-01T18:14:00.904Z\",\"@version\":\"1\",\"message\":\"Task closing node-validator_backend did not complete within 10 seconds. Stack traces:\\n  Thread[#101,delay-util-0,5,main] is-daemon=true state=WAITING\\n    java.base@21.0.7\/jdk.internal.misc.Unsafe.park(Native Method)\\n    java.base@21.0.7\/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)\\n    java.base@21.0.7\/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)\\n    java.base@21.0.7\/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)\\n    java.base@21.0.7\/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)\\n    java.base@21.0.7\/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)\\n    java.base@21.0.7\/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)\\n    java.base@21.0.7\/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\\n    java.base@21.0.7\/java.lang.Thread.runWith(Thread.java:1596)\\n    java.base@21.0.7\/java.lang.Thread.run(Thread.java:1583)\\n\\n  Thread[#61,validator_backend-wallclock-0,5,main] is-daemon=true state=TIMED_WAITING\\n    java.base@21.0.7\/jdk.internal.misc.Unsafe.park(Native Method)\\n    java.base@21.0.7\/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)\\n    java.base@21.0.7\/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)\\n    java.base@21.0.7\/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)\\n    java.base@21.0.7\/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\\n    java.base@21.0.7\/java.lang.Thread.runWith(Thread.java:1596)\\n    java.base@21.0.7\/java.lang.Thread.run(Thread.java:1583)\\n\",\"logger_name\":\"o.l.s.e.ValidatorApps\",\"thread_name\":\"Thread-0\",\"level\":\"WARN\",\"level_value\":30000}"
+                                                }
+                                            ],
+                                            "border": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "id": 1,
+                "original_url": "https:\/\/elkcapitalmarkets.slack.com\/archives\/C08AP9QR7K4\/p1751394955309529",
+                "fallback": "[July 1st, 2025 11:35 AM] jchen: hey there, when we run the validator containers with docker compose it works fine, but when we run it with the `-a` flag, it starts giving this error\n\nwondering if anyone is familiar w this issue?\n\n```{\"@timestamp\":\"2025-07-01T18:14:00.904Z\",\"@version\":\"1\",\"message\":\"Task closing node-validator_backend did not complete within 10 seconds. Stack traces:\\n  Thread[#101,delay-util-0,5,main] is-daemon=true state=WAITING\\n    java.base@21.0.7\/jdk.internal.misc.Unsafe.park(Native Method)\\n    java.base@21.0.7\/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)\\n    java.base@21.0.7\/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)\\n    java.base@21.0.7\/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)\\n    java.base@21.0.7\/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)\\n    java.base@21.0.7\/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)\\n    java.base@21.0.7\/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)\\n    java.base@21.0.7\/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\\n    java.base@21.0.7\/java.lang.Thread.runWith(Thread.java:1596)\\n    java.base@21.0.7\/java.lang.Thread.run(Thread.java:1583)\\n\\n  Thread[#61,validator_backend-wallclock-0,5,main] is-daemon=true state=TIMED_WAITING\\n    java.base@21.0.7\/jdk.internal.misc.Unsafe.park(Native Method)\\n    java.base@21.0.7\/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)\\n    java.base@21.0.7\/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)\\n    java.base@21.0.7\/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)\\n    java.base@21.0.7\/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\\n    java.base@21.0.7\/java.lang.Thread.runWith(Thread.java:1596)\\n    java.base@21.0.7\/java.lang.Thread.run(Thread.java:1583)\\n\",\"logger_name\":\"o.l.s.e.ValidatorApps\",\"thread_name\":\"Thread-0\",\"level\":\"WARN\",\"level_value\":30000}```",
+                "text": "hey there, when we run the validator containers with docker compose it works fine, but when we run it with the `-a` flag, it starts giving this error\n\nwondering if anyone is familiar w this issue?\n\n```{\"@timestamp\":\"2025-07-01T18:14:00.904Z\",\"@version\":\"1\",\"message\":\"Task closing node-validator_backend did not complete within 10 seconds. Stack traces:\\n  Thread[#101,delay-util-0,5,main] is-daemon=true state=WAITING\\n    java.base@21.0.7\/jdk.internal.misc.Unsafe.park(Native Method)\\n    java.base@21.0.7\/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)\\n    java.base@21.0.7\/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)\\n    java.base@21.0.7\/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)\\n    java.base@21.0.7\/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)\\n    java.base@21.0.7\/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)\\n    java.base@21.0.7\/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)\\n    java.base@21.0.7\/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\\n    java.base@21.0.7\/java.lang.Thread.runWith(Thread.java:1596)\\n    java.base@21.0.7\/java.lang.Thread.run(Thread.java:1583)\\n\\n  Thread[#61,validator_backend-wallclock-0,5,main] is-daemon=true state=TIMED_WAITING\\n    java.base@21.0.7\/jdk.internal.misc.Unsafe.park(Native Method)\\n    java.base@21.0.7\/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)\\n    java.base@21.0.7\/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)\\n    java.base@21.0.7\/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)\\n    java.base@21.0.7\/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\\n    java.base@21.0.7\/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\\n    java.base@21.0.7\/java.lang.Thread.runWith(Thread.java:1596)\\n    java.base@21.0.7\/java.lang.Thread.run(Thread.java:1583)\\n\",\"logger_name\":\"o.l.s.e.ValidatorApps\",\"thread_name\":\"Thread-0\",\"level\":\"WARN\",\"level_value\":30000}```",
+                "author_name": "Jason",
+                "author_link": "https:\/\/elkcapitalmarkets.slack.com\/team\/U08TDHL1E0N",
+                "author_icon": "https:\/\/secure.gravatar.com\/avatar\/95ecd4e0c4881a53566a4ef205f84191.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-48.png",
+                "author_subname": "Jason",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "footer": "Thread in Slack Conversation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "u\/KSv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "it's not, sadly docker deployment constantly has had issues for us\n\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/elkcapitalmarkets.slack.com\/archives\/C08AP9QR7K4\/p1751394955309529"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nwe have more logs here"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*alex* from *Slack* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1752009438.448159",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bxOy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "alex",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Slack",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "We tried running it on migration id 0, 2, and changing the sponsor sv url etc. but constantly getting this log",
+        "files": [
+            {
+                "id": "F095K2KQPSL",
+                "created": 1752011773,
+                "timestamp": 1752011773,
+                "name": "splice-validator-validator-1.log",
+                "title": "splice-validator-validator-1.log",
+                "mimetype": "application\/octet-stream",
+                "filetype": "binary",
+                "pretty_type": "Binary",
+                "user": "U08TDHL1E0N",
+                "user_team": "T4WUR0THD",
+                "editable": false,
+                "size": 1589663,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T4WUR0THD-F095K2KQPSL\/splice-validator-validator-1.log?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T4WUR0THD-F095K2KQPSL\/download\/splice-validator-validator-1.log?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/elkcapitalmarkets.slack.com\/files\/U05FZBDQ4RJ\/F095K2KQPSL\/splice-validator-validator-1.log",
+                "permalink_public": "https:\/\/slack-files.com\/T4WUR0THD-F095K2KQPSL-a24e247edc",
+                "source_team": "T4WUR0THD",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U08TDHL1E0N",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nY50h",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We tried running it on migration id 0, 2, and changing the sponsor sv url etc. but constantly getting this log"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1752011795.105069",
+        "client_msg_id": "686bc33e-7d22-4cde-b3f2-07154eb9dc69",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1751038540.610819",
+        "parent_user_id": "U08TDHL1E0N",
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "g95ecd4e0c48",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/95ecd4e0c4881a53566a4ef205f84191.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "Jason",
+            "real_name": "Jason",
+            "display_name": "Jason",
+            "team": "T4WUR0THD",
+            "name": "jchen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "reactions": [
+            {
+                "name": "+1::skin-tone-2",
+                "users": [
+                    "U02T94QS4U8"
+                ],
+                "count": 1
+            },
+            {
+                "name": "eyes",
+                "users": [
+                    "U02T94QS4U8"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08JP88KPLM",
+        "type": "message",
+        "ts": "1752024555.757349",
+        "client_msg_id": "343cef80-1059-418a-abd1-3965aea4bdd1",
+        "text": "Hi Wayne, thanks for your response. In this case, do we have to make the URL accessible to everyone or limit it to only internal access?",
+        "team": "T05FWTX7PMG",
+        "user_team": "EF5BKVCT1",
+        "source_team": "EF5BKVCT1",
+        "user_profile": {
+            "avatar_hash": "848a957ad461",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-06\/8855466309508_848a957ad4614df4958d_72.jpg",
+            "first_name": "Kojiro",
+            "real_name": "Kojiro Hirate",
+            "display_name": "kojiro.hirate",
+            "team": "EF5BKVCT1",
+            "name": "kojiro.hirate",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751353778.675539",
+        "parent_user_id": "U08JP88KPLM",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4TO76",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Wayne, thanks for your response. In this case, do we have to make the URL accessible to everyone or limit it to only internal access?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08JP88KPLM",
+        "type": "message",
+        "ts": "1752039249.376009",
+        "client_msg_id": "dede2380-9d89-4dd3-9fbe-2f9e3e9a4256",
+        "text": "Got it, will share this to the tech team. Thank you!",
+        "team": "T05FWTX7PMG",
+        "user_team": "EF5BKVCT1",
+        "source_team": "EF5BKVCT1",
+        "user_profile": {
+            "avatar_hash": "848a957ad461",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-06\/8855466309508_848a957ad4614df4958d_72.jpg",
+            "first_name": "Kojiro",
+            "real_name": "Kojiro Hirate",
+            "display_name": "kojiro.hirate",
+            "team": "EF5BKVCT1",
+            "name": "kojiro.hirate",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751353778.675539",
+        "parent_user_id": "U08JP88KPLM",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TrDta",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Got it, will share this to the tech team. Thank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U05T6QQK7GU",
+        "type": "message",
+        "ts": "1752040978.064819",
+        "client_msg_id": "75f14b21-edf5-42cf-b886-7e16b2a4fe91",
+        "text": "Hey all, we are trying to fetch onboard secret for devnet, our sponsor is Digital Asset but getting below error, can someone help?\n\ncurl -X POST <https:\/\/scan.sv-1.dev.global.canton.network.digitalasset.com\/api\/sv\/v0\/devnet\/onboard\/validator\/prepare>\n\n&lt;html&gt;\n&lt;head&gt;&lt;title&gt;405 Not Allowed&lt;\/title&gt;&lt;\/head&gt;\n&lt;body&gt;\n&lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;\/h1&gt;&lt;\/center&gt;\n&lt;hr&gt;&lt;center&gt;nginx\/1.28.0&lt;\/center&gt;\n&lt;\/body&gt;\n&lt;\/html&gt;",
+        "team": "T05FWTX7PMG",
+        "user_team": "T01F3GP2RQQ",
+        "source_team": "T01F3GP2RQQ",
+        "user_profile": {
+            "avatar_hash": "c8c8c7d608a6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-09-20\/5919470479381_c8c8c7d608a6fae3debe_72.png",
+            "first_name": "Prashant",
+            "real_name": "Prashant Kumar",
+            "display_name": "Prashant Kumar",
+            "team": "T01F3GP2RQQ",
+            "name": "prashant",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752040978.064819",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1752042015.352519",
+        "reply_users": [
+            "U05T6QQK7GU"
+        ],
+        "replies": [
+            {
+                "user": "U05T6QQK7GU",
+                "ts": "1752042015.352519"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cLcDq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey all, we are trying to fetch onboard secret for devnet, our sponsor is Digital Asset but getting below error, can someone help?\n\ncurl -X POST "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/scan.sv-1.dev.global.canton.network.digitalasset.com\/api\/sv\/v0\/devnet\/onboard\/validator\/prepare"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n<html>\n<head><title>405 Not Allowed<\/title><\/head>\n<body>\n<center><h1>405 Not Allowed<\/h1><\/center>\n<hr><center>nginx\/1.28.0<\/center>\n<\/body>\n<\/html>"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U05T6QQK7GU",
+        "type": "message",
+        "ts": "1752042015.352519",
+        "client_msg_id": "952a7a4e-37ad-48a5-9e83-cf471ec84748",
+        "text": "Many Thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "T01F3GP2RQQ",
+        "source_team": "T01F3GP2RQQ",
+        "user_profile": {
+            "avatar_hash": "c8c8c7d608a6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-09-20\/5919470479381_c8c8c7d608a6fae3debe_72.png",
+            "first_name": "Prashant",
+            "real_name": "Prashant Kumar",
+            "display_name": "Prashant Kumar",
+            "team": "T01F3GP2RQQ",
+            "name": "prashant",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752040978.064819",
+        "parent_user_id": "U05T6QQK7GU",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vHAgK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Many Thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

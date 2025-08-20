@@ -1,0 +1,1208 @@
+[
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754988848.320699",
+        "client_msg_id": "56815071-8a3c-492c-a0a8-7f65b2e45cc3",
+        "text": "I finished the step1: <https:\/\/github.com\/DLC-link\/canton-onboarding-testnet\/tree\/step1\/step1>\n\ncc <@U088UV6MKFE>\nThe funny part, if we run it multiple times it's not overwrite it, rather it creates multiple keys with the same name. So based on that what I added:\n\n• I made the <http:\/\/01_GenerateKeys.sc|01_GenerateKeys.sc> fault-tolerant, so it recognizes when the keys are already created or the topology delegation already happened. Also it can retrieve the keys and put them into the output, so the node operator can run it multiple times. Even if they delete the the output files, if they rerun it, it will be the same keys.\n• I wrote the <http:\/\/01_ValidateKeys.sc|01_ValidateKeys.sc> which validates that only 1 key exists under the same nem and prints out that contact the Bitsafe team if there are multiple ones.\n• For this I created the danger\/01_CleanupKeys.sc and labeled it with DO NOT RUN IT. Because that removes all the keys what we created. So if the node operator contact us, we can say that run that script and run the <http:\/\/01_GenerateKeys.sc|01_GenerateKeys.sc> again. Than copy the new files to us.\nThis supposed to be 100% fault tolerant right now, unless someone runs the DO NOT RUN script accidentally.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tBFLN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I finished the step1: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton-onboarding-testnet\/tree\/step1\/step1"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\ncc "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nThe funny part, if we run it multiple times it's not overwrite it, rather it creates multiple keys with the same name. So based on that what I added:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I made the "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "http:\/\/01_GenerateKeys.sc",
+                                        "text": "01_GenerateKeys.sc"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " fault-tolerant, so it recognizes when the keys are already created or the topology delegation already happened. Also it can retrieve the keys and put them into the output, so the node operator can run it multiple times. Even if they delete the the output files, if they rerun it, it will be the same keys."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I wrote the "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "http:\/\/01_ValidateKeys.sc",
+                                        "text": "01_ValidateKeys.sc"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " which validates that only 1 key exists under the same nem and prints out that contact the Bitsafe team if there are multiple ones."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "For this I created the danger\/01_CleanupKeys.sc and labeled it with DO NOT RUN IT. Because that removes all the keys what we created. So if the node operator contact us, we can say that run that script and run the "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "http:\/\/01_GenerateKeys.sc",
+                                        "text": "01_GenerateKeys.sc"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " again. Than copy the new files to us."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThis supposed to be 100% fault tolerant right now, unless someone runs the DO NOT RUN script accidentally."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754996854.019289",
+        "client_msg_id": "69c82c5d-d64f-4a62-b18f-3f32133b0dcb",
+        "text": "I finieshed the step2: <https:\/\/github.com\/DLC-link\/canton-onboarding-testnet\/tree\/step2\/step2>\n\nFew notes:\n• The step 1a generates a few files (dns_proto.bin, p2p_proto.bin, ptk_proto.bin, namespaceDef.bin). If I remove all these files and rerun the 1a step, this files will be the same. So this operation is pretty safe to rerun.\n• I run the step 2 on the dns_proto.bin. The participant signed it. I deleted the signed file and rerun the step 2. That created the same file, so I assume that the same dns_proto.bin always results the same signed file. So we can run the step 2 multiple times it will be the same signature. (I didn't check it after I run the step 2a or one day later)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sHdpS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I finieshed the step2: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton-onboarding-testnet\/tree\/step2\/step2"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nFew notes:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "The step 1a generates a few files (dns_proto.bin, p2p_proto.bin, ptk_proto.bin, namespaceDef.bin). If I remove all these files and rerun the 1a step, this files will be the same. So this operation is pretty safe to rerun."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I run the step 2 on the dns_proto.bin. The participant signed it. I deleted the signed file and rerun the step 2. That created the same file, so I assume that the same dns_proto.bin always results the same signed file. So we can run the step 2 multiple times it will be the same signature. (I didn't check it after I run the step 2a or one day later)"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754999489.360889",
+        "client_msg_id": "34a3ed21-69de-4ffc-8d47-90fed12faf2b",
+        "text": "Finished the step3: <https:\/\/github.com\/DLC-link\/canton-onboarding-testnet\/tree\/step3\/step3>\n\nNote: The generated signature file `signed-p2p-ptk-proposals.bin`  is also the same after rerun.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SguCS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Finished the step3: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton-onboarding-testnet\/tree\/step3\/step3"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nNote: The generated signature file "
+                            },
+                            {
+                                "type": "text",
+                                "text": "signed-p2p-ptk-proposals.bin",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  is also the same after rerun."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "subtype": "channel_convert_to_public",
+        "user": "U05FZBDQ4RJ",
+        "text": "made this channel *public*. Any member in this workspace can see and join it.",
+        "type": "message",
+        "ts": "1755000568.896329"
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1755003119.718169",
+        "client_msg_id": "efb5be2e-56fe-4f4b-b996-49295495a6a4",
+        "text": "Incident happened again so with lost a cycle on canton-billing. That was again the ibtc-mainnet pod where the CPU and memory usage increased heavily so the pod restarted. Everything is normal now. Once we have time, we should figure out why these are happening. Maybe we should involve the IEU in the investigation.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755003119.718169",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1755005070.230999",
+        "reply_users": [
+            "U05FZBDQ4RJ"
+        ],
+        "replies": [
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1755005070.230999"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1755005070.230999",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HzzGQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Incident happened again so with lost a cycle on canton-billing. That was again the ibtc-mainnet pod where the CPU and memory usage increased heavily so the pod restarted. Everything is normal now. Once we have time, we should figure out why these are happening. Maybe we should involve the IEU in the investigation."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1755005035.564559",
+        "client_msg_id": "13c38e45-7def-4eae-9447-cafe122fffda",
+        "text": "Hi <@U088UV6MKFE> <@U05FU0HPZ9T>! Question from TH today.\n\nIs it possible to launch CBTC with 3\/5 multisig, and expand to 10\/15 later?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755005035.564559",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1755013903.199219",
+        "reply_users": [
+            "U088UV6MKFE",
+            "U05FU0HPZ9T"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1755010807.602979"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1755013903.199219"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1755013903.199219",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wvo52",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FU0HPZ9T"
+                            },
+                            {
+                                "type": "text",
+                                "text": "! Question from TH today.\n\nIs it possible to launch CBTC with 3\/5 multisig, and expand to 10\/15 later?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1755005070.230999",
+        "client_msg_id": "ec1e8750-21f6-40d9-a887-88555f103a8a",
+        "text": "Thanks for checking. Yes - could you mention it to IEU? They should debug it",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755003119.718169",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yqJRK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for checking. Yes - could you mention it to IEU? They should debug it"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1755010807.602979",
+        "client_msg_id": "F2FF6D1B-4A69-4662-A531-D32EC7CA258E",
+        "text": "Yes it is.\n\nBut\n\nThere is a difficulty for adding new nodes, we have been advised against doing it early and often. \nDue to the nature of the decentralized party, when we add a new node, we have to migrate state from an existing one. We dont know how this actually works, but its the same mechanism the SVs do (since they are the only other decparty out there). Anyway Moritz keeps saying we should delay it as much as possible, and when we add nodes, we should do it in batches.\n\nBut yes technically totally doable, nodes will come and go so we will have to figure it out sooner or later",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755005035.564559",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Bop2M",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes it is.\n\nBut\n\nThere is a difficulty for adding new nodes, we have been advised against doing it early and often. \nDue to the nature of the decentralized party, when we add a new node, we have to migrate state from an existing one. We dont know how this actually works, but its the same mechanism the SVs do (since they are the only other decparty out there). Anyway Moritz keeps saying we should delay it as much as possible, and when we add nodes, we should do it in batches.\n\nBut yes technically totally doable, nodes will come and go so we will have to figure it out sooner or later"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "USLACKBOT",
+        "subtype": "tabbed_canvas_updated",
+        "canvas_update_user_ids": [
+            "U093Q4FPEJG"
+        ],
+        "canvas_update_section_ids": [
+            "temp:C:HWKc6d145512ee949f391526a2e6",
+            "temp:C:HWK1d90eb29f70d4738a0a13dc2f",
+            "temp:C:HWK0b59c53c8ac14c6ba17647ff0"
+        ],
+        "canvas_update_canvas_id": "F099P0H9DPT",
+        "canvas_update_ai_summary_blocks": [],
+        "type": "message",
+        "ts": "1755012046.973229",
+        "edited": {
+            "user": "USLACKBOT",
+            "ts": "1755023871.000000"
+        },
+        "text": "",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T05FWTX7PMG",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cP1lS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ferenc Fabian made updates to a canvas tab: "
+                            },
+                            {
+                                "type": "canvas",
+                                "file_id": "F099P0H9DPT"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1755013903.199219",
+        "client_msg_id": "c47bb01b-3ec6-4948-bcfd-ef73f83ae6db",
+        "text": "I would vote for “setting a deadline” (Robert’s good idea) and whoever makes it by that deadline will be in, the rest will join in the next round of onboarding.\n\nLaunching “something” ASAP is important, more important than having a high number in the signing threshold",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755005035.564559",
+        "parent_user_id": "U05FZBDQ4RJ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Si1yv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I would vote for “setting a deadline” (Robert’s good idea) and whoever makes it by that deadline will be in, the rest will join in the next round of onboarding.\n\nLaunching “something” ASAP is important, more important than having a high number in the signing threshold"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1755015512.183959",
+        "client_msg_id": "503acb54-8410-43a0-95f8-3b5378d5cec2",
+        "text": "Hey <@U088UV6MKFE> <@U093Q4FPEJG>\n\nI just wrote a long essay \/ novella :laughing: to Ferenc about staying focused on the CBTC rollout, and getting clever about making sure we can keep moving forward. I don’t mean to doubt that you guys are doing a good job on that already, it does seem a lot is getting done there :fire: It’s just my job to be repetitive sometimes\n\nIt sounds like some testnet folks are not moving quick enough, so we’re back to <@U088UV6MKFE>’s deadlines idea. I might even say that EOD today is the end of it, and anyone who’s not ready with step0 and rc6 is out.\n\n<@U088UV6MKFE> does that mean that we would have to modify the signer-group-B peers lists for our coordinator, and all the others who will be in group B? I think you answered this question last week, but sorry i forget the answer.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nX9Ms",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U093Q4FPEJG"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nI just wrote a long essay \/ novella "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "laughing",
+                                "unicode": "1f606"
+                            },
+                            {
+                                "type": "text",
+                                "text": " to Ferenc about staying focused on the CBTC rollout, and getting clever about making sure we can keep moving forward. I don’t mean to doubt that you guys are doing a good job on that already, it does seem a lot is getting done there "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "fire",
+                                "unicode": "1f525"
+                            },
+                            {
+                                "type": "text",
+                                "text": " It’s just my job to be repetitive sometimes\n\nIt sounds like some testnet folks are not moving quick enough, so we’re back to "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": "’s deadlines idea. I might even say that EOD today is the end of it, and anyone who’s not ready with step0 and rc6 is out.\n\n"
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " does that mean that we would have to modify the signer-group-B peers lists for our coordinator, and all the others who will be in group B? I think you answered this question last week, but sorry i forget the answer."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1755015690.163409",
+        "edited": {
+            "user": "U05FU0HPZ9T",
+            "ts": "1755015699.000000"
+        },
+        "client_msg_id": "b1adb45c-f06e-48e4-a297-603b3626c697",
+        "text": "Then I was also recommending that we start prepping for the mainnet launch in parallel, as best as possible.\n\nSo first that means getting step0 ready there.\n\nMaybe even calling rc6 the final 2.0.0 release, although i guess we’re not ready for that until it’s been testing completely in testnet.\n\nWe’re not moving fast enough with the CBTC rollout, 1.5 weeks, and we’re still in the beginning phases of the testnet rollout, too slow. Need to get clever and solve this problem somehow. I know a lot of it is on Ferenc’s shoulders now :muscle: We appreciate it, good luck. I’ll be back soon\n\nLet me know what you guys think.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WeCwq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Then I was also recommending that we start prepping for the mainnet launch in parallel, as best as possible.\n\nSo first that means getting step0 ready there.\n\nMaybe even calling rc6 the final 2.0.0 release, although i guess we’re not ready for that until it’s been testing completely in testnet.\n\nWe’re not moving fast enough with the CBTC rollout, 1.5 weeks, and we’re still in the beginning phases of the testnet rollout, too slow. Need to get clever and solve this problem somehow. I know a lot of it is on Ferenc’s shoulders now "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "muscle",
+                                "unicode": "1f4aa"
+                            },
+                            {
+                                "type": "text",
+                                "text": " We appreciate it, good luck. I’ll be back soon\n\nLet me know what you guys think."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1755015842.702799",
+        "client_msg_id": "4ee433de-e492-4029-90fb-e8bd71016055",
+        "text": "Sound like nice improvements. If you guys think they’ll help, i’m all for it!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754915489.810439",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8xEFM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sound like nice improvements. If you guys think they’ll help, i’m all for it!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1755016806.755099",
+        "client_msg_id": "b16a4c84-7358-46d4-a461-ce4febeff34e",
+        "text": "very cool",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754854313.199339",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JU\/GP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "very cool"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1755019631.885629",
+        "client_msg_id": "bdfdb248-ca7c-4626-ab62-b55e95ff3838",
+        "text": "<@U088UV6MKFE> Correct me if I'm wrong.\n\nFirst, the upgrade to the attestor rc6 and the Canton network setup can be independent. So those are not really depend on each other. We can move forward with the steps without the rc6 upgrade. What matters that once we finish the steps on canton network the node operators should have all the details which is necessary to the `dibtc_chains` config field. So they can setup the attestor.\n\nI can message out to the node operators, that they need to finish the step 1 until tomorrow 5PM on testnet and they must send out the output file. I collect all the files in a private Github repo so we can process them easily. If someone failes to do that they are out.\n\nAlso put into this message, that they have to setup the step 0 on mainnet and send out the results to us. This means we can setup the mainnet as well.\n\nAlso I'm not in the TG group of Fiona. Can someone add me? <@U05FZBDQ4RJ> or <@U05FU0HPZ9T>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755019631.885629",
+        "reply_count": 3,
+        "reply_users_count": 2,
+        "latest_reply": "1755022224.190359",
+        "reply_users": [
+            "U088UV6MKFE",
+            "U05FZBDQ4RJ"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1755020744.123239"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1755022221.867569"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1755022224.190359"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1755022224.190359",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yRxCM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Correct me if I'm wrong.\n\nFirst, the upgrade to the attestor rc6 and the Canton network setup can be independent. So those are not really depend on each other. We can move forward with the steps without the rc6 upgrade. What matters that once we finish the steps on canton network the node operators should have all the details which is necessary to the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "dibtc_chains",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " config field. So they can setup the attestor.\n\nI can message out to the node operators, that they need to finish the step 1 until tomorrow 5PM on testnet and they must send out the output file. I collect all the files in a private Github repo so we can process them easily. If someone failes to do that they are out.\n\nAlso put into this message, that they have to setup the step 0 on mainnet and send out the results to us. This means we can setup the mainnet as well.\n\nAlso I'm not in the TG group of Fiona. Can someone add me? "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FZBDQ4RJ"
+                            },
+                            {
+                                "type": "text",
+                                "text": " or "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FU0HPZ9T"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            },
+            {
+                "name": "pray",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1755020744.123239",
+        "client_msg_id": "7ADCA2A4-0D7B-49DB-97E3-05C5CF615274",
+        "text": "Thats right. Technically the bootstrapping and the rc are independent. ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755019631.885629",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "byTSk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thats right. Technically the bootstrapping and the rc are independent. "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1755022221.867569",
+        "client_msg_id": "188680af-6c5e-4e1f-a40b-91c8cc08c6cb",
+        "text": "Oh wait, Finoa is a node operator for CBTC",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755019631.885629",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MbUqn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oh wait, Finoa is a node operator for CBTC"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1755022224.190359",
+        "client_msg_id": "c1125a63-974e-4dc0-99b4-deca9cecec53",
+        "text": "Yes, I'll add you",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755019631.885629",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Q8ga2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, I'll add you"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1755023642.623669",
+        "client_msg_id": "fe2a8c08-f4f2-4442-b142-6e31e85b421d",
+        "text": "I messaged every operator who can participate. That was the message: <https:\/\/github.com\/DLC-link\/canton-onboarding-internal\/blob\/main\/testnet\/messages\/step1.txt>\nI also created this repository, I plan to store here the collected files: <https:\/\/github.com\/DLC-link\/canton-onboarding-internal>\nSince we will have a lot of them.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7VJuP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I messaged every operator who can participate. That was the message: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton-onboarding-internal\/blob\/main\/testnet\/messages\/step1.txt"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nI also created this repository, I plan to store here the collected files: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton-onboarding-internal"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nSince we will have a lot of them."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1755067466.678719",
+        "client_msg_id": "0767398f-9bd4-4069-97e0-8d0b933ac14d",
+        "text": "Progress update\n\nI did the step 1 to our testnet validator as well.\nI collect the step 1 outputs here: <https:\/\/github.com\/DLC-link\/canton-onboarding-internal\/tree\/main\/testnet\/step1>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "benzb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Progress update\n\nI did the step 1 to our testnet validator as well.\nI collect the step 1 outputs here: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton-onboarding-internal\/tree\/main\/testnet\/step1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "USLACKBOT",
+        "subtype": "tabbed_canvas_updated",
+        "canvas_update_user_ids": [
+            "U093Q4FPEJG"
+        ],
+        "canvas_update_section_ids": [
+            "temp:C:HWK7cbc35a5e8324cbc80ef3ccf8",
+            "temp:C:HWKe0960c489a88487894fc79746",
+            "temp:C:HWKd379aa4a990e45418a09c4f3e",
+            "temp:C:HWK3ad7568520684dbca56f2299c",
+            "temp:C:HWKc54f706f4ab04234915d691c8"
+        ],
+        "canvas_update_canvas_id": "F099P0H9DPT",
+        "canvas_update_ai_summary_blocks": [],
+        "type": "message",
+        "ts": "1755067882.388449",
+        "text": "",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T05FWTX7PMG",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cP1lS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ferenc Fabian made updates to a canvas tab: "
+                            },
+                            {
+                                "type": "canvas",
+                                "file_id": "F099P0H9DPT"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,873 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745574718.745689",
+        "client_msg_id": "928f1f90-47eb-4653-b740-4dba17105029",
+        "text": "Running canton directly now, experimenting with bootstrap scripts. Following this tutorial for user management: <https:\/\/docs.digitalasset-staging.com\/operate\/3.3\/howtos\/operate\/identity_management#cookbook>\n\nHowever, already at the second step, `val user = participant1.ledger_api.users.create`... I get:\n```ERROR c.d.c.c.ConsoleEnvironment - Request failed for participant1.\n  GrpcRequestRefusedByServer: NOT_FOUND\/UNKNOWN_RESOURCE(11,155091f8): The submitted request refers to a non-existing PARTIES: Provided parties have not been found in identity_provider_id=``: [alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb,bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb].\n  Request: Create(myuser,Set(alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb),Some(alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb),Set(bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e ...\n  DecodedCantonError(\n  code = 'UNKNOWN_RESOURCE',\n  category = InvalidGivenCurrentSystemStateResourceMissing,\n  cause = \"The submitted request refers to a non-existing PARTIES: Provided parties have not been found in identity_provider_id=``: [alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb,bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb].\",\n  traceId = '155091f866b6f26a13277d3467d7baaa',\n  context = Seq('participant=&gt;'participant1'', 'submissionId=&gt;'5c2dfba9-e9f1-4aff-aa75-61cfa91c4126'', 'definite_answer=&gt;false'),\n  resources = Seq('PARTIES=&gt;alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb', 'PARTIES=&gt;bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb')\n)\n  Command BaseLedgerApiAdministration$ledger_api$users$.create invoked from <http:\/\/cmd4.sc:1|cmd4.sc:1>\ncom.digitalasset.canton.console.CommandFailure: Command execution failed.```\nEven though the earlier party creation seems successful to me at first:\n```@ val Seq(alice, bob, eve) = Seq(\"alice\", \"bob\", \"eve\").map(p =&gt; participant1.parties.enable(name = p))\nalice: PartyId = alice::122079a90ee1...\nbob: PartyId = bob::122079a90ee1...\neve: PartyId = eve::122079a90ee1...```\nBut indeed, listing out Parties returns an empty list, so I must be missing some step that is not mentioned in the docs.\n\nRelevant `canton.log`:\n```2025-04-25 11:25:12,021 [canton-env-ec-95] INFO  c.d.c.t.TopologyStateProcessor:participant=participant1\/store=Authorized tid:291a4eef5f51b9ba60ff2684518c70f2 - Storing topology transaction 1\/1 Replace PartyToParticipant(alice::122079a90ee1..., PositiveNumeric(1), Vector(HostingParticipant(PAR::participant1::122079a90ee1..., Submission))) with ts=EffectiveTime(2025-04-25T09:25:12.020657Z) (epsilon=0 ms)\n2025-04-25 11:25:12,022 [canton-env-ec-95] INFO  c.d.c.t.TopologyStateProcessor:participant=participant1\/store=Authorized tid:291a4eef5f51b9ba60ff2684518c70f2 - Persisted topology transactions (SequencedTime(2025-04-25T09:25:12.020657Z), EffectiveTime(2025-04-25T09:25:12.020657Z)):\nValidatedTopologyTransaction(\n  SignedTopologyTransaction(\n    TopologyTransaction(PartyToParticipant(alice::122079a90ee1..., PositiveNumeric(1), Vector(HostingParticipant(PAR::participant1::122079a90ee1..., Submission))), serial = 1, operation = Replace),\n    signatures = 122079a90ee1...\n  )\n)\n2025-04-25 11:25:12,041 [canton-env-ec-95] INFO  c.d.c.t.TopologyStateProcessor:participant=participant1\/store=Authorized tid:67d7b3ef0b6a81cb0c65f7661200ae12 - Storing topology transaction 1\/1 Replace PartyToParticipant(bob::122079a90ee1..., PositiveNumeric(1), Vector(HostingParticipant(PAR::participant1::122079a90ee1..., Submission))) with ts=EffectiveTime(2025-04-25T09:25:12.040976Z) (epsilon=0 ms)\n2025-04-25 11:25:12,042 [canton-env-ec-95] INFO  c.d.c.t.TopologyStateProcessor:participant=participant1\/store=Authorized tid:67d7b3ef0b6a81cb0c65f7661200ae12 - Persisted topology transactions (SequencedTime(2025-04-25T09:25:12.040976Z), EffectiveTime(2025-04-25T09:25:12.040976Z)):\nValidatedTopologyTransaction(\n  SignedTopologyTransaction(\n    TopologyTransaction(PartyToParticipant(bob::122079a90ee1..., PositiveNumeric(1), Vector(HostingParticipant(PAR::participant1::122079a90ee1..., Submission))), serial = 1, operation = Replace),\n    signatures = 122079a90ee1...\n  )\n)\n2025-04-25 11:25:12,052 [canton-env-ec-64] INFO  c.d.c.t.TopologyStateProcessor:participant=participant1\/store=Authorized tid:18ef2250319356be04aeb82eda478e8e - Storing topology transaction 1\/1 Replace PartyToParticipant(eve::122079a90ee1..., PositiveNumeric(1), Vector(HostingParticipant(PAR::participant1::122079a90ee1..., Submission))) with ts=EffectiveTime(2025-04-25T09:25:12.051231Z) (epsilon=0 ms)\n2025-04-25 11:25:12,052 [canton-env-ec-64] INFO  c.d.c.t.TopologyStateProcessor:participant=participant1\/store=Authorized tid:18ef2250319356be04aeb82eda478e8e - Persisted topology transactions (SequencedTime(2025-04-25T09:25:12.051231Z), EffectiveTime(2025-04-25T09:25:12.051231Z)):\nValidatedTopologyTransaction(\n  SignedTopologyTransaction(\n    TopologyTransaction(PartyToParticipant(eve::122079a90ee1..., PositiveNumeric(1), Vector(HostingParticipant(PAR::participant1::122079a90ee1..., Submission))), serial = 1, operation = Replace),\n    signatures = 122079a90ee1...\n  )\n)\n2025-04-25 11:25:33,541 [ForkJoinPool-6-worker-2] INFO  c.d.c.p.a.s.a.ApiUserManagementService:participant=participant1 tid:155091f866b6f26a13277d3467d7baaa - UNKNOWN_RESOURCE(11,155091f8): The submitted request refers to a non-existing PARTIES: Provided parties have not been found in identity_provider_id=``: [alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb,bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb]. err-context:{location=ApiUserManagementService.scala:517} \n2025-04-25 11:25:33,553 [ForkJoinPool-6-worker-2] INFO  c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:155091f866b6f26a13277d3467d7baaa - Request c.d.l.a.v.a.UserManagementService\/CreateUser by \/127.0.0.1:51025: failed with NOT_FOUND\/UNKNOWN_RESOURCE(11,155091f8): The submitted request refers to a non-existing PARTIES: Provided parties have not been found in identity_provider_id=``: [alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb,bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb].\n2025-04-25 11:25:33,576 [main] ERROR c.d.c.console.ConsoleEnvironment - Request failed for participant1.\n  GrpcRequestRefusedByServer: NOT_FOUND\/UNKNOWN_RESOURCE(11,155091f8): The submitted request refers to a non-existing PARTIES: Provided parties have not been found in identity_provider_id=``: [alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb,bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb].\n  Request: Create(myuser,Set(alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb),Some(alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb),Set(bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e ...\n  DecodedCantonError(\n  code = 'UNKNOWN_RESOURCE',\n  category = InvalidGivenCurrentSystemStateResourceMissing,\n  cause = \"The submitted request refers to a non-existing PARTIES: Provided parties have not been found in identity_provider_id=``: [alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb,bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb].\",\n  traceId = '155091f866b6f26a13277d3467d7baaa',\n  context = Seq('participant=&gt;'participant1'', 'submissionId=&gt;'5c2dfba9-e9f1-4aff-aa75-61cfa91c4126'', 'definite_answer=&gt;false'),\n  resources = Seq('PARTIES=&gt;alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb', 'PARTIES=&gt;bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb')\n)\n  Command BaseLedgerApiAdministration$ledger_api$users$.create invoked from <http:\/\/cmd4.sc:1|cmd4.sc:1>```\nThank you in advance :slightly_smiling_face:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745574718.745689",
+        "reply_count": 13,
+        "reply_users_count": 1,
+        "latest_reply": "1745593831.451549",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745575209.903289"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745590544.463119"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745590936.812189"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745590979.468549"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745591104.749179"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745591132.424419"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745592170.827769"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745592207.818819"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745593006.400549"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745593098.279569"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745593542.769319"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745593676.785499"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745593831.451549"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dxxex",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Running canton directly now, experimenting with bootstrap scripts. Following this tutorial for user management: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.digitalasset-staging.com\/operate\/3.3\/howtos\/operate\/identity_management#cookbook"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nHowever, already at the second step, "
+                            },
+                            {
+                                "type": "text",
+                                "text": "val user = participant1.ledger_api.users.create",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "... I get:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ERROR c.d.c.c.ConsoleEnvironment - Request failed for participant1.\n  GrpcRequestRefusedByServer: NOT_FOUND\/UNKNOWN_RESOURCE(11,155091f8): The submitted request refers to a non-existing PARTIES: Provided parties have not been found in identity_provider_id=``: [alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb,bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb].\n  Request: Create(myuser,Set(alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb),Some(alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb),Set(bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e ...\n  DecodedCantonError(\n  code = 'UNKNOWN_RESOURCE',\n  category = InvalidGivenCurrentSystemStateResourceMissing,\n  cause = \"The submitted request refers to a non-existing PARTIES: Provided parties have not been found in identity_provider_id=``: [alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb,bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb].\",\n  traceId = '155091f866b6f26a13277d3467d7baaa',\n  context = Seq('participant=>'participant1'', 'submissionId=>'5c2dfba9-e9f1-4aff-aa75-61cfa91c4126'', 'definite_answer=>false'),\n  resources = Seq('PARTIES=>alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb', 'PARTIES=>bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb')\n)\n  Command BaseLedgerApiAdministration$ledger_api$users$.create invoked from cmd4.sc:1\ncom.digitalasset.canton.console.CommandFailure: Command execution failed."
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Even though the earlier party creation seems successful to me at first:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "@ val Seq(alice, bob, eve) = Seq(\"alice\", \"bob\", \"eve\").map(p => participant1.parties.enable(name = p))\nalice: PartyId = alice::122079a90ee1...\nbob: PartyId = bob::122079a90ee1...\neve: PartyId = eve::122079a90ee1..."
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But indeed, listing out Parties returns an empty list, so I must be missing some step that is not mentioned in the docs.\n\nRelevant "
+                            },
+                            {
+                                "type": "text",
+                                "text": "canton.log",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ":\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "2025-04-25 11:25:12,021 [canton-env-ec-95] INFO  c.d.c.t.TopologyStateProcessor:participant=participant1\/store=Authorized tid:291a4eef5f51b9ba60ff2684518c70f2 - Storing topology transaction 1\/1 Replace PartyToParticipant(alice::122079a90ee1..., PositiveNumeric(1), Vector(HostingParticipant(PAR::participant1::122079a90ee1..., Submission))) with ts=EffectiveTime(2025-04-25T09:25:12.020657Z) (epsilon=0 ms)\n2025-04-25 11:25:12,022 [canton-env-ec-95] INFO  c.d.c.t.TopologyStateProcessor:participant=participant1\/store=Authorized tid:291a4eef5f51b9ba60ff2684518c70f2 - Persisted topology transactions (SequencedTime(2025-04-25T09:25:12.020657Z), EffectiveTime(2025-04-25T09:25:12.020657Z)):\nValidatedTopologyTransaction(\n  SignedTopologyTransaction(\n    TopologyTransaction(PartyToParticipant(alice::122079a90ee1..., PositiveNumeric(1), Vector(HostingParticipant(PAR::participant1::122079a90ee1..., Submission))), serial = 1, operation = Replace),\n    signatures = 122079a90ee1...\n  )\n)\n2025-04-25 11:25:12,041 [canton-env-ec-95] INFO  c.d.c.t.TopologyStateProcessor:participant=participant1\/store=Authorized tid:67d7b3ef0b6a81cb0c65f7661200ae12 - Storing topology transaction 1\/1 Replace PartyToParticipant(bob::122079a90ee1..., PositiveNumeric(1), Vector(HostingParticipant(PAR::participant1::122079a90ee1..., Submission))) with ts=EffectiveTime(2025-04-25T09:25:12.040976Z) (epsilon=0 ms)\n2025-04-25 11:25:12,042 [canton-env-ec-95] INFO  c.d.c.t.TopologyStateProcessor:participant=participant1\/store=Authorized tid:67d7b3ef0b6a81cb0c65f7661200ae12 - Persisted topology transactions (SequencedTime(2025-04-25T09:25:12.040976Z), EffectiveTime(2025-04-25T09:25:12.040976Z)):\nValidatedTopologyTransaction(\n  SignedTopologyTransaction(\n    TopologyTransaction(PartyToParticipant(bob::122079a90ee1..., PositiveNumeric(1), Vector(HostingParticipant(PAR::participant1::122079a90ee1..., Submission))), serial = 1, operation = Replace),\n    signatures = 122079a90ee1...\n  )\n)\n2025-04-25 11:25:12,052 [canton-env-ec-64] INFO  c.d.c.t.TopologyStateProcessor:participant=participant1\/store=Authorized tid:18ef2250319356be04aeb82eda478e8e - Storing topology transaction 1\/1 Replace PartyToParticipant(eve::122079a90ee1..., PositiveNumeric(1), Vector(HostingParticipant(PAR::participant1::122079a90ee1..., Submission))) with ts=EffectiveTime(2025-04-25T09:25:12.051231Z) (epsilon=0 ms)\n2025-04-25 11:25:12,052 [canton-env-ec-64] INFO  c.d.c.t.TopologyStateProcessor:participant=participant1\/store=Authorized tid:18ef2250319356be04aeb82eda478e8e - Persisted topology transactions (SequencedTime(2025-04-25T09:25:12.051231Z), EffectiveTime(2025-04-25T09:25:12.051231Z)):\nValidatedTopologyTransaction(\n  SignedTopologyTransaction(\n    TopologyTransaction(PartyToParticipant(eve::122079a90ee1..., PositiveNumeric(1), Vector(HostingParticipant(PAR::participant1::122079a90ee1..., Submission))), serial = 1, operation = Replace),\n    signatures = 122079a90ee1...\n  )\n)\n2025-04-25 11:25:33,541 [ForkJoinPool-6-worker-2] INFO  c.d.c.p.a.s.a.ApiUserManagementService:participant=participant1 tid:155091f866b6f26a13277d3467d7baaa - UNKNOWN_RESOURCE(11,155091f8): The submitted request refers to a non-existing PARTIES: Provided parties have not been found in identity_provider_id=``: [alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb,bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb]. err-context:{location=ApiUserManagementService.scala:517} \n2025-04-25 11:25:33,553 [ForkJoinPool-6-worker-2] INFO  c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:155091f866b6f26a13277d3467d7baaa - Request c.d.l.a.v.a.UserManagementService\/CreateUser by \/127.0.0.1:51025: failed with NOT_FOUND\/UNKNOWN_RESOURCE(11,155091f8): The submitted request refers to a non-existing PARTIES: Provided parties have not been found in identity_provider_id=``: [alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb,bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb].\n2025-04-25 11:25:33,576 [main] ERROR c.d.c.console.ConsoleEnvironment - Request failed for participant1.\n  GrpcRequestRefusedByServer: NOT_FOUND\/UNKNOWN_RESOURCE(11,155091f8): The submitted request refers to a non-existing PARTIES: Provided parties have not been found in identity_provider_id=``: [alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb,bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb].\n  Request: Create(myuser,Set(alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb),Some(alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb),Set(bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e ...\n  DecodedCantonError(\n  code = 'UNKNOWN_RESOURCE',\n  category = InvalidGivenCurrentSystemStateResourceMissing,\n  cause = \"The submitted request refers to a non-existing PARTIES: Provided parties have not been found in identity_provider_id=``: [alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb,bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb].\",\n  traceId = '155091f866b6f26a13277d3467d7baaa',\n  context = Seq('participant=>'participant1'', 'submissionId=>'5c2dfba9-e9f1-4aff-aa75-61cfa91c4126'', 'definite_answer=>false'),\n  resources = Seq('PARTIES=>alice::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb', 'PARTIES=>bob::122079a90ee16022425b6837089ab105b91caaca4e69f51eeaff119edd40184e4fdb')\n)\n  Command BaseLedgerApiAdministration$ledger_api$users$.create invoked from cmd4.sc:1"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you in advance "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745575209.903289",
+        "client_msg_id": "8739c9a6-010e-434c-853d-ba518462a4ab",
+        "text": "According to the doc I can leave identity_provider_id empty, and then it's the 'default', so im a little confused by this. maybe me overwriting the startup topology caused this",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745574718.745689",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BmVYo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "According to the doc I can leave identity_provider_id empty, and then it's the 'default', so im a little confused by this. maybe me overwriting the startup topology caused this"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745590544.463119",
+        "client_msg_id": "ad0677e7-866c-4b6b-8382-b0b3df24849a",
+        "text": "Right, sorry, here it is:\n\n```canton {\n\n  features.enable-testing-commands = yes\n  features.enable-preview-commands = yes\n\n  sequencers {\n    sequencer1 {\n      storage.type = memory\n      public-api.port = 5001\n      admin-api.port = 5002\n    }\n  }\n\n  mediators {\n    mediator1 {\n      storage.type = memory\n      admin-api.port = 5202\n    }\n  }\n\n  participants {\n    participant1 {\n      storage.type = memory\n      admin-api.port = 5012\n      ledger-api.port = 5011\n      http-ledger-api {\n        server {\n          address = 0.0.0.0\n          port = 7575\n        }\n      }\n    }\n    participant2 {\n      storage.type = memory\n      admin-api.port = 5022\n      ledger-api.port = 5021\n    }\n  }\n}```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745574718.745689",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iu7uZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Right, sorry, here it is:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "canton {\n\n  features.enable-testing-commands = yes\n  features.enable-preview-commands = yes\n\n  sequencers {\n    sequencer1 {\n      storage.type = memory\n      public-api.port = 5001\n      admin-api.port = 5002\n    }\n  }\n\n  mediators {\n    mediator1 {\n      storage.type = memory\n      admin-api.port = 5202\n    }\n  }\n\n  participants {\n    participant1 {\n      storage.type = memory\n      admin-api.port = 5012\n      ledger-api.port = 5011\n      http-ledger-api {\n        server {\n          address = 0.0.0.0\n          port = 7575\n        }\n      }\n    }\n    participant2 {\n      storage.type = memory\n      admin-api.port = 5022\n      ledger-api.port = 5021\n    }\n  }\n}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745590936.812189",
+        "client_msg_id": "ce86afe9-fc51-4a10-9f36-103cb6fa5cc9",
+        "text": "I don't have one yet, I am just running them manually",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745574718.745689",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Vi\/OH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I don't have one yet, I am just running them manually"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745590979.468549",
+        "client_msg_id": "dd52bef7-6c0e-4bd4-a0e2-7552fb161f9c",
+        "text": "`@ val Seq(alice, bob, eve) = Seq(\"alice\", \"bob\", \"eve\").map(p =&gt; participant1.parties.enable(name = p))`\n\nthen\n```@ val user = participant1.ledger_api.users.create(id = \"myuser\", actAs = Set(alice), readAs = Set(bob), primaryParty = Some(alice), participantAdmin = false, isDeactivated = false, annotations = Map(\"foo\" -&gt; \"bar\", \"description\" -&gt; \"This is a description\"))```\nfails",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745574718.745689",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ADUUx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "@ val Seq(alice, bob, eve) = Seq(\"alice\", \"bob\", \"eve\").map(p => participant1.parties.enable(name = p))",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nthen\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "@ val user = participant1.ledger_api.users.create(id = \"myuser\", actAs = Set(alice), readAs = Set(bob), primaryParty = Some(alice), participantAdmin = false, isDeactivated = false, annotations = Map(\"foo\" -> \"bar\", \"description\" -> \"This is a description\"))"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "fails"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745591104.749179",
+        "client_msg_id": "a52a99fd-54ae-4137-8c90-f43158195fe5",
+        "text": "I wanted to go through this flow manually, then put them in a script",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745574718.745689",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3KA4N",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I wanted to go through this flow manually, then put them in a script"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745591132.424419",
+        "client_msg_id": "f96bf6f0-a728-4ddc-b6ad-bafcebabceab",
+        "text": "setting up initial parties, users",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745574718.745689",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "e8pK\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "setting up initial parties, users"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745592170.827769",
+        "client_msg_id": "a06b07e6-160c-442e-9963-38275d0c51ae",
+        "text": "Ah super, thanks a lot!\nI can put this in the bootstrap script as well, but I imagine I can change the topology conf to not need these steps at all maybe?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745574718.745689",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "o1M5s",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ah super, thanks a lot!\nI can put this in the bootstrap script as well, but I imagine I can change the topology conf to not need these steps at all maybe?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745592207.818819",
+        "client_msg_id": "0da0478a-5ff2-4226-a624-9fd3c9913256",
+        "text": "Okay, no problem",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745574718.745689",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cmqBu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Okay, no problem"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745593006.400549",
+        "client_msg_id": "1a0170f1-c560-48ed-9e35-a5d0709e0c5b",
+        "text": "Hmm putting all this in a <http:\/\/bootstrap.sc|bootstrap.sc> works fine if i run it locally with e.g.`canton -c ..\/simple-topology.conf --bootstrap ..\/bootstrap.sc`:\n\n```bootstrap.synchronizer(\"synchronizer\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaultsWithoutKMS(ProtocolVersion.forSynchronizer))\n\nparticipant1.synchronizers.connect_local(sequencer1, \"synchronizer\")\n\nval Seq(alice, bob, eve) = Seq(\"alice\", \"bob\", \"eve\").map(p =&gt; participant1.parties.enable(name = p))\n\nval user = participant1.ledger_api.users.create(id = \"myuser\", actAs = Set(alice), readAs = Set(bob), primaryParty = Some(alice), participantAdmin = false, isDeactivated = false, annotations = Map(\"foo\" -&gt; \"bar\", \"description\" -&gt; \"This is a description\"))```\nBut when I COPY it into the docker image, i get :\n```\/app\/bootstrap.sc:1: value synchronizer is not a member of object ammonite.canton.interpreter.bootstrap\ndid you mean synchronized?\nval res_0 = bootstrap.synchronizer(\"synchronizer\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaults{\"@timestamp\":\"2025-04-25T14:53:51.016Z\",\"@version\":\"1\",\"message\":\"Console stderr output: did you mean synchronized?\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\nWithoutKMS(ProtocolVersion.forSynchronizer))\n{\"@timestamp\":\"2025-04-25T14:53:51.017Z\",\"@version\":\"1\",\"message\":\"Console stderr output: val res_0 = bootstrap.synchronizer(\\\"synchronizer\\\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaultsWithoutKMS(ProtocolVersion.forSynchronizer))\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n{\"@timestamp\":\"2025-04-25T14:53:51.017Z\",\"@version\":\"1\",\"message\":\"Console stderr output:                       ^\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n                      ^\n{\"@timestamp\":\"2025-04-25T14:53:51.030Z\",\"@version\":\"1\",\"message\":\"Console stderr output: \/app\/bootstrap.sc:1: reassignment to val\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n\/app\/bootstrap.sc:1: reassignment to val\nval res_0 = bootstrap.synchronizer(\"synchronizer\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaults{\"@timestamp\":\"2025-04-25T14:53:51.031Z\",\"@version\":\"1\",\"message\":\"Console stderr output: val res_0 = bootstrap.synchronizer(\\\"synchronizer\\\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaultsWithoutKMS(ProtocolVersion.forSynchronizer))\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n{\"@timestamp\":\"2025-04-25T14:53:51.031Z\",\"@version\":\"1\",\"message\":\"Console stderr output:                                                               ^\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\nWithoutKMS(ProtocolVersion.forSynchronizer))\n                                                              ^\n{\"@timestamp\":\"2025-04-25T14:53:51.036Z\",\"@version\":\"1\",\"message\":\"Console stderr output: \/app\/bootstrap.sc:1: reassignment to val\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n\/app\/bootstrap.sc:1: reassignment to val\nval res_0 = bootstrap.synchronizer(\"synchronizer\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaultsWithoutKMS(ProtocolVersion.forSynchronizer))\n{\"@timestamp\":\"2025-04-25T14:53:51.036Z\",\"@version\":\"1\",\"message\":\"Console stderr output: val res_0 = bootstrap.synchronizer(\\\"synchronizer\\\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaultsWithoutKMS(ProtocolVersion.forSynchronizer))\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n{\"@timestamp\":\"2025-04-25T14:53:51.037Z\",\"@version\":\"1\",\"message\":\"Console stderr output:                                                                                            ^\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n                                                                                           ^\n\/app\/bootstrap.sc:1: not found: value synchronizerOwners\nval res_0 = bootstrap.synchronizer(\"synchronizer\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaultsWithoutKMS(ProtocolVersion.forSynchronizer))```\nHere is the dockerfile:\n```FROM digitalasset\/daml-sdk:3.3.0-snapshot.20250417.0 AS daml-build\n\n# Create app directory\nWORKDIR \/app\n\n# Copy project files\nCOPY simple-contract \/app\/simple-contract\nCOPY dars \/app\/dars\n\n# Fix permissions\nUSER root\nRUN mkdir -p \/app\/simple-contract\/.daml\/interfaces\/daml\/Experiments \\\n  &amp;&amp; chown -R daml:daml \/app\n\nUSER daml\n\n# Build the DAML project\nRUN cd \/app\/simple-contract &amp;&amp; daml build\n\n# Generate TypeScript bindings\nRUN mkdir -p \/app\/daml.js \\\n  &amp;&amp; daml codegen js -o \/app\/daml.js \/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\n\nFROM <http:\/\/ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/canton:0.4.0-snapshot.20250423.9136.0.v130d2648|ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/canton:0.4.0-snapshot.20250423.9136.0.v130d2648>\n\nCOPY simple-topology.conf \/app\/app.conf\nCOPY <http:\/\/bootstrap.sc|bootstrap.sc> \/app\/bootstrap.sc\n\n# Copy the compiled DAR file\nCOPY --from=daml-build \/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar \/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\n\n# Copy JS bindings\n# COPY --from=daml-build \/app\/daml.js \/app\/daml.js\n\nEXPOSE 6865\nEXPOSE 7575\n\n# Provide the --dar argument as the default command to the entrypoint\nCMD [\"--dar\", \"\/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\"]```\nAnd the entrypoint: <https:\/\/github.com\/digital-asset\/decentralized-canton-sync\/blob\/main\/cluster\/images\/common\/entrypoint.sh>\n\nI copy to \/app\/bootstrap.sc based on this",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745574718.745689",
+        "parent_user_id": "U088UV6MKFE",
+        "attachments": [
+            {
+                "image_url": "https:\/\/opengraph.githubassets.com\/e67b9b549edad2898b712b188d7f4121cce24b762558383744deb4d9093de902\/digital-asset\/decentralized-canton-sync",
+                "image_width": 1200,
+                "image_height": 600,
+                "image_bytes": 32621,
+                "from_url": "https:\/\/github.com\/digital-asset\/decentralized-canton-sync\/blob\/main\/cluster\/images\/common\/entrypoint.sh",
+                "service_icon": "https:\/\/a.slack-edge.com\/80588\/img\/unfurl_icons\/github.png",
+                "id": 1,
+                "original_url": "https:\/\/github.com\/digital-asset\/decentralized-canton-sync\/blob\/main\/cluster\/images\/common\/entrypoint.sh",
+                "fallback": "GitHub: decentralized-canton-sync\/cluster\/images\/common\/entrypoint.sh at main · digital-asset\/decentralized-canton-sync",
+                "text": "Contribute to digital-asset\/decentralized-canton-sync development by creating an account on GitHub.",
+                "title": "decentralized-canton-sync\/cluster\/images\/common\/entrypoint.sh at main · digital-asset\/decentralized-canton-sync",
+                "title_link": "https:\/\/github.com\/digital-asset\/decentralized-canton-sync\/blob\/main\/cluster\/images\/common\/entrypoint.sh",
+                "service_name": "GitHub"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lf8DE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hmm putting all this in a "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/bootstrap.sc",
+                                "text": "bootstrap.sc"
+                            },
+                            {
+                                "type": "text",
+                                "text": " works fine if i run it locally with e.g."
+                            },
+                            {
+                                "type": "text",
+                                "text": "canton -c ..\/simple-topology.conf --bootstrap ..\/bootstrap.sc",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ":\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "bootstrap.synchronizer(\"synchronizer\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaultsWithoutKMS(ProtocolVersion.forSynchronizer))\n\nparticipant1.synchronizers.connect_local(sequencer1, \"synchronizer\")\n\nval Seq(alice, bob, eve) = Seq(\"alice\", \"bob\", \"eve\").map(p => participant1.parties.enable(name = p))\n\nval user = participant1.ledger_api.users.create(id = \"myuser\", actAs = Set(alice), readAs = Set(bob), primaryParty = Some(alice), participantAdmin = false, isDeactivated = false, annotations = Map(\"foo\" -> \"bar\", \"description\" -> \"This is a description\"))"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But when I COPY it into the docker image, i get :\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\/app\/bootstrap.sc:1: value synchronizer is not a member of object ammonite.canton.interpreter.bootstrap\ndid you mean synchronized?\nval res_0 = bootstrap.synchronizer(\"synchronizer\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaults{\"@timestamp\":\"2025-04-25T14:53:51.016Z\",\"@version\":\"1\",\"message\":\"Console stderr output: did you mean synchronized?\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\nWithoutKMS(ProtocolVersion.forSynchronizer))\n{\"@timestamp\":\"2025-04-25T14:53:51.017Z\",\"@version\":\"1\",\"message\":\"Console stderr output: val res_0 = bootstrap.synchronizer(\\\"synchronizer\\\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaultsWithoutKMS(ProtocolVersion.forSynchronizer))\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n{\"@timestamp\":\"2025-04-25T14:53:51.017Z\",\"@version\":\"1\",\"message\":\"Console stderr output:                       ^\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n                      ^\n{\"@timestamp\":\"2025-04-25T14:53:51.030Z\",\"@version\":\"1\",\"message\":\"Console stderr output: \/app\/bootstrap.sc:1: reassignment to val\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n\/app\/bootstrap.sc:1: reassignment to val\nval res_0 = bootstrap.synchronizer(\"synchronizer\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaults{\"@timestamp\":\"2025-04-25T14:53:51.031Z\",\"@version\":\"1\",\"message\":\"Console stderr output: val res_0 = bootstrap.synchronizer(\\\"synchronizer\\\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaultsWithoutKMS(ProtocolVersion.forSynchronizer))\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n{\"@timestamp\":\"2025-04-25T14:53:51.031Z\",\"@version\":\"1\",\"message\":\"Console stderr output:                                                               ^\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\nWithoutKMS(ProtocolVersion.forSynchronizer))\n                                                              ^\n{\"@timestamp\":\"2025-04-25T14:53:51.036Z\",\"@version\":\"1\",\"message\":\"Console stderr output: \/app\/bootstrap.sc:1: reassignment to val\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n\/app\/bootstrap.sc:1: reassignment to val\nval res_0 = bootstrap.synchronizer(\"synchronizer\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaultsWithoutKMS(ProtocolVersion.forSynchronizer))\n{\"@timestamp\":\"2025-04-25T14:53:51.036Z\",\"@version\":\"1\",\"message\":\"Console stderr output: val res_0 = bootstrap.synchronizer(\\\"synchronizer\\\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaultsWithoutKMS(ProtocolVersion.forSynchronizer))\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n{\"@timestamp\":\"2025-04-25T14:53:51.037Z\",\"@version\":\"1\",\"message\":\"Console stderr output:                                                                                            ^\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n                                                                                           ^\n\/app\/bootstrap.sc:1: not found: value synchronizerOwners\nval res_0 = bootstrap.synchronizer(\"synchronizer\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaultsWithoutKMS(ProtocolVersion.forSynchronizer))"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nHere is the dockerfile:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "FROM digitalasset\/daml-sdk:3.3.0-snapshot.20250417.0 AS daml-build\n\n# Create app directory\nWORKDIR \/app\n\n# Copy project files\nCOPY simple-contract \/app\/simple-contract\nCOPY dars \/app\/dars\n\n# Fix permissions\nUSER root\nRUN mkdir -p \/app\/simple-contract\/.daml\/interfaces\/daml\/Experiments \\\n  && chown -R daml:daml \/app\n\nUSER daml\n\n# Build the DAML project\nRUN cd \/app\/simple-contract && daml build\n\n# Generate TypeScript bindings\nRUN mkdir -p \/app\/daml.js \\\n  && daml codegen js -o \/app\/daml.js \/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\n\nFROM ghcr.io\/digital-asset\/decentralized-canton-sync\/docker\/canton:0.4.0-snapshot.20250423.9136.0.v130d2648\n\nCOPY simple-topology.conf \/app\/app.conf\nCOPY bootstrap.sc \/app\/bootstrap.sc\n\n# Copy the compiled DAR file\nCOPY --from=daml-build \/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar \/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\n\n# Copy JS bindings\n# COPY --from=daml-build \/app\/daml.js \/app\/daml.js\n\nEXPOSE 6865\nEXPOSE 7575\n\n# Provide the --dar argument as the default command to the entrypoint\nCMD [\"--dar\", \"\/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\"]"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nAnd the entrypoint: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/digital-asset\/decentralized-canton-sync\/blob\/main\/cluster\/images\/common\/entrypoint.sh"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nI copy to \/app\/bootstrap.sc based on this"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745593098.279569",
+        "client_msg_id": "530ac27f-c84a-426e-a4ad-8b9188da7fc6",
+        "text": "Im sorry i know this is getting harder to repro",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745574718.745689",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "k7xD1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Im sorry i know this is getting harder to repro"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745593542.769319",
+        "client_msg_id": "92123fde-7dab-45f7-9477-8e79edde2971",
+        "text": "So it threw a\n```{\"@timestamp\":\"2025-04-25T15:03:23.262Z\",\"@version\":\"1\",\"message\":\"Request com.daml.ledger.api.v2.admin.UserManagementService\/CreateUser by \/127.0.0.1:51236: succeeded(OK)\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant1\",\"thread_name\":\"ForkJoinPool-5-worker-2\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"14efab88707c314ad6b1d52b947e20dd\"}\n{\"@timestamp\":\"2025-04-25T15:03:23.262Z\",\"@version\":\"1\",\"message\":\"Request com.daml.ledger.api.v2.admin.UserManagementService\/CreateUser by \/127.0.0.1:51236: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant1\",\"thread_name\":\"canton-env-ec-80\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"14efab88707c314ad6b1d52b947e20dd\"}\n{\"@timestamp\":\"2025-04-25T15:03:23.262Z\",\"@version\":\"1\",\"message\":\"Request Create(myuser,Set(alice::122087d249e637fc6e727cf83d8cf98c0e1cf74c13ef24fd445b87c5ac4444e77991),Some(alice::122087d249e637fc6e727cf83d8cf98c0e1cf74c13ef24fd445b87c5ac4444e77991),Set(bob::122087d249e637fc6e727cf83d8cf98c0e1cf74c13ef24fd445b87c5ac4444e7 ... has succeeded for participant1.\",\"logger_name\":\"c.d.c.a.a.client.GrpcCtlRunner\",\"thread_name\":\"canton-env-ec-35\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"14efab88707c314ad6b1d52b947e20dd\"}\n{\"@timestamp\":\"2025-04-25T15:03:23.557Z\",\"@version\":\"1\",\"message\":\"Console stderr output: \/app\/bootstrap-entrypoint.sc:5: value main is not a member of object ammonite.canton.interpreter.bootstrap\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n\/app\/bootstrap-entrypoint.sc:5: value main is not a member of object ammonite.canton.interpreter.bootstrap\n{\"@timestamp\":\"2025-04-25T15:03:23.558Z\",\"@version\":\"1\",\"message\":\"Console stderr output: did you mean wait?\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\ndid you mean wait?\nval res_2 = bootstrap.main()\n{\"@timestamp\":\"2025-04-25T15:03:23.558Z\",\"@version\":\"1\",\"message\":\"Console stderr output: val res_2 = bootstrap.main()\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n{\"@timestamp\":\"2025-04-25T15:03:23.558Z\",\"@version\":\"1\",\"message\":\"Console stderr output:                       ^\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n                      ^```\nand shut down, BUT actually it says above that the last step was successful! So, getting closer haha",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745574718.745689",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SZPWw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So it threw a\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"@timestamp\":\"2025-04-25T15:03:23.262Z\",\"@version\":\"1\",\"message\":\"Request com.daml.ledger.api.v2.admin.UserManagementService\/CreateUser by \/127.0.0.1:51236: succeeded(OK)\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant1\",\"thread_name\":\"ForkJoinPool-5-worker-2\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"14efab88707c314ad6b1d52b947e20dd\"}\n{\"@timestamp\":\"2025-04-25T15:03:23.262Z\",\"@version\":\"1\",\"message\":\"Request com.daml.ledger.api.v2.admin.UserManagementService\/CreateUser by \/127.0.0.1:51236: completed\",\"logger_name\":\"c.d.c.n.g.ApiRequestLogger:participant=participant1\",\"thread_name\":\"canton-env-ec-80\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"14efab88707c314ad6b1d52b947e20dd\"}\n{\"@timestamp\":\"2025-04-25T15:03:23.262Z\",\"@version\":\"1\",\"message\":\"Request Create(myuser,Set(alice::122087d249e637fc6e727cf83d8cf98c0e1cf74c13ef24fd445b87c5ac4444e77991),Some(alice::122087d249e637fc6e727cf83d8cf98c0e1cf74c13ef24fd445b87c5ac4444e77991),Set(bob::122087d249e637fc6e727cf83d8cf98c0e1cf74c13ef24fd445b87c5ac4444e7 ... has succeeded for participant1.\",\"logger_name\":\"c.d.c.a.a.client.GrpcCtlRunner\",\"thread_name\":\"canton-env-ec-35\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"14efab88707c314ad6b1d52b947e20dd\"}\n{\"@timestamp\":\"2025-04-25T15:03:23.557Z\",\"@version\":\"1\",\"message\":\"Console stderr output: \/app\/bootstrap-entrypoint.sc:5: value main is not a member of object ammonite.canton.interpreter.bootstrap\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n\/app\/bootstrap-entrypoint.sc:5: value main is not a member of object ammonite.canton.interpreter.bootstrap\n{\"@timestamp\":\"2025-04-25T15:03:23.558Z\",\"@version\":\"1\",\"message\":\"Console stderr output: did you mean wait?\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\ndid you mean wait?\nval res_2 = bootstrap.main()\n{\"@timestamp\":\"2025-04-25T15:03:23.558Z\",\"@version\":\"1\",\"message\":\"Console stderr output: val res_2 = bootstrap.main()\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n{\"@timestamp\":\"2025-04-25T15:03:23.558Z\",\"@version\":\"1\",\"message\":\"Console stderr output:                       ^\",\"logger_name\":\"c.d.canton.ServerRunner\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}\n                      ^"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and shut down, BUT actually it says above that the last step was successful! So, getting closer haha"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745593676.785499",
+        "client_msg_id": "f78180fd-9cc1-45ef-93e9-ec955c947dbe",
+        "text": "```com.digitalasset.canton.console.ConsoleMacros.bootstrap.synchronizer(\"synchronizer\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaultsWithoutKMS(ProtocolVersion.forSynchronizer))\n\nparticipant1.synchronizers.connect_local(sequencer1, \"synchronizer\")\n\nval Seq(alice, bob, eve) = Seq(\"alice\", \"bob\", \"eve\").map(p =&gt; participant1.parties.enable(name = p))\n\nval user = participant1.ledger_api.users.create(id = \"myuser\", actAs = Set(alice), readAs = Set(bob), primaryParty = Some(alice), participantAdmin = false, isDeactivated = false, annotations = Map(\"foo\" -&gt; \"bar\", \"description\" -&gt; \"This is a description\"))```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745574718.745689",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FZJho",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "com.digitalasset.canton.console.ConsoleMacros.bootstrap.synchronizer(\"synchronizer\", sequencers = Seq(sequencer1), mediators = Seq(mediator1), synchronizerOwners = Seq(sequencer1), synchronizerThreshold = PositiveInt.one, staticSynchronizerParameters = StaticSynchronizerParameters.defaultsWithoutKMS(ProtocolVersion.forSynchronizer))\n\nparticipant1.synchronizers.connect_local(sequencer1, \"synchronizer\")\n\nval Seq(alice, bob, eve) = Seq(\"alice\", \"bob\", \"eve\").map(p => participant1.parties.enable(name = p))\n\nval user = participant1.ledger_api.users.create(id = \"myuser\", actAs = Set(alice), readAs = Set(bob), primaryParty = Some(alice), participantAdmin = false, isDeactivated = false, annotations = Map(\"foo\" -> \"bar\", \"description\" -> \"This is a description\"))"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745593831.451549",
+        "client_msg_id": "76bf7438-34aa-42cc-b603-f59ddee5645c",
+        "text": "It works!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745574718.745689",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MaqYm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It works!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

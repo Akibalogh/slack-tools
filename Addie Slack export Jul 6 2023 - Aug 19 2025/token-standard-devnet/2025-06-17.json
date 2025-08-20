@@ -1,0 +1,330 @@
+[
+    {
+        "user": "U05TXFMJ8JJ",
+        "type": "message",
+        "ts": "1750148551.579639",
+        "client_msg_id": "0fb7cc82-1a72-4466-9c5e-63ac2a19a96f",
+        "text": "Hey <@UEHLS0JUB>, can I just confirm I am trying to hit the following endpoint: <https:\/\/canton-testnet-participant.kube.testnet-ldn.boople.co\/api\/json-api\/v2\/updates\/update-by-id> which routes to participant's json-api (7575)\n\nAnd getting:\n```{\n    \"code\": \"NA\",\n    \"cause\": \"A security-sensitive error has been received\",\n    \"correlationId\": \"3c04707012006e43174f6dce4a14e99b\",\n    \"traceId\": \"3c04707012006e43174f6dce4a14e99b\",\n    \"context\": {},\n    \"resources\": [],\n    \"errorCategory\": -1,\n    \"grpcCodeValue\": 7,\n    \"retryInfo\": null,\n    \"definiteAnswer\": null\n}```\nI pressume it is related to daml model has not been switched on yet",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "d00a5e94ac00",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-10-09\/6003686836470_d00a5e94ac00e72ea058_72.jpg",
+            "first_name": "Ralph",
+            "real_name": "Ralph Raule",
+            "display_name": "Ralph Raule",
+            "team": "E02KFSNH6CV",
+            "name": "ralph.raule",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749113635.478239",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NgQZA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", can I just confirm I am trying to hit the following endpoint: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/canton-testnet-participant.kube.testnet-ldn.boople.co\/api\/json-api\/v2\/updates\/update-by-id"
+                            },
+                            {
+                                "type": "text",
+                                "text": " which routes to participant's json-api (7575)\n\nAnd getting:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"code\": \"NA\",\n    \"cause\": \"A security-sensitive error has been received\",\n    \"correlationId\": \"3c04707012006e43174f6dce4a14e99b\",\n    \"traceId\": \"3c04707012006e43174f6dce4a14e99b\",\n    \"context\": {},\n    \"resources\": [],\n    \"errorCategory\": -1,\n    \"grpcCodeValue\": 7,\n    \"retryInfo\": null,\n    \"definiteAnswer\": null\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nI pressume it is related to daml model has not been switched on yet"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05TXFMJ8JJ",
+        "type": "message",
+        "ts": "1750148897.499139",
+        "client_msg_id": "b8ace396-41d5-437e-b0e8-ba5acc5604ec",
+        "text": "the log from the participant is awfully vague\n```Request com.daml.ledger.api.v2.UpdateService\/GetUpdateById by inprocess-grpc-5001: failed with UNAUTHENTICATED\/An error occurred. Please contact the operator and inquire about the request fabf2bac77c4eaf3b80f248488c79c35 with tid fabf2bac77c4eaf3b80f248488c79c35```",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "d00a5e94ac00",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-10-09\/6003686836470_d00a5e94ac00e72ea058_72.jpg",
+            "first_name": "Ralph",
+            "real_name": "Ralph Raule",
+            "display_name": "Ralph Raule",
+            "team": "E02KFSNH6CV",
+            "name": "ralph.raule",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749113635.478239",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HiLLE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the log from the participant is awfully vague\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Request com.daml.ledger.api.v2.UpdateService\/GetUpdateById by inprocess-grpc-5001: failed with UNAUTHENTICATED\/An error occurred. Please contact the operator and inquire about the request fabf2bac77c4eaf3b80f248488c79c35 with tid fabf2bac77c4eaf3b80f248488c79c35"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05TXFMJ8JJ",
+        "type": "message",
+        "ts": "1750155243.473659",
+        "client_msg_id": "bdf74999-8186-495f-8540-d56704c9c260",
+        "text": "ahh I think found the issue, `Claims do not authorize to read data as any party (super-reader wildcard)`",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "d00a5e94ac00",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-10-09\/6003686836470_d00a5e94ac00e72ea058_72.jpg",
+            "first_name": "Ralph",
+            "real_name": "Ralph Raule",
+            "display_name": "Ralph Raule",
+            "team": "E02KFSNH6CV",
+            "name": "ralph.raule",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749113635.478239",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RAbZ+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ahh I think found the issue, "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Claims do not authorize to read data as any party (super-reader wildcard)",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05TXFMJ8JJ",
+        "type": "message",
+        "ts": "1750155359.013499",
+        "client_msg_id": "5b9d48a2-1970-4c72-96bb-4a5571f9edcd",
+        "text": "our request does not include is that what is causing this?\n```\"includeTopologyEvents\": {\n      \"includeParticipantAuthorizationEvents\": {\n        \"parties\": [\n          \"string\"\n        ]\n      }\n    }```\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "d00a5e94ac00",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-10-09\/6003686836470_d00a5e94ac00e72ea058_72.jpg",
+            "first_name": "Ralph",
+            "real_name": "Ralph Raule",
+            "display_name": "Ralph Raule",
+            "team": "E02KFSNH6CV",
+            "name": "ralph.raule",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749113635.478239",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "daSMP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "our request does not include is that what is causing this?\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\"includeTopologyEvents\": {\n      \"includeParticipantAuthorizationEvents\": {\n        \"parties\": [\n          \"string\"\n        ]\n      }\n    }"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05TXFMJ8JJ",
+        "type": "message",
+        "ts": "1750155885.714609",
+        "client_msg_id": "498b1920-25ce-47bb-a78a-95408ff88c7c",
+        "text": "```curl --location '<https:\/\/canton-testnet-participant.kube.testnet-ldn.boople.co\/api\/json-api\/v2\/updates\/update-by-id>' \\\n--header 'Content-Type: application\/json' \\\n--header 'Authorization: Bearer &lt;token&gt;' \\\n--data '{\n    \"updateId\": \"12207f1e43e90ae0f70d40cbb9c42cf43aa7066d20a8964adcd3d0c4842c95617498\",\n    \"updateFormat\": {\n        \"includeTransactions\": {\n            \"eventFormat\": {\n                \"filtersForAnyParty\": {\n                    \"cumulative\": [\n                        {\n                            \"identifierFilter\": {\n                                \"InterfaceFilter\": {\n                                    \"value\": {\n                                        \"interfaceId\": \"#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding\",\n                                        \"includeInterfaceView\": true,\n                                        \"includeCreatedEventBlob\": false\n                                    }\n                                }\n                            }\n                        },\n                        {\n                            \"identifierFilter\": {\n                                \"InterfaceFilter\": {\n                                    \"value\": {\n                                        \"interfaceId\": \"#splice-api-token-transfer-instruction-v1:Splice.Api.Token.TransferInstructionV1:TransferInstruction\",\n                                        \"includeInterfaceView\": true,\n                                        \"includeCreatedEventBlob\": false\n                                    }\n                                }\n                            }\n                        },\n                        {\n                            \"identifierFilter\": {\n                                \"InterfaceFilter\": {\n                                    \"value\": {\n                                        \"interfaceId\": \"#splice-api-token-transfer-instruction-v1:Splice.Api.Token.TransferInstructionV1:TransferFactory\",\n                                        \"includeInterfaceView\": true,\n                                        \"includeCreatedEventBlob\": false\n                                    }\n                                }\n                            }\n                        },\n                        {\n                            \"identifierFilter\": {\n                                \"WildcardFilter\": {\n                                    \"value\": {\n                                        \"includeCreatedEventBlob\": true\n                                    }\n                                }\n                            }\n                        }\n                    ]\n                },\n                \"verbose\": false\n            },\n            \"transactionShape\": \"TRANSACTION_SHAPE_LEDGER_EFFECTS\"\n        }\n    } \n}'```\nfyi <@U06TMPD96M8>",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "d00a5e94ac00",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-10-09\/6003686836470_d00a5e94ac00e72ea058_72.jpg",
+            "first_name": "Ralph",
+            "real_name": "Ralph Raule",
+            "display_name": "Ralph Raule",
+            "team": "E02KFSNH6CV",
+            "name": "ralph.raule",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749113635.478239",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GrH8V",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl --location '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/canton-testnet-participant.kube.testnet-ldn.boople.co\/api\/json-api\/v2\/updates\/update-by-id"
+                            },
+                            {
+                                "type": "text",
+                                "text": "' \\\n--header 'Content-Type: application\/json' \\\n--header 'Authorization: Bearer <token>' \\\n--data '{\n    \"updateId\": \"12207f1e43e90ae0f70d40cbb9c42cf43aa7066d20a8964adcd3d0c4842c95617498\",\n    \"updateFormat\": {\n        \"includeTransactions\": {\n            \"eventFormat\": {\n                \"filtersForAnyParty\": {\n                    \"cumulative\": [\n                        {\n                            \"identifierFilter\": {\n                                \"InterfaceFilter\": {\n                                    \"value\": {\n                                        \"interfaceId\": \"#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding\",\n                                        \"includeInterfaceView\": true,\n                                        \"includeCreatedEventBlob\": false\n                                    }\n                                }\n                            }\n                        },\n                        {\n                            \"identifierFilter\": {\n                                \"InterfaceFilter\": {\n                                    \"value\": {\n                                        \"interfaceId\": \"#splice-api-token-transfer-instruction-v1:Splice.Api.Token.TransferInstructionV1:TransferInstruction\",\n                                        \"includeInterfaceView\": true,\n                                        \"includeCreatedEventBlob\": false\n                                    }\n                                }\n                            }\n                        },\n                        {\n                            \"identifierFilter\": {\n                                \"InterfaceFilter\": {\n                                    \"value\": {\n                                        \"interfaceId\": \"#splice-api-token-transfer-instruction-v1:Splice.Api.Token.TransferInstructionV1:TransferFactory\",\n                                        \"includeInterfaceView\": true,\n                                        \"includeCreatedEventBlob\": false\n                                    }\n                                }\n                            }\n                        },\n                        {\n                            \"identifierFilter\": {\n                                \"WildcardFilter\": {\n                                    \"value\": {\n                                        \"includeCreatedEventBlob\": true\n                                    }\n                                }\n                            }\n                        }\n                    ]\n                },\n                \"verbose\": false\n            },\n            \"transactionShape\": \"TRANSACTION_SHAPE_LEDGER_EFFECTS\"\n        }\n    } \n}'"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "fyi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U06TMPD96M8"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05TXFMJ8JJ",
+        "type": "message",
+        "ts": "1750156356.967209",
+        "client_msg_id": "0c07dab1-948b-4119-97a1-61e4ca00f93e",
+        "text": "what exactly do I need to change to grant that? the daml_ledger_api scope?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "d00a5e94ac00",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-10-09\/6003686836470_d00a5e94ac00e72ea058_72.jpg",
+            "first_name": "Ralph",
+            "real_name": "Ralph Raule",
+            "display_name": "Ralph Raule",
+            "team": "E02KFSNH6CV",
+            "name": "ralph.raule",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749113635.478239",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wT7vZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "what exactly do I need to change to grant that? the daml_ledger_api scope?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

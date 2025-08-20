@@ -1,0 +1,457 @@
+[
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753090429.679079",
+        "client_msg_id": "82141c07-2ed1-4a2c-925e-bf2f709fa7a3",
+        "text": "cc <@U05FU0HPZ9T> <@U088UV6MKFE>\nRight now the Ripple implementation uses Websocket to communicate to the rippled. But I think it is hard to make the Websocket as technology reliable. Right now I do not have any issue except when the rippled restarts the attestor can't send messages because I just get `SendAfterClosing`  error. It is not on the attestor part, but in the xrpl-rust.\n\nI'm sure I can fix it, but since we only do request\/response type of communication I think it is better the change to JSONRPC (changing two line in the attestor at the moment). It is more reliable because we don't have to maintain a persistent tcp connection by ourself.\n\nThe drawback, that the node operators should change it in their config.toml.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753054591.713439",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sCXYT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "cc "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FU0HPZ9T"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nRight now the Ripple implementation uses Websocket to communicate to the rippled. But I think it is hard to make the Websocket as technology reliable. Right now I do not have any issue except when the rippled restarts the attestor can't send messages because I just get "
+                            },
+                            {
+                                "type": "text",
+                                "text": "SendAfterClosing",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  error. It is not on the attestor part, but in the xrpl-rust.\n\nI'm sure I can fix it, but since we only do request\/response type of communication I think it is better the change to JSONRPC (changing two line in the attestor at the moment). It is more reliable because we don't have to maintain a persistent tcp connection by ourself.\n\nThe drawback, that the node operators should change it in their config.toml."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753090754.960979",
+        "client_msg_id": "3143439a-0378-45af-a4b0-ed958bcf1bf4",
+        "text": "I think that should be fine, if you think it's better.\n\nHowever, I have a vague memory that there was a reason we _had to_ use ws, otherwise we wouldn't have... maybe you could try talking to our production testnet rippled, see what happens with jsonrpc.\n\n<ws:\/\/54.159.133.135:6005>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753054591.713439",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QK1B2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think that should be fine, if you think it's better.\n\nHowever, I have a vague memory that there was a reason we "
+                            },
+                            {
+                                "type": "text",
+                                "text": "had to",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " use ws, otherwise we wouldn't have... maybe you could try talking to our production testnet rippled, see what happens with jsonrpc.\n\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "ws:\/\/54.159.133.135:6005"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753090806.113599",
+        "client_msg_id": "187ed4f0-64fc-43b4-b75f-0ca9420a95ff",
+        "text": "ah nvm, maybe it will work, but we definitely configured rippled servers to work only with ws",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753054591.713439",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OmIvl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ah nvm, maybe it will work, but we definitely configured rippled servers to work only with ws"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753090811.007779",
+        "client_msg_id": "da09563f-2c32-4c72-ad8c-a264eab5795f",
+        "text": "but we could switch over",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753054591.713439",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "e7uwF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but we could switch over"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753090825.042969",
+        "client_msg_id": "bb1d61c7-268f-4770-8cc0-4140d3712957",
+        "text": "<https:\/\/www.notion.so\/rippled-server-config-1ea636dd0ba580228c65f1e0c5c2a3ce?source=copy_link>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753054591.713439",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IXaUi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.notion.so\/rippled-server-config-1ea636dd0ba580228c65f1e0c5c2a3ce?source=copy_link"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1753090847.198339",
+        "client_msg_id": "7e1bfd43-8b40-433c-8463-de8f4f3fef2d",
+        "text": "Thanks, we can talk about it tomorrow. I still have a few things to solve.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753054591.713439",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ug1EY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks, we can talk about it tomorrow. I still have a few things to solve."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753111531.809659",
+        "client_msg_id": "e9a72fb3-a604-464a-b76f-59bfe60d5ecf",
+        "text": "I can't believe I didn't think of this before, but when you write your scripts in js or rs or go instead of sh, you can launch them as an app!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DzTv4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I can't believe I didn't think of this before, but when you write your scripts in js or rs or go instead of sh, you can launch them as an app!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1753111556.759719",
+        "client_msg_id": "0acf1b3f-21b7-4330-9747-bcfbf64e302c",
+        "text": "Good thing ai can convert to any language in a moment",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "M2aWY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Good thing ai can convert to any language in a moment"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753111618.470879",
+        "client_msg_id": "F9262252-BEEB-41DD-A3E7-A4F8DC299EF7",
+        "text": "What is an app, but a shell script running some binary?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qbD9T",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "W"
+                            },
+                            {
+                                "type": "text",
+                                "text": "hat is an app, but a shell script running some binary?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1753111654.645969",
+        "client_msg_id": "D27D7ECC-81DC-42FE-942E-5EDAB8FFC372",
+        "text": "Without getting too philosophical, we can launch any scripts with docker for example, and voila, it’s an app!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/Qnyn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Without getting too philosophical, we can launch any scripts with docker for example, and voila, "
+                            },
+                            {
+                                "type": "text",
+                                "text": "it’s"
+                            },
+                            {
+                                "type": "text",
+                                "text": " an app!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

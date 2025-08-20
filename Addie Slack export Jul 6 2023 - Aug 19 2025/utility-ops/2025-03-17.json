@@ -1,0 +1,176 @@
+[
+    {
+        "subtype": "channel_join",
+        "user": "U0657NCJTL6",
+        "text": "<@U0657NCJTL6> has joined the channel",
+        "inviter": "U01VDC391QS",
+        "type": "message",
+        "ts": "1742211709.965719",
+        "team": "T05FWTX7PMG"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "UNPR7NW2H",
+        "text": "<@UNPR7NW2H> has joined the channel",
+        "inviter": "U01VDC391QS",
+        "type": "message",
+        "ts": "1742219257.790839",
+        "team": "T05FWTX7PMG"
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1742241692.595199",
+        "client_msg_id": "b3b345aa-8beb-4ef8-ad44-586c56448a1b",
+        "text": "After the devnet reset, we were unable to access the wallet UI. It appears the port changed from 80 to 8080 in 0.3.15. After changing the wallet ui container image in our Validator CRD to 0.3.13, we are able to access the wallet UI, but the utility-ui is still spinning when we try to access the credentials or registry section after logging in. Could a similar port change be impacting the utility ui?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742241692.595199",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1742244606.062099",
+        "reply_users": [
+            "U07J3V9CS78"
+        ],
+        "replies": [
+            {
+                "user": "U07J3V9CS78",
+                "ts": "1742244589.698149"
+            },
+            {
+                "user": "U07J3V9CS78",
+                "ts": "1742244606.062099"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vUFv3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "After the devnet reset, we were unable to access the wallet UI. It appears the port changed from 80 to 8080 in 0.3.15. After changing the wallet ui container image in our Validator CRD to 0.3.13, we are able to access the wallet UI, but the utility-ui is still spinning when we try to access the credentials or registry section after logging in. Could a similar port change be impacting the utility ui?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1742244589.698149",
+        "client_msg_id": "4aed2c20-66bb-42b8-838e-519bf8dacc27",
+        "text": "i discovered our issue. We had to add the `validatorName_audience` scope back into our a few of our client configurations after the reset.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742241692.595199",
+        "parent_user_id": "U07J3V9CS78",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qqVaO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "i discovered our issue. We had to add the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "validatorName_audience",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " scope back into our a few of our client configurations after the reset."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07J3V9CS78",
+        "type": "message",
+        "ts": "1742244606.062099",
+        "client_msg_id": "3282a815-03ee-4d95-a77e-d106fe35113e",
+        "text": "Thanks for your help.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "96e096bc0e09",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-08-29\/7637205143383_96e096bc0e09c1550a14_72.jpg",
+            "first_name": "Chris",
+            "real_name": "Chris Knutson",
+            "display_name": "chris",
+            "team": "T02P6LC6U01",
+            "name": "chris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742241692.595199",
+        "parent_user_id": "U07J3V9CS78",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vpcqO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for your help."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

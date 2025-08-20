@@ -1,0 +1,553 @@
+[
+    {
+        "subtype": "bot_message",
+        "text": "*Circle Internet Financial, LLC.* has joined this channel by invitation from *Global Synchronizer Foundation*.",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1742313233.276709",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RlA=A",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Circle Internet Financial, LLC.",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " has joined this channel by invitation from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Global Synchronizer Foundation",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08870CTVNV",
+        "type": "message",
+        "ts": "1742313669.762649",
+        "edited": {
+            "user": "U08870CTVNV",
+            "ts": "1742313688.000000"
+        },
+        "client_msg_id": "6276c26f-8ab8-4e33-978e-522600e06f29",
+        "text": ":thread: Hi all, I need to create a report to track CC balances, with fields breaking out validator and app rewards and I could use some pointers. The output would look something like the following:\n```interface DailySummaryRow {\n  date: string\n  party: string\n  cc_balance_closing: string\n  cc_rewards_total: string\n  cc_rewards_total_daily: string\n  cc_rewards_validator_total: string\n  cc_rewards_validator_daily: string\n  cc_rewards_app_total: string\n  cc_rewards_app_daily: string\n}```\nThe daily balances I have now via `\/holdings\/summary` . What would be the best way to get the daily rewards for a specific party?",
+        "team": "T05FWTX7PMG",
+        "user_team": "EEC4DCMNY",
+        "source_team": "EEC4DCMNY",
+        "user_profile": {
+            "avatar_hash": "2687d422602f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-01-21\/8350475957920_2687d422602fd4f8ea0a_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Walchli",
+            "display_name": "Alex Walchli",
+            "team": "EEC4DCMNY",
+            "name": "alexander.walchli",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742313669.762649",
+        "reply_count": 7,
+        "reply_users_count": 1,
+        "latest_reply": "1742325522.346659",
+        "reply_users": [
+            "U08870CTVNV"
+        ],
+        "replies": [
+            {
+                "user": "U08870CTVNV",
+                "ts": "1742317538.446009"
+            },
+            {
+                "user": "U08870CTVNV",
+                "ts": "1742317893.132089"
+            },
+            {
+                "user": "U08870CTVNV",
+                "ts": "1742318242.042059"
+            },
+            {
+                "user": "U08870CTVNV",
+                "ts": "1742318283.789019"
+            },
+            {
+                "user": "U08870CTVNV",
+                "ts": "1742318313.839489"
+            },
+            {
+                "user": "U08870CTVNV",
+                "ts": "1742323263.703619"
+            },
+            {
+                "user": "U08870CTVNV",
+                "ts": "1742325522.346659"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zIydG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "thread",
+                                "unicode": "1f9f5"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Hi all, I need to create a report to track CC balances, with fields breaking out validator and app rewards and I could use some pointers. The output would look something like the following:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "interface DailySummaryRow {\n  date: string\n  party: string\n  cc_balance_closing: string\n  cc_rewards_total: string\n  cc_rewards_total_daily: string\n  cc_rewards_validator_total: string\n  cc_rewards_validator_daily: string\n  cc_rewards_app_total: string\n  cc_rewards_app_daily: string\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The daily balances I have now via "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/holdings\/summary",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " . What would be the best way to get the daily rewards for a specific party?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08870CTVNV",
+        "type": "message",
+        "ts": "1742317538.446009",
+        "client_msg_id": "f7500e67-78f4-439f-969c-9fec259e77fe",
+        "text": "Yeah unfortunately I need a home-grown solution, at least in the near-term. I appreciate the tip!\n\nBy any chance is there a way to get transactions (\/v0\/transactions) by party filtered on the API <@U0HNR4PGR>? Maybe something hidden from the docs :slightly_smiling_face: , hopeful thinking.",
+        "team": "T05FWTX7PMG",
+        "user_team": "EEC4DCMNY",
+        "source_team": "EEC4DCMNY",
+        "user_profile": {
+            "avatar_hash": "2687d422602f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-01-21\/8350475957920_2687d422602fd4f8ea0a_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Walchli",
+            "display_name": "Alex Walchli",
+            "team": "EEC4DCMNY",
+            "name": "alexander.walchli",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742313669.762649",
+        "parent_user_id": "U08870CTVNV",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4EWPT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yeah unfortunately I need a home-grown solution, at least in the near-term. I appreciate the tip!\n\nBy any chance is there a way to get transactions (\/v0\/transactions) by party filtered on the API "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0HNR4PGR"
+                            },
+                            {
+                                "type": "text",
+                                "text": "? Maybe something hidden from the docs "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            },
+                            {
+                                "type": "text",
+                                "text": " , hopeful thinking."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08870CTVNV",
+        "type": "message",
+        "ts": "1742317893.132089",
+        "client_msg_id": "48085137-78c2-49b5-9cd5-2f6edbc163f0",
+        "text": "If all I need is the app and validator rewards earned each day, can \/v0\/transactions suffice?",
+        "team": "T05FWTX7PMG",
+        "user_team": "EEC4DCMNY",
+        "source_team": "EEC4DCMNY",
+        "user_profile": {
+            "avatar_hash": "2687d422602f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-01-21\/8350475957920_2687d422602fd4f8ea0a_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Walchli",
+            "display_name": "Alex Walchli",
+            "team": "EEC4DCMNY",
+            "name": "alexander.walchli",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742313669.762649",
+        "parent_user_id": "U08870CTVNV",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1OTdr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If all I need is the app and validator rewards earned each day, can \/v0\/transactions suffice?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "oh weird",
+        "files": [
+            {
+                "id": "F08J2D73DGE",
+                "created": 1742318238,
+                "timestamp": 1742318238,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U08870CTVNV",
+                "user_team": "EEC4DCMNY",
+                "editable": false,
+                "size": 181663,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/TEC4DCMNY-F08J2D73DGE\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/TEC4DCMNY-F08J2D73DGE\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/TEC4DCMNY-F08J2D73DGE-629f75c654\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/TEC4DCMNY-F08J2D73DGE-629f75c654\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/TEC4DCMNY-F08J2D73DGE-629f75c654\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 160,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/TEC4DCMNY-F08J2D73DGE-629f75c654\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 214,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/TEC4DCMNY-F08J2D73DGE-629f75c654\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/TEC4DCMNY-F08J2D73DGE-629f75c654\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 321,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/TEC4DCMNY-F08J2D73DGE-629f75c654\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 356,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/TEC4DCMNY-F08J2D73DGE-629f75c654\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 427,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/TEC4DCMNY-F08J2D73DGE-629f75c654\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 456,
+                "original_w": 1878,
+                "original_h": 836,
+                "thumb_tiny": "AwAVADCxp5xa9M\/MasZH93FCKqrhVCj0ApcYoAOP71Gf9oUZalz7UAGR6ig0tIaAEAytIFwcjj8KVelLQAmD60oB9aKKADHuaDS0hoA\/\/9k=",
+                "permalink": "https:\/\/circle.enterprise.slack.com\/files\/U05FZBDQ4RJ\/F08J2D73DGE\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/TEC4DCMNY-F08J2D73DGE-2517cba3e3",
+                "source_team": "EEC4DCMNY",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U08870CTVNV",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iajqG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "oh weird"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1742318242.042059",
+        "client_msg_id": "64323748-5b21-444d-b5e1-9f0b476d613f",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1742313669.762649",
+        "parent_user_id": "U08870CTVNV",
+        "user_team": "EEC4DCMNY",
+        "source_team": "EEC4DCMNY",
+        "user_profile": {
+            "avatar_hash": "2687d422602f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-01-21\/8350475957920_2687d422602fd4f8ea0a_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Walchli",
+            "display_name": "Alex Walchli",
+            "team": "EEC4DCMNY",
+            "name": "alexander.walchli",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U08870CTVNV",
+        "type": "message",
+        "ts": "1742318283.789019",
+        "client_msg_id": "6e6af25c-d0e0-4c38-859c-5b0c61c2570f",
+        "text": "I got to that by searching in the top left and clicking on a result fwiw",
+        "team": "T05FWTX7PMG",
+        "user_team": "EEC4DCMNY",
+        "source_team": "EEC4DCMNY",
+        "user_profile": {
+            "avatar_hash": "2687d422602f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-01-21\/8350475957920_2687d422602fd4f8ea0a_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Walchli",
+            "display_name": "Alex Walchli",
+            "team": "EEC4DCMNY",
+            "name": "alexander.walchli",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742313669.762649",
+        "parent_user_id": "U08870CTVNV",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9STZT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I got to that by searching in the top left and clicking on a result fwiw"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08870CTVNV",
+        "type": "message",
+        "ts": "1742318313.839489",
+        "client_msg_id": "5e30b0e1-46f7-4d85-bbcb-728ada4eec8e",
+        "text": "but ok, I'll check out updates",
+        "team": "T05FWTX7PMG",
+        "user_team": "EEC4DCMNY",
+        "source_team": "EEC4DCMNY",
+        "user_profile": {
+            "avatar_hash": "2687d422602f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-01-21\/8350475957920_2687d422602fd4f8ea0a_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Walchli",
+            "display_name": "Alex Walchli",
+            "team": "EEC4DCMNY",
+            "name": "alexander.walchli",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742313669.762649",
+        "parent_user_id": "U08870CTVNV",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ph7zm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but ok, I'll check out updates"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08870CTVNV",
+        "type": "message",
+        "ts": "1742323263.703619",
+        "edited": {
+            "user": "U08870CTVNV",
+            "ts": "1742323710.000000"
+        },
+        "client_msg_id": "083f1f2d-2ff9-4080-8677-13ac7691c34f",
+        "text": "<@U0HNR4PGR> is using `scan_txlog.py` (I'm not much of a Python dev) the only realistic way to count up app\/validator rewards, is there higher-level endpoints that makes this easier? I'm getting the impression that me trying to interpret this \/v0\/updates endpoint is probably a bit futile considering there's 4,000 lines of code required to do that :laughing:",
+        "team": "T05FWTX7PMG",
+        "user_team": "EEC4DCMNY",
+        "source_team": "EEC4DCMNY",
+        "user_profile": {
+            "avatar_hash": "2687d422602f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-01-21\/8350475957920_2687d422602fd4f8ea0a_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Walchli",
+            "display_name": "Alex Walchli",
+            "team": "EEC4DCMNY",
+            "name": "alexander.walchli",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742313669.762649",
+        "parent_user_id": "U08870CTVNV",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "g3eyG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0HNR4PGR"
+                            },
+                            {
+                                "type": "text",
+                                "text": " is using "
+                            },
+                            {
+                                "type": "text",
+                                "text": "scan_txlog.py",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " (I'm not much of a Python dev) the only realistic way to count up app\/validator rewards, is there higher-level endpoints that makes this easier? I'm getting the impression that me trying to interpret this \/v0\/updates endpoint is probably a bit futile considering there's 4,000 lines of code required to do that "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "laughing",
+                                "unicode": "1f606"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08870CTVNV",
+        "type": "message",
+        "ts": "1742325522.346659",
+        "client_msg_id": "f93dc034-1a0e-4155-b3cc-9a374a3cfc32",
+        "text": "looks like `{{baseUrl}}\/v0\/round-party-totals` is what I need, I just need to figure out how to match a round to a datetime",
+        "team": "T05FWTX7PMG",
+        "user_team": "EEC4DCMNY",
+        "source_team": "EEC4DCMNY",
+        "user_profile": {
+            "avatar_hash": "2687d422602f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-01-21\/8350475957920_2687d422602fd4f8ea0a_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Walchli",
+            "display_name": "Alex Walchli",
+            "team": "EEC4DCMNY",
+            "name": "alexander.walchli",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1742313669.762649",
+        "parent_user_id": "U08870CTVNV",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kgMKO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "looks like "
+                            },
+                            {
+                                "type": "text",
+                                "text": "{{baseUrl}}\/v0\/round-party-totals",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is what I need, I just need to figure out how to match a round to a datetime"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,1161 @@
+[
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1755242436.391739",
+        "client_msg_id": "b95a1da9-f407-47cb-bc72-22104f44d423",
+        "text": "Hey Ryan, I just came back to you on <#C08FQRCRFUN|gsf-global-synchronizer-appdev>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755214407.255849",
+        "parent_user_id": "U047SRHJQ5T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "O9HP0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey Ryan, I just came back to you on "
+                            },
+                            {
+                                "type": "channel",
+                                "channel_id": "C08FQRCRFUN"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1755242495.449329",
+        "client_msg_id": "a661c3c3-ba1c-48a3-a6df-1c5a543c0eab",
+        "text": "It could change upon application upgrades, or it could change if the instrument admin performs dynamic checks in order to create an `Allocation` (think e.g. checking that the sending party isn't block-listed)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755215526.169439",
+        "parent_user_id": "U047SRHJQ5T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "T97A9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It could change upon application upgrades, or it could change if the instrument admin performs dynamic checks in order to create an "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Allocation",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " (think e.g. checking that the sending party isn't block-listed)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1755242537.015619",
+        "client_msg_id": "fdeb9e94-34a9-44e0-a0fa-7d4514b46419",
+        "text": "or e.g. limiting allocations to a certain daily limit",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755215526.169439",
+        "parent_user_id": "U047SRHJQ5T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VK40Q",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "or e.g. limiting allocations to a certain daily limit"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UCCBNQECD",
+        "type": "message",
+        "ts": "1755261061.775439",
+        "edited": {
+            "user": "UCCBNQECD",
+            "ts": "1755261144.000000"
+        },
+        "client_msg_id": "83a93179-086a-4f3b-97e4-6e8d970b1795",
+        "text": "Hey <@UE6GFQQ20> I had a similar issue recently and it ended up being a missing env variable\nUTILITY_APP_UTILITY_BACKEND_URL - it seems to be missing for you too...\nIt is not easy to find <https:\/\/docs.digitalasset.com\/utilities\/0.7\/releases\/index.html#id6>\nI hope that helps",
+        "team": "T05FWTX7PMG",
+        "user_team": "TA157LA85",
+        "source_team": "TA157LA85",
+        "user_profile": {
+            "avatar_hash": "17abc9e11180",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-17\/4832117858033_17abc9e11180efb7d7f4_72.jpg",
+            "first_name": "",
+            "real_name": "Matthieu Le Berre",
+            "display_name": "matt",
+            "team": "TA157LA85",
+            "name": "matthieu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755117492.283499",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IEHo+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UE6GFQQ20"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I had a similar issue recently and it ended up being a missing env variable\nUTILITY_APP_UTILITY_BACKEND_URL - it seems to be missing for you too...\nIt is not easy to find "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.digitalasset.com\/utilities\/0.7\/releases\/index.html#id6"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nI hope that helps"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UE6GFQQ20",
+        "type": "message",
+        "ts": "1755264967.275659",
+        "edited": {
+            "user": "UE6GFQQ20",
+            "ts": "1755271954.000000"
+        },
+        "client_msg_id": "0846a00d-54e6-4586-90f5-872440b35cbc",
+        "text": "<@UCCBNQECD> I added the env variable to my .env file\nUTILITY_APP_UTILITY_BACKEND_URL=\"<https:\/\/api.utilities.digitalasset.com>\"\nand redeployed validator and utility using:\n.\/start.sh -s \"$SPONSOR_SV_URL\" -o \"\" -p \"$PARTY_HINT\" -m \"$MIGRATION_ID\" -w -a\nand I still get the same issue of it looping and seeing the following in the network tab of the browser dev tools window:\n\nRequest URL\n<https:\/\/utility.validator.elkcapitalmarkets.com\/api\/json-api\/v2\/state\/active-contractsRequest> Method\nPOSTStatus Code\n404 Not Found\nhost\n<http:\/\/utility.validator.elkcapitalmarkets.com|utility.validator.elkcapitalmarkets.com>\norigin\n<https:\/\/utility.validator.elkcapitalmarkets.com>\nreferer\n<https:\/\/utility.validator.elkcapitalmarkets.com\/credential\/onboarding>\n\nand see the following in the console tab:\nLedgerApiClientV2.ts:258  GET <https:\/\/utility.validator.elkcapitalmarkets.com\/api\/json-api\/v2\/interactive-submission\/preferred-package-version?parties=auth0_007c6643538f2eadd3e573dd05b9%3A%3A12205bcc106efa0eaa7f18dc491e5c6f5fb9b0cc68dc110ae66f4ed6467475d7c78e&parties=elk-Validator-2%3A%3A1220ba8b8b58bcc3dec4c0f3acbe86c4d0df5d7e0ea19bb4ef7168d6bca467ed8a1d&package-name=utility-commercials-v0> 404 (Not Found)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "gbc010b76fea",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/61bc010b76fea5114ee3321f5276ec4a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "Ajay",
+            "real_name": "Ajay Patel",
+            "display_name": "",
+            "team": "T4WUR0THD",
+            "name": "apatel",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755117492.283499",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/a90u",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "UCCBNQECD"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I added the env variable to my .env file\nUTILITY_APP_UTILITY_BACKEND_URL=\""
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/api.utilities.digitalasset.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"\nand redeployed validator and utility using:\n.\/start.sh -s \"$SPONSOR_SV_URL\" -o \"\" -p \"$PARTY_HINT\" -m \"$MIGRATION_ID\" -w -a\nand I still get the same issue of it looping and seeing the following in the network tab of the browser dev tools window:\n\nRequest URL\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/utility.validator.elkcapitalmarkets.com\/api\/json-api\/v2\/state\/active-contractsRequest"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Method\nPOSTStatus Code\n404 Not Found\nhost\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/utility.validator.elkcapitalmarkets.com",
+                                "text": "utility.validator.elkcapitalmarkets.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\norigin\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/utility.validator.elkcapitalmarkets.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nreferer\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/utility.validator.elkcapitalmarkets.com\/credential\/onboarding"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nand see the following in the console tab:\nLedgerApiClientV2.ts:258  GET "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/utility.validator.elkcapitalmarkets.com\/api\/json-api\/v2\/interactive-submission\/preferred-package-version?parties=auth0_007c6643538f2eadd3e573dd05b9%3A%3A12205bcc106efa0eaa7f18dc491e5c6f5fb9b0cc68dc110ae66f4ed6467475d7c78e&parties=elk-Validator-2%3A%3A1220ba8b8b58bcc3dec4c0f3acbe86c4d0df5d7e0ea19bb4ef7168d6bca467ed8a1d&package-name=utility-commercials-v0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " 404 (Not Found)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UE6GFQQ20",
+        "type": "message",
+        "ts": "1755275501.047539",
+        "client_msg_id": "e72592d8-7851-432b-a50e-919e7562a5b7",
+        "text": "Tarik with DA was able to help resolve this. I had to download the dars and upload them to the participant container again. That did fixed our issue and I was able to create the credential user service. Greatly appreciate everyone's help here.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "gbc010b76fea",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/61bc010b76fea5114ee3321f5276ec4a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "Ajay",
+            "real_name": "Ajay Patel",
+            "display_name": "",
+            "team": "T4WUR0THD",
+            "name": "apatel",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755117492.283499",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZI48m",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Tarik with DA was able to help resolve this. I had to download the dars and upload them to the participant container again. That did fixed our issue and I was able to create the credential user service. Greatly appreciate everyone's help here."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "tada",
+                "users": [
+                    "U047U17D7KL"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "UE6GFQQ20",
+        "type": "message",
+        "ts": "1755285640.406699",
+        "client_msg_id": "e3339cfa-b475-47c3-b600-0935e23ad20b",
+        "text": "Now that the service has been created, how do I get it onboarded? Do I need to inform someone here or open another ticket?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "gbc010b76fea",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/61bc010b76fea5114ee3321f5276ec4a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "Ajay",
+            "real_name": "Ajay Patel",
+            "display_name": "",
+            "team": "T4WUR0THD",
+            "name": "apatel",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755117492.283499",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ypN6A",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Now that the service has been created, how do I get it onboarded? Do I need to inform someone here or open another ticket?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U046V2U9RKQ",
+        "type": "message",
+        "ts": "1755289560.960549",
+        "client_msg_id": "731020b4-6236-43ea-917f-165c0047d0c0",
+        "text": "Hello, we are attempting to `Request Provider Service` from the utility app in testnet. The request appears to be created, but then disappears without actually creating a service in the list. IIUC we need an offer credential for that environment in order to proceed. Could someone please assist? cc <@U02KJ7PKHN2>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GGGURARK",
+        "source_team": "T02GGGURARK",
+        "user_profile": {
+            "avatar_hash": "fe83e162dc90",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-24\/4850136381494_fe83e162dc90ba1fc10d_72.jpg",
+            "first_name": "Nate",
+            "real_name": "Nate",
+            "display_name": "Nate",
+            "team": "T02GGGURARK",
+            "name": "nathan.homesley",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755289560.960549",
+        "reply_count": 10,
+        "reply_users_count": 2,
+        "latest_reply": "1755291557.865429",
+        "reply_users": [
+            "U04BDUU197Z",
+            "U046V2U9RKQ"
+        ],
+        "replies": [
+            {
+                "user": "U04BDUU197Z",
+                "ts": "1755290301.567129"
+            },
+            {
+                "user": "U046V2U9RKQ",
+                "ts": "1755290610.525239"
+            },
+            {
+                "user": "U04BDUU197Z",
+                "ts": "1755290894.510579"
+            },
+            {
+                "user": "U046V2U9RKQ",
+                "ts": "1755290929.525329"
+            },
+            {
+                "user": "U046V2U9RKQ",
+                "ts": "1755291222.046289"
+            },
+            {
+                "user": "U046V2U9RKQ",
+                "ts": "1755291234.492469"
+            },
+            {
+                "user": "U04BDUU197Z",
+                "ts": "1755291392.547579"
+            },
+            {
+                "user": "U04BDUU197Z",
+                "ts": "1755291493.173399"
+            },
+            {
+                "user": "U046V2U9RKQ",
+                "ts": "1755291517.514499"
+            },
+            {
+                "user": "U04BDUU197Z",
+                "ts": "1755291557.865429"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5Zxw7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello, we are attempting to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Request Provider Service",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from the utility app in testnet. The request appears to be created, but then disappears without actually creating a service in the list. IIUC we need an offer credential for that environment in order to proceed. Could someone please assist? cc "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02KJ7PKHN2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U04BDUU197Z",
+        "type": "message",
+        "ts": "1755290301.567129",
+        "client_msg_id": "BD2DC385-D061-4BA7-B86F-2DA6814BA39F",
+        "text": "Can you send your party Id",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c8ecd88a0ec4",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-11-21\/4388223904679_c8ecd88a0ec44f339fec_72.jpg",
+            "first_name": "Frank",
+            "real_name": "Frank Preiwuss",
+            "display_name": "Frank Preiwuss",
+            "team": "T03T53E10",
+            "name": "frank.preiwuss",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755289560.960549",
+        "parent_user_id": "U046V2U9RKQ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "n6AZp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Can you send your party Id"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U047U17D7KL",
+        "type": "message",
+        "ts": "1755290497.818509",
+        "edited": {
+            "user": "U047U17D7KL",
+            "ts": "1755290679.000000"
+        },
+        "client_msg_id": "f529e900-c5a7-49b1-a2fa-c9a584613b49",
+        "text": "Yes, see <https:\/\/daholdings.slack.com\/archives\/C08338ZAL9X\/p1754924906013379|here> as an example.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "16aeca7859e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-10-24\/4263109753253_16aeca7859e88c51a7d5_72.png",
+            "first_name": "Wallace",
+            "real_name": "Wallace Kelly",
+            "display_name": "Wallace Kelly",
+            "team": "T03T53E10",
+            "name": "wallace.kelly",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755117492.283499",
+        "parent_user_id": "UE6GFQQ20",
+        "attachments": [
+            {
+                "from_url": "https:\/\/daholdings.slack.com\/archives\/C08338ZAL9X\/p1754924906013379",
+                "ts": "1754924906.013379",
+                "author_id": "UCCBNQECD",
+                "channel_id": "C08338ZAL9X",
+                "channel_team": "T03T53E10",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "message_blocks": [
+                    {
+                        "team": "T03T53E10",
+                        "channel": "C08338ZAL9X",
+                        "ts": "1754924906.013379",
+                        "message": {
+                            "blocks": [
+                                {
+                                    "type": "rich_text",
+                                    "block_id": "cERrz",
+                                    "elements": [
+                                        {
+                                            "type": "rich_text_section",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Hello, can I please get the provider credentials for "
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": "TestNet",
+                                                    "style": {
+                                                        "bold": true
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " for "
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": "trakx-validator-1::122021dfc6527d307014635e887b3bf665366d03f64132caa5b9ab15f2ce8fcf69a2",
+                                                    "style": {
+                                                        "code": true
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " ?"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "id": 1,
+                "original_url": "https:\/\/daholdings.slack.com\/archives\/C08338ZAL9X\/p1754924906013379",
+                "fallback": "[August 11th, 2025 8:08 AM] matthieu: Hello, can I please get the provider credentials for *TestNet* for `trakx-validator-1::122021dfc6527d307014635e887b3bf665366d03f64132caa5b9ab15f2ce8fcf69a2` ?",
+                "text": "Hello, can I please get the provider credentials for *TestNet* for `trakx-validator-1::122021dfc6527d307014635e887b3bf665366d03f64132caa5b9ab15f2ce8fcf69a2` ?",
+                "author_name": "Matthieu Le Berre",
+                "author_link": "https:\/\/daholdings.slack.com\/team\/UCCBNQECD",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2023-02-17\/4832117858033_17abc9e11180efb7d7f4_48.jpg",
+                "author_subname": "Matthieu Le Berre",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "footer": "Thread in Slack Conversation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xwKaX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, see "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/daholdings.slack.com\/archives\/C08338ZAL9X\/p1754924906013379",
+                                "text": "here"
+                            },
+                            {
+                                "type": "text",
+                                "text": " as an example."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U046V2U9RKQ",
+        "type": "message",
+        "ts": "1755290610.525239",
+        "client_msg_id": "53aa5ef1-fec6-4523-a3a1-28b4e699265b",
+        "text": "ObsidianSystems-validator-1::12200a97a3589a8fd95940922a6103363081ec4e73504e536353563cff8138aec0a0",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GGGURARK",
+        "source_team": "T02GGGURARK",
+        "user_profile": {
+            "avatar_hash": "fe83e162dc90",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-24\/4850136381494_fe83e162dc90ba1fc10d_72.jpg",
+            "first_name": "Nate",
+            "real_name": "Nate",
+            "display_name": "Nate",
+            "team": "T02GGGURARK",
+            "name": "nathan.homesley",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755289560.960549",
+        "parent_user_id": "U046V2U9RKQ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "N76+h",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ObsidianSystems-validator-1::12200a97a3589a8fd95940922a6103363081ec4e73504e536353563cff8138aec0a0"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U04BDUU197Z",
+        "type": "message",
+        "ts": "1755290894.510579",
+        "client_msg_id": "4dcffa46-3342-4439-b8bf-193724046b70",
+        "text": "sent you a credential offer for a provider credential, after you accepted it you can onboard to the provider service",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c8ecd88a0ec4",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-11-21\/4388223904679_c8ecd88a0ec44f339fec_72.jpg",
+            "first_name": "Frank",
+            "real_name": "Frank Preiwuss",
+            "display_name": "Frank Preiwuss",
+            "team": "T03T53E10",
+            "name": "frank.preiwuss",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755289560.960549",
+        "parent_user_id": "U046V2U9RKQ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "d6vdh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "sent you a credential offer for a provider credential, after you accepted it you can onboard to the provider service"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U046V2U9RKQ",
+        "type": "message",
+        "ts": "1755290929.525329",
+        "client_msg_id": "14b7546b-30f9-425a-a283-07d7fe4651f2",
+        "text": "Accepted…thank you!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GGGURARK",
+        "source_team": "T02GGGURARK",
+        "user_profile": {
+            "avatar_hash": "fe83e162dc90",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-24\/4850136381494_fe83e162dc90ba1fc10d_72.jpg",
+            "first_name": "Nate",
+            "real_name": "Nate",
+            "display_name": "Nate",
+            "team": "T02GGGURARK",
+            "name": "nathan.homesley",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755289560.960549",
+        "parent_user_id": "U046V2U9RKQ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tBPFF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Accepted…thank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U046V2U9RKQ",
+        "type": "message",
+        "ts": "1755291222.046289",
+        "client_msg_id": "540fba56-8c95-4616-bd13-dbac24ffed7a",
+        "text": "<@U04BDUU197Z> I was able to complete that first step, and can create Registrar and Holder requests, but either of those fail when I attempt to accept them. Any ideas what might be the cause?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GGGURARK",
+        "source_team": "T02GGGURARK",
+        "user_profile": {
+            "avatar_hash": "fe83e162dc90",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-24\/4850136381494_fe83e162dc90ba1fc10d_72.jpg",
+            "first_name": "Nate",
+            "real_name": "Nate",
+            "display_name": "Nate",
+            "team": "T02GGGURARK",
+            "name": "nathan.homesley",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755289560.960549",
+        "parent_user_id": "U046V2U9RKQ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OYCY+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U04BDUU197Z"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I was able to complete that first step, and can create Registrar and Holder requests, but either of those fail when I attempt to accept them. Any ideas what might be the cause?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F09AMD9S7TL",
+                "created": 1755291232,
+                "timestamp": 1755291232,
+                "name": "Screenshot 2025-08-15 at 4.52.40 PM.png",
+                "title": "Screenshot 2025-08-15 at 4.52.40 PM.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U046V2U9RKQ",
+                "user_team": "T02GGGURARK",
+                "editable": false,
+                "size": 13813,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T02GGGURARK-F09AMD9S7TL\/screenshot_2025-08-15_at_4.52.40___pm.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T02GGGURARK-F09AMD9S7TL\/download\/screenshot_2025-08-15_at_4.52.40___pm.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T02GGGURARK-F09AMD9S7TL-faf18bffac\/screenshot_2025-08-15_at_4.52.40___pm_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T02GGGURARK-F09AMD9S7TL-faf18bffac\/screenshot_2025-08-15_at_4.52.40___pm_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T02GGGURARK-F09AMD9S7TL-faf18bffac\/screenshot_2025-08-15_at_4.52.40___pm_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 107,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T02GGGURARK-F09AMD9S7TL-faf18bffac\/screenshot_2025-08-15_at_4.52.40___pm_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "original_w": 380,
+                "original_h": 113,
+                "thumb_tiny": "AwAPADDQjJ2E8nlv5mn1GoYLgEA7ieRnvTgO5OT7dKBvcdRSAAU3Yvq3\/fZoEPpATkgjjsaTAySCcn3pR9aAP\/\/Z",
+                "permalink": "https:\/\/obsidiansystems.slack.com\/files\/U05FZBDQ4RJ\/F09AMD9S7TL\/screenshot_2025-08-15_at_4.52.40___pm.png",
+                "permalink_public": "https:\/\/slack-files.com\/T02GGGURARK-F09AMD9S7TL-1b5efc88b8",
+                "source_team": "T02GGGURARK",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U046V2U9RKQ",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1755291234.492469",
+        "client_msg_id": "15255292-d9dc-47fc-ba25-26c6b82424e2",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1755289560.960549",
+        "parent_user_id": "U046V2U9RKQ",
+        "user_team": "T02GGGURARK",
+        "source_team": "T02GGGURARK",
+        "user_profile": {
+            "avatar_hash": "fe83e162dc90",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-24\/4850136381494_fe83e162dc90ba1fc10d_72.jpg",
+            "first_name": "Nate",
+            "real_name": "Nate",
+            "display_name": "Nate",
+            "team": "T02GGGURARK",
+            "name": "nathan.homesley",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U04BDUU197Z",
+        "type": "message",
+        "ts": "1755291392.547579",
+        "client_msg_id": "b3d455f4-7164-4496-b6ba-d541b101bf03",
+        "text": "you need to create a provider configuration, which defines the credential requirements for holders and registrars",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c8ecd88a0ec4",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-11-21\/4388223904679_c8ecd88a0ec44f339fec_72.jpg",
+            "first_name": "Frank",
+            "real_name": "Frank Preiwuss",
+            "display_name": "Frank Preiwuss",
+            "team": "T03T53E10",
+            "name": "frank.preiwuss",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755289560.960549",
+        "parent_user_id": "U046V2U9RKQ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nX\/IN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "you need to create a provider configuration, which defines the credential requirements for holders and registrars"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U04BDUU197Z",
+        "type": "message",
+        "ts": "1755291493.173399",
+        "client_msg_id": "ac8615e0-773e-43c2-80be-eaaedef63c64",
+        "text": "if you define no requirements, it should work. If you define credential requirements you need to offer the respective credentials (and accept on the other side). When you \"self onboard\" it's all with the same party",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c8ecd88a0ec4",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-11-21\/4388223904679_c8ecd88a0ec44f339fec_72.jpg",
+            "first_name": "Frank",
+            "real_name": "Frank Preiwuss",
+            "display_name": "Frank Preiwuss",
+            "team": "T03T53E10",
+            "name": "frank.preiwuss",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755289560.960549",
+        "parent_user_id": "U046V2U9RKQ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VIXLG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "if you define no requirements, it should work. If you define credential requirements you need to offer the respective credentials (and accept on the other side). When you \"self onboard\" it's all with the same party"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U046V2U9RKQ",
+        "type": "message",
+        "ts": "1755291517.514499",
+        "client_msg_id": "e5a92d5e-2c80-487f-a7c0-d9971f48f626",
+        "text": "Ah ok, I forgot that step from when I did it on devnet. Thanks again!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GGGURARK",
+        "source_team": "T02GGGURARK",
+        "user_profile": {
+            "avatar_hash": "fe83e162dc90",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-24\/4850136381494_fe83e162dc90ba1fc10d_72.jpg",
+            "first_name": "Nate",
+            "real_name": "Nate",
+            "display_name": "Nate",
+            "team": "T02GGGURARK",
+            "name": "nathan.homesley",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755289560.960549",
+        "parent_user_id": "U046V2U9RKQ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8OU4H",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ah ok, I forgot that step from when I did it on devnet. Thanks again!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U04BDUU197Z",
+        "type": "message",
+        "ts": "1755291557.865429",
+        "client_msg_id": "ebc477f7-f1bc-498e-ad91-54cec757ab46",
+        "text": "here is an example:\n<https:\/\/docs.digitalasset.com\/utilities\/0.7\/tutorials\/issuance\/1-onboarding.html#onboarding-requirements-for-registrars-and-holders>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c8ecd88a0ec4",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-11-21\/4388223904679_c8ecd88a0ec44f339fec_72.jpg",
+            "first_name": "Frank",
+            "real_name": "Frank Preiwuss",
+            "display_name": "Frank Preiwuss",
+            "team": "T03T53E10",
+            "name": "frank.preiwuss",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755289560.960549",
+        "parent_user_id": "U046V2U9RKQ",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gVRzw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "here is an example:\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.digitalasset.com\/utilities\/0.7\/tutorials\/issuance\/1-onboarding.html#onboarding-requirements-for-registrars-and-holders"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UE6GFQQ20",
+        "type": "message",
+        "ts": "1755295634.235679",
+        "client_msg_id": "ba318591-dc30-490e-8d5a-0a2733ba827f",
+        "text": "HI, could I please get the provider credentials on MainNet for:\nelk-Validator-2::1220ba8b8b58bcc3dec4c0f3acbe86c4d0df5d7e0ea19bb4ef7168d6bca467ed8a1d",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "gbc010b76fea",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/61bc010b76fea5114ee3321f5276ec4a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "Ajay",
+            "real_name": "Ajay Patel",
+            "display_name": "",
+            "team": "T4WUR0THD",
+            "name": "apatel",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755295634.235679",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1755523462.687549",
+        "reply_users": [
+            "U04BDUU197Z",
+            "U053W8T4G4U"
+        ],
+        "replies": [
+            {
+                "user": "U04BDUU197Z",
+                "ts": "1755505697.799399"
+            },
+            {
+                "user": "U053W8T4G4U",
+                "ts": "1755523462.687549"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2HuHf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "HI, could I please get the provider credentials on MainNet for:\nelk-Validator-2::1220ba8b8b58bcc3dec4c0f3acbe86c4d0df5d7e0ea19bb4ef7168d6bca467ed8a1d"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

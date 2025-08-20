@@ -1,0 +1,389 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750840137.520719",
+        "client_msg_id": "704b78e5-70a7-47a5-9431-76f48f8aa1d0",
+        "text": "thanks for the heads up.\n\nafaict currently the only types we rely on is the `InstrumentIdentifier` (but that is everywhere), and `Holding` itself",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750766091.786449",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iyYH7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks for the heads up.\n\nafaict currently the only types we rely on is the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "InstrumentIdentifier",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " (but that is everywhere), and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Holding",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " itself"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750840183.448929",
+        "client_msg_id": "5b8c1281-95a8-468f-88c5-bd8bd2ac099d",
+        "text": "But yes I will need to add more things for Credentials etc. so i will try to understand the alternative way",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750766091.786449",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3yhkt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But yes I will need to add more things for Credentials etc. so i will try to understand the alternative way"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750840845.865579",
+        "client_msg_id": "218b693f-8ce0-4673-8d67-758f00ffc8c5",
+        "text": "Are there DARs available for the token standard or I need to pull in the source?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750766091.786449",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QLjFN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Are there DARs available for the token standard or I need to pull in the source?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750840932.885889",
+        "client_msg_id": "cdd16767-7d27-4d34-9df6-96e80b41004f",
+        "text": "Also just as a sanity check, technically we could launch like it is now, and when we upgrade to the token-standard, we _add_ new arguments, and just 'deprecate' the existing ones (ignore them). Ugly i know but technically feasible?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750766091.786449",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dTgku",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Also just as a sanity check, technically we could launch like it is now, and when we upgrade to the token-standard, we "
+                            },
+                            {
+                                "type": "text",
+                                "text": "add",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " new arguments, and just 'deprecate' the existing ones (ignore them). Ugly i know but technically feasible?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1750853919.466069",
+        "client_msg_id": "afc40226-9a27-4b83-81d6-91eaad0cde4a",
+        "text": "So, in light of what was mentioned re: token-standard, should I approach this differently too? How should i test that onboarding was successful? What sort of transfer 'should work' after these steps?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749625037.555849",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BUI3Y",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So, in light of what was mentioned re: token-standard, should I approach this differently too? How should i test that onboarding was successful? What sort of transfer 'should work' after these steps?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "thread_broadcast",
+        "user": "U088UV6MKFE",
+        "thread_ts": "1749625037.555849",
+        "root": {
+            "subtype": "tombstone",
+            "text": "This message was deleted.",
+            "user": "USLACKBOT",
+            "hidden": true,
+            "type": "message",
+            "ts": "1749625037.555849",
+            "team": "T05FWTX7PMG",
+            "user_team": "T03T53E10",
+            "source_team": "T03T53E10",
+            "user_profile": {
+                "avatar_hash": "sv41d8cd98f0",
+                "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+                "first_name": "slackbot",
+                "real_name": "Slackbot",
+                "display_name": "Slackbot",
+                "team": "T03T53E10",
+                "name": "slackbot",
+                "is_restricted": false,
+                "is_ultra_restricted": false
+            },
+            "thread_ts": "1749625037.555849",
+            "parent_user_id": "USLACKBOT",
+            "reply_count": 9,
+            "reply_users_count": 1,
+            "latest_reply": "1750857488.363659",
+            "reply_users": [
+                "U088UV6MKFE"
+            ],
+            "replies": [
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750065469.301009"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750321174.066719"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750322336.964469"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750323361.253259"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750673430.499919"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750673501.855619"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750775051.687859"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750853919.466069"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1750857488.363659"
+                }
+            ],
+            "is_locked": false,
+            "subscribed": false
+        },
+        "type": "message",
+        "ts": "1750857488.363659",
+        "edited": {
+            "user": "U088UV6MKFE",
+            "ts": "1750857564.000000"
+        },
+        "client_msg_id": "9c57aceb-91e1-459e-8f83-c6a856713518",
+        "text": "Test is green! :partying_face:\n\nWhen any of you have a chance, I would appreciate a review:\n<https:\/\/github.com\/DLC-link\/canton\/pull\/7\/files#diff-b64264bdb46652152d4949c991a7e003ba97c7b51e2d487ebaa93fe01925e1dc>\n\nNext step is to actually add the necessary steps to governance. As you mentioned, it could be reduced to one step i hope. However, I do notice that:\n• launching any of our main contracts, requires instrument configuration (or token-standard configuration, i dont see that part fully yet), so we actually need to do _these steps_ first? Before finishing the 'bootstrapping' i set up? \n• I also wonder If I have to worry about the other 3 factories you mentioned above, \"launching soon\"",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DdC1u",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Test is green! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "partying_face",
+                                "unicode": "1f973"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nWhen any of you have a chance, I would appreciate a review:\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton\/pull\/7\/files#diff-b64264bdb46652152d4949c991a7e003ba97c7b51e2d487ebaa93fe01925e1dc"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nNext step is to actually add the necessary steps to governance. As you mentioned, it could be reduced to one step i hope. However, I do notice that:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "launching any of our main contracts, requires instrument configuration (or token-standard configuration, i dont see that part fully yet), so we actually need to do "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "these steps",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " first? Before finishing the 'bootstrapping' i set up? "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I also wonder If I have to worry about the other 3 factories you mentioned above, \"launching soon\""
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    }
+]

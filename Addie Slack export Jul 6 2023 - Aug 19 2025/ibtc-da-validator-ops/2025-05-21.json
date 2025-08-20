@@ -1,0 +1,793 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747819685.406679",
+        "client_msg_id": "9f06cdf1-f569-43cd-b578-c905495a8768",
+        "text": "<@U03HMUTQ5F0> Done!\n<https:\/\/discuss.daml.com\/t\/rust-client-for-ledger-json-api\/7975>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731302.178279",
+        "parent_user_id": "U088UV6MKFE",
+        "attachments": [
+            {
+                "image_url": "https:\/\/canada1.discourse-cdn.com\/flex028\/uploads\/daml\/original\/2X\/1\/151d811f539f173f120b8b73f41915ba774f2743.png",
+                "image_width": 960,
+                "image_height": 540,
+                "image_bytes": 66750,
+                "from_url": "https:\/\/discuss.daml.com\/t\/rust-client-for-ledger-json-api\/7975",
+                "service_icon": "https:\/\/canada1.discourse-cdn.com\/flex028\/uploads\/daml\/optimized\/2X\/1\/151d811f539f173f120b8b73f41915ba774f2743_2_180x180.png",
+                "ts": 1747819453,
+                "id": 1,
+                "original_url": "https:\/\/discuss.daml.com\/t\/rust-client-for-ledger-json-api\/7975",
+                "fallback": "Daml Developers Community: Rust client for ledger JSON API",
+                "text": "Hey all! I have published an early (but working) version of a generated rust client library for interacting with the ledger JSON API. For now only for API v2, for Canton 3.3.0+ Generated using <https:\/\/openapi-generator.tech\/>, with the v2 JSON API as it’s input: JSON API V2 Openapi definition — Digital Asset’s platform documentation You can find more information, usage, etc. in the README. Feedback, PRs welcome! See the code here: GitHub - scolear\/canton-api-rust-client: Canton JSON API clien...",
+                "title": "Rust client for ledger JSON API",
+                "title_link": "https:\/\/discuss.daml.com\/t\/rust-client-for-ledger-json-api\/7975",
+                "service_name": "Daml Developers Community"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0Kr1i",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Done!\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/discuss.daml.com\/t\/rust-client-for-ledger-json-api\/7975"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "tada",
+                "users": [
+                    "U03HMUTQ5F0"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747821035.572899",
+        "client_msg_id": "343894db-aee8-4d9d-80ea-84d61741b333",
+        "text": "Thanks, looking into this now.\n\nAnd so, just so i get it right, unless I set up the Governance module and its indirection, every submission meant from the decentralized-registrar would have to be done through this two-step interactive submission.\n\nBut if the first and only thing they do this way, is setting up the Governance module, they can then use that instead for async submissions of Confirmations, then a single execution step.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9qwwR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks, looking into this now.\n\nAnd so, just so i get it right, unless I set up the Governance module and its indirection, every submission meant from the decentralized-registrar would have to be done through this two-step interactive submission.\n\nBut if the first and only thing they do this way, is setting up the Governance module, they can then use that instead for async submissions of Confirmations, then a single execution step."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747823019.506209",
+        "client_msg_id": "df10c3ff-5178-4430-ba82-526bcad2c44c",
+        "text": "off-topic, but is there an easy way to bring the canton context to my IDE? So that writing the bootstrap script I could have actual checks and autocompletes, fields, methods, etc. for these objects? that would be very useful",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "n4oPv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "off-topic, but is there an easy way to bring the canton context to my IDE? So that writing the bootstrap script I could have actual checks and autocompletes, fields, methods, etc. for these objects? that would be very useful"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747829419.979109",
+        "client_msg_id": "aba49372-fe68-4e04-82b5-ed5d37258321",
+        "text": "is there function to sign the prepared submission using a party\/key here in the bootstrap?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "URalX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "is there function to sign the prepared submission using a party\/key here in the bootstrap?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747829469.139969",
+        "client_msg_id": "07867cc0-bdc3-4b0c-a332-225a97a04eda",
+        "text": "tutorials are all bash\/python, but id rather just sign it right here automatic?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fgmuq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "tutorials are all bash\/python, but id rather just sign it right here automatic?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747829490.463599",
+        "client_msg_id": "a09dfa15-7ed7-4976-accd-3604cd4ba338",
+        "text": "`participant.ledger_api.keys` didn't bring me anywhere useful",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1oObW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "participant.ledger_api.keys",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " didn't bring me anywhere useful"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747829652.642399",
+        "client_msg_id": "57abdbec-1262-43f1-a19f-9351506cdf97",
+        "text": "Was hoping for this :)\n```party_signatures = Seq(\n        participant1.keys.secret.sign(attestor1, preparedSubmission.prepared_transaction_hash),\n        participant2.keys.secret.sign(attestor2, preparedSubmission.prepared_transaction_hash),\n        participant3.keys.secret.sign(attestor3, preparedSubmission.prepared_transaction_hash)\n      ),```\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XTcoI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Was hoping for this :)\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "party_signatures = Seq(\n        participant1.keys.secret.sign(attestor1, preparedSubmission.prepared_transaction_hash),\n        participant2.keys.secret.sign(attestor2, preparedSubmission.prepared_transaction_hash),\n        participant3.keys.secret.sign(attestor3, preparedSubmission.prepared_transaction_hash)\n      ),"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747829782.912119",
+        "client_msg_id": "71ff59c0-6468-436f-9f6b-7c6f3892302b",
+        "text": "Or `coordinatorNamespaceKey.sign(...)`",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SfbfB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Or "
+                            },
+                            {
+                                "type": "text",
+                                "text": "coordinatorNamespaceKey.sign(...)",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747829890.574099",
+        "client_msg_id": "7d92931f-ad30-4f90-9494-6a86a1f8efe6",
+        "text": "There must be a way since you said I can get it done in the bootstrap script! So i'll keep looking",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fboMQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "There must be a way since you said I can get it done in the bootstrap script! So i'll keep looking"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747832226.700869",
+        "client_msg_id": "c83b3321-74c0-4434-8ad3-4b77aa8871db",
+        "text": "Thanks. No way i would've found that :slightly_smiling_face:\n\nIm now struggling to get the private_key after a generate_signing_key (i want to use the `val coordinatorDamlKey = participant1.keys.secret.generate_signing_key(\"decentralized-party-daml-transactions\", SigningKeyUsage.ProtocolOnly)` key in this, right?)\n\nSo it would be\n```jce.sign(\n    hash = preparedSubmission.prepared_transaction_hash,\n    signingKey = coordinatorDamlKey.??\n  )```\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wRwpS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks. No way i would've found that "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nIm now struggling to get the private_key after a generate_signing_key (i want to use the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "val coordinatorDamlKey = participant1.keys.secret.generate_signing_key(\"decentralized-party-daml-transactions\", SigningKeyUsage.ProtocolOnly)",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " key in this, right?)\n\nSo it would be\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "jce.sign(\n    hash = preparedSubmission.prepared_transaction_hash,\n    signingKey = coordinatorDamlKey.??\n  )"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747832462.427249",
+        "edited": {
+            "user": "U088UV6MKFE",
+            "ts": "1747832617.000000"
+        },
+        "client_msg_id": "a453a574-3ee7-4381-93fc-3bbbd3853f61",
+        "text": "Also, here, sign shows two parameters: <https:\/\/staging-docs.daml.com\/canton\/scaladoc\/com\/digitalasset\/canton\/crypto\/provider\/jce\/JcePureCrypto.html>\n\nBut in actuality it seems to need a `usage` field as well? Which I assume is SigningKeyUsage.ProtocolOnly",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "T\/AbT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Also, here, sign shows two parameters: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/staging-docs.daml.com\/canton\/scaladoc\/com\/digitalasset\/canton\/crypto\/provider\/jce\/JcePureCrypto.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nBut in actuality it seems to need a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "usage",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " field as well? Which I assume is SigningKeyUsage.ProtocolOnly"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747836884.598749",
+        "client_msg_id": "8139e66c-c533-4e51-a630-f1d395478805",
+        "text": "well, that gives me a ByteString, which I can't turn into a SigningPrivateKey, at least not according to this\n<https:\/\/staging-docs.daml.com\/canton\/scaladoc\/com\/digitalasset\/canton\/crypto\/SigningPrivateKey.html>\nBut this doc is unclear to me as shown by the missing `usage` field above, so there might be a way",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zk91G",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "well, that gives me a ByteString, which I can't turn into a SigningPrivateKey, at least not according to this\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/staging-docs.daml.com\/canton\/scaladoc\/com\/digitalasset\/canton\/crypto\/SigningPrivateKey.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nBut this doc is unclear to me as shown by the missing "
+                            },
+                            {
+                                "type": "text",
+                                "text": "usage",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " field above, so there might be a way"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747836943.307259",
+        "client_msg_id": "ee151df6-5252-47bc-83bf-5d298e6e73c6",
+        "text": "And the upload() function just loads it back into the 'vault', which I already had, but cant use to sign",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fO18a",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And the upload() function just loads it back into the 'vault', which I already had, but cant use to sign"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747837602.816199",
+        "client_msg_id": "302ba8a2-fd8c-46f4-b549-883ae9ff52b5",
+        "text": "Maybe I would be better served using a JcePrivateCrypto, which has a sign() that takes a fingerprint, looking",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "v3qEn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Maybe I would be better served using a JcePrivateCrypto, which has a sign() that takes a fingerprint, looking"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747840519.461669",
+        "client_msg_id": "fefd1290-926d-4b8c-acb4-a333b9e59e66",
+        "text": "Thank you! I'm happy to figure stuff out on my own, but I admit its not easy finding high level info about this. So help is appreciated.\n\nHere is where I am at right now in this flow:\n<https:\/\/github.com\/DLC-link\/daml-sandbox\/pull\/1\/files>\n\n• have to figure out signing with `jce`\n• and the proper shape of the `interactive_submission.execute` request ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731109.384529",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JrOis",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you! I'm happy to figure stuff out on my own, but I admit its not easy finding high level info about this. So help is appreciated.\n\nHere is where I am at right now in this flow:\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/daml-sandbox\/pull\/1\/files"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "have to figure out signing with "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "jce",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "and the proper shape of the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "interactive_submission.execute",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " request "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    }
+]

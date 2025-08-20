@@ -1,0 +1,267 @@
+[
+    {
+        "user": "U06BXPXULH4",
+        "type": "message",
+        "ts": "1743365876.928399",
+        "client_msg_id": "2cb683d6-062c-4783-9ba8-393d71f1120c",
+        "text": "Hey Hey team, I got all working in DevNet except the splice-validator-validator-1 to be _unhealthy_. What else can I try besides restart and 2\/3 majority whitelisting?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NMQYT5QQ",
+        "source_team": "T04NMQYT5QQ",
+        "user_profile": {
+            "avatar_hash": "e054a18ad2db",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-01-09\/6436264963798_e054a18ad2db52ea3e2a_72.png",
+            "first_name": "Carsten",
+            "real_name": "Carsten Hermann",
+            "display_name": "Carsten Hermann",
+            "team": "T04NMQYT5QQ",
+            "name": "carsten.hermann",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743365876.928399",
+        "reply_count": 23,
+        "reply_users_count": 2,
+        "latest_reply": "1743444076.860839",
+        "reply_users": [
+            "U06BXPXULH4",
+            "UFT1MNWHG"
+        ],
+        "replies": [
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743365899.186039"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743409296.388699"
+            },
+            {
+                "user": "UFT1MNWHG",
+                "ts": "1743413794.680909"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743415955.591779"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743416050.184889"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743418078.959729"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743418098.771379"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743418115.430279"
+            },
+            {
+                "user": "UFT1MNWHG",
+                "ts": "1743418262.096329"
+            },
+            {
+                "user": "UFT1MNWHG",
+                "ts": "1743418407.717349"
+            },
+            {
+                "user": "UFT1MNWHG",
+                "ts": "1743418678.160529"
+            },
+            {
+                "user": "UFT1MNWHG",
+                "ts": "1743418769.303989"
+            },
+            {
+                "user": "UFT1MNWHG",
+                "ts": "1743419166.295549"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743420124.456839"
+            },
+            {
+                "user": "UFT1MNWHG",
+                "ts": "1743423824.219229"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743426503.142409"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743426530.280159"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743441902.505299"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743441913.690489"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743441928.940969"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743442058.554039"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743444074.443359"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1743444076.860839"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "19uSJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey Hey team, I got all working in DevNet except the splice-validator-validator-1 to be "
+                            },
+                            {
+                                "type": "text",
+                                "text": "unhealthy",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". What else can I try besides restart and 2\/3 majority whitelisting?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06BXPXULH4",
+        "type": "message",
+        "ts": "1743365899.186039",
+        "edited": {
+            "user": "U06BXPXULH4",
+            "ts": "1743366679.000000"
+        },
+        "client_msg_id": "03e7831b-480a-41a3-927c-355a08680fed",
+        "text": "1. requested the secret, which worked fine\n2. tried stop and start, which didn’t change anything\n3. migration set to “1”\n4. check for the whitelisting, only one endpoint returns a 503, so definitely a 2\/3 majority confirmed\n<@U04KJF6UTNU> can you please check to whitelist <ttps:\/\/scan.sv-1.dev.global.canton.network.digitalasset.com> ?\n\nWe’re using the DevNet VPN, user particula-carsten.hermann\n\nThanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04NMQYT5QQ",
+        "source_team": "T04NMQYT5QQ",
+        "user_profile": {
+            "avatar_hash": "e054a18ad2db",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-01-09\/6436264963798_e054a18ad2db52ea3e2a_72.png",
+            "first_name": "Carsten",
+            "real_name": "Carsten Hermann",
+            "display_name": "Carsten Hermann",
+            "team": "T04NMQYT5QQ",
+            "name": "carsten.hermann",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743365876.928399",
+        "parent_user_id": "U06BXPXULH4",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2dJue",
+                "elements": [
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "requested the secret, which worked fine"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "tried stop and start, which didn’t change anything"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "migration set to “1”"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "check for the whitelisting, only one endpoint returns a 503, so definitely a 2\/3 majority confirmed"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U04KJF6UTNU"
+                            },
+                            {
+                                "type": "text",
+                                "text": " can you please check to whitelist "
+                            },
+                            {
+                                "type": "link",
+                                "url": "ttps:\/\/scan.sv-1.dev.global.canton.network.digitalasset.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " ?\n\nWe’re using the DevNet VPN, user particula-carsten.hermann\n\nThanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

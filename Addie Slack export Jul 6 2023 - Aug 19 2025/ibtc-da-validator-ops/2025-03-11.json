@@ -1,0 +1,174 @@
+[
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1741698927.467289",
+        "client_msg_id": "e7151caf-5e1f-47c1-ab06-de8844b24844",
+        "text": "Hey <@UEHLS0JUB>\n\nWhen a bitcoin transaction is pending (submitted to our network, but not yet having received 6 confirmation on the BTC chain) the ID of that tx is stored in the `wdTxId` field. After it receives 6 confirmations, it is moved to the `fundingTxId`  field and the wdTxId field is set to blank.\n\nThis way our contract always has a copy of the tx being processed, and the previously confirmed tx.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741623497.388229",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AslUh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nWhen a bitcoin transaction is pending (submitted to our network, but not yet having received 6 confirmation on the BTC chain) the ID of that tx is stored in the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "wdTxId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " field. After it receives 6 confirmations, it is moved to the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "fundingTxId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  field and the wdTxId field is set to blank.\n\nThis way our contract always has a copy of the tx being processed, and the previously confirmed tx."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1741703745.469799",
+        "client_msg_id": "9902837c-8da1-49e9-8c57-cb567b1789ff",
+        "text": "You are right! It could be simplified to just read it out from the dlc object in the SSF call.\n\nThis setup has historical reasons - the SSF method is older than partial-withdraw, and PSBT support even. We didn't want to change the function signature (or just missed it?) But it's doable and we might in the future.\nNice catch! Thanks for the audit :smile:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741623497.388229",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0mdCs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You are right! It could be simplified to just read it out from the dlc object in the SSF call.\n\nThis setup has historical reasons - the SSF method is older than partial-withdraw, and PSBT support even. We didn't want to change the function signature (or just missed it?) But it's doable and we might in the future.\nNice catch! Thanks for the audit "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile",
+                                "unicode": "1f604"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1741705930.269579",
+        "client_msg_id": "e72e9cd4-7837-4bb5-9345-315a5e563286",
+        "text": "<@UEHLS0JUB> Question for you, you mentioned in our last call that there’s an API (JSON and I think gRPC) we can use to connect our Attestor nodes to Canton, to call various function for signing and requesting data.\n\nYou’re going through our whole flow now, so you might have a pretty good idea about the types of API requests we’ll need to make. But also we can put together a list of them.\n\nWould it be helpful if we put together a list of all the API calls we make into, for example EVM chains? Then we can find the corresponding API endpoints on Canton?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1741705930.269579",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1741769669.278389",
+        "reply_users": [
+            "U05FU0HPZ9T"
+        ],
+        "replies": [
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1741769669.278389"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "m1O1p",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Question for you, you mentioned in our last call that there’s an API (JSON and I think gRPC) we can use to connect our Attestor nodes to Canton, to call various function for signing and requesting data.\n\nYou’re going through our whole flow now, so you might have a pretty good idea about the types of API requests we’ll need to make. But also we can put together a list of them.\n\nWould it be helpful if we put together a list of all the API calls we make into, for example EVM chains? Then we can find the corresponding API endpoints on Canton?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

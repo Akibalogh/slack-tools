@@ -1,0 +1,354 @@
+[
+    {
+        "user": "U07BCVCFF9R",
+        "type": "message",
+        "ts": "1747990993.029299",
+        "edited": {
+            "user": "U07BCVCFF9R",
+            "ts": "1747991007.000000"
+        },
+        "client_msg_id": "030bd871-1a1d-44c0-86e8-f3a6cb6504d8",
+        "text": "<@U7U2XB4BG> Thanks in advance for your help! Do you have any sample templates or demos that show how to create a Trade record and fetch it from the ledger?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "b9ba3b81041e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-07-11\/7407563435618_b9ba3b81041e797489a6_72.jpg",
+            "first_name": "Vu",
+            "real_name": "Vu Thanh Thao",
+            "display_name": "Vu Thanh Thao",
+            "team": "T072736KDTK",
+            "name": "thao.vu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747823362.098329",
+        "parent_user_id": "U07UEV3B9LP",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AnI3g",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U7U2XB4BG"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Thanks in advance for your help! Do you have any sample templates or demos that show how to create a Trade record and fetch it from the ledger?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UJUA0QH45",
+        "type": "message",
+        "ts": "1747991680.167039",
+        "client_msg_id": "0095276a-b832-4964-8ba9-10a70f654c1c",
+        "text": "In the Scan API <https:\/\/docs.global.canton.network.sync.global\/app_dev\/scan_api\/scan_bulk_data_api.html|docs>, it says:\n&gt; To build up an ACS snapshot for any `record_time`, first get a periodic snapshot using the <https:\/\/docs.global.canton.network.sync.global\/app_dev\/scan_api\/scan_openapi.html#post--v0-state-acs|\/v0\/state\/acs> endpoint, store the ACS in a dictionary keyed by `contract_id` and then process the updates from the timestamp of that snapshot via the `\/v1\/updates`, adding `created_event`s to the dictionary under its `contract_id` key and remove the contract from the dictionary by `contract_id` if `exercised_event`s are consuming.\nHowever, the part about exercised events being consuming doesn't seem like it aligns with the ACS snapshots. Using the logic where only consuming exercises remove contracts, the number of contracts tracked doesn't align with ACS snapshots, however if we ignore that part, then the ACS we can rebuild align with snapshots.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "060dc25df4b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9394671860016_060dc25df4b2903c88b8_72.png",
+            "first_name": "Antoine",
+            "real_name": "Antoine Le Calvez",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "antoine.lecalvez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747991680.167039",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1747998698.042159",
+        "reply_users": [
+            "UJUA0QH45"
+        ],
+        "replies": [
+            {
+                "user": "UJUA0QH45",
+                "ts": "1747998698.042159"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5quOx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In the Scan API "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.global.canton.network.sync.global\/app_dev\/scan_api\/scan_bulk_data_api.html",
+                                "text": "docs"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", it says:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "To build up an ACS snapshot for any "
+                            },
+                            {
+                                "type": "text",
+                                "text": "record_time",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", first get a periodic snapshot using the "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.global.canton.network.sync.global\/app_dev\/scan_api\/scan_openapi.html#post--v0-state-acs",
+                                "text": "\/v0\/state\/acs"
+                            },
+                            {
+                                "type": "text",
+                                "text": " endpoint, store the ACS in a dictionary keyed by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "contract_id",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and then process the updates from the timestamp of that snapshot via the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/v1\/updates",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", adding "
+                            },
+                            {
+                                "type": "text",
+                                "text": "created_event",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "s to the dictionary under its "
+                            },
+                            {
+                                "type": "text",
+                                "text": "contract_id",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " key and remove the contract from the dictionary by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "contract_id",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " if "
+                            },
+                            {
+                                "type": "text",
+                                "text": "exercised_event",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "s are consuming."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "However, the part about exercised events being consuming doesn't seem like it aligns with the ACS snapshots. Using the logic where only consuming exercises remove contracts, the number of contracts tracked doesn't align with ACS snapshots, however if we ignore that part, then the ACS we can rebuild align with snapshots."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UJUA0QH45",
+        "type": "message",
+        "ts": "1747994827.689229",
+        "client_msg_id": "91c21fb2-aff8-4a92-b221-541756f62297",
+        "text": "Yes, they don't match if I don't remove \"consuming=false\" events despite what the comment above says",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "060dc25df4b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9394671860016_060dc25df4b2903c88b8_72.png",
+            "first_name": "Antoine",
+            "real_name": "Antoine Le Calvez",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "antoine.lecalvez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NNdCW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, they don't match if I don't remove \"consuming=false\" events despite what the comment above says"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U07BCVCFF9R",
+        "type": "message",
+        "ts": "1747994852.803309",
+        "client_msg_id": "ffbff0ff-a7c3-4404-9851-28f4cbc7184b",
+        "text": "Thanks! I’ll try it and let you know if I have any questions.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T072736KDTK",
+        "source_team": "T072736KDTK",
+        "user_profile": {
+            "avatar_hash": "b9ba3b81041e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-07-11\/7407563435618_b9ba3b81041e797489a6_72.jpg",
+            "first_name": "Vu",
+            "real_name": "Vu Thanh Thao",
+            "display_name": "Vu Thanh Thao",
+            "team": "T072736KDTK",
+            "name": "thao.vu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747823362.098329",
+        "parent_user_id": "U07UEV3B9LP",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "foaU9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks! I’ll try it and let you know if I have any questions."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UJUA0QH45",
+        "type": "message",
+        "ts": "1747998698.042159",
+        "client_msg_id": "79b6f553-ef8c-4884-8550-70e7eb78adf5",
+        "text": "my bad, I can't reproduce what I described, I'm confused as to how this happened",
+        "team": "T05FWTX7PMG",
+        "user_team": "E082HD2JV25",
+        "source_team": "E082HD2JV25",
+        "user_profile": {
+            "avatar_hash": "060dc25df4b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9394671860016_060dc25df4b2903c88b8_72.png",
+            "first_name": "Antoine",
+            "real_name": "Antoine Le Calvez",
+            "display_name": "",
+            "team": "E082HD2JV25",
+            "name": "antoine.lecalvez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747991680.167039",
+        "parent_user_id": "UJUA0QH45",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "O1Euw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "my bad, I can't reproduce what I described, I'm confused as to how this happened"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

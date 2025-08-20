@@ -1,0 +1,342 @@
+[
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1746804085.396069",
+        "edited": {
+            "user": "U06TMPD96M8",
+            "ts": "1746804132.000000"
+        },
+        "client_msg_id": "08e9b4b0-48c8-4d46-8dad-0dc19e9e9d90",
+        "text": "Hi team. When sending a transaction with `\/v2\/interactive-submission\/execute` on my local Canton network setup, I'm getting this:\n```Transaction was not sequenced within the pre-defined max sequencing time and has therefore timed out```\nThese were some dates sent to the `v2\/interactive-submission\/prepare` endpoint:\n```\"validFrom\":\"2025-05-09T14:11:51.885539Z\"\n\"expiresAt\":\"2025-08-07T14:11:51.830519Z\"\n\"lastRenewedAt\":\"2025-05-09T14:11:51.885539Z\"\n\"debugCreatedAt\":\"2025-05-09T14:11:51.885539Z\"```\nThis error was received at around the same time as `lastRenewedAt`\n\nDo you know how I can fix this? thanks in advance",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746804085.396069",
+        "reply_count": 5,
+        "reply_users_count": 1,
+        "latest_reply": "1747040155.461029",
+        "reply_users": [
+            "U06TMPD96M8"
+        ],
+        "replies": [
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1746804162.526999"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1746805332.989279"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1746805362.302309"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1746806601.435659"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1747040155.461029"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QDx7n",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi team. When sending a transaction with "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/v2\/interactive-submission\/execute",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " on my local Canton network setup, I'm getting this:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Transaction was not sequenced within the pre-defined max sequencing time and has therefore timed out"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "These were some dates sent to the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "v2\/interactive-submission\/prepare",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " endpoint:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\"validFrom\":\"2025-05-09T14:11:51.885539Z\"\n\"expiresAt\":\"2025-08-07T14:11:51.830519Z\"\n\"lastRenewedAt\":\"2025-05-09T14:11:51.885539Z\"\n\"debugCreatedAt\":\"2025-05-09T14:11:51.885539Z\""
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This error was received at around the same time as "
+                            },
+                            {
+                                "type": "text",
+                                "text": "lastRenewedAt",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nDo you know how I can fix this? thanks in advance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "This is the execution request body:\n\n``````",
+        "files": [
+            {
+                "id": "F08RRAXPUDR",
+                "mode": "tombstone"
+            }
+        ],
+        "upload": true,
+        "user": "U06TMPD96M8",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gBsLI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This is the execution request body:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1746804162.526999",
+        "edited": {
+            "user": "U06TMPD96M8",
+            "ts": "1746805243.000000"
+        },
+        "client_msg_id": "6d87bd6c-6f7e-46a3-8b9d-f093ab8ece98",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1746804085.396069",
+        "parent_user_id": "U06TMPD96M8",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1746805332.989279",
+        "client_msg_id": "0cbe4729-343f-42a4-b9ae-3d95b5c60a8a",
+        "text": "0.4.0-snapshot.20250423.9136.0.v130d2648",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746804085.396069",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "L\/vuR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "0.4.0-snapshot.20250423.9136.0.v130d2648"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1746805362.302309",
+        "client_msg_id": "0fb6d5cd-a699-430e-bb3f-67f99b610718",
+        "text": "ok! thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746804085.396069",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZU\/0M",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ok! thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1746806601.435659",
+        "client_msg_id": "eed2e3b3-0e11-4e66-9685-cf84a2903faa",
+        "text": "Do you know if something is wrong with the download bundle link? <https:\/\/docs.token-std-dev.global.canton.network.digitalasset.com\/cn-release-bundles\/0.4.0-snapshot.20250505.9235.0.v04055509_splice-node.tar.gz>\n\nI've tried to download and decompress it many times, with and without the VPN connected, but it fails when decompressing, like if the file is corrupted\n`tar: Error opening archive: Unrecognized archive format`\n\nThis has happened to me before with the previous versions, although it worked after many retries, but not this time",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746804085.396069",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SSZg9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Do you know if something is wrong with the download bundle link? "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.token-std-dev.global.canton.network.digitalasset.com\/cn-release-bundles\/0.4.0-snapshot.20250505.9235.0.v04055509_splice-node.tar.gz"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nI've tried to download and decompress it many times, with and without the VPN connected, but it fails when decompressing, like if the file is corrupted\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "tar: Error opening archive: Unrecognized archive format",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nThis has happened to me before with the previous versions, although it worked after many retries, but not this time"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

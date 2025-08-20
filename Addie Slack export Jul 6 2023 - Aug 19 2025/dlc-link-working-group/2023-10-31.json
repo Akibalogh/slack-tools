@@ -1,0 +1,575 @@
+[
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1698753177.130869",
+        "edited": {
+            "user": "U05FU0HPZ9T",
+            "ts": "1698753191.000000"
+        },
+        "client_msg_id": "1ef69606-7c5d-4a50-8397-6059be475834",
+        "text": "So DLC.Link oracles already respond to smart contracts. I assume the “protocol” in your example is built on a smart contract on Stacks? If that’s true, you basically get this for free with the DLC.Link architecture.\n\nHowever, unrelated to dlc.link, i think the answer to your question is, you can do it either way.\n\nIf you require a 2-of-4 multisig, and the outcome of that feeds into a DLC oracle, which then signs a message, then you have only 1 oracle, and the fewer set of messages. Only 2 CETs.\n\nIf you want the 4 total signers to each be a DLC Oracle, and you need a threshold of 2 to pass the test, then you’ll have an additional signature of the user or the protocol, now it gets combinatorial, and you have something like 2 (outcomes) ^ 4 (oracles) = 16 CETs.\n\nThat’s how I’m understanding your question.\n\nLet me know if you want to meet and talk more some time",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1698570135.961369",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "W7F4i",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So DLC.Link oracles already respond to smart contracts. I assume the “protocol” in your example is built on a smart contract on Stacks? If that’s true, you basically get this for free with the DLC.Link architecture.\n\nHowever, unrelated to dlc.link, i think the answer to your question is, you can do it either way.\n\nIf you require a 2-of-4 multisig, and the outcome of that feeds into a DLC oracle, which then signs a message, then you have only 1 oracle, and the fewer set of messages. Only 2 CETs.\n\nIf you want the 4 total signers to each be a DLC Oracle, and you need a threshold of 2 to pass the test, then you’ll have an additional signature of the user or the protocol, now it gets combinatorial, and you have something like 2 (outcomes) ^ 4 (oracles) = 16 CETs.\n\nThat’s how I’m understanding your question.\n\nLet me know if you want to meet and talk more some time"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U059D466JHW"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U05RC3RMMBR",
+        "type": "message",
+        "ts": "1698754990.648929",
+        "client_msg_id": "a131b5c9-3a94-4bc9-a2c3-21eebc942c56",
+        "text": "<@U05FU0HPZ9T> would you mind taking a look at this report. do you have an idea what could be triggering this error for the user? I will try to get more details\/screenshot from the user.\n<https:\/\/github.com\/leather-wallet\/extension\/issues\/4458>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GSUTPJ2D",
+        "source_team": "T02GSUTPJ2D",
+        "user_profile": {
+            "avatar_hash": "35d88ad8c973",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-04\/7212326660806_35d88ad8c9735567606a_72.png",
+            "first_name": "Werner",
+            "real_name": "Werner K.",
+            "display_name": "Werner",
+            "team": "T02GSUTPJ2D",
+            "name": "werner",
+            "is_restricted": true,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1698754990.648929",
+        "reply_count": 7,
+        "reply_users_count": 4,
+        "latest_reply": "1698923947.889919",
+        "reply_users": [
+            "U06337M5HDG",
+            "U05FU0HPZ9T",
+            "U05RC3RMMBR",
+            "U03GEHQPL0G"
+        ],
+        "replies": [
+            {
+                "user": "U06337M5HDG",
+                "ts": "1698757973.749799"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1698761759.495819"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1698762949.508519"
+            },
+            {
+                "user": "U05RC3RMMBR",
+                "ts": "1698770190.295179"
+            },
+            {
+                "user": "U03GEHQPL0G",
+                "ts": "1698919681.557809"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1698919903.084599"
+            },
+            {
+                "user": "U06337M5HDG",
+                "ts": "1698923947.889919"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "attachments": [
+            {
+                "id": 1,
+                "footer_icon": "https:\/\/slack.github.com\/static\/img\/favicon-neutral.png",
+                "ts": 1698753387,
+                "color": "36a64f",
+                "bot_id": "B03A7E7FB5X",
+                "app_unfurl_url": "https:\/\/github.com\/leather-wallet\/extension\/issues\/4458",
+                "is_app_unfurl": true,
+                "app_id": "A01BP7R4KNY",
+                "fallback": "#4458 Error \"Unable to find a healthy DLC.link attestor\"",
+                "text": "A user is reporting this error pops up in the wallet while navigate through the wallet participating in the sBTC testnet.\n\nOriginal message from the user:\n\n> I was a tester for the stacks network bridge. Was trying to have my connected wallet send testnet btc on the the new stacks bridge to concert to sbtc. The error message would come up as soon as I was even trying to just navigate around the wallet. I uninstalled and then reinstalled it, same error message.",
+                "title": "#4458 Error \"Unable to find a healthy DLC.link attestor\"",
+                "title_link": "https:\/\/github.com\/leather-wallet\/extension\/issues\/4458",
+                "footer": "<https:\/\/github.com\/leather-wallet\/extension|leather-wallet\/extension>",
+                "fields": [
+                    {
+                        "value": "Bug :bug:, testnet",
+                        "title": "Labels",
+                        "short": true
+                    }
+                ],
+                "mrkdwn_in": [
+                    "text"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vU7O0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U05FU0HPZ9T"
+                            },
+                            {
+                                "type": "text",
+                                "text": " would you mind taking a look at this report. do you have an idea what could be triggering this error for the user? I will try to get more details\/screenshot from the user.\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/leather-wallet\/extension\/issues\/4458"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06337M5HDG",
+        "type": "message",
+        "ts": "1698757973.749799",
+        "client_msg_id": "9b53fc3c-5124-4590-9bff-8dca75b404f2",
+        "text": "Hey! <@U05FU0HPZ9T>, I can take a look into this.\nWe were already planning to remove this function from the code anyway.\n\nThank You <@U05RC3RMMBR>!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "g849cc56ed76",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/abb90173c1ca10e3754d863ffa2bd213.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "Deactivated",
+            "real_name": "Deactivated User",
+            "display_name": "deactivateduser",
+            "team": "T05FWTX7PMG",
+            "name": "deactivateduser459116",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1698754990.648929",
+        "parent_user_id": "U05RC3RMMBR",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JnjwO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey! "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FU0HPZ9T"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", I can take a look into this.\nWe were already planning to remove this function from the code anyway.\n\nThank You "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05RC3RMMBR"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U05RC3RMMBR"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1698761759.495819",
+        "client_msg_id": "091e805a-8dc2-42f8-b882-0d960f778dc7",
+        "text": "Great, ok thanks Dani",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1698754990.648929",
+        "parent_user_id": "U05RC3RMMBR",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mu3Go",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Great, ok thanks Dani"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1698762949.508519",
+        "client_msg_id": "697f1307-00bf-4546-8494-7591b3d189fe",
+        "text": "Yes, we have an action plan to remove a background health check, especially for users that are not doing DLC related activities!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1698754990.648929",
+        "parent_user_id": "U05RC3RMMBR",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Bd6cy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, we have an action plan to remove a background health check, especially for users that are not doing DLC related activities!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05RC3RMMBR",
+        "type": "message",
+        "ts": "1698770190.295179",
+        "client_msg_id": "9ad29eeb-55fc-478e-b4aa-8904343e743e",
+        "text": "fyi <@U03FLQ1KUUE>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GSUTPJ2D",
+        "source_team": "T02GSUTPJ2D",
+        "user_profile": {
+            "avatar_hash": "35d88ad8c973",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-06-04\/7212326660806_35d88ad8c9735567606a_72.png",
+            "first_name": "Werner",
+            "real_name": "Werner K.",
+            "display_name": "Werner",
+            "team": "T02GSUTPJ2D",
+            "name": "werner",
+            "is_restricted": true,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1698754990.648929",
+        "parent_user_id": "U05RC3RMMBR",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wPykD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "fyi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03FLQ1KUUE"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U059D466JHW",
+        "type": "message",
+        "ts": "1698776475.696779",
+        "client_msg_id": "eb72a7ec-95da-4e51-8967-08a420ba8d72",
+        "text": "Thx for clarifying. Lending is currently planning to have the dlc-link oracle network be one of the four members of the multisig, so I would love to discuss that in more detail. We can't have it be the only oracle bc Lending users have permanent lines of credit, so it would make dlc-link an existential risk factor for Lending",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02GSUTPJ2D",
+        "source_team": "T02GSUTPJ2D",
+        "user_profile": {
+            "avatar_hash": "a2382f83f4dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-02-01\/6575428932916_a2382f83f4dc8032bcf8_72.png",
+            "first_name": "Blaize",
+            "real_name": "Blaize Wallace",
+            "display_name": "Blaize",
+            "team": "T02GSUTPJ2D",
+            "name": "blaize",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1698570135.961369",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LC\/Ht",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thx for clarifying. Lending is currently planning to have the dlc-link oracle network be one of the four members of the multisig, so I would love to discuss that in more detail. We can't have it be the only oracle bc Lending users have permanent lines of credit, so it would make dlc-link an existential risk factor for Lending"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1698782322.370929",
+        "client_msg_id": "db37ff66-5e86-4e0a-b828-7f3c5e4d390a",
+        "text": "Interesting, yes let’s discuss more! <@U05FZBDQ4RJ> FYI",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1698570135.961369",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8Kaem",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Interesting, yes let’s discuss more! "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FZBDQ4RJ"
+                            },
+                            {
+                                "type": "text",
+                                "text": " FYI"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1698782755.461909",
+        "client_msg_id": "b880883d-4ab0-4546-801b-828ae6850af1",
+        "text": "Hey Blaize! Let’s set up a call to talk through it. Use this link to schedule with both Jesse and me: <https:\/\/meetings.hubspot.com\/aki-balogh\/aki-and-jesse>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1698570135.961369",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PeOdO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey Blaize! Let’s set up a call to talk through it. Use this link to schedule with both Jesse and me: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/meetings.hubspot.com\/aki-balogh\/aki-and-jesse"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1698782984.071319",
+        "edited": {
+            "user": "U05FZBDQ4RJ",
+            "ts": "1698783002.000000"
+        },
+        "client_msg_id": "c6e0a491-7418-45a6-9612-200d8c6e5830",
+        "text": "My quick answer is:  we provide the attestors that can translate Clarity events to BTC settlement instructions, and we can provide the protocol wallet that can be the counterparty signer (as an administrative function), but we cannot be on the receiving end of BTC as we are not a money transmitter. In all of our designs, the payout addresses point to the depositor and\/or custodians or other counterparties external to us",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1698570135.961369",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "a1ryo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "My quick answer is:  we provide the attestors that can translate Clarity events to BTC settlement instructions, and we can provide the protocol wallet that can be the counterparty signer (as an administrative function), but we cannot be on the receiving end of BTC as we are not a money transmitter. In all of our designs, the payout addresses point to the depositor and\/or custodians or other counterparties external to us"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1698783105.960589",
+        "client_msg_id": "02d1b60d-bd35-44de-86bf-2b75ac0e008e",
+        "text": "You can also choose to leverage both our attestation network and others’ attestors, or your own. That makes sense also. We could be a party in the M-of-N",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1698570135.961369",
+        "parent_user_id": "U05FU0HPZ9T",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "t4xdU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You can also choose to leverage both our attestation network and others’ attestors, or your own. That makes sense also. We could be a party in the M-of-N"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

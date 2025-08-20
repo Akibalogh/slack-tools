@@ -1,0 +1,569 @@
+[
+    {
+        "text": "Thanks! I imported the Collection.\n\nSay I want to play with the API against a local canton ledger. Whats the best way to do that?\n\nI am running the localnet as per this: <https:\/\/docs.dev.sync.global\/app_dev\/testing\/localnet.html>\nBut this does not seem to expose the json-api by itself automatically?\nI see I can start an api instance described here: <https:\/\/docs.daml.com\/json-api\/index.html#run-the-json-api> , and point it at a ledger-api, but Im not sure where that is in my localnet instance either.\n\nHere is what I have running:",
+        "files": [
+            {
+                "id": "F08LMHQRYTZ",
+                "created": 1744023655,
+                "timestamp": 1744023655,
+                "name": "Screenshot 2025-04-07 at 13.00.26.png",
+                "title": "Screenshot 2025-04-07 at 13.00.26.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 172449,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08LMHQRYTZ\/screenshot_2025-04-07_at_13.00.26.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08LMHQRYTZ\/download\/screenshot_2025-04-07_at_13.00.26.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LMHQRYTZ-400bed1eb4\/screenshot_2025-04-07_at_13.00.26_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LMHQRYTZ-400bed1eb4\/screenshot_2025-04-07_at_13.00.26_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LMHQRYTZ-400bed1eb4\/screenshot_2025-04-07_at_13.00.26_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 192,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LMHQRYTZ-400bed1eb4\/screenshot_2025-04-07_at_13.00.26_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 256,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LMHQRYTZ-400bed1eb4\/screenshot_2025-04-07_at_13.00.26_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LMHQRYTZ-400bed1eb4\/screenshot_2025-04-07_at_13.00.26_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 383,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LMHQRYTZ-400bed1eb4\/screenshot_2025-04-07_at_13.00.26_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 426,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LMHQRYTZ-400bed1eb4\/screenshot_2025-04-07_at_13.00.26_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 511,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08LMHQRYTZ-400bed1eb4\/screenshot_2025-04-07_at_13.00.26_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 545,
+                "original_w": 1506,
+                "original_h": 802,
+                "thumb_tiny": "AwAZADDSNHeijvQAZPpQM0mDSgUALSDrS0g60ABoPWlooAb+dKPxpaKACkHWlooA\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08LMHQRYTZ\/screenshot_2025-04-07_at_13.00.26.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08LMHQRYTZ-48f725162e",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BvVYt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks! I imported the Collection.\n\nSay I want to play with the API against a local canton ledger. Whats the best way to do that?\n\nI am running the localnet as per this: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.dev.sync.global\/app_dev\/testing\/localnet.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nBut this does not seem to expose the json-api by itself automatically?\nI see I can start an api instance described here: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.daml.com\/json-api\/index.html#run-the-json-api"
+                            },
+                            {
+                                "type": "text",
+                                "text": " , and point it at a ledger-api, but Im not sure where that is in my localnet instance either.\n\nHere is what I have running:"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1744023674.031159",
+        "client_msg_id": "e3d85b1a-c11b-4a1c-9914-49e0f351a772",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1743002140.984289",
+        "parent_user_id": "USLACKBOT",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "UMW95BAT1"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744028974.619779",
+        "client_msg_id": "abffe932-957c-4af1-bab1-df4514b6c1b1",
+        "text": "What I want to achieve first:\n• upload a DAR to a local Participant\n• create a contract\n• exercise a choice on a contract\nSo partly what you have shared as a hosted playground, but using localnet, with our own dars and contracts, so I can have a full-stack testing flow. Thank you for any pointers!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743002140.984289",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0H+7l",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "What I want to achieve first:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "upload a DAR to a local Participant"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "create a contract"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "exercise a choice on a contract"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So partly what you have shared as a hosted playground, but using localnet, with our own dars and contracts, so I can have a full-stack testing flow. Thank you for any pointers!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744032559.685109",
+        "client_msg_id": "5aadb681-2ab3-49c7-bc15-5252e6180369",
+        "text": "Thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743002140.984289",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cSYv0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744033076.185899",
+        "client_msg_id": "1c6c4df2-13c5-4dcd-bf13-a890bf6e3bc3",
+        "text": "Thanks i'll try!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743002140.984289",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IAjsd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks i'll try!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "UMW95BAT1"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "eeey im in!",
+        "files": [
+            {
+                "id": "F08M52F214L",
+                "created": 1744033925,
+                "timestamp": 1744033925,
+                "name": "Screenshot 2025-04-07 at 15.52.00.png",
+                "title": "Screenshot 2025-04-07 at 15.52.00.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 317718,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08M52F214L\/screenshot_2025-04-07_at_15.52.00.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08M52F214L\/download\/screenshot_2025-04-07_at_15.52.00.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08M52F214L-5d5b601d92\/screenshot_2025-04-07_at_15.52.00_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08M52F214L-5d5b601d92\/screenshot_2025-04-07_at_15.52.00_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08M52F214L-5d5b601d92\/screenshot_2025-04-07_at_15.52.00_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 314,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08M52F214L-5d5b601d92\/screenshot_2025-04-07_at_15.52.00_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 419,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08M52F214L-5d5b601d92\/screenshot_2025-04-07_at_15.52.00_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08M52F214L-5d5b601d92\/screenshot_2025-04-07_at_15.52.00_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 628,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08M52F214L-5d5b601d92\/screenshot_2025-04-07_at_15.52.00_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 698,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08M52F214L-5d5b601d92\/screenshot_2025-04-07_at_15.52.00_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 837,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08M52F214L-5d5b601d92\/screenshot_2025-04-07_at_15.52.00_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 893,
+                "original_w": 1974,
+                "original_h": 1722,
+                "thumb_tiny": "AwApADCpRk+1A6UhpgLk+1GTikxRikAZPrRmkopgOHSkNKDgUhHtQAYoxRijFABikoooAcDgUhopKACiiigAooooA\/\/Z",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08M52F214L\/screenshot_2025-04-07_at_15.52.00.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08M52F214L-e5d7fa633a",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Z6Lrp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "eeey im in!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1744033933.450729",
+        "client_msg_id": "e202c3f5-5414-46c3-a391-29c1c26171dd",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1743002140.984289",
+        "parent_user_id": "USLACKBOT",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "reactions": [
+            {
+                "name": "bananadance",
+                "users": [
+                    "UMW95BAT1"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744035411.754049",
+        "client_msg_id": "3d8a3f50-7af8-4180-88c7-a8b21c300136",
+        "text": "You have recommended earlier to use v2 endpoints, is there a (even a work in progress) documentation for it? This is empty rn: <https:\/\/docs.digitalasset-staging.com\/operate\/3.3\/reference\/api-reference\/>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743002140.984289",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "weQXK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You have recommended earlier to use v2 endpoints, is there a (even a work in progress) documentation for it? This is empty rn: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.digitalasset-staging.com\/operate\/3.3\/reference\/api-reference\/"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744035426.203749",
+        "client_msg_id": "9bed68e7-0573-4c86-8872-63bbc3a84212",
+        "text": "or should i stick to v1 for now",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743002140.984289",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "E0wsh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "or should i stick to v1 for now"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744035515.959319",
+        "client_msg_id": "936968b5-a065-4167-b925-de79b15da9c6",
+        "text": "or do all v1 endpoints work, just different return types in v2? the ones i tried at least seem to",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743002140.984289",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rhyjJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "or do all v1 endpoints work, just different return types in v2? the ones i tried at least seem to"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744035930.136989",
+        "client_msg_id": "875d8a34-6e0d-4e59-8c62-9bf649c94e8b",
+        "text": "ah got it, super",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743002140.984289",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6qtG4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ah got it, super"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

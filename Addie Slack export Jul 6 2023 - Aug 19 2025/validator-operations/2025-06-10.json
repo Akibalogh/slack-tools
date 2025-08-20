@@ -1,0 +1,1491 @@
+[
+    {
+        "subtype": "bot_message",
+        "text": "*pathrock* from *PathrockNetwork* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749539624.426789",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Wp8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "pathrock",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PathrockNetwork",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08GX9SV51V",
+        "type": "message",
+        "ts": "1749552277.073579",
+        "client_msg_id": "6b1bd7a2-29be-4dc0-a9fe-11f9339eeef0",
+        "text": "good day!\nI want to connect with some applications (specifically, the The Tie). However, their documentation is only available for Kubernetes. Our validator uses Docker Compose. Are there any guides or documentation available for connecting via Docker Compose?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08GX9SV0CX",
+        "source_team": "T08GX9SV0CX",
+        "user_profile": {
+            "avatar_hash": "d954e5f40242",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-12\/8575327914519_d954e5f4024205266f90_72.jpg",
+            "first_name": "Igor",
+            "real_name": "Igor Gusarov",
+            "display_name": "",
+            "team": "T08GX9SV0CX",
+            "name": "igrgusarov",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749552277.073579",
+        "reply_count": 7,
+        "reply_users_count": 4,
+        "latest_reply": "1750871215.174489",
+        "reply_users": [
+            "U08GX9SV51V",
+            "U06BXPXULH4",
+            "U069QDTQV8S",
+            "U0702NSFW0H"
+        ],
+        "replies": [
+            {
+                "user": "U08GX9SV51V",
+                "ts": "1749575946.901459"
+            },
+            {
+                "user": "U08GX9SV51V",
+                "ts": "1749634963.098409"
+            },
+            {
+                "user": "U08GX9SV51V",
+                "ts": "1749637357.905889"
+            },
+            {
+                "user": "U06BXPXULH4",
+                "ts": "1749657493.483309"
+            },
+            {
+                "user": "U069QDTQV8S",
+                "ts": "1750226513.947959"
+            },
+            {
+                "user": "U069QDTQV8S",
+                "ts": "1750319500.327219"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1750871215.174489"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gASIK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "good day!\nI want to connect with some applications (specifically, the The Tie). However, their documentation is only available for Kubernetes. Our validator uses Docker Compose. Are there any guides or documentation available for connecting via Docker Compose?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08JP88KPLM",
+        "type": "message",
+        "ts": "1749553185.566999",
+        "client_msg_id": "43838886-b9cd-4835-b85e-6fc560249dc4",
+        "text": "<https:\/\/docs.sync.global\/validator_operator\/validator_compose.html#requirements>\n\nWith regard to Docker Compose, looking at the `compose.yml` file included in the downloadable release artifacts, it seems the setup is intended to run entirely on a single EC2 instance. However, this makes it difficult to scale the resources launched via Docker Compose.\n\n In particular, scaling PostgreSQL is not feasible unless it is separated from Docker Compose and replaced with a service like Amazon RDS.\n\nShould components such as validators and participants be built in a way that allows them to scale?",
+        "team": "T05FWTX7PMG",
+        "user_team": "EF5BKVCT1",
+        "source_team": "EF5BKVCT1",
+        "user_profile": {
+            "avatar_hash": "848a957ad461",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-06\/8855466309508_848a957ad4614df4958d_72.jpg",
+            "first_name": "Kojiro",
+            "real_name": "Kojiro Hirate",
+            "display_name": "kojiro.hirate",
+            "team": "EF5BKVCT1",
+            "name": "kojiro.hirate",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749553185.566999",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1749557188.996139",
+        "reply_users": [
+            "U08U64U3LMC",
+            "U08JP88KPLM"
+        ],
+        "replies": [
+            {
+                "user": "U08U64U3LMC",
+                "ts": "1749553821.462079"
+            },
+            {
+                "user": "U08JP88KPLM",
+                "ts": "1749557188.996139"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zKVz9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.sync.global\/validator_operator\/validator_compose.html#requirements"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nWith regard to Docker Compose, looking at the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "compose.yml",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " file included in the downloadable release artifacts, it seems the setup is intended to run entirely on a single EC2 instance. However, this makes it difficult to scale the resources launched via Docker Compose.\n\n In particular, scaling PostgreSQL is not feasible unless it is separated from Docker Compose and replaced with a service like Amazon RDS.\n\nShould components such as validators and participants be built in a way that allows them to scale?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08U64U3LMC",
+        "type": "message",
+        "ts": "1749553821.462079",
+        "client_msg_id": "5b2937ef-871c-4083-a230-5a12e27b631c",
+        "text": "I think this is why Kubernetes is recommended. The docker compose is great for running your own private devnet but for production there are a lot of caveats. If going with docker compose, using RDS would be ideal so it can be scaled and backed up easily.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08U64U2X4N",
+        "source_team": "T08U64U2X4N",
+        "user_profile": {
+            "avatar_hash": "gc00dd9578aa",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/46d1216a2dea3625e61a110593f5d253.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0011-72.png",
+            "first_name": "ruddyg",
+            "real_name": "ruddyg",
+            "display_name": "Ruddy G.",
+            "team": "T08U64U2X4N",
+            "name": "ruddyg",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749553185.566999",
+        "parent_user_id": "U08JP88KPLM",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6s3JW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think this is why Kubernetes is recommended. The docker compose is great for running your own private devnet but for production there are a lot of caveats. If going with docker compose, using RDS would be ideal so it can be scaled and backed up easily."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U08JP88KPLM"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U04JX22CUTF",
+        "type": "message",
+        "ts": "1749556519.391689",
+        "client_msg_id": "4F32C5DA-3F97-404A-9CBF-00C04542DAC5",
+        "text": "For testnet migration it still has to be moved to 0.4.0 right and not 0.4.1",
+        "team": "T05FWTX7PMG",
+        "user_team": "TMCLAM45B",
+        "source_team": "TMCLAM45B",
+        "user_profile": {
+            "avatar_hash": "20342bdf1e9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-06\/5072696717877_20342bdf1e9c13a82f31_72.jpg",
+            "first_name": "Brij",
+            "real_name": "Brij Chauhan",
+            "display_name": "",
+            "team": "TMCLAM45B",
+            "name": "brindrajsinh.chauhan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749556519.391689",
+        "reply_count": 0,
+        "reply_users_count": 0,
+        "latest_reply": "0000000000.000000",
+        "reply_users": [],
+        "replies": [],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dYOUF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "For testnet migration it still has to be moved to 0.4.0 right and not 0.4.1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08JP88KPLM",
+        "type": "message",
+        "ts": "1749557188.996139",
+        "client_msg_id": "e873caec-8ede-4fcc-973f-752029d85991",
+        "text": "Got it, thanks for sharing!",
+        "team": "T05FWTX7PMG",
+        "user_team": "EF5BKVCT1",
+        "source_team": "EF5BKVCT1",
+        "user_profile": {
+            "avatar_hash": "848a957ad461",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-06\/8855466309508_848a957ad4614df4958d_72.jpg",
+            "first_name": "Kojiro",
+            "real_name": "Kojiro Hirate",
+            "display_name": "kojiro.hirate",
+            "team": "EF5BKVCT1",
+            "name": "kojiro.hirate",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749553185.566999",
+        "parent_user_id": "U08JP88KPLM",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sogKT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Got it, thanks for sharing!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08RLHK30AH",
+        "type": "message",
+        "ts": "1749561404.008099",
+        "client_msg_id": "17161aab-cf50-47b7-b6d2-ff42fed9bf3b",
+        "text": "Hello all, could we please get <mailto:bj@nodefortress.io|bj@nodefortress.io> added to this channel as well as gsf-outreach? Thank you!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08RLHK2HRT",
+        "source_team": "T08RLHK2HRT",
+        "user_profile": {
+            "avatar_hash": "d7722af896fe",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-03\/9145824773844_d7722af896fefe30c7b6_72.jpg",
+            "first_name": "Adam",
+            "real_name": "Adam - Node Fortress",
+            "display_name": "",
+            "team": "T08RLHK2HRT",
+            "name": "adam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HcD\/3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello all, could we please get "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:bj@nodefortress.io",
+                                "text": "bj@nodefortress.io"
+                            },
+                            {
+                                "type": "text",
+                                "text": " added to this channel as well as gsf-outreach? Thank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "done",
+                "users": [
+                    "U0821PFKM0V"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U02R4DG2UD9",
+        "type": "message",
+        "ts": "1749566361.696089",
+        "client_msg_id": "d482ed3d-ecc8-4e20-ba99-5f7b6836b3a4",
+        "text": "Hi team, would you invite <mailto:admin@gu3.co.jp|admin@gu3.co.jp> to this channel?",
+        "team": "T05FWTX7PMG",
+        "user_team": "EF5BKVCT1",
+        "source_team": "EF5BKVCT1",
+        "user_profile": {
+            "avatar_hash": "a32e82fbc29a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-12-18\/6370686071745_a32e82fbc29a37482dc6_72.png",
+            "first_name": "Jun",
+            "real_name": "Jun Morimoto",
+            "display_name": "jun.morimoto",
+            "team": "EF5BKVCT1",
+            "name": "jun.morimoto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749566361.696089",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1749567131.232309",
+        "reply_users": [
+            "U0821PFKM0V"
+        ],
+        "replies": [
+            {
+                "user": "U0821PFKM0V",
+                "ts": "1749567123.355779"
+            },
+            {
+                "user": "U0821PFKM0V",
+                "ts": "1749567131.232309"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZjEhy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi team, would you invite "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:admin@gu3.co.jp",
+                                "text": "admin@gu3.co.jp",
+                                "unsafe": true
+                            },
+                            {
+                                "type": "text",
+                                "text": " to this channel?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0821PFKM0V",
+        "type": "message",
+        "ts": "1749567123.355779",
+        "client_msg_id": "339aaa64-6567-4360-9700-239ffbe9c895",
+        "text": "We generally do not add alias to the channel. Is there a person behind this email?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07LSPYDRT4",
+        "source_team": "T07LSPYDRT4",
+        "user_profile": {
+            "avatar_hash": "e8a463dbf0c2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-22\/8072578026611_e8a463dbf0c21e1dd722_72.jpg",
+            "first_name": "Amanda",
+            "real_name": "Amanda Martin",
+            "display_name": "Dr. Amanda Martin",
+            "team": "T07LSPYDRT4",
+            "name": "dramandalmartin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749566361.696089",
+        "parent_user_id": "U02R4DG2UD9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "io40P",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We generally do not add alias to the channel. Is there a person behind this email?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0821PFKM0V",
+        "type": "message",
+        "ts": "1749567131.232309",
+        "client_msg_id": "9c69c716-62d2-4e5d-a52a-0850659ccb15",
+        "text": "and will they add thier name after being added?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07LSPYDRT4",
+        "source_team": "T07LSPYDRT4",
+        "user_profile": {
+            "avatar_hash": "e8a463dbf0c2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-22\/8072578026611_e8a463dbf0c21e1dd722_72.jpg",
+            "first_name": "Amanda",
+            "real_name": "Amanda Martin",
+            "display_name": "Dr. Amanda Martin",
+            "team": "T07LSPYDRT4",
+            "name": "dramandalmartin",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749566361.696089",
+        "parent_user_id": "U02R4DG2UD9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Fnshb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and will they add thier name after being added?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U089Z230N7R",
+        "type": "message",
+        "ts": "1749568205.359029",
+        "client_msg_id": "da1b831b-5421-4665-80f3-d40e90149a42",
+        "text": "Hi <@U03HMUTQ5F0> Is there any way to get the rewards per day earned by a validator? `scan\/v0\/holdings\/summary` is only for the balance of the validator at a given record_time right?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7T5YE9MY",
+        "source_team": "T7T5YE9MY",
+        "user_profile": {
+            "avatar_hash": "27e8bb1d4ced",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-01-27\/8378881764096_27e8bb1d4cedb972751d_72.jpg",
+            "first_name": "Léo",
+            "real_name": "Léo Combaret",
+            "display_name": "Leo Combaret",
+            "team": "T7T5YE9MY",
+            "name": "leo.combaret",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749129409.046119",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mzKXl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Is there any way to get the rewards per day earned by a validator? "
+                            },
+                            {
+                                "type": "text",
+                                "text": "scan\/v0\/holdings\/summary",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is only for the balance of the validator at a given record_time right?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U090CVALZ4M",
+        "type": "message",
+        "ts": "1749569924.986899",
+        "client_msg_id": "b4cad74d-fe33-4642-9c0a-74f001703211",
+        "text": "Hello!\ncan we have our node whitelisted for DevNet\n93.159.130.41",
+        "team": "T05FWTX7PMG",
+        "user_team": "T090J98LDPT",
+        "source_team": "T090J98LDPT",
+        "user_profile": {
+            "avatar_hash": "ed26ba4da6b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-07\/9007785668947_ed26ba4da6b20895d61c_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex",
+            "display_name": "Alex",
+            "team": "T090J98LDPT",
+            "name": "alex",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749569924.986899",
+        "reply_count": 4,
+        "reply_users_count": 2,
+        "latest_reply": "1750665882.093769",
+        "reply_users": [
+            "U090CVALZ4M",
+            "U06CEEKBP7H"
+        ],
+        "replies": [
+            {
+                "user": "U090CVALZ4M",
+                "ts": "1749569964.441159"
+            },
+            {
+                "user": "U090CVALZ4M",
+                "ts": "1749574462.483159"
+            },
+            {
+                "user": "U090CVALZ4M",
+                "ts": "1749575377.969189"
+            },
+            {
+                "user": "U06CEEKBP7H",
+                "ts": "1750665882.093769"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8wryI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello!\ncan we have our node whitelisted for DevNet\n93.159.130.41"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U04KJF6UTNU"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U090CVALZ4M",
+        "type": "message",
+        "ts": "1749569964.441159",
+        "client_msg_id": "c7874852-6a46-42c8-b7c4-991eadb9f57e",
+        "text": "cc <@U04KJF6UTNU>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T090J98LDPT",
+        "source_team": "T090J98LDPT",
+        "user_profile": {
+            "avatar_hash": "ed26ba4da6b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-07\/9007785668947_ed26ba4da6b20895d61c_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex",
+            "display_name": "Alex",
+            "team": "T090J98LDPT",
+            "name": "alex",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749569924.986899",
+        "parent_user_id": "U090CVALZ4M",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "r0clk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "cc "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U04KJF6UTNU"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U04KJF6UTNU"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08U64U3LMC",
+        "type": "message",
+        "ts": "1749573438.775659",
+        "client_msg_id": "493d0f49-43d3-4437-97b9-5d1dc5f0c306",
+        "text": "Hello,\n\nFollowing up on the request to whitelist:\n• DevNet: `3.131.113.108`\n• Mainnet: `3.149.46.2`\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08U64U2X4N",
+        "source_team": "T08U64U2X4N",
+        "user_profile": {
+            "avatar_hash": "gc00dd9578aa",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/46d1216a2dea3625e61a110593f5d253.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0011-72.png",
+            "first_name": "ruddyg",
+            "real_name": "ruddyg",
+            "display_name": "Ruddy G.",
+            "team": "T08U64U2X4N",
+            "name": "ruddyg",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UQWXT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello,\n\nFollowing up on the request to whitelist:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "DevNet: "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "3.131.113.108",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Mainnet: "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "3.149.46.2",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U04KJF6UTNU"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U090CVALZ4M",
+        "type": "message",
+        "ts": "1749574462.483159",
+        "client_msg_id": "a69ab8e9-da01-4b5c-8901-6502a14643c1",
+        "text": "great, thank you!\nmaybe it make sense to initiate the same process for the mainnet as well?\nwe already have the dedicated node for it\n139.84.232.92",
+        "team": "T05FWTX7PMG",
+        "user_team": "T090J98LDPT",
+        "source_team": "T090J98LDPT",
+        "user_profile": {
+            "avatar_hash": "ed26ba4da6b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-07\/9007785668947_ed26ba4da6b20895d61c_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex",
+            "display_name": "Alex",
+            "team": "T090J98LDPT",
+            "name": "alex",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749569924.986899",
+        "parent_user_id": "U090CVALZ4M",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ahK44",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "great, thank you!\nmaybe it make sense to initiate the same process for the mainnet as well?\nwe already have the dedicated node for it\n139.84.232.92"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U090CVALZ4M",
+        "type": "message",
+        "ts": "1749575377.969189",
+        "client_msg_id": "c8e044eb-cc3a-4b09-82b2-1c8b57efc9fa",
+        "text": "thank you!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T090J98LDPT",
+        "source_team": "T090J98LDPT",
+        "user_profile": {
+            "avatar_hash": "ed26ba4da6b2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-07\/9007785668947_ed26ba4da6b20895d61c_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex",
+            "display_name": "Alex",
+            "team": "T090J98LDPT",
+            "name": "alex",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749569924.986899",
+        "parent_user_id": "U090CVALZ4M",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "afEI5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08GX9SV51V",
+        "type": "message",
+        "ts": "1749575946.901459",
+        "client_msg_id": "534fab6b-7034-4270-81fb-fcac96b9d768",
+        "text": "Yes, you are correct!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08GX9SV0CX",
+        "source_team": "T08GX9SV0CX",
+        "user_profile": {
+            "avatar_hash": "d954e5f40242",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-12\/8575327914519_d954e5f4024205266f90_72.jpg",
+            "first_name": "Igor",
+            "real_name": "Igor Gusarov",
+            "display_name": "",
+            "team": "T08GX9SV0CX",
+            "name": "igrgusarov",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749552277.073579",
+        "parent_user_id": "U08GX9SV51V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Uh5\/z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, you are correct!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1749588679.101219",
+        "client_msg_id": "6f825c7b-b873-4112-86f0-b44debabb19e",
+        "text": "Is there any way to onboarding, run validator with custom namespace\/signing\/encryption key?\n\nas in we can generate the secure random byte ahead of time. and configure the validator to run with these instead of having the validator autogenerate during the initial onboarding\/boostrap?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "en\/e7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is there any way to onboarding, run validator with custom namespace\/signing\/encryption key?\n\nas in we can generate the secure random byte ahead of time. and configure the validator to run with these instead of having the validator autogenerate during the initial onboarding\/boostrap?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*jake* from *Blueprint* was added to this channel by *dramandalmartin*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749589463.329829",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oM0ga",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "jake",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Blueprint",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "dramandalmartin",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0541FQCMBM",
+        "type": "message",
+        "ts": "1749589763.706149",
+        "client_msg_id": "03397d3e-77ab-480e-a89a-b2bab8c61968",
+        "text": "Hey everyone, nice to join. <@U0821PFKM0V> - would you be able to add <mailto:matthew.brassey@theblueprint.xyz|matthew.brassey@theblueprint.xyz> and <mailto:dachao@theblueprint.xyz|dachao@theblueprint.xyz> to the channel?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T054E8E3DS5",
+        "source_team": "T054E8E3DS5",
+        "user_profile": {
+            "avatar_hash": "b17e2b43807f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-19\/5161509950672_b17e2b43807f6e6a9eb3_72.jpg",
+            "first_name": "Jake",
+            "real_name": "Jake Greenstein",
+            "display_name": "Jake Greenstein",
+            "team": "T054E8E3DS5",
+            "name": "jake",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749589763.706149",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1749591162.734609",
+        "reply_users": [
+            "U0541FQCMBM"
+        ],
+        "replies": [
+            {
+                "user": "U0541FQCMBM",
+                "ts": "1749591162.734609"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "aaWAu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey everyone, nice to join. "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0821PFKM0V"
+                            },
+                            {
+                                "type": "text",
+                                "text": " - would you be able to add "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:matthew.brassey@theblueprint.xyz",
+                                "text": "matthew.brassey@theblueprint.xyz"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:dachao@theblueprint.xyz",
+                                "text": "dachao@theblueprint.xyz"
+                            },
+                            {
+                                "type": "text",
+                                "text": " to the channel?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "done",
+                "users": [
+                    "U0821PFKM0V"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U0541FQCMBM",
+        "type": "message",
+        "ts": "1749591162.734609",
+        "client_msg_id": "66d93019-2060-4d44-8077-5122545f2121",
+        "text": "Thank you!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T054E8E3DS5",
+        "source_team": "T054E8E3DS5",
+        "user_profile": {
+            "avatar_hash": "b17e2b43807f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-19\/5161509950672_b17e2b43807f6e6a9eb3_72.jpg",
+            "first_name": "Jake",
+            "real_name": "Jake Greenstein",
+            "display_name": "Jake Greenstein",
+            "team": "T054E8E3DS5",
+            "name": "jake",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749589763.706149",
+        "parent_user_id": "U0541FQCMBM",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ye0AT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*akostadinov08* from *Bron* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749593702.472209",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7Co",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "akostadinov08",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Bron",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*akostadinov08* from *Bron* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749593716.492199",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/iZg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "akostadinov08",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Bron",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U037Y3RFC1Z",
+        "type": "message",
+        "ts": "1749610630.284629",
+        "client_msg_id": "d7029155-8c08-4f1f-814c-cc6e885ab32b",
+        "text": "Regarding the major upgrade, after reviewing the documentation, it appears that the transition from `eventId` to `offset` and `nodeId` is intended to apply on a go-forward basis only — can you please confirm?\n\nSpecifically, we want to verify that historical transactions (i.e., those that occurred prior to the upgrade) will remain unchanged, and that this adjustment only impacts future data processing.\n\nWe're planning a cutover related to chain syncing and want to ensure we align this change appropriately per environment, timed with and following the upgrade rollout.\nCC: <@U04RWTP1TA5>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T7C92V0SX",
+        "source_team": "T7C92V0SX",
+        "user_profile": {
+            "avatar_hash": "ac1aaf538e92",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-24\/9083989141975_ac1aaf538e92b62f1fa6_72.jpg",
+            "first_name": "Jesse",
+            "real_name": "Jesse Farese",
+            "display_name": "jesse.farese",
+            "team": "T7C92V0SX",
+            "name": "jesse.farese",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749610630.284629",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1749654224.178809",
+        "reply_users": [
+            "U04RWTP1TA5"
+        ],
+        "replies": [
+            {
+                "user": "U04RWTP1TA5",
+                "ts": "1749654224.178809"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "foFqo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Regarding the major upgrade, after reviewing the documentation, it appears that the transition from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "eventId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "offset",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "nodeId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is intended to apply on a go-forward basis only — can you please confirm?\n\nSpecifically, we want to verify that historical transactions (i.e., those that occurred prior to the upgrade) will remain unchanged, and that this adjustment only impacts future data processing.\n\nWe're planning a cutover related to chain syncing and want to ensure we align this change appropriately per environment, timed with and following the upgrade rollout.\nCC: "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U04RWTP1TA5"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U045J0UKLM8",
+        "type": "message",
+        "ts": "1749617682.799589",
+        "client_msg_id": "9adb9b10-3667-4f5d-b8fb-58dd8b419e3b",
+        "text": "Hi, <@U0821PFKM0V>, Could you please invite <@U045HTR6CE7> \/ <mailto:joonkyo.kim@dsrvlabs.com|joonkyo.kim@dsrvlabs.com> to this channel?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T045E9ETF51",
+        "source_team": "T045E9ETF51",
+        "user_profile": {
+            "avatar_hash": "4c305c4ef5c2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-30\/8831022788660_4c305c4ef5c2852058da_72.jpg",
+            "first_name": "heejin",
+            "real_name": "heejin lee",
+            "display_name": "heejin lee",
+            "team": "T045E9ETF51",
+            "name": "heejin.lee",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cBZsX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0821PFKM0V"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", Could you please invite "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U045HTR6CE7"
+                            },
+                            {
+                                "type": "text",
+                                "text": " \/ "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:joonkyo.kim@dsrvlabs.com",
+                                "text": "joonkyo.kim@dsrvlabs.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": " to this channel?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "done",
+                "users": [
+                    "U0821PFKM0V"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

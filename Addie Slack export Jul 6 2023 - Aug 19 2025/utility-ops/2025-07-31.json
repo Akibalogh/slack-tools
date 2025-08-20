@@ -1,0 +1,1268 @@
+[
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753945599.529759",
+        "client_msg_id": "2e8ab0ff-3837-4e67-8273-381808c374bd",
+        "text": "Hey Matt!\n\n1. It is indeed triggered by an automation run by the `operator`. It calls <https:\/\/docs.digitalasset.com\/utilities\/0.7\/registry-app-model\/Utility-Registry-App-V0-Service-Registrar.html#type-utility-registry-app-v0-service-registrar-registrarserviceexecuteacceptedtransfer-2466|this choice> for transfers.\n2. The <https:\/\/docs.digitalasset.com\/utilities\/0.7\/registry-model\/Utility-Registry-V0-Holding-Transfer.html#type-utility-registry-v0-holding-transfer-transfer-5535|transfer data block> should be common across these templates, allowing you to verify the state of a transfer provided it has a unique `reference`",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753909114.141859",
+        "parent_user_id": "U05KJ4MUMU2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KR\/aU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey Matt!\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "It is indeed triggered by an automation run by the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "operator",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ". It calls "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/docs.digitalasset.com\/utilities\/0.7\/registry-app-model\/Utility-Registry-App-V0-Service-Registrar.html#type-utility-registry-app-v0-service-registrar-registrarserviceexecuteacceptedtransfer-2466",
+                                        "text": "this choice"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " for transfers."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "The "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/docs.digitalasset.com\/utilities\/0.7\/registry-model\/Utility-Registry-V0-Holding-Transfer.html#type-utility-registry-v0-holding-transfer-transfer-5535",
+                                        "text": "transfer data block"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " should be common across these templates, allowing you to verify the state of a transfer provided it has a unique "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "reference",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1753950178.390419",
+        "client_msg_id": "1e8d38f3-3871-4d8e-842a-ef989376a547",
+        "text": "Something weird is occurring on Utility Testnet. After we make the request for ProviderService, we can see the ProviderService request showing UI for a brief moment before the request disappearing. Wondering if this relates to ACS issues?\n\n```curl '<https:\/\/utility.validator.canton-test.drax.dev\/api\/json-api\/v2\/commands\/submit-and-wait-for-transaction>' \\\n  -H 'accept: application\/json, *\/*;q=0.8' \\\n  -H 'accept-language: en-US,en;q=0.9' \\\n  -H 'authorization: Bearer -' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application\/json' \\\n  -H 'origin: <https:\/\/utility.validator.canton-test.drax.dev>' \\\n  -H 'pragma: no-cache' \\\n  -H 'priority: u=1, i' \\\n  -H 'referer: <https:\/\/utility.validator.canton-test.drax.dev\/registry\/onboarding>' \\\n  -H 'sec-ch-ua: \"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"' \\\n  -H 'sec-ch-ua-mobile: ?0' \\\n  -H 'sec-ch-ua-platform: \"macOS\"' \\\n  -H 'sec-fetch-dest: empty' \\\n  -H 'sec-fetch-mode: cors' \\\n  -H 'sec-fetch-site: same-origin' \\\n  -H 'user-agent: Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36' \\\n  --data-raw '{\"commands\":{\"commands\":[{\"CreateCommand\":{\"templateId\":\"#utility-registry-app-v0:Utility.Registry.App.V0.Service.Provider:ProviderServiceRequest\",\"createArguments\":{\"operator\":\"auth0_007c66019993301e3ed49d0e36e9::12206268795b181eafd1432facbb3a3c5711f1f8b743ea0e9c0050b32126b33071fa\",\"provider\":\"238faccb-2743-4064-a7f7-2a91bf1bbc9b::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\"}}}],\"workflowId\":\"\",\"userId\":\"238faccb-2743-4064-a7f7-2a91bf1bbc9b\",\"commandId\":\"1e29a7d31bc0a25350a21080e1f06d0ee6e3a774\",\"deduplicationPeriod\":{\"DeduplicationDuration\":{\"value\":{\"seconds\":30,\"nanos\":0}}},\"actAs\":[\"238faccb-2743-4064-a7f7-2a91bf1bbc9b::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\"],\"readAs\":[],\"submissionId\":\"7a78810a-171c-4df8-a59b-7955a2156b65\",\"disclosedContracts\":[],\"domainId\":\"\",\"packageIdSelectionPreference\":[\"e4beed1b8ae0506e63d6da04bffb447f8f406261dd64b9abf457c4655d031a6a\",\"8209a411cf3988feeaf56d5534199b54864955f1175e30880628299506c36ea4\"]},\"transactionFormat\":{\"eventFormat\":{\"filtersByParty\":{\"238faccb-2743-4064-a7f7-2a91bf1bbc9b::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\":{\"cumulative\":[{\"identifierFilter\":{\"WildcardFilter\":{\"value\":{\"includeCreatedEventBlob\":true}}}}]}},\"verbose\":false},\"transactionShape\":\"TRANSACTION_SHAPE_ACS_DELTA\"}}'```",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "reply_count": 70,
+        "reply_users_count": 3,
+        "latest_reply": "1754920084.343059",
+        "reply_users": [
+            "U057HGB61RS",
+            "U02KJ7PKHN2",
+            "U06GRUXKVHB"
+        ],
+        "replies": [
+            {
+                "user": "U057HGB61RS",
+                "ts": "1753950229.185269"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1753950383.654539"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1753950830.140219"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1753950836.054879"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1753950871.534279"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1753950879.564919"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1753950942.978969"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1753951005.545749"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1753951063.200159"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1753951073.361129"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1753951132.602889"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1753951146.082079"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1753951148.288079"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1753951177.755369"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754361285.115469"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754391313.167009"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754392132.043299"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754442693.851139"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754442894.145219"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754468527.510909"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754468547.842809"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754468604.349589"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754468673.875289"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754468731.724459"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754468873.560539"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754468960.307719"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754469028.066249"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754469055.755209"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754469157.041859"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754469231.337219"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754469251.782789"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754469347.318099"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754469365.837829"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754469458.546199"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754469470.393099"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754470134.667189"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754470146.367369"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754470177.260629"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754470190.449759"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754470509.431249"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754470554.928899"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754470593.589219"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754472433.501999"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754472618.832809"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754472863.154999"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754472898.625759"
+            },
+            {
+                "user": "U06GRUXKVHB",
+                "ts": "1754473661.551169"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754473788.202399"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754473801.997749"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754473813.308439"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754473922.583569"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754473943.314139"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754480296.435989"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754480757.685559"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754480822.994849"
+            },
+            {
+                "user": "U06GRUXKVHB",
+                "ts": "1754480896.537059"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754481404.280469"
+            },
+            {
+                "user": "U06GRUXKVHB",
+                "ts": "1754481609.377999"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754481743.410579"
+            },
+            {
+                "user": "U06GRUXKVHB",
+                "ts": "1754481964.098599"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754482765.408279"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754549468.881369"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754550806.614029"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754551808.643769"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754628607.275359"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754628740.749359"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754897924.068109"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754898592.593839"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1754920043.572159"
+            },
+            {
+                "user": "U057HGB61RS",
+                "ts": "1754920084.343059"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "urWyY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Something weird is occurring on Utility Testnet. After we make the request for ProviderService, we can see the ProviderService request showing UI for a brief moment before the request disappearing. Wondering if this relates to ACS issues?\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/utility.validator.canton-test.drax.dev\/api\/json-api\/v2\/commands\/submit-and-wait-for-transaction"
+                            },
+                            {
+                                "type": "text",
+                                "text": "' \\\n  -H 'accept: application\/json, *\/*;q=0.8' \\\n  -H 'accept-language: en-US,en;q=0.9' \\\n  -H 'authorization: Bearer -' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application\/json' \\\n  -H 'origin: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/utility.validator.canton-test.drax.dev"
+                            },
+                            {
+                                "type": "text",
+                                "text": "' \\\n  -H 'pragma: no-cache' \\\n  -H 'priority: u=1, i' \\\n  -H 'referer: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/utility.validator.canton-test.drax.dev\/registry\/onboarding"
+                            },
+                            {
+                                "type": "text",
+                                "text": "' \\\n  -H 'sec-ch-ua: \"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"' \\\n  -H 'sec-ch-ua-mobile: ?0' \\\n  -H 'sec-ch-ua-platform: \"macOS\"' \\\n  -H 'sec-fetch-dest: empty' \\\n  -H 'sec-fetch-mode: cors' \\\n  -H 'sec-fetch-site: same-origin' \\\n  -H 'user-agent: Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36' \\\n  --data-raw '{\"commands\":{\"commands\":[{\"CreateCommand\":{\"templateId\":\"#utility-registry-app-v0:Utility.Registry.App.V0.Service.Provider:ProviderServiceRequest\",\"createArguments\":{\"operator\":\"auth0_007c66019993301e3ed49d0e36e9::12206268795b181eafd1432facbb3a3c5711f1f8b743ea0e9c0050b32126b33071fa\",\"provider\":\"238faccb-2743-4064-a7f7-2a91bf1bbc9b::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\"}}}],\"workflowId\":\"\",\"userId\":\"238faccb-2743-4064-a7f7-2a91bf1bbc9b\",\"commandId\":\"1e29a7d31bc0a25350a21080e1f06d0ee6e3a774\",\"deduplicationPeriod\":{\"DeduplicationDuration\":{\"value\":{\"seconds\":30,\"nanos\":0}}},\"actAs\":[\"238faccb-2743-4064-a7f7-2a91bf1bbc9b::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\"],\"readAs\":[],\"submissionId\":\"7a78810a-171c-4df8-a59b-7955a2156b65\",\"disclosedContracts\":[],\"domainId\":\"\",\"packageIdSelectionPreference\":[\"e4beed1b8ae0506e63d6da04bffb447f8f406261dd64b9abf457c4655d031a6a\",\"8209a411cf3988feeaf56d5534199b54864955f1175e30880628299506c36ea4\"]},\"transactionFormat\":{\"eventFormat\":{\"filtersByParty\":{\"238faccb-2743-4064-a7f7-2a91bf1bbc9b::1220cba803ba802cae6a0784ed3590f377be8bffa1a2147aae0f2e604f4ab8e91410\":{\"cumulative\":[{\"identifierFilter\":{\"WildcardFilter\":{\"value\":{\"includeCreatedEventBlob\":true}}}}]}},\"verbose\":false},\"transactionShape\":\"TRANSACTION_SHAPE_ACS_DELTA\"}}'"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F098C39JY2Y",
+                "created": 1753950223,
+                "timestamp": 1753950223,
+                "name": "Screen Recording 2025-07-31 at 16.21.40.mov",
+                "title": "Screen Recording 2025-07-31 at 16.21.40.mov",
+                "mimetype": "video\/quicktime",
+                "filetype": "mov",
+                "pretty_type": "QuickTime Movie",
+                "user": "U057HGB61RS",
+                "user_team": "TBL1G8KHT",
+                "editable": false,
+                "size": 5745552,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "transcription": {
+                    "status": "none"
+                },
+                "mp4": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F098C39JY2Y-cfb1259bfb\/screen_recording_2025-07-31_at_16.21.40.mp4?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F098C39JY2Y-cfb1259bfb\/screen_recording_2025-07-31_at_16.21.40.mp4?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/TBL1G8KHT-F098C39JY2Y\/download\/screen_recording_2025-07-31_at_16.21.40.mov?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "hls": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F098C39JY2Y-cfb1259bfb\/file.m3u8?_xcb=663bc&t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "hls_embed": "data:application\/vnd.apple.mpegurl;base64,I0VYVE0zVQojRVhULVgtVkVSU0lPTjozCiNFWFQtWC1JTkRFUEVOREVOVC1TRUdNRU5UUwojRVhULVgtU1RSRUFNLUlORjpCQU5EV0lEVEg9NjA2NzU4LEFWRVJBR0UtQkFORFdJRFRIPTU2MTgwOCxDT0RFQ1M9ImF2YzEuNjQwMDI4LG1wNGEuNDAuNSIsUkVTT0xVVElPTj0xOTIweDEwODAsRlJBTUUtUkFURT0yOS45NzAKZGF0YTphcHBsaWNhdGlvbi92bmQuYXBwbGUubXBlZ3VybDtiYXNlNjQsSTBWWVZFMHpWUW9qUlZoVUxWZ3RWa1ZTVTBsUFRqb3pDaU5GV0ZRdFdDMVVRVkpIUlZSRVZWSkJWRWxQVGpvM0NpTkZXRlF0V0MxTlJVUkpRUzFUUlZGVlJVNURSVG94Q2lORldGUXRXQzFRVEVGWlRFbFRWQzFVV1ZCRk9sWlBSQW9qUlZoVVNVNUdPall1TURBMkxBcG9kSFJ3Y3pvdkwyWnBiR1Z6TG5Oc1lXTnJMbU52YlM5bWFXeGxjeTEwYldJdlZFSk1NVWM0UzBoVUxVWXdPVGhETXpsS1dUSlpMV05tWWpFeU5UbGlabUl2Wm1sc1pWOUlYekkyTkY4eE9USXdlREV3T0RCZk5qVXdNRXRDVUZOZk4xRldRbEpmTURBd01ERXVkSE1LSTBWWVZFbE9Sam8yTGpBd05pd0thSFIwY0hNNkx5OW1hV3hsY3k1emJHRmpheTVqYjIwdlptbHNaWE10ZEcxaUwxUkNUREZIT0V0SVZDMUdNRGs0UXpNNVNsa3lXUzFqWm1JeE1qVTVZbVppTDJacGJHVmZTRjh5TmpSZk1Ua3lNSGd4TURnd1h6WTFNREJMUWxCVFh6ZFJWa0pTWHpBd01EQXlMblJ6Q2lORldGUkpUa1k2TlM0ek56SXNDbWgwZEhCek9pOHZabWxzWlhNdWMyeGhZMnN1WTI5dEwyWnBiR1Z6TFhSdFlpOVVRa3d4UnpoTFNGUXRSakE1T0VNek9VcFpNbGt0WTJaaU1USTFPV0ptWWk5bWFXeGxYMGhmTWpZMFh6RTVNakI0TVRBNE1GODJOVEF3UzBKUVUxODNVVlpDVWw4d01EQXdNeTUwY3dvalJWaFVMVmd0UlU1RVRFbFRWQW89Cg==",
+                "mp4_low": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F098C39JY2Y-cfb1259bfb\/screen_recording_2025-07-31_at_16.21.40_trans.mp4?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "duration_ms": 17384,
+                "media_display_type": "video",
+                "thumb_video": "https:\/\/files.slack.com\/files-tmb\/TBL1G8KHT-F098C39JY2Y-cfb1259bfb\/screen_recording_2025-07-31_at_16.21.40_thumb_video.jpeg?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_video_w": 3840,
+                "thumb_video_h": 2160,
+                "permalink": "https:\/\/hydrax.slack.com\/files\/U05FZBDQ4RJ\/F098C39JY2Y\/screen_recording_2025-07-31_at_16.21.40.mov",
+                "permalink_public": "https:\/\/slack-files.com\/TBL1G8KHT-F098C39JY2Y-9665b1279b",
+                "source_team": "TBL1G8KHT",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U057HGB61RS",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1753950229.185269",
+        "client_msg_id": "f532552e-7749-420b-b66a-8e077e2787e3",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1753950383.654539",
+        "client_msg_id": "17592261-3497-4458-bf3b-16f1fc187efe",
+        "text": "It might also be related to <https:\/\/hydrax.slack.com\/archives\/C08AP9QR7K4\/p1752802884868859>\n\ncc: <@U02HW5074KV> <@U06GRUXKVHB>",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "attachments": [
+            {
+                "from_url": "https:\/\/hydrax.slack.com\/archives\/C08AP9QR7K4\/p1752802884868859",
+                "ts": "1752802884.868859",
+                "author_id": "U06GRUXKVHB",
+                "channel_id": "C08AP9QR7K4",
+                "channel_team": "T07LSPYDRT4",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "message_blocks": [
+                    {
+                        "team": "TBL1G8KHT",
+                        "channel": "C08AP9QR7K4",
+                        "ts": "1752802884.868859",
+                        "message": {
+                            "blocks": [
+                                {
+                                    "type": "rich_text",
+                                    "block_id": "28wqM",
+                                    "elements": [
+                                        {
+                                            "type": "rich_text_section",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Hi, does anyone know what this error means? It has been causing crashes on the participant since the TestNet was upgraded to version 0.4.4.\n"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "rich_text_preformatted",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Giving up on retrying the operation 'singleBatch' due to shutdown. Last attempt was None with exception: Task slick.util.AsyncExecutor$PrioritizedRunnable$$anon$6@2018e671 rejected from slick.util.AsyncExecutorWithMetrics$$anon$1@18931a9c[Terminated"
+                                                }
+                                            ],
+                                            "border": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "id": 1,
+                "original_url": "https:\/\/hydrax.slack.com\/archives\/C08AP9QR7K4\/p1752802884868859",
+                "fallback": "[July 17th, 2025 6:41 PM] bahri: Hi, does anyone know what this error means? It has been causing crashes on the participant since the TestNet was upgraded to version 0.4.4.\n```Giving up on retrying the operation 'singleBatch' due to shutdown. Last attempt was None with exception: Task slick.util.AsyncExecutor$PrioritizedRunnable$$anon$6@2018e671 rejected from slick.util.AsyncExecutorWithMetrics$$anon$1@18931a9c[Terminated```",
+                "text": "Hi, does anyone know what this error means? It has been causing crashes on the participant since the TestNet was upgraded to version 0.4.4.\n```Giving up on retrying the operation 'singleBatch' due to shutdown. Last attempt was None with exception: Task slick.util.AsyncExecutor$PrioritizedRunnable$$anon$6@2018e671 rejected from slick.util.AsyncExecutorWithMetrics$$anon$1@18931a9c[Terminated```",
+                "author_name": "Bahri Rizaldi",
+                "author_link": "https:\/\/hydrax.slack.com\/team\/U06GRUXKVHB",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2025-05-13\/8874936574327_fe525cefcf056db1b910_48.jpg",
+                "author_subname": "Bahri Rizaldi",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "team_name": "Digital Asset",
+                "footer": "Thread in Slack Conversation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oiVHd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It might also be related to "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/hydrax.slack.com\/archives\/C08AP9QR7K4\/p1752802884868859"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\ncc: "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02HW5074KV"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U06GRUXKVHB"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753950830.140219",
+        "client_msg_id": "4300f938-26a2-4f6d-a05e-68c027ca9639",
+        "text": "Hey Tony! The request gets auto-rejected because you're missing the right credential.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dkK3m",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey Tony! The request gets auto-rejected because you're missing the right credential."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753950836.054879",
+        "client_msg_id": "34014bfc-0bfb-4eb9-8c7f-9f374b9df57a",
+        "text": "Let me offer it to you",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mpghU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Let me offer it to you"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1753950871.534279",
+        "client_msg_id": "d0f9e0ce-4015-445a-ad6d-19cc0376f039",
+        "text": "ic... thanks Matteo",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5IbPY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ic... thanks Matteo"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1753950879.564919",
+        "client_msg_id": "52be3921-ca2f-4f5c-84db-67922cf91e2f",
+        "text": "Should we try it again?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gJHtJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Should we try it again?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753950942.978969",
+        "client_msg_id": "42bd932e-1b3e-4cfd-8ab1-e66d656c8d6c",
+        "text": "credential offered &gt; please, accept it, then you can try again",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pe85m",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "credential offered > please, accept it, then you can try again"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1753951005.545749",
+        "client_msg_id": "ab6d79e3-57b1-41ac-a3e6-f6164c8bc3b6",
+        "text": "okay accepted",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hTSjT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "okay accepted"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1753951063.200159",
+        "client_msg_id": "c2df8eb6-5e1d-4d3a-ae73-32eca662fd19",
+        "text": "waiting for providerservice request to be accepted",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "J1tbK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "waiting for providerservice request to be accepted"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1753951073.361129",
+        "client_msg_id": "a5dd3266-a374-47d6-9e84-28847fe3cd1c",
+        "text": "thanks saw it",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "y8seN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks saw it"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753951132.602889",
+        "client_msg_id": "4593e986-c5b6-44ad-8cd8-c95b39560b39",
+        "text": "nice :+1:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8wYFQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "nice "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "thumbsup",
+                                "unicode": "1f44d"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753951146.082079",
+        "client_msg_id": "b8f24797-2c9f-4bb4-a947-985e6b3a3d35",
+        "text": "raised an issue to improve on the UX",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TggPD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "raised an issue to improve on the UX"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753951148.288079",
+        "client_msg_id": "98049b89-be0c-4907-a453-89f4f03baf10",
+        "text": "thanks for raising this",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0Hx69",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks for raising this"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1753951177.755369",
+        "client_msg_id": "3ce7172c-e455-46bd-a667-fa455cb90fcb",
+        "text": "No problem. Thanks for the help :smile::pray:",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753950178.390419",
+        "parent_user_id": "U057HGB61RS",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Y24NF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "No problem. Thanks for the help "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile",
+                                "unicode": "1f604"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray",
+                                "unicode": "1f64f"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*matthieu* from *Trakx* was added to this channel by *simon.letort*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1753968583.447639",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9Mj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "matthieu",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Trakx",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "simon.letort",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05KJ4MUMU2",
+        "type": "message",
+        "ts": "1753970441.857549",
+        "client_msg_id": "5aeb2440-f408-4dc3-b0f7-af166ca546bd",
+        "text": "thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "gddacf9ce459",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/ddacf9ce459da7afa973d344cbdb5bc1.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "Matt",
+            "real_name": "Matt Franczak",
+            "display_name": "Matt",
+            "team": "T02P6LC6U01",
+            "name": "matt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753909114.141859",
+        "parent_user_id": "U05KJ4MUMU2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OJlya",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

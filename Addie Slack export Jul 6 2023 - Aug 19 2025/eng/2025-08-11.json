@@ -1,0 +1,1696 @@
+[
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754896542.365679",
+        "client_msg_id": "f553d79d-d4d4-4044-9943-f8aa67d61dd3",
+        "text": "\"maybe we could create a public repo just for these install files, and the teams could clone it and pull for updates, or even change branches and pull for the steps?\"\n\nIf we all agree I can create the `canton-onboarding` PUBLIC repository and add the files. First I thought that the branching idea would be good, but I think it is much easier to have one main branch and folders. Since we can manage the documentation much easier in the main README.md. We also can handle the issues as Github Issues so it can be more async for some cases. Otherwise we can ping each other on Telegram.\n\nThe only question where do they upload the output files?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754896542.365679",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1754899172.400379",
+        "reply_users": [
+            "U088UV6MKFE",
+            "U093Q4FPEJG"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1754898681.154499"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1754898802.806999"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754898861.395419"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1754899024.742369"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754899172.400379"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cEh36",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\"maybe we could create a public repo just for these install files, and the teams could clone it and pull for updates, or even change branches and pull for the steps?\"\n\nIf we all agree I can create the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "canton-onboarding",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " PUBLIC repository and add the files. First I thought that the branching idea would be good, but I think it is much easier to have one main branch and folders. Since we can manage the documentation much easier in the main README.md. We also can handle the issues as Github Issues so it can be more async for some cases. Otherwise we can ping each other on Telegram.\n\nThe only question where do they upload the output files?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1754898681.154499",
+        "client_msg_id": "c41ebc9f-8b99-4f94-aa01-431db5a65a3c",
+        "text": "yeah, the upload part answers the first question as well: the only problem with a single-branch repo solution, is that steps are 'incomplete' until the previous one is ready for everyone. So imagine that we have to push before every step. And they need to pull! Would lead to confusion.\nBetter to somehow not show them a step until its ready, so they cant fuck it up",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754896542.365679",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QZjQD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yeah, the upload part answers the first question as well: the only problem with a single-branch repo solution, is that steps are 'incomplete' until the previous one is ready for everyone. So imagine that we have to push before every step. And they need to pull! Would lead to confusion.\nBetter to somehow not show them a step until its ready, so they cant fuck it up"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1754898802.806999",
+        "client_msg_id": "7c91b385-5bde-471f-a409-bbc405aed59f",
+        "text": "So I would recommend a repo with branches for steps. Then, we can tell them to checkout a branch once we put all necessary files on the relevant branch.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754896542.365679",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "It3ke",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So I would recommend a repo with branches for steps. Then, we can tell them to checkout a branch once we put all necessary files on the relevant branch."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754898861.395419",
+        "client_msg_id": "6cff0b8a-fb43-40fc-ae61-b79512da6621",
+        "text": "That would make sense, but in this case it is pretty hard to reuse it on mainnet again.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754896542.365679",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qL2J0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That would make sense, but in this case it is pretty hard to reuse it on mainnet again."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1754899024.742369",
+        "client_msg_id": "232c633c-df3c-468c-9930-68ba7aaa2a1b",
+        "text": "yeah, i would make a new repo for mainnet :smile: just to be on the safe side",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754896542.365679",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NOLjn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yeah, i would make a new repo for mainnet "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile",
+                                "unicode": "1f604"
+                            },
+                            {
+                                "type": "text",
+                                "text": " just to be on the safe side"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754899172.400379",
+        "client_msg_id": "283c5756-dca9-4451-b561-65832313da4a",
+        "text": "Ok, than I create a canton-onboarding-testnet and I start to add `step0` -&gt; `step1` -&gt; `step1a` (should I add it?) -&gt; `step2` so on.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754896542.365679",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "33m6v",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ok, than I create a canton-onboarding-testnet and I start to add "
+                            },
+                            {
+                                "type": "text",
+                                "text": "step0",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " -> "
+                            },
+                            {
+                                "type": "text",
+                                "text": "step1",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " -> "
+                            },
+                            {
+                                "type": "text",
+                                "text": "step1a",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " (should I add it?) -> "
+                            },
+                            {
+                                "type": "text",
+                                "text": "step2",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " so on."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754915489.810439",
+        "client_msg_id": "24cad32c-c5ef-46ef-a29a-622fc035b5bb",
+        "text": "<https:\/\/github.com\/DLC-link\/canton-onboarding-testnet\/tree\/step0\/step0>\n\nI just finished the step0. It took time, because I just wrote a lot of other things which is more like general info.\n\nOnce the node operator opens this markdown, they have to click navigate to the prerequisites by clicking on the \"properly here.\" section. If they navigate back to the \/README.md it will tell them how they can get canton client binary. On the misc\/README.md they can setup the 5002 and 5001 locally. On the stepX\/README.md they can run the actual Scala scripts. I think it is much easier for everyone, because the different steps are much easier to debug in case of failure.\nI also modified the <http:\/\/CreatePartiesAndUser.sc|CreatePartiesAndUser.sc> so it is more verbose and fault-tolarent. If the party exists, just get it and try to create the user.\nI added a <http:\/\/Validate.sc|Validate.sc> which we can use to Validate whether the node operator set it up properly.\n\n<@U088UV6MKFE> <@U05FU0HPZ9T> Let me know what you think. It is private yet, so I did not prublish it.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754915489.810439",
+        "reply_count": 4,
+        "reply_users_count": 2,
+        "latest_reply": "1755015842.702799",
+        "reply_users": [
+            "U088UV6MKFE",
+            "U05FU0HPZ9T"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1754937068.610379"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1754937127.904539"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1754937129.576119"
+            },
+            {
+                "user": "U05FU0HPZ9T",
+                "ts": "1755015842.702799"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ipkud",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton-onboarding-testnet\/tree\/step0\/step0"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nI just finished the step0. It took time, because I just wrote a lot of other things which is more like general info.\n\nOnce the node operator opens this markdown, they have to click navigate to the prerequisites by clicking on the \"properly here.\" section. If they navigate back to the \/README.md it will tell them how they can get canton client binary. On the misc\/README.md they can setup the 5002 and 5001 locally. On the stepX\/README.md they can run the actual Scala scripts. I think it is much easier for everyone, because the different steps are much easier to debug in case of failure.\nI also modified the "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/CreatePartiesAndUser.sc",
+                                "text": "CreatePartiesAndUser.sc"
+                            },
+                            {
+                                "type": "text",
+                                "text": " so it is more verbose and fault-tolarent. If the party exists, just get it and try to create the user.\nI added a "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/Validate.sc",
+                                "text": "Validate.sc"
+                            },
+                            {
+                                "type": "text",
+                                "text": " which we can use to Validate whether the node operator set it up properly.\n\n"
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FU0HPZ9T"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Let me know what you think. It is private yet, so I did not prublish it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754923336.902039",
+        "client_msg_id": "07c052c4-7582-4dda-9a09-bc2c139f3af0",
+        "text": "I finished the step1: <https:\/\/github.com\/DLC-link\/canton-onboarding-testnet\/tree\/step1\/step1>\nIt takes time because I try to understand it as well.\n\nI have a question for the Key generation. <https:\/\/github.com\/DLC-link\/canton-onboarding-testnet\/blob\/step1\/step1\/01_GenerateKeys.sc>\nThis generates two files where the `participant-id.bin`  is always the same even if I run it multiple times. But the `attestor-public-keys.bin` always changes when I rerun the scala script. Wouldn't it make sense so the Scala script recognize that it is already created and just get back the value? So if any of the node operators rerun it multiple times that won't be a problem.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754923336.902039",
+        "reply_count": 4,
+        "reply_users_count": 2,
+        "latest_reply": "1754938580.718009",
+        "reply_users": [
+            "U088UV6MKFE",
+            "U093Q4FPEJG"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1754937240.033659"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1754937266.426739"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754938558.002879"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754938580.718009"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "b\/087",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I finished the step1: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton-onboarding-testnet\/tree\/step1\/step1"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nIt takes time because I try to understand it as well.\n\nI have a question for the Key generation. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton-onboarding-testnet\/blob\/step1\/step1\/01_GenerateKeys.sc"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nThis generates two files where the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "participant-id.bin",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  is always the same even if I run it multiple times. But the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "attestor-public-keys.bin",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " always changes when I rerun the scala script. Wouldn't it make sense so the Scala script recognize that it is already created and just get back the value? So if any of the node operators rerun it multiple times that won't be a problem."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754926733.204879",
+        "client_msg_id": "E844C1A7-AF3F-4C3F-B2DD-78EABAFB23B6",
+        "text": "I will be out for a few hours. But after I come back. The steps are pretty well documented on the links above",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JkWHR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I will be out for a few hours. But after I come back. The steps are pretty well documented on the links above"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "fire",
+                "users": [
+                    "U05FZBDQ4RJ"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1754936999.773999",
+        "client_msg_id": "7aec82e8-daa0-46f9-b254-413f397362a9",
+        "text": "Hey <@U093Q4FPEJG> , <@U088UV6MKFE> , <@U05FU0HPZ9T>!\n\nIf you guys need any help coordinating with the node operators, I was just talking to <@U092B2GUASF> and she'd love to help. Me as well.\n\nJust let us know what you need done",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QHXou",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U093Q4FPEJG"
+                            },
+                            {
+                                "type": "text",
+                                "text": " , "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " , "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FU0HPZ9T"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!\n\nIf you guys need any help coordinating with the node operators, I was just talking to "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U092B2GUASF"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and she'd love to help. Me as well.\n\nJust let us know what you need done"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U092B2GUASF",
+        "text": "<@U092B2GUASF> has joined the channel",
+        "inviter": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1754937019.077539"
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1754937068.610379",
+        "client_msg_id": "0dea45a2-58a5-4d78-ae5e-3651b729474b",
+        "text": "This is great!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754915489.810439",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qGhOZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This is great!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1754937127.904539",
+        "client_msg_id": "8adffc02-9c81-4308-b580-0bcbb49c039e",
+        "text": "really really nice",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754915489.810439",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7mHBI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "really really nice"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1754937129.576119",
+        "client_msg_id": "53407a04-f814-45b3-b7db-ca0f0262141c",
+        "text": "thanks for this",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754915489.810439",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TLGnN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks for this"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1754937240.033659",
+        "client_msg_id": "3fdfca07-413a-4db2-a9f9-9b324b48a72e",
+        "text": "Hmm good question. I would assume as long as they send us the last output, it should be fine... but im not sure",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754923336.902039",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kAI1U",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hmm good question. I would assume as long as they send us the last output, it should be fine... but im not sure"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1754937266.426739",
+        "client_msg_id": "5a15b411-2484-4584-b7d3-e84fe4619c35",
+        "text": "Since you can search for these keys by 'name', so yeah, if then they rerun it, _after_ they sent it, it might be overwritten",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754923336.902039",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8dqLR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Since you can search for these keys by 'name', so yeah, if then they rerun it, "
+                            },
+                            {
+                                "type": "text",
+                                "text": "after",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " they sent it, it might be overwritten"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754937702.923269",
+        "client_msg_id": "ccb7e00f-5ee4-44f5-8fe8-b1a8c2003e88",
+        "text": "Hi <@U092B2GUASF>,\n\nWe are currently focusing on the testnet launch. The main runbook we have right now is located under the \"CBTC Testnet launch runbook\" tab in this channel. At the moment we are in a pretty good position where most of the node operators are already upgraded to the latest version on testnet which is `v2.0.0-rc.6`. You can check this in the <https:\/\/status.dlc.link\/>, scrolling down to the testnet.\n\nAlso most of them are replied that they want to participate in the Canton attestor feature. Who replied back we sent them out the Step 0 which is creating the Party and Canton user for the attestor. The runbook has a table where we mark who ready with certain steps.\n\nThe next will be to run the Step 1 which uploads the Bitsafe specific dars and generate keys. In this part we will need a bit bigger cooperation, because we need to collect files from the node operators.\n\nThe current state:\n• P2P just replied on TG, so I will reach write down that they also need to update to the latest version on testnet.\n• Meria and Kiln did not reply nor update. ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Bqeme",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U092B2GUASF"
+                            },
+                            {
+                                "type": "text",
+                                "text": ",\n\nWe are currently focusing on the testnet launch. The main runbook we have right now is located under the \"CBTC Testnet launch runbook\" tab in this channel. At the moment we are in a pretty good position where most of the node operators are already upgraded to the latest version on testnet which is "
+                            },
+                            {
+                                "type": "text",
+                                "text": "v2.0.0-rc.6",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can check this in the "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/status.dlc.link\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", scrolling down to the testnet.\n\nAlso most of them are replied that they want to participate in the Canton attestor feature. Who replied back we sent them out the Step 0 which is creating the Party and Canton user for the attestor. The runbook has a table where we mark who ready with certain steps.\n\nThe next will be to run the Step 1 which uploads the Bitsafe specific dars and generate keys. In this part we will need a bit bigger cooperation, because we need to collect files from the node operators.\n\nThe current state:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "P2P just replied on TG, so I will reach write down that they also need to update to the latest version on testnet."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Meria and Kiln did not reply nor update. "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754938558.002879",
+        "client_msg_id": "0d2c1303-a27b-4698-a6e1-609ad4b6523d",
+        "text": "I think that would be easy to solve this. Let me try to make it fault-tolerant that way.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754923336.902039",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BNunx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think that would be easy to solve this. Let me try to make it fault-tolerant that way."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754938580.718009",
+        "client_msg_id": "3502537b-bf44-4dbf-9df1-9e3496f99ffc",
+        "text": "I'm 100% that it gets overwritten. I checked it.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754923336.902039",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UOoNj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'm 100% that it gets overwritten. I checked it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U088UV6MKFE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754938645.590349",
+        "client_msg_id": "26a10cfa-53d3-4e68-bd12-6e59be0e795a",
+        "text": "<@U088UV6MKFE> If you have time can you check this whether I'm right? This ^",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "W40N6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U088UV6MKFE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " If you have time can you check this whether I'm right? This ^"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1754938710.044319",
+        "client_msg_id": "79d5b4ee-f204-4c01-9b49-439071dfebb2",
+        "text": "Looks right! Thanks for the writeup",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hxyHj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Looks right! Thanks for the writeup"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1754939008.478859",
+        "client_msg_id": "cf61be58-d719-44a6-98af-1e240f19df14",
+        "text": "If there's something that <@U092B2GUASF> can help with, to help corral these node operators, let her know",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Co6Rh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If there's something that "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U092B2GUASF"
+                            },
+                            {
+                                "type": "text",
+                                "text": " can help with, to help corral these node operators, let her know"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U092B2GUASF"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1754939012.260159",
+        "client_msg_id": "db9c8e4a-e329-48e2-86ab-5d3e597750a6",
+        "text": "I can jump in as needed also",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RWWUO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I can jump in as needed also"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754939445.816139",
+        "client_msg_id": "a796a46e-c3e0-45a0-9b81-0fe5dc7af21f",
+        "text": "<@U05FZBDQ4RJ> That would be nice if we can figure out whather Meria and Kiln wants to participate as Canton node operator.\n\nMeria already update to the latest attestor versoin. Kiln didn't do it yet.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754939445.816139",
+        "reply_count": 5,
+        "reply_users_count": 3,
+        "latest_reply": "1754944479.667549",
+        "reply_users": [
+            "U092B2GUASF",
+            "U093Q4FPEJG",
+            "U05FZBDQ4RJ"
+        ],
+        "replies": [
+            {
+                "user": "U092B2GUASF",
+                "ts": "1754939650.289149"
+            },
+            {
+                "user": "U092B2GUASF",
+                "ts": "1754939700.258789"
+            },
+            {
+                "user": "U092B2GUASF",
+                "ts": "1754940687.224799"
+            },
+            {
+                "user": "U093Q4FPEJG",
+                "ts": "1754940887.288069"
+            },
+            {
+                "user": "U05FZBDQ4RJ",
+                "ts": "1754944479.667549"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1754944479.667549",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uD0YM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U05FZBDQ4RJ"
+                            },
+                            {
+                                "type": "text",
+                                "text": " That would be nice if we can figure out whather Meria and Kiln wants to participate as Canton node operator.\n\nMeria already update to the latest attestor versoin. Kiln didn't do it yet."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U092B2GUASF"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U092B2GUASF",
+        "type": "message",
+        "ts": "1754939650.289149",
+        "edited": {
+            "user": "U092B2GUASF",
+            "ts": "1754939704.000000"
+        },
+        "client_msg_id": "3E245FF0-001F-456D-ABDC-3BACB5B3AB01",
+        "text": "Pinged Kiln ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "8b842055c598",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-02\/9134237124982_8b842055c59860142a0b_72.jpg",
+            "first_name": "Addie",
+            "real_name": "Addie Tackman",
+            "display_name": "Addie Tackman",
+            "team": "T05FWTX7PMG",
+            "name": "addie",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754939445.816139",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sObTr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Pinged Kiln "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U092B2GUASF",
+        "type": "message",
+        "ts": "1754939700.258789",
+        "client_msg_id": "86FF6B26-AB44-4B2F-885A-AC3B0A414DCC",
+        "text": "Pinged Meria ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "8b842055c598",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-02\/9134237124982_8b842055c59860142a0b_72.jpg",
+            "first_name": "Addie",
+            "real_name": "Addie Tackman",
+            "display_name": "Addie Tackman",
+            "team": "T05FWTX7PMG",
+            "name": "addie",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754939445.816139",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zgRkK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Pinged Meria "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "USLACKBOT",
+        "subtype": "tabbed_canvas_updated",
+        "canvas_update_user_ids": [
+            "U093Q4FPEJG"
+        ],
+        "canvas_update_section_ids": [
+            "temp:C:HWK6519b3d5dca34172adb3ed237"
+        ],
+        "canvas_update_canvas_id": "F099P0H9DPT",
+        "canvas_update_ai_summary_blocks": [],
+        "type": "message",
+        "ts": "1754939764.004029",
+        "text": "",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T05FWTX7PMG",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cP1lS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ferenc Fabian made updates to a canvas tab: "
+                            },
+                            {
+                                "type": "canvas",
+                                "file_id": "F099P0H9DPT"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "Here you go! <@U093Q4FPEJG> \n\n<https:\/\/calendly.com\/louis-laszlo-meria\/30min|https:\/\/calendly.com\/louis-laszlo-meria\/30min>",
+        "files": [
+            {
+                "id": "F09APA0M8NL",
+                "created": 1754940681,
+                "timestamp": 1754940681,
+                "name": "IMG_3689.png",
+                "title": "IMG_3689",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U092B2GUASF",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 1815827,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "subtype": "slack_image",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F09APA0M8NL\/img_3689.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F09APA0M8NL\/download\/img_3689.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09APA0M8NL-cbb1826a5d\/img_3689_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09APA0M8NL-cbb1826a5d\/img_3689_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09APA0M8NL-cbb1826a5d\/img_3689_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 166,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09APA0M8NL-cbb1826a5d\/img_3689_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 221,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09APA0M8NL-cbb1826a5d\/img_3689_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09APA0M8NL-cbb1826a5d\/img_3689_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 332,
+                "thumb_720_h": 720,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09APA0M8NL-cbb1826a5d\/img_3689_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 1734,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09APA0M8NL-cbb1826a5d\/img_3689_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 443,
+                "thumb_960_h": 960,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F09APA0M8NL-cbb1826a5d\/img_3689_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 472,
+                "thumb_1024_h": 1024,
+                "original_w": 1290,
+                "original_h": 2796,
+                "thumb_tiny": "AwAwABekCxTCoSM9Qv8AWnFcA\/uZQT0z\/wDqp1sSIslTgtjPGM4pTcKCQVbj6VSS7jsRAYyZEcD6Yo3Q+j\/n\/wDWp0s6vGVAOTVek0gJ4EMg4DHn+Fc8UNHxuZWHA7cc0QRs6najNg84FSmCTA\/cv3HQ5pCKzADGOvpTef7v6VJMjIQHBU+hGKix7imBpaYwiEochDkcMcetXBInzbrtTk8YKjA9Kx4mCnb5QkJPGRz9KnxJjH2Lv\/c\/+tQku4CX+S6fvBMVTlh9fb8Kp1OzqwwYgPcYpm1PRvz\/APrUNLuB\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F09APA0M8NL\/img_3689.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F09APA0M8NL-d2fe10f1a8",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U092B2GUASF",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nCaWq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Here you go! "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U093Q4FPEJG"
+                            },
+                            {
+                                "type": "text",
+                                "text": " \n\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/calendly.com\/louis-laszlo-meria\/30min",
+                                "text": "https:\/\/calendly.com\/louis-laszlo-meria\/30min"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1754940687.224799",
+        "client_msg_id": "48DDAB8D-7C27-48FC-9BCC-28D3C51017AB",
+        "thread_ts": "1754939445.816139",
+        "parent_user_id": "U093Q4FPEJG",
+        "attachments": [
+            {
+                "id": 1,
+                "blocks": [
+                    {
+                        "type": "section",
+                        "block_id": "L8yfZ",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": "*<https:\/\/calendly.com\/louis-laszlo-meria\/30min?from=slack|30 Minutes Meeting>*\n_30 mins_",
+                            "verbatim": false
+                        },
+                        "accessory": {
+                            "type": "image",
+                            "image_url": "https:\/\/d3v0px0pttie1i.cloudfront.net\/uploads\/user\/avatar\/27980272\/d53f3ea7.jpg",
+                            "alt_text": "Calendly profile avatar"
+                        }
+                    },
+                    {
+                        "type": "actions",
+                        "block_id": "PIkhy",
+                        "elements": [
+                            {
+                                "type": "button",
+                                "action_id": "booking_link_button_action",
+                                "text": {
+                                    "type": "plain_text",
+                                    "text": "Schedule Time",
+                                    "emoji": true
+                                },
+                                "url": "https:\/\/calendly.com\/louis-laszlo-meria\/30min?from=slack"
+                            }
+                        ]
+                    }
+                ],
+                "color": "#006BFF",
+                "fallback": "[no preview available]",
+                "bot_id": "B0958NG9TJP",
+                "bot_team_id": "T05FWTX7PMG",
+                "app_unfurl_url": "https:\/\/calendly.com\/louis-laszlo-meria\/30min",
+                "is_app_unfurl": true,
+                "app_id": "A01L99LFRD1"
+            }
+        ]
+    },
+    {
+        "user": "U093Q4FPEJG",
+        "type": "message",
+        "ts": "1754940887.288069",
+        "client_msg_id": "6833E6BE-55D9-41F3-9DE7-3D2336CED285",
+        "text": "Hm, Probably that would be better if we can go with <@U05FZBDQ4RJ> . If you can book a slot and invite me that would be good.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "00839730db6a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9215934516210_00839730db6ae2308417_72.png",
+            "first_name": "Ferenc",
+            "real_name": "Ferenc Fabian",
+            "display_name": "Ferenc Fabian",
+            "team": "T05FWTX7PMG",
+            "name": "ferenc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754939445.816139",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YW2YL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hm, Probably that would be better if we can go with "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U05FZBDQ4RJ"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": ". If you can book a slot and invite me that would be good."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05FZBDQ4RJ",
+        "type": "message",
+        "ts": "1754944479.667549",
+        "client_msg_id": "a4581454-c0d9-4ba3-b988-1315f58ab543",
+        "text": "Sure! Booked for tomorrow",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "a253e2bc379e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8561635421232_a253e2bc379e36483696_72.png",
+            "first_name": "Aki",
+            "real_name": "Aki Balogh",
+            "display_name": "Aki",
+            "team": "T05FWTX7PMG",
+            "name": "aki",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754939445.816139",
+        "parent_user_id": "U093Q4FPEJG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "G8gkm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sure! Booked for tomorrow"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U092B2GUASF",
+                    "U093Q4FPEJG"
+                ],
+                "count": 2
+            }
+        ]
+    }
+]

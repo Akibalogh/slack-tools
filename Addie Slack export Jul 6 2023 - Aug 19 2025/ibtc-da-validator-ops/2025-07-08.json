@@ -1,0 +1,371 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1751980670.250989",
+        "client_msg_id": "9d8b54f5-8666-4854-9bb8-74a7676fc2e2",
+        "text": "Hello!\n\nJust want to triple check my understanding of something:\nOnly the `ledger_api` requires a `token` for access, the `admin_api` does not, right? So the admin_api, if you can access it, is totally open.\n\nConsequently, for our bootstrapping scripts, we don't actually need third parties to have a JWT, as long as\n• the `sc` scripts never use the `participant.ledger_api` \n• they have correct port-forward to the `admin_api` \nThank you :pray:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751980670.250989",
+        "reply_count": 0,
+        "reply_users_count": 0,
+        "latest_reply": "0000000000.000000",
+        "reply_users": [],
+        "replies": [],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9lWOP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello!\n\nJust want to triple check my understanding of something:\nOnly the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "ledger_api",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " requires a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "token",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " for access, the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "admin_api",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " does not, right? So the admin_api, if you can access it, is totally open.\n\nConsequently, for our bootstrapping scripts, we don't actually need third parties to have a JWT, as long as\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "sc",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " scripts never use the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "participant.ledger_api",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "they have correct port-forward to the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "admin_api",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThank you "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray",
+                                "unicode": "1f64f"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1751987812.959859",
+        "client_msg_id": "8fe4f846-1ddc-4b3b-88c8-ad36f18e344f",
+        "text": "So looking at this: <https:\/\/github.com\/hyperledger-labs\/splice\/blob\/58c76949b6bab0e90448fe4d43c1d153750ee2c3\/daml\/splice-api-featured-app-v1\/daml\/Splice\/Api\/FeaturedAppRightV1.daml#L29|https:\/\/github.com\/hyperledger-labs\/splice\/blob\/58c76949b6bab0e90448fe4d43c1d15375[…]ice-api-featured-app-v1\/daml\/Splice\/Api\/FeaturedAppRightV1.daml>\n\nThe controller here is the provider, as expected.\nHowever, in our contracts, the dec-party registrar is the signatory\/controller of all choices (create accounts, mint\/burn).\n\nSo how would we create these markers on those contracts using our current featured app provider? Do we need some automation, proxy contracts, dunno",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751268698.507789",
+        "parent_user_id": "USLACKBOT",
+        "attachments": [
+            {
+                "from_url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/58c76949b6bab0e90448fe4d43c1d153750ee2c3\/daml\/splice-api-featured-app-v1\/daml\/Splice\/Api\/FeaturedAppRightV1.daml#L29",
+                "service_icon": "https:\/\/a.slack-edge.com\/80588\/img\/unfurl_icons\/github.png",
+                "id": 1,
+                "original_url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/58c76949b6bab0e90448fe4d43c1d153750ee2c3\/daml\/splice-api-featured-app-v1\/daml\/Splice\/Api\/FeaturedAppRightV1.daml#L29",
+                "fallback": "GitHub: splice\/daml\/splice-api-featured-app-v1\/daml\/Splice\/Api\/FeaturedAppRightV1.daml at 58c76949b6bab0e90448fe4d43c1d153750ee2c3 · hyperledger-labs\/splice",
+                "text": "Reference applications for funding, operating, and incentivizing the use of a decentralized, public Canton synchronizer. Includes the Amulet reference application for creating native payment utilit...",
+                "title": "splice\/daml\/splice-api-featured-app-v1\/daml\/Splice\/Api\/FeaturedAppRightV1.daml at 58c76949b6bab0e90448fe4d43c1d153750ee2c3 · hyperledger-labs\/splice",
+                "title_link": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/58c76949b6bab0e90448fe4d43c1d153750ee2c3\/daml\/splice-api-featured-app-v1\/daml\/Splice\/Api\/FeaturedAppRightV1.daml#L29",
+                "service_name": "GitHub"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xujaZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So looking at this: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/58c76949b6bab0e90448fe4d43c1d153750ee2c3\/daml\/splice-api-featured-app-v1\/daml\/Splice\/Api\/FeaturedAppRightV1.daml#L29",
+                                "text": "https:\/\/github.com\/hyperledger-labs\/splice\/blob\/58c76949b6bab0e90448fe4d43c1d15375[…]ice-api-featured-app-v1\/daml\/Splice\/Api\/FeaturedAppRightV1.daml"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nThe controller here is the provider, as expected.\nHowever, in our contracts, the dec-party registrar is the signatory\/controller of all choices (create accounts, mint\/burn).\n\nSo how would we create these markers on those contracts using our current featured app provider? Do we need some automation, proxy contracts, dunno"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1751988143.051219",
+        "client_msg_id": "d591b741-323c-4e1b-8f21-89688eccf35b",
+        "text": "Aha! Makes sense",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751268698.507789",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JB0Fb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Aha! Makes sense"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1751988348.769209",
+        "client_msg_id": "81493af1-f5b9-4473-b6b2-61cb53a6167f",
+        "text": "Let's assume that is the case at launch for a sec.\n\nI would update say the DepositAccountRules to have the provider as a signatory. And the CompleteDeposit choice on a DepositAccount template to:\n• take the FeaturedAppRight cId as an argument\n• exercise this create marker choice on it\nThis 'just works' even though the CompleteDeposit controller is the registrar, but the inner call's controller is the provider?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751268698.507789",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vZNa5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Let's assume that is the case at launch for a sec.\n\nI would update say the DepositAccountRules to have the provider as a signatory. And the CompleteDeposit choice on a DepositAccount template to:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "take the FeaturedAppRight cId as an argument"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "exercise this create marker choice on it"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThis 'just works' even though the CompleteDeposit controller is the registrar, but the inner call's controller is the provider?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1751988976.821709",
+        "client_msg_id": "777a8001-cf99-439b-a0de-0030c3795095",
+        "text": "I see. So I would also add the provider as a signatory on the DepositAccount template as well (not just the Rules), and then its all good",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751268698.507789",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fwv0g",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I see. So I would also add the provider as a signatory on the DepositAccount template as well (not just the Rules), and then its all good"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

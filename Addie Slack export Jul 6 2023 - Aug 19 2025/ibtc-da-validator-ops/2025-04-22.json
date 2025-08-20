@@ -1,0 +1,476 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745320781.544479",
+        "edited": {
+            "user": "U088UV6MKFE",
+            "ts": "1745320884.000000"
+        },
+        "client_msg_id": "75f9cd8b-3583-4b65-be35-4baabdc4e9b3",
+        "text": "Hey guys happy new week welcome back from Easter!\n\nI am working on a simple integration testing setup to help with our local\/automated devloops while building out the backend code.\nI want to give an update on it maybe you have some feedback if I am going down the wrong path.\n\n• I created a new docker image, which installs the DAML-SDK, and starts a `daml sandbox` with the necessary dars uploaded. \n• I plan on starting it with the JSON-API enabled\n• adding an init script to the `daml.yaml` to set up the 3 attestor parties and a merchant party who will mint\/burn, so they have a static userID every time (?), not that we want to hardcode it (or maybe for tests thats fine?)\n• (I see there is also a `canton-console`, but i probably wont need that for now)\n• I will also run `codegen` in the container startup, and expose that as a volume so the testing framework can install it as a package\nSo ultimately, this image will be run in our docker-compose alongside all the other chains, bitcoin, etc., and can run the rust backend against it.\n\nDoes this sound like a good approach? Thanks!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745320781.544479",
+        "reply_count": 5,
+        "reply_users_count": 1,
+        "latest_reply": "1745331360.260969",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745323984.956149"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745324052.557499"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745326302.553509"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745328769.604729"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1745331360.260969"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6wiO8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey guys happy new week welcome back from Easter!\n\nI am working on a simple integration testing setup to help with our local\/automated devloops while building out the backend code.\nI want to give an update on it maybe you have some feedback if I am going down the wrong path.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I created a new docker image, which installs the DAML-SDK, and starts a "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "daml sandbox",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " with the necessary dars uploaded. "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I plan on starting it with the JSON-API enabled"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "adding an init script to the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "daml.yaml",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " to set up the 3 attestor parties and a merchant party who will mint\/burn, so they have a static userID every time (?), not that we want to hardcode it (or maybe for tests thats fine?)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "(I see there is also a "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "canton-console",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ", but i probably wont need that for now)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I will also run "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "codegen",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " in the container startup, and expose that as a volume so the testing framework can install it as a package"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nSo ultimately, this image will be run in our docker-compose alongside all the other chains, bitcoin, etc., and can run the rust backend against it.\n\nDoes this sound like a good approach? Thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745323984.956149",
+        "client_msg_id": "6a6f4f41-c15e-4778-a865-0caa8cc469f2",
+        "text": "encountering an issue immediately: I can't seem to access the json-api from the host machine.\n\nBased on this: <https:\/\/discuss.daml.com\/t\/when-running-the-sandbox-in-a-container-i-can-not-access-its-ledger-api-from-the-host-machine\/5113\/2>\nand this: <https:\/\/docs.daml.com\/json-api\/index.html>\n\nI tried starting the container with:\n`CMD [\"daml\", \"sandbox\", \"--json-api-port\", \"7575\", \"-C\", \"participants.sandbox.http-ledger-api.address=0.0.0.0\", \"--dar\", \"\/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\"]`\n\nAnd this:\n`CMD [\"daml\", \"sandbox\", \"--json-api-port\", \"7575\", \"-C\", \"participants.sandbox.http-ledger-api.server.address=0.0.0.0\", \"--dar\", \"\/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\"]`\n\nAnd `canton.`... and 'localhost' and small -c, haha nothing seems to work",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745320781.544479",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WgTFV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "encountering an issue immediately: I can't seem to access the json-api from the host machine.\n\nBased on this: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/discuss.daml.com\/t\/when-running-the-sandbox-in-a-container-i-can-not-access-its-ledger-api-from-the-host-machine\/5113\/2"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nand this: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.daml.com\/json-api\/index.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nI tried starting the container with:\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "CMD [\"daml\", \"sandbox\", \"--json-api-port\", \"7575\", \"-C\", \"participants.sandbox.http-ledger-api.address=0.0.0.0\", \"--dar\", \"\/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\"]",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nAnd this:\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "CMD [\"daml\", \"sandbox\", \"--json-api-port\", \"7575\", \"-C\", \"participants.sandbox.http-ledger-api.server.address=0.0.0.0\", \"--dar\", \"\/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\"]",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nAnd "
+                            },
+                            {
+                                "type": "text",
+                                "text": "canton.",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "... and 'localhost' and small -c, haha nothing seems to work"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745324052.557499",
+        "client_msg_id": "a5589030-6c45-4c0b-94e9-506e6d707e59",
+        "text": "Thanks, my only issue with the localnet setup is that it's massive, and slow to start, etc... this sandbox is very lightweight and might be enough for what we need? Meaning, testing API-calls to our contracts, and reading things from it...",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745320781.544479",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Qy839",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks, my only issue with the localnet setup is that it's massive, and slow to start, etc... this sandbox is very lightweight and might be enough for what we need? Meaning, testing API-calls to our contracts, and reading things from it..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745326302.553509",
+        "client_msg_id": "35b7707b-f9f1-4b16-a91e-fc9effa07f09",
+        "text": "yeah hmmm. I believe you, just hesitant for now haha.\nI would have to strip out a lot of things from that (i dont need most of those containers, wallets, UIs, etc.), edit some of it manually (to expose the JSON-API port for example), its a lot of compose files in many files, not super obvious to me how I would add this neatly to our single docker-compose easily, especially if I want to track upstream updates well. But i'll look into it!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745320781.544479",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LlEht",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yeah hmmm. I believe you, just hesitant for now haha.\nI would have to strip out a lot of things from that (i dont need most of those containers, wallets, UIs, etc.), edit some of it manually (to expose the JSON-API port for example), its a lot of compose files in many files, not super obvious to me how I would add this neatly to our single docker-compose easily, especially if I want to track upstream updates well. But i'll look into it!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745328769.604729",
+        "client_msg_id": "b0ca77ce-e230-47d9-9fcf-fec38eb83b7f",
+        "text": "Is the sandbox out-of-date, or why wouldn't you recommend it? Can you elaborate a bit? It seems perfect for the simple things I need it for (I don't want to test CC rewards etc, only application level interactions\/integrations, with local parties, ...). If I could get it to talk to me outside the container hah\n\nRunning a SV to test 4-5 JSON-API calls feels a bit overkill",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745320781.544479",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dyBNQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is the sandbox out-of-date, or why wouldn't you recommend it? Can you elaborate a bit? It seems perfect for the simple things I need it for (I don't want to test CC rewards etc, only application level interactions\/integrations, with local parties, ...). If I could get it to talk to me outside the container hah\n\nRunning a SV to test 4-5 JSON-API calls feels a bit overkill"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1745331360.260969",
+        "client_msg_id": "3cf2aa8f-9a60-4189-90b3-f7812b390bd6",
+        "text": "Thanks. Let's see how far this can take us! I just want to give smth to my colleagues they can use to quickly iterate. I hope calling json-api endpoints won't really break (too much) between sandbox and prod.\n\nFor posterity, I could solve it by creating a `json-api.conf` file with\n```canton.participants.sandbox.http-ledger-api {\n  server {\n    address = 0.0.0.0\n    port = 7575\n  }\n}```\nAnd\n`CMD [\"daml\", \"sandbox\", \"-c\", \"json-api.conf\", \"--dar\", \"\/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\"]`",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745320781.544479",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mLko4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks. Let's see how far this can take us! I just want to give smth to my colleagues they can use to quickly iterate. I hope calling json-api endpoints won't really break (too much) between sandbox and prod.\n\nFor posterity, I could solve it by creating a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "json-api.conf",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " file with\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "canton.participants.sandbox.http-ledger-api {\n  server {\n    address = 0.0.0.0\n    port = 7575\n  }\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "CMD [\"daml\", \"sandbox\", \"-c\", \"json-api.conf\", \"--dar\", \"\/app\/simple-contract\/.daml\/dist\/simple-contract-0.0.1.dar\"]",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "UEHLS0JUB"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

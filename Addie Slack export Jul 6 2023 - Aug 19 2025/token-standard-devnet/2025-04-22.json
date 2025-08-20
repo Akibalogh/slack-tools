@@ -1,0 +1,708 @@
+[
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1745340160.382419",
+        "client_msg_id": "f6bd197f-4b3c-4359-bdcb-e6497f1d3aaf",
+        "text": "Hi team! I'm having a little issue with the `\/registry\/transfer-instruction\/transfer-factory` endpoint. Could you please advice? Details on the thread",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745340160.382419",
+        "reply_count": 10,
+        "reply_users_count": 1,
+        "latest_reply": "1745582709.060149",
+        "reply_users": [
+            "U06TMPD96M8"
+        ],
+        "replies": [
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1745340188.467099"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1745340218.418529"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1745340248.609489"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1745340316.153669"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1745340376.069539"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1745340562.962129"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1745340799.490629"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1745509197.868909"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1745581960.019719"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1745582709.060149"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nMky8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi team! I'm having a little issue with the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/registry\/transfer-instruction\/transfer-factory",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " endpoint. Could you please advice? Details on the thread"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1745340188.467099",
+        "client_msg_id": "bbc17f00-9e22-463f-86be-28490ccdebe6",
+        "text": "First of all, I'm calling the endpoint `\/registry\/transfer-instruction\/transfer-factory` of the Registry API in order to get the `transferFactoryId`, to use it later on the `\/v2\/interactive-submission\/execute` endpoint of the Ledger JSON API",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745340160.382419",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wXyBJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "First of all, I'm calling the endpoint "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/registry\/transfer-instruction\/transfer-factory",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " of the Registry API in order to get the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "transferFactoryId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", to use it later on the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/v2\/interactive-submission\/execute",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " endpoint of the Ledger JSON API"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1745340218.418529",
+        "client_msg_id": "737e88f9-c67c-4ccd-a707-7e81484493ac",
+        "text": "This is the `curl` request:\n```curl --location '<http:\/\/localhost:5012\/registry\/transfer-instruction\/transfer-factory>' \\\n--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4QjRobkNob2lDZUszZjN3c2VXTThJcjhVN0tLVDZ0eFhsOUFiRUdYUkxJIn0.eyJleHAiOjE3NDUzMzk2NTgsImlhdCI6MTc0NTMzOTM1OCwianRpIjoiMWU1YmEyNWItZjcxYS00ZDIxLWFkNWQtMzM5NzY4ODE3MTY3IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5rdWJlLnRlc3RuZXQtbGRuLmJvb3BsZS5jby9yZWFsbXMvY2FudG9uLXRlc3RuZXQiLCJhdWQiOiJodHRwczovL2NhbnRvbi5uZXR3b3JrLmdsb2JhbCIsInN1YiI6ImFiYmJhNjg2LTk0YmUtNDJmMy04ZmYzLThkZjlhYWI1OGJkMiIsInR5cCI6IkJlYXJlciIsImF6cCI6InZhbGlkYXRvciIsInNlc3Npb25fc3RhdGUiOiJlNzM5MGFmOC1iODhlLTQ3YjUtYmVlMC0zMWE5YjNkMmE1NjEiLCJzY29wZSI6ImRhbWxfbGVkZ2VyX2FwaSIsInNpZCI6ImU3MzkwYWY4LWI4OGUtNDdiNS1iZWUwLTMxYTliM2QyYTU2MSIsImNsaWVudEhvc3QiOiIxMC4xLjEyMS4yMDYiLCJjbGllbnRBZGRyZXNzIjoiMTAuMS4xMjEuMjA2IiwiY2xpZW50X2lkIjoidmFsaWRhdG9yIn0.c-Mz3VR1oe8IExsiUb7d-5vpqbCgSqkwvVzepc6PaFGzTcElLpSLrVBMKch13yfHnP2ec-NUpfoCCv0jAs2-vWN50Yl0e-glN0JT49lCdPwBhPI7kvqo0tgFQx9JdU-lhlFj7AoudKIswmm4eq_WEDxa6ppaJg0ae522Yh8v9GK1fJTX28WYpCW2E2WI4Y72zJAhcK1_xOjfQ5b0IKWk3pFwip6OGDtaDb9ByFxZY2hxJGaWL3IKc7hUMIRUA6lcyUd5KVJm_AToXCjhAz9N5l4RCeyUfzY-NTBwwtmaCSLx2hsTwbtfemIJQd7j4Dpy_yDc2YXPj1f04Unqbzthhg' \\\n--header 'Content-Type: application\/json' \\\n--data '{\n    \"choice_arguments\": {\n        \"expectedAdmin\": \"DSO::12207d841c7baf5ee67f71481377e6c047ba7e6d022e2c152dbd59a0c5478c5b079a\",\n        \"transfer\": {\n            \"sender\": \"bob::1220e90df783801711bea161011838426fccca908b08ead6e08f45945098a328ba32\",\n            \"receiver\": \"cindy::1220e90df783801711bea161011838426fccca908b08ead6e08f45945098a328ba32\",\n            \"amount\": \"100.0000000000\",\n            \"instrumentId\": {\n                \"admin\": \"DSO::12207d841c7baf5ee67f71481377e6c047ba7e6d022e2c152dbd59a0c5478c5b079a\",\n                \"id\": \"Amulet\"\n            },\n            \"lock\": null,\n            \"requestedAt\": \"2025-04-21T10:00:00.000Z\",\n            \"executeBefore\": \"2025-04-22T10:00:00.000Z\",\n            \"inputHoldingCids\": [\n                \"0014659f1a2220c63730d20c17bea212dd4bc814ade695b67213ef6d39d88d7024ca10122099bd128c256b416482d4d746268ca7df97f7bf36098e7a01d5a502ae2e155c37\"\n            ],\n            \"meta\": {\n                \"values\": []\n            }\n        },\n        \"extraArgs\": {\n            \"context\": {\n                \"values\": []\n            },\n            \"meta\": {\n                \"values\": []\n            }\n        }\n    }\n}'```\nwhere:\n• `expectedAdmin` and is the `admin` of the `instrumentId` of `Amulet`\n• `transfer.sender` and `transfer.receiver` are valid party IDs\n• `instrumentId` is the `instrumentId`  of `Amulet`\n• `inputHoldingCids` are the distinct `contractId`s of the `sender`\n• The mentioned `instrumentId` and `inputHoldingCids` are taken from the result of `GET <http:\/\/localhost:7575\/v2\/state\/active-contracts>`\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745340160.382419",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eFvrU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This is the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "curl",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " request:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "curl --location '"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/localhost:5012\/registry\/transfer-instruction\/transfer-factory"
+                            },
+                            {
+                                "type": "text",
+                                "text": "' \\\n--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4QjRobkNob2lDZUszZjN3c2VXTThJcjhVN0tLVDZ0eFhsOUFiRUdYUkxJIn0.eyJleHAiOjE3NDUzMzk2NTgsImlhdCI6MTc0NTMzOTM1OCwianRpIjoiMWU1YmEyNWItZjcxYS00ZDIxLWFkNWQtMzM5NzY4ODE3MTY3IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5rdWJlLnRlc3RuZXQtbGRuLmJvb3BsZS5jby9yZWFsbXMvY2FudG9uLXRlc3RuZXQiLCJhdWQiOiJodHRwczovL2NhbnRvbi5uZXR3b3JrLmdsb2JhbCIsInN1YiI6ImFiYmJhNjg2LTk0YmUtNDJmMy04ZmYzLThkZjlhYWI1OGJkMiIsInR5cCI6IkJlYXJlciIsImF6cCI6InZhbGlkYXRvciIsInNlc3Npb25fc3RhdGUiOiJlNzM5MGFmOC1iODhlLTQ3YjUtYmVlMC0zMWE5YjNkMmE1NjEiLCJzY29wZSI6ImRhbWxfbGVkZ2VyX2FwaSIsInNpZCI6ImU3MzkwYWY4LWI4OGUtNDdiNS1iZWUwLTMxYTliM2QyYTU2MSIsImNsaWVudEhvc3QiOiIxMC4xLjEyMS4yMDYiLCJjbGllbnRBZGRyZXNzIjoiMTAuMS4xMjEuMjA2IiwiY2xpZW50X2lkIjoidmFsaWRhdG9yIn0.c-Mz3VR1oe8IExsiUb7d-5vpqbCgSqkwvVzepc6PaFGzTcElLpSLrVBMKch13yfHnP2ec-NUpfoCCv0jAs2-vWN50Yl0e-glN0JT49lCdPwBhPI7kvqo0tgFQx9JdU-lhlFj7AoudKIswmm4eq_WEDxa6ppaJg0ae522Yh8v9GK1fJTX28WYpCW2E2WI4Y72zJAhcK1_xOjfQ5b0IKWk3pFwip6OGDtaDb9ByFxZY2hxJGaWL3IKc7hUMIRUA6lcyUd5KVJm_AToXCjhAz9N5l4RCeyUfzY-NTBwwtmaCSLx2hsTwbtfemIJQd7j4Dpy_yDc2YXPj1f04Unqbzthhg' \\\n--header 'Content-Type: application\/json' \\\n--data '{\n    \"choice_arguments\": {\n        \"expectedAdmin\": \"DSO::12207d841c7baf5ee67f71481377e6c047ba7e6d022e2c152dbd59a0c5478c5b079a\",\n        \"transfer\": {\n            \"sender\": \"bob::1220e90df783801711bea161011838426fccca908b08ead6e08f45945098a328ba32\",\n            \"receiver\": \"cindy::1220e90df783801711bea161011838426fccca908b08ead6e08f45945098a328ba32\",\n            \"amount\": \"100.0000000000\",\n            \"instrumentId\": {\n                \"admin\": \"DSO::12207d841c7baf5ee67f71481377e6c047ba7e6d022e2c152dbd59a0c5478c5b079a\",\n                \"id\": \"Amulet\"\n            },\n            \"lock\": null,\n            \"requestedAt\": \"2025-04-21T10:00:00.000Z\",\n            \"executeBefore\": \"2025-04-22T10:00:00.000Z\",\n            \"inputHoldingCids\": [\n                \"0014659f1a2220c63730d20c17bea212dd4bc814ade695b67213ef6d39d88d7024ca10122099bd128c256b416482d4d746268ca7df97f7bf36098e7a01d5a502ae2e155c37\"\n            ],\n            \"meta\": {\n                \"values\": []\n            }\n        },\n        \"extraArgs\": {\n            \"context\": {\n                \"values\": []\n            },\n            \"meta\": {\n                \"values\": []\n            }\n        }\n    }\n}'"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "where:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "expectedAdmin",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " and is the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "admin",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " of the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "instrumentId",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " of "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "Amulet",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "transfer.sender",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " and "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "transfer.receiver",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " are valid party IDs"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "instrumentId",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " is the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "instrumentId",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "  of "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "Amulet",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "inputHoldingCids",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " are the distinct "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "contractId",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "s of the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "sender",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "The mentioned "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "instrumentId",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " and "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "inputHoldingCids",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " are taken from the result of "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "GET ",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "http:\/\/localhost:7575\/v2\/state\/active-contracts",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1745340248.609489",
+        "client_msg_id": "97282a97-ed6e-4392-8e99-830a21432502",
+        "text": "and this is the error that it's returning:\n```{\n    \"error\": \"Field `choiceArguments` does not contain a valid `TransferFactory_Transfer`.\"\n}```\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745340160.382419",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "u20p9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and this is the error that it's returning:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n    \"error\": \"Field `choiceArguments` does not contain a valid `TransferFactory_Transfer`.\"\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1745340316.153669",
+        "client_msg_id": "5ad8b03b-7b29-4d2e-b60b-5ef13f0e9d36",
+        "text": "Note: I exposed the port `5012` of the `scan` container on the supervalidator's `docker-compose.yml` in order to have the registry API",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745340160.382419",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5j1bo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Note: I exposed the port "
+                            },
+                            {
+                                "type": "text",
+                                "text": "5012",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " of the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "scan",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " container on the supervalidator's "
+                            },
+                            {
+                                "type": "text",
+                                "text": "docker-compose.yml",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " in order to have the registry API"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1745340376.069539",
+        "client_msg_id": "13ab7070-b7ff-4913-90d3-f52cbfd14fae",
+        "text": "I tried to look at the logs but they don't provide any further hint about the problem with the `TransferFactory_Transfer` object",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745340160.382419",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wst3F",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I tried to look at the logs but they don't provide any further hint about the problem with the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "TransferFactory_Transfer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " object"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1745340562.962129",
+        "client_msg_id": "eda25742-2d65-4d43-b981-bb73e6a3741b",
+        "text": "sv-app:0.4.0-snapshot.20250228.8482.0.v658b4b16",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745340160.382419",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eezVO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "sv-app:0.4.0-snapshot.20250228.8482.0.v658b4b16"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1745340799.490629",
+        "client_msg_id": "320ce9ed-06ef-4e40-857d-2f45d25d98ed",
+        "text": "against a locally running network",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1745340160.382419",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "puYmR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "against a locally running network"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

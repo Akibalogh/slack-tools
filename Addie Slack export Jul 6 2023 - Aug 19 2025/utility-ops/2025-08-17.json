@@ -1,0 +1,680 @@
+[
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1755420107.342799",
+        "client_msg_id": "BDA3D200-74CD-470E-A8BE-88F20068139A",
+        "text": "You can control this in the instrument configuration. Just set an empty holder credential requirement. ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755375236.341619",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ALSCM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You can control this in the instrument configuration. Just set an empty holder credential requirement. "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U057HGB61RS",
+                    "U08987JD1J9"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U057HGB61RS",
+        "type": "message",
+        "ts": "1755428214.749679",
+        "client_msg_id": "381911DB-91A5-4C38-9390-196E0136B831",
+        "text": "I also always thought holder credentials was mandatory. :pray::skin-tone-2: ",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "e5dedb2d577f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-05-11\/5276923572736_e5dedb2d577f455c0944_72.png",
+            "first_name": "Tony",
+            "real_name": "Tony Chew",
+            "display_name": "Tony Chew",
+            "team": "TBL1G8KHT",
+            "name": "tonychew",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755375236.341619",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DY2vx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I also always thought holder credentials was mandatory"
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray",
+                                "unicode": "1f64f-1f3fb",
+                                "skin_tone": 2
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "Hi Utility team,\n\nI had succesfully minted a token on my utility app on devnet. deploy to my validator\n\nTo find holding, I try to query the active-contract to the ledger of this node:\n\n```{\n  \"filter\": {\n      \"fivenorth-devnet-1::12208c929c3f012c663323ed675b2eaea7d7c6e1a9be35d6b20bc39f311c6aa7cc54\": {\n        \"cumulative\" : [\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          },\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#utility-registry-holding-v0:Utility.Registry.Holding.V0.Holding:Holding\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          }\n        ]\n      }\n    }\n  },\n  \"verbose\": false,\n   \"activeAtOffset\": 322473\n}```\nI had also confirm `activeAtOffset` is my latest ledger end when I post this message.\n\nAnd I got an error:\n\n```The following package-name\/interface qualified-name pairs do not reference any interface-id uploaded on this participant: [(utility-registry-holding-v0,Utility.Registry.Holding.V0.Holding:Holding)]```\nBut I'm very sure that my participant had all the relevant DAR files. More specifically the `utility-registry-holding-v0` is there",
+        "files": [
+            {
+                "id": "F09AKKX2CV9",
+                "created": 1755453972,
+                "timestamp": 1755453972,
+                "name": "CleanShot 2025-08-17 at 11.06.01.png",
+                "title": "CleanShot 2025-08-17 at 11.06.01.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U08987JD1J9",
+                "user_team": "T08987C1Q77",
+                "editable": false,
+                "size": 83429,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T08987C1Q77-F09AKKX2CV9\/cleanshot_2025-08-17_at_11.06.01.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T08987C1Q77-F09AKKX2CV9\/download\/cleanshot_2025-08-17_at_11.06.01.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T08987C1Q77-F09AKKX2CV9-768f4e0b1d\/cleanshot_2025-08-17_at_11.06.01_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T08987C1Q77-F09AKKX2CV9-768f4e0b1d\/cleanshot_2025-08-17_at_11.06.01_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T08987C1Q77-F09AKKX2CV9-768f4e0b1d\/cleanshot_2025-08-17_at_11.06.01_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 144,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T08987C1Q77-F09AKKX2CV9-768f4e0b1d\/cleanshot_2025-08-17_at_11.06.01_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 192,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T08987C1Q77-F09AKKX2CV9-768f4e0b1d\/cleanshot_2025-08-17_at_11.06.01_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T08987C1Q77-F09AKKX2CV9-768f4e0b1d\/cleanshot_2025-08-17_at_11.06.01_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 289,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T08987C1Q77-F09AKKX2CV9-768f4e0b1d\/cleanshot_2025-08-17_at_11.06.01_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 321,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T08987C1Q77-F09AKKX2CV9-768f4e0b1d\/cleanshot_2025-08-17_at_11.06.01_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 385,
+                "original_w": 988,
+                "original_h": 396,
+                "thumb_tiny": "AwAUADCo0ikn90g69M\/40wVMsKFQWcDPoVP\/ALNUZUqecfgQaYCgoPvAn6GlzFn7rYz\/AHv\/AK1IA54AJ9OKcFlYZVGI9koAYSvYUnFLk+nv0pvWgAoHWigdaAHhmAwHYD0BpfMf\/no\/502igBwkcHIkcfjTTyckkn3oooA\/\/9k=",
+                "permalink": "https:\/\/fivenorthdigital.slack.com\/files\/U05FZBDQ4RJ\/F09AKKX2CV9\/cleanshot_2025-08-17_at_11.06.01.png",
+                "permalink_public": "https:\/\/slack-files.com\/T08987C1Q77-F09AKKX2CV9-e039dcde4d",
+                "source_team": "T08987C1Q77",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U08987JD1J9",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fssFV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Utility team,\n\nI had succesfully minted a token on my utility app on devnet. deploy to my validator\n\nTo find holding, I try to query the active-contract to the ledger of this node:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n  \"filter\": {\n      \"fivenorth-devnet-1::12208c929c3f012c663323ed675b2eaea7d7c6e1a9be35d6b20bc39f311c6aa7cc54\": {\n        \"cumulative\" : [\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#splice-api-token-holding-v1:Splice.Api.Token.HoldingV1:Holding\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          },\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#utility-registry-holding-v0:Utility.Registry.Holding.V0.Holding:Holding\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          }\n        ]\n      }\n    }\n  },\n  \"verbose\": false,\n   \"activeAtOffset\": 322473\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nI had also confirm "
+                            },
+                            {
+                                "type": "text",
+                                "text": "activeAtOffset",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is my latest ledger end when I post this message.\n\nAnd I got an error:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The following package-name\/interface qualified-name pairs do not reference any interface-id uploaded on this participant: [(utility-registry-holding-v0,Utility.Registry.Holding.V0.Holding:Holding)]"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nBut I'm very sure that my participant had all the relevant DAR files. More specifically the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "utility-registry-holding-v0",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is there"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1755454323.282869",
+        "client_msg_id": "6fd29a68-1432-4bce-8477-bf1078fe9b4f",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1755454323.282869",
+        "reply_count": 7,
+        "reply_users_count": 2,
+        "latest_reply": "1755498993.927009",
+        "reply_users": [
+            "U02KJ7PKHN2",
+            "U08987JD1J9"
+        ],
+        "replies": [
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1755456966.239309"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1755457027.134629"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1755457037.712139"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755457262.124669"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755457306.392959"
+            },
+            {
+                "user": "U08987JD1J9",
+                "ts": "1755457744.631739"
+            },
+            {
+                "user": "U02KJ7PKHN2",
+                "ts": "1755498993.927009"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1755456966.239309",
+        "client_msg_id": "B5F33AF0-FFD2-4478-9E36-C19E7ADBFF7D",
+        "text": "Hey Vinh! You should specify a template filter rather than an interface filter ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755454323.282869",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qUJxf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey Vinh! You should specify a template filter rather than an interface filter "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1755457027.134629",
+        "client_msg_id": "F23B9D0A-0D1B-43B2-B952-2A8CA4CF61A1",
+        "text": "Oh, you already do (for splice token standard holdings, which include utility holdings)",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755454323.282869",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ww4Cd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oh, you already do (for splice token standard holdings, which include utility holdings)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1755457037.712139",
+        "client_msg_id": "2A1B4281-2D42-49CB-8759-6CA5EAEA5A29",
+        "text": "I would just remove the second interface filter then ",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755454323.282869",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NHYdD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I would just remove the second interface filter then "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755457262.124669",
+        "client_msg_id": "0b4e2539-007c-4933-96d3-faf881277828",
+        "text": "thanks <@U02KJ7PKHN2>\n\nIt works, and actually make sense. Every token should follow the standard interface.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755454323.282869",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "67Kgb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02KJ7PKHN2"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nIt works, and actually make sense. Every token should follow the standard interface."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755457306.392959",
+        "client_msg_id": "6305bdec-ec00-4854-bec6-c3cb1851f90e",
+        "text": "```\"instrumentId\": {\n                  \"admin\": \"fivenorth-devnet-1::12208c929c3f012c663323ed675b2eaea7d7c6e1a9be35d6b20bc39f311c6aa7cc54\",\n                  \"id\": \"BOND\"\n                },\n                \"amount\": \"10000000.0000000000\",\n                \"lock\": null,\n                \"meta\": {\n                  \"values\": {\n                    \"<http:\/\/utility.digitalasset.com\/holding-label|utility.digitalasset.com\/holding-label>\": \"\\\"\\\"\"\n                  }\n                }\n              }\n            }\n          ],```\nWork perfectly to grab the amount. Thanks again.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755454323.282869",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SFGFu",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\"instrumentId\": {\n                  \"admin\": \"fivenorth-devnet-1::12208c929c3f012c663323ed675b2eaea7d7c6e1a9be35d6b20bc39f311c6aa7cc54\",\n                  \"id\": \"BOND\"\n                },\n                \"amount\": \"10000000.0000000000\",\n                \"lock\": null,\n                \"meta\": {\n                  \"values\": {\n                    \"utility.digitalasset.com\/holding-label\": \"\\\"\\\"\"\n                  }\n                }\n              }\n            }\n          ],"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Work perfectly to grab the amount. Thanks again."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U02KJ7PKHN2"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08987JD1J9",
+        "type": "message",
+        "ts": "1755457744.631739",
+        "client_msg_id": "5d18f48d-15b3-4e40-8e99-dbae3e42c996",
+        "text": "Will this should also work to fetch pending transfer to be accepted\n\n```{\n  \"filter\": {\n    \"filtersByParty\": {\n      \"alice-python::1220b6fddb1eb697bbfb7449aa881e6122916b999ac968f039d9e4eea6889381d3d1\": {\n        \"cumulative\" : [\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#splice-api-token-transfer-instruction-v1:Splice.Api.Token.TransferInstructionV1:TransferInstruction\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          }\n        ]\n      }      \n    }\n  },\n  \"verbose\": false,\n  \"activeAtOffset\": 322759\n}```\nI perform a Transfer in utility (Offer Transfer) to `alice-python::1220b6fddb1eb697bbfb7449aa881e6122916b999ac968f039d9e4eea6889381d3d1` .\n\nThen fetch acs but it returns an empty array. (ledger end is correct).",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08987C1Q77",
+        "source_team": "T08987C1Q77",
+        "user_profile": {
+            "avatar_hash": "99a85730a5ad",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-02-05\/8402823361586_99a85730a5ad57176e25_72.png",
+            "first_name": "Vinh",
+            "real_name": "Vinh",
+            "display_name": "Vinh",
+            "team": "T08987C1Q77",
+            "name": "vinh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755454323.282869",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gtUXX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Will this should also work to fetch pending transfer to be accepted\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\n  \"filter\": {\n    \"filtersByParty\": {\n      \"alice-python::1220b6fddb1eb697bbfb7449aa881e6122916b999ac968f039d9e4eea6889381d3d1\": {\n        \"cumulative\" : [\n          {\n            \"identifierFilter\": {\n              \"InterfaceFilter\": {\n                \"value\": {\n                  \"interfaceId\": \"#splice-api-token-transfer-instruction-v1:Splice.Api.Token.TransferInstructionV1:TransferInstruction\",\n                  \"includeInterfaceView\": true,\n                  \"includeCreatedEventBlob\": true\n                }\n              }\n            }\n          }\n        ]\n      }      \n    }\n  },\n  \"verbose\": false,\n  \"activeAtOffset\": 322759\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nI perform a Transfer in utility (Offer Transfer) to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "alice-python::1220b6fddb1eb697bbfb7449aa881e6122916b999ac968f039d9e4eea6889381d3d1",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " .\n\nThen fetch acs but it returns an empty array. (ledger end is correct)."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1755498993.927009",
+        "client_msg_id": "cf23bf9d-306b-43cb-8252-6103a52b672b",
+        "text": "a Utility `TransferOffer` does not yet implement the suitable token standard interfaces. They will be added on the next release of the Utility Daml code.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755454323.282869",
+        "parent_user_id": "U08987JD1J9",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VGIkL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "a Utility "
+                            },
+                            {
+                                "type": "text",
+                                "text": "TransferOffer",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " does not yet implement the suitable token standard interfaces. They will be added on the next release of the Utility Daml code."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

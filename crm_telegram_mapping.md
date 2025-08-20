@@ -1,0 +1,209 @@
+# CRM to Telegram Mapping Report
+Generated: 2025-08-19 22:21:15
+
+## Summary
+- **Total HubSpot companies**: 235
+- **Telegram matches found**: 190
+- **Match percentage**: 80.9%
+
+## Companies with Telegram Data
+
+- **21Shares** → `chat_0007`
+- **3Commas Capital** → `chat_0005`
+- **3Trade** → `chat_0007`
+- **7Ridge** → `chat_0005`
+- **Alchemy** → `chat_0007`
+- **Allnodes** → `chat_0007`
+- **Alum Labs** → `chat_0001`
+- **Amber Group** → `chat_0001`
+- **Amberdata** → `chat_0001`
+- **Antpool** → `chat_0007`
+- **Artichoke Capital** → `chat_0005`
+- **B2C2** → `chat_0001`
+- **BCW** → `chat_0001`
+- **Barg Systems** → `chat_0001`
+- **Binance US** → `chat_0001`
+- **BitGo** → `chat_0001`
+- **BitSafe** → `chat_0001`
+- **Bitmain** → `chat_0001`
+- **Bitrise (iPollo)** → `chat_0001`
+- **Bitwave** → `chat_0001`
+- **Black Manta** → `chat_0001`
+- **Black Manta Capital** → `chat_0001`
+- **Black Sand** → `chat_0001`
+- **Block and Bones** → `chat_0001`
+- **Blockdaemon** → `chat_0001`
+- **Blockfills** → `chat_0001`
+- **Brale** → `chat_0001`
+- **Brikly** → `chat_0001`
+- **Bron** → `chat_0001`
+- **Bullish** → `chat_0001`
+- **CMI** → `chat_0005`
+- **CMS Holdings** → `chat_0005`
+- **CantonWallet (by Send.it)** → `chat_0001`
+- **Cense** → `chat_0015`
+- **Chain Experts** → `chat_0005`
+- **ChainSafe** → `chat_0005`
+- **Chata AI** → `chat_0005`
+- **Circle** → `chat_0005`
+- **CoinMetrics** → `chat_0005`
+- **Coinsummer** → `chat_0005`
+- **ContributionDAO** → `chat_0001`
+- **Copper** → `chat_0012`
+- **Cumberland** → `chat_0001`
+- **Cumberland Labs (Proof)** → `chat_0001`
+- **D2 Finance** → `chat_0005`
+- **DFNS** → `chat_0015`
+- **DRW** → `chat_0017`
+- **DSRV** → `chat_0015`
+- **DTCC** → `chat_0019`
+- **DV Chain (Proof)** → `chat_0004`
+- **Denex** → `chat_0007`
+- **DigiK** → `chat_0005`
+- **Distributed Lab** → `chat_0001`
+- **Efficient Frontier** → `chat_0005`
+- **Elk Capital Markets** → `chat_0005`
+- **Entropy Digital** → `chat_0005`
+- **Equitize** → `chat_0005`
+- **Ergonia** → `chat_0005`
+- **Everstake** → `chat_0007`
+- **ExperityCPA** → `chat_0005`
+- **FalconX (Proof)** → `chat_0004`
+- **Figment** → `chat_0005`
+- **Finoa** → `chat_0005`
+- **Five North** → `chat_0005`
+- **Flipside** → `chat_0005`
+- **Flowdesk** → `chat_0011`
+- **Forbole** → `chat_0001`
+- **Foundinals** → `chat_0005`
+- **GBI** → `chat_0001`
+- **GMO** → `chat_0023`
+- **GSR** → `chat_0015`
+- **Galaxy** → `chat_0007`
+- **Gateway** → `chat_0007`
+- **Gemini** → `chat_0005`
+- **Go Maestro** → `chat_0007`
+- **GoMaestro** → `chat_0007`
+- **Goldman Sachs HK** → `chat_0007`
+- **Gravity Team** → `chat_0005`
+- **Gumi** → `chat_0005`
+- **HLTF** → `chat_0010`
+- **Hashkey Cloud** → `chat_0007`
+- **Hashnote** → `chat_0007`
+- **Hashrupt** → `chat_0007`
+- **HexTrust** → `chat_0007`
+- **HydraX** → `chat_0007`
+- **IEU** → `chat_0005`
+- **IMC** → `chat_0005`
+- **Igor Gusarov** → `chat_0005`
+- **Igor Gusarov (Minter upsell)** → `chat_0005`
+- **Incypt** → `chat_0005`
+- **Incyt** → `chat_0005`
+- **Integraate** → `chat_0005`
+- **Kaiko** → `chat_0005`
+- **Kaleido** → `chat_0005`
+- **Kiln** → `chat_0005`
+- **Kiln - Reseller** → `chat_0005`
+- **Komonode** → `chat_0016`
+- **Launchnodes** → `chat_0007`
+- **Ledger Live** → `chat_0005`
+- **Levl** → `chat_0011`
+- **Liberty City Ventures** → `chat_0001`
+- **Lightshift** → `chat_0005`
+- **LinkPool** → `chat_0005`
+- **Lithium Digital** → `chat_0005`
+- **Lombard** → `chat_0001`
+- **Luganodes** → `chat_0007`
+- **Lukka** → `chat_0007`
+- **MLabs** → `chat_0001`
+- **MPCH** → `chat_0010`
+- **MSE** → `chat_0015`
+- **Meria** → `chat_0005`
+- **Mintera** → `chat_0005`
+- **Mintify** → `chat_0005`
+- **Modulo Finance** → `chat_0005`
+- **Much** → `chat_0010`
+- **Nansen** → `chat_0007`
+- **Nara** → `chat_0007`
+- **Neo Genesis** → `chat_0005`
+- **Neo genesis** → `chat_0005`
+- **Nethermind** → `chat_0005`
+- **Next Finance Tech** → `chat_0005`
+- **Node Fortress** → `chat_0015`
+- **Node Run** → `chat_0016`
+- **NodeMonsters** → `chat_0015`
+- **Noders** → `chat_0015`
+- **Noderun -** → `chat_0016`
+- **Nodes Guru** → `chat_0015`
+- **Nodes.Guru** → `chat_0015`
+- **North Investments** → `chat_0005`
+- **Notabene** → `chat_0001`
+- **Nova Prime** → `chat_0005`
+- **OKX Validator** → `chat_0005`
+- **Obsidian** → `chat_0001`
+- **Obsidian -** → `chat_0001`
+- **Omakase** → `chat_0007`
+- **Open Block** → `chat_0001`
+- **OpenBlock Ventures** → `chat_0001`
+- **P-OPS Team** → `chat_0007`
+- **P2P** → `chat_0012`
+- **Palladium** → `chat_0005`
+- **Particula** → `chat_0005`
+- **Path Rock** → `chat_0007`
+- **Path rock** → `chat_0007`
+- **Pier Two** → `chat_0005`
+- **PixelPlex** → `chat_0005`
+- **Polynom Labs** → `chat_0001`
+- **Primrose** → `chat_0005`
+- **Proof Reseller** → `chat_0004`
+- **QCP** → `chat_0012`
+- **Quantstamp** → `chat_0007`
+- **RBCx** → `chat_0001`
+- **Red Stone** → `chat_0015`
+- **RedStone** → `chat_0015`
+- **Redstone** → `chat_0015`
+- **Register Labs** → `chat_0001`
+- **Republic** → `chat_0001`
+- **Round13** → `chat_0007`
+- **Rwa.xyz** → `chat_0007`
+- **STS** → `chat_0015`
+- **Selini** → `chat_0005`
+- **Send.it** → `chat_0005`
+- **Send.it — Minter License** → `chat_0005`
+- **StakeCraft** → `chat_0007`
+- **Susquehanna (SIG)** → `chat_0005`
+- **T-Rize** → `chat_0005`
+- **Tall Oak Midstream** → `chat_0005`
+- **Tall Oak Midstream - Minter** → `chat_0005`
+- **Tenkai** → `chat_0005`
+- **Texture Capital** → `chat_0005`
+- **The Tie** → `chat_0005`
+- **Thetanuts** → `chat_0007`
+- **Tradeweb** → `chat_0001`
+- **Traffic Infrastructure/ TI DeFi** → `chat_0005`
+- **Trakx** → `chat_0007`
+- **Trakx Minter** → `chat_0005`
+- **Twinstake** → `chat_0005`
+- **Ubyx** → `chat_0001`
+- **Unlock It** → `chat_0001`
+- **Unlock It -- Minter Upsell** → `chat_0001`
+- **Validation Cloud** → `chat_0005`
+- **Vigil Markets (Nuveaux Trading)** → `chat_0005`
+- **Vigil Markets -** → `chat_0005`
+- **Waterdrip** → `chat_0005`
+- **XBTO** → `chat_0001`
+- **Xlabs** → `chat_0001`
+- **Zeconomy** → `chat_0016`
+- **Zodia** → `chat_0005`
+- **imperator** → `chat_0005`
+- **rwa.xyz** → `chat_0007`
+- **xLabs** → `chat_0001`
+
+## Companies without Telegram Data
+
+
+## Next Steps
+1. Parse Telegram data for matched companies
+2. Integrate with commission calculations
+3. Update stage detection for Telegram messages
+4. Compare commission splits with and without Telegram data

@@ -1,0 +1,427 @@
+[
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1746021214.756649",
+        "client_msg_id": "b72b8eb1-c5b1-4ae0-aa19-bb5b6653f5b8",
+        "text": "Hello, Digital Asset team!\n\nWe need some some help with the preapproval reset flow for CantonCoin. More details in the thread ...",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746021214.756649",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1746026976.285739",
+        "reply_users": [
+            "U06TMPD96M8",
+            "U07MUJ34JQ0"
+        ],
+        "replies": [
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1746021247.414079"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1746022922.834309"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1746023173.787729"
+            },
+            {
+                "user": "U06TMPD96M8",
+                "ts": "1746023252.620159"
+            },
+            {
+                "user": "U07MUJ34JQ0",
+                "ts": "1746026976.285739"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qqn3T",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello, Digital Asset team!\n\nWe need some some help with the preapproval reset flow for CantonCoin. More details in the thread ..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1746021247.414079",
+        "client_msg_id": "c9cecd5c-bede-4322-9862-babba9128a89",
+        "text": "We have some parties whose preapprovals expired now after 3 months of being created, as expected. Our preapproval reset flow did the following:\n\n1. Try to setup again the preapproval by calling `setup-proposal`:\n```<https:\/\/canton-mainnet-wallet.kube.mainnet-ldn.boople.co\/api\/validator\/v0\/admin\/external-party\/setup-proposal> &lt;~~~ {\"user_party_id\":\"23d169c2-0909-4c70-81d1-1922de6febaa::12209cbda8303ae9d08a455b5b95c28334d34de9b83f246da56fcb9dc7ddfccac89c\"}```\nThis failed with:\n```{\"error\":\"TransferPreapproval contract already exists: ContractId(004eea13aa1c2812703bb3b3512f0a8da5a85a551220246505340310d6c18c10b2ca10122032c81b5db086bb871ef80fb0a155fb0f6ec9f1efdba9245ad0bfaf99078be4b7)\"}```\n2. As the error in point 1 was expected, we recovered by calling `prepare-accept` with the same `contractId`:\n\n```<https:\/\/canton-mainnet-wallet.kube.mainnet-ldn.boople.co\/api\/validator\/v0\/admin\/external-party\/setup-proposal\/prepare-accept> &lt;~~~ {\"contract_id\":\"004eea13aa1c2812703bb3b3512f0a8da5a85a551220246505340310d6c18c10b2ca10122032c81b5db086bb871ef80fb0a155fb0f6ec9f1efdba9245ad0bfaf99078be4b7\",\"user_party_id\":\"23d169c2-0909-4c70-81d1-1922de6febaa::12209cbda8303ae9d08a455b5b95c28334d34de9b83f246da56fcb9dc7ddfccac89c\"}```\nBut this failed with\n```404 Not Found - {\"error\":\"No ExternalPartySetupProposal contract found for 23d169c2-0909-4c70-81d1-1922de6febaa::12209cbda830...\"}```\nWhat is wrong in our flow? Thanks in advance",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746021214.756649",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9BXPn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We have some parties whose preapprovals expired now after 3 months of being created, as expected. Our preapproval reset flow did the following:\n\n1. Try to setup again the preapproval by calling "
+                            },
+                            {
+                                "type": "text",
+                                "text": "setup-proposal",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ":\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/canton-mainnet-wallet.kube.mainnet-ldn.boople.co\/api\/validator\/v0\/admin\/external-party\/setup-proposal"
+                            },
+                            {
+                                "type": "text",
+                                "text": " <~~~ {\"user_party_id\":\"23d169c2-0909-4c70-81d1-1922de6febaa::12209cbda8303ae9d08a455b5b95c28334d34de9b83f246da56fcb9dc7ddfccac89c\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThis failed with:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "{\"error\":\"TransferPreapproval contract already exists: ContractId(004eea13aa1c2812703bb3b3512f0a8da5a85a551220246505340310d6c18c10b2ca10122032c81b5db086bb871ef80fb0a155fb0f6ec9f1efdba9245ad0bfaf99078be4b7)\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n2. As the error in point 1 was expected, we recovered by calling "
+                            },
+                            {
+                                "type": "text",
+                                "text": "prepare-accept",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " with the same "
+                            },
+                            {
+                                "type": "text",
+                                "text": "contractId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ":\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/canton-mainnet-wallet.kube.mainnet-ldn.boople.co\/api\/validator\/v0\/admin\/external-party\/setup-proposal\/prepare-accept"
+                            },
+                            {
+                                "type": "text",
+                                "text": " <~~~ {\"contract_id\":\"004eea13aa1c2812703bb3b3512f0a8da5a85a551220246505340310d6c18c10b2ca10122032c81b5db086bb871ef80fb0a155fb0f6ec9f1efdba9245ad0bfaf99078be4b7\",\"user_party_id\":\"23d169c2-0909-4c70-81d1-1922de6febaa::12209cbda8303ae9d08a455b5b95c28334d34de9b83f246da56fcb9dc7ddfccac89c\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nBut this failed with\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "404 Not Found - {\"error\":\"No ExternalPartySetupProposal contract found for 23d169c2-0909-4c70-81d1-1922de6febaa::12209cbda830...\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nWhat is wrong in our flow? Thanks in advance"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1746022922.834309",
+        "client_msg_id": "fafd2578-e809-4645-930b-67b18c905fe3",
+        "text": "Ah, we thought it required manual intervention. We had a mechanism in place that would go through this flow automatically when the expiration time was hit. Ok, then we will revert that and check it works as expected. Thank you!",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746021214.756649",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/NTZB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ah, we thought it required manual intervention. We had a mechanism in place that would go through this flow automatically when the expiration time was hit. Ok, then we will revert that and check it works as expected. Thank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1746023173.787729",
+        "edited": {
+            "user": "U06TMPD96M8",
+            "ts": "1746023189.000000"
+        },
+        "client_msg_id": "18c99a60-d74c-425d-8193-4ff09ea85ea1",
+        "text": "What is the functionality\/purpose of the expiration time if it is reset automatically? It's a bit confusing from our perspective",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746021214.756649",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gvbMD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "What is the functionality\/purpose of the expiration time if it is reset automatically? It's a bit confusing from our perspective"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1746023252.620159",
+        "client_msg_id": "b00968fb-de40-4cb2-93ab-202c177e28da",
+        "text": "I see :+1:",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746021214.756649",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0FR6N",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I see "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "+1",
+                                "unicode": "1f44d"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U07MUJ34JQ0",
+        "type": "message",
+        "ts": "1746026976.285739",
+        "client_msg_id": "fdcfa9dc-1c11-473d-9f8f-039ade3b6cb9",
+        "text": "Keep:\n&gt; preapprovals should get autorenewed when they expire so you shouldn't have to do anything manually. \n&gt; looks to me like renewal worked fine\n&gt; \n&gt; there is a fee of $1\/year per preapproval paid out of the validator operator wallet. On each renewal that amount is burnt.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T07LSPYDRT4",
+        "source_team": "T07LSPYDRT4",
+        "user_profile": {
+            "avatar_hash": "gd42683d1cd6",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d42683d1cd6de81338326a75f7e18ab5.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-72.png",
+            "first_name": "Digital",
+            "real_name": "Digital Asset Support for GSF Operations",
+            "display_name": "Digital Asset GSF Contributions (Wayne Collier)",
+            "team": "T07LSPYDRT4",
+            "name": "wayne.collier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1746021214.756649",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "k0M7v",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Keep:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "preapprovals should get autorenewed when they expire so you shouldn't have to do anything manually. \nlooks to me like renewal worked fine\n\nthere is a fee of $1\/year per preapproval paid out of the validator operator wallet. On each renewal that amount is burnt."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

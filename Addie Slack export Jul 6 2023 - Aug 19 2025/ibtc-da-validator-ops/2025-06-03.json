@@ -1,0 +1,254 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748962499.054399",
+        "client_msg_id": "a8ebc5a9-b34f-440a-a53f-5cc4fad74858",
+        "text": "Hey all!\n\nQuestion about authentication. It might be more Catalyst specific, but I'm still interested in your opinion. :pray:\n\nI have successfully set up a new Keycloak client for an Attestor. I set up a new Party &amp; User on the Participant node.\n\nI was struggling to make the token valid due to Wrong Audience error (I was following the default steps in the docs for the aud field) -- then I noticed that our actual Participant uses an env var for AUTH_AUDIENCE, that is `some_wallet_ui_api_endpoint` . So I changed the `aud` field to that, and now it works.\n\nWhich is great! But I do wonder why\/how this works? :smile: The wallet ui is a distinct app. Is this normal, that I use that as the pass-through audience for ledger_api requests unrelated to the wallet_ui? And if not, how would the participant be configured for _multiple_ auth audiences that represent distinct apps? Or maybe it should never be the wallet_ui, catalyst is just sort of hardcode-configured (and it shouldnt?)\n\nThank you!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748962499.054399",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1748962788.065379",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748962788.065379"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6QTIa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey all!\n\nQuestion about authentication. It might be more Catalyst specific, but I'm still interested in your opinion. "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray",
+                                "unicode": "1f64f"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nI have successfully set up a new Keycloak client for an Attestor. I set up a new Party & User on the Participant node.\n\nI was struggling to make the token valid due to Wrong Audience error (I was following the default steps in the docs for the aud field) -- then I noticed that our actual Participant uses an env var for AUTH_AUDIENCE, that is "
+                            },
+                            {
+                                "type": "text",
+                                "text": "some_wallet_ui_api_endpoint",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " . So I changed the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "aud",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " field to that, and now it works.\n\nWhich is great! But I do wonder why\/how this works? "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile",
+                                "unicode": "1f604"
+                            },
+                            {
+                                "type": "text",
+                                "text": " The wallet ui is a distinct app. Is this normal, that I use that as the pass-through audience for ledger_api requests unrelated to the wallet_ui? And if not, how would the participant be configured for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "multiple",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " auth audiences that represent distinct apps? Or maybe it should never be the wallet_ui, catalyst is just sort of hardcode-configured (and it shouldnt?)\n\nThank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "I also bring another small fun update, our rust backend code is running full flow green integration tests :partying_face:",
+        "files": [
+            {
+                "id": "F08V11XP762",
+                "created": 1748962572,
+                "timestamp": 1748962572,
+                "name": "Screenshot_2025-06-03_at_12.40.25.png",
+                "title": "Screenshot_2025-06-03_at_12.40.25.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 55910,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08V11XP762\/screenshot_2025-06-03_at_12.40.25.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08V11XP762\/download\/screenshot_2025-06-03_at_12.40.25.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08V11XP762-c5f8cd91a2\/screenshot_2025-06-03_at_12.40.25_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08V11XP762-c5f8cd91a2\/screenshot_2025-06-03_at_12.40.25_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08V11XP762-c5f8cd91a2\/screenshot_2025-06-03_at_12.40.25_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 108,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08V11XP762-c5f8cd91a2\/screenshot_2025-06-03_at_12.40.25_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 144,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08V11XP762-c5f8cd91a2\/screenshot_2025-06-03_at_12.40.25_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08V11XP762-c5f8cd91a2\/screenshot_2025-06-03_at_12.40.25_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 216,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08V11XP762-c5f8cd91a2\/screenshot_2025-06-03_at_12.40.25_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 240,
+                "original_w": 821,
+                "original_h": 246,
+                "thumb_tiny": "AwAOADClk+tGTRxSdelMAPPWkpcGkoAKKKKAP\/\/Z",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08V11XP762\/screenshot_2025-06-03_at_12.40.25.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08V11XP762-e8c1c60531",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GOC2N",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I also bring another small fun update, our rust backend code is running full flow green integration tests "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "partying_face",
+                                "unicode": "1f973"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1748962578.773049",
+        "client_msg_id": "2120a116-a0a1-4c63-a885-7e965c25bd6f",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "reactions": [
+            {
+                "name": "tada",
+                "users": [
+                    "U03HMUTQ5F0"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1748962788.065379",
+        "edited": {
+            "user": "U088UV6MKFE",
+            "ts": "1748962809.000000"
+        },
+        "client_msg_id": "f18fc2a2-60b2-4047-91a9-02af6520fdf0",
+        "text": "Or maybe that is literally just a string comparison for the aud field, so it could be anything as long as its the same?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1748962499.054399",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "K9xnn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Or maybe that is literally just a string comparison for the aud field, so it could be anything as long as its the same?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

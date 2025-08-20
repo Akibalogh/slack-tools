@@ -1,0 +1,485 @@
+[
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1747302210.646839",
+        "client_msg_id": "5b2cea84-9ec6-40a4-aed6-435597871d7e",
+        "text": "Hi team. Is there a way to obtain the `offset` in which a transaction was `prepared` from the payload of the endpoint `v2\/interactive-submission\/execute`? For example by decoding the `preparedTransaction` with the Daml scala library? I need it in order to use it as the `beginExclusive` parameter in the completions API.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747061719.738329",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6w7yZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi team. Is there a way to obtain the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "offset",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " in which a transaction was "
+                            },
+                            {
+                                "type": "text",
+                                "text": "prepared",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from the payload of the endpoint "
+                            },
+                            {
+                                "type": "text",
+                                "text": "v2\/interactive-submission\/execute",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "? For example by decoding the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "preparedTransaction",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " with the Daml scala library? I need it in order to use it as the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "beginExclusive",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " parameter in the completions API."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1747302448.166569",
+        "client_msg_id": "a86f4473-ce86-465d-a447-31bc9c8263cc",
+        "text": "That's what I do, but the thing is that our call to send the transaction must be idempotent. If I do the same call a day later it won't return the same result, because if I get the ledger offset after the submission was already done, that ledger offset won't bring any result on the Completions API",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747061719.738329",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gTbe4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That's what I do, but the thing is that our call to send the transaction must be idempotent. If I do the same call a day later it won't return the same result, because if I get the ledger offset after the submission was already done, that ledger offset won't bring any result on the Completions API"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1747302497.702599",
+        "client_msg_id": "73db5427-282d-491c-8745-a3738fb27701",
+        "text": "So I'm wondering if there is a way to get the offset from the prepared transaction itself",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747061719.738329",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KBxo1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So I'm wondering if there is a way to get the offset from the prepared transaction itself"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1747302742.476759",
+        "edited": {
+            "user": "U06TMPD96M8",
+            "ts": "1747302764.000000"
+        },
+        "client_msg_id": "2fd6c914-0826-47fa-826f-5961bce94e79",
+        "text": "Would it be possible to add the `submissionId` as a parameter to the Completions API?",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747061719.738329",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AY7Va",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Would it be possible to add the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "submissionId",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " as a parameter to the Completions API?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1747302903.737629",
+        "client_msg_id": "83a1ad05-b485-478e-a176-524ad71c902f",
+        "text": "yes",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747061719.738329",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IB8ze",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1747304035.866579",
+        "client_msg_id": "0326ffed-7b8f-4d32-96c0-8c347b46a227",
+        "text": "We will solve it by storing this ledger offset in the database. I just wanted to double check if there was an \"stateless\" way to achieve this before.",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747061719.738329",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CppTC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We will solve it by storing this ledger offset in the database. I just wanted to double check if there was an \"stateless\" way to achieve this before."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "UEHLS0JUB"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1747304341.121989",
+        "client_msg_id": "8725eb27-11ca-4498-b3e3-f9161d1f463a",
+        "text": "thanks for the answers as always!",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747061719.738329",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4FE8l",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks for the answers as always!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1747315183.609459",
+        "client_msg_id": "06c4fba5-9cac-4757-80eb-33a360a64aee",
+        "text": "Could you please help me understand the `DeduplicationPeriod` parameter of the `\/v2\/interactive-submission\/execute` endpoint? it also comes in the response of the `completions` endpoint, so what it would mean in that context as well, please",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747061719.738329",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yNQRT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Could you please help me understand the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "DeduplicationPeriod",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " parameter of the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/v2\/interactive-submission\/execute",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " endpoint? it also comes in the response of the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "completions",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " endpoint, so what it would mean in that context as well, please"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TMPD96M8",
+        "type": "message",
+        "ts": "1747315424.274789",
+        "client_msg_id": "9910420d-5280-470d-a78f-07b660e5739e",
+        "text": "A side note: Currently, when we try to re-send a transaction that was already sent, we are getting `An error occurred. Please contact the operator and inquire about the request &lt;no-correlation-id&gt; with tid &lt;no-tid&gt;` as the error message. Could this be adjusted so it mentions that the transaction is duplicated? it would be so much easier for us this way to handle it",
+        "team": "T05FWTX7PMG",
+        "user_team": "E02KFSNH6CV",
+        "source_team": "E02KFSNH6CV",
+        "user_profile": {
+            "avatar_hash": "1b61ead93771",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-17\/6978368722243_1b61ead93771209ec770_72.jpg",
+            "first_name": "Thelma",
+            "real_name": "Thelma Balbuena",
+            "display_name": "Thelma Balbuena",
+            "team": "E02KFSNH6CV",
+            "name": "thelma.balbuena",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747061719.738329",
+        "parent_user_id": "U06TMPD96M8",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+mpSM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "A side note: Currently, when we try to re-send a transaction that was already sent, we are getting "
+                            },
+                            {
+                                "type": "text",
+                                "text": "An error occurred. Please contact the operator and inquire about the request <no-correlation-id> with tid <no-tid>",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " as the error message. Could this be adjusted so it mentions that the transaction is duplicated? it would be so much easier for us this way to handle it"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

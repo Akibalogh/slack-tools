@@ -1,0 +1,1835 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752497226.093599",
+        "edited": {
+            "user": "U088UV6MKFE",
+            "ts": "1752497571.000000"
+        },
+        "client_msg_id": "e2a33a36-f75c-462b-bbb0-486bf4f6cef6",
+        "text": "gm!\n\nThanks <@UEHLS0JUB> for the review, I just noticed it. Will read carefully.\n\nHowever I tried running the governance onboarding steps on actual DevNet.\n• I successfully created UserServiceRequest and ProviderServiceRequests, and it got accepted\n• I could issue decentralized credentials after this, from rust, very cool\n• However, when I tried to issue and accept a registrar credential within the same choice, then call RegistrarServiceRequest_Accept, I get\n```Credential missing for holder [cbtc-network::12202a83c6f4082217c175e29bc53da5f2703ba2675778ab99217a5a881a949203ff] for requirements: [PartyCredentialRequirement {issuer = 'cbtc-network::12202a83c6f4082217c175e29bc53da5f2703ba2675778ab99217a5a881a949203ff', requiredClaims = [(\\\\\\\"hasRegistryRole\\\\\\\",\\\\\\\"Registrar\\\\\\\")]}]\\\"```\nSo it seems the credential offer\/accept did not go through in the same step (wonder why it didnt blow up at that step in the code then?)\n\nrelevant code: <https:\/\/github.com\/DLC-link\/canton\/blob\/3745edfbd332677fb5199f1eb90cdfd46d05bf11\/daml\/governance\/daml\/CBTC\/Governance.daml#L163>\n\n~I also notice, that in my daml tests, I have control over the `operator` actions,  and I explicitly set these cred requirements in this line: <https:\/\/github.com\/DLC-link\/canton\/blob\/3745edfbd332677fb5199f1eb90cdfd46d05bf11\/daml\/test\/daml\/CBTC\/UtilityOnboarding.daml#L47>~\n~But obviously in DevNet, I don't have control over how the providerConfiguration is actually set?~\n\nThanks! :pray:",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "reply_count": 25,
+        "reply_users_count": 1,
+        "latest_reply": "1752511169.292349",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752497649.440299"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752497793.534329"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752497801.192029"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752499225.904839"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752499916.781859"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752499992.653099"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752500149.462159"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752502509.861609"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752502962.346959"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752503458.970759"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752503464.945639"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752503800.574899"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752503893.629819"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752504318.254849"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752506034.452209"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752506541.259309"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752507317.786369"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752507344.613439"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752507616.919299"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752510710.289099"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752510725.695949"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752510749.547039"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752510810.338269"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752511130.775329"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1752511169.292349"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "z24DK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "gm!\n\nThanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " for the review, I just noticed it. Will read carefully.\n\nHowever I tried running the governance onboarding steps on actual DevNet.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I successfully created UserServiceRequest and ProviderServiceRequests, and it got accepted"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I could issue decentralized credentials after this, from rust, very cool"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "However, when I tried to issue and accept a registrar credential within the same choice, then call RegistrarServiceRequest_Accept, I get"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Credential missing for holder [cbtc-network::12202a83c6f4082217c175e29bc53da5f2703ba2675778ab99217a5a881a949203ff] for requirements: [PartyCredentialRequirement {issuer = 'cbtc-network::12202a83c6f4082217c175e29bc53da5f2703ba2675778ab99217a5a881a949203ff', requiredClaims = [(\\\\\\\"hasRegistryRole\\\\\\\",\\\\\\\"Registrar\\\\\\\")]}]\\\""
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So it seems the credential offer\/accept did not go through in the same step (wonder why it didnt blow up at that step in the code then?)\n\nrelevant code: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton\/blob\/3745edfbd332677fb5199f1eb90cdfd46d05bf11\/daml\/governance\/daml\/CBTC\/Governance.daml#L163"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "I also notice, that in my daml tests, I have control over the ",
+                                "style": {
+                                    "strike": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "operator",
+                                "style": {
+                                    "strike": true,
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " actions,  and I explicitly set these cred requirements in this line: ",
+                                "style": {
+                                    "strike": true
+                                }
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton\/blob\/3745edfbd332677fb5199f1eb90cdfd46d05bf11\/daml\/test\/daml\/CBTC\/UtilityOnboarding.daml#L47",
+                                "style": {
+                                    "strike": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "But obviously in DevNet, I don't have control over how the providerConfiguration is actually set?",
+                                "style": {
+                                    "strike": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nThanks! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray",
+                                "unicode": "1f64f"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752497649.440299",
+        "client_msg_id": "6b37dada-a58c-4eda-89de-b4a65be4a05d",
+        "text": "hmmm i do notice a weird line,\n`claims = [Claim with subject = \"registrar\", property = \"hasRegistryRole\"; value = \"Registrar\"]` that \"registrar\" in quotes seems like a bug, investigating",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6y2Mk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hmmm i do notice a weird line,\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "claims = [Claim with subject = \"registrar\", property = \"hasRegistryRole\"; value = \"Registrar\"]",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " that \"registrar\" in quotes seems like a bug, investigating"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752497793.534329",
+        "client_msg_id": "86ac9768-4591-4c00-87b5-ace3e8148ad5",
+        "text": "it probably should be `partyToText registrar`",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "d2Thd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "it probably should be "
+                            },
+                            {
+                                "type": "text",
+                                "text": "partyToText registrar",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752497801.192029",
+        "client_msg_id": "ee9ec3f8-ba3d-4694-8100-9bccc7215a9f",
+        "text": "good opportunity to test contract upgrades!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "e\/9sn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "good opportunity to test contract upgrades!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752499225.904839",
+        "client_msg_id": "135663f6-9545-4a5c-a6c0-b2c0ab99b2d7",
+        "text": "Let me change this topic to be about contract upgrades. :smile:\n\nI have uploaded a new version of the governance DAR to DevNet, for all participants, it is a semver patch version higher.\n\nWe fetch in rust by fetching Active Contracts for `#cbtc-governance:CBTC.Governance:CBTCGovernanceRules`\n\nIs there anything else I should do? Does this new contract need to be migrated to? Or once they have it, it should automatically use the 'latest' one? Or do I need to run through the relevant bits of the Bootstrapping, where I set members, etc?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LCUBl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Let me change this topic to be about contract upgrades. "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile",
+                                "unicode": "1f604"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nI have uploaded a new version of the governance DAR to DevNet, for all participants, it is a semver patch version higher.\n\nWe fetch in rust by fetching Active Contracts for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "#cbtc-governance:CBTC.Governance:CBTCGovernanceRules",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nIs there anything else I should do? Does this new contract need to be migrated to? Or once they have it, it should automatically use the 'latest' one? Or do I need to run through the relevant bits of the Bootstrapping, where I set members, etc?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752499916.781859",
+        "client_msg_id": "89ef0b31-69f0-42dd-b2d1-9e8e0ef6e831",
+        "text": "Thanks. I do use package names everywhere. But I still fetch the old in \/active-contracts, does an action first need to happen on it successfully, for it to roll over? At least according to createdEvent.templateId, I see the old packageId returned",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "m7jdK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks. I do use package names everywhere. But I still fetch the old in \/active-contracts, does an action first need to happen on it successfully, for it to roll over? At least according to createdEvent.templateId, I see the old packageId returned"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752499992.653099",
+        "client_msg_id": "0a2cccb7-1580-4e02-8afc-fad13f9a42e9",
+        "text": "I see, thanks, i'll try",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "I32X9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I see, thanks, i'll try"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752500149.462159",
+        "client_msg_id": "9c90b113-e0e9-4656-a6ac-24947e04da8e",
+        "text": "I actually do use regular templateIds fetched from createdEvent fields, every time I use one as a disclosed contract. But then I take it those should all be template-by-names as well everywhere",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dKbHY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I actually do use regular templateIds fetched from createdEvent fields, every time I use one as a disclosed contract. But then I take it those should all be template-by-names as well everywhere"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752502509.861609",
+        "client_msg_id": "41a5fcbe-00f8-4657-9bef-cfcd794e2c29",
+        "text": "ok",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "luWBi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ok"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752502962.346959",
+        "client_msg_id": "f5ebb7e5-c9da-48fb-8e3d-293f2138caa6",
+        "text": "got it",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lFHmQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "got it"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752503458.970759",
+        "client_msg_id": "5d8bf6d7-818f-48ad-8379-fc57aaf06d57",
+        "text": "I think so! I am still trying out the holder service request acceptance, but it seems utility onboarding is green",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/vYIt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think so! I am still trying out the holder service request acceptance, but it seems utility onboarding is green"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752503464.945639",
+        "client_msg_id": "8fdcee30-f771-4faa-ae1a-c93c50d31af5",
+        "text": "upgrade worked",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "647B0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "upgrade worked"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752503800.574899",
+        "client_msg_id": "b163fc02-bc3d-4f17-b228-ae727c2f45a4",
+        "text": "Related question, since its so close - where in the Utility UI can I see my holdings such as CBTC?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KHZTZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Related question, since its so close - where in the Utility UI can I see my holdings such as CBTC?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752503893.629819",
+        "client_msg_id": "e1b64d56-0c0b-457c-9c0a-73789103e3f2",
+        "text": "Im only asking cause I don't see anything like it :slightly_smiling_face: But maybe once I accept this HolderService Request it will show up",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fbnhx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Im only asking cause I don't see anything like it "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            },
+                            {
+                                "type": "text",
+                                "text": " But maybe once I accept this HolderService Request it will show up"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "cool i guess its after Holder onboarding",
+        "files": [
+            {
+                "id": "F0959L105GX",
+                "created": 1752504306,
+                "timestamp": 1752504306,
+                "name": "Screenshot 2025-07-14 at 16.45.05.png",
+                "title": "Screenshot 2025-07-14 at 16.45.05.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 59205,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F0959L105GX\/screenshot_2025-07-14_at_16.45.05.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F0959L105GX\/download\/screenshot_2025-07-14_at_16.45.05.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0959L105GX-1d9437cadb\/screenshot_2025-07-14_at_16.45.05_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0959L105GX-1d9437cadb\/screenshot_2025-07-14_at_16.45.05_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0959L105GX-1d9437cadb\/screenshot_2025-07-14_at_16.45.05_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 147,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0959L105GX-1d9437cadb\/screenshot_2025-07-14_at_16.45.05_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 196,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0959L105GX-1d9437cadb\/screenshot_2025-07-14_at_16.45.05_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0959L105GX-1d9437cadb\/screenshot_2025-07-14_at_16.45.05_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 294,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0959L105GX-1d9437cadb\/screenshot_2025-07-14_at_16.45.05_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 327,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0959L105GX-1d9437cadb\/screenshot_2025-07-14_at_16.45.05_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 392,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F0959L105GX-1d9437cadb\/screenshot_2025-07-14_at_16.45.05_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 418,
+                "original_w": 1604,
+                "original_h": 655,
+                "thumb_tiny": "AwATADDSAxSHfjjH406igBn7z0X86fRRQAYoxRRQAUUUUAFFFFABRRRQB\/\/Z",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F0959L105GX\/screenshot_2025-07-14_at_16.45.05.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F0959L105GX-93ed00c373",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "q90gO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "cool i guess its after Holder onboarding"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1752504318.254849",
+        "client_msg_id": "0dbcb8bb-9205-4b1a-b95e-a40969c59efd",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752506034.452209",
+        "client_msg_id": "8bb8de38-63e7-4a65-aec6-9870e526c7a0",
+        "text": "Hmmm, encountering `CONTRACT_NOT_FOUND`, when I pass in a credential Cid for Accept HolderService request, even though it says cache hit...\nI can also query this contract from the ACS of the dec-party, that's how I got it's CId in the first place, so, odd\n\n```2025-07-14T15:08:29.438Z[DEBUG]{\"@timestamp\":\"2025-07-14T15:08:29.438Z\",\"@version\":\"1\",\"message\":\"Cache hit for ContractId(003321b4ce81ce241667b2cd241f6489cea4c9243dacd72b0f2db9326d4e69cb6cca1112206becd59cc9f3e4b7e2aeaee898072114a276085d394ede9653904ec5664c5efc) -&gt; Active(Versioned(LanguageVersion(V2,LanguageMinorVersion(1)),ContractInstance(utility-credential-v0,77df4e7b980c12de438d7b052141a762215fae790d81f71179c8fb534beb68f7:Utility.Credential.V0.Credential:Credential,ValueRecord(None,ImmArray((None,ValuePart...\",\"logger_name\":\"c.d.c.p.s.c.StateCache:participant=participant\",\"thread_name\":\"canton-env-ec-33\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"fbc8e8d4bd94e561ba97318e67287bce\"}\n\n2025-07-14T15:08:29.439Z[DEBUG]{\"@timestamp\":\"2025-07-14T15:08:29.439Z\",\"@version\":\"1\",\"message\":\"Phase 1: Pass 1 of topology-aware package selection command processing failed before routing. Aborting submission. Error: DamlLf(Interpretation(DamlException(ContractNotFound(ContractId(003321b4ce81ce241667b2cd241f6489cea4c9243dacd72b0f2db9326d4e69cb6cca1112206becd59cc9f3e4b7e2aeaee898072114a276085d394ede9653904ec5664c5efc)),None))\",\"logger_name\":\"c.d.c.p.a.e.TopologyAwareCommandExecutor:participant=participant\",\"thread_name\":\"canton-env-ec-81\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"fbc8e8d4bd94e561ba97318e67287bce\"}\n\n2025-07-14T15:08:29.439Z[INFO]{\"@timestamp\":\"2025-07-14T15:08:29.439Z\",\"@version\":\"1\",\"message\":\"CONTRACT_NOT_FOUND(11,8f08ac29): Contract could not be found with id 003321b4ce81ce241667b2cd241f6489cea4c9243dacd72b0f2db9326d4e69cb6cca1112206becd59cc9f3e4b7e2aeaee898072114a276085d394ede9653904ec5664c5efc\",\"logger_name\":\"c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant\",\"thread_name\":\"canton-env-ec-81\",\"level\":\"INFO\",\"level_value\":20000,\"location\":\"RejectionGenerators.scala:93\",\"error-code\":\"CONTRACT_NOT_FOUND(11,8f08ac29)\",\"trace-id\":\"fbc8e8d4bd94e561ba97318e67287bce\",\"participant\":\"'participant'\",\"commands\":\"{readAs: [], deduplicationPeriod: {duration: 'PT30S'}, submittedAt: '2025-07-14T15:08:29.430010Z', submissionId: '8f08ac29-1b27-4f19-8ba8-cd387400f62b', actAs: ['attestor-1::1220fa8543db6c66fe3a55b1f180c8dfc7f876265c76684fbc1d35d89e02c8aafe8e'], commandId: 'ZoSeGDtR8FdwLnKm', userId: 'CoordinatorUser', workflowId: }\"}```\nHow is this possible? Hard to imagine a sync issue as every party in this flow is on one node, except the operator I guess",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CyoHp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hmmm, encountering "
+                            },
+                            {
+                                "type": "text",
+                                "text": "CONTRACT_NOT_FOUND",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", when I pass in a credential Cid for Accept HolderService request, even though it says cache hit...\nI can also query this contract from the ACS of the dec-party, that's how I got it's CId in the first place, so, odd\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "2025-07-14T15:08:29.438Z[DEBUG]{\"@timestamp\":\"2025-07-14T15:08:29.438Z\",\"@version\":\"1\",\"message\":\"Cache hit for ContractId(003321b4ce81ce241667b2cd241f6489cea4c9243dacd72b0f2db9326d4e69cb6cca1112206becd59cc9f3e4b7e2aeaee898072114a276085d394ede9653904ec5664c5efc) -> Active(Versioned(LanguageVersion(V2,LanguageMinorVersion(1)),ContractInstance(utility-credential-v0,77df4e7b980c12de438d7b052141a762215fae790d81f71179c8fb534beb68f7:Utility.Credential.V0.Credential:Credential,ValueRecord(None,ImmArray((None,ValuePart...\",\"logger_name\":\"c.d.c.p.s.c.StateCache:participant=participant\",\"thread_name\":\"canton-env-ec-33\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"fbc8e8d4bd94e561ba97318e67287bce\"}\n\n2025-07-14T15:08:29.439Z[DEBUG]{\"@timestamp\":\"2025-07-14T15:08:29.439Z\",\"@version\":\"1\",\"message\":\"Phase 1: Pass 1 of topology-aware package selection command processing failed before routing. Aborting submission. Error: DamlLf(Interpretation(DamlException(ContractNotFound(ContractId(003321b4ce81ce241667b2cd241f6489cea4c9243dacd72b0f2db9326d4e69cb6cca1112206becd59cc9f3e4b7e2aeaee898072114a276085d394ede9653904ec5664c5efc)),None))\",\"logger_name\":\"c.d.c.p.a.e.TopologyAwareCommandExecutor:participant=participant\",\"thread_name\":\"canton-env-ec-81\",\"level\":\"DEBUG\",\"level_value\":10000,\"trace-id\":\"fbc8e8d4bd94e561ba97318e67287bce\"}\n\n2025-07-14T15:08:29.439Z[INFO]{\"@timestamp\":\"2025-07-14T15:08:29.439Z\",\"@version\":\"1\",\"message\":\"CONTRACT_NOT_FOUND(11,8f08ac29): Contract could not be found with id 003321b4ce81ce241667b2cd241f6489cea4c9243dacd72b0f2db9326d4e69cb6cca1112206becd59cc9f3e4b7e2aeaee898072114a276085d394ede9653904ec5664c5efc\",\"logger_name\":\"c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant\",\"thread_name\":\"canton-env-ec-81\",\"level\":\"INFO\",\"level_value\":20000,\"location\":\"RejectionGenerators.scala:93\",\"error-code\":\"CONTRACT_NOT_FOUND(11,8f08ac29)\",\"trace-id\":\"fbc8e8d4bd94e561ba97318e67287bce\",\"participant\":\"'participant'\",\"commands\":\"{readAs: [], deduplicationPeriod: {duration: 'PT30S'}, submittedAt: '2025-07-14T15:08:29.430010Z', submissionId: '8f08ac29-1b27-4f19-8ba8-cd387400f62b', actAs: ['attestor-1::1220fa8543db6c66fe3a55b1f180c8dfc7f876265c76684fbc1d35d89e02c8aafe8e'], commandId: 'ZoSeGDtR8FdwLnKm', userId: 'CoordinatorUser', workflowId: }\"}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "How is this possible? Hard to imagine a sync issue as every party in this flow is on one node, except the operator I guess"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "thread_broadcast",
+        "user": "U088UV6MKFE",
+        "thread_ts": "1752497226.093599",
+        "root": {
+            "user": "U088UV6MKFE",
+            "type": "message",
+            "ts": "1752497226.093599",
+            "edited": {
+                "user": "U088UV6MKFE",
+                "ts": "1752497571.000000"
+            },
+            "client_msg_id": "e2a33a36-f75c-462b-bbb0-486bf4f6cef6",
+            "text": "gm!\n\nThanks <@UEHLS0JUB> for the review, I just noticed it. Will read carefully.\n\nHowever I tried running the governance onboarding steps on actual DevNet.\n• I successfully created UserServiceRequest and ProviderServiceRequests, and it got accepted\n• I could issue decentralized credentials after this, from rust, very cool\n• However, when I tried to issue and accept a registrar credential within the same choice, then call RegistrarServiceRequest_Accept, I get\n```Credential missing for holder [cbtc-network::12202a83c6f4082217c175e29bc53da5f2703ba2675778ab99217a5a881a949203ff] for requirements: [PartyCredentialRequirement {issuer = 'cbtc-network::12202a83c6f4082217c175e29bc53da5f2703ba2675778ab99217a5a881a949203ff', requiredClaims = [(\\\\\\\"hasRegistryRole\\\\\\\",\\\\\\\"Registrar\\\\\\\")]}]\\\"```\nSo it seems the credential offer\/accept did not go through in the same step (wonder why it didnt blow up at that step in the code then?)\n\nrelevant code: <https:\/\/github.com\/DLC-link\/canton\/blob\/3745edfbd332677fb5199f1eb90cdfd46d05bf11\/daml\/governance\/daml\/CBTC\/Governance.daml#L163>\n\n~I also notice, that in my daml tests, I have control over the `operator` actions,  and I explicitly set these cred requirements in this line: <https:\/\/github.com\/DLC-link\/canton\/blob\/3745edfbd332677fb5199f1eb90cdfd46d05bf11\/daml\/test\/daml\/CBTC\/UtilityOnboarding.daml#L47>~\n~But obviously in DevNet, I don't have control over how the providerConfiguration is actually set?~\n\nThanks! :pray:",
+            "team": "T05FWTX7PMG",
+            "thread_ts": "1752497226.093599",
+            "reply_count": 25,
+            "reply_users_count": 1,
+            "latest_reply": "1752511169.292349",
+            "reply_users": [
+                "U088UV6MKFE"
+            ],
+            "replies": [
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752497649.440299"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752497793.534329"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752497801.192029"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752499225.904839"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752499916.781859"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752499992.653099"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752500149.462159"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752502509.861609"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752502962.346959"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752503458.970759"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752503464.945639"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752503800.574899"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752503893.629819"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752504318.254849"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752506034.452209"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752506541.259309"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752507317.786369"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752507344.613439"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752507616.919299"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752510710.289099"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752510725.695949"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752510749.547039"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752510810.338269"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752511130.775329"
+                },
+                {
+                    "user": "U088UV6MKFE",
+                    "ts": "1752511169.292349"
+                }
+            ],
+            "is_locked": false,
+            "subscribed": false,
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "z24DK",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "gm!\n\nThanks "
+                                },
+                                {
+                                    "type": "user",
+                                    "user_id": "UEHLS0JUB"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": " for the review, I just noticed it. Will read carefully.\n\nHowever I tried running the governance onboarding steps on actual DevNet.\n"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "rich_text_list",
+                            "elements": [
+                                {
+                                    "type": "rich_text_section",
+                                    "elements": [
+                                        {
+                                            "type": "text",
+                                            "text": "I successfully created UserServiceRequest and ProviderServiceRequests, and it got accepted"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "rich_text_section",
+                                    "elements": [
+                                        {
+                                            "type": "text",
+                                            "text": "I could issue decentralized credentials after this, from rust, very cool"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "rich_text_section",
+                                    "elements": [
+                                        {
+                                            "type": "text",
+                                            "text": "However, when I tried to issue and accept a registrar credential within the same choice, then call RegistrarServiceRequest_Accept, I get"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "style": "bullet",
+                            "indent": 0,
+                            "border": 0
+                        },
+                        {
+                            "type": "rich_text_preformatted",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "Credential missing for holder [cbtc-network::12202a83c6f4082217c175e29bc53da5f2703ba2675778ab99217a5a881a949203ff] for requirements: [PartyCredentialRequirement {issuer = 'cbtc-network::12202a83c6f4082217c175e29bc53da5f2703ba2675778ab99217a5a881a949203ff', requiredClaims = [(\\\\\\\"hasRegistryRole\\\\\\\",\\\\\\\"Registrar\\\\\\\")]}]\\\""
+                                }
+                            ],
+                            "border": 0
+                        },
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "So it seems the credential offer\/accept did not go through in the same step (wonder why it didnt blow up at that step in the code then?)\n\nrelevant code: "
+                                },
+                                {
+                                    "type": "link",
+                                    "url": "https:\/\/github.com\/DLC-link\/canton\/blob\/3745edfbd332677fb5199f1eb90cdfd46d05bf11\/daml\/governance\/daml\/CBTC\/Governance.daml#L163"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "\n\n"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "I also notice, that in my daml tests, I have control over the ",
+                                    "style": {
+                                        "strike": true
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "operator",
+                                    "style": {
+                                        "strike": true,
+                                        "code": true
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": " actions,  and I explicitly set these cred requirements in this line: ",
+                                    "style": {
+                                        "strike": true
+                                    }
+                                },
+                                {
+                                    "type": "link",
+                                    "url": "https:\/\/github.com\/DLC-link\/canton\/blob\/3745edfbd332677fb5199f1eb90cdfd46d05bf11\/daml\/test\/daml\/CBTC\/UtilityOnboarding.daml#L47",
+                                    "style": {
+                                        "strike": true
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "\n"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "But obviously in DevNet, I don't have control over how the providerConfiguration is actually set?",
+                                    "style": {
+                                        "strike": true
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "\n\nThanks! "
+                                },
+                                {
+                                    "type": "emoji",
+                                    "name": "pray",
+                                    "unicode": "1f64f"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "message",
+        "ts": "1752506541.259309",
+        "client_msg_id": "f7be3bf0-b5fb-4bd3-9c42-266e3feb4cbe",
+        "text": "Let me rephrase and summarize this better, thanks if you have any ideas :pray:\n\n• I offered a credential to a user from the decparty, with the correct claims\n• user accepted it\n• user clicks Request HolderService, with the decparty as the Provider\n• All good\n• I attempt to trigger the acceptance of this request, which takes as args several contractIds, including the credential we just issued&amp;accepted\n• I can fetch all of these cIds, and provide them for this call\n• but the request fails with it not 'finding' the credentialCId at execution, that we just fetched! And can still fetch. So who is not finding it?",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fECu0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Let me rephrase and summarize this better, thanks if you have any ideas "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray",
+                                "unicode": "1f64f"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I offered a credential to a user from the decparty, with the correct claims"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "user accepted it"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "user clicks Request HolderService, with the decparty as the Provider"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "All good"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I attempt to trigger the acceptance of this request, which takes as args several contractIds, including the credential we just issued&accepted"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I can fetch all of these cIds, and provide them for this call"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "but the request fails with it not 'finding' the credentialCId at execution, that we just fetched! And can still fetch. So who is not finding it?"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "I know its truncated a bit, will this do?",
+        "files": [
+            {
+                "id": "F095K3ZNKB5",
+                "created": 1752507305,
+                "timestamp": 1752507305,
+                "name": "participant_logs",
+                "title": "participant_logs",
+                "mimetype": "text\/plain",
+                "filetype": "text",
+                "pretty_type": "Plain Text",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 6976908,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F095K3ZNKB5\/participant_logs?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F095K3ZNKB5\/download\/participant_logs?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F095K3ZNKB5\/participant_logs",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F095K3ZNKB5-c8c97e2029",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kAU0e",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I know its truncated a bit, will this do?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1752507317.786369",
+        "client_msg_id": "3e428ae6-b3bb-4b3b-83a7-ae60bfa31843",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752507344.613439",
+        "client_msg_id": "e76af0db-bec5-4dc9-b0b3-b99befb3c467",
+        "text": "example traceid: 1961fa52038a6500609c4eb0baa8d2e3",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BJ9s5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "example traceid: 1961fa52038a6500609c4eb0baa8d2e3"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752507616.919299",
+        "client_msg_id": "1c3c9b50-c93c-48e6-83d4-67526c5b9f3b",
+        "text": "&gt; Are you passing in the credential as an explicitly disclosed contract?\nI think this might be it. I am passing in all other things, except that",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3veVy",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Are you passing in the credential as an explicitly disclosed contract?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think this might be it. I am passing in all other things, except that"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752510710.289099",
+        "client_msg_id": "8fa53b5f-5db8-44c0-8d34-f0cb054318b6",
+        "text": "hmm now that you mention this, the decparty is obviously a stakeholder, they issued the credential",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "C2vns",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hmm now that you mention this, the decparty is obviously a stakeholder, they issued the credential"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752510725.695949",
+        "client_msg_id": "2a5da3bb-830b-41f9-a2ac-8047ffc398cf",
+        "text": "and we actAs the decparty",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YCCc2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and we actAs the decparty"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752510749.547039",
+        "client_msg_id": "6bc04e72-bae8-4b9a-a978-3c4f546fb9d3",
+        "text": "i will try passing it in, just in case, but i think we should not need to",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "r7ORk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "i will try passing it in, just in case, but i think we should not need to"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752510810.338269",
+        "client_msg_id": "ec8f1988-2908-4978-a69e-8165a90cc658",
+        "text": "busted!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LrGOP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "busted!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "It worked! Thanks a lot",
+        "files": [
+            {
+                "id": "F095S9G93MJ",
+                "created": 1752511122,
+                "timestamp": 1752511122,
+                "name": "Screenshot 2025-07-14 at 18.38.39.png",
+                "title": "Screenshot 2025-07-14 at 18.38.39.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 65923,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F095S9G93MJ\/screenshot_2025-07-14_at_18.38.39.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F095S9G93MJ\/download\/screenshot_2025-07-14_at_18.38.39.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F095S9G93MJ-99851e0b40\/screenshot_2025-07-14_at_18.38.39_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F095S9G93MJ-99851e0b40\/screenshot_2025-07-14_at_18.38.39_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F095S9G93MJ-99851e0b40\/screenshot_2025-07-14_at_18.38.39_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 171,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F095S9G93MJ-99851e0b40\/screenshot_2025-07-14_at_18.38.39_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 228,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F095S9G93MJ-99851e0b40\/screenshot_2025-07-14_at_18.38.39_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F095S9G93MJ-99851e0b40\/screenshot_2025-07-14_at_18.38.39_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 341,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F095S9G93MJ-99851e0b40\/screenshot_2025-07-14_at_18.38.39_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 379,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F095S9G93MJ-99851e0b40\/screenshot_2025-07-14_at_18.38.39_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 455,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F095S9G93MJ-99851e0b40\/screenshot_2025-07-14_at_18.38.39_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 485,
+                "original_w": 1365,
+                "original_h": 647,
+                "thumb_tiny": "AwAWADDSAoyecYpRRQAzc\/8AcH\/fVKpY\/eAH0OadRQAnFLgUUUAFFFFABRRRQAUUUUAf\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F095S9G93MJ\/screenshot_2025-07-14_at_18.38.39.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F095S9G93MJ-9115205853",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5nd1m",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It worked! Thanks a lot"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1752511130.775329",
+        "client_msg_id": "598e158b-9cbc-45ae-a839-c3245f6d777a",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1752511169.292349",
+        "client_msg_id": "cab6d499-bd2d-4003-b172-a6be42200e88",
+        "text": "what a trip",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752497226.093599",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0JEcR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "what a trip"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

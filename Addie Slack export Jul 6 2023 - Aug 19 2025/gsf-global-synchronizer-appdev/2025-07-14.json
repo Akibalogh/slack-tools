@@ -1,0 +1,521 @@
+[
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1752506669.507789",
+        "edited": {
+            "user": "U012DRCTM61",
+            "ts": "1752506770.000000"
+        },
+        "client_msg_id": "bada7c1e-d407-4e15-b8f7-e92f2f67d28a",
+        "text": "is there a way to fetch any party's active amulets contract ids without their authorization? I know they come through the bulk data endpoint for updates in exercise results, but maybe a more direct way to query it?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752506669.507789",
+        "reply_count": 10,
+        "reply_users_count": 1,
+        "latest_reply": "1752591284.768319",
+        "reply_users": [
+            "U012DRCTM61"
+        ],
+        "replies": [
+            {
+                "user": "U012DRCTM61",
+                "ts": "1752506841.449879"
+            },
+            {
+                "user": "U012DRCTM61",
+                "ts": "1752506897.953989"
+            },
+            {
+                "user": "U012DRCTM61",
+                "ts": "1752507045.676129"
+            },
+            {
+                "user": "U012DRCTM61",
+                "ts": "1752507807.492689"
+            },
+            {
+                "user": "U012DRCTM61",
+                "ts": "1752507862.081989"
+            },
+            {
+                "user": "U012DRCTM61",
+                "ts": "1752508240.150119"
+            },
+            {
+                "user": "U012DRCTM61",
+                "ts": "1752508249.731209"
+            },
+            {
+                "user": "U012DRCTM61",
+                "ts": "1752587235.866669"
+            },
+            {
+                "user": "U012DRCTM61",
+                "ts": "1752591276.091519"
+            },
+            {
+                "user": "U012DRCTM61",
+                "ts": "1752591284.768319"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lk04t",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "is there a way to fetch any party's active amulets contract ids without their authorization? I know they come through the bulk data endpoint for updates in exercise results, but maybe a more direct way to query it?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U03JLTQU1CJ"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1752506841.449879",
+        "client_msg_id": "10c99acd-a2e8-485c-b7e8-225df208794f",
+        "text": "is this just the balance or also contract ids?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752506669.507789",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JmAl0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "is this just the balance or also contract ids?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1752506897.953989",
+        "edited": {
+            "user": "U012DRCTM61",
+            "ts": "1752506913.000000"
+        },
+        "client_msg_id": "083da568-2ac7-447b-9fc0-2ef459d072c2",
+        "text": "to fetch active contracts requires jwt as the user - even though this is technically public data. I need this for amulet inputs to a transfer so has to be relative live",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752506669.507789",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3KZiX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "to fetch active contracts requires jwt as the user - even though this is technically public data. I need this for amulet inputs to a transfer so has to be relative live"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1752507045.676129",
+        "edited": {
+            "user": "U012DRCTM61",
+            "ts": "1752507464.000000"
+        },
+        "client_msg_id": "4c2461ce-17f0-4f83-85fb-f0888988697d",
+        "text": "great thanks, this seems to at least be an option to try with the holdings\/state endpoint, though this is snapshot record times, so maybe a bit dealyed like start of the hour instead of past round",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752506669.507789",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zHI4z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "great thanks, this seems to at least be an option to try with the holdings\/state endpoint, though this is snapshot record times, so maybe a bit dealyed like start of the hour instead of past round"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1752507807.492689",
+        "client_msg_id": "65859620-3d7e-4d45-92e0-4ba9072d055a",
+        "text": "in the \/updates (which we already ingest to our database), would i just be looking for the latest events that include createdAmulets as the result, and accumulate them until sufficient balance is reached for the transfer?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752506669.507789",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FNOmq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "in the \/updates (which we already ingest to our database), would i just be looking for the latest events that include createdAmulets as the result, and accumulate them until sufficient balance is reached for the transfer?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1752507862.081989",
+        "client_msg_id": "95e0cb93-aa95-4ca1-b62e-457bff9ef383",
+        "text": "my worry is that i'll never be fast enough to avoid the race condition of the amulet already being spent, even if i poll and retry a few times",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752506669.507789",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vyC0v",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "my worry is that i'll never be fast enough to avoid the race condition of the amulet already being spent, even if i poll and retry a few times"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1752508240.150119",
+        "edited": {
+            "user": "U012DRCTM61",
+            "ts": "1752508326.000000"
+        },
+        "client_msg_id": "f3b52316-d4f3-4b56-801a-3728cb77aa1d",
+        "text": "trying to execute an automated transfer (not triggered manually by end user in a ui) from a centralized backend assuming it's tucked within a choice that already has all signatures to perform the transfer",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752506669.507789",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TptM4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "trying to execute an automated transfer (not triggered manually by end user in a ui) from a centralized backend assuming it's tucked within a choice that already has all signatures to perform the transfer"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U012DRCTM61",
+        "type": "message",
+        "ts": "1752508249.731209",
+        "client_msg_id": "761d66eb-c7c3-484f-90ff-e71f86705f4c",
+        "text": "so the bottleneck is having the amulet inputs",
+        "team": "T05FWTX7PMG",
+        "user_team": "T0120EZF35M",
+        "source_team": "T0120EZF35M",
+        "user_profile": {
+            "avatar_hash": "355d668ed46e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-03-03\/8540513358466_355d668ed46e2141ccc2_72.png",
+            "first_name": "Ben",
+            "real_name": "Ben Latz",
+            "display_name": "",
+            "team": "T0120EZF35M",
+            "name": "blatz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752506669.507789",
+        "parent_user_id": "U012DRCTM61",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SqzD3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "so the bottleneck is having the amulet inputs"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05KJ4MUMU2",
+        "type": "message",
+        "ts": "1752531926.405599",
+        "client_msg_id": "40ecebe3-7eac-4273-8cb3-0c66ead84e50",
+        "text": "Is there a way to get the offset value for the ledger at specific timestamp in the past?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "gddacf9ce459",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/ddacf9ce459da7afa973d344cbdb5bc1.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "Matt",
+            "real_name": "Matt Franczak",
+            "display_name": "Matt",
+            "team": "T02P6LC6U01",
+            "name": "matt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752531926.405599",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1752532669.421949",
+        "reply_users": [
+            "U05KJ4MUMU2"
+        ],
+        "replies": [
+            {
+                "user": "U05KJ4MUMU2",
+                "ts": "1752532669.421949"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "u1OgP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is there a way to get the offset value for the ledger at specific timestamp in the past?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U05KJ4MUMU2",
+        "type": "message",
+        "ts": "1752532669.421949",
+        "client_msg_id": "02d17005-cc90-4afe-a164-4dee742c4f10",
+        "text": "thanks for the info!  I didn't know about the potential deviation from chronological ordering around migrations",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "gddacf9ce459",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/ddacf9ce459da7afa973d344cbdb5bc1.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "Matt",
+            "real_name": "Matt Franczak",
+            "display_name": "Matt",
+            "team": "T02P6LC6U01",
+            "name": "matt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752531926.405599",
+        "parent_user_id": "U05KJ4MUMU2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "H6cjE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks for the info!  I didn't know about the potential deviation from chronological ordering around migrations"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

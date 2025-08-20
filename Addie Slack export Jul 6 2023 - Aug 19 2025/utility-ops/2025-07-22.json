@@ -1,0 +1,751 @@
+[
+    {
+        "user": "U0657NCJTL6",
+        "type": "message",
+        "ts": "1753167986.449579",
+        "client_msg_id": "e8b508c6-210b-471b-8d00-4e6219ffe23d",
+        "text": "<@U02KJ7PKHN2> have any idea?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TG7HQBZHC",
+        "source_team": "TG7HQBZHC",
+        "user_profile": {
+            "avatar_hash": "23a8ab0e9c1f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-13\/6182401578549_23a8ab0e9c1f2dcedf48_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Zipnik",
+            "display_name": "alex.zipnik",
+            "team": "TG7HQBZHC",
+            "name": "alex.zipnik",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753098456.781499",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "90ol2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U02KJ7PKHN2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " have any idea?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753169366.318569",
+        "client_msg_id": "2ddb5996-b6e4-490f-9e8b-1b87901c9ba1",
+        "text": "hey Alex",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753098456.781499",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Sn6M\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hey Alex"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753169382.949569",
+        "client_msg_id": "d01fa9cf-4c9d-4a8d-9b82-038848e4a19c",
+        "text": "I believe that `filterByAnyParty` only works if the token is granted `CanReadAsAnyParty`",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753098456.781499",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CIYax",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I believe that "
+                            },
+                            {
+                                "type": "text",
+                                "text": "filterByAnyParty",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " only works if the token is granted "
+                            },
+                            {
+                                "type": "text",
+                                "text": "CanReadAsAnyParty",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753169394.490109",
+        "client_msg_id": "870c477c-789d-45b0-a2a4-a1c1642da6da",
+        "text": "in general that's not the case, so you should use a `filterByParty` instead",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753098456.781499",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Y4DZN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "in general that's not the case, so you should use a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "filterByParty",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " instead"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0657NCJTL6",
+        "type": "message",
+        "ts": "1753174221.885219",
+        "client_msg_id": "d5f80084-4408-472c-a4bb-da25350223f0",
+        "text": "I see.\nIn json-api v1 I could just query and get all contracts and extract any data I need, including any party ID that I need.\nWhat you are basically saying is that in v2 I have to know a party ID in advance to be able to do any query?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TG7HQBZHC",
+        "source_team": "TG7HQBZHC",
+        "user_profile": {
+            "avatar_hash": "23a8ab0e9c1f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-13\/6182401578549_23a8ab0e9c1f2dcedf48_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Zipnik",
+            "display_name": "alex.zipnik",
+            "team": "TG7HQBZHC",
+            "name": "alex.zipnik",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753098456.781499",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8MKPD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I see.\nIn json-api v1 I could just query and get all contracts and extract any data I need, including any party ID that I need.\nWhat you are basically saying is that in v2 I have to know a party ID in advance to be able to do any query?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1753174333.473069",
+        "client_msg_id": "5236f4cf-d251-46b1-ba0c-9f45a992f02b",
+        "text": "yes, that's my understanding",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753098456.781499",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oWdF2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes, that's my understanding"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "UUT0L5W2J",
+        "type": "message",
+        "ts": "1753199008.661419",
+        "client_msg_id": "3b1da1ad-a116-41cd-88d2-60a561d44f3a",
+        "text": "Hi\nWhat is changed in 0.7.4? Looks like this is the latest available version as of now",
+        "team": "T05FWTX7PMG",
+        "user_team": "TFSSVGK6F",
+        "source_team": "TFSSVGK6F",
+        "user_profile": {
+            "avatar_hash": "ef1f7e9060b7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-11-07\/4345961656321_ef1f7e9060b7d426137a_72.jpg",
+            "first_name": "Oleksii",
+            "real_name": "Oleksii Maiko",
+            "display_name": "",
+            "team": "TFSSVGK6F",
+            "name": "oleksii.maiko",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752833729.500689",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Z03Zn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi\nWhat is changed in 0.7.4? Looks like this is the latest available version as of now"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U029VP9KWFL",
+        "type": "message",
+        "ts": "1753200338.690999",
+        "client_msg_id": "122fa2ff-6e21-4af2-976f-ac029a3f75dd",
+        "text": "0.7.4 doesn't include any customer facing changes - only changes for us internally. You can take either 0.7.3 or 0.7.4 - there will be no difference for you",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "8e0e776ac91b",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-08-02\/2342246925348_8e0e776ac91bc2bf4e03_72.jpg",
+            "first_name": "David",
+            "real_name": "David Richards",
+            "display_name": "David",
+            "team": "T03T53E10",
+            "name": "david.richards",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1752833729.500689",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iVuaQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "0.7.4 doesn't include any customer facing changes - only changes for us internally. You can take either 0.7.3 or 0.7.4 - there will be no difference for you"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "thankyou",
+                "users": [
+                    "UUT0L5W2J"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U047U17D7KL",
+        "type": "message",
+        "ts": "1753211852.060279",
+        "client_msg_id": "da041787-deef-443e-9894-e35db71e2aed",
+        "text": "The endpoint <https:\/\/api.utilities.digitalasset-dev.com\/api\/utilities\/v0\/openapi> mentions an `\/api\/utilities\/v0\/operator` endpoint. For a UI-only deployment by a Utilities user, with DA as the operator, would you expect the `\/api\/utilities\/v0\/operator` endpoint to return the DA operator party?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "16aeca7859e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-10-24\/4263109753253_16aeca7859e88c51a7d5_72.png",
+            "first_name": "Wallace",
+            "real_name": "Wallace Kelly",
+            "display_name": "Wallace Kelly",
+            "team": "T03T53E10",
+            "name": "wallace.kelly",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753211852.060279",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1753212160.032789",
+        "reply_users": [
+            "U1BLSQM9Q"
+        ],
+        "replies": [
+            {
+                "user": "U1BLSQM9Q",
+                "ts": "1753212145.002939"
+            },
+            {
+                "user": "U1BLSQM9Q",
+                "ts": "1753212160.032789"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nwDzK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The endpoint "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/api.utilities.digitalasset-dev.com\/api\/utilities\/v0\/openapi"
+                            },
+                            {
+                                "type": "text",
+                                "text": " mentions an "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/api\/utilities\/v0\/operator",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " endpoint. For a UI-only deployment by a Utilities user, with DA as the operator, would you expect the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/api\/utilities\/v0\/operator",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " endpoint to return the DA operator party?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U1BLSQM9Q",
+        "type": "message",
+        "ts": "1753212145.002939",
+        "client_msg_id": "0909edd4-34a1-4c06-8dda-0091dfc42573",
+        "text": "yes, that's correct",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "83808c225147",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2017-01-05\/123405103313_83808c225147c6b8ac68_72.jpg",
+            "first_name": "Davin",
+            "real_name": "Davin K. Tanabe",
+            "display_name": "davin",
+            "team": "T03T53E10",
+            "name": "davin.tanabe",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753211852.060279",
+        "parent_user_id": "U047U17D7KL",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FQ74Y",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes, that's correct"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U1BLSQM9Q",
+        "type": "message",
+        "ts": "1753212160.032789",
+        "client_msg_id": "794de24f-c797-4387-9eef-2f9a51330ec7",
+        "text": "this endpoint is going to take the place of needing to configure UI's with the operator party",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "83808c225147",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2017-01-05\/123405103313_83808c225147c6b8ac68_72.jpg",
+            "first_name": "Davin",
+            "real_name": "Davin K. Tanabe",
+            "display_name": "davin",
+            "team": "T03T53E10",
+            "name": "davin.tanabe",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753211852.060279",
+        "parent_user_id": "U047U17D7KL",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Gzd+f",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "this endpoint is going to take the place of needing to configure UI's with the operator party"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U04BDUU197Z",
+        "type": "message",
+        "ts": "1753212975.284339",
+        "client_msg_id": "E1BAA98D-6541-4338-BC95-9B4754429163",
+        "text": "<@U0702NSFW0H> can you post that question on <#C08AP9QR7K4|validator-operations> ? This seems more like a general validator setup topic than a utility-specific one.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "c8ecd88a0ec4",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-11-21\/4388223904679_c8ecd88a0ec44f339fec_72.jpg",
+            "first_name": "Frank",
+            "real_name": "Frank Preiwuss",
+            "display_name": "Frank Preiwuss",
+            "team": "T03T53E10",
+            "name": "frank.preiwuss",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753088566.450989",
+        "parent_user_id": "U02T28BBMMX",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pZuwx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0702NSFW0H"
+                            },
+                            {
+                                "type": "text",
+                                "text": " can you post that question on "
+                            },
+                            {
+                                "type": "channel",
+                                "channel_id": "C08AP9QR7K4"
+                            },
+                            {
+                                "type": "text",
+                                "text": " ? This seems more like a general validator setup topic than a utility-specific one."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1753213014.136149",
+        "client_msg_id": "38863542-520a-4481-bbc7-f459680d6b19",
+        "text": "<https:\/\/xlabs-org.slack.com\/archives\/C08AP9QR7K4\/p1753188307394649>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1753088566.450989",
+        "parent_user_id": "U02T28BBMMX",
+        "attachments": [
+            {
+                "from_url": "https:\/\/xlabs-org.slack.com\/archives\/C08AP9QR7K4\/p1753188307394649",
+                "ts": "1753188307.394649",
+                "author_id": "U0702NSFW0H",
+                "channel_id": "C08AP9QR7K4",
+                "channel_team": "T07LSPYDRT4",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "message_blocks": [
+                    {
+                        "team": "T04LUMR33S9",
+                        "channel": "C08AP9QR7K4",
+                        "ts": "1753188307.394649",
+                        "message": {
+                            "blocks": [
+                                {
+                                    "type": "rich_text",
+                                    "block_id": "efbRs",
+                                    "elements": [
+                                        {
+                                            "type": "rich_text_section",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "hello! I'm trying to create a new party and getting "
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": "Missing required field at 'identityProviderId'",
+                                                    "style": {
+                                                        "code": true
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": "\n"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "rich_text_preformatted",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "curl -d '{\"partyIdHint\":\"Alice\"}' "
+                                                },
+                                                {
+                                                    "type": "link",
+                                                    "url": "http:\/\/PARTICIPANT\/v2\/parties"
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": "                                                                                                                                                                \nInvalid value for: body (Missing required field at 'identityProviderId')%"
+                                                }
+                                            ],
+                                            "border": 0
+                                        },
+                                        {
+                                            "type": "rich_text_section",
+                                            "elements": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Source: "
+                                                },
+                                                {
+                                                    "type": "link",
+                                                    "url": "https:\/\/docs.digitalasset-staging.com\/build\/3.3\/sdlc-howtos\/applications\/develop\/manage-daml-parties.html#how-to-create-a-new-local-party"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "id": 1,
+                "original_url": "https:\/\/xlabs-org.slack.com\/archives\/C08AP9QR7K4\/p1753188307394649",
+                "fallback": "[July 22nd, 2025 5:45 AM] andre: hello! I'm trying to create a new party and getting `Missing required field at 'identityProviderId'`\n```curl -d '{\"partyIdHint\":\"Alice\"}' <http:\/\/PARTICIPANT\/v2\/parties>                                                                                                                                                                \nInvalid value for: body (Missing required field at 'identityProviderId')%```\nSource: <https:\/\/docs.digitalasset-staging.com\/build\/3.3\/sdlc-howtos\/applications\/develop\/manage-daml-parties.html#how-to-create-a-new-local-party>",
+                "text": "hello! I'm trying to create a new party and getting `Missing required field at 'identityProviderId'`\n```curl -d '{\"partyIdHint\":\"Alice\"}' <http:\/\/PARTICIPANT\/v2\/parties>                                                                                                                                                                \nInvalid value for: body (Missing required field at 'identityProviderId')%```\nSource: <https:\/\/docs.digitalasset-staging.com\/build\/3.3\/sdlc-howtos\/applications\/develop\/manage-daml-parties.html#how-to-create-a-new-local-party>",
+                "author_name": "André Claro",
+                "author_link": "https:\/\/xlabs-org.slack.com\/team\/U0702NSFW0H",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_48.png",
+                "author_subname": "André Claro",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "team_name": "Digital Asset",
+                "footer": "Thread in Slack Conversation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "B62R2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/xlabs-org.slack.com\/archives\/C08AP9QR7K4\/p1753188307394649"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

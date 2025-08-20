@@ -1,0 +1,101 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1751727027.334899",
+        "client_msg_id": "9b21be64-1727-482b-bbd7-c030740f0b09",
+        "text": "Hi,\n\nI have successfully issued some paid credentials, however, for one party, I get `PACKAGE_SELECTION_FAILED(9,9a345b4b): No synchronizers satisfy the draft transaction topology requirements` .\n\nLooking deeper in the logs, I see this:\n`Phase 1: Pass 1 of topology-aware package selection command processing failed synchronizer routing: RoutingFailed(Generic(global-domain::1220b1431ef2...,Some packages are not known to all informees on synchronizer global-domain::1220b1431ef2...\\nParticipant [third party participant id]... has not vetted da2af36b42e3...))`\n\nWhat should I tell this third party client to do, so that it will work? Can you 'vet' an already uploaded package?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751727027.334899",
+        "reply_count": 6,
+        "reply_users_count": 1,
+        "latest_reply": "1751963127.663489",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1751872471.160999"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1751874627.603379"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1751879615.540989"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1751879854.311699"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1751960053.946189"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1751963127.663489"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7JB\/\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi,\n\nI have successfully issued some paid credentials, however, for one party, I get "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PACKAGE_SELECTION_FAILED(9,9a345b4b): No synchronizers satisfy the draft transaction topology requirements",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " .\n\nLooking deeper in the logs, I see this:\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Phase 1: Pass 1 of topology-aware package selection command processing failed synchronizer routing: RoutingFailed(Generic(global-domain::1220b1431ef2...,Some packages are not known to all informees on synchronizer global-domain::1220b1431ef2...\\nParticipant [third party participant id]... has not vetted da2af36b42e3...))",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nWhat should I tell this third party client to do, so that it will work? Can you 'vet' an already uploaded package?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

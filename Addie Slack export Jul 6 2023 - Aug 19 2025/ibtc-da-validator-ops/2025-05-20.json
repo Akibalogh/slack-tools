@@ -1,0 +1,676 @@
+[
+    {
+        "text": "Hey <@UEHLS0JUB> and team,\n\nI have good news! Rust backend IT tests are now running against the dockerized canton sandbox.\n\nThis is still with the SimpleContract, and a single registrar party, but nevertheless the core piping is now in place. I want to get back to finishing the real contracts this week, and then just swap them out.\n\nBut first! The last uncharted step is connecting the governance module and the decentralized-registrar. As mentioned before, the bootstrap script sets it all up: <https:\/\/github.com\/DLC-link\/daml-sandbox\/blob\/main\/bootstrap.sc>\n\nBut you'll note at the bottom, i still use the registrar party for setting up the instrument, the SCRules contract, etc. I think just swapping those out for `\"decentralized-party\"` won't work, right? Since the 'coordinator' user can't just `actAs` that party without the others' signatures.\n\nMight be faster to get on a call if you have the time today? Totally fine async as well though. Thank you!",
+        "files": [
+            {
+                "id": "F08T76RHURY",
+                "created": 1747730568,
+                "timestamp": 1747730568,
+                "name": "Screenshot 2025-05-19 at 23.06.35.png",
+                "title": "Screenshot 2025-05-19 at 23.06.35.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 86796,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08T76RHURY\/screenshot_2025-05-19_at_23.06.35.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08T76RHURY\/download\/screenshot_2025-05-19_at_23.06.35.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08T76RHURY-dba648a75f\/screenshot_2025-05-19_at_23.06.35_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08T76RHURY-dba648a75f\/screenshot_2025-05-19_at_23.06.35_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08T76RHURY-dba648a75f\/screenshot_2025-05-19_at_23.06.35_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 82,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08T76RHURY-dba648a75f\/screenshot_2025-05-19_at_23.06.35_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 109,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08T76RHURY-dba648a75f\/screenshot_2025-05-19_at_23.06.35_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08T76RHURY-dba648a75f\/screenshot_2025-05-19_at_23.06.35_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 164,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08T76RHURY-dba648a75f\/screenshot_2025-05-19_at_23.06.35_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 182,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08T76RHURY-dba648a75f\/screenshot_2025-05-19_at_23.06.35_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 218,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08T76RHURY-dba648a75f\/screenshot_2025-05-19_at_23.06.35_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 233,
+                "original_w": 1680,
+                "original_h": 382,
+                "thumb_tiny": "AwAKADCqc55AzSGl70ooAZxRT8D0ph60wCkoooA\/\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08T76RHURY\/screenshot_2025-05-19_at_23.06.35.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08T76RHURY-9d7d0fd17b",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bgT67",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and team,\n\nI have good news! Rust backend IT tests are now running against the dockerized canton sandbox.\n\nThis is still with the SimpleContract, and a single registrar party, but nevertheless the core piping is now in place. I want to get back to finishing the real contracts this week, and then just swap them out.\n\nBut first! The last uncharted step is connecting the governance module and the decentralized-registrar. As mentioned before, the bootstrap script sets it all up: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/daml-sandbox\/blob\/main\/bootstrap.sc"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nBut you'll note at the bottom, i still use the registrar party for setting up the instrument, the SCRules contract, etc. I think just swapping those out for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"decentralized-party\"",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " won't work, right? Since the 'coordinator' user can't just "
+                            },
+                            {
+                                "type": "text",
+                                "text": "actAs",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " that party without the others' signatures.\n\nMight be faster to get on a call if you have the time today? Totally fine async as well though. Thank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1747731109.384529",
+        "client_msg_id": "3d35e6d1-f3bc-4d22-ab4e-31ffcd800d11",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1747731109.384529",
+        "reply_count": 41,
+        "reply_users_count": 1,
+        "latest_reply": "1748246430.168359",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747821035.572899"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747823019.506209"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747829419.979109"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747829469.139969"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747829490.463599"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747829652.642399"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747829782.912119"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747829890.574099"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747832226.700869"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747832462.427249"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747836884.598749"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747836943.307259"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747837602.816199"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747840519.461669"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747902869.095129"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747910701.387599"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747910843.515749"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747910871.949209"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747910887.637419"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747910923.799999"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747910989.020039"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747911782.229559"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747913175.241129"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747913224.885409"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747913351.075619"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747915006.352479"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747915010.404639"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747915017.231439"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747915092.291399"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747915154.337959"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747915166.047859"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747915183.742749"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747921530.805039"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747921618.299419"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747922218.236149"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747922581.791569"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747924716.107179"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747926406.913729"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747926478.169529"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748246394.511879"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748246430.168359"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747731302.178279",
+        "edited": {
+            "user": "U088UV6MKFE",
+            "ts": "1747731377.000000"
+        },
+        "client_msg_id": "eb934d4b-61c6-4351-bd2f-d0db3ddd72d4",
+        "text": "Oh and another thing. I took the liberty of publishing a `canton-api-client` cargo package, so we can just install it in our project. Generated by `openapi-codegen`. Not cleaned up presentation wise, but works very well for strong typings.\n\n``` pub async fn get_ledger_end(&self) -> Result<models::GetLedgerEndResponse, CantonBIError> {\n     Ok(canton_api_client::get_v2_state_ledger_end(&self.config).await?)\n }```\n<https:\/\/crates.io\/crates\/canton-api-client>\n\nHope it's ok with you!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731302.178279",
+        "reply_count": 5,
+        "reply_users_count": 1,
+        "latest_reply": "1747819685.406679",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747731393.847339"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747731665.930499"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747742397.395219"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747747298.207819"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1747819685.406679"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uS6mL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oh and another thing. I took the liberty of publishing a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "canton-api-client",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " cargo package, so we can just install it in our project. Generated by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "openapi-codegen",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Not cleaned up presentation wise, but works very well for strong typings.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " pub async fn get_ledger_end(&self) -> Result<models::GetLedgerEndResponse, CantonBIError> {\n     Ok(canton_api_client::get_v2_state_ledger_end(&self.config).await?)\n }"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/crates.io\/crates\/canton-api-client"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nHope it's ok with you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "UEHLS0JUB",
+                    "U05FU0HPZ9T"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747731393.847339",
+        "client_msg_id": "4b926975-bf05-4bda-af20-5d64881bd1ef",
+        "text": "If it's cleaned up, could be useful for other teams in the future",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731302.178279",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RtZfU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If it's cleaned up, could be useful for other teams in the future"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747731665.930499",
+        "client_msg_id": "040ee30d-8935-421c-b434-56a8919b82eb",
+        "text": "Pretty neat: <https:\/\/docs.rs\/canton-api-client\/3.3.0-SNAPSHOT\/canton_api_client\/models\/js_commands\/struct.JsCommands.html>\n\ncodegen libs are amazing, this whole thing took like 20ms to generate",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731302.178279",
+        "parent_user_id": "U088UV6MKFE",
+        "attachments": [
+            {
+                "from_url": "https:\/\/docs.rs\/canton-api-client\/3.3.0-SNAPSHOT\/canton_api_client\/models\/js_commands\/struct.JsCommands.html",
+                "service_icon": "https:\/\/docs.rs\/favicon.ico",
+                "id": 1,
+                "original_url": "https:\/\/docs.rs\/canton-api-client\/3.3.0-SNAPSHOT\/canton_api_client\/models\/js_commands\/struct.JsCommands.html",
+                "fallback": "JsCommands in canton_api_client::models::js_commands - Rust",
+                "text": "JsCommands : A composite command that groups multiple commands together.",
+                "title": "JsCommands in canton_api_client::models::js_commands - Rust",
+                "title_link": "https:\/\/docs.rs\/canton-api-client\/3.3.0-SNAPSHOT\/canton_api_client\/models\/js_commands\/struct.JsCommands.html",
+                "service_name": "docs.rs"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hi4A4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Pretty neat: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.rs\/canton-api-client\/3.3.0-SNAPSHOT\/canton_api_client\/models\/js_commands\/struct.JsCommands.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\ncodegen libs are amazing, this whole thing took like 20ms to generate"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747742397.395219",
+        "client_msg_id": "b0f70fac-41a8-4deb-86ed-d2d36b338c9f",
+        "text": "Will do! I will clean it up first",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731302.178279",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UcFhl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Will do! I will clean it up first"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1747747298.207819",
+        "client_msg_id": "799abc18-9a92-4700-8a05-c9e19b6452c1",
+        "text": "<@U02SR6E8Z9S> Thanks!\n\nI really didn't overthink it, no custom configuration, etc, which is why it's a bit messy -- i might try again with some more deliberate effort.\n\nI just did\n`openapi-generator generate -i .\/openapi-spec.yaml -g rust -o .\/canton-api-client` where `openapi-spec.yaml` is the spec from the DA docs; and it worked no issues.\n\nTool: <https:\/\/openapi-generator.tech\/docs\/installation>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1747731302.178279",
+        "parent_user_id": "U088UV6MKFE",
+        "attachments": [
+            {
+                "from_url": "https:\/\/openapi-generator.tech\/docs\/installation",
+                "service_icon": "https:\/\/openapi-generator.tech\/img\/favicon.png",
+                "id": 1,
+                "original_url": "https:\/\/openapi-generator.tech\/docs\/installation",
+                "fallback": "CLI Installation | OpenAPI Generator",
+                "text": "There are a number of ways to use OpenAPI Generator. This page documents how to install the CLI artifact.",
+                "title": "CLI Installation | OpenAPI Generator",
+                "title_link": "https:\/\/openapi-generator.tech\/docs\/installation",
+                "service_name": "openapi-generator.tech"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PyrB6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U02SR6E8Z9S"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Thanks!\n\nI really didn't overthink it, no custom configuration, etc, which is why it's a bit messy -- i might try again with some more deliberate effort.\n\nI just did\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "openapi-generator generate -i .\/openapi-spec.yaml -g rust -o .\/canton-api-client",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " where "
+                            },
+                            {
+                                "type": "text",
+                                "text": "openapi-spec.yaml",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is the spec from the DA docs; and it worked no issues.\n\nTool: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/openapi-generator.tech\/docs\/installation"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U05FU0HPZ9T"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

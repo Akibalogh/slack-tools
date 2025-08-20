@@ -1,0 +1,182 @@
+[
+    {
+        "user": "U05FU0HPZ9T",
+        "type": "message",
+        "ts": "1743760346.614719",
+        "client_msg_id": "5776e701-89c0-4730-8e3f-fbf3047d634d",
+        "text": "Well we were internally using the d to mean ‘decentralized’ because in theory this design allows for more fungibility on the bitcoin bridge side. But let’s not expect the name dibtc to actually stick. Probably we’ll revert to calling this iBTC",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "e1b289f8d4a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-10\/5554364664692_e1b289f8d4a196bb5c14_72.png",
+            "first_name": "Jesse",
+            "real_name": "Jesse Eisenberg",
+            "display_name": "Jesse Eisenberg - Bitsafe",
+            "team": "T05FWTX7PMG",
+            "name": "jesse",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1743692477.751519",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BT7Lf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Well we were internally using the d to mean ‘decentralized’ because in theory this design allows for more fungibility on the bitcoin bridge side. But let’s not expect the name dibtc to actually stick. Probably we’ll revert to calling this iBTC"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1743762492.292249",
+        "client_msg_id": "94109cdf-a42f-430f-9285-e16207f4f880",
+        "text": "Some updates after your feedback <@UEHLS0JUB>!\n\n• going with version 2 indeed\n• after some thinking we agree its good to support address re-use by default. So one DepositAddress for a userID for nonce 0, and the ability for them to request a new one (practically increasing the nonce by exercising a choice). We keep monitoring all active ones for all users. This should not be a huge overhead without massive retail usage anyway.\n• with the change in _what triggers_ the 'withdraw' broadcast, it's indeed better to set `Processing` state on-chain first, before broadcast. Since we can calculate the btc_tx_id _before_ its broadcast, we can also write it in that request, no need for blockheight-tracking logic. This way we can also have logic for safe retries in case of crashes, since the same tx can't be broadcast twice!\nThe short term plan is that I get back to setting up local canton env today, and aim to have full-stack piercing prototyping (using the existing iBTC DARs), to gauge the scope of backend work, which we can then divide up starting next week, alongside building out the new DAML code.\n\nThanks for the feedback!",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QpvLh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Some updates after your feedback "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "going with version 2 indeed"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "after some thinking we agree its good to support address re-use by default. So one DepositAddress for a userID for nonce 0, and the ability for them to request a new one (practically increasing the nonce by exercising a choice). We keep monitoring all active ones for all users. This should not be a huge overhead without massive retail usage anyway."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "with the change in "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "what triggers",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " the 'withdraw' broadcast, it's indeed better to set "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "Processing",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " state on-chain first, before broadcast. Since we can calculate the btc_tx_id "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "before",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " its broadcast, we can also write it in that request, no need for blockheight-tracking logic. This way we can also have logic for safe retries in case of crashes, since the same tx can't be broadcast twice!"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThe short term plan is that I get back to setting up local canton env today, and aim to have full-stack piercing prototyping (using the existing iBTC DARs), to gauge the scope of backend work, which we can then divide up starting next week, alongside building out the new DAML code.\n\nThanks for the feedback!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "UEHLS0JUB"
+                ],
+                "count": 1
+            },
+            {
+                "name": "tada",
+                "users": [
+                    "U05FU0HPZ9T",
+                    "U05FZBDQ4RJ"
+                ],
+                "count": 2
+            }
+        ]
+    }
+]

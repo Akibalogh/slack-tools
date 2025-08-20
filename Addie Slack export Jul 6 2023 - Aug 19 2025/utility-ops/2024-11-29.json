@@ -1,0 +1,104 @@
+[
+    {
+        "user": "U06GRUXKVHB",
+        "type": "message",
+        "ts": "1732868137.331699",
+        "client_msg_id": "462282ad-e4a8-4e2f-b781-433fbf6ef181",
+        "text": "Sure, here's the full ingress manifest, we use alb group name to minimize the cost by using single load balancer\n```apiVersion: <http:\/\/networking.k8s.io\/v1|networking.k8s.io\/v1>\nkind: Ingress\nmetadata:\n  name: validator-ingress-utility-api\n  namespace: validator\n  annotations:\n    <http:\/\/alb.ingress.kubernetes.io\/certificate-arn|alb.ingress.kubernetes.io\/certificate-arn>: \"{{ cert_arn }}\"\n    <http:\/\/alb.ingress.kubernetes.io\/listen-ports|alb.ingress.kubernetes.io\/listen-ports>: '[{\"HTTP\": 80}, {\"HTTPS\":443}]'\n    <http:\/\/alb.ingress.kubernetes.io\/ssl-redirect|alb.ingress.kubernetes.io\/ssl-redirect>: '443'\n    <http:\/\/alb.ingress.kubernetes.io\/scheme|alb.ingress.kubernetes.io\/scheme>: internet-facing\n    <http:\/\/alb.ingress.kubernetes.io\/target-type|alb.ingress.kubernetes.io\/target-type>: ip\n    <http:\/\/alb.ingress.kubernetes.io\/group.name|alb.ingress.kubernetes.io\/group.name>: \"{{ alb_group }}\"\n    <http:\/\/alb.ingress.kubernetes.io\/healthcheck-path|alb.ingress.kubernetes.io\/healthcheck-path>: \/api\/validator\/readyz\n    <http:\/\/alb.ingress.kubernetes.io\/healthcheck-interval-seconds|alb.ingress.kubernetes.io\/healthcheck-interval-seconds>: '15'\n    <http:\/\/alb.ingress.kubernetes.io\/healthcheck-timeout-seconds|alb.ingress.kubernetes.io\/healthcheck-timeout-seconds>: '5'\n    <http:\/\/alb.ingress.kubernetes.io\/success-codes|alb.ingress.kubernetes.io\/success-codes>: '200-399'\n    <http:\/\/alb.ingress.kubernetes.io\/healthy-threshold-count|alb.ingress.kubernetes.io\/healthy-threshold-count>: '2'\n    <http:\/\/alb.ingress.kubernetes.io\/unhealthy-threshold-count|alb.ingress.kubernetes.io\/unhealthy-threshold-count>: '2'\n    <http:\/\/alb.ingress.kubernetes.io\/group.order|alb.ingress.kubernetes.io\/group.order>: '7'\nspec:\n  ingressClassName: alb\n  rules:\n    - host: \"utility.validator.{{ validator_hostname }}\"\n      http:\n        paths:\n        - path: \/api\/validator\/*\n          pathType: ImplementationSpecific\n          backend:\n            service:\n              name: validator-app\n              port:\n                number: 5003\n\n---\napiVersion: <http:\/\/networking.k8s.io\/v1|networking.k8s.io\/v1>\nkind: Ingress\nmetadata:\n  name: validator-ingress-utility-participant-api\n  namespace: validator\n  annotations:\n    <http:\/\/alb.ingress.kubernetes.io\/certificate-arn|alb.ingress.kubernetes.io\/certificate-arn>: \"{{ cert_arn }}\"\n    <http:\/\/alb.ingress.kubernetes.io\/listen-ports|alb.ingress.kubernetes.io\/listen-ports>: '[{\"HTTP\": 80}, {\"HTTPS\":443}]'\n    <http:\/\/alb.ingress.kubernetes.io\/ssl-redirect|alb.ingress.kubernetes.io\/ssl-redirect>: '443'\n    <http:\/\/alb.ingress.kubernetes.io\/scheme|alb.ingress.kubernetes.io\/scheme>: internet-facing\n    <http:\/\/alb.ingress.kubernetes.io\/target-type|alb.ingress.kubernetes.io\/target-type>: ip\n    <http:\/\/alb.ingress.kubernetes.io\/group.name|alb.ingress.kubernetes.io\/group.name>: \"{{ alb_group }}\"\n    <http:\/\/alb.ingress.kubernetes.io\/healthcheck-path|alb.ingress.kubernetes.io\/healthcheck-path>: \/api\/json-api\/readyz\n    <http:\/\/alb.ingress.kubernetes.io\/healthcheck-interval-seconds|alb.ingress.kubernetes.io\/healthcheck-interval-seconds>: '15'\n    <http:\/\/alb.ingress.kubernetes.io\/healthcheck-timeout-seconds|alb.ingress.kubernetes.io\/healthcheck-timeout-seconds>: '5'\n    <http:\/\/alb.ingress.kubernetes.io\/success-codes|alb.ingress.kubernetes.io\/success-codes>: '200-399'\n    <http:\/\/alb.ingress.kubernetes.io\/healthy-threshold-count|alb.ingress.kubernetes.io\/healthy-threshold-count>: '2'\n    <http:\/\/alb.ingress.kubernetes.io\/unhealthy-threshold-count|alb.ingress.kubernetes.io\/unhealthy-threshold-count>: '2'\n    <http:\/\/alb.ingress.kubernetes.io\/group.order|alb.ingress.kubernetes.io\/group.order>: '8'\nspec:\n  ingressClassName: alb\n  rules:\n    - host: \"utility.validator.{{ validator_hostname }}\"\n      http:\n        paths:\n          - path: \/api\/json-api\/*\n            pathType: ImplementationSpecific\n            backend:\n              service:\n                name: nginx-reverse-proxy\n                port:\n                  number: 80\n\n---\napiVersion: <http:\/\/networking.k8s.io\/v1|networking.k8s.io\/v1>\nkind: Ingress\nmetadata:\n  name: validator-ingress-utility\n  namespace: validator\n  annotations:\n    <http:\/\/alb.ingress.kubernetes.io\/certificate-arn|alb.ingress.kubernetes.io\/certificate-arn>: \"{{ cert_arn }}\"\n    <http:\/\/alb.ingress.kubernetes.io\/listen-ports|alb.ingress.kubernetes.io\/listen-ports>: '[{\"HTTP\": 80}, {\"HTTPS\":443}]'\n    <http:\/\/alb.ingress.kubernetes.io\/ssl-redirect|alb.ingress.kubernetes.io\/ssl-redirect>: '443'\n    <http:\/\/alb.ingress.kubernetes.io\/scheme|alb.ingress.kubernetes.io\/scheme>: internet-facing\n    <http:\/\/alb.ingress.kubernetes.io\/target-type|alb.ingress.kubernetes.io\/target-type>: ip\n    <http:\/\/alb.ingress.kubernetes.io\/group.name|alb.ingress.kubernetes.io\/group.name>: \"{{ alb_group }}\"\n    <http:\/\/alb.ingress.kubernetes.io\/group.order|alb.ingress.kubernetes.io\/group.order>: '9'\nspec:\n  ingressClassName: alb\n  rules:\n    - host: \"utility.validator.{{ validator_hostname }}\"\n      http:\n        paths:\n          - path: \/*\n            pathType: ImplementationSpecific\n            backend:\n              service:\n                name: utility-ui\n                port:\n                  number: 8080```",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBL1G8KHT",
+        "source_team": "TBL1G8KHT",
+        "user_profile": {
+            "avatar_hash": "fe525cefcf05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-05-13\/8874936574327_fe525cefcf056db1b910_72.jpg",
+            "first_name": "Bahri",
+            "real_name": "Bahri Rizaldi",
+            "display_name": "Bahri Rizaldi",
+            "team": "TBL1G8KHT",
+            "name": "bahri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1732852973.522369",
+        "parent_user_id": "U06GRUXKVHB",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "B474w",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sure, here's the full ingress manifest, we use alb group name to minimize the cost by using single load balancer\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "apiVersion: networking.k8s.io\/v1\nkind: Ingress\nmetadata:\n  name: validator-ingress-utility-api\n  namespace: validator\n  annotations:\n    alb.ingress.kubernetes.io\/certificate-arn: \"{{ cert_arn }}\"\n    alb.ingress.kubernetes.io\/listen-ports: '[{\"HTTP\": 80}, {\"HTTPS\":443}]'\n    alb.ingress.kubernetes.io\/ssl-redirect: '443'\n    alb.ingress.kubernetes.io\/scheme: internet-facing\n    alb.ingress.kubernetes.io\/target-type: ip\n    alb.ingress.kubernetes.io\/group.name: \"{{ alb_group }}\"\n    alb.ingress.kubernetes.io\/healthcheck-path: \/api\/validator\/readyz\n    alb.ingress.kubernetes.io\/healthcheck-interval-seconds: '15'\n    alb.ingress.kubernetes.io\/healthcheck-timeout-seconds: '5'\n    alb.ingress.kubernetes.io\/success-codes: '200-399'\n    alb.ingress.kubernetes.io\/healthy-threshold-count: '2'\n    alb.ingress.kubernetes.io\/unhealthy-threshold-count: '2'\n    alb.ingress.kubernetes.io\/group.order: '7'\nspec:\n  ingressClassName: alb\n  rules:\n    - host: \"utility.validator.{{ validator_hostname }}\"\n      http:\n        paths:\n        - path: \/api\/validator\/*\n          pathType: ImplementationSpecific\n          backend:\n            service:\n              name: validator-app\n              port:\n                number: 5003\n\n---\napiVersion: networking.k8s.io\/v1\nkind: Ingress\nmetadata:\n  name: validator-ingress-utility-participant-api\n  namespace: validator\n  annotations:\n    alb.ingress.kubernetes.io\/certificate-arn: \"{{ cert_arn }}\"\n    alb.ingress.kubernetes.io\/listen-ports: '[{\"HTTP\": 80}, {\"HTTPS\":443}]'\n    alb.ingress.kubernetes.io\/ssl-redirect: '443'\n    alb.ingress.kubernetes.io\/scheme: internet-facing\n    alb.ingress.kubernetes.io\/target-type: ip\n    alb.ingress.kubernetes.io\/group.name: \"{{ alb_group }}\"\n    alb.ingress.kubernetes.io\/healthcheck-path: \/api\/json-api\/readyz\n    alb.ingress.kubernetes.io\/healthcheck-interval-seconds: '15'\n    alb.ingress.kubernetes.io\/healthcheck-timeout-seconds: '5'\n    alb.ingress.kubernetes.io\/success-codes: '200-399'\n    alb.ingress.kubernetes.io\/healthy-threshold-count: '2'\n    alb.ingress.kubernetes.io\/unhealthy-threshold-count: '2'\n    alb.ingress.kubernetes.io\/group.order: '8'\nspec:\n  ingressClassName: alb\n  rules:\n    - host: \"utility.validator.{{ validator_hostname }}\"\n      http:\n        paths:\n          - path: \/api\/json-api\/*\n            pathType: ImplementationSpecific\n            backend:\n              service:\n                name: nginx-reverse-proxy\n                port:\n                  number: 80\n\n---\napiVersion: networking.k8s.io\/v1\nkind: Ingress\nmetadata:\n  name: validator-ingress-utility\n  namespace: validator\n  annotations:\n    alb.ingress.kubernetes.io\/certificate-arn: \"{{ cert_arn }}\"\n    alb.ingress.kubernetes.io\/listen-ports: '[{\"HTTP\": 80}, {\"HTTPS\":443}]'\n    alb.ingress.kubernetes.io\/ssl-redirect: '443'\n    alb.ingress.kubernetes.io\/scheme: internet-facing\n    alb.ingress.kubernetes.io\/target-type: ip\n    alb.ingress.kubernetes.io\/group.name: \"{{ alb_group }}\"\n    alb.ingress.kubernetes.io\/group.order: '9'\nspec:\n  ingressClassName: alb\n  rules:\n    - host: \"utility.validator.{{ validator_hostname }}\"\n      http:\n        paths:\n          - path: \/*\n            pathType: ImplementationSpecific\n            backend:\n              service:\n                name: utility-ui\n                port:\n                  number: 8080"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U036PEBBNMC",
+        "type": "message",
+        "ts": "1732871323.436569",
+        "edited": {
+            "user": "U036PEBBNMC",
+            "ts": "1732871339.000000"
+        },
+        "client_msg_id": "8A6B7B94-7B94-4700-A445-99CFE528F251",
+        "text": "i suddenly have some issue with cert manager that not issue the cert for utility domain. I am trying to resolve it.",
+        "team": "T05FWTX7PMG",
+        "user_team": "TPZA6MDB5",
+        "source_team": "TPZA6MDB5",
+        "user_profile": {
+            "avatar_hash": "803467c98ba9",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2022-03-18\/3257255417413_803467c98ba9c7d76f91_72.jpg",
+            "first_name": "Ken",
+            "real_name": "Ken Le",
+            "display_name": "Ken Le",
+            "team": "TPZA6MDB5",
+            "name": "ken_le",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1732775259.479979",
+        "parent_user_id": "U036PEBBNMC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6HLs5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "i suddenly "
+                            },
+                            {
+                                "type": "text",
+                                "text": "have"
+                            },
+                            {
+                                "type": "text",
+                                "text": " some issue with cert manager that not issue the cert for utility domain. I am trying to resolve it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

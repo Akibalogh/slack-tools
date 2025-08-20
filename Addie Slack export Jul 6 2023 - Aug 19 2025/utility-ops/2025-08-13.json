@@ -1,0 +1,583 @@
+[
+    {
+        "user": "U02KJ7PKHN2",
+        "type": "message",
+        "ts": "1755070678.446789",
+        "client_msg_id": "a4f34bb6-e9e6-4424-97ec-fdbd9e029fb7",
+        "text": "good morning Alex!\n\nI'm looking into your issue, but could not manage to finish the investigation yesterday.\n\nI hope I'll be able to come back to you on this tomorrow.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "4e78a4bb88b1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-11-01\/2671109471619_4e78a4bb88b1d5b788a8_72.jpg",
+            "first_name": "Matteo",
+            "real_name": "Matteo Limberto",
+            "display_name": "Matteo Limberto",
+            "team": "T03T53E10",
+            "name": "matteo.limberto",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754920567.348139",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zsXHk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "good morning Alex!\n\nI'm looking into your issue, but could not manage to finish the investigation yesterday.\n\nI hope I'll be able to come back to you on this tomorrow."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0657NCJTL6",
+        "type": "message",
+        "ts": "1755072426.840339",
+        "client_msg_id": "6948eab5-8ef4-448f-bdf3-ccb4b0adc964",
+        "text": "Great thanks",
+        "team": "T05FWTX7PMG",
+        "user_team": "TG7HQBZHC",
+        "source_team": "TG7HQBZHC",
+        "user_profile": {
+            "avatar_hash": "23a8ab0e9c1f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-11-13\/6182401578549_23a8ab0e9c1f2dcedf48_72.jpg",
+            "first_name": "Alex",
+            "real_name": "Alex Zipnik",
+            "display_name": "alex.zipnik",
+            "team": "TG7HQBZHC",
+            "name": "alex.zipnik",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1754920567.348139",
+        "parent_user_id": "U0657NCJTL6",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gbmPo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Great thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U1BLSQM9Q",
+        "type": "message",
+        "ts": "1755093207.281139",
+        "client_msg_id": "f99613a6-3be3-4c0e-8017-061d43eb0dd1",
+        "text": "<!here> we'll be upgrading the validator node underpinning our utility in MainNet at around 11am ET; there may be a brief hiccup in service.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "83808c225147",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2017-01-05\/123405103313_83808c225147c6b8ac68_72.jpg",
+            "first_name": "Davin",
+            "real_name": "Davin K. Tanabe",
+            "display_name": "davin",
+            "team": "T03T53E10",
+            "name": "davin.tanabe",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OaYxl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "here"
+                            },
+                            {
+                                "type": "text",
+                                "text": " we'll be upgrading the validator node underpinning our utility in MainNet at around 11am ET; there may be a brief hiccup in service."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UE6GFQQ20",
+        "type": "message",
+        "ts": "1755117492.283499",
+        "edited": {
+            "user": "UE6GFQQ20",
+            "ts": "1755117639.000000"
+        },
+        "client_msg_id": "4cb2fd8c-50cf-4572-b1f1-b5b444fb5c3d",
+        "text": "We have deployed Utility UI using docker compose method on a remote VM. After logging in to the Utility UI, we try onboarding to the utility. That is when it goes into a loop giving 404 errors:\n`{\"errors\":[\"HttpMethod(GET), uri: <http:\/\/participant:7575\/api\/json-api\/v2\/state\/active-contracts>\"],\"status\":404}`\n\nHere is the nginx.conf:\nevents {\n    worker_connections  64;\n}\n\nhttp {\n  server {\n    listen 80;\n    server_name wallet.localhost;\n    location \/api\/validator {\n      rewrite ^\\\/(.*) \/$1 break;\n      proxy_pass <http:\/\/validator:5003\/api\/validator>;\n    }\n    location \/ {\n      proxy_pass <http:\/\/wallet-web-ui:8080\/>;\n    }\n  }\n\n  server {\n    listen 80;\n    server_name <http:\/\/ans.validator.elkcapitalmarkets.com|ans.validator.elkcapitalmarkets.com>;\n    location \/api\/validator {\n      rewrite ^\\\/(.*) \/$1 break;\n      proxy_pass <http:\/\/validator:5003\/api\/validator>;\n    }\n    location \/ {\n      proxy_pass <http:\/\/ans-web-ui:8080\/>;\n    }\n  }\n\n  server {\n    listen 80;\n    server_name <http:\/\/validator.elkcapitalmarkets.com|validator.elkcapitalmarkets.com>;\n    location \/metrics {\n      proxy_pass <http:\/\/validator:10013\/metrics>;\n    }\n  }\n\n  server {\n    listen 80;\n    server_name <http:\/\/participant.validator.elkcapitalmarkets.com|participant.validator.elkcapitalmarkets.com>;\n    location \/metrics {\n      proxy_pass <http:\/\/participant.validator.elkcapitalmarkets.com:10013\/metrics>;\n    }\n  }\n\n  server {\n    listen 80;\n    server_name <http:\/\/utility.validator.elkcapitalmarkets.com|utility.validator.elkcapitalmarkets.com>;\n    location \/api\/validator\/ {\n      rewrite ^\\\/(.*) \/$1 break;\n      proxy_pass <http:\/\/validator:5003\/api\/validator>;\n    }\n    location \/api\/json-api {\n      rewrite ^\\\/(.*) \/$1 break;\n      proxy_pass <http:\/\/participant>.:7575\/;\n    }\n    location \/ {\n      proxy_pass <http:\/\/utility-ui:8080\/>;\n    }\n  }\n\n  server {\n    listen       5002 http2;\n    server_name  127.0.0.1;\n    location \/ {\n      grpc_pass <grpc:\/\/participant:5002>;\n    }\n  }\n}\n\nWe are able to curl and verify ledger api:\ncurl <http:\/\/utility.validator.elkcapitalmarkets.com\/api\/json-api\/readyz>\n[+] ledger ok (SERVING)\nreadyz check passed\n\nAny ideas as to what might be the cause?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "gbc010b76fea",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/61bc010b76fea5114ee3321f5276ec4a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "Ajay",
+            "real_name": "Ajay Patel",
+            "display_name": "",
+            "team": "T4WUR0THD",
+            "name": "apatel",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755117492.283499",
+        "reply_count": 11,
+        "reply_users_count": 5,
+        "latest_reply": "1755290497.818509",
+        "reply_users": [
+            "U06PM5EPA07",
+            "UE6GFQQ20",
+            "U01249RT78F",
+            "U047U17D7KL",
+            "UCCBNQECD"
+        ],
+        "replies": [
+            {
+                "user": "U06PM5EPA07",
+                "ts": "1755117925.687659"
+            },
+            {
+                "user": "UE6GFQQ20",
+                "ts": "1755118589.337409"
+            },
+            {
+                "user": "U01249RT78F",
+                "ts": "1755129989.255739"
+            },
+            {
+                "user": "U047U17D7KL",
+                "ts": "1755168590.544809"
+            },
+            {
+                "user": "UE6GFQQ20",
+                "ts": "1755174338.486549"
+            },
+            {
+                "user": "UE6GFQQ20",
+                "ts": "1755175669.785739"
+            },
+            {
+                "user": "UCCBNQECD",
+                "ts": "1755261061.775439"
+            },
+            {
+                "user": "UE6GFQQ20",
+                "ts": "1755264967.275659"
+            },
+            {
+                "user": "UE6GFQQ20",
+                "ts": "1755275501.047539"
+            },
+            {
+                "user": "UE6GFQQ20",
+                "ts": "1755285640.406699"
+            },
+            {
+                "user": "U047U17D7KL",
+                "ts": "1755290497.818509"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kk1qe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We have deployed Utility UI using docker compose method on a remote VM. After logging in to the Utility UI, we try onboarding to the utility. That is when it goes into a loop giving 404 errors:\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "{\"errors\":[\"HttpMethod(GET), uri: ",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/participant:7575\/api\/json-api\/v2\/state\/active-contracts",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"],\"status\":404}",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nHere is the nginx.conf:\nevents {\n    worker_connections  64;\n}\n\nhttp {\n  server {\n    listen 80;\n    server_name wallet.localhost;\n    location \/api\/validator {\n      rewrite ^\\\/(.*) \/$1 break;\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/validator:5003\/api\/validator"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    }\n    location \/ {\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/wallet-web-ui:8080\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    }\n  }\n\n  server {\n    listen 80;\n    server_name "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/ans.validator.elkcapitalmarkets.com",
+                                "text": "ans.validator.elkcapitalmarkets.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    location \/api\/validator {\n      rewrite ^\\\/(.*) \/$1 break;\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/validator:5003\/api\/validator"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    }\n    location \/ {\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/ans-web-ui:8080\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    }\n  }\n\n  server {\n    listen 80;\n    server_name "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/validator.elkcapitalmarkets.com",
+                                "text": "validator.elkcapitalmarkets.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    location \/metrics {\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/validator:10013\/metrics"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    }\n  }\n\n  server {\n    listen 80;\n    server_name "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/participant.validator.elkcapitalmarkets.com",
+                                "text": "participant.validator.elkcapitalmarkets.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    location \/metrics {\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/participant.validator.elkcapitalmarkets.com:10013\/metrics"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    }\n  }\n\n  server {\n    listen 80;\n    server_name "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/utility.validator.elkcapitalmarkets.com",
+                                "text": "utility.validator.elkcapitalmarkets.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    location \/api\/validator\/ {\n      rewrite ^\\\/(.*) \/$1 break;\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/validator:5003\/api\/validator"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    }\n    location \/api\/json-api {\n      rewrite ^\\\/(.*) \/$1 break;\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/participant"
+                            },
+                            {
+                                "type": "text",
+                                "text": ".:7575\/;\n    }\n    location \/ {\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/utility-ui:8080\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    }\n  }\n\n  server {\n    listen       5002 http2;\n    server_name  127.0.0.1;\n    location \/ {\n      grpc_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "grpc:\/\/participant:5002"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    }\n  }\n}\n\nWe are able to curl and verify ledger api:\ncurl "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/utility.validator.elkcapitalmarkets.com\/api\/json-api\/readyz"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n[+] ledger ok (SERVING)\nreadyz check passed\n\nAny ideas as to what might be the cause?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06PM5EPA07",
+        "type": "message",
+        "ts": "1755117925.687659",
+        "client_msg_id": "8ebf5402-95a1-4171-ab55-195657f61cc0",
+        "text": "I see an extra `.` after participant in your setup\n``` proxy_pass <http:\/\/participant>.:7575```\nAlso, can you confirm that you added this variable to your compose.yaml under participant&gt;environment\n```CANTON_PARTICIPANT_JSON_API_SERVER_PATH_PREFIX=\/api\/json-api```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "e07b7f1c8479",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-03-19\/6829932475508_e07b7f1c84799adf1c66_72.jpg",
+            "first_name": "Tarik",
+            "real_name": "Tarik Bensalem",
+            "display_name": "Tarik Bensalem",
+            "team": "T03T53E10",
+            "name": "tarik.bensalem",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755117492.283499",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7\/xmm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I see an extra "
+                            },
+                            {
+                                "type": "text",
+                                "text": ".",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " after participant in your setup\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/participant"
+                            },
+                            {
+                                "type": "text",
+                                "text": ".:7575"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Also, can you confirm that you added this variable to your compose.yaml under participant>environment\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CANTON_PARTICIPANT_JSON_API_SERVER_PATH_PREFIX=\/api\/json-api"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "UE6GFQQ20",
+        "type": "message",
+        "ts": "1755118589.337409",
+        "client_msg_id": "636c8e07-ea42-4707-95f9-b6f210e4a719",
+        "text": "Same results with or without the \".\" And I do have the variable in compose.yaml:\n  participant:\n    image: \"${IMAGE_REPO}canton-participant:${IMAGE_TAG}\"\n    environment:\n      - AUTH_JWKS_URL=${AUTH_JWKS_URL}\n      - AUTH_TARGET_AUDIENCE=${LEDGER_API_AUTH_AUDIENCE}\n      - CANTON_PARTICIPANT_ADMIN_USER_NAME=${LEDGER_API_ADMIN_USER}\n      - CANTON_PARTICIPANT_POSTGRES_SERVER=${SPLICE_DB_SERVER}\n      - CANTON_PARTICIPANT_POSTGRES_SCHEMA=participant\n      - CANTON_PARTICIPANT_POSTGRES_USER=${SPLICE_DB_USER}\n      - CANTON_PARTICIPANT_POSTGRES_PASSWORD=${SPLICE_DB_PASSWORD}\n      - CANTON_PARTICIPANT_POSTGRES_DB=participant-${MIGRATION_ID}\n      - CANTON_PARTICIPANT_POSTGRES_PORT=${SPLICE_DB_PORT}\n      - CANTON_PARTICIPANT_JSON_API_SERVER_PATH_PREFIX=\/api\/json-api\n    depends_on:\n      postgres-splice:\n        condition: service_healthy\n    restart: always\n    networks:\n      - ${DOCKER_NETWORK:-splice_validator}\n    ports:\n      - \"5002:5002\"\n      - \"7575:7575\"",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "gbc010b76fea",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/61bc010b76fea5114ee3321f5276ec4a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "Ajay",
+            "real_name": "Ajay Patel",
+            "display_name": "",
+            "team": "T4WUR0THD",
+            "name": "apatel",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755117492.283499",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RlBPy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Same results with or without the \".\" And I do have the variable in compose.yaml:\n  participant:\n    image: \"${IMAGE_REPO}canton-participant:${IMAGE_TAG}\"\n    environment:\n      - AUTH_JWKS_URL=${AUTH_JWKS_URL}\n      - AUTH_TARGET_AUDIENCE=${LEDGER_API_AUTH_AUDIENCE}\n      - CANTON_PARTICIPANT_ADMIN_USER_NAME=${LEDGER_API_ADMIN_USER}\n      - CANTON_PARTICIPANT_POSTGRES_SERVER=${SPLICE_DB_SERVER}\n      - CANTON_PARTICIPANT_POSTGRES_SCHEMA=participant\n      - CANTON_PARTICIPANT_POSTGRES_USER=${SPLICE_DB_USER}\n      - CANTON_PARTICIPANT_POSTGRES_PASSWORD=${SPLICE_DB_PASSWORD}\n      - CANTON_PARTICIPANT_POSTGRES_DB=participant-${MIGRATION_ID}\n      - CANTON_PARTICIPANT_POSTGRES_PORT=${SPLICE_DB_PORT}\n      - CANTON_PARTICIPANT_JSON_API_SERVER_PATH_PREFIX=\/api\/json-api\n    depends_on:\n      postgres-splice:\n        condition: service_healthy\n    restart: always\n    networks:\n      - ${DOCKER_NETWORK:-splice_validator}\n    ports:\n      - \"5002:5002\"\n      - \"7575:7575\""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01249RT78F",
+        "type": "message",
+        "ts": "1755129989.255739",
+        "client_msg_id": "1dc4ff06-3e63-4342-b5bc-0702806d6015",
+        "text": "Hi <@UE6GFQQ20>, can you open a ticket with DA discretionary support at <mailto:da-support@digitalasset.com|da-support@digitalasset.com>?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "1c03a24a47dd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-07-17\/9233064995424_1c03a24a47ddbefdea6f_72.jpg",
+            "first_name": "Rohit",
+            "real_name": "Rohit Talwar",
+            "display_name": "Rohit",
+            "team": "T03T53E10",
+            "name": "rohit.talwar",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1755117492.283499",
+        "parent_user_id": "UE6GFQQ20",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "s6RGC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UE6GFQQ20"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", can you open a ticket with DA discretionary support at "
+                            },
+                            {
+                                "type": "link",
+                                "url": "mailto:da-support@digitalasset.com",
+                                "text": "da-support@digitalasset.com"
+                            },
+                            {
+                                "type": "text",
+                                "text": "?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

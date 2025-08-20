@@ -1,0 +1,434 @@
+[
+    {
+        "text": "<@UMW95BAT1> <@UEHLS0JUB>\nUpdates for the week:\n`<http:\/\/bootstrap.sc|bootstrap.sc>` updates work, I have the `decentralized-party` and its contracts deployed there, thanks a lot :partying_face:\n\nSo I am back at finishing the real contracts.\nPushed fixes and updates for your recommendations in this PR, thanks for those: <https:\/\/github.com\/DLC-link\/canton\/pull\/4>\n\nOnly one thing I could not solve yet, which is to check uniqueness of the `(owner, btcAddress)` tuple using a contract_key (deprecated apparently, but in the staging-docs). Not urgent, we can also solve this in the backend as Tomi recommended in a DM. See details here: <https:\/\/github.com\/DLC-link\/canton\/pull\/5>\n\nRegarding withdrawals, some of the issues are not relevant anymore:\nWe have cooked up a new and more robust flow, shoutout to <@U06337M5HDG>\n• pendingBalance is not all-or-nothing, and it's only set _down_ when a Request finishes (instead of when its created).\n• Attestors check pendingBalance **and** active Requests, to create new Requests for the remainder amount. \n• Attestors have temporary local memory of Bitcoin txs. This is used to lock UTXOs and stop double-broadcasts, but we don't \"rely\" on them, so if there is a restart\/unexpected error\/a btc_tx for a Request is not in memory, the Request is just archived. \n• This makes the flow 'self-healing' as well. pendingBalance only changes if the underlying btc_tx_id is Confirmed on Bitcoin. Otherwise a new tx is created, attempting to do it again after 2 ticks. \nSee images attached for more clarity!\nYou can find these changes as well in that PR.\n\nI will write tests & update the Governance module, bring over all the infra tested out in sandbox, ship to rust repo, next week we connect it all! :fire:\n\nWe know you are busy so we appreciate all the assistance you give!",
+        "files": [
+            {
+                "id": "F08TP5EH4CD",
+                "created": 1748008026,
+                "timestamp": 1748008026,
+                "name": "Screenshot 2025-05-23 at 15.46.49.png",
+                "title": "Screenshot 2025-05-23 at 15.46.49.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 194227,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08TP5EH4CD\/screenshot_2025-05-23_at_15.46.49.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08TP5EH4CD\/download\/screenshot_2025-05-23_at_15.46.49.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TP5EH4CD-5f7c04db04\/screenshot_2025-05-23_at_15.46.49_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TP5EH4CD-5f7c04db04\/screenshot_2025-05-23_at_15.46.49_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TP5EH4CD-5f7c04db04\/screenshot_2025-05-23_at_15.46.49_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 125,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TP5EH4CD-5f7c04db04\/screenshot_2025-05-23_at_15.46.49_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 166,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TP5EH4CD-5f7c04db04\/screenshot_2025-05-23_at_15.46.49_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TP5EH4CD-5f7c04db04\/screenshot_2025-05-23_at_15.46.49_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 249,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TP5EH4CD-5f7c04db04\/screenshot_2025-05-23_at_15.46.49_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 277,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TP5EH4CD-5f7c04db04\/screenshot_2025-05-23_at_15.46.49_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 333,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TP5EH4CD-5f7c04db04\/screenshot_2025-05-23_at_15.46.49_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 355,
+                "original_w": 1804,
+                "original_h": 625,
+                "thumb_tiny": "AwAQADChRRniimAUUo6UlAB07UlLmkoA\/9k=",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08TP5EH4CD\/screenshot_2025-05-23_at_15.46.49.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08TP5EH4CD-30086854e0",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F08TK6A55RU",
+                "created": 1748008032,
+                "timestamp": 1748008032,
+                "name": "Screenshot 2025-05-23 at 15.39.33.png",
+                "title": "Screenshot 2025-05-23 at 15.39.33.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 201457,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08TK6A55RU\/screenshot_2025-05-23_at_15.39.33.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08TK6A55RU\/download\/screenshot_2025-05-23_at_15.39.33.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A55RU-aae90be5c5\/screenshot_2025-05-23_at_15.39.33_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A55RU-aae90be5c5\/screenshot_2025-05-23_at_15.39.33_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A55RU-aae90be5c5\/screenshot_2025-05-23_at_15.39.33_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 351,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A55RU-aae90be5c5\/screenshot_2025-05-23_at_15.39.33_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 468,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A55RU-aae90be5c5\/screenshot_2025-05-23_at_15.39.33_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A55RU-aae90be5c5\/screenshot_2025-05-23_at_15.39.33_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 702,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A55RU-aae90be5c5\/screenshot_2025-05-23_at_15.39.33_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 779,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A55RU-aae90be5c5\/screenshot_2025-05-23_at_15.39.33_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 935,
+                "original_w": 975,
+                "original_h": 950,
+                "thumb_tiny": "AwAuADDS\/GgH3paQACgBfxpAfelPApoYntQA6iiigANICfSlpAPegBT0pob2px6U0f54oAdSD65pT0pqggc0AOpAfalNNDZoAUnnvQeOlLRQAUUnPbFLQB\/\/2Q==",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08TK6A55RU\/screenshot_2025-05-23_at_15.39.33.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08TK6A55RU-0e8af96ec6",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F08TK6A313Q",
+                "created": 1748008035,
+                "timestamp": 1748008035,
+                "name": "Screenshot 2025-05-23 at 15.43.31.png",
+                "title": "Screenshot 2025-05-23 at 15.43.31.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U088UV6MKFE",
+                "user_team": "T05FWTX7PMG",
+                "editable": false,
+                "size": 72362,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08TK6A313Q\/screenshot_2025-05-23_at_15.43.31.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T05FWTX7PMG-F08TK6A313Q\/download\/screenshot_2025-05-23_at_15.43.31.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A313Q-3f26755c3f\/screenshot_2025-05-23_at_15.43.31_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A313Q-3f26755c3f\/screenshot_2025-05-23_at_15.43.31_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A313Q-3f26755c3f\/screenshot_2025-05-23_at_15.43.31_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 119,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A313Q-3f26755c3f\/screenshot_2025-05-23_at_15.43.31_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 158,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A313Q-3f26755c3f\/screenshot_2025-05-23_at_15.43.31_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A313Q-3f26755c3f\/screenshot_2025-05-23_at_15.43.31_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 237,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A313Q-3f26755c3f\/screenshot_2025-05-23_at_15.43.31_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 263,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A313Q-3f26755c3f\/screenshot_2025-05-23_at_15.43.31_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 316,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T05FWTX7PMG-F08TK6A313Q-3f26755c3f\/screenshot_2025-05-23_at_15.43.31_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 337,
+                "original_w": 1804,
+                "original_h": 594,
+                "thumb_tiny": "AwAPADCh+NFJS5pgGPeikooAXFH40ZpKAP\/Z",
+                "permalink": "https:\/\/bit-safe.slack.com\/files\/U05FZBDQ4RJ\/F08TK6A313Q\/screenshot_2025-05-23_at_15.43.31.png",
+                "permalink_public": "https:\/\/slack-files.com\/T05FWTX7PMG-F08TK6A313Q-f78478aaab",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6luMR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "UMW95BAT1"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nUpdates for the week:\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/bootstrap.sc",
+                                "text": "bootstrap.sc",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " updates work, I have the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "decentralized-party",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and its contracts deployed there, thanks a lot "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "partying_face",
+                                "unicode": "1f973"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nSo I am back at finishing the real contracts.\nPushed fixes and updates for your recommendations in this PR, thanks for those: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton\/pull\/4"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nOnly one thing I could not solve yet, which is to check uniqueness of the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "(owner, btcAddress)",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " tuple using a contract_key (deprecated apparently, but in the staging-docs). Not urgent, we can also solve this in the backend as Tomi recommended in a DM. See details here: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DLC-link\/canton\/pull\/5"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nRegarding withdrawals, some of the issues are not relevant anymore:\nWe have cooked up a new and more robust flow, shoutout to "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U06337M5HDG"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "pendingBalance is not all-or-nothing, and it's only set _down_ when a Request finishes (instead of when its created)."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Attestors check pendingBalance **and** active Requests, to create new Requests for the remainder amount. "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Attestors have temporary local memory of Bitcoin txs. This is used to lock UTXOs and stop double-broadcasts, but we don't \"rely\" on them, so if there is a restart\/unexpected error\/a btc_tx for a Request is not in memory, the Request is just archived. "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "This makes the flow 'self-healing' as well. pendingBalance only changes if the underlying btc_tx_id is Confirmed on Bitcoin. Otherwise a new tx is created, attempting to do it again after 2 ticks. "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nSee images attached for more clarity!\nYou can find these changes as well in that PR.\n\nI will write tests & update the Governance module, bring over all the infra tested out in sandbox, ship to rust repo, next week we connect it all! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "fire",
+                                "unicode": "1f525"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nWe know you are busy so we appreciate all the assistance you give!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1748008267.844919",
+        "edited": {
+            "user": "U088UV6MKFE",
+            "ts": "1748008336.000000"
+        },
+        "client_msg_id": "f5ec2b1e-962c-45cb-a8d8-be440b9ab254",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1748008267.844919",
+        "reply_count": 19,
+        "reply_users_count": 1,
+        "latest_reply": "1749041291.427219",
+        "reply_users": [
+            "U088UV6MKFE"
+        ],
+        "replies": [
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748342260.371039"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748342542.665459"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748342602.741499"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748343425.258559"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748343835.681119"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748344444.958859"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748345185.019089"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748346806.307349"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748346833.219859"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748346988.083659"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748346989.963909"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748347073.177879"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748366961.133139"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748367438.401049"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748367471.132159"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748367993.722949"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748419751.693909"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1748622181.005429"
+            },
+            {
+                "user": "U088UV6MKFE",
+                "ts": "1749041291.427219"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

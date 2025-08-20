@@ -1,0 +1,586 @@
+[
+    {
+        "subtype": "bot_message",
+        "text": "This channel is now shared with *Particula*.",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1740487644.139179",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Tr5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This channel is now shared with "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Particula",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06AKTJ3DP0",
+        "type": "message",
+        "ts": "1740503214.513689",
+        "client_msg_id": "7a4fcdbe-9a65-48a2-9da8-34f46d4c44a4",
+        "text": "I can confirm that it works with less than 100% now; we appear to not be whitelisted by 2 SVs but the node reports as healthy after starting it today.\nNow the next question: How do we actually use the node, now that it's up? It appears to be listening on port 80, do I just need to get that exposed for use by our devs? I don't see any documentation of setting an RPC port or anything",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4LGZSN83",
+        "source_team": "T4LGZSN83",
+        "user_profile": {
+            "avatar_hash": "g3ef3f80928a",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/3ef3f80928a3db06f55259535c50dc90.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-72.png",
+            "first_name": "Brian",
+            "real_name": "Brian Cole",
+            "display_name": "bcole",
+            "team": "T4LGZSN83",
+            "name": "bcole",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1740061625.662479",
+        "parent_user_id": "U06AKTJ3DP0",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7t7eP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I can confirm that it works with less than 100% now; we appear to not be whitelisted by 2 SVs but the node reports as healthy after starting it today.\nNow the next question: How do we actually use the node, now that it's up? It appears to be listening on port 80, do I just need to get that exposed for use by our devs? I don't see any documentation of setting an RPC port or anything"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06AKTJ3DP0",
+        "type": "message",
+        "ts": "1740506851.856309",
+        "client_msg_id": "fd49155c-7291-4824-8621-f63d5b50e384",
+        "text": "&gt; Hi Brian. I assume you are working with Lucas and Matin who I've been talking with. Am I right in assuming you are the team's SRE?\nYes.\n&gt; Our blockchain differs from ETH in many ways so that CN supports privacy.  I'd like to suggest that you read some of our documentation from an older version of Canton(we call the version 2.x; the Canton Network runs on 3.x).  <https:\/\/docs.daml.com\/canton\/tutorials\/getting_started.html#the-example-topology|This section> discusses some key concepts (e.g., party) and how to provision smart contract code.\nThanks, I'll read that.\n&gt; FYI ... there is an \"Office hours with DA\" at 2:00 PM EST where Lucas and Matin are invited. Perhaps you might want to join them?\nThat would be very helpful",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4LGZSN83",
+        "source_team": "T4LGZSN83",
+        "user_profile": {
+            "avatar_hash": "g3ef3f80928a",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/3ef3f80928a3db06f55259535c50dc90.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-72.png",
+            "first_name": "Brian",
+            "real_name": "Brian Cole",
+            "display_name": "bcole",
+            "team": "T4LGZSN83",
+            "name": "bcole",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1740061625.662479",
+        "parent_user_id": "U06AKTJ3DP0",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WO6mv",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Brian. I assume you are working with Lucas and Matin who I've been talking with. Am I right in assuming you are the team's SRE?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Our blockchain differs from ETH in many ways so that CN supports privacy.  I'd like to suggest that you read some of our documentation from an older version of Canton(we call the version 2.x; the Canton Network runs on 3.x).  "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.daml.com\/canton\/tutorials\/getting_started.html#the-example-topology",
+                                "text": "This section"
+                            },
+                            {
+                                "type": "text",
+                                "text": " discusses some key concepts (e.g., party) and how to provision smart contract code."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks, I'll read that.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "FYI ... there is an \"Office hours with DA\" at 2:00 PM EST where Lucas and Matin are invited. Perhaps you might want to join them?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That would be very helpful"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U06AKTJ3DP0",
+        "type": "message",
+        "ts": "1740509466.719269",
+        "client_msg_id": "65214cc8-565a-4ff1-98a1-f6bc9115497b",
+        "text": "It looks like (at least in v2) the thing I want is (was?) a thing, just that it's called the admin and ledger APIs instead of an RPC port?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4LGZSN83",
+        "source_team": "T4LGZSN83",
+        "user_profile": {
+            "avatar_hash": "g3ef3f80928a",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/3ef3f80928a3db06f55259535c50dc90.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-72.png",
+            "first_name": "Brian",
+            "real_name": "Brian Cole",
+            "display_name": "bcole",
+            "team": "T4LGZSN83",
+            "name": "bcole",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1740061625.662479",
+        "parent_user_id": "U06AKTJ3DP0",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "w4abQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It looks like (at least in v2) the thing I want is (was?) a thing, just that it's called the admin and ledger APIs instead of an RPC port?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1740514328.487579",
+        "client_msg_id": "f7468cb3-a280-4f9d-b8f5-dbeebb55af12",
+        "text": "`Node identities` - Where do you recommend to store the validator node identities?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1740514328.487579",
+        "reply_count": 5,
+        "reply_users_count": 1,
+        "latest_reply": "1740583076.875809",
+        "reply_users": [
+            "U0702NSFW0H"
+        ],
+        "replies": [
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1740514331.231009"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1740516316.627779"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1740523838.635509"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1740576138.901849"
+            },
+            {
+                "user": "U0702NSFW0H",
+                "ts": "1740583076.875809"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5CmJI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Node identities",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " - Where do you recommend to store the validator node identities?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1740514331.231009",
+        "client_msg_id": "f142322d-5092-4d2e-b24b-faf92554e29e",
+        "text": "• AWS Secrets Manager: A secret can be up to 64 KB\n• Parameter Store (Secrets): limit of 4,096 characters\n",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1740514328.487579",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Gi8bB",
+                "elements": [
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "AWS Secrets Manager: A secret can be up to 64 KB"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Parameter Store (Secrets): limit of 4,096 characters"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1740516316.627779",
+        "client_msg_id": "36379233-5fd1-4523-89be-b40fcd72f795",
+        "text": "CC: <@U03HMUTQ5F0> <@UEHLS0JUB>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1740514328.487579",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5PSnX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CC: "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U03HMUTQ5F0"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "UEHLS0JUB"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0702NSFW0H",
+        "type": "message",
+        "ts": "1740523838.635509",
+        "client_msg_id": "530df9ac-9c7f-4c79-a576-bfb961e9c764",
+        "text": "The size of the nodes identity json is a restriction to store on AWS Secrets Manager or AWS Parameter Store.",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04LUMR33S9",
+        "source_team": "T04LUMR33S9",
+        "user_profile": {
+            "avatar_hash": "61a62295afd5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-09-05\/7666892856583_61a62295afd511cc52c4_72.png",
+            "first_name": "André",
+            "real_name": "André Claro",
+            "display_name": "André",
+            "team": "T04LUMR33S9",
+            "name": "andre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1740514328.487579",
+        "parent_user_id": "U0702NSFW0H",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Retda",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The size of the nodes identity json is a restriction to store on AWS Secrets Manager or AWS Parameter Store."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "text": "Hey, I am getting this error when I try to log into the UI with administrator user",
+        "files": [
+            {
+                "id": "F08F22D6TNF",
+                "created": 1740527130,
+                "timestamp": 1740527130,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U0850LW3T40",
+                "user_team": "T06624X4C2F",
+                "editable": false,
+                "size": 65381,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T06624X4C2F-F08F22D6TNF\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T06624X4C2F-F08F22D6TNF\/download\/image.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T06624X4C2F-F08F22D6TNF-73022112ee\/image_64.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T06624X4C2F-F08F22D6TNF-73022112ee\/image_80.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T06624X4C2F-F08F22D6TNF-73022112ee\/image_360.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_360_w": 360,
+                "thumb_360_h": 189,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T06624X4C2F-F08F22D6TNF-73022112ee\/image_480.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_480_w": 480,
+                "thumb_480_h": 252,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T06624X4C2F-F08F22D6TNF-73022112ee\/image_160.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T06624X4C2F-F08F22D6TNF-73022112ee\/image_720.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_720_w": 720,
+                "thumb_720_h": 377,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T06624X4C2F-F08F22D6TNF-73022112ee\/image_800.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_800_w": 800,
+                "thumb_800_h": 419,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T06624X4C2F-F08F22D6TNF-73022112ee\/image_960.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_960_w": 960,
+                "thumb_960_h": 503,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T06624X4C2F-F08F22D6TNF-73022112ee\/image_1024.png?t=xoxe-5540949261730-9379886868950-9399429450144-f246808db27ea3f8fe28c772227f9ea1",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 537,
+                "original_w": 1530,
+                "original_h": 802,
+                "thumb_tiny": "AwAZADC75A\/56SfnSiDBzvc\/U1LRQAzy\/wDaNKEx3Jp1FACbaQrweadSN90\/SgBaKKKACiiigApG+6fpS0jfdP0oA\/\/Z",
+                "permalink": "https:\/\/excellarworkspace.slack.com\/files\/U05FZBDQ4RJ\/F08F22D6TNF\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T06624X4C2F-F08F22D6TNF-af90358b94",
+                "source_team": "T06624X4C2F",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U0850LW3T40",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IJ81u",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey, I am getting this error when I try to log into the UI with administrator user"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1740527155.075239",
+        "client_msg_id": "6d72933b-131a-462e-a5de-f7c748bd9799",
+        "team": "T05FWTX7PMG",
+        "thread_ts": "1740527155.075239",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1740608127.022159",
+        "reply_users": [
+            "U0850LW3T40"
+        ],
+        "replies": [
+            {
+                "user": "U0850LW3T40",
+                "ts": "1740608021.462749"
+            },
+            {
+                "user": "U0850LW3T40",
+                "ts": "1740608127.022159"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "user_team": "T06624X4C2F",
+        "source_team": "T06624X4C2F",
+        "user_profile": {
+            "avatar_hash": "517cf764c893",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-12-09\/8160596824481_517cf764c8935b682565_72.png",
+            "first_name": "Otito",
+            "real_name": "Otito Darl-Uzu",
+            "display_name": "Otito Darl-Uzu",
+            "team": "T06624X4C2F",
+            "name": "otito",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

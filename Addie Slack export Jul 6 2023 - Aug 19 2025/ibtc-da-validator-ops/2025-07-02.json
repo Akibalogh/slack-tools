@@ -1,0 +1,97 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1751443469.993039",
+        "client_msg_id": "e79ad374-d395-42b6-b3c8-6d0c8c9081e9",
+        "text": "Thinking of feature timeline synchronizations regarding this.\n\nSay we are on using the centralized party as the Featured App Provider, and we have already offered Credentials using that party.\n\nWe launch to Mainnet, with all steps required to onboard the dec-party as the Registrar &amp; Provider for the Utility, and for issuing Credentials from that party. We would also have FA markers with the centralized party as the beneficiary (so that automations work for reward minting).\n\nWhat is the relation between the Featured App provider, and the Provider party in the Utility?\n\nWhat happens in the interim when the App is live, but the Featured App Provider is still the centralized party? Will this only matter, when the utility has built in rewards August+?\n\nI am trying to piece together the relation of all these roles and avoid having to upgrade often\/miss out on rewards",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751268698.507789",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Zz6cJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thinking of feature timeline synchronizations regarding this.\n\nSay we are on using the centralized party as the Featured App Provider, and we have already offered Credentials using that party.\n\nWe launch to Mainnet, with all steps required to onboard the dec-party as the Registrar & Provider for the Utility, and for issuing Credentials from that party. We would also have FA markers with the centralized party as the beneficiary (so that automations work for reward minting).\n\nWhat is the relation between the Featured App provider, and the Provider party in the Utility?\n\nWhat happens in the interim when the App is live, but the Featured App Provider is still the centralized party? Will this only matter, when the utility has built in rewards August+?\n\nI am trying to piece together the relation of all these roles and avoid having to upgrade often\/miss out on rewards"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1751450120.626059",
+        "edited": {
+            "user": "U088UV6MKFE",
+            "ts": "1751450141.000000"
+        },
+        "client_msg_id": "8509572d-950c-4206-974d-70b193ca52d5",
+        "text": "As I see, I will also need to _Accept a credential offer_ from DA for Provider onboarding. Is this a paid or free credential?\n\nAnd so I should have a governance choice, which takes a CredentialOffer Cid, and calls CredentialOffer_AcceptPaid\/CredentialOffer_AcceptFree on it.\n\nAs a v2 I could think about abstracting this away, such that the decentralized party can just 'accept credential offers', whatever they may be? Will there be a usecase for this?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1751289497.261109",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "d15rp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "As I see, I will also need to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Accept a credential offer",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from DA for Provider onboarding. Is this a paid or free credential?\n\nAnd so I should have a governance choice, which takes a CredentialOffer Cid, and calls CredentialOffer_AcceptPaid\/CredentialOffer_AcceptFree on it.\n\nAs a v2 I could think about abstracting this away, such that the decentralized party can just 'accept credential offers', whatever they may be? Will there be a usecase for this?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

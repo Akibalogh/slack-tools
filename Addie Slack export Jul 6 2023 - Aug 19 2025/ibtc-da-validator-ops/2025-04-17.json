@@ -1,0 +1,314 @@
+[
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744877742.093819",
+        "client_msg_id": "73b6767a-be82-460d-bd33-038231fd186b",
+        "text": "&gt; Does it matter that the destination BTC address is pinned down in the account as opposed to being specified on each withdraw?\nThree main reasons, but ideas are very welcome.\n• We thought of this so we can get rid of creating a Request there already, a simplification, which in turn also means\n• simpler withdraw function... which i hope makes wallet compatibility\/integration easier (?). Ideally eventually the user should just make a transfer to this Withdraw Account, and this is a step towards that\n• Plus it makes the Deposit\/Withdraw architectures more symmetric. \n",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744807835.171719",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NUBNi",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Does it matter that the destination BTC address is pinned down in the account as opposed to being specified on each withdraw?"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Three main reasons, but ideas are very welcome.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "We thought of this so we can get rid of creating a Request there already, a simplification, which in turn also means"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "simpler withdraw function... which i hope makes wallet compatibility\/integration easier (?). Ideally eventually the user should just make a transfer to this Withdraw Account, and this is a step towards that"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Plus it makes the Deposit\/Withdraw architectures more symmetric. "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744877903.317649",
+        "edited": {
+            "user": "U088UV6MKFE",
+            "ts": "1744877935.000000"
+        },
+        "client_msg_id": "9fe2f319-82ab-4530-b7e4-2f4887d29d8f",
+        "text": "Can contracts hold funds? I guess not. But maybe there is a way already to just let the user transfer holdings to a WithdrawAddress, where they will automagically be archived and withdrawn to Bitcoin",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744807835.171719",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XIUWT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Can contracts hold funds? I guess not. But maybe there is a way already to just let the user transfer holdings to a WithdrawAddress, where they will automagically be archived and withdrawn to Bitcoin"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744879719.077679",
+        "client_msg_id": "722c0389-37da-4952-a157-b6b75eb5011d",
+        "text": "Do you mean [this?](<https:\/\/github.com\/digital-asset\/cn-token-standard-proposal\/blob\/befca943dae04d0f7b6810e0443253cde174f273\/cnrc-3-transfer-instruction\/daml\/Canton\/Network\/RC3\/TransferInstruction.daml#L271|https:\/\/github.com\/digital-asset\/cn-token-standard-proposal\/blob\/befca943dae04d0f7[…]er-instruction\/daml\/Canton\/Network\/RC3\/TransferInstruction.daml>)\n\nIm sorry I don't follow how this would work - who would be the `receiver` party, or how are these tied together ultimately",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744807835.171719",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "w6Knm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Do you mean [this?]("
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/digital-asset\/cn-token-standard-proposal\/blob\/befca943dae04d0f7b6810e0443253cde174f273\/cnrc-3-transfer-instruction\/daml\/Canton\/Network\/RC3\/TransferInstruction.daml#L271",
+                                "text": "https:\/\/github.com\/digital-asset\/cn-token-standard-proposal\/blob\/befca943dae04d0f7[…]er-instruction\/daml\/Canton\/Network\/RC3\/TransferInstruction.daml"
+                            },
+                            {
+                                "type": "text",
+                                "text": ")\n\nIm sorry I don't follow how this would work - who would be the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "receiver",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " party, or how are these tied together ultimately"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744880094.116519",
+        "client_msg_id": "0288d358-7d73-4d41-bddc-396c124a653e",
+        "text": "I guess the Network itself could be represented by a Party, and withdrawals are transfers to it, with some metadata...",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744807835.171719",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "R3MtU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I guess the Network itself could be represented by a Party, and withdrawals are transfers to it, with some metadata..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744880126.219699",
+        "client_msg_id": "1ea0b4c9-b4a5-4a04-8721-173ffcee4ca7",
+        "text": "ye",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744807835.171719",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "b+rXT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ye"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U088UV6MKFE",
+        "type": "message",
+        "ts": "1744880158.917479",
+        "client_msg_id": "85b89e41-94a6-47c0-9bc2-9aef62fe1acc",
+        "text": "thanks a lot",
+        "team": "T05FWTX7PMG",
+        "user_team": "T05FWTX7PMG",
+        "source_team": "T05FWTX7PMG",
+        "user_profile": {
+            "avatar_hash": "88f054e6b2e2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-04-15\/8759384805844_88f054e6b2e25bb0bd26_72.jpg",
+            "first_name": "Robert",
+            "real_name": "Robert Tera",
+            "display_name": "Robert Tera",
+            "team": "T05FWTX7PMG",
+            "name": "robert",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1744807835.171719",
+        "parent_user_id": "U088UV6MKFE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1HRgs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks a lot"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

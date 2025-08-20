@@ -1,0 +1,743 @@
+[
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1750144054.923689",
+        "client_msg_id": "e9aeadfb-ce4f-431a-83ea-8207deb74776",
+        "text": "Ok, thanks <@U2KT900HE>. So we could discard the warning",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750062566.044339",
+        "parent_user_id": "U01TZB7MFFA",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Qh8nN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ok, thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U2KT900HE"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". So we could discard the warning"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08QNTDEU9F",
+        "type": "message",
+        "ts": "1750144303.217379",
+        "edited": {
+            "user": "U08QNTDEU9F",
+            "ts": "1750144743.000000"
+        },
+        "client_msg_id": "8b536e13-89ce-4051-917d-3a167cc3081b",
+        "text": "I might be able to help.\n\nYou are attempting to access the wallet from a non local IP address using an NGINX proxy that handles ssl termination correct? Is this NGINX instance on a seperate machine or on the local host?\n\nIt is possible these settings should be changed. I am not 100% sure this will help but...\n\nEdit this file\n```splice-node\/docker-compose\/validator```\nSearch for\n```SPLICE_APP_UI_HTTP_URL=```\nI think that is supposed to be set to false if you plan to use SSL\n\nIn your nginx.conf file\nI changed the first 2 endpoints to port 443 and changed the server name to the full domain name being used added headers and removed the rewrite rule.\n```  server {\n    listen 443 ssl;\n    server_name host1.domain.com;\n    ssl_certificate \/etc\/ssl\/keys\/fullchain.pem;\n    ssl_certificate_key \/etc\/ssl\/keys\/privkey.pem;    \n    location \/api\/validator {\n      proxy_pass <http:\/\/validator:5003\/api\/validator>;\n      proxy_set_header Host $host;\n      proxy_set_header X-Real-IP $remote_addr;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header X-Forwarded-Proto $scheme;\n    }\n    location \/ {\n      proxy_pass <http:\/\/wallet-web-ui:8080\/>;\n    }\n  }\n\n  server {\n    listen 443 ssl; \n    server_name host2.domain.com;\n    ssl_certificate \/etc\/ssl\/keys\/fullchain.pem; \n    ssl_certificate_key \/etc\/ssl\/keys\/privkey.pem;     \n    location \/api\/validator {\n      proxy_pass <http:\/\/validator:5003\/api\/validator>;\n      proxy_set_header Host $host;\n      proxy_set_header X-Real-IP $remote_addr;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header X-Forwarded-Proto $scheme;\n    }\n    location \/ {\n      proxy_pass <http:\/\/ans-web-ui:8080\/>;\n    }\n  }```\nthe last 2 entries in nnginx.con have a backend url that ends with \/metrics.\nI moved those off of port 80 to avoid confusion and removed the server name and added the proxy headers.\nYou could probably set the server name for the metrics endpoints and put them on the same port if you needed \/ wanted to as long as each has a unique name like validator-metrics.localhost and participant-metrics.localhost.\n```  server {\n    listen 8089;\n    server_name \"\";\n    location \/metrics {\n      proxy_pass <http:\/\/validator:10013\/metrics>;\n      proxy_set_header Host $host;\n      proxy_set_header X-Real-IP $remote_addr;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header X-Forwarded-Proto $scheme;\n    }\n  }\n\n  server {\n    listen 8088;\n    server_name \"\";\n    location \/metrics {\n      proxy_pass <http:\/\/participant:10013\/metrics>;\n      proxy_set_header Host $host;\n      proxy_set_header X-Real-IP $remote_addr;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header X-Forwarded-Proto $scheme;\n\n    }\n  }\n  }```",
+        "team": "T05FWTX7PMG",
+        "user_team": "T08QNTDEQRX",
+        "source_team": "T08QNTDEQRX",
+        "user_profile": {
+            "avatar_hash": "625d4e0a38ae",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-17\/9083152748352_625d4e0a38ae04a61bec_72.png",
+            "first_name": "jason",
+            "real_name": "jason",
+            "display_name": "",
+            "team": "T08QNTDEQRX",
+            "name": "jason",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749998581.612869",
+        "parent_user_id": "US2685U22",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1VVXb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I might be able to help.\n\nYou are attempting to access the wallet from a non local IP address using an NGINX proxy that handles ssl termination correct? Is this NGINX instance on a seperate machine or on the local host?\n\nIt is possible these settings should be changed. I am not 100% sure this will help but...\n\nEdit this file\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "splice-node\/docker-compose\/validator"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nSearch for\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "SPLICE_APP_UI_HTTP_URL="
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think that is supposed to be set to false if you plan to use SSL\n\nIn your nginx.conf file\nI changed the first 2 endpoints to port 443 and changed the server name to the full domain name being used added headers and removed the rewrite rule.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "  server {\n    listen 443 ssl;\n    server_name host1.domain.com;\n    ssl_certificate \/etc\/ssl\/keys\/fullchain.pem;\n    ssl_certificate_key \/etc\/ssl\/keys\/privkey.pem;    \n    location \/api\/validator {\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/validator:5003\/api\/validator"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n      proxy_set_header Host $host;\n      proxy_set_header X-Real-IP $remote_addr;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header X-Forwarded-Proto $scheme;\n    }\n    location \/ {\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/wallet-web-ui:8080\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    }\n  }\n\n  server {\n    listen 443 ssl; \n    server_name host2.domain.com;\n    ssl_certificate \/etc\/ssl\/keys\/fullchain.pem; \n    ssl_certificate_key \/etc\/ssl\/keys\/privkey.pem;     \n    location \/api\/validator {\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/validator:5003\/api\/validator"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n      proxy_set_header Host $host;\n      proxy_set_header X-Real-IP $remote_addr;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header X-Forwarded-Proto $scheme;\n    }\n    location \/ {\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/ans-web-ui:8080\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n    }\n  }"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nthe last 2 entries in nnginx.con have a backend url that ends with \/metrics.\nI moved those off of port 80 to avoid confusion and removed the server name and added the proxy headers.\nYou could probably set the server name for the metrics endpoints and put them on the same port if you needed \/ wanted to as long as each has a unique name like validator-metrics.localhost and participant-metrics.localhost.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "  server {\n    listen 8089;\n    server_name \"\";\n    location \/metrics {\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/validator:10013\/metrics"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n      proxy_set_header Host $host;\n      proxy_set_header X-Real-IP $remote_addr;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header X-Forwarded-Proto $scheme;\n    }\n  }\n\n  server {\n    listen 8088;\n    server_name \"\";\n    location \/metrics {\n      proxy_pass "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/participant:10013\/metrics"
+                            },
+                            {
+                                "type": "text",
+                                "text": ";\n      proxy_set_header Host $host;\n      proxy_set_header X-Real-IP $remote_addr;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header X-Forwarded-Proto $scheme;\n\n    }\n  }\n  }"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01FGU6QWRM",
+        "type": "message",
+        "ts": "1750164937.937179",
+        "client_msg_id": "80532019-ded5-487d-9134-10b66ca932a1",
+        "text": "Thanks <@U07L91D4REC> - I verified the audience and it seems correct. Will keep looking for answers",
+        "team": "T05FWTX7PMG",
+        "user_team": "TB8V36MDY",
+        "source_team": "TB8V36MDY",
+        "user_profile": {
+            "avatar_hash": "25c085c54198",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-12-01\/1547956617860_25c085c54198333b6b68_72.png",
+            "first_name": "Michael",
+            "real_name": "Michael Nguyen",
+            "display_name": "Michael Nguyen",
+            "team": "TB8V36MDY",
+            "name": "mike",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750093673.636739",
+        "parent_user_id": "U01FGU6QWRM",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "01+mN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U07L91D4REC"
+                            },
+                            {
+                                "type": "text",
+                                "text": " - I verified the audience and it seems correct. Will keep looking for answers"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01FGU6QWRM",
+        "type": "message",
+        "ts": "1750164947.529889",
+        "client_msg_id": "13f7b3a5-5d0c-4273-a901-164d745269c0",
+        "text": "<@U6NB1HKAN> - that'd be awesome",
+        "team": "T05FWTX7PMG",
+        "user_team": "TB8V36MDY",
+        "source_team": "TB8V36MDY",
+        "user_profile": {
+            "avatar_hash": "25c085c54198",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-12-01\/1547956617860_25c085c54198333b6b68_72.png",
+            "first_name": "Michael",
+            "real_name": "Michael Nguyen",
+            "display_name": "Michael Nguyen",
+            "team": "TB8V36MDY",
+            "name": "mike",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750093673.636739",
+        "parent_user_id": "U01FGU6QWRM",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OTwO9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U6NB1HKAN"
+                            },
+                            {
+                                "type": "text",
+                                "text": " - that'd be awesome"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U053W8T4G4U",
+        "type": "message",
+        "ts": "1750181473.570379",
+        "client_msg_id": "3e219985-146b-43e3-a273-a7e22eef543e",
+        "text": "Hi All,\n\nFor a validator node deployment, are all network connections outbound-only from the validator to the network, or does the validator need to accept any inbound connections from other nodes\/validators?\n\nSpecifically:\n1. Does the validator only initiate outbound connections to sponsor SVs and other network components?\n2. Do any other nodes\/validators need to connect directly TO our validator (requiring open inbound ports)?\n3. If inbound connections are required, which specific ports need to be exposed?\nContext: We have NAT configured for outbound traffic with a whitelisted egress IP, but need to know if we should configure any inbound port forwarding\/firewall rules for the validator to function properly.\n\nFrom what we understand we just need outgoing connections, so are these concerns unnecessary?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "5ebbc5392782",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-18\/5128315541605_5ebbc5392782eddbde84_72.png",
+            "first_name": "Allen",
+            "real_name": "Allen Fok",
+            "display_name": "",
+            "team": "T4WUR0THD",
+            "name": "afok",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750181473.570379",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1750183696.366069",
+        "reply_users": [
+            "U053W8T4G4U",
+            "U01TZB7MFFA"
+        ],
+        "replies": [
+            {
+                "user": "U053W8T4G4U",
+                "ts": "1750181483.447079"
+            },
+            {
+                "user": "U01TZB7MFFA",
+                "ts": "1750183696.366069"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dLC7M",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi All,\n\nFor a validator node deployment, are all network connections outbound-only from the validator to the network, or does the validator need to accept any inbound connections from other nodes\/validators?\n\nSpecifically:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Does the validator only initiate outbound connections to sponsor SVs and other network components?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Do any other nodes\/validators need to connect directly TO our validator (requiring open inbound ports)?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "If inbound connections are required, which specific ports need to be exposed?"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nContext: We have NAT configured for outbound traffic with a whitelisted egress IP, but need to know if we should configure any inbound port forwarding\/firewall rules for the validator to function properly.\n\nFrom what we understand we just need outgoing connections, so are these concerns unnecessary?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U053W8T4G4U",
+        "type": "message",
+        "ts": "1750181483.447079",
+        "client_msg_id": "72f85666-4009-4cc6-98e6-c704b2cf3576",
+        "text": "CC <@U08TDHL1E0N>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T4WUR0THD",
+        "source_team": "T4WUR0THD",
+        "user_profile": {
+            "avatar_hash": "5ebbc5392782",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-18\/5128315541605_5ebbc5392782eddbde84_72.png",
+            "first_name": "Allen",
+            "real_name": "Allen Fok",
+            "display_name": "",
+            "team": "T4WUR0THD",
+            "name": "afok",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750181473.570379",
+        "parent_user_id": "U053W8T4G4U",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "d6zYQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CC "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U08TDHL1E0N"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U01FGU6QWRM",
+        "type": "message",
+        "ts": "1750182164.218869",
+        "client_msg_id": "6189d9a8-844b-4e00-8449-8cf9cfdd773c",
+        "text": "Hello - a question WRT to node operators running multiple validators using Auth0. Is it ok to reuse the Applications + API for all Validators and just add the additional Callback URLs? Or do we need to create unique ones for each?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TB8V36MDY",
+        "source_team": "TB8V36MDY",
+        "user_profile": {
+            "avatar_hash": "25c085c54198",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2020-12-01\/1547956617860_25c085c54198333b6b68_72.png",
+            "first_name": "Michael",
+            "real_name": "Michael Nguyen",
+            "display_name": "Michael Nguyen",
+            "team": "TB8V36MDY",
+            "name": "mike",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "s6l4H",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello - a question WRT to node operators running multiple validators using Auth0. Is it ok to reuse the Applications + API for all Validators and just add the additional Callback URLs? Or do we need to create unique ones for each?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U01TZB7MFFA",
+        "type": "message",
+        "ts": "1750183696.366069",
+        "client_msg_id": "72b4fc72-b067-4194-8d52-97f0abc542d0",
+        "text": "Only inbound is for yourself : to access wallet and CNS ui. But non need to be public",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02CQ0UDY",
+        "source_team": "T02CQ0UDY",
+        "user_profile": {
+            "avatar_hash": "120a6007b09d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-08\/1946582690372_120a6007b09da03b987b_72.jpg",
+            "first_name": "Stephane",
+            "real_name": "Stephane Loeuillet",
+            "display_name": "Stef",
+            "team": "T02CQ0UDY",
+            "name": "stephane.loeuillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750181473.570379",
+        "parent_user_id": "U053W8T4G4U",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eaHol",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Only inbound is for yourself : to access wallet and CNS ui. But non need to be public"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U08TDHL1E0N"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*rchung* from *Vibrantcapitalpartners* was added to this channel by *wayne.collier*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1750187143.101519",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sX0bq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "rchung",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Vibrantcapitalpartners",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "wayne.collier",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "tombstone",
+        "text": "This message was deleted.",
+        "user": "USLACKBOT",
+        "hidden": true,
+        "type": "message",
+        "ts": "1750187321.549659",
+        "team": "T05FWTX7PMG",
+        "user_team": "T03T53E10",
+        "source_team": "T03T53E10",
+        "user_profile": {
+            "avatar_hash": "sv41d8cd98f0",
+            "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png",
+            "first_name": "slackbot",
+            "real_name": "Slackbot",
+            "display_name": "Slackbot",
+            "team": "T03T53E10",
+            "name": "slackbot",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750187321.549659",
+        "parent_user_id": "USLACKBOT",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1750213872.891229",
+        "reply_users": [
+            "U069QDTQV8S"
+        ],
+        "replies": [
+            {
+                "user": "U069QDTQV8S",
+                "ts": "1750213872.891229"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "user": "U069QDTQV8S",
+        "type": "message",
+        "ts": "1750213872.891229",
+        "client_msg_id": "f144daff-8429-49ed-bca8-7616c48719d4",
+        "text": "When will the validator node be upgraded?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T065T8729K4",
+        "source_team": "T065T8729K4",
+        "user_profile": {
+            "avatar_hash": "fcbb420e26d6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-12-12\/6315982222583_fcbb420e26d61573ac99_72.jpg",
+            "first_name": "JamesWang-HashKey",
+            "real_name": "JamesWang-HashKey Cloud",
+            "display_name": "JamesWang-HashKey Cloud",
+            "team": "T065T8729K4",
+            "name": "wangzezheng",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1750187321.549659",
+        "parent_user_id": "USLACKBOT",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GLTis",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "When will the validator node be upgraded?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U069QDTQV8S",
+        "type": "message",
+        "ts": "1750226513.947959",
+        "client_msg_id": "9dae8bbf-85d1-4352-a32f-f6fe6e9ea408",
+        "text": "Hi there. also using docker and would like help on installing the app too! is this public? can I please be added too <@U02KJ7PKHN2> <@U04BDUU197Z>",
+        "team": "T05FWTX7PMG",
+        "user_team": "T065T8729K4",
+        "source_team": "T065T8729K4",
+        "user_profile": {
+            "avatar_hash": "fcbb420e26d6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-12-12\/6315982222583_fcbb420e26d61573ac99_72.jpg",
+            "first_name": "JamesWang-HashKey",
+            "real_name": "JamesWang-HashKey Cloud",
+            "display_name": "JamesWang-HashKey Cloud",
+            "team": "T065T8729K4",
+            "name": "wangzezheng",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749552277.073579",
+        "parent_user_id": "U08GX9SV51V",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "osiWS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi there. also using docker and would like help on installing the app too! is this public? can I please be added too "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U02KJ7PKHN2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U04BDUU197Z"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]

@@ -1,0 +1,366 @@
+[
+    {
+        "user": "U08C86G9HM2",
+        "type": "message",
+        "ts": "1749733474.575589",
+        "client_msg_id": "db41c39f-f3eb-4fff-8c07-d8abe521f676",
+        "text": "Hey folks. Question:\n\nIf I'm interested in tracking all kinds of rewards pertaining to a validator, what events\/ choices should I be tracking? So far, I'm investigating the following:\n• Splice.Amulet:ValidatorRewardCoupon\n• Splice.Amulet:AppRewardCoupon\n• Splice.Amulet:SvRewardCoupon\n• Splice.ValidatorLicense:ValidatorFaucetCoupon\n• Splice.ValidatorLicense:ValidatorLivenessActivityRecord\n• ValidatorLicense_ReceiveFaucetCoupon\n• ValidatorLicense_RecordValidatorLivenessActivity\nCan u explain what each one is for and if it's relevant to total reward calculations? Also, please let me know if I'm missing anything",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04534YLV4K",
+        "source_team": "T04534YLV4K",
+        "user_profile": {
+            "avatar_hash": "f7fb4c809dae",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9357824340119_f7fb4c809daef2e78f55_72.jpg",
+            "first_name": "Mo",
+            "real_name": "Mo",
+            "display_name": "Mo",
+            "team": "T04534YLV4K",
+            "name": "mo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749733474.575589",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1749735193.537219",
+        "reply_users": [
+            "U08C86G9HM2"
+        ],
+        "replies": [
+            {
+                "user": "U08C86G9HM2",
+                "ts": "1749735193.537219"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UJlnZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey folks. Question:\n\nIf I'm interested in tracking all kinds of rewards pertaining to a validator, what events\/ choices should I be tracking? So far, I'm investigating the following:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Splice.Amulet:ValidatorRewardCoupon"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Splice.Amulet:AppRewardCoupon"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Splice.Amulet:SvRewardCoupon"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Splice.ValidatorLicense:ValidatorFaucetCoupon"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Splice.ValidatorLicense:ValidatorLivenessActivityRecord"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "ValidatorLicense_ReceiveFaucetCoupon"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "ValidatorLicense_RecordValidatorLivenessActivity"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nCan u explain what each one is for and if it's relevant to total reward calculations? Also, please let me know if I'm missing anything"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "user": "U08C86G9HM2",
+        "type": "message",
+        "ts": "1749735193.537219",
+        "client_msg_id": "f0447618-971b-484d-b2e1-282efb978e12",
+        "text": "Ok perfect. Let me index the data and check what I see",
+        "team": "T05FWTX7PMG",
+        "user_team": "T04534YLV4K",
+        "source_team": "T04534YLV4K",
+        "user_profile": {
+            "avatar_hash": "f7fb4c809dae",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-08-18\/9357824340119_f7fb4c809daef2e78f55_72.jpg",
+            "first_name": "Mo",
+            "real_name": "Mo",
+            "display_name": "Mo",
+            "team": "T04534YLV4K",
+            "name": "mo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749733474.575589",
+        "parent_user_id": "U08C86G9HM2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xjQBO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ok perfect. Let me index the data and check what I see"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    },
+    {
+        "subtype": "bot_message",
+        "text": "*ruddyg* from *Neo Genesis* was added to this channel by *operations*. You can review their permissions in Channel Details. Happy collaborating!",
+        "user": "USLACKBOT",
+        "username": "slackbot",
+        "type": "message",
+        "ts": "1749737448.874499",
+        "team": "T05FWTX7PMG",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NPrt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ruddyg",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Neo Genesis",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " was added to this channel by "
+                            },
+                            {
+                                "type": "text",
+                                "text": "operations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". You can review their permissions in Channel Details. Happy collaborating!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U05KJ4MUMU2",
+        "type": "message",
+        "ts": "1749759505.712149",
+        "client_msg_id": "cf740feb-7674-45ff-8093-1b046f21d061",
+        "text": "For CC transfers initiated via the APIs, how do we indicate which application the transfer is associated with so that the rewards derived from the fees are attributed to the correct app party?",
+        "team": "T05FWTX7PMG",
+        "user_team": "T02P6LC6U01",
+        "source_team": "T02P6LC6U01",
+        "user_profile": {
+            "avatar_hash": "gddacf9ce459",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/ddacf9ce459da7afa973d344cbdb5bc1.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "Matt",
+            "real_name": "Matt Franczak",
+            "display_name": "Matt",
+            "team": "T02P6LC6U01",
+            "name": "matt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749759505.712149",
+        "reply_count": 4,
+        "reply_users_count": 1,
+        "latest_reply": "1750109022.283519",
+        "reply_users": [
+            "U05KJ4MUMU2"
+        ],
+        "replies": [
+            {
+                "user": "U05KJ4MUMU2",
+                "ts": "1749824681.294249"
+            },
+            {
+                "user": "U05KJ4MUMU2",
+                "ts": "1750082304.212979"
+            },
+            {
+                "user": "U05KJ4MUMU2",
+                "ts": "1750084158.390299"
+            },
+            {
+                "user": "U05KJ4MUMU2",
+                "ts": "1750109022.283519"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2M5MD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "For CC transfers initiated via the APIs, how do we indicate which application the transfer is associated with so that the rewards derived from the fees are attributed to the correct app party?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        },
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U03JLTQU1CJ"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U08UW224T0E",
+        "type": "message",
+        "ts": "1749760774.193469",
+        "client_msg_id": "efe6fc51-933b-477b-8d06-ebc834aa87c2",
+        "text": "What version of the daml SDK do we need to use to upload a DAR to mainnet?",
+        "team": "T05FWTX7PMG",
+        "user_team": "TBV22AESY",
+        "source_team": "TBV22AESY",
+        "user_profile": {
+            "avatar_hash": "3741aba01a3b",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-06-02\/8982191016646_3741aba01a3b74456e22_72.png",
+            "first_name": "Nick",
+            "real_name": "Nick Mancuso",
+            "display_name": "Nick",
+            "team": "TBV22AESY",
+            "name": "nick",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1749760774.193469",
+        "reply_count": 0,
+        "reply_users_count": 0,
+        "latest_reply": "0000000000.000000",
+        "reply_users": [],
+        "replies": [],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rEW7V",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "What version of the daml SDK do we need to use to upload a DAR to mainnet?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": {
+            "locale": "en",
+            "is_reliable": true
+        }
+    }
+]
