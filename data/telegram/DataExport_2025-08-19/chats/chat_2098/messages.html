@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="../../css/style.css" rel="stylesheet"/>
+
+  <script src="../../js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <a class="content block_link" href="../../lists/chats.html" onclick="return GoBack(this)">
+
+     <div class="text bold">
+Ripple (XRPL) Eng &lt;&gt; dlcBTC Eng 
+     </div>
+
+    </a>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+2 May 2024
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-999930951">
+
+      <div class="body details">
+Aki Balogh created group &laquo;Ripple (XRPL) Eng &lt;&gt; dlcBTC Eng&raquo; with members Aki Balogh, Julian Ripple, Robert Tera and Jesse Eisenberg Budapest
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-999930950">
+
+      <div class="body details">
+Aki Balogh converted this group to a supergroup
+      </div>
+
+     </div>
+
+     <div class="message service" id="message1">
+
+      <div class="body details">
+Ripple (XRPL) Eng &lt;&gt; dlcBTC Eng converted a basic group to this supergroup &laquo;Ripple (XRPL) Eng &lt;&gt; dlcBTC Eng&raquo;
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message2">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="02.05.2024 12:02:36 UTC-05:00">
+12:02
+       </div>
+
+       <div class="from_name">
+Aki Balogh
+       </div>
+
+       <div class="text">
+Hey <a href="https://t.me/julian2222">@julian2222</a> - made you an admin
+       </div>
+
+       <span class="reactions">
+
+        <span class="reaction">
+
+         <span class="emoji">
+🔥
+         </span>
+
+         <span class="userpics">
+
+          <div class="userpic userpic6" style="width: 20px; height: 20px">
+
+           <div class="initials" style="line-height: 20px" title="Julian">
+J
+           </div>
+
+          </div>
+
+         </span>
+
+        </span>
+
+       </span>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="02.05.2024 12:08:04 UTC-05:00">
+12:08
+       </div>
+
+       <div class="from_name">
+Jazzi Cooper Ripple
+       </div>
+
+       <div class="text">
+👋
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message4">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="02.05.2024 12:08:37 UTC-05:00">
+12:08
+       </div>
+
+       <div class="text">
+I have some ideas for you guys on quantity validation for redemption. Will share in a bit.
+       </div>
+
+       <span class="reactions">
+
+        <span class="reaction active">
+
+         <span class="emoji">
+🙏
+         </span>
+
+         <span class="userpics">
+
+          <div class="userpic userpic4" style="width: 20px; height: 20px">
+
+           <div class="initials" style="line-height: 20px" title="Aki Balogh">
+AB
+           </div>
+
+          </div>
+
+         </span>
+
+        </span>
+
+       </span>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="02.05.2024 14:50:12 UTC-05:00">
+14:50
+       </div>
+
+       <div class="from_name">
+Jazzi Cooper Ripple
+       </div>
+
+       <div class="text">
+Here are a couple options:<br>(1) [Discussed on our call] - Use a secondary object linked to the original token recipient’s account - DID or NFT - to store reference data of the original issuance; this requires a manual check on the amount for the redemption<br>(2) The memo on the redemption transaction could include the transaction hash of the original payment<br>(3) We talked about using deposit auth feature to control which accounts can send to your redemption address. If you use this feature, in order to redeem the wBTC, the redeemer would send the redeeming account a Check (<a href="https://xrpl.org/docs/references/protocol/ledger-data/ledger-entry-types/check">https://xrpl.org/docs/references/protocol/ledger-data/ledger-entry-types/check</a>) for the wBTC.  The redeeming account would only accept the Check if the sending account and the Check amount matched.  Otherwise it would delete the check.
+       </div>
+
+       <span class="reactions">
+
+        <span class="reaction">
+
+         <span class="emoji">
+👍
+         </span>
+
+         <span class="userpics">
+
+          <div class="userpic userpic8" style="width: 20px; height: 20px">
+
+           <div class="initials" style="line-height: 20px" title="Jesse Eisenberg Budapest">
+JE
+           </div>
+
+          </div>
+
+         </span>
+
+        </span>
+
+       </span>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+6 May 2024
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JE
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2024 05:58:38 UTC-05:00">
+05:58
+       </div>
+
+       <div class="from_name">
+Jesse Eisenberg Budapest
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5" onclick="return GoToMessage(5)">this message</a>
+       </div>
+
+       <div class="text">
+Super, thank you for listing these options! We’ll review
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-3">
+
+      <div class="body details">
+6 September 2024
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message7">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JE
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.09.2024 08:17:02 UTC-05:00">
+08:17
+       </div>
+
+       <div class="from_name">
+Jesse Eisenberg Budapest
+       </div>
+
+       <div class="text">
+Hi <a href="https://t.me/jcooper1">@jcooper1</a> I hope you’re well. It’s been a while since we chatted!<br><br>I’m doing some technical design work and had a question for you. Regarding the multisig support, I see there is a max number of 8 signers in the Signer List. Is there anyway to effective have more than that? Perhaps a Signer list of Signers, or something like that? In theory we’re trying to get to something like 10 of 15 or so. Thanks!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-4">
+
+      <div class="body details">
+15 September 2024
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JE
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.09.2024 05:17:42 UTC-05:00">
+05:17
+       </div>
+
+       <div class="from_name">
+Jesse Eisenberg Budapest
+       </div>
+
+       <div class="text">
+<a href="https://t.me/jcooper1">@jcooper1</a> Following up on this, it seems we’ve solved this, as the signerList can be up to 32 signers. I was reading some old docs that listed it as 8. Solved!
+       </div>
+
+       <span class="reactions">
+
+        <span class="reaction active">
+
+         <span class="emoji">
+🎉
+         </span>
+
+         <span class="userpics">
+
+          <div class="userpic userpic4" style="width: 20px; height: 20px">
+
+           <div class="initials" style="line-height: 20px" title="Aki Balogh">
+AB
+           </div>
+
+          </div>
+
+         </span>
+
+        </span>
+
+       </span>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-5">
+
+      <div class="body details">
+11 November 2024
+      </div>
+
+     </div>
+
+     <div class="message service" id="message9">
+
+      <div class="body details">
+Jesse Eisenberg Budapest invited kseniya dlcBTC
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-6">
+
+      <div class="body details">
+14 November 2024
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+kd
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2024 09:12:12 UTC-05:00">
+09:12
+       </div>
+
+       <div class="from_name">
+kseniya dlcBTC
+       </div>
+
+       <div class="text">
+Hi <a href="https://t.me/julian2222">@julian2222</a> , I&apos;ve been trying to use a private xrpl network for our integration tests, running in standalone mode with genesis ledger. I have a few questions I&apos;m hoping you could help with please.<br><br> 1. For the genesis account, what is the seed? Is it the same as secret?<br> 2. When submitting a NFTokenMint/Payment tx in standalone mode using xrpl client’s submitAndWait function, would it be enough to manually advance the ledger using ‘ledger_accept’ for the tx to be accepted and validated? <br><br>When submitting with ‘rippled submit’ cmd, the transaction is successful, but using xrpl client submitAndWait,  it keeps trying to submit endlessly (despite advancing the ledger manually in parallel). <br><br>Could you share your thoughts please? <br>Thank you!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-7">
+
+      <div class="body details">
+15 November 2024
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+kd
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.11.2024 10:52:19 UTC-05:00">
+10:52
+       </div>
+
+       <div class="from_name">
+kseniya dlcBTC
+       </div>
+
+       <div class="text">
+also a quick question: does standalone mode support NFT related transactions? <br>I&apos;ve managed to send other types of transactions and get them validated (e.g., SignerListSet, CheckCreate, Payment with multisig), but not NFTokenMint. Thanks!
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
