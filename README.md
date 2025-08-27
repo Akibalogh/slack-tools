@@ -83,9 +83,25 @@ Recent analysis of Addie's comprehensive Slack export revealed important insight
 
 This analysis shows the need for better recognition of strategic vs. tactical contributions in commission calculations.
 
+## 📚 Documentation
+
+### 📖 User Guides
+- **[Getting Started](docs/user_manual/getting_started.md)**: Quick setup and first analysis
+- **[User Manual](docs/user_manual/README.md)**: Complete user guide and tutorials
+- **[Core Features](docs/user_manual/core_features.md)**: Commission calculation and features
+
+### 🔧 Technical Documentation
+- **[API Reference](docs/api_reference/README.md)**: Database schema and technical specs
+- **[Setup & Maintenance](docs/setup_maintenance/README.md)**: Installation and maintenance
+- **[Troubleshooting](docs/troubleshooting/README.md)**: Common issues and solutions
+
 ## Output Files
 
 - `deal_splits.csv`: Commission percentages for each deal
 - `person_rollup.csv`: Total commission percentages per person
-- `deal_rationale.csv`: **NEW!** Includes calendar meeting information, stage breakdown, and strategic context
-- `justifications/`: Detailed markdown files for each deal with calendar data and strategic insights 
+- `deal_rationale.csv`: **NEW!** Includes calendar meeting information, stage breakdown, and strategic context. **First column contains full node addresses** in format `company_name::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2`
+- `justifications/`: Detailed markdown files for each deal with calendar data and strategic insights
+
+### Important Constraints
+
+**Most Likely Owner Constraint**: The "Most Likely Owner" column in `deal_rationale.csv` will ALWAYS contain a specific sales rep's name (Aki, Addie, Mayank, or Amy) and NEVER "Split". This ensures every deal has a clear, identifiable owner for commission purposes, even in highly contested scenarios. 
