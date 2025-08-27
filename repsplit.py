@@ -673,7 +673,7 @@ class RepSplit:
                 f.write(f"  > {message_text[:200]}{'...' if len(message_text) > 200 else ''}\n\n")
         
         conn.close()
-        logger.info(f"Generated justification for {conv_name}")
+        self.logger.info(f"Generated justification for {conv_name}")
     
     def run_analysis(self):
         """Run the complete commission analysis"""
@@ -943,7 +943,7 @@ class RepSplit:
             for row in rationale_data:
                 writer.writerow(row)
         
-        logger.info("Generated deal_rationale.csv with contestation levels, stage breakdown, calendar meetings, and rationale")
+        self.logger.info("Generated deal_rationale.csv with contestation levels, stage breakdown, calendar meetings, and rationale")
     
     def get_stage_breakdown(self, deal_id: str) -> Dict[str, str]:
         """Get stage-by-stage breakdown showing who handled each stage"""
@@ -1168,7 +1168,7 @@ class RepSplit:
         # Generate rationale CSV with contestation level and reasoning
         self.generate_rationale_csv(all_splits)
         
-        logger.info(f"Output files generated in {self.output_dir}")
+        self.logger.info(f"Output files generated in {self.output_dir}")
 
 def main():
     """Main entry point"""
