@@ -11,22 +11,15 @@ import json
 import csv
 import re
 import sqlite3
+import time
 from datetime import datetime
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, List, Tuple, Optional, Any
 import logging
 from dataclasses import dataclass
 from pathlib import Path
 
-# Set up logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('repsplit.log'),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger(__name__)
+# Import enhanced logging system
+from logging_config import setup_logging, PerformanceMonitor, DatabaseMonitor, DataFreshnessMonitor
 
 @dataclass
 class StageConfig:
@@ -72,6 +65,12 @@ class RepSplit:
         # Create output directories
         self.output_dir.mkdir(exist_ok=True)
         self.justifications_dir.mkdir(exist_ok=True)
+        
+        # Initialize enhanced logging system
+        self.logger, self.performance_monitor, self.db_monitor, self.freshness_monitor = setup_logging(
+            log_level="INFO",
+            log_file="logs/repsplit.log"
+        )
         
         # Initialize database
         self.init_database()
@@ -204,7 +203,16 @@ class RepSplit:
         
         conn.commit()
         conn.close()
-        logger.info("Database initialized successfully")
+        
+        # Log database operation
+        self.db_monitor.log_database_operation(
+            operation="initialize",
+            table="all_tables",
+            rows_affected=0,
+            duration_ms=0  # We don't have timing for this operation
+        )
+        
+        self.logger.info("Database initialized successfully")
     
     def detect_stages_in_message(self, text: str) -> List[Tuple[str, float]]:
         """Detect deal stages in a message based on keyword patterns"""
@@ -234,42 +242,50 @@ class RepSplit:
             participant_stats["stage_contributions"][stage] = 0
         participant_stats["stage_contributions"][stage] += 1
     
-    def _process_telegram_stage_detections(self, conv_id: str, internal_names: set) -> List[Tuple[str, str, float, str]]:
+    def _process_telegram_stage_detections(self, conv_id: str, internal_names: set, cursor=None) -> List[Tuple[str, str, float, str]]:
         """Process Telegram messages for stage detection"""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        # Get Telegram messages for internal team members
-        if internal_names:
-            placeholders = ','.join(['?' for _ in internal_names])
-            cursor.execute(f'''
-                SELECT author, text, timestamp
-                FROM telegram_messages 
-                WHERE conv_id = ? AND author IN ({placeholders})
-                ORDER BY timestamp
-            ''', [conv_id] + list(internal_names))
+        # Use existing cursor if provided, otherwise create new connection
+        if cursor is None:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            should_close = True
         else:
-            cursor.execute('''
-                SELECT author, text, timestamp
-                FROM telegram_messages 
-                WHERE conv_id = ?
-                ORDER BY timestamp
-            ''', [conv_id])
+            should_close = False
         
-        telegram_messages = cursor.fetchall()
-        conn.close()
-        
-        # Process messages for stage detection
-        telegram_stage_detections = []
-        for author, text, timestamp in telegram_messages:
-            if text:  # Only process messages with text
-                detected_stages = self.detect_stages_in_message(text)
-                # Use current timestamp if Telegram timestamp is missing
-                ts = timestamp if timestamp else 0
-                for stage_name, confidence in detected_stages:
-                    telegram_stage_detections.append((stage_name, author, confidence, ts))
-        
-        return telegram_stage_detections
+        try:
+            # Get Telegram messages for internal team members
+            if internal_names:
+                placeholders = ','.join(['?' for _ in internal_names])
+                cursor.execute(f'''
+                    SELECT author, text, timestamp
+                    FROM telegram_messages 
+                    WHERE conv_id = ? AND author IN ({placeholders})
+                    ORDER BY timestamp
+                ''', [conv_id] + list(internal_names))
+            else:
+                cursor.execute('''
+                    SELECT author, text, timestamp
+                    FROM telegram_messages 
+                    WHERE conv_id = ?
+                    ORDER BY timestamp
+                ''', [conv_id])
+            
+            telegram_messages = cursor.fetchall()
+            
+            # Process messages for stage detection
+            telegram_stage_detections = []
+            for author, text, timestamp in telegram_messages:
+                if text:  # Only process messages with text
+                    detected_stages = self.detect_stages_in_message(text)
+                    # Use current timestamp if Telegram timestamp is missing
+                    ts = timestamp if timestamp else 0
+                    for stage_name, confidence in detected_stages:
+                        telegram_stage_detections.append((stage_name, author, confidence, ts))
+            
+            return telegram_stage_detections
+        finally:
+            if should_close:
+                conn.close()
     
     def calculate_commission_splits(self, conv_id: str) -> Dict[str, float]:
         """Calculate commission splits for a specific conversation"""
@@ -305,8 +321,8 @@ class RepSplit:
         
         stage_detections = cursor.fetchall()
         
-        # Process Telegram messages for stage detection
-        telegram_stage_detections = self._process_telegram_stage_detections(conv_id, internal_names)
+        # Process Telegram messages for stage detection using shared cursor
+        telegram_stage_detections = self._process_telegram_stage_detections(conv_id, internal_names, cursor)
         
         # Combine Slack and Telegram stage detections
         all_stage_detections = stage_detections + telegram_stage_detections
@@ -661,43 +677,50 @@ class RepSplit:
     
     def run_analysis(self):
         """Run the complete commission analysis"""
-        logger.info("Starting RepSplit commission analysis...")
+        self.logger.info("Starting RepSplit commission analysis...")
         
-        # Get all bitsafe conversations
+        # Start performance monitoring
+        start_time = time.time()
+        
+        # Use single database connection for better performance
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
-        # Get both Slack bitsafe channels and Telegram conversations
+        # Optimize: Use prepared statements and fetch all data at once
         cursor.execute('''
             SELECT conv_id, name FROM conversations 
             WHERE is_bitsafe = TRUE
         ''')
         slack_channels = cursor.fetchall()
         
-        # Get Telegram conversations that have internal team activity
+        # Optimize: Use IN clause with prepared statement
         cursor.execute('''
             SELECT DISTINCT conv_id, company_name as name
             FROM telegram_messages 
-            WHERE author IN ('Aki', 'Addie', 'Mayank', 'Amy', 'Kadeem Clarke')
-        ''')
+            WHERE author IN (?, ?, ?, ?, ?)
+        ''', ('Aki', 'Addie', 'Mayank', 'Amy', 'Kadeem Clarke'))
         telegram_channels = cursor.fetchall()
         
         # Combine both data sources
         all_channels = slack_channels + telegram_channels
-        conn.close()
         
         if not all_channels:
-            logger.warning("No channels found. Please run the Slack ingestion first.")
+            self.logger.warning("No channels found. Please run the Slack ingestion first.")
             return
         
-        logger.info(f"Found {len(slack_channels)} Slack channels and {len(telegram_channels)} Telegram conversations to analyze")
+        self.logger.info(f"Found {len(slack_channels)} Slack channels and {len(telegram_channels)} Telegram conversations to analyze")
+        
+        # Pre-cache participant mappings for better performance
+        participant_cache = {}
+        cursor.execute('SELECT id, display_name FROM users')
+        user_display_names = {row[0]: row[1] for row in cursor.fetchall()}
         
         # Calculate commission splits for each channel
         all_splits = []
         person_totals = {"Aki": 0.0, "Addie": 0.0, "Amy": 0.0, "Mayank": 0.0, "Prateek": 0.0, "Will": 0.0, "Kadeem": 0.0}
         
         for conv_id, conv_name in all_channels:
-            logger.info(f"Analyzing {conv_name}...")
+            self.logger.info(f"Analyzing {conv_name}...")
             
             # Calculate splits
             commissions = self.calculate_commission_splits(conv_id)
@@ -705,29 +728,22 @@ class RepSplit:
             # Round percentages to nearest 25%
             rounded_commissions = {p: round_to_nearest_25(v) for p, v in commissions.items()}
             
-            # Map to participant names
+            # Map to participant names using cached data
             participant_names = {}
             for participant_id, percentage in rounded_commissions.items():
-                # participant_id is already the Slack ID (e.g., U092B2GUASF)
-                # Try to match with configured participants using Slack ID first, then display name
+                # Try to match with configured participants using Slack ID first
                 matched = False
                 for p in self.config["participants"]:
-                    # First try Slack ID match (most reliable)
                     if p["slack_id"] and p["slack_id"] == participant_id:
                         participant_names[participant_id] = p["name"]
                         matched = True
                         break
                 
                 if not matched:
-                    # Fallback: get display name from database using Slack ID
-                    conn = sqlite3.connect(self.db_path)
-                    cursor = conn.cursor()
-                    cursor.execute('SELECT display_name FROM users WHERE id = ?', (participant_id,))
-                    display_name = cursor.fetchone()
-                    conn.close()
-                    
-                    if display_name and display_name[0]:
-                        participant_names[participant_id] = display_name[0]
+                    # Use cached display name lookup
+                    display_name = user_display_names.get(participant_id)
+                    if display_name:
+                        participant_names[participant_id] = display_name
                     else:
                         participant_names[participant_id] = participant_id
             
@@ -757,10 +773,87 @@ class RepSplit:
         # Generate output files
         self.generate_output_files(all_splits, person_totals)
         
-        logger.info("Analysis complete!")
+        # Close database connection
+        conn.close()
+        
+        # Log performance metrics
+        execution_time = time.time() - start_time
+        self.logger.info(
+            "Analysis complete!",
+            extra={
+                'performance_metrics': {
+                    'function_name': 'run_analysis',
+                    'execution_time_ms': round(execution_time * 1000, 2),
+                    'channels_processed': len(all_channels),
+                    'status': 'success'
+                }
+            }
+        )
+        
+        # Store performance metric
+        self.performance_monitor.metrics['run_analysis_execution_time'] = execution_time
+    
+    def generate_system_health_report(self) -> Dict[str, Any]:
+        """Generate comprehensive system health report"""
+        self.logger.info("Generating system health report...")
+        
+        # Database health
+        db_health = self.db_monitor.check_database_health()
+        
+        # Data freshness
+        data_freshness = self.freshness_monitor.check_data_freshness(self.db_path)
+        
+        # Performance metrics
+        performance_summary = self.performance_monitor.get_metrics_summary()
+        
+        # System status
+        overall_status = "healthy"
+        if db_health.get("status") != "healthy":
+            overall_status = "degraded"
+        if data_freshness.get("overall_status") == "critical":
+            overall_status = "critical"
+        
+        health_report = {
+            "timestamp": datetime.utcnow().isoformat(),
+            "overall_status": overall_status,
+            "database_health": db_health,
+            "data_freshness": data_freshness,
+            "performance_metrics": performance_summary,
+            "system_info": {
+                "database_path": self.db_path,
+                "output_directory": str(self.output_dir),
+                "config_file": self.config_file
+            }
+        }
+        
+        self.logger.info(
+            f"System health report generated. Overall status: {overall_status}",
+            extra={
+                'context': {
+                    'system_health_report': {
+                        'overall_status': overall_status,
+                        'database_status': db_health.get('status'),
+                        'data_freshness_status': data_freshness.get('overall_status')
+                    }
+                }
+            }
+        )
+        
+        return health_report
     
     def generate_rationale_csv(self, all_splits: List[Dict]):
-        """Generate rationale CSV with contestation level and reasoning"""
+        """Generate rationale CSV with contestation level and reasoning
+        
+        CONSTRAINT: The "Most Likely Owner" column must ALWAYS contain a sales rep's name 
+        (Aki, Addie, Mayank, or Amy) and NEVER "Split". This ensures that every deal 
+        has a clear, identifiable owner for commission purposes, even in highly contested 
+        scenarios where percentages are low.
+        
+        The system will:
+        1. Always pick the person with the highest percentage as the most likely owner
+        2. If no clear winner, pick the first person with any percentage > 0
+        3. Default to Aki if no one has any percentage (edge case)
+        """
         
         rationale_data = []
         
@@ -787,21 +880,29 @@ class RepSplit:
             else:
                 contestation_level = "MODERATE CONTESTATION"
             
-            # Determine most likely owner - more nuanced logic
-            if max_pct >= 40.0:
-                # Find the person with the highest percentage
-                if aki_pct == max_pct:
+            # Determine most likely owner - ALWAYS pick the person with highest percentage
+            # This ensures we never output "Split" - constraint: Most Likely Owner must be a sales rep
+            if aki_pct == max_pct:
+                most_likely_owner = "Aki"
+            elif addie_pct == max_pct:
+                most_likely_owner = "Addie"
+            elif mayank_pct == max_pct:
+                most_likely_owner = "Mayank"
+            elif amy_pct == max_pct:
+                most_likely_owner = "Amy"
+            else:
+                # Fallback: find the first person with any percentage > 0
+                if aki_pct > 0:
                     most_likely_owner = "Aki"
-                elif addie_pct == max_pct:
+                elif addie_pct > 0:
                     most_likely_owner = "Addie"
-                elif mayank_pct == max_pct:
+                elif mayank_pct > 0:
                     most_likely_owner = "Mayank"
-                elif amy_pct == max_pct:
+                elif amy_pct > 0:
                     most_likely_owner = "Amy"
                 else:
-                    most_likely_owner = "Split"
-            else:
-                most_likely_owner = "Split"
+                    # This should never happen, but if it does, default to Aki
+                    most_likely_owner = "Aki"
             
             # Get stage-by-stage breakdown
             stage_breakdown = self.get_stage_breakdown(deal_id)
@@ -813,7 +914,7 @@ class RepSplit:
             rationale = self.generate_short_rationale(deal_id, split)
             
             rationale_data.append({
-                "Company": deal_id,
+                "Full Node Address": self.get_full_node_address(deal_id),
                 "Aki %": f"{aki_pct:.0f}%",
                 "Addie %": f"{addie_pct:.0f}%",
                 "Mayank %": f"{mayank_pct:.0f}%",
@@ -835,7 +936,7 @@ class RepSplit:
         
         # Write rationale CSV
         with open(self.output_dir / "deal_rationale.csv", 'w', newline='') as f:
-            fieldnames = ["Company", "Aki %", "Addie %", "Mayank %", "Amy %", "Contestation Level", "Most Likely Owner", 
+            fieldnames = ["Full Node Address", "Aki %", "Addie %", "Mayank %", "Amy %", "Contestation Level", "Most Likely Owner", 
                          "Calendar Meetings", "Sourcing/Intro", "Discovery/Qual", "Solution", "Objection", "Technical", "Pricing", "Contract", "Scheduling", "Closing", "Rationale"]
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
@@ -921,6 +1022,20 @@ class RepSplit:
         else:
             # For unknown users, return a more descriptive label
             return f"External-{participant_id[-4:]}"
+    
+    def get_full_node_address(self, company_name: str) -> str:
+        """Convert company name to full node address format"""
+        # Base node address (common for all companies)
+        base_address = "1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2"
+        
+        # Clean company name (remove -bitsafe suffix if present)
+        clean_name = company_name.replace("-bitsafe", "")
+        
+        # Convert to lowercase and replace spaces/hyphens with single hyphens
+        clean_name = re.sub(r'[-\s]+', '-', clean_name.lower())
+        
+        # Return full node address format
+        return f"{clean_name}::{base_address}"
     
     def generate_short_rationale(self, deal_id: str, split: Dict) -> str:
         """Generate short rationale based on commission split and stage analysis"""
