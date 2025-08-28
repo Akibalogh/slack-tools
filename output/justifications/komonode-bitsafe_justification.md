@@ -12,7 +12,31 @@
 
 ## Calendar Meetings (In-Person Interactions)
 
-No in-person meetings found in calendar data.
+**Company:** Komonode
+
+**Meetings Found:**
+
+- **Igor Gusarov and Aki Balogh**
+  - Date: 2025-08-26T14:30:00-04:00
+  - Duration: 25 minutes
+  - Team Participants: Aki
+  - Description: Event Name
+25 Minutes (US ET)
+
+Location: This is a Google Meet web conference.
+You can join this meeting from your computer, tablet, or smartphone.
+https://calendly.com/events/148d3c23-54e9-41d4-a75b-...
+
+- **Igor Gusarov and Aki Balogh**
+  - Date: 2025-08-26T14:30:00-04:00
+  - Duration: 25 minutes
+  - Team Participants: Aki
+  - Description: Event Name
+25 Minutes (US ET)
+
+Location: This is a Google Meet web conference.
+You can join this meeting from your computer, tablet, or smartphone.
+https://calendly.com/events/148d3c23-54e9-41d4-a75b-...
 
 ## Stage Analysis
 

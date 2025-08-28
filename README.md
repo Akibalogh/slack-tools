@@ -100,6 +100,18 @@ This analysis shows the need for better recognition of strategic vs. tactical co
 - `deal_splits.csv`: Commission percentages for each deal
 - `person_rollup.csv`: Total commission percentages per person
 - `deal_rationale.csv`: **NEW!** Includes calendar meeting information, stage breakdown, and strategic context. **First column contains full node addresses** in format `company_name::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2`
+
+### Full Node Address Format
+
+The first column of `deal_rationale.csv` uses the **Full Node Address** format:
+- **Standard Format**: `company_name::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2`
+- **Mainnet Format**: `company_name-mainnet-1::1220[unique_hash]` (for companies with mainnet validators)
+- **Special Cases**: Some companies have multiple wallet types (e.g., `company-minter::hash`, `company-validator-1::hash`)
+
+**Examples:**
+- `bitsafe::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2`
+- `16::12207ebc4da4e824f5249a17b6559a9e7d3817d45bcde71c871c10a34d9ac9e8b9ba`
+- `Maestro-mainnet-1::1220265a4c49d3c7cfa97273cf6533cad1918f04eee60d774366593b737b12882702`
 - `justifications/`: Detailed markdown files for each deal with calendar data and strategic insights
 
 ### Important Constraints
