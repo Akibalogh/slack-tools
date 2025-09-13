@@ -1,0 +1,68 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Fix Telegram Chat Parsing Logic in ETL System",
+        "description": "Update the ETL system's Telegram parsing logic to properly detect and process all available chat directories instead of only finding 1 out of 3,958 directories.",
+        "details": "The current implementation has a critical flaw in how it traverses and processes Telegram chat exports. The issue is that the parser is not correctly identifying chat directories because it's looking for HTML files in subdirectories, while the actual structure has a single messages.html file in each chat directory.\n\nImplementation steps:\n1. Review the current parsing logic to understand the exact failure point\n2. Modify the directory traversal algorithm to:\n   - Correctly identify chat directories by looking for the presence of a \"messages.html\" file\n   - Implement proper recursion or iteration through all directories in the export\n   - Add logging to track the number of directories processed\n3. Update the extraction logic to:\n   - Parse each messages.html file to extract chat metadata (participants, dates, etc.)\n   - Filter for company-specific chats based on established criteria\n   - Normalize the extracted data for downstream processing\n4. Implement error handling for malformed HTML files or unexpected directory structures\n5. Add performance optimizations to handle the large volume (3,958 directories)\n   - Consider parallel processing if appropriate\n   - Implement batching if memory constraints are an issue\n6. Update documentation to reflect the new parsing approach\n\nThe code will likely need to modify functions related to file system traversal and HTML parsing. Pay special attention to character encoding when reading HTML files to ensure proper text extraction.",
+        "testStrategy": "1. Create a test dataset with a sample of the Telegram export structure:\n   - Include multiple chat directories with messages.html files\n   - Include some directories that should be filtered out\n   - Include edge cases like empty directories or malformed HTML\n\n2. Unit tests:\n   - Test the directory traversal function to verify it finds all chat directories\n   - Test the HTML parsing function with various message formats\n   - Test the company-specific filtering logic\n\n3. Integration tests:\n   - Run the updated ETL process on the test dataset\n   - Verify the correct number of chats are detected (should be close to 3,958 in production)\n   - Verify the extracted data matches expected format\n\n4. Performance testing:\n   - Measure processing time for various dataset sizes\n   - Verify memory usage remains within acceptable limits\n\n5. Production validation:\n   - Run the updated parser on a subset of production data\n   - Compare results with manual verification of several randomly selected chats\n   - Monitor logs for any errors or warnings during processing\n   - Verify the full count of detected chats matches the expected 3,958 directories",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "high",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Analyze Current Parsing Logic and Directory Structure",
+            "description": "Review the existing code to identify why it's only finding 1 out of 3,958 directories. Document the actual Telegram export structure versus what the current code expects.",
+            "dependencies": [],
+            "details": "Examine the current file traversal functions and logging statements. Create a diagram of the actual directory structure from the Telegram export. Identify the specific conditions being used to detect chat directories and why they're failing. Document the expected location of messages.html files and other relevant files in the directory structure.\n<info added on 2025-09-13T17:23:25.079Z>\n**ANALYSIS COMPLETE - Root Cause Identified:**\n\n**Issue Found:** All Telegram HTML files have the same `<title>Exported Data</title>` tag, causing the parser to use the same key name for all chats. When processing 3,958 directories, they all get stored under the same key \"Exported Data\" and overwrite each other, resulting in only 1 chat being detected.\n\n**Current Logic Flaw:**\n```python\ntitle = soup.find('title')\nchat_name = title.text.strip() if title else html_file.replace('.html', '')\n```\n\n**Directory Structure Confirmed:**\n- 3,958 chat directories (chat_0001, chat_0002, etc.)\n- Each contains 1+ HTML files (messages.html, messages2.html, etc.)\n- All HTML files have identical title: \"Exported Data\"\n\n**Solution Needed:** Use the directory name (chat_0001, chat_0002, etc.) or extract actual chat name from message content instead of relying on the HTML title tag.\n\n**Next Steps:** Update parsing logic to use directory names as unique identifiers and extract actual chat names from message content or participant lists.\n</info added on 2025-09-13T17:23:25.079Z>",
+            "status": "done",
+            "testStrategy": "Create a small sample of the actual directory structure and manually trace through the code execution to pinpoint the exact failure point."
+          },
+          {
+            "id": 2,
+            "title": "Implement Correct Directory Traversal Algorithm",
+            "description": "Modify the directory traversal logic to properly identify chat directories by checking for the presence of messages.html files at the correct level in the directory hierarchy.",
+            "dependencies": [],
+            "details": "Update the file system traversal function to correctly identify chat directories by looking for 'messages.html' files. Implement proper recursion or iteration through all directories in the export. Add detailed logging that shows the total number of directories found, processed, and skipped. Ensure the traversal handles nested directories correctly.",
+            "status": "in-progress",
+            "testStrategy": "Test with a sample directory structure containing multiple levels of nesting and various configurations of messages.html placement."
+          },
+          {
+            "id": 3,
+            "title": "Update HTML Extraction and Parsing Logic",
+            "description": "Revise the HTML parsing code to correctly extract chat metadata and content from each messages.html file, ensuring proper character encoding handling.",
+            "dependencies": [],
+            "details": "Modify the HTML parsing functions to extract relevant metadata (participants, dates, chat names) from each messages.html file. Implement filters to identify company-specific chats based on established criteria. Ensure proper character encoding when reading HTML files (use UTF-8 by default but detect encoding if possible). Normalize extracted data into a consistent format for downstream processing.",
+            "status": "pending",
+            "testStrategy": "Create test cases with sample messages.html files containing various languages, special characters, and edge cases like empty chats or malformed HTML."
+          },
+          {
+            "id": 4,
+            "title": "Implement Error Handling and Performance Optimizations",
+            "description": "Add robust error handling for malformed files and implement performance optimizations to efficiently process the large volume of chat directories.",
+            "dependencies": [],
+            "details": "Implement try-catch blocks around file operations and HTML parsing. Add specific error handling for common failure cases (file not found, permission denied, malformed HTML). Implement performance optimizations such as parallel processing of multiple directories or batched processing to manage memory usage. Add progress tracking to monitor processing of large datasets. Consider implementing checkpointing to allow resuming interrupted processing.",
+            "status": "pending",
+            "testStrategy": "Test with intentionally malformed HTML files and very large directories to verify error handling and performance under load. Measure processing time before and after optimizations."
+          },
+          {
+            "id": 5,
+            "title": "Add Comprehensive Logging and Update Documentation",
+            "description": "Enhance logging throughout the parsing process and update documentation to reflect the new parsing approach and directory structure expectations.",
+            "dependencies": [],
+            "details": "Add detailed logging at key points in the process, including: number of directories found, number of valid chat directories identified, number of chats processed successfully, and any errors encountered. Create summary logs with overall statistics. Update code comments and external documentation to clearly explain the expected directory structure, the parsing approach, and any configuration options. Include troubleshooting guidance for common issues.",
+            "status": "pending",
+            "testStrategy": "Review logs from a full processing run to ensure they provide sufficient information for monitoring and debugging. Have another team member review the documentation for clarity and completeness."
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "created": "2025-09-13T17:16:12.706Z",
+      "description": "Default tasks context",
+      "updated": "2025-09-13T17:24:10.639Z"
+    }
+  }
+}
