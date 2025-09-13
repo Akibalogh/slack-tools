@@ -1,0 +1,61 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: ETL Pipeline",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/run_etl.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}/scripts"
+      }
+    },
+    {
+      "name": "Python: Slack Ingest",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/slack_ingest.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}/scripts"
+      }
+    },
+    {
+      "name": "Python: Commission Analysis",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/analyze_sales_process.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}/scripts"
+      }
+    },
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}/scripts"
+      }
+    },
+    {
+      "name": "Python: Pytest",
+      "type": "python",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["-v", "tests/"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}/scripts"
+      }
+    }
+  ]
+}

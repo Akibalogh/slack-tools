@@ -1,0 +1,112 @@
+---
+description: Guidelines for using ETL and data processing tools in Cursor IDE for efficient data analysis and pipeline development.
+globs: **/*.py, **/*.ipynb, **/*.json, **/*.csv, **/*.sql
+alwaysApply: true
+---
+
+- **Automatic Tool Integration:**
+  - **Extensions**: Load automatically when Cursor starts (no configuration needed)
+  - **MCP Servers**: Load automatically from `.cursor/mcp.json` configuration
+  - **Database Connections**: Auto-configured in SQLTools via `.cursor/settings.json`
+  - **Python Environment**: Auto-detected from `.cursor/settings.json`
+
+- **Manual Tool Activation:**
+  - **Command Palette** (`Cmd+Shift+P`): Access all tools manually
+  - **Task Runner** (`Cmd+Shift+P` → `Tasks: Run Task`): Execute predefined tasks
+  - **Debug Configurations**: Use F5 or Debug panel for launch configurations
+  - **Jupyter Notebooks**: Open `.ipynb` files to activate Jupyter features
+
+- **ETL Pipeline Tools:**
+  - **SQLTools Panel**: Database exploration and query execution
+    - Access via Activity Bar (database icon) or `Cmd+Shift+P` → `SQLTools: Show`
+    - Pre-configured connections: RepSplit DB, Slack Data DB
+    - Execute queries directly in Cursor with syntax highlighting
+  - **Rainbow CSV**: Automatic color-coding for CSV files
+    - Opens automatically when viewing `.csv` files
+    - Column alignment and data type detection
+  - **JSON Tools**: Format and validate JSON files
+    - `Cmd+Shift+P` → `Format Document` for JSON formatting
+    - Schema validation for Slack export files
+
+- **Data Analysis Workflow:**
+  - **Jupyter Notebooks**: Interactive data analysis
+    - Open `notebooks/slack_data_analysis.ipynb` for Slack data analysis
+    - Open `notebooks/etl_analysis.ipynb` for ETL pipeline analysis
+    - Use `Cmd+Shift+P` → `Jupyter: Create New Notebook` for new analysis
+  - **Python Debugging**: Step-through ETL processes
+    - Use F5 or Debug panel to run launch configurations
+    - Set breakpoints in ETL scripts for debugging
+    - Variable inspection during pipeline execution
+
+- **File Management Tools:**
+  - **Path Intellisense**: Auto-complete file paths
+    - Works automatically in Python imports and file operations
+    - Suggests files from project structure
+  - **GitLens**: Enhanced Git integration
+    - Shows blame annotations, commit history
+    - Access via `Cmd+Shift+P` → `GitLens: Show` commands
+  - **File Utils**: Bulk file operations
+    - `Cmd+Shift+P` → `File Utils: Copy`, `File Utils: Move`, etc.
+
+- **Code Quality Tools:**
+  - **Black Formatter**: Automatic code formatting
+    - Format on save (enabled in settings)
+    - `Cmd+Shift+P` → `Format Document` for manual formatting
+  - **Flake8 Linting**: Real-time code quality checks
+    - Shows errors and warnings as you type
+    - `Cmd+Shift+P` → `Python: Run Linting` for manual check
+  - **Pytest Integration**: Test execution and debugging
+    - Run tests via Task Runner or Debug panel
+    - Test discovery and execution in Test Explorer
+
+- **Database Integration:**
+  - **SQLite Viewer**: Direct database exploration
+    - Right-click on `.db` files → "Open with SQLite Viewer"
+    - Browse tables, run queries, export data
+  - **SQLTools Connections**: Pre-configured database access
+    - RepSplit DB: `./repsplit_orm.db` (main application data)
+    - Slack Data DB: `./data/slack/slack_data.db` (Slack export data)
+    - Access via SQLTools panel in Activity Bar
+
+- **MCP Server Integration:**
+  - **Filesystem MCP**: Enhanced file operations
+    - Access to data directories: `data/`, `output/`, `analysis/`
+    - File search and manipulation capabilities
+  - **Task Master AI**: Project management integration
+    - Task creation, tracking, and management
+    - Integration with development workflow
+
+- **Usage Patterns:**
+  - **Data Exploration**: Open CSV/JSON files → Rainbow CSV/JSON Tools activate
+  - **Database Analysis**: SQLTools panel → Select connection → Run queries
+  - **Interactive Analysis**: Open `.ipynb` files → Jupyter features activate
+  - **ETL Development**: Use debug configurations → Step through pipeline
+  - **Code Quality**: Save Python files → Black/Flake8 run automatically
+
+- **Tool Configuration:**
+  - **Settings**: `.cursor/settings.json` (Python, formatting, database connections)
+  - **MCP Servers**: `.cursor/mcp.json` (filesystem access, task management)
+  - **Launch Configs**: `.cursor/launch.json` (debug configurations)
+  - **Tasks**: `.cursor/tasks.json` (predefined task runners)
+  - **Extensions**: `.cursor/extensions.json` (recommended extensions list)
+
+- **Best Practices:**
+  - **Start with Jupyter**: Use notebooks for initial data exploration
+  - **Use SQLTools**: Query databases directly instead of exporting to CSV
+  - **Leverage Debugging**: Step through ETL processes to understand data flow
+  - **Format Consistently**: Let Black handle code formatting automatically
+  - **Test Regularly**: Use pytest integration for ETL pipeline testing
+  - **Version Control**: Use GitLens for tracking changes in data processing code
+
+- **Troubleshooting:**
+  - **Extensions not loading**: Restart Cursor IDE
+  - **Database connections failing**: Check file paths in `.cursor/settings.json`
+  - **MCP servers not working**: Verify npm packages installed globally
+  - **Python interpreter issues**: Use `Cmd+Shift+P` → `Python: Select Interpreter`
+  - **Jupyter not working**: Ensure Python environment has required packages
+
+- **Integration with Project Rules:**
+  - Follow [cursor_rules.mdc](mdc:.cursor/rules/cursor_rules.mdc) for rule structure
+  - Update [self_improve.mdc](mdc:.cursor/rules/self_improve.mdc) when adding new data patterns
+  - Reference [taskmaster.mdc](mdc:.cursor/rules/taskmaster/taskmaster.mdc) for project management
+  - Use [dev_workflow.mdc](mdc:.cursor/rules/taskmaster/dev_workflow.mdc) for development process
