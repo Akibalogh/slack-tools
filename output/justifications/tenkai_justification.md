@@ -1,14 +1,13 @@
 # Commission Split Justification: tenkai
 
 **Channel ID:** C095RME5JP7
-**Created:** 2025-07-14 18:26:48
-**Members:** 6
+**Created:** 1969-12-31 19:00:07
+**Members:** tenkai-bitsafe
 
 ## Commission Splits
 
 - **Addie Tackman:** 75.0%
 - **Aki:** 25.0%
-- **Mayank:** 0.0%
 - **Amy Wu:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)

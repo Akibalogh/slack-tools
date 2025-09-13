@@ -1,80 +1,18 @@
 # Commission Split Justification: obsidian
 
 **Channel ID:** C094F99S57X
-**Created:** 2025-07-05 13:12:02
-**Members:** 11
+**Created:** 1969-12-31 19:00:13
+**Members:** obsidian-bitsafe
 
 ## Commission Splits
 
-- **Aki:** 75.0%
+- **Aki:** 100.0%
 - **Addie Tackman:** 0.0%
-- **Mayank:** 25.0%
 - **Amy Wu:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)
 
-**Company:** Obsidian
-
-**Meetings Found:**
-
-- **Ryan Trinkle (Obsidian Systems) and Aki Balogh**
-  - Date: 2025-07-14T16:30:00-04:00
-  - Duration: 25 minutes
-  - Team Participants: Aki
-  - Description: Event Name
-25 Minutes (US ET)
-
-Location: This is a Google Meet web conference.
-You can join this meeting from your computer, tablet, or smartphone.
-https://calendly.com/events/34614b00-510b-426f-b3c0-...
-
-- **Canton between Obsidian Systems and Aki Balogh**
-  - Date: 2025-07-17T13:30:00-04:00
-  - Duration: 30 minutes
-  - Team Participants: Aki, Kadeem
-  - Description: What:
-Canton between Obsidian Systems and Aki Balogh
-
-Invitee Time Zone:
-America/New_York
-
-Who:
-Ryan Trinkle - Organizer
-ryan.trinkle@obsidian.systems
-Aki Balogh
-aki@dlc.link
-Guest
-jesse@dlc.link
-Gues...
-
-- **Canton between Obsidian Systems and BitSafe**
-  - Date: 2025-07-23T11:00:00-04:00
-  - Duration: 30 minutes
-  - Team Participants: Aki, Kadeem
-  - Description: What:
-Canton between Obsidian Systems and BitSafe
-
-Invitee Time Zone:
-America/New_York
-
-Who:
-Ryan Trinkle - Organizer
-ryan.trinkle@obsidian.systems
-BitSafe
-nathan.homesley@obsidian.systems
-Guest
-aki@d...
-
-- **Ryan Trinkle and Aki Balogh**
-  - Date: 2025-08-12T16:00:00-04:00
-  - Duration: 25 minutes
-  - Team Participants: Aki
-  - Description: Event Name
-25 Minutes (US ET)
-
-Location: This is a Google Meet web conference.
-You can join this meeting from your computer, tablet, or smartphone.
-https://calendly.com/events/ae5ffbc1-26c6-4228-9b1b-...
+No in-person meetings found in calendar data.
 
 ## Stage Analysis
 

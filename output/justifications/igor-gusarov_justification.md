@@ -1,14 +1,13 @@
 # Commission Split Justification: igor-gusarov
 
 **Channel ID:** C094F9551UL
-**Created:** 2025-07-04 07:37:24
-**Members:** 8
+**Created:** 1969-12-31 19:00:09
+**Members:** igor-gusarov-bitsafe
 
 ## Commission Splits
 
 - **Aki:** 75.0%
 - **Addie Tackman:** 25.0%
-- **Mayank:** 0.0%
 - **Amy Wu:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)

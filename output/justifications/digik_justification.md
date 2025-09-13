@@ -1,33 +1,18 @@
 # Commission Split Justification: digik
 
 **Channel ID:** C095CKK4MT8
-**Created:** 2025-07-11 15:15:18
-**Members:** 9
+**Created:** 1969-12-31 19:00:09
+**Members:** digik-bitsafe
 
 ## Commission Splits
 
 - **Addie Tackman:** 75.0%
 - **Aki:** 25.0%
-- **Mayank:** 0.0%
 - **Amy Wu:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)
 
-**Company:** Digik
-
-**Meetings Found:**
-
-- **DigiK Wallet Intro**
-  - Date: 2025-07-31T10:30:00-04:00
-  - Duration: 30 minutes
-  - Team Participants: Aki, Addie
-  - Description: ...
-
-- **DigiK Wallet Demo**
-  - Date: 2025-08-14T08:00:00-04:00
-  - Duration: 30 minutes
-  - Team Participants: Aki, Addie, Mayank
-  - Description: ...
+No in-person meetings found in calendar data.
 
 ## Stage Analysis
 

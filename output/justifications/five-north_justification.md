@@ -1,27 +1,18 @@
 # Commission Split Justification: five-north
 
 **Channel ID:** C094FGVGDNG
-**Created:** 2025-07-04 08:43:25
-**Members:** 11
+**Created:** 1969-12-31 19:00:13
+**Members:** five-north-bitsafe
 
 ## Commission Splits
 
 - **Aki:** 75.0%
-- **Mayank:** 25.0%
-- **Addie Tackman:** 0.0%
+- **Addie Tackman:** 25.0%
 - **Amy Wu:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)
 
-**Company:** Five-North
-
-**Meetings Found:**
-
-- **Denex Upgrade Support Zoom **
-  - Date: 2025-05-21T09:00:00-04:00
-  - Duration: 120 minutes
-  - Team Participants: Aki, Kadeem, Robert
-  - Description:  🔧 To support your team with the upgrade, we’ve scheduled a Zoom support session from 9:00–11:00 AM EST. Please feel free to join during that window if you have any questions or need assistance with t...
+No in-person meetings found in calendar data.
 
 ## Stage Analysis
 

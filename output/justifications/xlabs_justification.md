@@ -1,14 +1,13 @@
 # Commission Split Justification: xlabs
 
 **Channel ID:** C094T9X5QBD
-**Created:** 2025-07-09 03:07:47
-**Members:** 8
+**Created:** 1969-12-31 19:00:08
+**Members:** xlabs-bitsafe
 
 ## Commission Splits
 
-- **Mayank:** 50.0%
-- **Aki:** 25.0%
-- **Addie Tackman:** 25.0%
+- **Aki:** 50.0%
+- **Addie Tackman:** 50.0%
 - **Amy Wu:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)

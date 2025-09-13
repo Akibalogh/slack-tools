@@ -1,14 +1,13 @@
 # Commission Split Justification: tall-oak-midstream
 
 **Channel ID:** C0965KETGRZ
-**Created:** 2025-07-17 14:12:57
-**Members:** 8
+**Created:** 1969-12-31 19:00:08
+**Members:** tall-oak-midstream-bitsafe
 
 ## Commission Splits
 
 - **Addie Tackman:** 25.0%
-- **Aki:** 50.0%
-- **Mayank:** 25.0%
+- **Aki:** 75.0%
 - **Amy Wu:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)

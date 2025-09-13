@@ -1,32 +1,18 @@
 # Commission Split Justification: lithium-digital
 
 **Channel ID:** C094KAKKRTM
-**Created:** 2025-07-07 18:57:27
-**Members:** 7
+**Created:** 1969-12-31 19:00:08
+**Members:** lithiumdigital-bitsafe
 
 ## Commission Splits
 
 - **Addie Tackman:** 25.0%
-- **Aki:** 50.0%
-- **Mayank:** 25.0%
+- **Aki:** 75.0%
 - **Amy Wu:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)
 
-**Company:** Lithium-Digital
-
-**Meetings Found:**
-
-- **Dr. Princewill Obuzor and Addie Tackman**
-  - Date: 2025-07-08T15:00:00-04:00
-  - Duration: 30 minutes
-  - Team Participants: Aki, Addie
-  - Description: Event Name
-30 Minute Meeting
-
-Location: This is a Google Meet web conference.
-You can join this meeting from your computer, tablet, or smartphone.
-https://calendly.com/events/860da033-caaf-4253-95d3-9...
+No in-person meetings found in calendar data.
 
 ## Stage Analysis
 

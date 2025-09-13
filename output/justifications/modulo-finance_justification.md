@@ -1,14 +1,13 @@
 # Commission Split Justification: modulo-finance
 
 **Channel ID:** C094W0841TN
-**Created:** 2025-07-08 08:36:44
-**Members:** 7
+**Created:** 1969-12-31 19:00:07
+**Members:** modulo-finance-bitsafe
 
 ## Commission Splits
 
 - **Addie Tackman:** 50.0%
 - **Aki:** 50.0%
-- **Mayank:** 0.0%
 - **Amy Wu:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)

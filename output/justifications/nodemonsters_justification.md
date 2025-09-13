@@ -1,13 +1,12 @@
 # Commission Split Justification: nodemonsters
 
 **Channel ID:** C094ZGV089H
-**Created:** 2025-07-10 01:44:55
-**Members:** 8
+**Created:** 1969-12-31 19:00:10
+**Members:** nodemonster-bitsafe
 
 ## Commission Splits
 
-- **Mayank:** 25.0%
-- **Aki:** 50.0%
+- **Aki:** 75.0%
 - **Addie Tackman:** 25.0%
 - **Amy Wu:** 0.0%
 

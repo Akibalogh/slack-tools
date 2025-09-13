@@ -1,15 +1,14 @@
 # Commission Split Justification: trakx
 
 **Channel ID:** C097A0B47RP
-**Created:** 2025-07-22 06:24:50
-**Members:** 8
+**Created:** 1969-12-31 19:00:08
+**Members:** trakx-bitsafe
 
 ## Commission Splits
 
 - **Amy Wu:** 50.0%
 - **Addie Tackman:** 25.0%
 - **Aki:** 25.0%
-- **Mayank:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)
 

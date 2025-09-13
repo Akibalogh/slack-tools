@@ -2,7 +2,7 @@
 
 **Channel ID:** C094KAKKRTM
 **Created:** 2025-07-07 18:57:27
-**Members:** 7
+**Members:** 8
 
 ## Commission Splits
 

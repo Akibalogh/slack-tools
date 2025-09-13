@@ -1,32 +1,18 @@
 # Commission Split Justification: alum-labs
 
 **Channel ID:** C09631VQZ4K
-**Created:** 2025-07-17 06:39:01
-**Members:** 7
+**Created:** 1969-12-31 19:00:07
+**Members:** alumlabs-bitsafe
 
 ## Commission Splits
 
-- **Mayank:** 50.0%
-- **Addie Tackman:** 50.0%
+- **Addie Tackman:** 100.0%
 - **Aki:** 0.0%
 - **Amy Wu:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)
 
-**Company:** Alum-Labs
-
-**Meetings Found:**
-
-- **Alex Metz and Addie Tackman**
-  - Date: 2025-07-18T12:30:00-04:00
-  - Duration: 30 minutes
-  - Team Participants: Aki, Addie, Mayank
-  - Description: Event Name
-30 Minute Meeting
-
-Location: This is a Google Meet web conference.
-You can join this meeting from your computer, tablet, or smartphone.
-https://calendly.com/events/5e23cd5f-9359-4612-a79e-5...
+No in-person meetings found in calendar data.
 
 ## Stage Analysis
 

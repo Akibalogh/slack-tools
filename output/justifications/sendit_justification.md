@@ -1,14 +1,13 @@
 # Commission Split Justification: sendit
 
 **Channel ID:** C094AJU2RPZ
-**Created:** 2025-07-07 12:52:59
-**Members:** 9
+**Created:** 1969-12-31 19:00:09
+**Members:** sendit-bitsafe
 
 ## Commission Splits
 
 - **Addie Tackman:** 25.0%
-- **Aki:** 50.0%
-- **Mayank:** 25.0%
+- **Aki:** 75.0%
 - **Amy Wu:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)

@@ -1,13 +1,11 @@
 # Commission Split Justification: Copper
 
-**Channel ID:** copper-telegram
-**Created:** 2025-08-20 07:01:07
-**Members:** 0
+**Channel ID:** Copper
+**Created:** Unknown
+**Members:** Unknown (Telegram)
 
 ## Commission Splits
 
-- **Aki:** 100.0%
-- **Amy:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)
 

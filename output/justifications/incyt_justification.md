@@ -1,11 +1,14 @@
 # Commission Split Justification: incyt
 
-**Channel ID:** incyt-telegram
-**Created:** 2025-08-21 17:49:03
-**Members:** 0
+**Channel ID:** incyt-bitsafe-1756407084
+**Created:** Unknown
+**Members:** incyt-bitsafe
 
 ## Commission Splits
 
+- **Addie Tackman:** 25.0%
+- **Aki:** 25.0%
+- **Amy Wu:** 25.0%
 
 ## Calendar Meetings (In-Person Interactions)
 

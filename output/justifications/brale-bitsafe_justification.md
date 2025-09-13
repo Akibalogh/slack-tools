@@ -2,11 +2,13 @@
 
 **Channel ID:** C08MC1Q680L
 **Created:** 2025-04-08 10:43:07
-**Members:** 9
+**Members:** 13
 
 ## Commission Splits
 
 - **Aki:** 100.0%
+- **Addie Tackman:** 0.0%
+- **Amy Wu:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)
 

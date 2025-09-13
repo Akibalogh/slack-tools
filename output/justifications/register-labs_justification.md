@@ -1,14 +1,13 @@
 # Commission Split Justification: register-labs
 
 **Channel ID:** C094AF2LS4F
-**Created:** 2025-07-07 12:28:53
-**Members:** 7
+**Created:** 1969-12-31 19:00:07
+**Members:** register-labs-bitsafe
 
 ## Commission Splits
 
-- **Aki:** 50.0%
+- **Aki:** 75.0%
 - **Addie Tackman:** 25.0%
-- **Mayank:** 25.0%
 - **Amy Wu:** 0.0%
 
 ## Calendar Meetings (In-Person Interactions)

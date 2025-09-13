@@ -2,7 +2,7 @@
 
 **Channel ID:** C094F99S57X
 **Created:** 2025-07-05 13:12:02
-**Members:** 11
+**Members:** 13
 
 ## Commission Splits
 
