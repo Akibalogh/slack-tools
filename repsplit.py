@@ -595,6 +595,11 @@ class RepSplit:
         cursor.execute('SELECT * FROM conversations WHERE conv_id = ?', (conv_id,))
         conv_data = cursor.fetchone()
         
+        # If not found in conversations table, this might be a Telegram channel
+        if not conv_data:
+            # For Telegram channels, create a mock conv_data
+            conv_data = (conv_id, conv_name, "Unknown (Telegram)", None)
+        
         # Get all stage detections
         cursor.execute('''
             SELECT sd.stage_name, sd.author, sd.timestamp, sd.confidence,
@@ -695,7 +700,7 @@ class RepSplit:
         
         # Optimize: Use IN clause with prepared statement
         cursor.execute('''
-            SELECT DISTINCT conv_id, company_name as name
+            SELECT DISTINCT company_name as conv_id, company_name as name
             FROM telegram_messages 
             WHERE author IN (?, ?, ?, ?, ?)
         ''', ('Aki', 'Addie', 'Mayank', 'Amy', 'Kadeem Clarke'))
