@@ -316,16 +316,31 @@ class SlackIngest:
             logger.error("No channels found")
             return
 
-        # Filter for customer bitsafe channels only (XYZCo-bitsafe format)
+        # Filter for customer channels with various naming patterns
         customer_channels = []
+        target_companies = {
+            "bitgo", "figment", "nansen", "allnodes", "artichoke", "b2c2", 
+            "falconx", "finoa", "foundinals", "gomaestro", "hashkey", 
+            "incyt", "linkpool", "meria", "nodemonsters", "pier", 
+            "round13", "unlock", "xbto", "sendmainnet", "fivenorth"
+        }
+        
         for c in channels:
-            name = c.get("name", "")
-            if name.endswith("-bitsafe"):
+            name = c.get("name", "").lower()
+            # Include various bitsafe naming patterns:
+            # - acme-bitsafe (suffix)
+            # - bitsafe-acme (prefix) 
+            # - ext-acme-bitsafe (external prefix)
+            # - acme (direct name)
+            if (name.endswith("-bitsafe") or 
+                name.startswith("bitsafe-") or 
+                name.startswith("ext-") or
+                any(company in name for company in target_companies)):
                 # Check if it's a customer channel (not internal like "gsf-app-dev")
                 if not name.startswith("gsf-") and not name.startswith("internal-"):
                     customer_channels.append(c)
 
-        logger.info(f"Found {len(customer_channels)} customer bitsafe channels")
+        logger.info(f"Found {len(customer_channels)} customer channels (various bitsafe patterns + target companies)")
 
         # List all customer channels
         print(f"\n📋 Customer Channels Found ({len(customer_channels)}):")
