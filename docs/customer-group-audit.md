@@ -69,11 +69,11 @@ The script will:
 3. Audit each Slack channel for team member presence
 4. Connect to Telegram and find all groups shared with @mojo_onchain (401+ groups)
 5. Audit each Telegram group for team member presence
-6. Generate an Excel report on your Desktop
+6. Generate an Excel report in the output folder
 
 ### Output
 
-The tool generates an Excel report: `customer_group_audit_YYYYMMDD_HHMMSS.xlsx`
+The tool generates an Excel report: `output/audit_reports/customer_group_audit_YYYYMMDD_HHMMSS.xlsx`
 
 **Report Columns:**
 - **Platform**: Slack or Telegram

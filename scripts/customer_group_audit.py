@@ -417,9 +417,11 @@ class CustomerGroupAuditor:
         # Sort by platform, then completeness, then group name
         df = df.sort_values(['Platform', 'Completeness', 'Group Name'])
         
-        # Save to Excel
+        # Save to Excel in output directory
+        output_dir = "output/audit_reports"
+        os.makedirs(output_dir, exist_ok=True)
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        output_file = f"/Users/akibalogh/Desktop/customer_group_audit_{timestamp}.xlsx"
+        output_file = f"{output_dir}/customer_group_audit_{timestamp}.xlsx"
         
         with pd.ExcelWriter(output_file, engine='openpyxl') as writer:
             df.to_excel(writer, sheet_name='Audit Results', index=False)
