@@ -8,10 +8,13 @@ The Sales Commission Calculator (RepSplit) is a comprehensive system for analyzi
 ### 1. Company Processing Scope
 - **Targeted Analysis**: The system processes only a specific list of companies defined in `data/company_mapping.csv`
 - **Company Variants**: All variants are processed including base companies, minter variants, mainnet variants, validator variants, and other special variants
+- **Validator Node Input Method**: The system accepts company lists in the format of validator nodes with company names and variants (e.g., "allnodes::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2"). The system automatically extracts company names from this format and matches them against the company mapping database
+- **HubSpot Deal Filtering**: Only HubSpot deals with "commit" or "closed won" status are processed, as these represent completed deals that should be analyzed for commission calculation
 - **Comprehensive Mapping**: The `data/company_mapping.csv` file contains complete mapping of all 113 companies with their:
   - **Slack Groups**: Actual Slack channel names (e.g., "allnodes-bitsafe", "alumlabs-minter")
   - **Telegram Groups**: Actual Telegram group names (e.g., "allnodes", "alum-labs")
   - **Calendar Search Domain**: Email domain used to search calendar invites (e.g., "allnodes.com", "alumlabs.com")
+  - **Calendar Meeting Filtering**: Large group meetings (10+ attendees) are excluded as these are typically not business meetings with specific companies
   - **Full Node Addresses**: Complete node addresses with hashes
   - **Variant Types**: Classification of variants (base, minter, mainnet, validator, canton, wallet, etc.)
   - **Base Company**: Company name for grouping variants with identical commission data
@@ -39,6 +42,7 @@ The Sales Commission Calculator (RepSplit) is a comprehensive system for analyzi
 - **Slack Channels**: Private channels ending with `-bitsafe`, `-minter`, or `-mainnet*`
 - **Telegram Conversations**: Company-specific Telegram groups identified by company name
 - **Google Calendar**: Meeting data for in-person interactions
+- **HubSpot CRM**: Deal data filtered to only include "commit" or "closed won" status deals
 - **Database**: SQLite database (`repsplit.db`) for persistent storage
 
 ### 5. Commission Calculation Logic
@@ -110,11 +114,80 @@ The `data/company_mapping.csv` file serves as the authoritative source for all c
 ✅ **Implemented**: Channel prioritization logic (Slack over Telegram for commission calculation)
 ✅ **Implemented**: Central mapping table for company name normalization
 ✅ **Fixed**: Commission calculation bug where Telegram channels were incorrectly used for commission calculation
+✅ **Fixed**: Fuzzy matching algorithm bug causing incorrect channel-to-company matches
 
 **Note**: Currently the dataset contains primarily `-bitsafe` channels. The system processes only base companies and `-minter` variants, excluding mainnet, validator, and other special variants. Base companies and their minter variants will show identical commission data in separate output rows.
+
+## ETL and Processing Architecture
+
+### 1. Modular ETL System
+- **ETL Data Ingestion**: Standalone system for extracting, transforming, and loading data from multiple sources
+- **Commission Processing**: Separate system for calculating commission splits and generating outputs
+- **Flexible Execution**: Ability to run ETL only, commission processing only, or both sequentially
+
+### 2. ETL System Features
+- **Multi-Source Ingestion**: Slack, Telegram, Google Calendar, HubSpot data
+- **Parallel Processing**: Multi-threaded processing for optimal performance
+- **Error Handling**: Comprehensive error recovery and logging
+- **Output Format**: Human-readable text format (`output/etl_output.txt`) optimized for NotebookLM analysis
+- **Performance Monitoring**: Detailed timing and statistics tracking
+
+### 3. Commission Processing System
+- **Data Input**: Reads from ETL output text file
+- **Weight Determination**: Calculates commission weights based on sales activities
+- **Output Generation**: Creates CSV files and justification documents
+- **Company Mapping**: Uses centralized company mapping for variant handling
+
+### 4. Execution Modes
+- **ETL Only**: `python src/etl/etl_data_ingestion.py` - Ingests and processes data sources
+- **Commission Only**: `python analysis/commission_processor.py` - Processes ETL output for commission calculation
+- **Full Pipeline**: `python run_full_analysis.py` - Runs both ETL and commission processing sequentially
+
+### 5. Data Flow
+```
+Data Sources → ETL System → etl_output.txt → Commission Processor → CSV Outputs
+                                    ↓
+                            NotebookLM Analysis
+                            (Intelligent Deal Analysis)
+```
+
+### 6. NotebookLM Integration
+- **Purpose**: Enable conversational AI analysis of deal data
+- **Documentation Package**: Comprehensive business context, deal stages, sales team structure, company mapping, and data source documentation
+- **Output Organization**: 
+  - `output/notebooklm/` - All files for NotebookLM analysis
+  - `output/analysis/` - Commission analysis outputs (separate from NotebookLM files)
+- **File Management**:
+  - **Main File**: `output/notebooklm/etl_output.txt` - Always the latest ETL output for easy NotebookLM upload
+  - **Archive**: `output/notebooklm/archive/` - Contains timestamped versions (e.g., `etl_output_YYYYMMDD_HHMMSS.txt`)
+  - **Automatic Organization**: ETL creates both main file and timestamped archive on each run
+- **File Size Optimization**: 
+  - **Company Filtering**: Reduces output file size by processing only specified companies (96 vs 111 companies)
+  - **HubSpot Deal Filtering**: Further reduces size by including only commit/closed won deals
+  - **NotebookLM Limits**: Optimized file size ensures compatibility with NotebookLM's file size restrictions
+  - **Efficient Upload**: Smaller files enable faster upload and better performance in NotebookLM analysis
+- **Capabilities**: Deal stage determination, ownership identification, commission split recommendations, data quality analysis
+
+### 7. Expanded Data Output for NotebookLM
+- **Complete Conversations**: All messages from Slack and Telegram channels (not just summaries)
+- **Full Message Content**: No truncation of message text to preserve context and nuance
+- **Comprehensive Metadata**: Complete company information, participant details, and conversation analysis
+- **Detailed Meeting Data**: Full calendar meeting information including descriptions and attendees
+- **Complete Deal Information**: All HubSpot deal details including stages, values, and descriptions
+- **Conversation Analysis**: Message counts, participant analysis, date ranges, and communication patterns
+- **Sales Stage Indicators**: Detailed breakdown of deal stages and activity levels
+- **Key Participants**: Complete list of all conversation participants across all channels
+- **AI-Driven Analysis**: NotebookLM analyzes all conversation data to make its own intelligent determinations about:
+  - Deal stages and progression
+  - Most likely deal owners based on conversation patterns
+  - Important moments and decision points in customer relationships
+  - Sales team involvement and contribution levels
+  - Customer sentiment and engagement patterns
 
 ## Future Enhancements
 - Dynamic company list loading from external sources
 - Additional data source integrations
 - Enhanced commission calculation algorithms
 - Real-time data updates and notifications
+- Web-based dashboard for ETL monitoring
+- API endpoints for data access

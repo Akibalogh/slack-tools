@@ -5,6 +5,14 @@ All notable changes to the Slack Tools project will be documented in this file.
 ## [Unreleased]
 
 ### Added
+- **Slack User Offboarding Script**: NEW! Complete user deletion workflow script (`scripts/slack_user_delete.py`)
+  - Deactivates user account via SCIM API
+  - Resets all active sessions
+  - Removes user from all channels and user groups
+  - Includes `--dry-run` mode for safe testing
+  - Comprehensive error handling and logging
+  - Based on ChatGPT specification, adapted for Python
+  - Documentation in `scripts/README.md`
 - **Meeting Leadership Rules**: NEW! When both Aki and Addie are present in a meeting, Aki is considered the driver and receives primary credit
   - Dual attendance meetings give Aki driving credit, Addie supporting credit
   - Reflects Aki's strategic role and relationship ownership

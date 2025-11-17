@@ -36,11 +36,11 @@ class SlackIngest:
         # Load environment variables
         load_dotenv()
 
-        # Get Slack token from environment
-        slack_token = os.getenv("SLACK_TOKEN")
+        # Get Slack token from environment (try new name first, fall back to old)
+        slack_token = os.getenv("SLACK_USER_TOKEN") or os.getenv("SLACK_TOKEN")
         if not slack_token or slack_token == "xoxp-your-slack-token-here":
             raise ValueError(
-                "SLACK_TOKEN not found in .env file. Please add your Slack token to .env file"
+                "SLACK_USER_TOKEN (or SLACK_TOKEN) not found in .env file. Please add your Slack user token to .env file"
             )
 
         self.headers = {

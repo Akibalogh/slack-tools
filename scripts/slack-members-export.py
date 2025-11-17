@@ -7,7 +7,7 @@ import pandas as pd
 
 # Load environment variables from .env
 load_dotenv()
-SLACK_TOKEN = os.getenv("SLACK_TOKEN")
+SLACK_TOKEN = os.getenv("SLACK_USER_TOKEN") or os.getenv("SLACK_TOKEN")
 # List of channels to process: (channel_id, channel_name)
 CHANNELS = [
     ("C08PT9P8ERM", "#gsf-outreach"),
@@ -19,7 +19,7 @@ TEST_MODE = False  # Set to False to fetch all users for production
 MAX_CONCURRENT_REQUESTS = 10  # Limit concurrent requests to avoid rate limiting
 
 if not SLACK_TOKEN:
-    print("❌ SLACK_TOKEN not found in .env file.")
+    print("❌ SLACK_USER_TOKEN (or SLACK_TOKEN) not found in .env file.")
     exit(1)
 
 headers = {"Authorization": f"Bearer {SLACK_TOKEN}"}

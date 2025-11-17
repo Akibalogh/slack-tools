@@ -1,119 +1,197 @@
-# Slack Tools - Sales Commission Calculator
+# Slack Tools
 
-A comprehensive tool for analyzing Slack conversations and calculating sales commission splits based on deal stage participation, in-person meeting contributions, and strategic relationship context.
+A suite of Python utilities for managing and auditing Slack and Telegram customer engagement groups at BitSafe.
 
 ## Features
 
-- **Multi-Platform Data Analysis**: Analyzes both Slack channels ending with '-bitsafe' AND Telegram group conversations for comprehensive sales tracking
-- **Telegram Integration**: **NEW!** Processes Telegram HTML export data to capture conversations not available in Slack
-- **Commission Calculation**: Calculates commission splits based on deal stage participation, message activity, and **in-person meeting contributions**
-- **Stage Detection**: Identifies deal stages using keyword matching and confidence scoring across both Slack and Telegram
-- **Google Calendar Integration**: Incorporates in-person meeting data from Google Calendar to provide complete sales activity tracking
-- **Strategic Context Analysis**: Recognizes the difference between tactical execution and strategic relationship building
-- **Output Generation**: Creates detailed commission reports, justifications, and rationale files
-- **25% Rounding**: Ensures commission percentages are rounded to nearest 25% and sum to 100%
+### 🔍 Customer Group Audit
+Automatically audit all Slack and Telegram customer groups to verify required team members are present. Generates comprehensive Excel reports with:
+- Team member presence tracking (5 required, 4 optional)
+- Group categorization (BD Customer, Marketing, Internal, Intro)
+- iBTC rebranding flags
+- Privacy status checks
+- Completeness scores
 
-## Important Note: Strategic vs. Tactical Recognition
+📊 **Current Coverage**: 402 Telegram groups audited (72 Slack channels pending token scope fix)
 
-The system now includes **Google Calendar integration** and **strategic context analysis** to capture the complete picture of sales activities:
+### 📤 Slack Export
+Export private Slack channel message history including threaded conversations.
 
-### Calendar Integration Features
+### 📲 Telegram Export  
+Export Telegram group message history for archival.
 
-- **Automatic Meeting Detection**: Searches for meetings with company names and key people
-- **Duration Weighting**: In-person meetings receive 2x weight compared to Slack messages
-- **Team Participation Tracking**: Identifies which team members attended each meeting
-- **Comprehensive Coverage**: Includes meetings from the past 180 days
+## Quick Start
 
-### Meeting Leadership Rules
+### Installation
 
-**NEW!** When both Aki and Addie are present in a meeting, **Aki is considered the driver** and receives primary credit:
+```bash
+# Clone the repository
+git clone <repo-url>
+cd slack-tools
 
-- **Dual Attendance**: If both Aki and Addie attend the same meeting, Aki receives driving credit
-- **Leadership Recognition**: Aki's strategic role and relationship ownership is acknowledged
-- **Credit Distribution**: Aki gets primary meeting credit, Addie gets supporting credit
+# Install dependencies
+pip install -r requirements.txt
 
-This rule ensures that strategic leadership and relationship ownership are properly recognized in commission calculations.
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your API credentials
+```
 
-## Telegram Integration
+### Run Customer Group Audit
 
-**NEW!** The system now integrates Telegram conversation data alongside Slack data for comprehensive sales activity tracking:
+```bash
+python3 scripts/customer_group_audit.py
+```
 
-### How It Works
+Output: `~/Desktop/customer_group_audit_YYYYMMDD_HHMMSS.xlsx`
 
-1. **HTML Export Processing**: Parses Telegram HTML export files from `data/telegram/DataExport_2025-08-19/`
-2. **Company Matching**: Maps 82 HubSpot CRM companies to their corresponding Telegram groups
-3. **Message Analysis**: Processes Telegram messages for stage detection using the same keywords as Slack
-4. **Team Member Mapping**: Identifies internal team members by both Slack IDs and display names
-5. **Combined Analysis**: Integrates Telegram data with Slack and Calendar data for complete commission calculation
+## Configuration
 
-### Telegram Group Patterns
+### Required Environment Variables
 
-Most Telegram groups follow these naming patterns:
-- `Company <> BitSafe (iBTC, CBTC)` - Most common
-- `Company <> iBTC` - Second most common  
-- `Company / BitSafe` - Alternative format
-- `Company - Other` - Rare cases
+Create a `.env` file with:
 
-### Data Coverage
+```bash
+# Slack
+SLACK_USER_TOKEN=xoxp-...  # User token with groups:read and groups:history scopes
 
-- **Total HubSpot Companies**: 235
-- **Telegram Matches**: 82 companies (34.9% match rate)
-- **Key Companies**: P2P, ChainSafe, Copper, 7Ridge, Hashkey Cloud, Launchnodes, Republic, Gemini, BitGo, and many more
+# Telegram  
+TELEGRAM_API_ID=12345678
+TELEGRAM_API_HASH=abcdef...
+TELEGRAM_PHONE=+16176820066
+```
 
-### Impact on Commission Analysis
+### Group Categories
 
-Telegram integration provides a more complete picture of sales activities, especially for companies where:
-- Slack channels were deleted or not created
-- Primary communication happened via Telegram
-- International customers preferred Telegram over Slack
+Edit `config/customer_group_categories.json` to customize group categories:
 
-**Example**: P2P analysis shows Aki with 77 Telegram messages vs minimal Slack activity, providing a much more accurate commission split.
+```json
+{
+  "marketing_groups": ["Party Action People", "Artemis"],
+  "internal_groups": ["iBTC Offboarding Support Group"],
+  "intro_groups": ["Bron <> SIG"]
+}
+```
 
-### Strategic Context Analysis
+## Documentation
 
-Recent analysis of Addie's comprehensive Slack export revealed important insights:
+- **[Customer Group Audit Guide](docs/customer-group-audit.md)** - Complete guide for the audit tool
+- **[Slack Export How-To](docs/slack-export-howto.md)** - Guide for exporting Slack channels
+- **[PRD](PRD.md)** - Product requirements and roadmap
 
-- **Addie's Role**: Excellent tactical execution, pipeline management, and individual deal coordination
-- **Aki's Role**: Strategic relationships, broader company engagement, and in-person meeting ownership
-- **Current System Gap**: Over-weights Slack activity vs. relationship depth and strategic involvement
+## Team Members
 
-**Examples:**
-- **Black Manta**: Aki added Finn to `cbtc-holders` channel (strategic relationship) + in-person meetings
-- **Vigil Markets**: Aki met with Soumya in person + broader strategic engagement beyond bitsafe
+### Required (Must be in all BD customer groups)
+- @akibalogh - Aki Balogh (CEO)
+- @gabitui - Gabi Tui (Head of Product)
+- @mojo_onchain - Mayank (Sales Engineer)
+- @kadeemclarke - Kadeem Clarke (Head of Growth)
+- @NonFungibleAmy - Amy Wu (BD)
 
-This analysis shows the need for better recognition of strategic vs. tactical contributions in commission calculations.
+### Optional (Should be in most groups)
+- @shin_novation - Shin (Strategy Advisor)
+- @j_eisenberg - Jesse Eisenberg (CTO)
+- @anmatusova - Anna Matusova (VP Finance & Legal)
+- @Dae_L - Dae (Sales Advisor)
 
-## 📚 Documentation
+## Latest Audit Results
 
-### 📖 User Guides
-- **[Getting Started](docs/user_manual/getting_started.md)**: Quick setup and first analysis
-- **[User Manual](docs/user_manual/README.md)**: Complete user guide and tutorials
-- **[Core Features](docs/user_manual/core_features.md)**: Commission calculation and features
+**Date**: November 17, 2024
 
-### 🔧 Technical Documentation
-- **[API Reference](docs/api_reference/README.md)**: Database schema and technical specs
-- **[Setup & Maintenance](docs/setup_maintenance/README.md)**: Installation and maintenance
-- **[Troubleshooting](docs/troubleshooting/README.md)**: Common issues and solutions
+```
+Total groups audited: 402
+├── Telegram groups: 402
+└── Slack channels: 0 (token scope issue - in progress)
 
-## Output Files
+By Category:
+├── BD Customer: 390
+├── Internal: 8
+├── Marketing: 3
+└── Intro: 1
 
-- `deal_splits.csv`: Commission percentages for each deal
-- `person_rollup.csv`: Total commission percentages per person
-- `deal_rationale.csv`: **NEW!** Includes calendar meeting information, stage breakdown, and strategic context. **First column contains full node addresses** in format `company_name::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2`
+Flags:
+├── Groups needing rename (iBTC): 194
+└── BD groups with missing members: 285/390 (73%)
+```
 
-### Full Node Address Format
+## Known Issues
 
-The first column of `deal_rationale.csv` uses the **Full Node Address** format:
-- **Standard Format**: `company_name::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2`
-- **Mainnet Format**: `company_name-mainnet-1::1220[unique_hash]` (for companies with mainnet validators)
-- **Special Cases**: Some companies have multiple wallet types (e.g., `company-minter::hash`, `company-validator-1::hash`)
+### Slack Channels Not Appearing
+**Status**: In Progress  
+**Issue**: Slack API not returning customer channels (likely Slack Connect or permissions)  
+**Workaround**: Loading from export data file: `data/raw/slack_export_20250815_064939/channels/private_channels.json`  
+**Next Steps**: 
+1. Verify token has `groups:read` and `groups:history` scopes
+2. Test with `conversations.members` API directly on known channel IDs
+3. Consider using Slack Connect-specific API endpoints
 
-**Examples:**
-- `bitsafe::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2`
-- `16::12207ebc4da4e824f5249a17b6559a9e7d3817d45bcde71c871c10a34d9ac9e8b9ba`
-- `Maestro-mainnet-1::1220265a4c49d3c7cfa97273cf6533cad1918f04eee60d774366593b737b12882702`
-- `justifications/`: Detailed markdown files for each deal with calendar data and strategic insights
+## Project Structure
 
-### Important Constraints
+```
+slack-tools/
+├── scripts/
+│   ├── customer_group_audit.py      # Main audit script
+│   ├── slack_export.py               # Slack export utilities
+│   └── telegram_export.py            # Telegram export utilities
+├── config/
+│   └── customer_group_categories.json  # Group categorization
+├── data/
+│   └── raw/slack_export_*/           # Slack channel metadata
+├── docs/
+│   ├── customer-group-audit.md       # Audit documentation
+│   └── slack-export-howto.md         # Export guide
+├── output/                            # Analysis and exports
+├── .env                               # API credentials (git-ignored)
+├── PRD.md                             # Product requirements
+└── README.md                          # This file
+```
 
-**Most Likely Owner Constraint**: The "Most Likely Owner" column in `deal_rationale.csv` will ALWAYS contain a specific sales rep's name (Aki, Addie, Mayank, or Amy) and NEVER "Split". This ensures every deal has a clear, identifiable owner for commission purposes, even in highly contested scenarios. 
+## Dependencies
+
+- **Python 3.9+**
+- **aiohttp** - Async HTTP for Slack API
+- **telethon** - Telegram API client
+- **pandas** - Data manipulation
+- **openpyxl** - Excel export
+- **python-dotenv** - Environment management
+
+## Contributing
+
+1. Create a feature branch
+2. Make your changes
+3. Update documentation
+4. Test thoroughly
+5. Submit pull request
+
+## Roadmap
+
+### V1.0 (Current)
+- ✅ Telegram group audit (402 groups)
+- 🔄 Slack channel audit (72 channels - pending fix)
+- ✅ Excel report generation
+- ✅ Group categorization
+- ✅ iBTC renaming flags
+
+### V2.0 (Q1 2025)
+- Automated member invitations
+- Exclusion management
+- Historical tracking
+
+### V3.0 (Q2 2025)
+- Web dashboard
+- Real-time monitoring
+- Template-based group creation
+
+## License
+
+Proprietary - BitSafe Internal Use Only
+
+## Support
+
+For issues or questions, contact:
+- Aki Balogh (@akibalogh)
+- Engineering Team
+
+---
+
+**Last Updated**: November 17, 2024

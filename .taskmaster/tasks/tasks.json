@@ -7,7 +7,7 @@
         "description": "Update the ETL system's Telegram parsing logic to properly detect and process all available chat directories instead of only finding 1 out of 3,958 directories.",
         "details": "The current implementation has a critical flaw in how it traverses and processes Telegram chat exports. The issue is that the parser is not correctly identifying chat directories because it's looking for HTML files in subdirectories, while the actual structure has a single messages.html file in each chat directory.\n\nImplementation steps:\n1. Review the current parsing logic to understand the exact failure point\n2. Modify the directory traversal algorithm to:\n   - Correctly identify chat directories by looking for the presence of a \"messages.html\" file\n   - Implement proper recursion or iteration through all directories in the export\n   - Add logging to track the number of directories processed\n3. Update the extraction logic to:\n   - Parse each messages.html file to extract chat metadata (participants, dates, etc.)\n   - Filter for company-specific chats based on established criteria\n   - Normalize the extracted data for downstream processing\n4. Implement error handling for malformed HTML files or unexpected directory structures\n5. Add performance optimizations to handle the large volume (3,958 directories)\n   - Consider parallel processing if appropriate\n   - Implement batching if memory constraints are an issue\n6. Update documentation to reflect the new parsing approach\n\nThe code will likely need to modify functions related to file system traversal and HTML parsing. Pay special attention to character encoding when reading HTML files to ensure proper text extraction.",
         "testStrategy": "1. Create a test dataset with a sample of the Telegram export structure:\n   - Include multiple chat directories with messages.html files\n   - Include some directories that should be filtered out\n   - Include edge cases like empty directories or malformed HTML\n\n2. Unit tests:\n   - Test the directory traversal function to verify it finds all chat directories\n   - Test the HTML parsing function with various message formats\n   - Test the company-specific filtering logic\n\n3. Integration tests:\n   - Run the updated ETL process on the test dataset\n   - Verify the correct number of chats are detected (should be close to 3,958 in production)\n   - Verify the extracted data matches expected format\n\n4. Performance testing:\n   - Measure processing time for various dataset sizes\n   - Verify memory usage remains within acceptable limits\n\n5. Production validation:\n   - Run the updated parser on a subset of production data\n   - Compare results with manual verification of several randomly selected chats\n   - Monitor logs for any errors or warnings during processing\n   - Verify the full count of detected chats matches the expected 3,958 directories",
-        "status": "pending",
+        "status": "done",
         "dependencies": [],
         "priority": "high",
         "subtasks": [
@@ -25,8 +25,8 @@
             "title": "Implement Correct Directory Traversal Algorithm",
             "description": "Modify the directory traversal logic to properly identify chat directories by checking for the presence of messages.html files at the correct level in the directory hierarchy.",
             "dependencies": [],
-            "details": "Update the file system traversal function to correctly identify chat directories by looking for 'messages.html' files. Implement proper recursion or iteration through all directories in the export. Add detailed logging that shows the total number of directories found, processed, and skipped. Ensure the traversal handles nested directories correctly.",
-            "status": "in-progress",
+            "details": "Update the file system traversal function to correctly identify chat directories by looking for 'messages.html' files. Implement proper recursion or iteration through all directories in the export. Add detailed logging that shows the total number of directories found, processed, and skipped. Ensure the traversal handles nested directories correctly.\n<info added on 2025-09-13T18:00:48.892Z>\nThe directory traversal algorithm has been successfully fixed. The issue was that the ETL script was running from the wrong directory (src/etl/) instead of the project root. After correcting this, the script now properly processes all 3,958 chat directories, each containing a messages.html file. The implementation successfully identifies chat directories following the pattern \"chat_XXXX\" where XXXX is a 4-digit number. The fix resulted in finding 45 companies with Telegram data (up from just 1 previously), with a total processing time of approximately 4 minutes for all directories. The traversal algorithm now correctly handles the directory structure, with no errors reported during traversal. The HTML parsing logic successfully extracts messages, participants, and metadata, with chat names intelligently generated from participant lists or directory names.\n</info added on 2025-09-13T18:00:48.892Z>",
+            "status": "done",
             "testStrategy": "Test with a sample directory structure containing multiple levels of nesting and various configurations of messages.html placement."
           },
           {
@@ -34,8 +34,8 @@
             "title": "Update HTML Extraction and Parsing Logic",
             "description": "Revise the HTML parsing code to correctly extract chat metadata and content from each messages.html file, ensuring proper character encoding handling.",
             "dependencies": [],
-            "details": "Modify the HTML parsing functions to extract relevant metadata (participants, dates, chat names) from each messages.html file. Implement filters to identify company-specific chats based on established criteria. Ensure proper character encoding when reading HTML files (use UTF-8 by default but detect encoding if possible). Normalize extracted data into a consistent format for downstream processing.",
-            "status": "pending",
+            "details": "Modify the HTML parsing functions to extract relevant metadata (participants, dates, chat names) from each messages.html file. Implement filters to identify company-specific chats based on established criteria. Ensure proper character encoding when reading HTML files (use UTF-8 by default but detect encoding if possible). Normalize extracted data into a consistent format for downstream processing.\n<info added on 2025-09-13T18:13:45.192Z>\n✅ COMPLETED: Updated HTML extraction and parsing logic\n\n**What was improved:**\n- Enhanced message type detection (service vs regular messages)\n- Better chat name extraction using participant analysis\n- Improved data structure with additional metadata\n- Added statistics tracking (message counts, participant counts, etc.)\n- Better error handling and logging\n\n**Results:**\n- Successfully processed all 3,958 Telegram chat directories\n- Found 41 companies with Telegram data (36.3% coverage)\n- Total of 1,351 Telegram chats processed\n- Generated comprehensive ETL output with detailed statistics\n- Output file: `data/etl_output.json` (2.1MB)\n\n**Technical improvements:**\n- Message type classification (service vs regular)\n- Participant-based chat naming\n- Enhanced metadata extraction\n- Better company matching logic\n- Comprehensive statistics tracking\n\nThe HTML parsing logic now correctly handles all message types and extracts meaningful chat information.\n</info added on 2025-09-13T18:13:45.192Z>",
+            "status": "done",
             "testStrategy": "Create test cases with sample messages.html files containing various languages, special characters, and edge cases like empty chats or malformed HTML."
           },
           {
@@ -43,8 +43,8 @@
             "title": "Implement Error Handling and Performance Optimizations",
             "description": "Add robust error handling for malformed files and implement performance optimizations to efficiently process the large volume of chat directories.",
             "dependencies": [],
-            "details": "Implement try-catch blocks around file operations and HTML parsing. Add specific error handling for common failure cases (file not found, permission denied, malformed HTML). Implement performance optimizations such as parallel processing of multiple directories or batched processing to manage memory usage. Add progress tracking to monitor processing of large datasets. Consider implementing checkpointing to allow resuming interrupted processing.",
-            "status": "pending",
+            "details": "Implement try-catch blocks around file operations and HTML parsing. Add specific error handling for common failure cases (file not found, permission denied, malformed HTML). Implement performance optimizations such as parallel processing of multiple directories or batched processing to manage memory usage. Add progress tracking to monitor processing of large datasets. Consider implementing checkpointing to allow resuming interrupted processing.\n<info added on 2025-09-13T18:21:48.739Z>\n**Performance Optimizations:**\n- Added parallel processing with ThreadPoolExecutor (4 workers)\n- Implemented batch processing (100 chats per batch) for memory efficiency\n- Added performance timing for all operations\n- Reduced processing time from ~4 minutes to 86.95 seconds\n- Added memory usage tracking and optimization\n\n**Error Handling:**\n- Comprehensive try-catch blocks around all operations\n- Safe file reading with multiple encoding attempts\n- Graceful handling of missing data sources (Slack, Calendar, HubSpot)\n- Thread-safe error logging and counting\n- Fallback output generation if main output fails\n- Detailed error context and stack traces\n\n**Enhanced Logging:**\n- Real-time progress updates every 50 chats\n- Visual progress indicators with emojis\n- Detailed performance metrics for each operation\n- Beautiful formatted final summary\n- Both console and file logging\n\n**Results:**\n- Processed all 3,958 Telegram chats with 0 errors\n- 45 companies with Telegram data (39.8% coverage)\n- Total processing time: 87.20 seconds\n- Perfect reliability with comprehensive error handling\n- Excellent user experience with clear progress visibility\n</info added on 2025-09-13T18:21:48.739Z>",
+            "status": "done",
             "testStrategy": "Test with intentionally malformed HTML files and very large directories to verify error handling and performance under load. Measure processing time before and after optimizations."
           },
           {
@@ -52,17 +52,330 @@
             "title": "Add Comprehensive Logging and Update Documentation",
             "description": "Enhance logging throughout the parsing process and update documentation to reflect the new parsing approach and directory structure expectations.",
             "dependencies": [],
-            "details": "Add detailed logging at key points in the process, including: number of directories found, number of valid chat directories identified, number of chats processed successfully, and any errors encountered. Create summary logs with overall statistics. Update code comments and external documentation to clearly explain the expected directory structure, the parsing approach, and any configuration options. Include troubleshooting guidance for common issues.",
-            "status": "pending",
+            "details": "Add detailed logging at key points in the process, including: number of directories found, number of valid chat directories identified, number of chats processed successfully, and any errors encountered. Create summary logs with overall statistics. Update code comments and external documentation to clearly explain the expected directory structure, the parsing approach, and any configuration options. Include troubleshooting guidance for common issues.\n<info added on 2025-09-13T18:26:01.660Z>\n**Documentation Created:**\n- `src/etl/README.md`: Comprehensive user guide with usage instructions, configuration options, troubleshooting, and performance tuning\n- `docs/ETL_SYSTEM_TECHNICAL_DOCS.md`: Detailed technical documentation covering architecture, class structure, data flow, performance optimizations, error handling, and API reference\n\n**Logging Enhancements:**\n- Real-time progress updates with visual indicators (emojis and progress bars)\n- Comprehensive error logging with context and stack traces\n- Performance metrics tracking for all operations\n- Both console and file logging with configurable levels\n- Beautiful formatted output with clear success/failure indicators\n\n**Key Features Added:**\n- Visual progress indicators during Telegram processing (3,958 chats)\n- Performance timing for each operation phase\n- Error counting and recovery tracking\n- Memory usage monitoring\n- Thread-safe logging for parallel processing\n- Detailed final summary with statistics\n\n**Results:**\n- ETL system now provides excellent visibility into processing progress\n- Users can easily monitor performance and identify issues\n- Comprehensive documentation enables easy maintenance and troubleshooting\n- Clear separation between user-facing and technical documentation\n- Production-ready logging and monitoring capabilities\n</info added on 2025-09-13T18:26:01.660Z>",
+            "status": "done",
             "testStrategy": "Review logs from a full processing run to ensure they provide sufficient information for monitoring and debugging. Have another team member review the documentation for clarity and completeness."
           }
         ]
+      },
+      {
+        "id": 2,
+        "title": "Create Modular Architecture for ETL and Commission Processing",
+        "description": "Implement a separation between ETL data ingestion and commission processing components, allowing them to operate independently while maintaining a standardized data exchange format.",
+        "details": "This task involves refactoring the current system to create a clear separation between ETL data ingestion and commission processing:\n\n1. **ETL Output Standardization**:\n   - Design a standardized JSON schema for the ETL output (etl_output.json)\n   - Include all necessary fields required by commission processing\n   - Add metadata fields for versioning, timestamp, and data completeness indicators\n   - Implement JSON schema validation for the output format\n\n2. **ETL System Modifications**:\n   - Refactor the ETL system to write all processed data to etl_output.json\n   - Ensure the ETL process can run independently without triggering commission processing\n   - Add validation checks to verify data completeness before finalizing output\n   - Implement error handling for data extraction failures\n   - Add logging for ETL operations\n\n3. **Commission Processing Refactoring**:\n   - Modify commission processing to read exclusively from etl_output.json\n   - Remove any direct data source connections from commission processing\n   - Implement validation to check ETL output completeness before processing\n   - Add error handling for missing or malformed ETL output\n\n4. **Unified Runner Script**:\n   - Create a main.py script that accepts command-line arguments:\n     ```python\n     # Example usage:\n     # python main.py --etl-only  # Run only ETL\n     # python main.py --commission-only  # Run only commission processing\n     # python main.py  # Run both sequentially\n     ```\n   - Implement argument parsing with argparse\n   - Add validation to prevent commission-only mode if ETL output doesn't exist\n   - Include logging for execution flow\n\n5. **Documentation**:\n   - Create comprehensive documentation for the ETL output format\n   - Document the versioning strategy for the ETL output schema\n   - Add inline documentation for all new and modified code\n   - Update README with instructions for different execution modes\n\nThe implementation should focus on maintaining backward compatibility while introducing the new modular architecture.",
+        "testStrategy": "1. **Unit Testing**:\n   - Create unit tests for ETL output generation\n   - Create unit tests for ETL output validation\n   - Create unit tests for commission processing with mock ETL output\n   - Test argument parsing in the unified runner script\n\n2. **Integration Testing**:\n   - Test ETL-only mode with various data sources\n   - Test commission-only mode with pre-generated ETL output\n   - Test full sequential execution\n   - Verify error handling when commission processing is attempted without valid ETL output\n\n3. **Validation Testing**:\n   - Create intentionally malformed ETL output and verify validation catches issues\n   - Test with incomplete data to ensure validation flags are properly set\n   - Verify version compatibility checks work correctly\n\n4. **Performance Testing**:\n   - Compare performance metrics before and after separation\n   - Ensure ETL-only mode completes in expected time\n   - Ensure commission-only mode with pre-generated data shows performance improvements\n\n5. **Regression Testing**:\n   - Verify final commission calculations match pre-refactoring results\n   - Ensure all existing functionality continues to work correctly\n   - Run end-to-end tests with real data to confirm system integrity\n\n6. **Documentation Testing**:\n   - Verify all execution modes work as documented\n   - Ensure ETL output format documentation matches actual implementation",
+        "status": "in-progress",
+        "dependencies": [
+          1
+        ],
+        "priority": "medium",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Design Standardized ETL Output Schema",
+            "description": "Develop a comprehensive JSON schema for ETL output that includes all fields required by commission processing, as well as metadata for versioning, timestamps, and data completeness indicators. Implement schema validation to ensure output consistency.",
+            "dependencies": [],
+            "details": "The schema must be extensible for future requirements and support backward compatibility. Validation logic should reject outputs that do not conform to the schema.\n<info added on 2025-09-13T18:31:42.031Z>\n# Completed: Designed Standardized ETL Output Schema with Versioning and Validation\n\n**Schema Created:**\n- `src/etl/schemas/etl_output_schema.json`: Comprehensive JSON Schema v7 specification\n- `src/etl/utils/schema_validator.py`: Python validation utility with business logic checks\n\n**Key Features:**\n- **Versioned Schema**: Semantic versioning (1.0.0) with backward compatibility support\n- **Comprehensive Validation**: Covers all data sources (Slack, Telegram, Calendar, HubSpot)\n- **Business Logic Validation**: Cross-checks metadata consistency, data source flags, performance stats\n- **Detailed Error Reporting**: Specific error messages with JSON paths for debugging\n- **CLI Interface**: Command-line validation tool with summary reporting\n\n**Schema Structure:**\n- **Metadata**: ETL version, timestamps, performance stats, processing configuration\n- **Statistics**: Data coverage counts, company-level source flags, processing metrics\n- **Companies**: Hierarchical data organized by company with standardized source formats\n- **Validation Rules**: Required fields, data types, patterns, business logic consistency\n\n**Validation Features:**\n- JSON Schema compliance checking\n- Business rule validation (company counts, data consistency)\n- Performance error detection\n- Data source flag validation\n- CLI tool for standalone validation\n\nThe schema provides a robust foundation for the modular architecture with comprehensive validation and clear data contracts.\n</info added on 2025-09-13T18:31:42.031Z>",
+            "status": "done",
+            "testStrategy": "Create unit tests for schema validation, including positive and negative cases for required fields, metadata, and completeness indicators."
+          },
+          {
+            "id": 2,
+            "title": "Refactor ETL System for Modular Output",
+            "description": "Modify the ETL system to write processed data exclusively to the standardized etl_output.json file, ensuring it can operate independently from commission processing. Add validation, error handling, and logging.",
+            "dependencies": [
+              "2.1"
+            ],
+            "details": "The ETL process must validate data completeness before finalizing output, handle extraction failures gracefully, and log all operations for traceability.",
+            "status": "in-progress",
+            "testStrategy": "Develop unit tests for ETL output generation, completeness validation, error handling, and logging."
+          },
+          {
+            "id": 3,
+            "title": "Refactor Commission Processing for Decoupled Input",
+            "description": "Update commission processing to read only from etl_output.json, removing any direct data source connections. Implement validation for ETL output completeness and robust error handling for missing or malformed input.",
+            "dependencies": [
+              "2.1",
+              "2.2"
+            ],
+            "details": "Commission processing must not proceed if the ETL output is incomplete or invalid. All errors should be logged and surfaced clearly.",
+            "status": "pending",
+            "testStrategy": "Create unit tests for commission processing using mock ETL outputs, including cases for missing, incomplete, or malformed files."
+          },
+          {
+            "id": 4,
+            "title": "Implement Unified Runner Script",
+            "description": "Develop a main.py script that orchestrates ETL and commission processing based on command-line arguments, with argument parsing, execution flow validation, and logging.",
+            "dependencies": [
+              "2.2",
+              "2.3"
+            ],
+            "details": "The script must support running ETL only, commission processing only (with ETL output existence check), or both sequentially. Execution flow and errors should be logged.",
+            "status": "pending",
+            "testStrategy": "Test all execution modes, argument parsing, and error handling for missing ETL output in commission-only mode."
+          },
+          {
+            "id": 5,
+            "title": "Document Modular Architecture and Usage",
+            "description": "Produce comprehensive documentation covering the ETL output format, schema versioning strategy, code documentation, and usage instructions for all execution modes.",
+            "dependencies": [
+              "2.1",
+              "2.2",
+              "2.3",
+              "2.4"
+            ],
+            "details": "Documentation should include schema definitions, versioning rationale, inline code comments, and updated README instructions for users and developers.",
+            "status": "pending",
+            "testStrategy": "Review documentation for completeness and clarity; verify that all instructions are accurate and up to date."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Update ETL Output Format for NotebookLM Compatibility",
+        "description": "Change the ETL output format from JSON to human-readable text files and relocate output from data/ to output/ folder to ensure compatibility with NotebookLM for analysis.",
+        "status": "done",
+        "dependencies": [
+          2
+        ],
+        "priority": "medium",
+        "details": "This task involves modifying the ETL system's output format and location to optimize for NotebookLM compatibility:\n\n1. **Output Format Conversion**:\n   - ✅ Modify the ETL pipeline to generate text files instead of JSON\n   - ✅ Design a human-readable text format that preserves all necessary information\n   - ✅ Implement formatting rules for hierarchical data representation in plain text\n   - ✅ Ensure all metadata (timestamps, versions, etc.) is preserved in the new format\n   - ✅ Add appropriate headers and section dividers for improved readability\n\n2. **Directory Structure Changes**:\n   - ✅ Create a new output/ directory in the project root\n   - ✅ Update file path handling to direct output to the new location\n   - ✅ Update default paths in all relevant files\n   - ✅ Update documentation to reflect the new output location\n\n3. **NotebookLM Optimization**:\n   - ✅ Implement text formatting optimized for NotebookLM's analysis capabilities\n   - ✅ Add clear section headers and semantic structure to improve AI comprehension\n   - ✅ Include metadata at the beginning of each file to provide context\n   - ✅ Create comprehensive text formatter with company summaries and data coverage\n\n4. **Implementation Details**:\n   - ✅ Removed JSON output entirely as NotebookLM cannot handle JSON\n   - ✅ Created single output file: `output/etl_output.txt`\n   - ✅ Implemented document header with metadata and performance stats\n   - ✅ Added data coverage statistics (Slack, Telegram, Calendar, HubSpot)\n   - ✅ Created detailed company sections with source-specific data\n   - ✅ Added company summary table for quick overview",
+        "testStrategy": "1. **Unit Testing**:\n   - Test the text file generation functionality\n   - Verify the formatting logic with various data types and edge cases\n   - Confirm that all metadata is correctly preserved in the new format\n   - Test the directory creation and file path handling\n\n2. **Integration Testing**:\n   - Run the full ETL pipeline and verify output is correctly generated as `output/etl_output.txt`\n   - Confirm that all expected data is present in the text file\n   - Validate the structure matches the designed format specification\n   - Test with a variety of input data sizes and types\n\n3. **NotebookLM Compatibility Testing**:\n   - Load the generated text file into NotebookLM\n   - Verify that NotebookLM can properly parse and analyze the content\n   - Test with different types of analysis queries\n   - Evaluate the effectiveness of the new format for AI analysis\n\n4. **Regression Testing**:\n   - Ensure that the core ETL functionality remains intact\n   - Verify that all downstream processes can adapt to the text-only format\n\n5. **Performance Testing**:\n   - Evaluate processing time for text format generation\n   - Test with large datasets to ensure scalability\n   - Verify the readability and usability of large output files",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Convert ETL output from JSON to text format",
+            "description": "Modify the ETL pipeline to generate human-readable text files instead of JSON, with appropriate formatting for hierarchical data.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Update output directory from data/ to output/",
+            "description": "Create output/ directory and update all file path handling to direct ETL output to the new location.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Create text formatter with company summaries and data coverage",
+            "description": "Implement comprehensive text formatter with document headers, metadata, performance stats, and company summaries.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Update all relevant files with new output paths",
+            "description": "Update src/etl/etl_data_ingestion.py, src/etl/run_etl.py, and main.py with the new default output path to output/etl_output.txt.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Verify NotebookLM compatibility",
+            "description": "Test the new text output format with NotebookLM to ensure it can properly analyze the content.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 6,
+            "title": "Update documentation with new output format details",
+            "description": "Update project documentation to reflect the new text-only output format and location.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Create Comprehensive NotebookLM Documentation Package for Intelligent Deal Analysis",
+        "description": "Develop detailed system documentation that enables NotebookLM to understand the commission calculator's business context, deal stages, sales team structure, and data interpretations for intelligent conversational analysis.",
+        "details": "This task involves creating a comprehensive documentation package specifically formatted for NotebookLM integration:\n\n1. **Business Context Documentation**:\n   - Create detailed explanations of the commission calculator's purpose and business objectives\n   - Document the company's sales process and how commissions relate to business outcomes\n   - Explain key business metrics and KPIs that influence commission calculations\n   - Provide glossary of industry-specific and company-specific terminology\n\n2. **Deal Structure Documentation**:\n   - Define all possible deal stages with clear transition criteria and business implications\n   - Document how deal stages affect commission calculations\n   - Create flowcharts visualizing the deal lifecycle\n   - Include examples of deals at different stages with expected commission outcomes\n\n3. **Sales Team Documentation**:\n   - Document the organizational hierarchy of the sales team\n   - Define ownership rules and assignment logic\n   - Explain territory mappings and account responsibility structures\n   - Include rules for commission splitting and team-based incentives\n\n4. **Company Mapping Documentation**:\n   - Create comprehensive documentation on company entity resolution\n   - Document rules for handling company name variants and subsidiaries\n   - Explain the mapping between different data sources for the same company\n   - Include examples of complex company relationships and how they're resolved\n\n5. **Data Source Documentation**:\n   - Document all data sources feeding into the commission system\n   - Explain the meaning and interpretation of fields from each source\n   - Document data quality expectations and handling of incomplete data\n   - Include data lineage information showing how raw data transforms into commission calculations\n\n6. **Output Organization**:\n   - Create the required directory structure:\n     ```\n     output/\n     ├── notebooklm/\n     │   ├── business_context.md\n     │   ├── deal_stages.md\n     │   ├── sales_team.md\n     │   ├── company_mapping.md\n     │   └── data_sources.md\n     └── analysis/\n         └── commission_analysis.md\n     ```\n   - Ensure all documentation files use Markdown format for optimal NotebookLM compatibility\n   - Include metadata headers in each file to aid NotebookLM's understanding of relationships\n\n7. **NotebookLM Integration Guide**:\n   - Create instructions for uploading the documentation to NotebookLM\n   - Document example queries that demonstrate NotebookLM's capabilities with this data\n   - Provide templates for common analysis scenarios\n   - Include troubleshooting guidance for potential integration issues\n\n8. **PRD Updates**:\n   - Update the Product Requirements Document to reflect the NotebookLM integration\n   - Document how this integration changes the overall system architecture\n   - Update any affected user stories or requirements",
+        "testStrategy": "1. **Documentation Completeness Verification**:\n   - Review each documentation file against a checklist of required topics\n   - Verify that all business rules are accurately documented\n   - Ensure all terminology is consistently used across all documentation\n   - Check that all required output directories and files are created\n\n2. **NotebookLM Integration Testing**:\n   - Upload the documentation package to a test NotebookLM instance\n   - Execute a predefined set of test queries covering each documentation area\n   - Verify that NotebookLM correctly interprets and responds to queries about:\n     - Deal stage determination scenarios\n     - Ownership assignment questions\n     - Company variant mapping examples\n     - Data source interpretation questions\n   - Document any misinterpretations or gaps in NotebookLM's understanding\n\n3. **Peer Review**:\n   - Conduct a peer review with business stakeholders to verify accuracy\n   - Have sales team members review the sales structure documentation\n   - Have data team members review the data source documentation\n   - Incorporate feedback and corrections\n\n4. **User Acceptance Testing**:\n   - Create a test script with 20+ realistic business questions\n   - Have business users interact with NotebookLM using the documentation\n   - Collect feedback on accuracy and completeness of responses\n   - Document any gaps or misunderstandings for further documentation improvements\n\n5. **Documentation Format Validation**:\n   - Verify all Markdown syntax is correctly formatted\n   - Check that file sizes are within NotebookLM's recommended limits\n   - Validate that all internal document links work correctly\n   - Ensure all images and diagrams are properly embedded and visible\n\n6. **PRD Verification**:\n   - Review updated PRD with product management\n   - Verify that all architectural changes are accurately reflected\n   - Ensure consistency between implementation and documentation",
+        "status": "done",
+        "dependencies": [
+          2,
+          3
+        ],
+        "priority": "medium",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Draft Business Context Documentation",
+            "description": "Develop detailed documentation explaining the commission calculator's purpose, business objectives, sales process, key metrics, and provide a glossary of relevant terminology.",
+            "dependencies": [],
+            "details": "Include clear explanations of how commissions relate to business outcomes, define all key business metrics and KPIs, and ensure terminology is consistent and well-defined for NotebookLM ingestion.",
+            "status": "done",
+            "testStrategy": "Verify completeness against a checklist of required topics and ensure terminology is used consistently throughout the documentation."
+          },
+          {
+            "id": 2,
+            "title": "Document Deal Structure and Lifecycle",
+            "description": "Define all possible deal stages, transition criteria, business implications, and their effects on commission calculations. Create flowcharts and provide stage-based examples.",
+            "dependencies": [],
+            "details": "Ensure each deal stage is clearly described, visualized, and accompanied by real-world examples to facilitate AI understanding and analysis.",
+            "status": "done",
+            "testStrategy": "Review flowcharts and examples for accuracy and clarity; confirm all deal stages and transitions are documented."
+          },
+          {
+            "id": 3,
+            "title": "Compile Sales Team Structure and Rules",
+            "description": "Document the sales team hierarchy, ownership and assignment logic, territory mappings, account responsibilities, and commission splitting rules.",
+            "dependencies": [],
+            "details": "Provide diagrams or tables as needed to clarify team structure and incentive logic, ensuring all rules are explicit for NotebookLM processing.",
+            "status": "done",
+            "testStrategy": "Check that all team structures, rules, and mappings are represented and that documentation matches current organizational practices."
+          },
+          {
+            "id": 4,
+            "title": "Assemble Company Mapping and Entity Resolution Documentation",
+            "description": "Create comprehensive documentation on company entity resolution, including handling of name variants, subsidiaries, and mapping between data sources.",
+            "dependencies": [],
+            "details": "Include examples of complex company relationships and describe the logic for resolving ambiguities across data sources.",
+            "status": "done",
+            "testStrategy": "Validate documentation with sample company scenarios and confirm that all mapping rules are clearly explained."
+          },
+          {
+            "id": 5,
+            "title": "Document Data Sources and Data Lineage",
+            "description": "List and describe all data sources, field meanings, data quality expectations, handling of incomplete data, and provide data lineage from raw input to commission calculation.",
+            "dependencies": [],
+            "details": "Ensure each data source is fully described, with field-level documentation and lineage diagrams or tables to support traceability.",
+            "status": "done",
+            "testStrategy": "Cross-check data source documentation with system architecture and verify lineage accuracy with sample data flows."
+          },
+          {
+            "id": 6,
+            "title": "Format, Organize, and Prepare Documentation for NotebookLM Integration",
+            "description": "Create the required directory structure, ensure all files are in Markdown with metadata headers, and prepare documentation for seamless NotebookLM ingestion.",
+            "dependencies": [],
+            "details": "Follow NotebookLM best practices for formatting, file naming, and metadata to maximize AI comprehension and analysis capabilities.",
+            "status": "done",
+            "testStrategy": "Validate directory structure, file formats, and metadata headers; test upload to NotebookLM and confirm correct parsing and relationship recognition."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Modify ETL Output to Include Actual Conversation Data for NotebookLM Analysis",
+        "description": "Enhance the ETL output format to include detailed conversation data (messages, meetings, activities) instead of just summary reports, making the data suitable for NotebookLM to analyze actual conversations and interactions.",
+        "details": "This task involves extending the current ETL output to include comprehensive conversation data while maintaining the existing summary format:\n\n1. **Identify Conversation Data Sources**:\n   - Map all available conversation data from Telegram chats, meetings, and activity logs\n   - Determine which fields and attributes should be included for each conversation type\n   - Create a schema for structured representation of conversations including timestamps, participants, and content\n\n2. **Extend Text Output Format**:\n   - Maintain the current summary format structure for backward compatibility\n   - Add new sections for detailed conversation data organized by company\n   - Implement formatting for conversation threads that preserves context and flow\n   - Include metadata for each conversation (date/time, participants, channel, etc.)\n\n3. **Conversation Context Preservation**:\n   - Structure the output to maintain conversation threads and reply relationships\n   - Include participant information to enable relationship analysis\n   - Preserve chronological ordering of messages within conversations\n   - Add contextual markers for different conversation types (chat, meeting, call, etc.)\n\n4. **NotebookLM Optimization**:\n   - Format conversation data in a way that helps NotebookLM understand context\n   - Add semantic markers or section headers to guide NotebookLM analysis\n   - Ensure consistent formatting of dates, names, and references across all conversations\n   - Include sufficient context clues for NotebookLM to identify deal stages and ownership\n\n5. **Performance Considerations**:\n   - Implement pagination or chunking for large conversation datasets\n   - Add filtering options to limit output to relevant time periods or conversation types\n   - Optimize text formatting for efficient processing by NotebookLM\n   - Consider compression or summarization techniques for extremely verbose conversations\n\n6. **Implementation Steps**:\n   - Modify the ETL pipeline's output formatter to include conversation data\n   - Update the data extraction logic to capture full conversation content\n   - Implement the new text formatting rules for conversation data\n   - Add configuration options to control the level of detail in the output",
+        "testStrategy": "1. **Unit Testing**:\n   - Create unit tests for the conversation data extraction functions\n   - Test the text formatting logic with various conversation types and structures\n   - Verify correct handling of special characters, emojis, and formatting in messages\n   - Test with edge cases like empty conversations, very long messages, and unusual formats\n\n2. **Integration Testing**:\n   - Run the modified ETL pipeline against test data containing various conversation types\n   - Verify that all conversation data is correctly extracted and formatted\n   - Confirm that the existing summary format is preserved alongside the new detailed data\n   - Test the complete pipeline from data extraction to final text output\n\n3. **NotebookLM Compatibility Testing**:\n   - Load the generated output files into NotebookLM\n   - Verify that NotebookLM can parse and understand the conversation structure\n   - Test NotebookLM's ability to answer questions about specific conversations\n   - Confirm that NotebookLM can identify deal stages and ownership from conversation context\n\n4. **Performance Testing**:\n   - Measure the impact on processing time and output file size\n   - Test with large datasets to ensure scalability\n   - Verify memory usage remains within acceptable limits\n   - Benchmark loading times in NotebookLM with the enhanced data\n\n5. **Manual Verification**:\n   - Manually review a sample of the output files to confirm conversation integrity\n   - Compare original conversation data with the formatted output\n   - Verify that conversation context and flow are preserved\n   - Check that company-specific conversations are correctly grouped and labeled",
+        "status": "done",
+        "dependencies": [
+          3
+        ],
+        "priority": "medium",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Optimize ETL Performance for Faster Data Processing",
+        "description": "Improve the ETL system's performance by identifying and resolving bottlenecks, with a focus on reducing Telegram processing time from 92 seconds to 46-74 seconds while maintaining data quality and system stability.",
+        "details": "This task involves analyzing and optimizing the ETL pipeline to significantly improve processing speed while maintaining data quality:\n\n1. **Performance Analysis and Profiling**:\n   - Implement detailed performance logging throughout the ETL pipeline\n   - Identify specific bottlenecks in the Telegram processing flow\n   - Create performance baselines for current operations (91.72 seconds for 3958 chats)\n   - Use profiling tools to identify CPU, memory, and I/O bottlenecks\n\n2. **Parallel Processing Implementation**:\n   - Refactor the chat processing logic to support multi-threading or async processing\n   - Implement a worker pool pattern for processing multiple chats concurrently\n   - Add configurable parallelism levels based on available system resources\n   - Ensure thread-safety for shared resources and data structures\n\n3. **Database and Data Access Optimization**:\n   - Review and optimize database queries (use indexing, query optimization)\n   - Implement connection pooling if not already present\n   - Consider using bulk operations instead of individual inserts/updates\n   - Optimize data access patterns to reduce redundant operations\n\n4. **Memory Usage and Batch Processing Improvements**:\n   - Implement efficient batching strategies for chat processing\n   - Optimize memory usage by processing data in chunks\n   - Implement data streaming for large datasets instead of loading everything into memory\n   - Review and refactor any memory-intensive operations\n\n5. **Caching Implementation**:\n   - Identify repetitive operations that could benefit from caching\n   - Implement an appropriate caching strategy (in-memory, file-based, or distributed)\n   - Add cache invalidation mechanisms to ensure data freshness\n   - Measure the impact of caching on overall performance\n\n6. **I/O Optimization**:\n   - Minimize disk I/O operations where possible\n   - Optimize file reading/writing operations\n   - Consider using buffered I/O or memory-mapped files for large datasets\n   - Reduce network round-trips if external services are involved\n\n7. **Code-level Optimizations**:\n   - Refactor inefficient algorithms or data structures\n   - Optimize loops and iterations to reduce computational complexity\n   - Review and optimize string operations and data transformations\n   - Remove unnecessary operations or computations\n\n8. **Performance Monitoring and Reporting**:\n   - Implement comprehensive performance metrics collection\n   - Create a performance dashboard or reporting mechanism\n   - Set up alerts for performance degradation\n   - Document performance improvements and their impact",
+        "testStrategy": "1. **Baseline Performance Measurement**:\n   - Run the current ETL process with detailed timing metrics before any changes\n   - Document processing times for each component, with special focus on Telegram processing\n   - Capture resource utilization (CPU, memory, disk I/O) during baseline runs\n   - Store these metrics as a reference point for improvements\n\n2. **Unit Testing for Optimized Components**:\n   - Create unit tests for any new or modified components\n   - Verify that optimized functions produce identical output to original versions\n   - Test edge cases to ensure optimization doesn't break functionality\n   - Implement performance assertions in unit tests where appropriate\n\n3. **Integration Testing**:\n   - Test the entire ETL pipeline with optimizations enabled\n   - Verify that all data sources are processed correctly\n   - Ensure the output format matches the requirements for NotebookLM compatibility\n   - Validate that no data quality issues are introduced by optimizations\n\n4. **Performance Testing**:\n   - Conduct load tests with varying data volumes\n   - Measure processing time improvements against the baseline\n   - Test with different parallelism settings to find optimal configuration\n   - Verify that the 20-50% performance improvement goal is achieved\n\n5. **Resource Utilization Testing**:\n   - Monitor CPU, memory, and disk usage during optimized runs\n   - Identify any resource bottlenecks that remain\n   - Test on different hardware configurations if possible\n   - Ensure the system doesn't exceed available resources\n\n6. **Regression Testing**:\n   - Verify that all existing functionality continues to work\n   - Ensure data quality is maintained after optimizations\n   - Check that output files are identical or equivalent in content\n   - Validate that the system remains stable under various conditions\n\n7. **Documentation and Reporting**:\n   - Document all performance improvements with metrics\n   - Create before/after comparisons for key performance indicators\n   - Document any configuration parameters that affect performance\n   - Provide recommendations for optimal settings based on testing results",
+        "status": "pending",
+        "dependencies": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "priority": "medium",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Fix Company Data Matching in ETL System",
+        "description": "Investigate and resolve issues with company data matching logic in the ETL system to ensure all companies with available data in source systems (Slack, Telegram, Calendar, HubSpot) correctly display their data in the ETL output, with special focus on improving conversation detection.",
+        "status": "pending",
+        "dependencies": [
+          1,
+          2,
+          3
+        ],
+        "priority": "medium",
+        "details": "This task involves debugging and improving the company matching logic in the ETL system to ensure accurate data representation, particularly for conversation data:\n\n1. **Analysis of Current Matching Issues**:\n   - Review the current company matching algorithm and identify failure points\n   - Analyze logs to determine why companies show \"No data\" despite having conversations in source systems\n   - Compare the list of 111 processed companies against the 41 companies with Telegram data to identify specific mismatches\n   - Investigate why 0 companies show Slack data when we know Slack conversations exist\n   - Create a diagnostic report showing matching success/failure rates across all data sources\n\n2. **Company Name Normalization Improvements**:\n   - Implement enhanced normalization techniques for company names:\n     - Case-insensitive matching\n     - Special character and punctuation handling\n     - Whitespace normalization\n     - Common abbreviation handling (Inc., Ltd., LLC, etc.)\n   - Improve chat name parsing and extraction to better identify company references\n   - Create a comprehensive test suite with known company name variants\n\n3. **Matching Algorithm Enhancements**:\n   - Implement fuzzy matching capabilities using techniques like:\n     - Levenshtein distance for similar name detection\n     - N-gram analysis for partial matches\n     - Token-based matching for word order variations\n   - Reduce strictness of current matching criteria to catch more valid conversations\n   - Add configurable threshold settings for match confidence\n   - Implement a fallback strategy for low-confidence matches\n\n4. **Company Mapping Table Updates**:\n   - Review and update the company mapping table for accuracy\n   - Add support for company aliases and alternative names\n   - Create a maintenance process for keeping the mapping table current\n   - Add validation to prevent duplicate or conflicting entries\n\n5. **Logging and Diagnostics**:\n   - Implement detailed logging for the matching process:\n     - Log each attempted match with source and target names\n     - Record match confidence scores\n     - Document reasons for match failures\n     - Create summary statistics for match success rates\n   - Add a diagnostic mode that outputs detailed matching information\n\n6. **Integration with ETL Pipeline**:\n   - Update the ETL pipeline to use the improved matching logic\n   - Ensure the matching component properly integrates with existing data extraction\n   - Verify that matched data is correctly merged into the output format\n   - Optimize performance to handle large company datasets efficiently",
+        "testStrategy": "1. **Unit Testing**:\n   - Create unit tests for each component of the matching system:\n     - Test name normalization with various company name formats\n     - Test fuzzy matching with similar but non-identical names\n     - Test threshold settings with borderline match cases\n     - Verify mapping table lookup functionality\n   - Implement tests with known problematic company names from production\n\n2. **Integration Testing**:\n   - Test the complete ETL pipeline with the new matching logic\n   - Verify that companies previously showing \"No data\" now display correct conversation information\n   - Confirm that existing correct matches are preserved\n   - Test with the full dataset of 111 companies to ensure comprehensive coverage\n\n3. **Validation Testing**:\n   - Create a validation script that:\n     - Compares source system company counts with output company counts\n     - Identifies any companies still missing conversation data\n     - Calculates match success rate improvements\n     - Generates a report of remaining unmatched companies\n   - Manually review a sample of previously unmatched companies to verify correct matching\n   - Test specifically with companies we know should have Slack or Telegram conversations\n\n4. **Performance Testing**:\n   - Measure the performance impact of enhanced matching algorithms\n   - Verify that processing time remains within acceptable limits\n   - Test with progressively larger datasets to ensure scalability\n   - Optimize any performance bottlenecks identified\n\n5. **Acceptance Criteria**:\n   - At least 90% of companies with conversations in source systems should show that data in ETL output\n   - Significant improvement in Slack conversation detection (from current 0 companies)\n   - No false positive matches (incorrect data associations)\n   - Detailed logging of any remaining unmatched companies with explanations\n   - Documentation of the improved matching algorithm and configuration options",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Analyze current conversation detection failures",
+            "description": "Investigate why many companies show \"No data\" despite having conversations, with special focus on why Slack shows 0 companies when we know Slack data exists.",
+            "status": "in-progress",
+            "dependencies": [],
+            "details": "<info added on 2025-09-13T20:44:31.700Z>\n**Improvements Made:**\n- Added company name variation matching (title case, uppercase, different separators)\n- Enhanced matching to handle cases like \"Allnodes\" in \"System-Tally Greenberg Allnodes-Aki Balogh-telegram\"\n- Added base company variations to matching logic\n\n**Results:**\n- Telegram companies increased from 41 to 46 (5 company improvement)\n- Total Telegram chats: 3239\n- Still need to improve further - only 46 out of 111 companies have data\n\n**Next Steps:**\n- Need to investigate why Slack shows 0 companies when we know Slack data exists\n- Add more sophisticated fuzzy matching for partial company names\n- Debug specific companies that should have conversations but don't\n</info added on 2025-09-13T20:44:31.700Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Implement less restrictive name matching",
+            "description": "Modify the matching algorithm to be less strict, allowing for partial matches and common variations in company names.",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Add detailed matching diagnostics",
+            "description": "Implement comprehensive logging that shows each attempted match, why it succeeded or failed, and the confidence score.",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Create test suite with known company conversations",
+            "description": "Develop a test suite using companies we know have Slack or Telegram conversations to verify the improved matching logic can find them.",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Improve chat name parsing for company detection",
+            "description": "Enhance the extraction of company names from chat channels, group names, and conversation metadata.",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Add BitSafe to Company Exclude List for ETL Processing",
+        "description": "Update the ETL system to exclude BitSafe and BitSafe-Minter from processing since they are internal companies, preventing them from appearing in commission analysis outputs.",
+        "details": "This task involves identifying and updating the company exclusion mechanism in the ETL system:\n\n1. **Locate Exclusion Configuration**:\n   - Find the current implementation of the company exclude list in the ETL codebase\n   - Determine if it's implemented as a configuration file, database table, or hardcoded list\n   - Review the current exclusion logic to understand how it's applied during processing\n\n2. **Update Exclusion List**:\n   - Add \"BitSafe\" and \"BitSafe-Minter\" to the company exclude list\n   - Ensure all variations of these company names are covered (case sensitivity, spacing, etc.)\n   - Consider implementing fuzzy matching if not already present to catch slight variations\n\n3. **Modify ETL Processing Logic**:\n   - Update the company filtering logic to check against the exclude list early in the processing pipeline\n   - Ensure excluded companies are completely omitted from the output, not just marked differently\n   - Add logging to track when companies are excluded for monitoring purposes\n\n4. **Update Company Mapping**:\n   - Modify the company mapping data to mark BitSafe entities as internal/excluded\n   - Ensure this mapping is consistent across all ETL components\n   - Update any relevant metadata to indicate these are internal companies\n\n5. **Documentation Updates**:\n   - Add clear documentation about the exclude list purpose and criteria\n   - Document the specific reason BitSafe companies are excluded (internal company)\n   - Update any relevant data dictionaries or schema documentation\n   - Add comments in the code explaining the exclusion logic\n\n6. **Regression Prevention**:\n   - Implement safeguards to prevent these companies from being accidentally reintroduced in future ETL runs\n   - Consider adding validation checks that verify the exclude list is properly applied",
+        "testStrategy": "1. **Unit Testing**:\n   - Create unit tests for the company exclusion logic\n   - Test with various forms of \"BitSafe\" and \"BitSafe-Minter\" to ensure robust matching\n   - Verify that the exclusion happens at the appropriate stage in the ETL pipeline\n\n2. **Integration Testing**:\n   - Run a complete ETL process with test data containing BitSafe entries\n   - Verify that no BitSafe data appears in the final output files\n   - Check that the exclusion doesn't affect processing of other companies\n\n3. **Validation Testing**:\n   - Compare the output before and after implementation to confirm only BitSafe entities are removed\n   - Verify the total company count decreases by the expected number\n   - Check that any metrics or summaries are correctly adjusted to exclude BitSafe data\n\n4. **Documentation Testing**:\n   - Review updated documentation for clarity and completeness\n   - Verify that the exclude list is properly documented in all relevant places\n   - Ensure comments in code match the actual implementation\n\n5. **Regression Testing**:\n   - Run the ETL process with historical data to ensure no unexpected changes\n   - Verify that all other functionality continues to work as expected\n   - Check that performance is not negatively impacted by the additional exclusion logic",
+        "status": "pending",
+        "dependencies": [
+          3,
+          7
+        ],
+        "priority": "medium",
+        "subtasks": []
       }
     ],
     "metadata": {
       "created": "2025-09-13T17:16:12.706Z",
       "description": "Default tasks context",
-      "updated": "2025-09-13T17:24:10.639Z"
+      "updated": "2025-09-13T20:42:11.552Z"
     }
   }
 }

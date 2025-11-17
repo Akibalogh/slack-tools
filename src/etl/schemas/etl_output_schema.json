@@ -1,0 +1,295 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ETL Output Schema",
+  "description": "Standardized schema for ETL data ingestion output",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["metadata", "statistics", "companies"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "description": "ETL processing metadata and performance statistics",
+      "required": ["generated_at", "etl_version", "data_sources", "total_companies", "performance_stats"],
+      "properties": {
+        "generated_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp when ETL processing completed"
+        },
+        "etl_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semantic version of the ETL system"
+        },
+        "data_sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["slack", "telegram", "calendar", "hubspot"]
+          },
+          "description": "List of data sources processed"
+        },
+        "total_companies": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total number of companies processed"
+        },
+        "performance_stats": {
+          "type": "object",
+          "required": ["total_duration_seconds", "processing_times", "total_errors", "max_workers", "batch_size"],
+          "properties": {
+            "total_duration_seconds": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Total ETL processing time in seconds"
+            },
+            "processing_times": {
+              "type": "object",
+              "description": "Processing time for each operation",
+              "properties": {
+                "company_mapping": {"type": "number", "minimum": 0},
+                "slack_ingestion": {"type": "number", "minimum": 0},
+                "telegram_ingestion": {"type": "number", "minimum": 0},
+                "calendar_ingestion": {"type": "number", "minimum": 0},
+                "hubspot_ingestion": {"type": "number", "minimum": 0},
+                "data_matching": {"type": "number", "minimum": 0},
+                "statistics_generation": {"type": "number", "minimum": 0},
+                "output_writing": {"type": "number", "minimum": 0}
+              }
+            },
+            "total_errors": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Total number of errors encountered during processing"
+            },
+            "max_workers": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Number of parallel workers used"
+            },
+            "batch_size": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Batch size used for processing"
+            }
+          }
+        }
+      }
+    },
+    "statistics": {
+      "type": "object",
+      "description": "Data coverage and processing statistics",
+      "required": [
+        "total_companies",
+        "companies_with_slack",
+        "companies_with_telegram", 
+        "companies_with_calendar",
+        "companies_with_hubspot",
+        "total_slack_channels",
+        "total_telegram_chats",
+        "total_calendar_meetings",
+        "total_hubspot_deals",
+        "data_coverage"
+      ],
+      "properties": {
+        "total_companies": {"type": "integer", "minimum": 0},
+        "companies_with_slack": {"type": "integer", "minimum": 0},
+        "companies_with_telegram": {"type": "integer", "minimum": 0},
+        "companies_with_calendar": {"type": "integer", "minimum": 0},
+        "companies_with_hubspot": {"type": "integer", "minimum": 0},
+        "total_slack_channels": {"type": "integer", "minimum": 0},
+        "total_telegram_chats": {"type": "integer", "minimum": 0},
+        "total_calendar_meetings": {"type": "integer", "minimum": 0},
+        "total_hubspot_deals": {"type": "integer", "minimum": 0},
+        "data_coverage": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-zA-Z0-9\\-_]+$": {
+              "type": "object",
+              "required": ["sources_count", "has_slack", "has_telegram", "has_calendar", "has_hubspot"],
+              "properties": {
+                "sources_count": {"type": "integer", "minimum": 0},
+                "has_slack": {"type": "boolean"},
+                "has_telegram": {"type": "boolean"},
+                "has_calendar": {"type": "boolean"},
+                "has_hubspot": {"type": "boolean"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "companies": {
+      "type": "object",
+      "description": "Company data organized by company name",
+      "patternProperties": {
+        "^[a-zA-Z0-9\\-_]+$": {
+          "type": "object",
+          "required": ["slack", "telegram", "calendar", "hubspot"],
+          "properties": {
+            "slack": {
+              "type": "object",
+              "description": "Slack data for the company",
+              "properties": {
+                "channels": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["channel_id", "channel_name", "messages"],
+                    "properties": {
+                      "channel_id": {"type": "string"},
+                      "channel_name": {"type": "string"},
+                      "messages": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": ["message_id", "author", "text", "timestamp"],
+                          "properties": {
+                            "message_id": {"type": "string"},
+                            "author": {"type": "string"},
+                            "text": {"type": "string"},
+                            "timestamp": {"type": "string"},
+                            "thread_ts": {"type": "string"},
+                            "reactions": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "name": {"type": "string"},
+                                  "count": {"type": "integer", "minimum": 1},
+                                  "users": {"type": "array", "items": {"type": "string"}}
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "telegram": {
+              "type": "object",
+              "description": "Telegram data for the company",
+              "properties": {
+                "chats": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["chat_id", "chat_name", "messages", "message_count", "participants"],
+                    "properties": {
+                      "chat_id": {"type": "string"},
+                      "chat_name": {"type": "string"},
+                      "messages": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": ["message_id", "author", "text", "timestamp", "message_type", "is_service"],
+                          "properties": {
+                            "message_id": {"type": "string"},
+                            "author": {"type": "string"},
+                            "text": {"type": "string"},
+                            "timestamp": {"type": "string"},
+                            "message_type": {"type": "string", "enum": ["service", "regular"]},
+                            "is_service": {"type": "boolean"}
+                          }
+                        }
+                      },
+                      "message_count": {"type": "integer", "minimum": 0},
+                      "regular_message_count": {"type": "integer", "minimum": 0},
+                      "service_message_count": {"type": "integer", "minimum": 0},
+                      "participants": {"type": "array", "items": {"type": "string"}},
+                      "participant_count": {"type": "integer", "minimum": 0},
+                      "unique_authors": {"type": "array", "items": {"type": "string"}},
+                      "directory": {"type": "string"},
+                      "last_message_time": {"type": "string"},
+                      "first_message_time": {"type": "string"}
+                    }
+                  }
+                }
+              }
+            },
+            "calendar": {
+              "type": "object",
+              "description": "Calendar data for the company",
+              "properties": {
+                "meetings": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["meeting_id", "title", "start_time", "end_time", "attendees"],
+                    "properties": {
+                      "meeting_id": {"type": "string"},
+                      "title": {"type": "string"},
+                      "description": {"type": "string"},
+                      "start_time": {"type": "string", "format": "date-time"},
+                      "end_time": {"type": "string", "format": "date-time"},
+                      "attendees": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": ["email", "name"],
+                          "properties": {
+                            "email": {"type": "string", "format": "email"},
+                            "name": {"type": "string"},
+                            "response_status": {"type": "string", "enum": ["accepted", "declined", "tentative", "needsAction"]}
+                          }
+                        }
+                      },
+                      "location": {"type": "string"},
+                      "meeting_url": {"type": "string"}
+                    }
+                  }
+                }
+              }
+            },
+            "hubspot": {
+              "type": "object",
+              "description": "HubSpot CRM data for the company",
+              "properties": {
+                "deals": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["deal_id", "deal_name", "deal_stage", "amount", "close_date"],
+                    "properties": {
+                      "deal_id": {"type": "string"},
+                      "deal_name": {"type": "string"},
+                      "deal_stage": {"type": "string"},
+                      "amount": {"type": "number", "minimum": 0},
+                      "close_date": {"type": "string", "format": "date"},
+                      "created_date": {"type": "string", "format": "date-time"},
+                      "last_modified": {"type": "string", "format": "date-time"},
+                      "owner": {"type": "string"},
+                      "pipeline": {"type": "string"},
+                      "deal_type": {"type": "string"},
+                      "description": {"type": "string"}
+                    }
+                  }
+                },
+                "contacts": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["contact_id", "email", "first_name", "last_name"],
+                    "properties": {
+                      "contact_id": {"type": "string"},
+                      "email": {"type": "string", "format": "email"},
+                      "first_name": {"type": "string"},
+                      "last_name": {"type": "string"},
+                      "company": {"type": "string"},
+                      "phone": {"type": "string"},
+                      "job_title": {"type": "string"},
+                      "created_date": {"type": "string", "format": "date-time"},
+                      "last_modified": {"type": "string", "format": "date-time"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
