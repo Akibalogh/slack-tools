@@ -116,14 +116,22 @@ The script outputs:
 Required in `.env` file:
 
 ```bash
-# Slack
-SLACK_USER_TOKEN=xoxp-...  # User token with groups:read and groups:history scopes
+# Slack - IMPORTANT: Use the BitSafe Export Tool app token
+# Get from: https://api.slack.com/apps/A09AJJZF718/oauth
+SLACK_USER_TOKEN=xoxp-[COPY-FROM-SLACK-APP-PAGE]
 
 # Telegram
 TELEGRAM_API_ID=12345678
 TELEGRAM_API_HASH=abcdef...
 TELEGRAM_PHONE=+16176820066
 ```
+
+**Note**: The token must be from the **BitSafe Export Tool** app which has these scopes:
+- `groups:read` - View private channel info
+- `groups:history` - View private channel messages  
+- `channels:read` - View public channel info
+- `channels:history` - View public channel messages
+- `users:read` - View workspace users
 
 ### Group Categorization
 
@@ -183,8 +191,17 @@ Session file: `telegram_session.session`
 
 ## Common Issues
 
-### "missing_scope" Error
-**Solution**: Update the Slack app token scopes to include `groups:read` and `groups:history`, then reinstall the app.
+### "missing_scope" Error - MOST COMMON
+**Cause**: Wrong token in `.env` file  
+**Solution**: Make sure you're using the token from the **BitSafe Export Tool** app (A09AJJZF718), not a different Slack app.
+
+Get the correct token from the BitSafe Export Tool app.
+
+If you accidentally used a token from a different app:
+1. Go to https://api.slack.com/apps/A09AJJZF718/oauth
+2. Copy the "User OAuth Token" 
+3. Update your `.env` file
+4. Run `python3 scripts/verify_slack_token.py` to verify
 
 ### "team_access_not_granted" Error
 **Solution**: Use a user token instead of a bot token. Bot tokens may not have access to all private channels.

@@ -96,34 +96,38 @@ Edit `config/customer_group_categories.json` to customize group categories:
 
 ## Latest Audit Results
 
-**Date**: November 17, 2024
+**Date**: November 17, 2024 (10:55 AM)
 
 ```
-Total groups audited: 402
-├── Telegram groups: 402
-└── Slack channels: 0 (token scope issue - in progress)
+✅ Total groups audited: 469
+├── Slack channels: 67
+└── Telegram groups: 402
 
 By Category:
-├── BD Customer: 390
+├── BD Customer: 457
 ├── Internal: 8
 ├── Marketing: 3
 └── Intro: 1
 
 Flags:
 ├── Groups needing rename (iBTC): 194
-└── BD groups with missing members: 285/390 (73%)
+├── PUBLIC Slack channels: 0 ✅
+└── BD groups with missing members: 294/457 (64%)
 ```
 
 ## Known Issues
 
-### Slack Channels Not Appearing
-**Status**: In Progress  
-**Issue**: Slack API not returning customer channels (likely Slack Connect or permissions)  
-**Workaround**: Loading from export data file: `data/raw/slack_export_20250815_064939/channels/private_channels.json`  
-**Next Steps**: 
-1. Verify token has `groups:read` and `groups:history` scopes
-2. Test with `conversations.members` API directly on known channel IDs
-3. Consider using Slack Connect-specific API endpoints
+### Slack Channels Not Appearing - FIXED ✅
+**Status**: **RESOLVED**  
+**Issue**: `.env` file was using the wrong Slack token  
+**Solution**: Updated to use the correct token from BitSafe Export Tool app (A09AJJZF718) which has all required scopes:
+- `groups:read` - View private channel info
+- `groups:history` - View private channel messages
+- `channels:read`, `channels:history`, `users:read`
+
+**Correct token**: Get from BitSafe Export Tool app at https://api.slack.com/apps/A09AJJZF718/oauth
+
+Run `python3 scripts/verify_slack_token.py` to verify token access.
 
 ## Project Structure
 
