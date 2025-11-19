@@ -12,6 +12,9 @@ import os
 import json
 from telethon import TelegramClient
 from telethon.tl.functions.messages import GetCommonChatsRequest
+from telethon.tl.functions.channels import GetFullChannelRequest
+from telethon.tl.functions.messages import GetFullChatRequest
+from telethon.tl.types import Channel, Chat
 from datetime import datetime
 import pandas as pd
 from pathlib import Path
@@ -280,6 +283,7 @@ class CustomerGroupAuditor:
                     "Requires Full Team": "Yes" if requires_full_team else "No",
                     "Needs Rename (iBTC)": rename_flag,
                     "Privacy Status": "Private" if is_private else "⚠️ PUBLIC",
+                    "History Visibility": "N/A",  # Slack-specific, not applicable
                     "Total Members": len(members),
                     "Required Present": ", ".join(required_present) if required_present else "NONE",
                     "Required Missing": ", ".join(required_missing) if required_missing else "-",
@@ -346,6 +350,23 @@ class CustomerGroupAuditor:
                 group_name = chat.title
                 member_count = getattr(chat, 'participants_count', 0)
                 
+                # Check history visibility settings
+                history_visible = "Unknown"
+                try:
+                    if isinstance(chat, Channel):
+                        full_chat = await client(GetFullChannelRequest(chat))
+                        hidden = full_chat.full_chat.hidden_prehistory
+                    elif isinstance(chat, Chat):
+                        full_chat = await client(GetFullChatRequest(chat.id))
+                        hidden = getattr(full_chat.full_chat, 'hidden_prehistory', False)
+                    else:
+                        hidden = False  # Default for other chat types
+                    
+                    history_visible = "Hidden" if hidden else "Visible"
+                except Exception as e:
+                    print(f"      Warning: Couldn't check history settings for {group_name}: {e}")
+                    history_visible = "Unknown"
+                
                 # Get participants
                 try:
                     participants = await client.get_participants(chat)
@@ -377,6 +398,7 @@ class CustomerGroupAuditor:
                     # Categorize the group
                     category, requires_full_team = categorize_group(group_name)
                     rename_flag = "⚠️ YES" if needs_rename(group_name) else "No"
+                    history_flag = "⚠️ HIDDEN" if history_visible == "Hidden" else history_visible
                     
                     # Add to results
                     self.audit_results.append({
@@ -386,6 +408,7 @@ class CustomerGroupAuditor:
                         "Requires Full Team": "Yes" if requires_full_team else "No",
                         "Needs Rename (iBTC)": rename_flag,
                         "Privacy Status": "Private",  # TG groups in common are always accessible
+                        "History Visibility": history_flag,
                         "Total Members": len(participants),
                         "Required Present": ", ".join(required_present) if required_present else "NONE",
                         "Required Missing": ", ".join(required_missing) if required_missing else "-",
@@ -456,6 +479,10 @@ class CustomerGroupAuditor:
         rename_count = len(df[df['Needs Rename (iBTC)'].str.contains('YES')])
         if rename_count > 0:
             print(f"   Groups needing rename (contains iBTC): {rename_count}")
+        
+        hidden_history_count = len(df[(df['Platform'] == 'Telegram') & (df['History Visibility'].str.contains('HIDDEN'))])
+        if hidden_history_count > 0:
+            print(f"   Telegram groups with HIDDEN history (should be visible): {hidden_history_count}")
         
         # Missing members in BD customer groups
         bd_groups = df[df['Requires Full Team'] == 'Yes']

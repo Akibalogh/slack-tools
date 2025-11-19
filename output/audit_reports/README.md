@@ -21,6 +21,7 @@ Each report contains:
 - **Requires Full Team**: Yes or No
 - **Needs Rename (iBTC)**: ⚠️ YES if contains "iBTC"
 - **Privacy Status**: Private or ⚠️ PUBLIC
+- **History Visibility**: For Telegram - Visible, ⚠️ HIDDEN, or Unknown. N/A for Slack.
 - **Total Members**: Total member count
 - **Required Present**: Names of required members present
 - **Required Missing**: Names of required members missing
@@ -48,4 +49,5 @@ Check this directory for the most recent file:
 ```bash
 ls -lt output/audit_reports/
 ```
+
 

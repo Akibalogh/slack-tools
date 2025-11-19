@@ -82,6 +82,7 @@ The tool generates an Excel report: `output/audit_reports/customer_group_audit_Y
 - **Requires Full Team**: Yes or No
 - **Needs Rename (iBTC)**: ⚠️ YES if contains "iBTC", No otherwise
 - **Privacy Status**: Private or ⚠️ PUBLIC for Slack channels
+- **History Visibility**: For Telegram groups - Visible, ⚠️ HIDDEN, or Unknown. N/A for Slack.
 - **Total Members**: Total number of members in the group
 - **Required Present**: Names of required members present
 - **Required Missing**: Names of required members missing
@@ -106,6 +107,7 @@ The script outputs:
 
 ⚠️  Flags:
    Groups needing rename (contains iBTC): 194
+   Telegram groups with HIDDEN history (should be visible): [varies]
    BD Customer groups with missing members: 285/461
 ```
 
@@ -170,6 +172,23 @@ This file contains 72 BitSafe customer channels that match the pattern `*-bitsaf
 ### Telegram Groups
 
 The tool queries the Telegram API to find all groups shared between you and @mojo_onchain (Sales Engineer). This represents all customer-related Telegram groups (401+ groups).
+
+#### Telegram History Visibility
+
+For each Telegram group, the tool checks the **history visibility** setting:
+
+- **Visible**: New members can see the full chat history when they join
+- **⚠️ HIDDEN**: New members cannot see messages sent before they joined
+- **Unknown**: Could not determine the setting (permissions issue)
+
+**Best Practice**: Customer groups should have history set to **Visible** so new team members can review past conversations and context when they join.
+
+**How to Fix**: In Telegram group settings:
+1. Open the group
+2. Click the group name at the top
+3. Click "Edit"
+4. Under "Chat history for new members", select "Visible"
+5. Save changes
 
 ## Slack Token Scopes
 
