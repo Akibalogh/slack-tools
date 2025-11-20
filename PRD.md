@@ -106,7 +106,7 @@ Automatically audit all Slack and Telegram customer groups to verify required an
 - 🔄 Historical tracking of audit results over time
 
 **Could Have:**
-- ⏳ Automated invitations to add missing members
+- ✅ Automated invitations to add missing members (See Feature 4)
 - ⏳ Slack/Telegram notifications when gaps are found
 - ⏳ Dashboard view of audit results
 - ⏳ Integration with CRM for customer account mapping
@@ -200,7 +200,108 @@ Export private Slack channel message history including threaded conversations to
 
 ---
 
-### Feature 3: Telegram Export
+### Feature 4: Bulk Member Addition (Slack)
+
+#### Description
+Automate adding team members to all BitSafe customer Slack channels in bulk. Addresses the manual remediation step after running the audit tool.
+
+#### Requirements
+
+**Must Have:**
+- ✅ Add multiple members to all BitSafe channels at once
+- ✅ Automatically look up user IDs from usernames
+- ✅ Skip channels where members are already present
+- ✅ Dry-run mode to preview changes before execution
+- ✅ Detailed logging of all operations
+- ✅ Handle archived/deleted channels gracefully
+- ✅ Progress tracking with real-time console output
+- ✅ Save operation log to file for audit purposes
+
+**Should Have:**
+- ✅ Non-interactive mode for automation (--yes flag)
+- ✅ Summary report of successful/failed operations
+- 🔄 Selective channel addition (choose specific channels)
+- 🔄 Batch operations with configurable concurrency
+
+**Could Have:**
+- ⏳ Telegram group member addition
+- ⏳ Role-based member addition (e.g., "add all BD team")
+- ⏳ Schedule recurring member additions
+- ⏳ Slack notification when operation completes
+
+**Won't Have (Yet):**
+- ❌ Member removal functionality
+- ❌ Channel creation
+- ❌ Permission management
+
+#### Technical Implementation
+
+**Prerequisites:**
+- Slack token with `groups:write` and `channels:write` scopes
+- User token (not bot token) for private channel access
+- See [add-write-scope.md](docs/add-write-scope.md) for setup
+
+**API Endpoints:**
+- `users.list` - Look up user IDs from usernames
+- `conversations.members` - Check existing channel members
+- `conversations.invite` - Add members to channels
+
+**Rate Limiting:**
+- 0.5 second delay between operations
+- Respects Slack tier 3 limits (50+ requests per minute)
+- Async implementation for parallel processing
+
+**Error Handling:**
+- `already_in_channel` - Skipped (logged as info)
+- `channel_not_found` - Skipped (archived/deleted channels)
+- `missing_scope` - Fatal error with clear remediation steps
+- Other errors - Logged and continues with next operation
+
+#### User Flow
+
+1. User runs audit tool to identify missing members
+2. User reviews audit report and decides which members to add
+3. User runs: `python3 scripts/add_members_to_channels.py aliya kevin --dry-run`
+4. Script shows preview of all channels and members to be added
+5. User confirms operation is correct
+6. User runs without --dry-run: `python3 scripts/add_members_to_channels.py aliya kevin --yes`
+7. Script adds members to all channels with progress updates
+8. Script generates summary report and saves log file
+9. User reviews log file to confirm all operations succeeded
+
+#### Example Usage
+
+```bash
+# Preview what would happen
+python3 scripts/add_members_to_channels.py aliya kevin --dry-run
+
+# Add with confirmation prompt
+python3 scripts/add_members_to_channels.py aliya kevin
+
+# Add without confirmation (automation)
+python3 scripts/add_members_to_channels.py aliya kevin --yes
+
+# Add different members
+python3 scripts/add_members_to_channels.py shin_novation j_eisenberg --yes
+```
+
+#### Success Metrics
+
+- **Time Savings**: Add members to 67 channels in ~60 seconds (vs. ~30 minutes manually)
+- **Error Rate**: <1% failed operations (only for truly inaccessible channels)
+- **Adoption**: Used immediately after each audit run
+- **Coverage**: Reduces "missing member" count from 294 to <10 per audit
+
+#### Dependencies
+
+- **Python 3.9+**
+- **aiohttp**: Async HTTP for Slack API
+- **python-dotenv**: Environment variable management
+- Same dependencies as audit tool (already installed)
+
+---
+
+### Feature 5: Telegram Export
 
 #### Description
 Export Telegram group message history for archival.
@@ -281,8 +382,9 @@ Export Telegram group message history for archival.
 slack-tools/
 ├── scripts/
 │   ├── customer_group_audit.py      # Main audit script
-│   ├── slack_export.py               # Slack export utilities
-│   └── telegram_export.py            # Telegram export utilities
+│   ├── add_members_to_channels.py   # Bulk member addition tool
+│   ├── slack_export.py              # Slack export utilities
+│   └── telegram_export.py           # Telegram export utilities
 ├── config/
 │   └── customer_group_categories.json  # Group categorization config
 ├── data/
@@ -291,11 +393,14 @@ slack-tools/
 │           └── channels/
 │               └── private_channels.json  # Slack channel metadata
 ├── docs/
-│   ├── customer-group-audit.md       # Audit tool documentation
-│   └── slack-export-howto.md         # Slack export guide
+│   ├── customer-group-audit.md      # Audit tool documentation
+│   ├── add-members-tool.md          # Member addition tool documentation
+│   ├── add-write-scope.md           # Slack write permissions setup
+│   └── slack-export-howto.md        # Slack export guide
 ├── output/
-│   └── [audit reports on Desktop]
-└── .env                               # API credentials (git-ignored)
+│   ├── audit_reports/               # Audit Excel reports
+│   └── add_members_*.log            # Member addition operation logs
+└── .env                              # API credentials (git-ignored)
 ```
 
 ### Data Flow
@@ -335,6 +440,7 @@ slack-tools/
 - `users.list` - Map usernames to user IDs
 - `conversations.list` - List channels (fallback)
 - `conversations.members` - Get channel member list
+- `conversations.invite` - Add members to channels (bulk addition tool)
 - `conversations.history` - Export messages
 - `conversations.replies` - Export thread replies
 
@@ -444,9 +550,16 @@ slack-tools/
 - [Slack API Documentation](https://api.slack.com/)
 - [Telethon Documentation](https://docs.telethon.dev/)
 - [Customer Group Audit Documentation](docs/customer-group-audit.md)
+- [Bulk Member Addition Tool Documentation](docs/add-members-tool.md)
+- [Slack Write Permissions Setup](docs/add-write-scope.md)
 - [Slack Export How-To](docs/slack-export-howto.md)
 
 ### Changelog
 
+- **2025-01-19**: V1.1 - Added Feature 4: Bulk Member Addition tool
+  - Automates adding team members to all BitSafe Slack channels
+  - Dry-run mode for safe testing
+  - Detailed logging and error handling
+  - Successfully added Aliya Gordon and Kevin Huet to 67 channels (132 memberships)
 - **2024-11-17**: V1.0 - Initial PRD created with customer group audit as primary feature
 

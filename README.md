@@ -9,10 +9,22 @@ Automatically audit all Slack and Telegram customer groups to verify required te
 - Team member presence tracking (5 required, 4 optional)
 - Group categorization (BD Customer, Marketing, Internal, Intro)
 - iBTC rebranding flags
-- Privacy status checks
+- Privacy status checks (Slack channels & Telegram history visibility)
 - Completeness scores
 
-📊 **Current Coverage**: 402 Telegram groups audited (72 Slack channels pending token scope fix)
+📊 **Latest Audit**: 472 groups (67 Slack + 405 Telegram)
+- 295 BD groups with missing members
+- 192 groups need iBTC renaming
+- 29 Telegram groups with hidden history
+
+### ➕ Bulk Member Addition
+Automatically add team members to all BitSafe Slack customer channels in bulk:
+- Add multiple members to 67 channels in ~60 seconds
+- Dry-run mode to preview changes
+- Detailed logging for audit trail
+- Skip channels where members already present
+
+✅ **Recent Success**: Added Aliya Gordon and Kevin Huet to 67 channels (132 memberships added)
 
 ### 📤 Slack Export
 Export private Slack channel message history including threaded conversations.
@@ -43,7 +55,19 @@ cp .env.example .env
 python3 scripts/customer_group_audit.py
 ```
 
-Output: `~/Desktop/customer_group_audit_YYYYMMDD_HHMMSS.xlsx`
+Output: `output/audit_reports/customer_group_audit_YYYYMMDD_HHMMSS.xlsx`
+
+### Add Members to All Channels
+
+```bash
+# Preview changes first (dry-run)
+python3 scripts/add_members_to_channels.py aliya kevin --dry-run
+
+# Actually add members
+python3 scripts/add_members_to_channels.py aliya kevin --yes
+```
+
+Output: Console progress + `output/add_members_YYYYMMDD_HHMMSS.log`
 
 ## Configuration
 
@@ -53,13 +77,17 @@ Create a `.env` file with:
 
 ```bash
 # Slack
-SLACK_USER_TOKEN=xoxp-...  # User token with groups:read and groups:history scopes
+# For audit: groups:read, groups:history, channels:read, channels:history, users:read
+# For bulk member addition: also needs groups:write, channels:write
+SLACK_USER_TOKEN=xoxp-...
 
 # Telegram  
 TELEGRAM_API_ID=12345678
 TELEGRAM_API_HASH=abcdef...
 TELEGRAM_PHONE=+16176820066
 ```
+
+**Note**: To use the bulk member addition tool, you need to add `groups:write` and `channels:write` scopes to your Slack app. See [docs/add-write-scope.md](docs/add-write-scope.md) for instructions.
 
 ### Group Categories
 
@@ -76,6 +104,8 @@ Edit `config/customer_group_categories.json` to customize group categories:
 ## Documentation
 
 - **[Customer Group Audit Guide](docs/customer-group-audit.md)** - Complete guide for the audit tool
+- **[Bulk Member Addition Tool](docs/add-members-tool.md)** - Guide for adding members to all channels
+- **[Slack Write Permissions Setup](docs/add-write-scope.md)** - How to add write scopes to Slack app
 - **[Slack Export How-To](docs/slack-export-howto.md)** - Guide for exporting Slack channels
 - **[PRD](PRD.md)** - Product requirements and roadmap
 
