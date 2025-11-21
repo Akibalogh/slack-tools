@@ -22,6 +22,7 @@ Each report contains:
 - **Needs Rename (iBTC)**: ⚠️ YES if contains "iBTC"
 - **Privacy Status**: Private or ⚠️ PUBLIC
 - **History Visibility**: For Telegram - Visible, ⚠️ HIDDEN, or Unknown. N/A for Slack.
+- **Admin Status**: For Telegram - ✅ Owner, ✅ Admin (can rename), Admin (no rename), Member, or Unknown. N/A for Slack.
 - **Total Members**: Total member count
 - **Required Present**: Names of required members present
 - **Required Missing**: Names of required members missing

@@ -83,6 +83,7 @@ The tool generates an Excel report: `output/audit_reports/customer_group_audit_Y
 - **Needs Rename (iBTC)**: ⚠️ YES if contains "iBTC", No otherwise
 - **Privacy Status**: Private or ⚠️ PUBLIC for Slack channels
 - **History Visibility**: For Telegram groups - Visible, ⚠️ HIDDEN, or Unknown. N/A for Slack.
+- **Admin Status**: For Telegram - ✅ Owner, ✅ Admin (can rename), Admin (no rename), Member, or Unknown. N/A for Slack.
 - **Total Members**: Total number of members in the group
 - **Required Present**: Names of required members present
 - **Required Missing**: Names of required members missing

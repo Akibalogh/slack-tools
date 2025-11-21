@@ -284,6 +284,7 @@ class CustomerGroupAuditor:
                     "Needs Rename (iBTC)": rename_flag,
                     "Privacy Status": "Private" if is_private else "⚠️ PUBLIC",
                     "History Visibility": "N/A",  # Slack-specific, not applicable
+                    "Admin Status": "N/A",  # Slack channels managed via workspace admin
                     "Total Members": len(members),
                     "Required Present": ", ".join(required_present) if required_present else "NONE",
                     "Required Missing": ", ".join(required_missing) if required_missing else "-",
@@ -367,6 +368,27 @@ class CustomerGroupAuditor:
                     print(f"      Warning: Couldn't check history settings for {group_name}: {e}")
                     history_visible = "Unknown"
                 
+                # Check admin status
+                admin_status = "Member"
+                try:
+                    # Get our own permissions in this chat
+                    me = await client.get_me()
+                    perms = await client.get_permissions(chat, me)
+                    
+                    if perms.is_creator:
+                        admin_status = "✅ Owner"
+                    elif perms.is_admin:
+                        # Check if we have change_info permission
+                        if hasattr(perms, 'change_info') and perms.change_info:
+                            admin_status = "✅ Admin (can rename)"
+                        else:
+                            admin_status = "Admin (no rename)"
+                    else:
+                        admin_status = "Member"
+                except Exception as e:
+                    # If permission check fails, assume member
+                    admin_status = f"Unknown ({str(e)[:30]}...)" if str(e) else "Unknown"
+                
                 # Get participants
                 try:
                     participants = await client.get_participants(chat)
@@ -409,6 +431,7 @@ class CustomerGroupAuditor:
                         "Needs Rename (iBTC)": rename_flag,
                         "Privacy Status": "Private",  # TG groups in common are always accessible
                         "History Visibility": history_flag,
+                        "Admin Status": admin_status,
                         "Total Members": len(participants),
                         "Required Present": ", ".join(required_present) if required_present else "NONE",
                         "Required Missing": ", ".join(required_missing) if required_missing else "-",
