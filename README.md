@@ -26,6 +26,27 @@ Automatically add team members to all BitSafe Slack customer channels in bulk:
 
 ✅ **Recent Success**: Added Aliya Gordon and Kevin Huet to 67 channels (132 memberships added)
 
+### 🛠️ Telegram Admin Tool (NEW!)
+Unified command-line tool for Telegram group administration:
+- **Find users** across all groups with permission status
+- **Remove users** from groups (bulk operations)
+- **Generate ownership transfer messages** for groups you don't control
+- **Bulk rename** groups with pattern matching or JSON mappings
+- **Excel reports** for all operations
+
+📖 **[Full Documentation](docs/telegram-admin-tool.md)**
+
+```bash
+# Find a user
+python3 scripts/telegram_admin.py find-user --username someuser
+
+# Remove from groups
+python3 scripts/telegram_admin.py remove-user --username someuser
+
+# Rename groups
+python3 scripts/telegram_admin.py rename --pattern "old" --replace "new"
+```
+
 ### 📤 Slack Export
 Export private Slack channel message history including threaded conversations.
 

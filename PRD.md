@@ -330,6 +330,76 @@ Export Telegram group message history for archival.
 
 ---
 
+### Feature 6: Telegram Admin Tool
+
+#### Description
+Unified command-line tool for common Telegram group administration tasks, consolidating multiple ad-hoc operations into a single, reusable interface.
+
+#### Requirements
+
+**Must Have:**
+- ✅ **Find User**: Search for any user across all Telegram groups
+- ✅ **Remove User**: Bulk remove user from groups where you have admin rights
+- ✅ **Ownership Management**: Generate transfer request messages for groups you don't control
+- ✅ **Bulk Rename**: Pattern-based or JSON-mapping-based group renaming
+- ✅ **Admin Status Check**: Show your permission level in each group
+- ✅ **Excel Reports**: Generate reports for all operations
+- ✅ **Rate Limit Handling**: Gracefully handle Telegram API rate limits
+
+**Should Have:**
+- ✅ Command-line interface with subcommands
+- ✅ Support for batch operations from text files
+- ✅ Detailed logging and error reporting
+- ✅ Session management (reuse authenticated sessions)
+
+**Nice to Have:**
+- ⏳ Progress bars for long-running operations
+- ⏳ Dry-run mode for destructive operations
+- ⏳ Integration with audit tool for targeting specific groups
+- ⏳ Undo functionality for recent operations
+
+#### Use Cases
+
+1. **Employee Offboarding**:
+   - Find all groups where former employee has access
+   - Remove them from groups you control
+   - Generate ownership transfer requests for the rest
+
+2. **Rebranding**:
+   - Bulk rename groups to remove deprecated terminology
+   - Pattern-based replacements (e.g., "iBTC" → "BitSafe (CBTC)")
+   - JSON mappings for precise control
+
+3. **Access Auditing**:
+   - Find where contractors/consultants have access
+   - Verify access aligns with their scope of work
+   - Generate reports for compliance
+
+#### Implementation Status
+
+**Completed:**
+- ✅ Created unified `telegram_admin.py` script with 4 subcommands
+- ✅ Implemented find-user, remove-user, request-ownership, rename
+- ✅ Added Excel report generation for all operations
+- ✅ Created comprehensive documentation (docs/telegram-admin-tool.md)
+- ✅ Successfully used for @nftaddie removal:
+  - 33 groups identified
+  - 3 groups removed (where we had admin rights)
+  - 24 ownership transfer requests generated
+- ✅ Successfully used for iBTC rebranding:
+  - 40 groups renamed
+  - Standardized naming convention applied
+  - Rate limit handling validated
+
+**Technical Implementation:**
+- CLI: argparse with subcommands
+- Telegram: Telethon client (reuses audit infrastructure)
+- Reports: pandas + openpyxl
+- Session: Reuses telegram_session.session file
+- Output: Saves to `output/` directory
+
+---
+
 ## Non-Functional Requirements
 
 ### Performance

@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 """
-Rename iBTC Telegram Groups
+Generic Telegram Group Rename Tool
 
-Uses existing Telegram session from audit to rename groups.
-Run this right after the audit completes to use the same session.
+Rename Telegram groups based on custom mappings with rate limit handling.
+
+Usage:
+    python3 rename_telegram_groups.py --mapping rename_map.json
+    python3 rename_telegram_groups.py --pattern "iBTC" --replace "BitSafe (CBTC)"
 """
 
 import asyncio
+import argparse
+import json
 from telethon import TelegramClient
 from telethon.tl.functions.channels import EditTitleRequest
 from telethon.tl.functions.messages import EditChatTitleRequest
@@ -19,9 +24,10 @@ load_dotenv()
 api_id = os.getenv('TELEGRAM_API_ID')
 api_hash = os.getenv('TELEGRAM_API_HASH')
 phone = os.getenv('TELEGRAM_PHONE')
-password = os.getenv('TELEGRAM_PASSWORD')  # 2FA password
+password = os.getenv('TELEGRAM_PASSWORD')
 
-# Rename mapping (old_name -> new_name)
+# Default rename mapping (old_name -> new_name)
+# Can be overridden by --mapping flag
 RENAME_MAP = {
     'Allnodes <> BitSafe (iBTC, CBTC)': 'Allnodes <> BitSafe (CBTC)',
     'AmberGroup <> BitSafe (iBTC, CBTC)': 'AmberGroup <> BitSafe (CBTC)',
