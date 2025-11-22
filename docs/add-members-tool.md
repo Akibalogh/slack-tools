@@ -75,7 +75,7 @@ python3 scripts/add_members_to_channels.py shin_novation j_eisenberg --yes
 ## How It Works
 
 1. **Look up user IDs** - Converts Slack usernames to user IDs
-2. **Load channels** - Reads BitSafe channels from export data
+2. **Fetch channels** - Queries live Slack API for all BitSafe channels (ensures newly created channels are included)
 3. **Check current members** - For each channel, checks who's already there
 4. **Add missing members** - Invites members who aren't already in the channel
 5. **Generate report** - Shows summary of all operations

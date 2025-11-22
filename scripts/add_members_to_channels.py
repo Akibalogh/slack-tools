@@ -75,29 +75,37 @@ class SlackMemberAdder:
         return True
     
     async def add_members_to_channels(self, dry_run=False):
-        """Add members to all BitSafe customer channels"""
+        """Add members to all BitSafe customer channels - always uses live API"""
         print(f"\n{'[DRY RUN] ' if dry_run else ''}Adding members to BitSafe channels...")
         
-        # Load BitSafe channels from export data
-        export_file = "data/raw/slack_export_20250815_064939/channels/private_channels.json"
-        if not Path(export_file).exists():
-            print(f"❌ Export file not found: {export_file}")
-            return
-        
-        with open(export_file, 'r') as f:
-            channels_data = json.load(f)
-        
-        bitsafe_channels = [
-            ch for ch in channels_data 
-            if "bitsafe" in ch.get("name", "").lower()
-        ]
-        
-        print(f"   Found {len(bitsafe_channels)} BitSafe channels")
+        # Always fetch channels from live API to ensure we have the latest channels
+        print(f"   Fetching channels from Slack API...")
         
         headers = {
             "Authorization": f"Bearer {self.slack_token}",
             "Content-Type": "application/json"
         }
+        
+        bitsafe_channels = []
+        
+        async with aiohttp.ClientSession() as session:
+            async with session.get(
+                "https://slack.com/api/conversations.list",
+                headers=headers,
+                params={"limit": 200, "exclude_archived": "false", "types": "public_channel,private_channel"}
+            ) as resp:
+                data = await resp.json()
+                if data.get("ok"):
+                    all_channels = data.get("channels", [])
+                    bitsafe_channels = [
+                        ch for ch in all_channels 
+                        if "bitsafe" in ch.get("name", "").lower()
+                    ]
+                else:
+                    print(f"❌ Error fetching channels: {data.get('error')}")
+                    return
+        
+        print(f"   Found {len(bitsafe_channels)} BitSafe channels")
         
         async with aiohttp.ClientSession() as session:
             for channel in bitsafe_channels:
