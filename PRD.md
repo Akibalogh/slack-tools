@@ -89,7 +89,7 @@ Automatically audit all Slack and Telegram customer groups to verify required an
 #### Requirements
 
 **Must Have:**
-- ✅ Fetch all Slack channels containing "bitsafe" in the name
+- ✅ Fetch all Slack channels containing "bitsafe" in the name (ALWAYS use live API, never cached exports)
 - ✅ Fetch all Telegram groups shared with @mojo_onchain
 - ✅ Verify presence of 5 required team members
 - ✅ Track 4 optional team members
@@ -119,8 +119,9 @@ Automatically audit all Slack and Telegram customer groups to verify required an
 #### Technical Implementation
 
 **Data Sources:**
-- **Slack**: Loads channel metadata from `data/raw/slack_export_20250815_064939/channels/private_channels.json` (72 channels)
+- **Slack**: **Always queries live Slack API** via `conversations.list` to fetch current channels (never uses cached exports to ensure newly created channels are included)
 - **Telegram**: Queries Telegram API for groups shared with @mojo_onchain (401+ groups)
+- **Critical Note**: Using cached export data was causing newly created Slack channels (e.g., hellomoon-bitsafe created after Aug 2024) to be missed in audits and bulk operations
 
 **Team Member Mapping:**
 - Maps Slack usernames to team member handles
@@ -137,14 +138,14 @@ Automatically audit all Slack and Telegram customer groups to verify required an
 
 1. User runs `python3 scripts/customer_group_audit.py`
 2. Script maps team members from Slack workspace
-3. Script loads 72 Slack channels from export data
+3. Script fetches all Slack channels via live API (ensures newly created channels are included)
 4. Script audits each Slack channel (fetches members via API)
 5. Script connects to Telegram, finds 401+ shared groups with @mojo_onchain
 6. Script audits each Telegram group
 7. Script categorizes groups and flags issues
-8. Script generates Excel report on Desktop
+8. Script generates Excel report in output/audit_reports/
 9. User reviews report, identifies gaps
-10. User manually adds missing members (automated in future)
+10. User manually adds missing members or uses bulk addition tool
 
 #### Dependencies
 

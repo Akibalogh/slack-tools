@@ -193,45 +193,32 @@ class CustomerGroupAuditor:
             print(f"   ℹ️  Missing optional: {', '.join(missing_optional)}")
     
     async def audit_slack_channels(self):
-        """Audit all Slack channels with 'bitsafe' in the name"""
+        """Audit all Slack channels with 'bitsafe' in the name - always uses live API"""
         print(f"\n🔍 Auditing Slack channels...")
         
         headers = {"Authorization": f"Bearer {SLACK_TOKEN}"}
         
-        # Load known BitSafe channel IDs from previous export
-        known_channels_file = "data/raw/slack_export_20250815_064939/channels/private_channels.json"
+        # Always use live API to ensure we have the latest channels (including newly created ones)
         bitsafe_channels = []
         
-        try:
-            import json
-            with open(known_channels_file, 'r') as f:
-                all_private_channels = json.load(f)
-                bitsafe_channels = [
-                    ch for ch in all_private_channels 
-                    if "bitsafe" in ch.get("name", "").lower()
-                ]
-            print(f"   Loaded {len(bitsafe_channels)} BitSafe channels from export data")
-        except FileNotFoundError:
-            print(f"   ⚠️  Could not load channel data from {known_channels_file}")
-            print(f"   ⚠️  Falling back to API scan (may miss private/connect channels)")
-            
-            # Fallback: try API scan
-            async with aiohttp.ClientSession() as session:
-                params = {"limit": 200, "exclude_archived": "false", "types": "public_channel,private_channel"}
-                async with session.get(
-                    "https://slack.com/api/conversations.list",
-                    headers=headers,
-                    params=params
-                ) as resp:
-                    data = await resp.json()
-                    if data.get("ok"):
-                        all_channels = data.get("channels", [])
-                        bitsafe_channels = [
-                            ch for ch in all_channels 
-                            if "bitsafe" in ch.get("name", "").lower()
-                        ]
-            
-            print(f"   Found {len(bitsafe_channels)} BitSafe channels via API")
+        print(f"   Fetching channels from Slack API...")
+        
+        async with aiohttp.ClientSession() as session:
+            params = {"limit": 200, "exclude_archived": "false", "types": "public_channel,private_channel"}
+            async with session.get(
+                "https://slack.com/api/conversations.list",
+                headers=headers,
+                params=params
+            ) as resp:
+                data = await resp.json()
+                if data.get("ok"):
+                    all_channels = data.get("channels", [])
+                    bitsafe_channels = [
+                        ch for ch in all_channels 
+                        if "bitsafe" in ch.get("name", "").lower()
+                    ]
+        
+        print(f"   Found {len(bitsafe_channels)} BitSafe channels via API")
         
         # Audit each channel (whether from file or API)
         async with aiohttp.ClientSession() as session:
