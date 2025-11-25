@@ -12,19 +12,21 @@ Automatically audit all Slack and Telegram customer groups to verify required te
 - Privacy status checks (Slack channels & Telegram history visibility)
 - Completeness scores
 
-📊 **Latest Audit**: 472 groups (67 Slack + 405 Telegram)
+📊 **Latest Audit**: 523 groups (118 Slack + 405 Telegram)
+- All groups now audited via live API (no cached data)
 - 295 BD groups with missing members
 - 192 groups need iBTC renaming
 - 29 Telegram groups with hidden history
 
 ### ➕ Bulk Member Addition
 Automatically add team members to all BitSafe Slack customer channels in bulk:
-- Add multiple members to 67 channels in ~60 seconds
+- Add multiple members to 118 channels in ~2-3 minutes
 - Dry-run mode to preview changes
 - Detailed logging for audit trail
 - Skip channels where members already present
+- **Always uses live API** to catch newly created channels
 
-✅ **Recent Success**: Added Aliya Gordon and Kevin Huet to 67 channels (132 memberships added)
+✅ **Recent Success**: Added Aliya Gordon and Kevin Huet to 49 newly discovered channels (98 memberships added, bringing total coverage to 116 active channels)
 
 ### 🛠️ Telegram Admin Tool (NEW!)
 Unified command-line tool for Telegram group administration:
@@ -218,19 +220,44 @@ slack-tools/
 4. Test thoroughly
 5. Submit pull request
 
+## Recent Updates
+
+### November 25, 2024 - Critical Fix: Live API Migration
+**Issue**: Scripts were using cached Slack export from August 2024, missing 51 newly created channels.
+
+**Resolution**: 
+- ✅ All scripts now use live Slack API
+- ✅ Fixed bulk member addition to catch new channels
+- ✅ Successfully added Kevin & Aliya to 49 missing channels
+- ✅ Current coverage: 116/118 active channels (98.3%)
+
+📄 **[Full Incident Report](output/missing_channels_fix_20251125.md)**
+
+### November 21, 2024 - Telegram iBTC Rebranding
+- ✅ Renamed 44 Telegram groups to remove iBTC branding
+- ✅ Handled rate limits with automated retry logic
+- ✅ Generated ownership transfer messages for 5 groups
+
+### November 19, 2024 - Bulk Member Addition Tool
+- ✅ Created automated tool for adding members to all Slack channels
+- ✅ Successfully added Aliya & Kevin to initial 67 channels
+- ✅ Implemented dry-run mode and safety checks
+
 ## Roadmap
 
 ### V1.0 (Current)
-- ✅ Telegram group audit (402 groups)
-- 🔄 Slack channel audit (72 channels - pending fix)
+- ✅ Telegram group audit (405 groups)
+- ✅ Slack channel audit (118 channels - **FIXED: Now uses live API**)
 - ✅ Excel report generation
 - ✅ Group categorization
 - ✅ iBTC renaming flags
+- ✅ Bulk member addition
+- ✅ Telegram admin tool
 
 ### V2.0 (Q1 2025)
-- Automated member invitations
-- Exclusion management
-- Historical tracking
+- Automated member removal workflows
+- Enhanced exclusion management
+- Historical tracking dashboard
 
 ### V3.0 (Q2 2025)
 - Web dashboard
@@ -249,4 +276,4 @@ For issues or questions, contact:
 
 ---
 
-**Last Updated**: November 17, 2024
+**Last Updated**: November 25, 2024
