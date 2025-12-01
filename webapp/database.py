@@ -125,7 +125,7 @@ class Database:
                 "telegram_required": True,
             },
             {
-                "name": "Gabi Urrutia",
+                "name": "Gabi Tui",
                 "slack_username": "gabitui",
                 "slack_user_id": "U04QGJC7MCU",
                 "telegram_username": None,
