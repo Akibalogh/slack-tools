@@ -132,7 +132,7 @@ class Database:
                 "email": "gabi@bitsafe.finance",
                 "status": "active",
                 "slack_required": True,
-                "telegram_required": False,
+                "telegram_required": True,
             },
             {
                 "name": "Mayank Sachdev",
@@ -142,7 +142,7 @@ class Database:
                 "email": "mayank@bitsafe.finance",
                 "status": "active",
                 "slack_required": True,
-                "telegram_required": False,
+                "telegram_required": True,
             },
             {
                 "name": "Kadeem Clarke",
@@ -152,7 +152,7 @@ class Database:
                 "email": "kadeem@bitsafe.finance",
                 "status": "active",
                 "slack_required": True,
-                "telegram_required": False,
+                "telegram_required": True,
             },
             {
                 "name": "Amy Wu",
@@ -162,7 +162,7 @@ class Database:
                 "email": "amy@bitsafe.finance",
                 "status": "active",
                 "slack_required": True,
-                "telegram_required": False,
+                "telegram_required": True,
             },
             {
                 "name": "Kevin Huet",
