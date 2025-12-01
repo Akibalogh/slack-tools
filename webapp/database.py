@@ -112,12 +112,12 @@ class Database:
             conn.close()
             return
 
-        # Current team members
+        # Current team members (using actual Slack usernames from workspace)
         team_members = [
             {
                 "name": "Aki Balogh",
-                "slack_username": "aki",
-                "slack_user_id": "U03Q9GD1M4G",
+                "slack_username": "akibalogh",
+                "slack_user_id": "U05FZBDQ4RJ",
                 "telegram_username": "akibalogh",
                 "email": "aki@bitsafe.finance",
                 "status": "active",
@@ -126,7 +126,7 @@ class Database:
             },
             {
                 "name": "Gabi Urrutia",
-                "slack_username": "gabi",
+                "slack_username": "gabitui",
                 "slack_user_id": "U04QGJC7MCU",
                 "telegram_username": None,
                 "email": "gabi@bitsafe.finance",
@@ -136,9 +136,9 @@ class Database:
             },
             {
                 "name": "Mayank Pandey",
-                "slack_username": "mayank",
+                "slack_username": "mojo_onchain",
                 "slack_user_id": "U04PBFZJJ9R",
-                "telegram_username": None,
+                "telegram_username": "mojo_onchain",
                 "email": "mayank@bitsafe.finance",
                 "status": "active",
                 "slack_required": True,
@@ -146,8 +146,8 @@ class Database:
             },
             {
                 "name": "Kadeem Clarke",
-                "slack_username": "kadeem",
-                "slack_user_id": "U0594H93LCF",
+                "slack_username": "kadeemclarke",
+                "slack_user_id": "U08JNLKMH60",
                 "telegram_username": None,
                 "email": "kadeem@bitsafe.finance",
                 "status": "active",
@@ -156,7 +156,7 @@ class Database:
             },
             {
                 "name": "Amy Wan",
-                "slack_username": "amy",
+                "slack_username": "NonFungibleAmy",
                 "slack_user_id": "U05J9GZJ70E",
                 "telegram_username": None,
                 "email": "amy@bitsafe.finance",
@@ -167,7 +167,7 @@ class Database:
             {
                 "name": "Kevin Huet",
                 "slack_username": "kevin",
-                "slack_user_id": "U081S4YJYFR",
+                "slack_user_id": "U09S1JLS6EN",
                 "telegram_username": None,
                 "email": "kevin@bitsafe.finance",
                 "status": "active",
@@ -177,7 +177,7 @@ class Database:
             {
                 "name": "Aliya Gordon",
                 "slack_username": "aliya",
-                "slack_user_id": "U085HV35D0D",
+                "slack_user_id": "U09RZH933NJ",
                 "telegram_username": None,
                 "email": "aliya@bitsafe.finance",
                 "status": "active",
@@ -196,8 +196,8 @@ class Database:
             },
             {
                 "name": "Dae Lee",
-                "slack_username": "dae",
-                "slack_user_id": "U05ULD7PRST",
+                "slack_username": "Dae_L",
+                "slack_user_id": "U09KR1HKMND",
                 "telegram_username": None,
                 "email": "dae@bitsafe.finance",
                 "status": "active",
