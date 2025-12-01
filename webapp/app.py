@@ -616,13 +616,21 @@ async def run_telegram_audit(api_id, api_hash, phone):
         
         # Import and run audit using scheduler's job function
         from scheduler import run_audit_job
-        telegram_session_state['message'] = 'Running full audit (Slack + Telegram)...'
+        telegram_session_state['message'] = 'Running full audit (Slack + Telegram)... This may take a few minutes...'
         
-        # Run audit job (handles Slack + Telegram and saves to DB)
-        run_audit_job(audit_id)
+        # Run audit job in background thread (handles Slack + Telegram and saves to DB)
+        def run_audit():
+            try:
+                run_audit_job(audit_id)
+                telegram_session_state['status'] = 'completed'
+                telegram_session_state['message'] = 'Audit completed successfully! Check the Audit History tab to see results.'
+            except Exception as e:
+                telegram_session_state['status'] = 'error'
+                telegram_session_state['error'] = f'Audit failed: {str(e)}'
         
-        telegram_session_state['status'] = 'completed'
-        telegram_session_state['message'] = 'Audit completed successfully! Check the Audit History tab to see results.'
+        thread = threading.Thread(target=run_audit)
+        thread.daemon = True
+        thread.start()
         
         await client.disconnect()
         
