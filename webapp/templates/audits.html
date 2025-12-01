@@ -129,9 +129,23 @@
             </p>
         </div>
         
+        <div id="telegram-password-input" style="display: none; margin-bottom: 20px;">
+            <label for="telegram-password" style="display: block; margin-bottom: 5px; font-weight: bold;">
+                Enter 2FA Password:
+            </label>
+            <input type="password" id="telegram-password" placeholder="Your 2FA password" 
+                   style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ddd; border-radius: 4px;">
+            <p style="color: #666; font-size: 14px; margin-top: 5px;">
+                Enter your Telegram 2FA password (cloud password)
+            </p>
+        </div>
+        
         <div style="display: flex; gap: 10px; justify-content: flex-end;">
-            <button id="telegram-submit-btn" onclick="submitTelegramCode()" class="btn btn-primary" style="display: none;">
+            <button id="telegram-submit-code-btn" onclick="submitTelegramCode()" class="btn btn-primary" style="display: none;">
                 Submit Code
+            </button>
+            <button id="telegram-submit-password-btn" onclick="submitTelegramPassword()" class="btn btn-primary" style="display: none;">
+                Submit Password
             </button>
             <button onclick="closeTelegramModal()" class="btn btn-secondary" id="telegram-close-btn">
                 Close
@@ -151,7 +165,9 @@ function startTelegramAudit() {
     document.getElementById('telegram-modal').style.display = 'flex';
     document.getElementById('telegram-message').textContent = 'Starting Telegram audit...';
     document.getElementById('telegram-code-input').style.display = 'none';
-    document.getElementById('telegram-submit-btn').style.display = 'none';
+    document.getElementById('telegram-password-input').style.display = 'none';
+    document.getElementById('telegram-submit-code-btn').style.display = 'none';
+    document.getElementById('telegram-submit-password-btn').style.display = 'none';
     
     // Start audit
     fetch('/api/audit/telegram/start', {
@@ -182,8 +198,19 @@ function pollTelegramStatus() {
         if (data.status === 'waiting_for_code') {
             // Show code input
             document.getElementById('telegram-code-input').style.display = 'block';
-            document.getElementById('telegram-submit-btn').style.display = 'inline-block';
+            document.getElementById('telegram-password-input').style.display = 'none';
+            document.getElementById('telegram-submit-code-btn').style.display = 'inline-block';
+            document.getElementById('telegram-submit-password-btn').style.display = 'none';
             document.getElementById('telegram-code').focus();
+        }
+        
+        if (data.status === 'waiting_for_password') {
+            // Show password input
+            document.getElementById('telegram-code-input').style.display = 'none';
+            document.getElementById('telegram-password-input').style.display = 'block';
+            document.getElementById('telegram-submit-code-btn').style.display = 'none';
+            document.getElementById('telegram-submit-password-btn').style.display = 'inline-block';
+            document.getElementById('telegram-password').focus();
         }
         
         if (data.status === 'completed') {
@@ -213,7 +240,7 @@ function submitTelegramCode() {
     
     document.getElementById('telegram-message').textContent = 'Submitting code...';
     document.getElementById('telegram-code-input').style.display = 'none';
-    document.getElementById('telegram-submit-btn').style.display = 'none';
+    document.getElementById('telegram-submit-code-btn').style.display = 'none';
     
     fetch('/api/audit/telegram/code', {
         method: 'POST',
@@ -225,7 +252,37 @@ function submitTelegramCode() {
         if (data.error) {
             document.getElementById('telegram-message').textContent = 'Error: ' + data.error;
             document.getElementById('telegram-code-input').style.display = 'block';
-            document.getElementById('telegram-submit-btn').style.display = 'inline-block';
+            document.getElementById('telegram-submit-code-btn').style.display = 'inline-block';
+        }
+    })
+    .catch(err => {
+        document.getElementById('telegram-message').textContent = 'Error: ' + err;
+    });
+}
+
+function submitTelegramPassword() {
+    const password = document.getElementById('telegram-password').value.trim();
+    
+    if (!password) {
+        alert('Please enter your 2FA password');
+        return;
+    }
+    
+    document.getElementById('telegram-message').textContent = 'Submitting password...';
+    document.getElementById('telegram-password-input').style.display = 'none';
+    document.getElementById('telegram-submit-password-btn').style.display = 'none';
+    
+    fetch('/api/audit/telegram/password', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({password: password})
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.error) {
+            document.getElementById('telegram-message').textContent = 'Error: ' + data.error;
+            document.getElementById('telegram-password-input').style.display = 'block';
+            document.getElementById('telegram-submit-password-btn').style.display = 'inline-block';
         }
     })
     .catch(err => {
@@ -240,13 +297,22 @@ function closeTelegramModal() {
     document.getElementById('telegram-modal').style.display = 'none';
 }
 
-// Allow Enter key to submit code
+// Allow Enter key to submit code/password
 document.addEventListener('DOMContentLoaded', function() {
     const codeInput = document.getElementById('telegram-code');
     if (codeInput) {
         codeInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 submitTelegramCode();
+            }
+        });
+    }
+    
+    const passwordInput = document.getElementById('telegram-password');
+    if (passwordInput) {
+        passwordInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                submitTelegramPassword();
             }
         });
     }

@@ -417,6 +417,28 @@ def api_submit_telegram_code():
     return jsonify({'success': True})
 
 
+@app.route('/api/audit/telegram/password', methods=['POST'])
+def api_submit_telegram_password():
+    """Submit 2FA password for Telegram authentication"""
+    global telegram_session_state
+    
+    if telegram_session_state['status'] != 'waiting_for_password':
+        return jsonify({'error': 'Not waiting for password'}), 400
+    
+    data = request.get_json()
+    password = data.get('password', '').strip()
+    
+    if not password:
+        return jsonify({'error': 'Password required'}), 400
+    
+    # Store password and trigger authentication
+    telegram_session_state['password'] = password
+    telegram_session_state['status'] = 'authenticating_password'
+    telegram_session_state['message'] = 'Authenticating with password...'
+    
+    return jsonify({'success': True})
+
+
 # Offboarding endpoint disabled - offboarding done via scripts only
 # @app.route('/api/offboard', methods=['POST'])
 # def api_start_offboarding():
@@ -529,15 +551,42 @@ async def run_telegram_audit(api_id, api_hash, phone):
                         telegram_session_state['message'] = 'Authenticated! Running audit...'
                         break
                     except SessionPasswordNeededError:
-                        telegram_session_state['status'] = 'error'
-                        telegram_session_state['error'] = '2FA password required (not yet supported)'
-                        await client.disconnect()
-                        return
+                        # 2FA password is required
+                        telegram_session_state['status'] = 'waiting_for_password'
+                        telegram_session_state['message'] = 'Enter your 2FA password'
+                        telegram_session_state['client'] = client
+                        break
                     except Exception as e:
                         telegram_session_state['status'] = 'error'
                         telegram_session_state['error'] = f'Invalid code: {str(e)}'
                         await client.disconnect()
                         return
+            
+            # Check if we need password (2FA)
+            if telegram_session_state['status'] == 'waiting_for_password':
+                # Wait for password (poll for up to 5 minutes)
+                for _ in range(300):
+                    await asyncio.sleep(1)
+                    
+                    if telegram_session_state['status'] == 'authenticating_password':
+                        # Password was submitted
+                        password = telegram_session_state.get('password', '')
+                        try:
+                            await client.sign_in(password=password)
+                            telegram_session_state['status'] = 'running'
+                            telegram_session_state['message'] = 'Authenticated! Running audit...'
+                            break
+                        except Exception as e:
+                            telegram_session_state['status'] = 'error'
+                            telegram_session_state['error'] = f'Invalid password: {str(e)}'
+                            await client.disconnect()
+                            return
+                
+                if telegram_session_state['status'] != 'running':
+                    telegram_session_state['status'] = 'error'
+                    telegram_session_state['error'] = 'Timeout waiting for password'
+                    await client.disconnect()
+                    return
             
             if telegram_session_state['status'] != 'running':
                 telegram_session_state['status'] = 'error'
