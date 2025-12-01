@@ -200,8 +200,8 @@ class Database:
                 "slack_user_id": "U05ULD7PRST",
                 "telegram_username": None,
                 "email": "dae@bitsafe.finance",
-                "status": "optional",
-                "slack_required": False,
+                "status": "active",
+                "slack_required": True,
                 "telegram_required": False,
             },
         ]
