@@ -3,9 +3,11 @@
 {% block title %}Employees - Customer Group Admin{% endblock %}
 
 {% block content %}
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+<div style="margin-bottom: 20px;">
     <h2>Team Members</h2>
-    <a href="/employees/add" class="btn btn-primary">+ Add Employee</a>
+    <p style="color: #666; margin-top: 10px;">
+        ℹ️ This is a read-only view. Use command-line scripts to manage employees.
+    </p>
 </div>
 
 <div class="card">
@@ -60,14 +62,9 @@
                     {% if not employee.slack_required and not employee.telegram_required %}-{% endif %}
                 </td>
                 <td>
-                    <div style="display: flex; gap: 5px;">
-                        <a href="/employees/{{ employee.id }}/edit" class="btn btn-secondary" style="padding: 5px 10px; font-size: 12px;">Edit</a>
-                        {% if employee.status == 'active' %}
-                        <button onclick="toggleStatus({{ employee.id }}, 'inactive')" class="btn btn-danger" style="padding: 5px 10px; font-size: 12px;">Deactivate</button>
-                        {% elif employee.status == 'inactive' %}
-                        <button onclick="toggleStatus({{ employee.id }}, 'active')" class="btn btn-success" style="padding: 5px 10px; font-size: 12px;">Activate</button>
-                        {% endif %}
-                    </div>
+                    <!-- Edit and status change buttons hidden - webapp is read-only -->
+                    <!-- Use command-line scripts to manage employees -->
+                    -
                 </td>
             </tr>
             {% endfor %}
@@ -75,28 +72,5 @@
     </table>
 </div>
 
-{% endblock %}
-
-{% block extra_js %}
-<script>
-function toggleStatus(employeeId, newStatus) {
-    if (!confirm(`Change employee status to ${newStatus}?`)) {
-        return;
-    }
-    
-    fetch(`/api/employees/${employeeId}/status`, {
-        method: 'PATCH',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({status: newStatus})
-    })
-    .then(res => res.json())
-    .then(data => {
-        location.reload();
-    })
-    .catch(err => {
-        alert('Error updating status: ' + err);
-    });
-}
-</script>
 {% endblock %}
 
