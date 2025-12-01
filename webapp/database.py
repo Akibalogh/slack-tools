@@ -116,7 +116,7 @@ class Database:
         team_members = [
             {
                 "name": "Aki Balogh",
-                "slack_username": "akibalogh",
+                "slack_username": "aki",
                 "slack_user_id": "U05FZBDQ4RJ",
                 "telegram_username": "akibalogh",
                 "email": "aki@bitsafe.finance",
@@ -126,7 +126,7 @@ class Database:
             },
             {
                 "name": "Gabi Tuinaite",
-                "slack_username": "gabitui",
+                "slack_username": "gabi",
                 "slack_user_id": "U04QGJC7MCU",
                 "telegram_username": None,
                 "email": "gabi@bitsafe.finance",
@@ -136,7 +136,7 @@ class Database:
             },
             {
                 "name": "Mayank Pandey",
-                "slack_username": "mojo_onchain",
+                "slack_username": "mayank",
                 "slack_user_id": "U04PBFZJJ9R",
                 "telegram_username": "mojo_onchain",
                 "email": "mayank@bitsafe.finance",
@@ -146,7 +146,7 @@ class Database:
             },
             {
                 "name": "Kadeem Clarke",
-                "slack_username": "kadeemclarke",
+                "slack_username": "kadeem",
                 "slack_user_id": "U08JNLKMH60",
                 "telegram_username": None,
                 "email": "kadeem@bitsafe.finance",
@@ -156,7 +156,7 @@ class Database:
             },
             {
                 "name": "Amy Wan",
-                "slack_username": "NonFungibleAmy",
+                "slack_username": "amy",
                 "slack_user_id": "U05J9GZJ70E",
                 "telegram_username": None,
                 "email": "amy@bitsafe.finance",
@@ -196,7 +196,7 @@ class Database:
             },
             {
                 "name": "Dae Lee",
-                "slack_username": "Dae_L",
+                "slack_username": "dae",
                 "slack_user_id": "U09KR1HKMND",
                 "telegram_username": None,
                 "email": "dae@bitsafe.finance",

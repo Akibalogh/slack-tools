@@ -35,7 +35,7 @@
                 <td>{{ employee.email or '-' }}</td>
                 <td>
                     {% if employee.slack_username %}
-                        @{{ employee.slack_username }}
+                        {{ employee.name }}
                     {% else %}
                         -
                     {% endif %}
