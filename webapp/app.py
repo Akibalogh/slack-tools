@@ -9,12 +9,25 @@ from datetime import datetime
 from pathlib import Path
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 from database import Database
+import threading
+import asyncio
+from telethon import TelegramClient
+from telethon.errors import SessionPasswordNeededError
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY', 'dev-secret-key-change-in-production')
 
 # Initialize database
 db = Database()
+
+# Telegram audit session state (in-memory)
+telegram_session_state = {
+    'status': 'idle',  # idle, waiting_for_code, authenticating, running, completed, error
+    'message': '',
+    'phone_code_hash': None,
+    'client': None,
+    'error': None
+}
 
 # Auto-seed database if empty (for Heroku ephemeral filesystem)
 def ensure_data_seeded():
@@ -346,6 +359,64 @@ def api_latest_audit():
     return jsonify(result)
 
 
+@app.route('/api/audit/telegram/start', methods=['POST'])
+def api_start_telegram_audit():
+    """Start Telegram audit - requests 2FA code"""
+    global telegram_session_state
+    
+    # Check if already running
+    if telegram_session_state['status'] in ['waiting_for_code', 'authenticating', 'running']:
+        return jsonify({'error': 'Telegram audit already in progress'}), 400
+    
+    # Reset state
+    telegram_session_state = {
+        'status': 'requesting_code',
+        'message': 'Requesting authentication code from Telegram...',
+        'phone_code_hash': None,
+        'client': None,
+        'error': None
+    }
+    
+    # Start authentication in background thread
+    thread = threading.Thread(target=start_telegram_auth)
+    thread.daemon = True
+    thread.start()
+    
+    return jsonify({'success': True, 'status': 'requesting_code'})
+
+
+@app.route('/api/audit/telegram/status', methods=['GET'])
+def api_telegram_audit_status():
+    """Check Telegram audit status"""
+    return jsonify({
+        'status': telegram_session_state['status'],
+        'message': telegram_session_state['message'],
+        'error': telegram_session_state['error']
+    })
+
+
+@app.route('/api/audit/telegram/code', methods=['POST'])
+def api_submit_telegram_code():
+    """Submit 2FA code for Telegram authentication"""
+    global telegram_session_state
+    
+    if telegram_session_state['status'] != 'waiting_for_code':
+        return jsonify({'error': 'Not waiting for code'}), 400
+    
+    data = request.get_json()
+    code = data.get('code', '').strip()
+    
+    if not code:
+        return jsonify({'error': 'Code required'}), 400
+    
+    # Store code and trigger authentication
+    telegram_session_state['code'] = code
+    telegram_session_state['status'] = 'authenticating'
+    telegram_session_state['message'] = 'Authenticating with code...'
+    
+    return jsonify({'success': True})
+
+
 # Offboarding endpoint disabled - offboarding done via scripts only
 # @app.route('/api/offboard', methods=['POST'])
 # def api_start_offboarding():
@@ -395,6 +466,113 @@ def api_offboarding_status(task_id):
     if task:
         return jsonify(dict(task))
     return jsonify({'error': 'Task not found'}), 404
+
+
+# ============================================================================
+# Telegram Audit Helper Functions
+# ============================================================================
+
+def start_telegram_auth():
+    """Start Telegram authentication process (runs in background thread)"""
+    global telegram_session_state
+    
+    try:
+        # Get Telegram credentials from environment
+        api_id = int(os.getenv('TELEGRAM_API_ID', '0'))
+        api_hash = os.getenv('TELEGRAM_API_HASH', '')
+        phone = os.getenv('TELEGRAM_PHONE', '')
+        
+        if not api_id or not api_hash or not phone:
+            telegram_session_state['status'] = 'error'
+            telegram_session_state['error'] = 'Telegram credentials not configured'
+            return
+        
+        # Run async authentication
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        loop.run_until_complete(run_telegram_audit(api_id, api_hash, phone))
+        loop.close()
+        
+    except Exception as e:
+        telegram_session_state['status'] = 'error'
+        telegram_session_state['error'] = str(e)
+        print(f"❌ Telegram audit error: {e}")
+
+
+async def run_telegram_audit(api_id, api_hash, phone):
+    """Run Telegram audit with interactive code input"""
+    global telegram_session_state
+    
+    try:
+        # Create Telegram client
+        client = TelegramClient('telegram_session_webapp', api_id, api_hash)
+        await client.connect()
+        
+        # Check if already authorized
+        if not await client.is_user_authorized():
+            # Request code
+            await client.send_code_request(phone)
+            telegram_session_state['status'] = 'waiting_for_code'
+            telegram_session_state['message'] = f'Enter the code sent to {phone}'
+            telegram_session_state['client'] = client
+            
+            # Wait for code (poll every second for up to 5 minutes)
+            for _ in range(300):
+                await asyncio.sleep(1)
+                
+                if telegram_session_state['status'] == 'authenticating':
+                    # Code was submitted
+                    code = telegram_session_state.get('code', '')
+                    try:
+                        await client.sign_in(phone, code)
+                        telegram_session_state['status'] = 'running'
+                        telegram_session_state['message'] = 'Authenticated! Running audit...'
+                        break
+                    except SessionPasswordNeededError:
+                        telegram_session_state['status'] = 'error'
+                        telegram_session_state['error'] = '2FA password required (not yet supported)'
+                        await client.disconnect()
+                        return
+                    except Exception as e:
+                        telegram_session_state['status'] = 'error'
+                        telegram_session_state['error'] = f'Invalid code: {str(e)}'
+                        await client.disconnect()
+                        return
+            
+            if telegram_session_state['status'] != 'running':
+                telegram_session_state['status'] = 'error'
+                telegram_session_state['error'] = 'Timeout waiting for code'
+                await client.disconnect()
+                return
+        else:
+            # Already authorized
+            telegram_session_state['status'] = 'running'
+            telegram_session_state['message'] = 'Already authenticated! Running audit...'
+        
+        # Run the actual audit
+        telegram_session_state['message'] = 'Auditing Telegram groups...'
+        
+        # Call the audit script
+        result = subprocess.run(
+            ['python3', 'scripts/customer_group_audit.py'],
+            capture_output=True,
+            text=True,
+            cwd=str(Path(__file__).parent.parent)
+        )
+        
+        if result.returncode == 0:
+            telegram_session_state['status'] = 'completed'
+            telegram_session_state['message'] = 'Telegram audit completed successfully!'
+        else:
+            telegram_session_state['status'] = 'error'
+            telegram_session_state['error'] = f'Audit failed: {result.stderr}'
+        
+        await client.disconnect()
+        
+    except Exception as e:
+        telegram_session_state['status'] = 'error'
+        telegram_session_state['error'] = str(e)
+        print(f"❌ Telegram audit error: {e}")
 
 
 # ============================================================================

@@ -3,11 +3,16 @@
 {% block title %}Audits - Customer Group Admin{% endblock %}
 
 {% block content %}
-<div style="margin-bottom: 20px;">
-    <h2>Audit History</h2>
-    <p style="color: #666; margin-top: 10px;">
-        ℹ️ Audits run automatically daily at 2:00 AM UTC via Heroku Scheduler
-    </p>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+    <div>
+        <h2>Audit History</h2>
+        <p style="color: #666; margin-top: 10px;">
+            ℹ️ Slack audits run automatically daily at 2:00 AM UTC via Heroku Scheduler
+        </p>
+    </div>
+    <button onclick="startTelegramAudit()" class="btn btn-primary" style="white-space: nowrap;">
+        ✈️ Run Telegram Audit
+    </button>
 </div>
 
 {% if findings %}
@@ -103,5 +108,149 @@
     {% endif %}
 </div>
 
+<!-- Telegram Audit Modal -->
+<div id="telegram-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center;">
+    <div class="card" style="max-width: 500px; margin: 20px;">
+        <h3 style="margin-bottom: 15px;">Telegram Audit</h3>
+        
+        <div id="telegram-status" style="margin-bottom: 20px;">
+            <p id="telegram-message">Starting...</p>
+        </div>
+        
+        <div id="telegram-code-input" style="display: none; margin-bottom: 20px;">
+            <label for="telegram-code" style="display: block; margin-bottom: 5px; font-weight: bold;">
+                Enter 2FA Code:
+            </label>
+            <input type="text" id="telegram-code" placeholder="12345" 
+                   style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ddd; border-radius: 4px;" 
+                   maxlength="6">
+            <p style="color: #666; font-size: 14px; margin-top: 5px;">
+                Enter the code sent to your Telegram app
+            </p>
+        </div>
+        
+        <div style="display: flex; gap: 10px; justify-content: flex-end;">
+            <button id="telegram-submit-btn" onclick="submitTelegramCode()" class="btn btn-primary" style="display: none;">
+                Submit Code
+            </button>
+            <button onclick="closeTelegramModal()" class="btn btn-secondary" id="telegram-close-btn">
+                Close
+            </button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+let telegramPollInterval = null;
+
+function startTelegramAudit() {
+    // Show modal
+    document.getElementById('telegram-modal').style.display = 'flex';
+    document.getElementById('telegram-message').textContent = 'Starting Telegram audit...';
+    document.getElementById('telegram-code-input').style.display = 'none';
+    document.getElementById('telegram-submit-btn').style.display = 'none';
+    
+    // Start audit
+    fetch('/api/audit/telegram/start', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'}
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.error) {
+            document.getElementById('telegram-message').textContent = 'Error: ' + data.error;
+            return;
+        }
+        
+        // Start polling for status
+        telegramPollInterval = setInterval(pollTelegramStatus, 2000);
+    })
+    .catch(err => {
+        document.getElementById('telegram-message').textContent = 'Error: ' + err;
+    });
+}
+
+function pollTelegramStatus() {
+    fetch('/api/audit/telegram/status')
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById('telegram-message').textContent = data.message || data.status;
+        
+        if (data.status === 'waiting_for_code') {
+            // Show code input
+            document.getElementById('telegram-code-input').style.display = 'block';
+            document.getElementById('telegram-submit-btn').style.display = 'inline-block';
+            document.getElementById('telegram-code').focus();
+        }
+        
+        if (data.status === 'completed') {
+            clearInterval(telegramPollInterval);
+            document.getElementById('telegram-close-btn').textContent = 'Refresh Page';
+            document.getElementById('telegram-close-btn').onclick = () => location.reload();
+        }
+        
+        if (data.status === 'error') {
+            clearInterval(telegramPollInterval);
+            document.getElementById('telegram-message').textContent = 'Error: ' + (data.error || 'Unknown error');
+        }
+    })
+    .catch(err => {
+        clearInterval(telegramPollInterval);
+        document.getElementById('telegram-message').textContent = 'Error checking status: ' + err;
+    });
+}
+
+function submitTelegramCode() {
+    const code = document.getElementById('telegram-code').value.trim();
+    
+    if (!code) {
+        alert('Please enter the code');
+        return;
+    }
+    
+    document.getElementById('telegram-message').textContent = 'Submitting code...';
+    document.getElementById('telegram-code-input').style.display = 'none';
+    document.getElementById('telegram-submit-btn').style.display = 'none';
+    
+    fetch('/api/audit/telegram/code', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({code: code})
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.error) {
+            document.getElementById('telegram-message').textContent = 'Error: ' + data.error;
+            document.getElementById('telegram-code-input').style.display = 'block';
+            document.getElementById('telegram-submit-btn').style.display = 'inline-block';
+        }
+    })
+    .catch(err => {
+        document.getElementById('telegram-message').textContent = 'Error: ' + err;
+    });
+}
+
+function closeTelegramModal() {
+    if (telegramPollInterval) {
+        clearInterval(telegramPollInterval);
+    }
+    document.getElementById('telegram-modal').style.display = 'none';
+}
+
+// Allow Enter key to submit code
+document.addEventListener('DOMContentLoaded', function() {
+    const codeInput = document.getElementById('telegram-code');
+    if (codeInput) {
+        codeInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                submitTelegramCode();
+            }
+        });
+    }
+});
+</script>
 {% endblock %}
 
