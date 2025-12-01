@@ -1,7 +1,15 @@
 # Admin Panel Design - Customer Group Access Management
 
 ## Overview
-Web application for managing team member access to customer Slack channels and Telegram groups, with automated daily audits and offboarding capabilities.
+Web application for **viewing** team member access to customer Slack channels and Telegram groups, with automated daily audits. This is a **read-only reporting interface** - all write operations (employee management, manual audits, offboarding) are handled via command-line scripts.
+
+## Current Status (v1.4.1)
+The webapp is deployed as a **read-only dashboard**:
+- ✅ **View** employees, audits, and reports
+- ❌ No manual audit triggers (audits run via Heroku Scheduler at 2:00 AM UTC daily)
+- ❌ No employee editing/status changes (managed via scripts/database)
+- ❌ No offboarding triggers (done via command-line scripts)
+- ❌ Offboarding tab hidden to avoid alarming employees
 
 ## Architecture
 
@@ -75,90 +83,98 @@ CREATE TABLE offboarding_tasks (
 );
 ```
 
-## Features
+## Features (Current Implementation)
 
-### 1. Employee Management
-- **List View**: All employees with status badges
-- **Add/Edit**: Form to manage employee details
-- **Status Toggle**: Quick toggle between active/inactive/optional
-- **Bulk Actions**: Set multiple employees to inactive at once
+### 1. Employee Management (Read-Only)
+- ✅ **List View**: All employees with status badges
+- ❌ **Add/Edit**: Removed - use command-line scripts
+- ❌ **Status Toggle**: Removed - update via database directly
+- ❌ **Bulk Actions**: Removed - managed via scripts
 
-### 2. Audit Dashboard
-- **Current Status**: Live view of latest audit results
-- **Run Manual Audit**: Trigger immediate audit
-- **Audit History**: Past audit runs with drill-down
-- **Incomplete Channels**: List of channels missing members
-- **Quick Fix**: One-click to add missing members
+**Note**: Employee data is seeded from `webapp/database.py`. To modify employees, edit the seed data and redeploy.
 
-### 3. Offboarding Center
-- **Inactive Employees**: List of employees marked inactive
-- **Trigger Offboarding**: Start removal process
-- **Progress Tracking**: Real-time status of offboarding
-- **History**: Past offboarding tasks with logs
+### 2. Audit Dashboard (Read-Only)
+- ✅ **Current Status**: Live view of latest audit results
+- ❌ **Run Manual Audit**: Removed - audits run via Heroku Scheduler
+- ✅ **Audit History**: Past audit runs with drill-down
+- ✅ **Incomplete Channels**: List of channels missing members
+- ❌ **Quick Fix**: Removed - remediation done via scripts
+
+**Note**: Audits run automatically daily at 2:00 AM UTC via Heroku Scheduler job: `cd scripts && python3 customer_group_audit.py`
+
+### 3. Offboarding Center (Hidden)
+- ❌ **Tab Removed**: Hidden from navigation to avoid alarming employees
+- ❌ **Trigger Offboarding**: Use command-line scripts instead
+- ✅ **History**: Still accessible at `/offboarding` URL (view-only)
+
+**Rationale**: Offboarding tab removed to prevent employees from seeing who is being offboarded. Actual offboarding is triggered via:
+- Slack: `scripts/slack_admin.py` (or manual via Slack admin console)
+- Telegram: `scripts/telegram_user_delete.py`
 
 ### 4. Scheduled Jobs
-- **Daily Audit**: Runs at 2 AM daily
-- **Weekly Report**: Email summary every Monday
-- **Auto-remediation** (optional): Automatically add missing members
+- ✅ **Daily Audit**: Runs at 2:00 AM UTC via Heroku Scheduler
+- ❌ **Weekly Report**: Not implemented
+- ❌ **Auto-remediation**: Not implemented - manual remediation via scripts
 
-## API Endpoints
+## API Endpoints (Current Implementation)
 
 ### Employee Management
-- `GET /api/employees` - List all employees
-- `POST /api/employees` - Create new employee
-- `PUT /api/employees/<id>` - Update employee
-- `DELETE /api/employees/<id>` - Delete employee
-- `PATCH /api/employees/<id>/status` - Update status
+- ✅ `GET /api/employees` - List all employees
+- ❌ `POST /api/employees` - **DISABLED**
+- ❌ `PUT /api/employees/<id>` - **DISABLED**
+- ❌ `DELETE /api/employees/<id>` - **DISABLED**
+- ❌ `PATCH /api/employees/<id>/status` - **DISABLED** (commented out in code)
 
 ### Audit Operations
-- `POST /api/audit/run` - Trigger manual audit
-- `GET /api/audit/latest` - Get latest audit results
-- `GET /api/audit/history` - Get audit history
-- `GET /api/audit/<id>` - Get specific audit details
-- `POST /api/audit/<id>/remediate` - Fix incomplete channels
+- ❌ `POST /api/audit/run` - **DISABLED** (commented out in code)
+- ✅ `GET /api/audit/latest` - Get latest audit results
+- ✅ `GET /api/audit/history` - Get audit history (via `/audits` page)
+- ✅ `GET /api/audit/<id>` - Get specific audit details (via `/audits/<id>` page)
+- ❌ `POST /api/audit/<id>/remediate` - **DISABLED**
 
 ### Offboarding
-- `POST /api/offboard` - Start offboarding process
-- `GET /api/offboard/status/<id>` - Get offboarding status
-- `GET /api/offboard/history` - Get offboarding history
+- ❌ `POST /api/offboard` - **DISABLED** (commented out in code)
+- ✅ `GET /api/offboard/status/<id>` - Get offboarding status (read-only)
+- ✅ `GET /api/offboard/history` - Get offboarding history (via `/offboarding` page)
 
 ### Scheduler
-- `GET /api/scheduler/status` - Scheduler status
-- `POST /api/scheduler/pause` - Pause scheduled jobs
-- `POST /api/scheduler/resume` - Resume scheduled jobs
+- ❌ Not implemented - scheduler runs via Heroku Scheduler add-on
 
-## UI Pages
+## UI Pages (Current Implementation)
 
 ### 1. Dashboard (`/`)
-- Quick stats (total employees, active, inactive)
-- Latest audit summary
-- Recent offboarding tasks
-- Quick actions (Run Audit, View Reports)
+- ✅ Quick stats (total employees, active, inactive)
+- ✅ Latest audit summary
+- ❌ Recent offboarding tasks - Removed
+- ❌ Quick actions - Removed (except view-only links)
+- ℹ️ Shows message: "Audits run automatically daily at 2:00 AM UTC via Heroku Scheduler"
 
 ### 2. Employees (`/employees`)
-- Sortable/filterable table
-- Status badges (🟢 Active, 🔴 Inactive, 🟡 Optional)
-- Quick actions (Edit, Toggle Status, Offboard)
-- Add new employee button
+- ✅ Sortable/filterable table (by status: All, Active, Inactive, Optional)
+- ✅ Status badges (🟢 Active, 🔴 Inactive, 🟡 Optional)
+- ❌ Quick actions - **Removed** (no Edit, Toggle Status, Offboard buttons)
+- ❌ Add new employee button - **Removed**
+- ❌ Actions column - **Removed entirely**
+- ℹ️ Shows message: "This is a read-only view. Use command-line scripts to manage employees."
 
 ### 3. Audits (`/audits`)
-- Audit history table
-- Latest audit detailed view
-- Incomplete channels list
-- Manual audit trigger button
-- Remediation actions
+- ✅ Audit history table
+- ✅ Latest audit detailed view
+- ✅ Incomplete channels list
+- ❌ Manual audit trigger button - **Removed**
+- ❌ Remediation actions - **Removed**
+- ℹ️ Shows message: "Audits run automatically daily at 2:00 AM UTC via Heroku Scheduler"
 
 ### 4. Offboarding (`/offboarding`)
-- Pending offboarding tasks
-- Active offboarding progress
-- Completed offboarding history
-- Bulk offboard inactive employees
+- ❌ **Tab Hidden** - Removed from navigation
+- ✅ Still accessible via direct URL `/offboarding` (view-only)
+- ✅ Shows offboarding history
+- ❌ All action buttons removed
+
+**Rationale**: Tab removed from navigation to avoid alarming employees who might see it.
 
 ### 5. Settings (`/settings`)
-- Scheduler configuration
-- Notification settings
-- Platform credentials check
-- Export/import employee list
+- ❌ Not implemented
 
 ## Security
 - Environment variables for API keys
