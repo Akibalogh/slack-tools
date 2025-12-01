@@ -188,7 +188,7 @@ class Database:
                 "name": "Dave Shin",
                 "slack_username": "dave",
                 "slack_user_id": "U0997HN7KPE",
-                "telegram_username": None,
+                "telegram_username": "shin_novation",
                 "email": "dave@bitsafe.finance",
                 "status": "active",
                 "slack_required": True,
