@@ -43,9 +43,15 @@ if not SLACK_TOKEN:
     print("❌ SLACK_USER_TOKEN not found in .env file")
     exit(1)
 
-# Telegram configuration
-TELEGRAM_API_ID = int(os.getenv("TELEGRAM_API_ID"))
-TELEGRAM_API_HASH = os.getenv("TELEGRAM_API_HASH")
+# Telegram configuration (optional - script will skip Telegram audit if not provided)
+try:
+    TELEGRAM_API_ID = int(os.getenv("TELEGRAM_API_ID", "0"))
+    TELEGRAM_API_HASH = os.getenv("TELEGRAM_API_HASH", "")
+    TELEGRAM_ENABLED = TELEGRAM_API_ID > 0 and TELEGRAM_API_HASH
+except (ValueError, TypeError):
+    TELEGRAM_API_ID = 0
+    TELEGRAM_API_HASH = ""
+    TELEGRAM_ENABLED = False
 
 # Team members for SLACK (all should be in Slack channels)
 REQUIRED_SLACK_MEMBERS = {
@@ -527,8 +533,11 @@ async def main():
     # Step 2: Audit Slack channels
     await auditor.audit_slack_channels()
     
-    # Step 3: Audit Telegram groups
-    await auditor.audit_telegram_groups()
+    # Step 3: Audit Telegram groups (optional)
+    if TELEGRAM_ENABLED:
+        await auditor.audit_telegram_groups()
+    else:
+        print("\n⚠️  Telegram audit skipped (credentials not configured)")
     
     # Step 4: Generate report
     auditor.generate_report()
