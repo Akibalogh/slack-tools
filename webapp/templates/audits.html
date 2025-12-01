@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}Audits - Customer Group Admin{% endblock %}
+
+{% block content %}
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+    <h2>Audit History</h2>
+    <button onclick="runAudit()" class="btn btn-primary">▶ Run Manual Audit</button>
+</div>
+
+{% if findings %}
+<div class="card">
+    <h3 style="margin-bottom: 15px;">⚠️ Latest Audit - Incomplete Channels</h3>
+    <p style="color: #666; margin-bottom: 15px;">
+        These channels are missing required team members.
+    </p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Platform</th>
+                <th>Channel</th>
+                <th>Missing Members</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for finding in findings %}
+            <tr>
+                <td>
+                    {% if finding.platform == 'slack' %}
+                        💬 Slack
+                    {% else %}
+                        ✈️ Telegram
+                    {% endif %}
+                </td>
+                <td><strong>{{ finding.channel_name }}</strong></td>
+                <td>{{ finding.missing_members }}</td>
+                <td><span class="badge badge-warning">{{ finding.status }}</span></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+
+<div class="card">
+    <h3 style="margin-bottom: 15px;">Audit Runs</h3>
+    
+    {% if audit_history %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Started</th>
+                <th>Completed</th>
+                <th>Slack Coverage</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for audit in audit_history %}
+            <tr>
+                <td>{{ audit.id }}</td>
+                <td>
+                    {% if audit.run_type == 'manual' %}
+                        👤 Manual
+                    {% else %}
+                        ⏰ Scheduled
+                    {% endif %}
+                </td>
+                <td>
+                    <span class="badge badge-{{ audit.status }}">
+                        {% if audit.status == 'running' %}⏳{% elif audit.status == 'completed' %}✅{% else %}❌{% endif %}
+                        {{ audit.status }}
+                    </span>
+                </td>
+                <td>{{ audit.started_at }}</td>
+                <td>{{ audit.completed_at or '-' }}</td>
+                <td>
+                    {% if audit.slack_channels_total %}
+                        {{ audit.slack_channels_complete or 0 }}/{{ audit.slack_channels_total }}
+                        ({{ ((audit.slack_channels_complete or 0) * 100 / audit.slack_channels_total) | round(1) }}%)
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="/audits/{{ audit.id }}" class="btn btn-secondary" style="padding: 5px 10px; font-size: 12px;">
+                        View Details
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p style="color: #666;">No audits yet. Run your first audit to check customer group membership.</p>
+    <button onclick="runAudit()" class="btn btn-primary">Run First Audit</button>
+    {% endif %}
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function runAudit() {
+    if (!confirm('Start a manual audit? This will check all customer groups.')) {
+        return;
+    }
+    
+    const btn = event.target;
+    btn.disabled = true;
+    btn.textContent = '⏳ Running...';
+    
+    fetch('/api/audit/run', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'}
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert('Audit started! This will take a few minutes. Refresh the page to see progress.');
+        setTimeout(() => location.reload(), 2000);
+    })
+    .catch(err => {
+        alert('Error starting audit: ' + err);
+        btn.disabled = false;
+        btn.textContent = '▶ Run Manual Audit';
+    });
+}
+</script>
+{% endblock %}
+

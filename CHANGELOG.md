@@ -5,6 +5,19 @@ All notable changes to the Slack Tools project will be documented in this file.
 ## [Unreleased]
 
 ### Added
+- **Admin Panel Web Application**: NEW! Complete web-based admin panel for managing team member access to customer groups
+  - Employee management with status tracking (active/inactive/optional)
+  - Automated daily audits (scheduled at 2:00 AM)
+  - Manual audit triggers with real-time results
+  - One-click offboarding for Slack and Telegram
+  - Audit history tracking and drill-down capabilities
+  - REST API for programmatic access
+  - SQLite database with 4 tables (employees, audit_runs, audit_findings, offboarding_tasks)
+  - Integration with existing `customer_group_audit.py` and `telegram_user_delete.py` scripts
+  - Professional, responsive UI with modern design
+  - Background scheduler using APScheduler
+  - Documentation: `webapp/README.md`, `docs/Admin_Panel_Design.md`, `docs/Admin_Panel_Implementation_Summary.md`
+  - Production-ready with Heroku deployment support (Procfile included)
 - **Slack User Offboarding Script**: NEW! Complete user deletion workflow script (`scripts/slack_user_delete.py`)
   - Deactivates user account via SCIM API
   - Resets all active sessions

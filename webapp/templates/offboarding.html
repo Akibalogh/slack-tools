@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %}Offboarding - Customer Group Admin{% endblock %}
+
+{% block content %}
+<h2 style="margin-bottom: 20px;">Offboarding Center</h2>
+
+{% if inactive_employees %}
+<div class="card">
+    <h3 style="margin-bottom: 15px;">⚠️ Inactive Employees</h3>
+    <p style="color: #666; margin-bottom: 15px;">
+        These employees are marked as inactive. Click "Start Offboarding" to remove them from customer groups.
+    </p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Slack</th>
+                <th>Telegram</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in inactive_employees %}
+            <tr>
+                <td><strong>{{ employee.name }}</strong></td>
+                <td>{{ '@' + employee.slack_username if employee.slack_username else '-' }}</td>
+                <td>{{ '@' + employee.telegram_username if employee.telegram_username else '-' }}</td>
+                <td>
+                    <div style="display: flex; gap: 5px;">
+                        {% if employee.slack_username %}
+                        <button onclick="startOffboarding({{ employee.id }}, 'slack', '{{ employee.name }}')" 
+                                class="btn btn-danger" style="padding: 5px 10px; font-size: 12px;">
+                            Remove from Slack
+                        </button>
+                        {% endif %}
+                        {% if employee.telegram_username %}
+                        <button onclick="startOffboarding({{ employee.id }}, 'telegram', '{{ employee.name }}')" 
+                                class="btn btn-danger" style="padding: 5px 10px; font-size: 12px;">
+                            Remove from Telegram
+                        </button>
+                        {% endif %}
+                        {% if employee.slack_username and employee.telegram_username %}
+                        <button onclick="startOffboarding({{ employee.id }}, 'both', '{{ employee.name }}')" 
+                                class="btn btn-danger" style="padding: 5px 10px; font-size: 12px;">
+                            Remove from Both
+                        </button>
+                        {% endif %}
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% else %}
+<div class="card">
+    <h3 style="margin-bottom: 15px;">✅ No Inactive Employees</h3>
+    <p style="color: #666;">All employees are currently active or optional.</p>
+</div>
+{% endif %}
+
+<div class="card">
+    <h3 style="margin-bottom: 15px;">Offboarding History</h3>
+    
+    {% if tasks %}
+    <table>
+        <thead>
+            <tr>
+                <th>Employee</th>
+                <th>Platform</th>
+                <th>Status</th>
+                <th>Started</th>
+                <th>Completed</th>
+                <th>Groups Processed</th>
+                <th>Success Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+            <tr>
+                <td><strong>{{ task.employee_name }}</strong></td>
+                <td>{{ task.platform }}</td>
+                <td>
+                    <span class="badge badge-{{ task.status }}">
+                        {% if task.status == 'running' %}⏳{% elif task.status == 'completed' %}✅{% elif task.status == 'failed' %}❌{% else %}⏸️{% endif %}
+                        {{ task.status }}
+                    </span>
+                </td>
+                <td>{{ task.started_at or '-' }}</td>
+                <td>{{ task.completed_at or '-' }}</td>
+                <td>{{ task.groups_processed or 0 }}</td>
+                <td>
+                    {% if task.groups_processed %}
+                        {{ task.groups_removed or 0 }}/{{ task.groups_processed }}
+                        ({{ ((task.groups_removed or 0) * 100 / task.groups_processed) | round(1) }}%)
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p style="color: #666;">No offboarding tasks yet.</p>
+    {% endif %}
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function startOffboarding(employeeId, platform, employeeName) {
+    const platformText = platform === 'both' ? 'Slack and Telegram' : platform;
+    
+    if (!confirm(`Start offboarding ${employeeName} from ${platformText}?\n\nThis will remove them from all customer groups.`)) {
+        return;
+    }
+    
+    const btn = event.target;
+    btn.disabled = true;
+    btn.textContent = '⏳ Starting...';
+    
+    fetch('/api/offboard', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            employee_id: employeeId,
+            platform: platform
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert(`Offboarding started for ${employeeName}!\n\nTask ID: ${data.task_id}\n\nThis will run in the background. Check back in a few minutes.`);
+        setTimeout(() => location.reload(), 2000);
+    })
+    .catch(err => {
+        alert('Error starting offboarding: ' + err);
+        btn.disabled = false;
+        btn.textContent = 'Remove from ' + platformText;
+    });
+}
+</script>
+{% endblock %}
+

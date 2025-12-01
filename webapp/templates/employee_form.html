@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}{% if employee %}Edit{% else %}Add{% endif %} Employee - Customer Group Admin{% endblock %}
+
+{% block content %}
+<h2 style="margin-bottom: 20px;">{% if employee %}Edit{% else %}Add{% endif %} Employee</h2>
+
+<div class="card">
+    <form method="POST" style="max-width: 600px;">
+        <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" 
+                   value="{{ employee.name if employee else '' }}" 
+                   required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" 
+                   value="{{ employee.email if employee else '' }}">
+        </div>
+        
+        <div class="form-group">
+            <label for="slack_username">Slack Username</label>
+            <input type="text" id="slack_username" name="slack_username" 
+                   value="{{ employee.slack_username if employee else '' }}"
+                   placeholder="e.g. john">
+        </div>
+        
+        <div class="form-group">
+            <label for="slack_user_id">Slack User ID</label>
+            <input type="text" id="slack_user_id" name="slack_user_id" 
+                   value="{{ employee.slack_user_id if employee else '' }}"
+                   placeholder="e.g. U03Q9GD1M4G">
+        </div>
+        
+        <div class="form-group">
+            <label for="telegram_username">Telegram Username</label>
+            <input type="text" id="telegram_username" name="telegram_username" 
+                   value="{{ employee.telegram_username if employee else '' }}"
+                   placeholder="e.g. john">
+        </div>
+        
+        <div class="form-group">
+            <label for="status">Status *</label>
+            <select id="status" name="status" required>
+                <option value="active" {% if employee and employee.status == 'active' %}selected{% endif %}>Active</option>
+                <option value="inactive" {% if employee and employee.status == 'inactive' %}selected{% endif %}>Inactive</option>
+                <option value="optional" {% if employee and employee.status == 'optional' %}selected{% endif %}>Optional</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="slack_required" 
+                       {% if not employee or employee.slack_required %}checked{% endif %}>
+                Required in Slack channels
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="telegram_required" 
+                       {% if employee and employee.telegram_required %}checked{% endif %}>
+                Required in Telegram groups
+            </label>
+        </div>
+        
+        <div style="display: flex; gap: 10px; margin-top: 30px;">
+            <button type="submit" class="btn btn-primary">
+                {% if employee %}Update{% else %}Add{% endif %} Employee
+            </button>
+            <a href="/employees" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+

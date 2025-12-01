@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}Employees - Customer Group Admin{% endblock %}
+
+{% block content %}
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+    <h2>Team Members</h2>
+    <a href="/employees/add" class="btn btn-primary">+ Add Employee</a>
+</div>
+
+<div class="card">
+    <div style="margin-bottom: 20px; display: flex; gap: 10px;">
+        <a href="/employees" class="btn {% if status_filter == 'all' %}btn-primary{% else %}btn-secondary{% endif %}">All</a>
+        <a href="/employees?status=active" class="btn {% if status_filter == 'active' %}btn-primary{% else %}btn-secondary{% endif %}">Active</a>
+        <a href="/employees?status=inactive" class="btn {% if status_filter == 'inactive' %}btn-primary{% else %}btn-secondary{% endif %}">Inactive</a>
+        <a href="/employees?status=optional" class="btn {% if status_filter == 'optional' %}btn-primary{% else %}btn-secondary{% endif %}">Optional</a>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Slack</th>
+                <th>Telegram</th>
+                <th>Status</th>
+                <th>Required In</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td><strong>{{ employee.name }}</strong></td>
+                <td>{{ employee.email or '-' }}</td>
+                <td>
+                    {% if employee.slack_username %}
+                        @{{ employee.slack_username }}
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+                <td>
+                    {% if employee.telegram_username %}
+                        @{{ employee.telegram_username }}
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+                <td>
+                    <span class="badge badge-{{ employee.status }}">
+                        {% if employee.status == 'active' %}🟢{% elif employee.status == 'inactive' %}🔴{% else %}🟡{% endif %}
+                        {{ employee.status }}
+                    </span>
+                </td>
+                <td>
+                    {% if employee.slack_required %}Slack{% endif %}
+                    {% if employee.slack_required and employee.telegram_required %}, {% endif %}
+                    {% if employee.telegram_required %}Telegram{% endif %}
+                    {% if not employee.slack_required and not employee.telegram_required %}-{% endif %}
+                </td>
+                <td>
+                    <div style="display: flex; gap: 5px;">
+                        <a href="/employees/{{ employee.id }}/edit" class="btn btn-secondary" style="padding: 5px 10px; font-size: 12px;">Edit</a>
+                        {% if employee.status == 'active' %}
+                        <button onclick="toggleStatus({{ employee.id }}, 'inactive')" class="btn btn-danger" style="padding: 5px 10px; font-size: 12px;">Deactivate</button>
+                        {% elif employee.status == 'inactive' %}
+                        <button onclick="toggleStatus({{ employee.id }}, 'active')" class="btn btn-success" style="padding: 5px 10px; font-size: 12px;">Activate</button>
+                        {% endif %}
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleStatus(employeeId, newStatus) {
+    if (!confirm(`Change employee status to ${newStatus}?`)) {
+        return;
+    }
+    
+    fetch(`/api/employees/${employeeId}/status`, {
+        method: 'PATCH',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({status: newStatus})
+    })
+    .then(res => res.json())
+    .then(data => {
+        location.reload();
+    })
+    .catch(err => {
+        alert('Error updating status: ' + err);
+    });
+}
+</script>
+{% endblock %}
+

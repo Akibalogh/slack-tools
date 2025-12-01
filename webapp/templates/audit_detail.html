@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}Audit #{{ audit.id }} - Customer Group Admin{% endblock %}
+
+{% block content %}
+<div style="margin-bottom: 20px;">
+    <a href="/audits" style="text-decoration: none; color: #0066cc;">← Back to Audits</a>
+</div>
+
+<h2 style="margin-bottom: 20px;">Audit #{{ audit.id }} Details</h2>
+
+<div class="card">
+    <h3 style="margin-bottom: 15px;">Audit Information</h3>
+    <table>
+        <tr>
+            <td style="width: 200px;"><strong>Type:</strong></td>
+            <td>
+                {% if audit.run_type == 'manual' %}
+                    👤 Manual
+                {% else %}
+                    ⏰ Scheduled
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Status:</strong></td>
+            <td>
+                <span class="badge badge-{{ audit.status }}">
+                    {% if audit.status == 'running' %}⏳{% elif audit.status == 'completed' %}✅{% else %}❌{% endif %}
+                    {{ audit.status }}
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Started:</strong></td>
+            <td>{{ audit.started_at }}</td>
+        </tr>
+        <tr>
+            <td><strong>Completed:</strong></td>
+            <td>{{ audit.completed_at or 'Still running...' }}</td>
+        </tr>
+        {% if audit.slack_channels_total %}
+        <tr>
+            <td><strong>Slack Channels:</strong></td>
+            <td>
+                {{ audit.slack_channels_complete or 0 }}/{{ audit.slack_channels_total }}
+                ({{ ((audit.slack_channels_complete or 0) * 100 / audit.slack_channels_total) | round(1) }}% complete)
+            </td>
+        </tr>
+        {% endif %}
+        {% if audit.telegram_groups_total %}
+        <tr>
+            <td><strong>Telegram Groups:</strong></td>
+            <td>
+                {{ audit.telegram_groups_complete or 0 }}/{{ audit.telegram_groups_total }}
+                ({{ ((audit.telegram_groups_complete or 0) * 100 / audit.telegram_groups_total) | round(1) }}% complete)
+            </td>
+        </tr>
+        {% endif %}
+        {% if audit.report_path %}
+        <tr>
+            <td><strong>Report File:</strong></td>
+            <td><code>{{ audit.report_path }}</code></td>
+        </tr>
+        {% endif %}
+        {% if audit.error_message %}
+        <tr>
+            <td><strong>Error:</strong></td>
+            <td style="color: #e74c3c;">{{ audit.error_message }}</td>
+        </tr>
+        {% endif %}
+    </table>
+</div>
+
+{% if findings %}
+<div class="card">
+    <h3 style="margin-bottom: 15px;">Findings ({{ findings|length }})</h3>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Platform</th>
+                <th>Channel/Group</th>
+                <th>Missing Members</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for finding in findings %}
+            <tr>
+                <td>
+                    {% if finding.platform == 'slack' %}
+                        💬 Slack
+                    {% else %}
+                        ✈️ Telegram
+                    {% endif %}
+                </td>
+                <td>
+                    <strong>{{ finding.channel_name }}</strong>
+                    {% if finding.channel_id %}
+                        <br><small style="color: #666;">{{ finding.channel_id }}</small>
+                    {% endif %}
+                </td>
+                <td>
+                    {% set missing = finding.missing_members | replace('"', '') | replace('[', '') | replace(']', '') %}
+                    <span style="color: #e74c3c;">{{ missing }}</span>
+                </td>
+                <td>
+                    <span class="badge {% if finding.status == 'incomplete' %}badge-warning{% else %}badge-failed{% endif %}">
+                        {{ finding.status }}
+                    </span>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% else %}
+<div class="card">
+    <h3 style="margin-bottom: 15px;">✅ No Issues Found</h3>
+    <p style="color: #666;">All channels have the required team members.</p>
+</div>
+{% endif %}
+
+{% endblock %}
+

@@ -4,6 +4,23 @@ A suite of Python utilities for managing and auditing Slack and Telegram custome
 
 ## Features
 
+### 🌐 Admin Panel (NEW!)
+Web-based admin panel for managing team member access across Slack and Telegram:
+- **Dashboard** with quick stats and recent activity
+- **Employee Management** - Add/edit/deactivate team members
+- **Automated Audits** - Daily scheduled audits + manual triggers
+- **Offboarding Center** - One-click removal from all groups
+- **Audit History** - Track compliance over time
+
+🚀 **[Launch Admin Panel](webapp/)** | 📖 **[Documentation](webapp/README.md)**
+
+```bash
+# Quick start
+cd webapp
+./start.sh
+# Open http://localhost:5001
+```
+
 ### 🔍 Customer Group Audit
 Automatically audit all Slack and Telegram customer groups to verify required team members are present. Generates comprehensive Excel reports with:
 - Team member presence tracking (5 required, 4 optional)
