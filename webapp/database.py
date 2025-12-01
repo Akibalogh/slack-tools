@@ -97,6 +97,35 @@ class Database:
             )
         """)
 
+        # Telegram audit status table (single row to track current status across workers)
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS telegram_audit_status (
+                id INTEGER PRIMARY KEY CHECK (id = 1),
+                status TEXT NOT NULL DEFAULT 'idle',
+                message TEXT DEFAULT '',
+                error TEXT,
+                code TEXT,
+                password TEXT,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        """)
+        
+        # Add code/password columns if they don't exist (for existing databases)
+        try:
+            cursor.execute("ALTER TABLE telegram_audit_status ADD COLUMN code TEXT")
+        except:
+            pass
+        try:
+            cursor.execute("ALTER TABLE telegram_audit_status ADD COLUMN password TEXT")
+        except:
+            pass
+        
+        # Insert initial row if it doesn't exist
+        cursor.execute("""
+            INSERT OR IGNORE INTO telegram_audit_status (id, status, message)
+            VALUES (1, 'idle', '')
+        """)
+
         conn.commit()
         conn.close()
 
