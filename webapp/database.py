@@ -204,6 +204,16 @@ class Database:
                 "slack_required": True,
                 "telegram_required": False,
             },
+            {
+                "name": "Jesse Eisenberg",
+                "slack_username": "jesse",
+                "slack_user_id": "U05G2HFEAQD",
+                "telegram_username": "j_eisenberg",
+                "email": "jesse@bitsafe.finance",
+                "status": "active",
+                "slack_required": True,
+                "telegram_required": True,
+            },
         ]
 
         for member in team_members:
