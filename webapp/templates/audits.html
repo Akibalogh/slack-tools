@@ -3,9 +3,11 @@
 {% block title %}Audits - Customer Group Admin{% endblock %}
 
 {% block content %}
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+<div style="margin-bottom: 20px;">
     <h2>Audit History</h2>
-    <button onclick="runAudit()" class="btn btn-primary">▶ Run Manual Audit</button>
+    <p style="color: #666; margin-top: 10px;">
+        ℹ️ Audits run automatically daily at 2:00 AM UTC via Heroku Scheduler
+    </p>
 </div>
 
 {% if findings %}
@@ -97,39 +99,9 @@
         </tbody>
     </table>
     {% else %}
-    <p style="color: #666;">No audits yet. Run your first audit to check customer group membership.</p>
-    <button onclick="runAudit()" class="btn btn-primary">Run First Audit</button>
+    <p style="color: #666;">No audits yet. The first audit will run automatically at 2:00 AM UTC via Heroku Scheduler.</p>
     {% endif %}
 </div>
 
-{% endblock %}
-
-{% block extra_js %}
-<script>
-function runAudit() {
-    if (!confirm('Start a manual audit? This will check all customer groups.')) {
-        return;
-    }
-    
-    const btn = event.target;
-    btn.disabled = true;
-    btn.textContent = '⏳ Running...';
-    
-    fetch('/api/audit/run', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'}
-    })
-    .then(res => res.json())
-    .then(data => {
-        alert('Audit started! This will take a few minutes. Refresh the page to see progress.');
-        setTimeout(() => location.reload(), 2000);
-    })
-    .catch(err => {
-        alert('Error starting audit: ' + err);
-        btn.disabled = false;
-        btn.textContent = '▶ Run Manual Audit';
-    });
-}
-</script>
 {% endblock %}
 

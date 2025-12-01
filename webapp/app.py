@@ -1,5 +1,6 @@
 """
 Flask Admin Panel for Customer Group Access Management
+Read-only dashboard - no authentication required
 """
 import os
 import json
@@ -272,50 +273,52 @@ def api_get_employees():
     return jsonify(employees)
 
 
-@app.route('/api/employees/<int:employee_id>/status', methods=['PATCH'])
-def api_update_employee_status(employee_id):
-    """Update employee status"""
-    data = request.get_json()
-    new_status = data.get('status')
-    
-    if new_status not in ['active', 'inactive', 'optional']:
-        return jsonify({'error': 'Invalid status'}), 400
-    
-    conn = db.get_connection()
-    cursor = conn.cursor()
-    cursor.execute("""
-        UPDATE employees 
-        SET status = ?, updated_at = CURRENT_TIMESTAMP 
-        WHERE id = ?
-    """, (new_status, employee_id))
-    conn.commit()
-    conn.close()
-    
-    return jsonify({'success': True, 'status': new_status})
+# Employee status update endpoint disabled - webapp is read-only
+# @app.route('/api/employees/<int:employee_id>/status', methods=['PATCH'])
+# def api_update_employee_status(employee_id):
+#     """Update employee status"""
+#     data = request.get_json()
+#     new_status = data.get('status')
+#     
+#     if new_status not in ['active', 'inactive', 'optional']:
+#         return jsonify({'error': 'Invalid status'}), 400
+#     
+#     conn = db.get_connection()
+#     cursor = conn.cursor()
+#     cursor.execute("""
+#         UPDATE employees 
+#         SET status = ?, updated_at = CURRENT_TIMESTAMP 
+#         WHERE id = ?
+#     """, (new_status, employee_id))
+#     conn.commit()
+#     conn.close()
+#     
+#     return jsonify({'success': True, 'status': new_status})
 
 
-@app.route('/api/audit/run', methods=['POST'])
-def api_run_audit():
-    """Trigger manual audit"""
-    conn = db.get_connection()
-    cursor = conn.cursor()
-    
-    # Create audit run record
-    cursor.execute("""
-        INSERT INTO audit_runs (run_type, status)
-        VALUES ('manual', 'running')
-    """)
-    audit_id = cursor.lastrowid
-    conn.commit()
-    conn.close()
-    
-    # Run audit in background
-    from scheduler import run_audit_job
-    import threading
-    thread = threading.Thread(target=run_audit_job, args=(audit_id,))
-    thread.start()
-    
-    return jsonify({'success': True, 'audit_id': audit_id})
+# Manual audit endpoint disabled - audits only run via Heroku Scheduler
+# @app.route('/api/audit/run', methods=['POST'])
+# def api_run_audit():
+#     """Trigger manual audit"""
+#     conn = db.get_connection()
+#     cursor = conn.cursor()
+#     
+#     # Create audit run record
+#     cursor.execute("""
+#         INSERT INTO audit_runs (run_type, status)
+#         VALUES ('manual', 'running')
+#     """)
+#     audit_id = cursor.lastrowid
+#     conn.commit()
+#     conn.close()
+#     
+#     # Run audit in background
+#     from scheduler import run_audit_job
+#     import threading
+#     thread = threading.Thread(target=run_audit_job, args=(audit_id,))
+#     thread.start()
+#     
+#     return jsonify({'success': True, 'audit_id': audit_id})
 
 
 @app.route('/api/audit/latest', methods=['GET'])
@@ -343,35 +346,36 @@ def api_latest_audit():
     return jsonify(result)
 
 
-@app.route('/api/offboard', methods=['POST'])
-def api_start_offboarding():
-    """Start offboarding process for employee"""
-    data = request.get_json()
-    employee_id = data.get('employee_id')
-    platform = data.get('platform', 'both')  # slack, telegram, both
-    
-    if not employee_id:
-        return jsonify({'error': 'employee_id required'}), 400
-    
-    conn = db.get_connection()
-    cursor = conn.cursor()
-    
-    # Create offboarding task
-    cursor.execute("""
-        INSERT INTO offboarding_tasks (employee_id, platform, status)
-        VALUES (?, ?, 'pending')
-    """, (employee_id, platform))
-    task_id = cursor.lastrowid
-    conn.commit()
-    conn.close()
-    
-    # Run offboarding in background
-    from scheduler import run_offboarding_job
-    import threading
-    thread = threading.Thread(target=run_offboarding_job, args=(task_id, employee_id, platform))
-    thread.start()
-    
-    return jsonify({'success': True, 'task_id': task_id})
+# Offboarding endpoint disabled - offboarding done via scripts only
+# @app.route('/api/offboard', methods=['POST'])
+# def api_start_offboarding():
+#     """Start offboarding process for employee"""
+#     data = request.get_json()
+#     employee_id = data.get('employee_id')
+#     platform = data.get('platform', 'both')  # slack, telegram, both
+#     
+#     if not employee_id:
+#         return jsonify({'error': 'employee_id required'}), 400
+#     
+#     conn = db.get_connection()
+#     cursor = conn.cursor()
+#     
+#     # Create offboarding task
+#     cursor.execute("""
+#         INSERT INTO offboarding_tasks (employee_id, platform, status)
+#         VALUES (?, ?, 'pending')
+#     """, (employee_id, platform))
+#     task_id = cursor.lastrowid
+#     conn.commit()
+#     conn.close()
+#     
+#     # Run offboarding in background
+#     from scheduler import run_offboarding_job
+#     import threading
+#     thread = threading.Thread(target=run_offboarding_job, args=(task_id, employee_id, platform))
+#     thread.start()
+#     
+#     return jsonify({'success': True, 'task_id': task_id})
 
 
 @app.route('/api/offboard/status/<int:task_id>', methods=['GET'])

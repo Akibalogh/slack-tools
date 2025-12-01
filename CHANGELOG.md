@@ -4,6 +4,18 @@ All notable changes to the Slack Tools project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.4.1] - 2025-12-01
+
+### Changed
+- **Admin Panel is Now Read-Only**: The web application is now a reporting/viewing tool only
+  - Removed all manual audit triggers - audits only run via Heroku Scheduler (daily at 2:00 AM UTC)
+  - Removed all offboarding buttons - offboarding done via command-line scripts
+  - Removed employee edit/deactivate buttons - employee management done via command-line/database
+  - Disabled write API endpoints: `/api/audit/run`, `/api/offboard`, `/api/employees/<id>/status`
+  - Updated UI messaging to indicate automated scheduling and script-based operations
+  - Removed all authentication code - webapp is now fully public for read operations
+  - Updated documentation to reflect read-only nature
+
 ## [1.4.0] - 2025-12-01
 
 ### Added

@@ -3,6 +3,7 @@
 Generic Telegram Group Administration Tool
 
 Unified tool for common Telegram group admin tasks:
+- Add users to groups
 - Search for users across groups
 - Remove users from groups
 - Check ownership/admin status
@@ -10,6 +11,12 @@ Unified tool for common Telegram group admin tasks:
 - Rename groups in bulk
 
 Usage:
+    # Add users to all groups (dry run)
+    python3 telegram_admin.py add-user --usernames kevin,aliya --dry-run
+    
+    # Add users to all groups (live)
+    python3 telegram_admin.py add-user --usernames kevin,aliya
+    
     # Find a user
     python3 telegram_admin.py find-user --username nftaddie
     
@@ -29,7 +36,7 @@ Usage:
 import asyncio
 import argparse
 import json
-from telethon import TelegramClient
+from telethon import TelegramClient, functions
 from telethon.tl.functions.channels import EditTitleRequest
 from telethon.tl.functions.messages import EditChatTitleRequest
 from telethon.tl.types import Channel, Chat
@@ -53,7 +60,31 @@ class TelegramAdmin:
     async def connect(self):
         """Establish Telegram connection"""
         self.client = TelegramClient('telegram_session', api_id, api_hash)
-        await self.client.start(phone=phone, password=password)
+        await self.client.connect()
+        
+        if not await self.client.is_user_authorized():
+            # Need to authenticate
+            await self.client.send_code_request(phone)
+            
+            code = os.getenv('TELEGRAM_CODE')
+            if not code:
+                code = input('Enter the code you received: ')
+            else:
+                print(f'📱 Using code from TELEGRAM_CODE environment variable')
+            
+            try:
+                await self.client.sign_in(phone, code)
+            except Exception as e:
+                if 'SessionPasswordNeededError' in str(type(e).__name__):
+                    pwd = os.getenv('TELEGRAM_PASSWORD')
+                    if not pwd:
+                        pwd = input('Enter your 2FA password: ')
+                    else:
+                        print(f'🔐 Using password from TELEGRAM_PASSWORD environment variable')
+                    await self.client.sign_in(password=pwd)
+                else:
+                    raise
+        
         self.me = await self.client.get_me()
         print(f'✅ Connected as: {self.me.first_name} {self.me.last_name}')
     
@@ -119,6 +150,118 @@ class TelegramAdmin:
             print(f'\n📄 Report saved: {output_file}')
         
         return groups
+    
+    async def add_users(self, usernames, dry_run=False):
+        """Add users to all groups where you have admin permission"""
+        print(f'🔄 {"[DRY RUN] " if dry_run else ""}Adding users: {", ".join(usernames)}...')
+        print()
+        
+        # Resolve usernames to user entities
+        users_to_add = []
+        for username in usernames:
+            try:
+                user = await self.client.get_entity(username)
+                users_to_add.append((username, user))
+                print(f'✅ Found @{username}')
+            except Exception as e:
+                print(f'❌ Could not find @{username}: {e}')
+        
+        if not users_to_add:
+            print('❌ No valid users to add')
+            return [], []
+        
+        print()
+        print('='*70)
+        print(f'Processing groups...')
+        print()
+        
+        success = []
+        already_member = []
+        failed = []
+        no_permission = []
+        
+        checked = 0
+        async for dialog in self.client.iter_dialogs():
+            if not isinstance(dialog.entity, (Channel, Chat)):
+                continue
+            
+            checked += 1
+            if checked % 50 == 0:
+                print(f'   Processed {checked} groups...')
+            
+            # Check if we have permission
+            try:
+                my_perms = await self.client.get_permissions(dialog.entity, self.me)
+                if not (my_perms.is_creator or (my_perms.is_admin and hasattr(my_perms, 'invite_users') and my_perms.invite_users)):
+                    no_permission.append(dialog.title)
+                    continue
+                
+                # Get current participants to check membership
+                participants = await self.client.get_participants(dialog.entity)
+                participant_ids = {p.id for p in participants}
+                
+                # Try to add each user
+                for username, user in users_to_add:
+                    try:
+                        if user.id in participant_ids:
+                            already_member.append((dialog.title, username))
+                            continue
+                        
+                        if dry_run:
+                            print(f'   [DRY RUN] Would add @{username} to {dialog.title}')
+                            success.append((dialog.title, username))
+                        else:
+                            await self.client(functions.channels.InviteToChannelRequest(
+                                channel=dialog.entity,
+                                users=[user]
+                            ))
+                            success.append((dialog.title, username))
+                            print(f'   ✅ Added @{username} to {dialog.title}')
+                            await asyncio.sleep(1)  # Rate limiting
+                        
+                    except Exception as e:
+                        error_msg = str(e)[:60]
+                        if 'USER_ALREADY_PARTICIPANT' in error_msg:
+                            already_member.append((dialog.title, username))
+                        else:
+                            failed.append((dialog.title, username, error_msg))
+                            if not dry_run:
+                                print(f'   ❌ Failed to add @{username} to {dialog.title}: {error_msg}')
+                
+            except Exception as e:
+                # Skip groups where we can't check permissions
+                continue
+        
+        print()
+        print('='*70)
+        print('📊 SUMMARY')
+        print('='*70)
+        print(f'Total groups checked: {checked}')
+        print(f'✅ Successfully added: {len(success)}')
+        print(f'ℹ️  Already members: {len(already_member)}')
+        print(f'❌ Failed: {len(failed)}')
+        print(f'🔒 No permission: {len(no_permission)}')
+        
+        # Save detailed results
+        if not dry_run:
+            with open('output/telegram_member_addition.txt', 'w') as f:
+                f.write('TELEGRAM MEMBER ADDITION RESULTS\n')
+                f.write('='*70 + '\n\n')
+                f.write(f'Successfully Added ({len(success)}):\n')
+                for group, user in success:
+                    f.write(f'  {group} - @{user}\n')
+                f.write(f'\nAlready Members ({len(already_member)}):\n')
+                for group, user in already_member:
+                    f.write(f'  {group} - @{user}\n')
+                f.write(f'\nFailed ({len(failed)}):\n')
+                for group, user, error in failed:
+                    f.write(f'  {group} - @{user}: {error}\n')
+                f.write(f'\nNo Permission ({len(no_permission)}):\n')
+                for group in no_permission:
+                    f.write(f'  {group}\n')
+            print(f'\n📄 Detailed results saved: output/telegram_member_addition.txt')
+        
+        return success, failed
     
     async def remove_user(self, username, groups=None):
         """Remove a user from specified groups or all groups where you have permission"""
@@ -284,6 +427,11 @@ async def main():
     parser = argparse.ArgumentParser(description='Telegram Group Administration Tool')
     subparsers = parser.add_subparsers(dest='command', help='Command to execute')
     
+    # Add user command
+    add_parser = subparsers.add_parser('add-user', help='Add users to all groups where you have admin access')
+    add_parser.add_argument('--usernames', required=True, help='Comma-separated list of Telegram usernames (without @)')
+    add_parser.add_argument('--dry-run', action='store_true', help='Show what would be done without making changes')
+    
     # Find user command
     find_parser = subparsers.add_parser('find-user', help='Find a user across groups')
     find_parser.add_argument('--username', required=True, help='Telegram username (without @)')
@@ -315,7 +463,11 @@ async def main():
     try:
         await admin.connect()
         
-        if args.command == 'find-user':
+        if args.command == 'add-user':
+            usernames = [u.strip() for u in args.usernames.split(',')]
+            await admin.add_users(usernames, dry_run=args.dry_run)
+        
+        elif args.command == 'find-user':
             await admin.find_user(args.username)
         
         elif args.command == 'remove-user':
@@ -344,4 +496,5 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
+
 

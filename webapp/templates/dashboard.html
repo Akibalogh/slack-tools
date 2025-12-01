@@ -36,11 +36,12 @@
 <div class="card">
     <h2 style="margin-bottom: 20px;">Quick Actions</h2>
     <div style="display: flex; gap: 15px;">
-        <button class="btn btn-primary" onclick="runAudit()">▶ Run Manual Audit</button>
         <a href="/audits" class="btn btn-secondary">📊 View Audit History</a>
-        <a href="/employees" class="btn btn-secondary">👥 Manage Employees</a>
-        <a href="/offboarding" class="btn btn-danger">🚪 Offboarding Center</a>
+        <a href="/employees" class="btn btn-secondary">👥 View Employees</a>
     </div>
+    <p style="margin-top: 15px; color: #666; font-size: 14px;">
+        ℹ️ Audits run automatically daily at 2:00 AM UTC via Heroku Scheduler
+    </p>
 </div>
 
 {% if latest_audit %}
@@ -73,8 +74,7 @@
 {% else %}
 <div class="card">
     <h2 style="margin-bottom: 15px;">No Audits Yet</h2>
-    <p style="color: #666; margin-bottom: 15px;">Run your first audit to check customer group membership.</p>
-    <button class="btn btn-primary" onclick="runAudit()">Run First Audit</button>
+    <p style="color: #666; margin-bottom: 15px;">The first audit will run automatically at 2:00 AM UTC via Heroku Scheduler.</p>
 </div>
 {% endif %}
 
@@ -106,32 +106,5 @@
 </div>
 {% endif %}
 
-{% endblock %}
-
-{% block extra_js %}
-<script>
-function runAudit() {
-    if (!confirm('Start a manual audit? This will check all customer groups.')) {
-        return;
-    }
-    
-    document.querySelector('.btn-primary').disabled = true;
-    document.querySelector('.btn-primary').textContent = '⏳ Running...';
-    
-    fetch('/api/audit/run', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'}
-    })
-    .then(res => res.json())
-    .then(data => {
-        alert('Audit started! Check the Audits page for results.');
-        setTimeout(() => location.reload(), 2000);
-    })
-    .catch(err => {
-        alert('Error starting audit: ' + err);
-        location.reload();
-    });
-}
-</script>
 {% endblock %}
 

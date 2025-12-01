@@ -9,7 +9,7 @@
 <div class="card">
     <h3 style="margin-bottom: 15px;">⚠️ Inactive Employees</h3>
     <p style="color: #666; margin-bottom: 15px;">
-        These employees are marked as inactive. Click "Start Offboarding" to remove them from customer groups.
+        These employees are marked as inactive. Use the offboarding scripts to remove them from customer groups.
     </p>
     
     <table>
@@ -18,7 +18,6 @@
                 <th>Name</th>
                 <th>Slack</th>
                 <th>Telegram</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -27,28 +26,6 @@
                 <td><strong>{{ employee.name }}</strong></td>
                 <td>{{ '@' + employee.slack_username if employee.slack_username else '-' }}</td>
                 <td>{{ '@' + employee.telegram_username if employee.telegram_username else '-' }}</td>
-                <td>
-                    <div style="display: flex; gap: 5px;">
-                        {% if employee.slack_username %}
-                        <button onclick="startOffboarding({{ employee.id }}, 'slack', '{{ employee.name }}')" 
-                                class="btn btn-danger" style="padding: 5px 10px; font-size: 12px;">
-                            Remove from Slack
-                        </button>
-                        {% endif %}
-                        {% if employee.telegram_username %}
-                        <button onclick="startOffboarding({{ employee.id }}, 'telegram', '{{ employee.name }}')" 
-                                class="btn btn-danger" style="padding: 5px 10px; font-size: 12px;">
-                            Remove from Telegram
-                        </button>
-                        {% endif %}
-                        {% if employee.slack_username and employee.telegram_username %}
-                        <button onclick="startOffboarding({{ employee.id }}, 'both', '{{ employee.name }}')" 
-                                class="btn btn-danger" style="padding: 5px 10px; font-size: 12px;">
-                            Remove from Both
-                        </button>
-                        {% endif %}
-                    </div>
-                </td>
             </tr>
             {% endfor %}
         </tbody>
@@ -108,40 +85,5 @@
     {% endif %}
 </div>
 
-{% endblock %}
-
-{% block extra_js %}
-<script>
-function startOffboarding(employeeId, platform, employeeName) {
-    const platformText = platform === 'both' ? 'Slack and Telegram' : platform;
-    
-    if (!confirm(`Start offboarding ${employeeName} from ${platformText}?\n\nThis will remove them from all customer groups.`)) {
-        return;
-    }
-    
-    const btn = event.target;
-    btn.disabled = true;
-    btn.textContent = '⏳ Starting...';
-    
-    fetch('/api/offboard', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({
-            employee_id: employeeId,
-            platform: platform
-        })
-    })
-    .then(res => res.json())
-    .then(data => {
-        alert(`Offboarding started for ${employeeName}!\n\nTask ID: ${data.task_id}\n\nThis will run in the background. Check back in a few minutes.`);
-        setTimeout(() => location.reload(), 2000);
-    })
-    .catch(err => {
-        alert('Error starting offboarding: ' + err);
-        btn.disabled = false;
-        btn.textContent = 'Remove from ' + platformText;
-    });
-}
-</script>
 {% endblock %}
 

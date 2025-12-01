@@ -1,15 +1,17 @@
 # Customer Group Admin Panel
 
-Web-based admin panel for managing team member access to customer Slack channels and Telegram groups.
+Web-based admin panel for viewing team member access to customer Slack channels and Telegram groups.
 
 ## Features
 
 - **📊 Dashboard**: Overview of team members, audit status, and recent activity
-- **👥 Employee Management**: Add, edit, and manage team member status (active/inactive/optional)
-- **🔍 Automated Audits**: Daily scheduled audits + manual audit triggers
-- **🚪 Offboarding Center**: One-click removal from Slack and Telegram groups
+- **👥 Employee Management**: View team member status (active/inactive/optional)
+- **🔍 Automated Audits**: Daily scheduled audits via Heroku Scheduler (2:00 AM UTC)
+- **🚪 Offboarding Center**: View offboarding history (actual offboarding done via scripts)
 - **📈 Audit History**: Track audit runs and incomplete channels over time
-- **⏰ Scheduler**: Background job for daily automated audits
+- **⏰ Scheduler**: Daily automated audits run via Heroku Scheduler
+
+**Note**: This webapp is read-only. All write operations (editing employees, running manual audits, triggering offboarding) are done via command-line scripts.
 
 ## Quick Start
 
@@ -118,16 +120,18 @@ The webapp integrates with existing CLI scripts:
 
 ## API Endpoints
 
+**Note**: Write endpoints are disabled. The webapp is read-only.
+
 ### Employees
 - `GET /api/employees` - List all employees
-- `PATCH /api/employees/<id>/status` - Update employee status
+- ~~`PATCH /api/employees/<id>/status`~~ - *(Disabled)* Update employee status
 
 ### Audits
-- `POST /api/audit/run` - Trigger manual audit
+- ~~`POST /api/audit/run`~~ - *(Disabled)* Trigger manual audit (audits run via Heroku Scheduler)
 - `GET /api/audit/latest` - Get latest audit results
 
 ### Offboarding
-- `POST /api/offboard` - Start offboarding process
+- ~~`POST /api/offboard`~~ - *(Disabled)* Start offboarding process (done via scripts)
 - `GET /api/offboard/status/<id>` - Get offboarding status
 
 ## Configuration

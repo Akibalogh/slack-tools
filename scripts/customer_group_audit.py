@@ -47,14 +47,30 @@ if not SLACK_TOKEN:
 TELEGRAM_API_ID = int(os.getenv("TELEGRAM_API_ID"))
 TELEGRAM_API_HASH = os.getenv("TELEGRAM_API_HASH")
 
-# Team members
-REQUIRED_MEMBERS = {
+# Team members for SLACK (all should be in Slack channels)
+REQUIRED_SLACK_MEMBERS = {
+    "akibalogh": "Aki Balogh (CEO)",
+    "gabitui": "Gabi Tui (Head of Product)",
+    "mojo_onchain": "Mayank (Sales Engineer)",
+    "kadeemclarke": "Kadeem Clarke (Head of Growth)",
+    "NonFungibleAmy": "Amy Wu (BD)",
+    "kevin": "Kevin Huet",
+    "aliya": "Aliya Gordon",
+    "dave": "Dave Shin",
+    "Dae_L": "Dae Lee (Sales Advisor)"
+}
+
+# Team members for TELEGRAM (core team only, not all members required)
+REQUIRED_TELEGRAM_MEMBERS = {
     "akibalogh": "Aki Balogh (CEO)",
     "gabitui": "Gabi Tui (Head of Product)",
     "mojo_onchain": "Mayank (Sales Engineer)",
     "kadeemclarke": "Kadeem Clarke (Head of Growth)",
     "NonFungibleAmy": "Amy Wu (BD)"
 }
+
+# For backward compatibility
+REQUIRED_MEMBERS = REQUIRED_SLACK_MEMBERS
 
 OPTIONAL_MEMBERS = {
     "shin_novation": "Shin (Strategy Advisor)",
@@ -70,6 +86,8 @@ SLACK_USERNAME_MAP = {
     "mayank": "mojo_onchain",
     "kadeem": "kadeemclarke",
     "amy": "NonFungibleAmy",
+    "kevin": "kevin",
+    "aliya": "aliya",
     "jesse": "j_eisenberg",
     "anna": "anmatusova",
     "dae": "Dae_L"
@@ -166,9 +184,9 @@ class CustomerGroupAuditor:
                             mapped_handle = SLACK_USERNAME_MAP[actual_username]
                             
                             # Is it a required member?
-                            if mapped_handle in REQUIRED_MEMBERS and mapped_handle not in self.required_slack_ids:
+                            if mapped_handle in REQUIRED_SLACK_MEMBERS and mapped_handle not in self.required_slack_ids:
                                 self.required_slack_ids[mapped_handle] = user_id
-                                print(f"   ✓ Found required: {REQUIRED_MEMBERS[mapped_handle]} (@{user.get('name')})")
+                                print(f"   ✓ Found required: {REQUIRED_SLACK_MEMBERS[mapped_handle]} (@{user.get('name')})")
                             
                             # Is it an optional member?
                             elif mapped_handle in OPTIONAL_MEMBERS and mapped_handle not in self.optional_slack_ids:
@@ -180,11 +198,11 @@ class CustomerGroupAuditor:
                         break
         
         print(f"\n   Scanned {user_count} workspace users")
-        print(f"   Mapped {len(self.required_slack_ids)}/{len(REQUIRED_MEMBERS)} required members")
+        print(f"   Mapped {len(self.required_slack_ids)}/{len(REQUIRED_SLACK_MEMBERS)} required members")
         print(f"   Mapped {len(self.optional_slack_ids)}/{len(OPTIONAL_MEMBERS)} optional members")
         
         # Show any missing mappings
-        missing_required = set(REQUIRED_MEMBERS.keys()) - set(self.required_slack_ids.keys())
+        missing_required = set(REQUIRED_SLACK_MEMBERS.keys()) - set(self.required_slack_ids.keys())
         missing_optional = set(OPTIONAL_MEMBERS.keys()) - set(self.optional_slack_ids.keys())
         
         if missing_required:
@@ -248,9 +266,9 @@ class CustomerGroupAuditor:
                 
                 for username, user_id in self.required_slack_ids.items():
                     if user_id in members:
-                        required_present.append(REQUIRED_MEMBERS[username])
+                        required_present.append(REQUIRED_SLACK_MEMBERS[username])
                     else:
-                        required_missing.append(REQUIRED_MEMBERS[username])
+                        required_missing.append(REQUIRED_SLACK_MEMBERS[username])
                 
                 for username, user_id in self.optional_slack_ids.items():
                     if user_id in members:
@@ -277,11 +295,11 @@ class CustomerGroupAuditor:
                     "Required Missing": ", ".join(required_missing) if required_missing else "-",
                     "Optional Present": ", ".join(optional_present) if optional_present else "-",
                     "Optional Missing": ", ".join(optional_missing) if optional_missing else "-",
-                    "Completeness": f"{len(required_present)}/{len(REQUIRED_MEMBERS)} required"
+                    "Completeness": f"{len(required_present)}/{len(REQUIRED_SLACK_MEMBERS)} required"
                 })
                 
                 warning = "" if requires_full_team or len(required_present) >= 3 else " ⚠️"
-                print(f"   ✓ {channel_name}: {len(required_present)}/{len(REQUIRED_MEMBERS)} required [{category}]{warning}")
+                print(f"   ✓ {channel_name}: {len(required_present)}/{len(REQUIRED_SLACK_MEMBERS)} required [{category}]{warning}")
     
     async def audit_telegram_groups(self):
         """Audit all Telegram groups shared with @mojo_onchain"""
@@ -382,7 +400,7 @@ class CustomerGroupAuditor:
                     
                     # Map Telegram usernames to our team list
                     required_present = []
-                    required_missing = list(REQUIRED_MEMBERS.values())
+                    required_missing = list(REQUIRED_TELEGRAM_MEMBERS.values())
                     optional_present = []
                     optional_missing = list(OPTIONAL_MEMBERS.values())
                     
@@ -393,10 +411,10 @@ class CustomerGroupAuditor:
                             continue
                         
                         # Check required members
-                        if username in REQUIRED_MEMBERS:
-                            required_present.append(REQUIRED_MEMBERS[username])
-                            if REQUIRED_MEMBERS[username] in required_missing:
-                                required_missing.remove(REQUIRED_MEMBERS[username])
+                        if username in REQUIRED_TELEGRAM_MEMBERS:
+                            required_present.append(REQUIRED_TELEGRAM_MEMBERS[username])
+                            if REQUIRED_TELEGRAM_MEMBERS[username] in required_missing:
+                                required_missing.remove(REQUIRED_TELEGRAM_MEMBERS[username])
                         
                         # Check optional members
                         if username in OPTIONAL_MEMBERS:
@@ -424,12 +442,12 @@ class CustomerGroupAuditor:
                         "Required Missing": ", ".join(required_missing) if required_missing else "-",
                         "Optional Present": ", ".join(optional_present) if optional_present else "-",
                         "Optional Missing": ", ".join(optional_missing) if optional_missing else "-",
-                        "Completeness": f"{len(required_present)}/{len(REQUIRED_MEMBERS)} required"
+                        "Completeness": f"{len(required_present)}/{len(REQUIRED_TELEGRAM_MEMBERS)} required"
                     })
                     
                     warning = "" if requires_full_team or len(required_present) >= 3 else " ⚠️"
                     rename_note = " [RENAME]" if needs_rename(group_name) else ""
-                    print(f"   ✓ {group_name}: {len(required_present)}/{len(REQUIRED_MEMBERS)} required [{category}]{warning}{rename_note}")
+                    print(f"   ✓ {group_name}: {len(required_present)}/{len(REQUIRED_TELEGRAM_MEMBERS)} required [{category}]{warning}{rename_note}")
                     
                 except Exception as e:
                     print(f"   ⚠️  Couldn't audit {group_name}: {e}")
