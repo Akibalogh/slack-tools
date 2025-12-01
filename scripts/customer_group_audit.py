@@ -311,8 +311,13 @@ class CustomerGroupAuditor:
         """Audit all Telegram groups shared with @mojo_onchain"""
         print(f"\n🔍 Auditing Telegram groups...")
         
+        telegram_phone = os.getenv("TELEGRAM_PHONE", "")
+        if not telegram_phone:
+            print("   ⚠️  TELEGRAM_PHONE not configured - skipping Telegram audit")
+            return
+            
         client = TelegramClient('telegram_session', TELEGRAM_API_ID, TELEGRAM_API_HASH)
-        await client.start()
+        await client.start(phone=telegram_phone)
         
         # Find @mojo_onchain
         try:
