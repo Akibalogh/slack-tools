@@ -3,10 +3,11 @@
 ## Overview
 Web application for **viewing** team member access to customer Slack channels and Telegram groups, with automated daily audits. This is a **read-only reporting interface** - all write operations (employee management, manual audits, offboarding) are handled via command-line scripts.
 
-## Current Status (v1.4.1)
-The webapp is deployed as a **read-only dashboard**:
+## Current Status (v1.4.2)
+The webapp is deployed as a **read-only dashboard** with one interactive feature:
 - ✅ **View** employees, audits, and reports
-- ❌ No manual audit triggers (audits run via Heroku Scheduler at 2:00 AM UTC daily)
+- ✅ **Telegram Audit**: Interactive button to manually trigger Telegram audit with 2FA support
+- ❌ No Slack manual audit triggers (Slack audits run via Heroku Scheduler at 2:00 AM UTC daily)
 - ❌ No employee editing/status changes (managed via scripts/database)
 - ❌ No offboarding triggers (done via command-line scripts)
 - ❌ Offboarding tab hidden to avoid alarming employees
@@ -93,14 +94,23 @@ CREATE TABLE offboarding_tasks (
 
 **Note**: Employee data is seeded from `webapp/database.py`. To modify employees, edit the seed data and redeploy.
 
-### 2. Audit Dashboard (Read-Only)
+### 2. Audit Dashboard
 - ✅ **Current Status**: Live view of latest audit results
-- ❌ **Run Manual Audit**: Removed - audits run via Heroku Scheduler
+- ✅ **Telegram Audit Button**: Interactive manual trigger for Telegram audits with 2FA support
+- ❌ **Slack Manual Audit**: Removed - Slack audits run via Heroku Scheduler
 - ✅ **Audit History**: Past audit runs with drill-down
 - ✅ **Incomplete Channels**: List of channels missing members
 - ❌ **Quick Fix**: Removed - remediation done via scripts
 
-**Note**: Audits run automatically daily at 2:00 AM UTC via Heroku Scheduler job: `cd scripts && python3 customer_group_audit.py`
+**Telegram Audit Flow:**
+1. Click "✈️ Run Telegram Audit" button on Audits page
+2. Modal opens and requests Telegram authentication code
+3. User enters SMS code sent to their Telegram app
+4. If 2FA password is enabled, user enters cloud password
+5. Audit runs in background (both Slack + Telegram)
+6. Results saved to database and appear in Audit History
+
+**Note**: Slack audits run automatically daily at 2:00 AM UTC via Heroku Scheduler job: `cd scripts && python3 customer_group_audit.py`
 
 ### 3. Offboarding Center (Hidden)
 - ❌ **Tab Removed**: Hidden from navigation to avoid alarming employees
@@ -131,6 +141,10 @@ CREATE TABLE offboarding_tasks (
 - ✅ `GET /api/audit/history` - Get audit history (via `/audits` page)
 - ✅ `GET /api/audit/<id>` - Get specific audit details (via `/audits/<id>` page)
 - ❌ `POST /api/audit/<id>/remediate` - **DISABLED**
+- ✅ `POST /api/audit/telegram/start` - Start Telegram audit (requests 2FA code)
+- ✅ `GET /api/audit/telegram/status` - Check Telegram audit status (for polling)
+- ✅ `POST /api/audit/telegram/code` - Submit SMS code for Telegram authentication
+- ✅ `POST /api/audit/telegram/password` - Submit 2FA password for Telegram authentication
 
 ### Offboarding
 - ❌ `POST /api/offboard` - **DISABLED** (commented out in code)
@@ -161,9 +175,18 @@ CREATE TABLE offboarding_tasks (
 - ✅ Audit history table
 - ✅ Latest audit detailed view
 - ✅ Incomplete channels list
-- ❌ Manual audit trigger button - **Removed**
+- ✅ **Telegram Audit Button** - "✈️ Run Telegram Audit" with interactive 2FA modal
+- ❌ Slack manual audit trigger button - **Removed** (Slack audits run automatically)
 - ❌ Remediation actions - **Removed**
-- ℹ️ Shows message: "Audits run automatically daily at 2:00 AM UTC via Heroku Scheduler"
+- ℹ️ Shows message: "Slack audits run automatically daily at 2:00 AM UTC via Heroku Scheduler"
+
+**Telegram Audit Modal:**
+- Opens when "Run Telegram Audit" button is clicked
+- Requests SMS code from Telegram (sent to user's phone)
+- Requests 2FA password if account has 2FA enabled
+- Shows real-time progress updates via polling
+- Runs full audit (Slack + Telegram) in background
+- Results saved to database and appear in Audit History
 
 ### 4. Offboarding (`/offboarding`)
 - ❌ **Tab Hidden** - Removed from navigation

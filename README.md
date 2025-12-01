@@ -5,17 +5,20 @@ A suite of Python utilities for managing and auditing Slack and Telegram custome
 ## Features
 
 ### 🌐 Admin Panel (NEW!)
-Web-based admin panel for managing team member access across Slack and Telegram:
-- **Dashboard** with quick stats and recent activity
-- **Employee Management** - Add/edit/deactivate team members
-- **Automated Audits** - Daily scheduled audits + manual triggers
-- **Offboarding Center** - One-click removal from all groups
-- **Audit History** - Track compliance over time
+Web-based read-only dashboard for viewing team member access across Slack and Telegram:
+- **Dashboard** with quick stats and latest audit results
+- **Employee Management View** - View all team members with status (read-only)
+- **Automated Slack Audits** - Daily scheduled audits at 2:00 AM UTC via Heroku Scheduler
+- **Interactive Telegram Audit** - Manual trigger with 2FA support (SMS code + password)
+- **Audit History** - Track audit runs and incomplete channels over time
+- **Offboarding History** - View past offboarding tasks (tab hidden from nav)
 
-🚀 **[Launch Admin Panel](webapp/)** | 📖 **[Documentation](webapp/README.md)**
+🚀 **[Live Admin Panel](https://bitsafe-group-admin-30c4bbdb5186.herokuapp.com/)** | 📖 **[Documentation](webapp/README.md)**
+
+**Note**: The webapp is read-only except for the Telegram audit trigger. All write operations (editing employees, offboarding) are done via command-line scripts.
 
 ```bash
-# Quick start
+# Quick start (local development)
 cd webapp
 ./start.sh
 # Open http://localhost:5001

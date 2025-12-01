@@ -5,13 +5,14 @@ Web-based admin panel for viewing team member access to customer Slack channels 
 ## Features
 
 - **📊 Dashboard**: Overview of team members, audit status, and recent activity
-- **👥 Employee Management**: View team member status (active/inactive/optional)
-- **🔍 Automated Audits**: Daily scheduled audits via Heroku Scheduler (2:00 AM UTC)
-- **🚪 Offboarding Center**: View offboarding history (actual offboarding done via scripts)
+- **👥 Employee Management**: View team member status (active/inactive/optional) - read-only
+- **🔍 Automated Slack Audits**: Daily scheduled audits via Heroku Scheduler (2:00 AM UTC)
+- **✈️ Interactive Telegram Audit**: Manual trigger button with 2FA support (SMS code + password)
 - **📈 Audit History**: Track audit runs and incomplete channels over time
-- **⏰ Scheduler**: Daily automated audits run via Heroku Scheduler
+- **🚪 Offboarding Center**: View offboarding history (tab hidden from nav, actual offboarding done via scripts)
+- **⏰ Scheduler**: Daily automated Slack audits run via Heroku Scheduler
 
-**Note**: This webapp is read-only. All write operations (editing employees, running manual audits, triggering offboarding) are done via command-line scripts.
+**Note**: This webapp is mostly read-only. The only interactive feature is the Telegram audit trigger (requires 2FA authentication). All other write operations (editing employees, triggering offboarding) are done via command-line scripts.
 
 ## Quick Start
 
@@ -91,11 +92,22 @@ webapp/
 
 ### Running Audits
 
-**Manual Audit:**
-1. Go to **Dashboard** or **Audits** page
-2. Click **▶ Run Manual Audit**
-3. Wait 2-3 minutes for completion
-4. View results on Audits page
+**Automated Daily Audit (Slack):**
+- Runs automatically every day at 2:00 AM UTC via Heroku Scheduler
+- No action required - results appear in Audit History automatically
+
+**Manual Telegram Audit:**
+1. Go to **Audits** page
+2. Click **✈️ Run Telegram Audit** button (top right)
+3. Modal opens requesting Telegram authentication
+4. Check your Telegram app for SMS code
+5. Enter code in modal and click "Submit Code"
+6. If you have 2FA enabled, enter your cloud password when prompted
+7. Wait while audit runs in background (2-5 minutes)
+8. Modal shows progress updates automatically
+9. When complete, click "Refresh Page" to see results in Audit History
+
+**Note**: Telegram audit runs both Slack AND Telegram checks, so it's a full audit. Results are saved to the database and appear in the Audit History table.
 
 **Scheduled Audit:**
 - Runs automatically every day at 2:00 AM

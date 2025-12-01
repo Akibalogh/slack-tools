@@ -401,6 +401,111 @@ Unified command-line tool for common Telegram group administration tasks, consol
 
 ---
 
+### Feature 7: Admin Panel Web Application
+
+#### Description
+Web-based read-only dashboard for viewing team member access, audit results, and reports. Includes interactive Telegram audit trigger with 2FA support.
+
+#### Requirements
+
+**Must Have:**
+- ✅ **Read-Only Dashboard**: View employees, audit history, and reports
+- ✅ **Automated Daily Audits**: Slack audits run automatically via Heroku Scheduler (2:00 AM UTC)
+- ✅ **Interactive Telegram Audit**: Manual trigger button with 2FA code/password input
+- ✅ **Audit History**: View past audit runs with detailed findings
+- ✅ **Employee Management View**: View all team members with status (active/inactive/optional)
+- ✅ **Database Integration**: SQLite database storing employees, audits, findings
+- ✅ **Heroku Deployment**: Production-ready deployment with Gunicorn
+
+**Should Have:**
+- ✅ Session file sharing between webapp and audit script
+- ✅ Real-time progress updates via polling
+- ✅ Background job processing to prevent timeouts
+
+**Could Have:**
+- ⏳ Email notifications for audit failures
+- ⏳ Export audit reports to PDF
+- ⏳ Historical trend charts
+
+**Won't Have (Yet):**
+- ❌ Write operations via UI (employee editing, manual Slack audits)
+- ❌ Offboarding triggers via UI (done via scripts only)
+- ❌ Multi-user authentication (public read-only access)
+
+#### Technical Implementation
+
+**Stack:**
+- **Flask**: Python web framework
+- **SQLite**: Local database (development)
+- **Heroku Postgres**: Production database (ephemeral filesystem on Heroku)
+- **Gunicorn**: WSGI server for production
+- **Heroku Scheduler**: Daily automated audits (free tier)
+
+**Authentication Flow (Telegram):**
+1. User clicks "Run Telegram Audit" button
+2. Backend requests Telegram SMS code
+3. Modal displays code input field
+4. User enters code from Telegram app
+5. If 2FA enabled, prompts for cloud password
+6. Session file saved for reuse
+7. Audit runs in background thread
+8. Results saved to database
+
+**Session Management:**
+- Telegram session file shared between webapp and audit script
+- Stored in project root (`telegram_session.session`)
+- Reused across audit runs to avoid repeated authentication
+
+**Database Schema:**
+- `employees`: Team member data (name, Slack/Telegram handles, status)
+- `audit_runs`: Audit execution records (type, status, timestamps, results)
+- `audit_findings`: Individual channel/group findings (missing members, status)
+- `offboarding_tasks`: Offboarding task tracking (read-only history)
+
+#### User Flow
+
+**Daily Automated Audit:**
+1. Heroku Scheduler triggers at 2:00 AM UTC
+2. Runs `scripts/customer_group_audit.py`
+3. Results saved to database
+4. Webapp displays latest audit on Dashboard
+
+**Manual Telegram Audit:**
+1. User navigates to Audits page
+2. Clicks "✈️ Run Telegram Audit" button
+3. Modal opens requesting authentication
+4. User enters SMS code from Telegram app
+5. If 2FA enabled, enters cloud password
+6. Audit runs in background (Slack + Telegram)
+7. Modal shows progress updates
+8. Results appear in Audit History when complete
+
+#### Deployment
+
+**Heroku Configuration:**
+- **App**: `bitsafe-group-admin`
+- **URL**: https://bitsafe-group-admin-30c4bbdb5186.herokuapp.com/
+- **Scheduler**: Daily job at 2:00 AM UTC
+- **Database**: SQLite (ephemeral) - re-initialized on each deploy
+- **Environment Variables**: `SLACK_USER_TOKEN`, `TELEGRAM_API_ID`, `TELEGRAM_API_HASH`, `TELEGRAM_PHONE`
+
+#### Success Metrics
+
+- **Accessibility**: Dashboard accessible 24/7 for viewing audit results
+- **Audit Frequency**: Daily automated Slack audits catch new channels immediately
+- **User Adoption**: Head of Growth reviews dashboard weekly
+- **Telegram Audit Usage**: On-demand Telegram audits when needed (typically weekly)
+
+#### Dependencies
+
+- **Flask 3.0.0**: Web framework
+- **Telethon 1.36.0**: Telegram API client
+- **APScheduler 3.10.4**: Background job scheduling (not used - Heroku Scheduler instead)
+- **Gunicorn 21.2.0**: Production WSGI server
+- **pandas, openpyxl**: Audit script dependencies
+
+---
+
 ## Non-Functional Requirements
 
 ### Performance
@@ -429,19 +534,20 @@ Unified command-line tool for common Telegram group administration tasks, consol
 
 ## Out of Scope
 
-### V1.0 (Current Release)
-- ❌ Web UI / Dashboard
-- ❌ Automated member invitations
+### V1.0 (Current Release) - Completed
+- ✅ **Web UI / Dashboard** - Built as read-only admin panel (v1.4.2)
+- ❌ Automated member invitations (partially - bulk addition tool exists)
 - ❌ CRM integration
 - ❌ Multi-workspace Slack support
 - ❌ Historical trend analysis
 - ❌ Real-time monitoring/alerts
 
 ### Future Considerations
-- **V2.0**: Automated member management (invite/remove)
-- **V3.0**: Web dashboard with visualizations
-- **V4.0**: CRM integration and customer account mapping
-- **V5.0**: AI-powered insights on customer engagement
+- **V1.5**: Write operations via UI (employee editing, status changes)
+- **V2.0**: Automated member management (invite/remove) via UI
+- **V2.5**: Historical trend analysis and charts
+- **V3.0**: CRM integration and customer account mapping
+- **V4.0**: AI-powered insights on customer engagement
 
 ---
 
@@ -627,6 +733,21 @@ slack-tools/
 
 ### Changelog
 
+- **2025-12-01**: V1.4.2 - Admin Panel Web Application with Interactive Telegram Audit
+  - Built read-only Flask webapp for viewing employees, audits, and reports
+  - Deployed to Heroku: https://bitsafe-group-admin-30c4bbdb5186.herokuapp.com/
+  - Interactive Telegram audit with 2FA support (SMS code + password)
+  - Automated daily Slack audits via Heroku Scheduler (2:00 AM UTC)
+  - SQLite database with 4 tables (employees, audit_runs, audit_findings, offboarding_tasks)
+  - Session file sharing between webapp and audit script
+  - Background job processing for long-running audits
+  - Read-only UI design - all write operations via command-line scripts
+- **2025-12-01**: V1.4.1 - Admin Panel Made Fully Read-Only
+  - Removed all edit/deactivate buttons from Employees page
+  - Removed Actions column entirely
+  - Removed Offboarding tab from navigation (to avoid alarming employees)
+  - Removed all manual audit triggers (audits only via scheduler)
+  - All write operations now done via scripts/database directly
 - **2025-01-19**: V1.1 - Added Feature 4: Bulk Member Addition tool
   - Automates adding team members to all BitSafe Slack channels
   - Dry-run mode for safe testing
