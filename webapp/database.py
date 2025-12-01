@@ -155,7 +155,7 @@ class Database:
                 "telegram_required": False,
             },
             {
-                "name": "Amy Wan",
+                "name": "Amy Wu",
                 "slack_username": "amy",
                 "slack_user_id": "U05J9GZJ70E",
                 "telegram_username": None,
