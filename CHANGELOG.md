@@ -4,6 +4,8 @@ All notable changes to the Slack Tools project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.4.0] - 2025-12-01
+
 ### Added
 - **Admin Panel Web Application**: NEW! Complete web-based admin panel for managing team member access to customer groups
   - Employee management with status tracking (active/inactive/optional)
@@ -18,6 +20,19 @@ All notable changes to the Slack Tools project will be documented in this file.
   - Background scheduler using APScheduler
   - Documentation: `webapp/README.md`, `docs/Admin_Panel_Design.md`, `docs/Admin_Panel_Implementation_Summary.md`
   - Production-ready with Heroku deployment support (Procfile included)
+  - Deployed to Heroku: https://bitsafe-group-admin-30c4bbdb5186.herokuapp.com/
+
+### Fixed
+- **Employee Data Corrections**: Fixed all employee names and contact information
+  - Corrected Gabi's full last name from "Urrutia" to "Tuinaite"
+  - Corrected Mayank's last name from "Pandey" to "Sachdev" and updated Slack user ID (U091F8WHDC3)
+  - Corrected Amy's last name from "Wan" to "Wu"
+  - Added missing Telegram handles: Kevin (@Sw3zz), Aliya (@agordon888)
+  - Fixed Slack display to show full names instead of username handles
+  - Updated Dae Lee status from "optional" to "active" and required in Slack
+  - Verified all 9 employees have correct Slack user IDs matching workspace
+  - Auto-seed database on webapp startup for Heroku ephemeral filesystem
+
 - **Slack User Offboarding Script**: NEW! Complete user deletion workflow script (`scripts/slack_user_delete.py`)
   - Deactivates user account via SCIM API
   - Resets all active sessions
