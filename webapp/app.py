@@ -526,8 +526,10 @@ async def run_telegram_audit(api_id, api_hash, phone):
     global telegram_session_state
     
     try:
-        # Create Telegram client
-        client = TelegramClient('telegram_session_webapp', api_id, api_hash)
+        # Create Telegram client (use same session file name as audit script)
+        # Store session file in project root so audit script can find it
+        session_path = Path(__file__).parent.parent / 'telegram_session'
+        client = TelegramClient(str(session_path), api_id, api_hash)
         await client.connect()
         
         # Check if already authorized
@@ -601,20 +603,26 @@ async def run_telegram_audit(api_id, api_hash, phone):
         # Run the actual audit
         telegram_session_state['message'] = 'Auditing Telegram groups...'
         
-        # Call the audit script
-        result = subprocess.run(
-            ['python3', 'scripts/customer_group_audit.py'],
-            capture_output=True,
-            text=True,
-            cwd=str(Path(__file__).parent.parent)
-        )
+        # Create audit run entry in database
+        conn = db.get_connection()
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO audit_runs (run_type, status)
+            VALUES ('manual', 'running')
+        """)
+        audit_id = cursor.lastrowid
+        conn.commit()
+        conn.close()
         
-        if result.returncode == 0:
-            telegram_session_state['status'] = 'completed'
-            telegram_session_state['message'] = 'Telegram audit completed successfully!'
-        else:
-            telegram_session_state['status'] = 'error'
-            telegram_session_state['error'] = f'Audit failed: {result.stderr}'
+        # Import and run audit using scheduler's job function
+        from scheduler import run_audit_job
+        telegram_session_state['message'] = 'Running full audit (Slack + Telegram)...'
+        
+        # Run audit job (handles Slack + Telegram and saves to DB)
+        run_audit_job(audit_id)
+        
+        telegram_session_state['status'] = 'completed'
+        telegram_session_state['message'] = 'Audit completed successfully! Check the Audit History tab to see results.'
         
         await client.disconnect()
         
