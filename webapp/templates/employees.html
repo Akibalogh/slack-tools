@@ -27,7 +27,6 @@
                 <th>Telegram</th>
                 <th>Status</th>
                 <th>Required In</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -60,11 +59,6 @@
                     {% if employee.slack_required and employee.telegram_required %}, {% endif %}
                     {% if employee.telegram_required %}Telegram{% endif %}
                     {% if not employee.slack_required and not employee.telegram_required %}-{% endif %}
-                </td>
-                <td>
-                    <!-- Edit and status change buttons hidden - webapp is read-only -->
-                    <!-- Use command-line scripts to manage employees -->
-                    -
                 </td>
             </tr>
             {% endfor %}
