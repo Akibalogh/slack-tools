@@ -15,6 +15,23 @@ app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY', 'dev-secret-key-change-
 # Initialize database
 db = Database()
 
+# Auto-seed database if empty (for Heroku ephemeral filesystem)
+def ensure_data_seeded():
+    """Ensure database has employee data on startup"""
+    conn = db.get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT COUNT(*) FROM employees")
+    count = cursor.fetchone()[0]
+    conn.close()
+    
+    if count == 0:
+        print("🌱 Database empty, seeding initial data...")
+        db.seed_initial_data()
+        print("✅ Seeding complete")
+
+# Seed data on startup
+ensure_data_seeded()
+
 # ============================================================================
 # Dashboard Routes
 # ============================================================================
