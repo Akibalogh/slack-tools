@@ -135,9 +135,9 @@ class Database:
                 "telegram_required": False,
             },
             {
-                "name": "Mayank Pandey",
+                "name": "Mayank Sachdev",
                 "slack_username": "mayank",
-                "slack_user_id": "U04PBFZJJ9R",
+                "slack_user_id": "U091F8WHDC3",
                 "telegram_username": "mojo_onchain",
                 "email": "mayank@bitsafe.finance",
                 "status": "active",
