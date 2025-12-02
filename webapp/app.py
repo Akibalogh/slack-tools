@@ -23,61 +23,94 @@ db = Database()
 # Telegram audit session state helpers (database-backed for multi-worker support)
 def get_telegram_status():
     """Get Telegram audit status from database"""
-    conn = db.get_connection()
-    cursor = conn.cursor()
-    db.execute_query(cursor, "SELECT status, message, error, code, password FROM telegram_audit_status WHERE id = 1")
-    row = cursor.fetchone()
-    conn.close()
-    
-    if row:
-        return {
-            'status': row[0] or 'idle',
-            'message': row[1] or '',
-            'error': row[2],
-            'code': row[3],
-            'password': row[4]
-        }
-    return {'status': 'idle', 'message': '', 'error': None, 'code': None, 'password': None}
+    conn = None
+    try:
+        conn = db.get_connection()
+        cursor = conn.cursor()
+        db.execute_query(cursor, "SELECT status, message, error, code, password FROM telegram_audit_status WHERE id = 1")
+        row = cursor.fetchone()
+        
+        if row:
+            return {
+                'status': row[0] or 'idle',
+                'message': row[1] or '',
+                'error': row[2],
+                'code': row[3],
+                'password': row[4]
+            }
+        return {'status': 'idle', 'message': '', 'error': None, 'code': None, 'password': None}
+    except Exception as e:
+        if conn:
+            conn.rollback()
+        # Return default state on error
+        return {'status': 'idle', 'message': '', 'error': str(e), 'code': None, 'password': None}
+    finally:
+        if conn:
+            conn.close()
 
 def set_telegram_status(status, message='', error=None):
     """Update Telegram audit status in database"""
-    conn = db.get_connection()
-    cursor = conn.cursor()
-    db.execute_query(cursor, """
-        UPDATE telegram_audit_status 
-        SET status = ?, message = ?, error = ?, updated_at = CURRENT_TIMESTAMP
-        WHERE id = 1
-    """, (status, message, error))
-    conn.commit()
-    conn.close()
+    conn = None
+    try:
+        conn = db.get_connection()
+        cursor = conn.cursor()
+        db.execute_query(cursor, """
+            UPDATE telegram_audit_status 
+            SET status = ?, message = ?, error = ?, updated_at = CURRENT_TIMESTAMP
+            WHERE id = 1
+        """, (status, message, error))
+        conn.commit()
+    except Exception as e:
+        if conn:
+            conn.rollback()
+        raise e
+    finally:
+        if conn:
+            conn.close()
 
 def get_telegram_code():
     """Get stored code from database and clear it"""
-    conn = db.get_connection()
-    cursor = conn.cursor()
-    db.execute_query(cursor, "SELECT code FROM telegram_audit_status WHERE id = 1")
-    row = cursor.fetchone()
-    code = row[0] if row and row[0] else None
-    if code:
-        # Clear code after reading
-        db.execute_query(cursor, "UPDATE telegram_audit_status SET code = NULL WHERE id = 1")
-        conn.commit()
-    conn.close()
-    return code
+    conn = None
+    try:
+        conn = db.get_connection()
+        cursor = conn.cursor()
+        db.execute_query(cursor, "SELECT code FROM telegram_audit_status WHERE id = 1")
+        row = cursor.fetchone()
+        code = row[0] if row and row[0] else None
+        if code:
+            # Clear code after reading
+            db.execute_query(cursor, "UPDATE telegram_audit_status SET code = NULL WHERE id = 1")
+            conn.commit()
+        return code
+    except Exception as e:
+        if conn:
+            conn.rollback()
+        raise e
+    finally:
+        if conn:
+            conn.close()
 
 def get_telegram_password():
     """Get stored password from database and clear it"""
-    conn = db.get_connection()
-    cursor = conn.cursor()
-    db.execute_query(cursor, "SELECT password FROM telegram_audit_status WHERE id = 1")
-    row = cursor.fetchone()
-    password = row[0] if row and row[0] else None
-    if password:
-        # Clear password after reading
-        db.execute_query(cursor, "UPDATE telegram_audit_status SET password = NULL WHERE id = 1")
-        conn.commit()
-    conn.close()
-    return password
+    conn = None
+    try:
+        conn = db.get_connection()
+        cursor = conn.cursor()
+        db.execute_query(cursor, "SELECT password FROM telegram_audit_status WHERE id = 1")
+        row = cursor.fetchone()
+        password = row[0] if row and row[0] else None
+        if password:
+            # Clear password after reading
+            db.execute_query(cursor, "UPDATE telegram_audit_status SET password = NULL WHERE id = 1")
+            conn.commit()
+        return password
+    except Exception as e:
+        if conn:
+            conn.rollback()
+        raise e
+    finally:
+        if conn:
+            conn.close()
 
 # In-memory storage for client objects (not shared across workers, but needed for auth flow)
 telegram_client_storage = {}

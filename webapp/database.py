@@ -54,6 +54,33 @@ class Database:
             cursor.execute(query, params)
         else:
             cursor.execute(query)
+    
+    def safe_execute(self, query, params=None, fetch_one=False, fetch_all=False):
+        """
+        Execute a query with automatic transaction handling and error recovery.
+        Returns: result of query if fetch_one or fetch_all is True, None otherwise
+        """
+        conn = None
+        try:
+            conn = self.get_connection()
+            cursor = conn.cursor()
+            self.execute_query(cursor, query, params)
+            
+            result = None
+            if fetch_one:
+                result = cursor.fetchone()
+            elif fetch_all:
+                result = cursor.fetchall()
+            
+            conn.commit()
+            return result
+        except Exception as e:
+            if conn:
+                conn.rollback()
+            raise e
+        finally:
+            if conn:
+                conn.close()
 
     def init_db(self):
         """Initialize database schema"""

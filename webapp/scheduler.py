@@ -40,27 +40,29 @@ def run_audit_job(audit_id=None):
     """
     logger.info("🔍 Starting scheduled audit job")
     
-    conn = db.get_connection()
-    cursor = conn.cursor()
-    
-    # Create audit run record if not provided
-    if audit_id is None:
-        db.execute_query(cursor, """
-            INSERT INTO audit_runs (run_type, status)
-            VALUES ('scheduled', 'running')
-        """)
-        audit_id = cursor.lastrowid
-        conn.commit()
-    else:
-        # Update existing audit to running
-        db.execute_query(cursor, """
-            UPDATE audit_runs 
-            SET status = 'running', started_at = CURRENT_TIMESTAMP
-            WHERE id = ?
-        """, (audit_id,))
-        conn.commit()
+    conn = None
+    cursor = None
     
     try:
+        conn = db.get_connection()
+        cursor = conn.cursor()
+        
+        # Create audit run record if not provided
+        if audit_id is None:
+            db.execute_query(cursor, """
+                INSERT INTO audit_runs (run_type, status)
+                VALUES ('scheduled', 'running')
+            """)
+            audit_id = cursor.lastrowid
+            conn.commit()
+        else:
+            # Update existing audit to running
+            db.execute_query(cursor, """
+                UPDATE audit_runs 
+                SET status = 'running', started_at = CURRENT_TIMESTAMP
+                WHERE id = ?
+            """, (audit_id,))
+            conn.commit()
         # Get current active and required members from database
         db.execute_query(cursor, """
             SELECT slack_username, telegram_username 
@@ -127,17 +129,22 @@ def run_audit_job(audit_id=None):
         
     except Exception as e:
         logger.error(f"❌ Audit failed: {str(e)}")
-        db.execute_query(cursor, """
-            UPDATE audit_runs 
-            SET status = 'failed',
-                completed_at = CURRENT_TIMESTAMP,
-                error_message = ?
-            WHERE id = ?
-        """, (str(e), audit_id))
-        conn.commit()
+        try:
+            db.execute_query(cursor, """
+                UPDATE audit_runs 
+                SET status = 'failed',
+                    completed_at = CURRENT_TIMESTAMP,
+                    error_message = ?
+                WHERE id = ?
+            """, (str(e), audit_id))
+            conn.commit()
+        except Exception as update_error:
+            logger.error(f"Failed to update audit status: {update_error}")
+            conn.rollback()
     
     finally:
-        conn.close()
+        if conn:
+            conn.close()
 
 
 def parse_audit_output(output):
@@ -174,25 +181,33 @@ def parse_audit_output(output):
 
 def save_audit_results(audit_id, results, report_path):
     """Save audit findings to database"""
-    conn = db.get_connection()
-    cursor = conn.cursor()
-    
-    for channel in results.get('incomplete_channels', []):
-        db.execute_query(cursor, """
-            INSERT INTO audit_findings 
-            (audit_run_id, platform, channel_name, channel_id, missing_members, status)
-            VALUES (?, ?, ?, ?, ?, ?)
-        """, (
-            audit_id,
-            channel.get('platform', 'slack'),
-            channel.get('name'),
-            channel.get('id'),
-            json.dumps(channel.get('missing', [])),
-            channel.get('status', 'incomplete')
-        ))
-    
-    conn.commit()
-    conn.close()
+    conn = None
+    try:
+        conn = db.get_connection()
+        cursor = conn.cursor()
+        
+        for channel in results.get('incomplete_channels', []):
+            db.execute_query(cursor, """
+                INSERT INTO audit_findings 
+                (audit_run_id, platform, channel_name, channel_id, missing_members, status)
+                VALUES (?, ?, ?, ?, ?, ?)
+            """, (
+                audit_id,
+                channel.get('platform', 'slack'),
+                channel.get('name'),
+                channel.get('id'),
+                json.dumps(channel.get('missing', [])),
+                channel.get('status', 'incomplete')
+            ))
+        
+        conn.commit()
+    except Exception as e:
+        if conn:
+            conn.rollback()
+        raise e
+    finally:
+        if conn:
+            conn.close()
 
 
 # ============================================================================
@@ -205,26 +220,28 @@ def run_offboarding_job(task_id, employee_id, platform='both'):
     """
     logger.info(f"🚪 Starting offboarding job for employee {employee_id}")
     
-    conn = db.get_connection()
-    cursor = conn.cursor()
-    
-    # Get employee details
-    db.execute_query(cursor, "SELECT * FROM employees WHERE id = ?", (employee_id,))
-    employee = cursor.fetchone()
-    
-    if not employee:
-        logger.error(f"Employee {employee_id} not found")
-        return
-    
-    # Update task status
-    db.execute_query(cursor, """
-        UPDATE offboarding_tasks 
-        SET status = 'running', started_at = CURRENT_TIMESTAMP
-        WHERE id = ?
-    """, (task_id,))
-    conn.commit()
+    conn = None
+    cursor = None
     
     try:
+        conn = db.get_connection()
+        cursor = conn.cursor()
+        
+        # Get employee details
+        db.execute_query(cursor, "SELECT * FROM employees WHERE id = ?", (employee_id,))
+        employee = cursor.fetchone()
+        
+        if not employee:
+            logger.error(f"Employee {employee_id} not found")
+            return
+        
+        # Update task status
+        db.execute_query(cursor, """
+            UPDATE offboarding_tasks 
+            SET status = 'running', started_at = CURRENT_TIMESTAMP
+            WHERE id = ?
+        """, (task_id,))
+        conn.commit()
         results = {
             'groups_processed': 0,
             'groups_removed': 0,
@@ -298,17 +315,23 @@ def run_offboarding_job(task_id, employee_id, platform='both'):
         
     except Exception as e:
         logger.error(f"❌ Offboarding failed: {str(e)}")
-        db.execute_query(cursor, """
-            UPDATE offboarding_tasks 
-            SET status = 'failed',
-                completed_at = CURRENT_TIMESTAMP,
-                error_message = ?
-            WHERE id = ?
-        """, (str(e), task_id))
-        conn.commit()
+        try:
+            db.execute_query(cursor, """
+                UPDATE offboarding_tasks 
+                SET status = 'failed',
+                    completed_at = CURRENT_TIMESTAMP,
+                    error_message = ?
+                WHERE id = ?
+            """, (str(e), task_id))
+            conn.commit()
+        except Exception as update_error:
+            logger.error(f"Failed to update offboarding status: {update_error}")
+            if conn:
+                conn.rollback()
     
     finally:
-        conn.close()
+        if conn:
+            conn.close()
 
 
 def parse_telegram_output(output):
