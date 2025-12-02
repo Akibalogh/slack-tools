@@ -3,7 +3,7 @@
 ## Overview
 Web application for **viewing** team member access to customer Slack channels and Telegram groups, with automated daily audits. This is a **read-only reporting interface** - all write operations (employee management, manual audits, offboarding) are handled via command-line scripts.
 
-## Current Status (v1.4.2)
+## Current Status (v1.4.3)
 The webapp is deployed as a **read-only dashboard** with one interactive feature:
 - ✅ **View** employees, audits, and reports
 - ✅ **Telegram Audit**: Interactive button to manually trigger Telegram audit with 2FA support
@@ -16,9 +16,18 @@ The webapp is deployed as a **read-only dashboard** with one interactive feature
 
 ### Components
 1. **Flask Web Application** - Admin UI
-2. **SQLite Database** - Employee & audit data
-3. **APScheduler** - Automated daily audits
+2. **Heroku Postgres Database** - Employee & audit data (persistent storage)
+3. **Heroku Scheduler** - Automated daily audits at 2:00 AM UTC
 4. **Integration Layer** - Connects to existing scripts
+
+### Database (Heroku Postgres)
+- **Production**: Heroku Postgres Essential-0 plan (persistent)
+- **Local Dev**: SQLite fallback for development
+- **Key Features**:
+  - RealDictCursor for dictionary-like row access
+  - Automatic transaction rollback on errors
+  - Proper error handling with try-except-finally blocks
+  - All data persists across dyno restarts
 
 ### Database Schema
 

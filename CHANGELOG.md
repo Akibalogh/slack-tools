@@ -13,6 +13,13 @@ All notable changes to the Slack Tools project will be documented in this file.
   - Added safe_execute method to Database class for automatic error handling
   - Fixed Telegram audit failures caused by unhandled transaction errors
   - Updated scheduler audit and offboarding functions with proper error recovery
+  
+- **Postgres Row Access**: Fixed "Internal Server Error" caused by row access incompatibility
+  - Implemented RealDictCursor for Postgres to return dictionary-like rows
+  - Added get_cursor() method to Database class for proper cursor creation
+  - Updated all COUNT(*) queries to use named columns for consistent access
+  - Fixed TypeError when accessing query results with dictionary keys
+  - Fixed KeyError in seed and startup functions
 
 ## [1.4.2] - 2025-12-02
 
