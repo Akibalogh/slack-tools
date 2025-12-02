@@ -10,11 +10,30 @@ All notable changes to the Slack Tools project will be documented in this file.
   - Manual Telegram Audits section: On-demand Telegram-only audits
   - Improved clarity with distinct headers and coverage metrics for each type
 
+- **Audit Management CLI**: New tool for managing audit lifecycle
+  - `scripts/manage_audits.py` with commands: list, cancel, cancel-all, cleanup
+  - List audits with filtering by status
+  - Cancel individual or all running/stuck audits
+  - Cleanup Telegram session locks and reset status
+  - Usage: `heroku run --app APP_NAME "python scripts/manage_audits.py COMMAND"`
+
 ### Fixed
+- **Database-Backed Telegram Sessions**: Eliminated session file locking issues
+  - Replace file-based sessions with StringSession stored in Postgres database
+  - Add session_string column to telegram_audit_status table
+  - Telegram audits via web UI now work reliably on Heroku
+  - No more "database is locked" errors
+  - Sessions persist across deployments and workers
+
 - **Postgres INSERT ID Retrieval**: Fixed critical bug where audit completion status wasn't being updated
   - Replace `cursor.lastrowid` (returns 0 in Postgres) with `RETURNING id` clause
   - Ensures audit results are properly saved to the correct audit record
   - Fixes audits completing successfully but showing as "running" forever
+
+- **Code Quality**: Fixed linting errors
+  - Removed unused imports from webapp files
+  - Formatted scripts/manage_audits.py with black and isort
+  - All CI linting checks now pass
 
 ## [1.4.3] - 2025-12-02
 
