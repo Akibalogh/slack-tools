@@ -2,7 +2,6 @@
 Scheduler for automated audits and offboarding tasks
 Integrates with existing scripts in /scripts directory
 """
-import os
 import sys
 import json
 import subprocess
@@ -63,14 +62,6 @@ def run_audit_job(audit_id=None):
                 WHERE id = ?
             """, (audit_id,))
             conn.commit()
-        # Get current active and required members from database
-        db.execute_query(cursor, """
-            SELECT slack_username, telegram_username 
-            FROM employees 
-            WHERE status = 'active' AND (slack_required = TRUE OR telegram_required = TRUE)
-        """)
-        active_members = cursor.fetchall()
-        
         # Run the audit script
         script_path = PROJECT_ROOT / "scripts" / "customer_group_audit.py"
         output_dir = PROJECT_ROOT / "output" / "reports"

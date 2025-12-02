@@ -3,9 +3,6 @@ Flask Admin Panel for Customer Group Access Management
 Read-only dashboard - no authentication required
 """
 import os
-import json
-import subprocess
-from datetime import datetime
 from pathlib import Path
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 from database import Database
