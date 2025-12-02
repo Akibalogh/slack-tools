@@ -31,6 +31,8 @@ class Database:
         """Get database connection"""
         if self.is_postgres:
             conn = psycopg2.connect(self.db_url)
+            # Use RealDictCursor to return dict-like rows instead of tuples
+            conn.cursor_factory = psycopg2.extras.RealDictCursor
             return conn
         else:
             # Fallback to sqlite for local dev
