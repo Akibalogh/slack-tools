@@ -642,39 +642,49 @@ async def main():
 
     # Step 4: Generate report
     auditor.generate_report()
-    
+
     # Step 5: Output JSON results for webapp parsing
-    slack_results = [r for r in auditor.audit_results if r.get('Platform') == 'Slack']
-    telegram_results = [r for r in auditor.audit_results if r.get('Platform') == 'Telegram']
-    
+    slack_results = [r for r in auditor.audit_results if r.get("Platform") == "Slack"]
+    telegram_results = [
+        r for r in auditor.audit_results if r.get("Platform") == "Telegram"
+    ]
+
     incomplete_channels = [
         {
-            'platform': r.get('Platform', '').lower(),
-            'name': r.get('Group Name', ''),
-            'id': r.get('Group ID', ''),
-            'missing': r.get('Missing Members', '').split(', ') if r.get('Missing Members') else [],
-            'status': 'incomplete' if r.get('Missing Members') else 'complete'
+            "platform": r.get("Platform", "").lower(),
+            "name": r.get("Group Name", ""),
+            "id": r.get("Group ID", ""),
+            "missing": (
+                r.get("Missing Members", "").split(", ")
+                if r.get("Missing Members")
+                else []
+            ),
+            "status": "incomplete" if r.get("Missing Members") else "complete",
         }
         for r in auditor.audit_results
-        if r.get('Missing Members')
+        if r.get("Missing Members")
     ]
-    
+
     json_output = {
-        'slack_total': len(slack_results),
-        'slack_complete': len([r for r in slack_results if not r.get('Missing Members')]),
-        'telegram_total': len(telegram_results),
-        'telegram_complete': len([r for r in telegram_results if not r.get('Missing Members')]),
-        'incomplete_channels': incomplete_channels,
-        'slack_channels': slack_results,
-        'telegram_groups': telegram_results
+        "slack_total": len(slack_results),
+        "slack_complete": len(
+            [r for r in slack_results if not r.get("Missing Members")]
+        ),
+        "telegram_total": len(telegram_results),
+        "telegram_complete": len(
+            [r for r in telegram_results if not r.get("Missing Members")]
+        ),
+        "incomplete_channels": incomplete_channels,
+        "slack_channels": slack_results,
+        "telegram_groups": telegram_results,
     }
-    
+
     # Output in parseable format for webapp
-    print("\n" + "="*80)
+    print("\n" + "=" * 80)
     print("AUDIT_RESULTS_JSON_START")
     print(json.dumps(json_output, indent=2))
     print("AUDIT_RESULTS_JSON_END")
-    print("="*80)
+    print("=" * 80)
 
 
 if __name__ == "__main__":

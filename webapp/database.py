@@ -1,10 +1,12 @@
 """
 Database setup and models for Admin Panel
 """
+
 import os
+from pathlib import Path
+
 import psycopg2
 import psycopg2.extras
-from pathlib import Path
 
 
 class Database:
@@ -12,17 +14,17 @@ class Database:
         """Initialize database connection"""
         if db_url is None:
             # Use Heroku DATABASE_URL or local sqlite fallback
-            db_url = os.environ.get('DATABASE_URL')
+            db_url = os.environ.get("DATABASE_URL")
             if not db_url:
                 # Local development fallback (though we now prefer Postgres)
                 project_root = Path(__file__).parent.parent
                 db_path = project_root / "data" / "admin_panel.db"
                 db_url = f"file:{db_path}"
-        
+
         # Fix for Heroku postgres:// -> postgresql://
         if db_url and db_url.startswith("postgres://"):
             db_url = db_url.replace("postgres://", "postgresql://", 1)
-        
+
         self.db_url = db_url
         self.is_postgres = db_url and db_url.startswith("postgresql://")
         self.init_db()
@@ -35,21 +37,22 @@ class Database:
         else:
             # Fallback to sqlite for local dev
             import sqlite3
+
             conn = sqlite3.connect(self.db_url.replace("file:", ""))
             conn.row_factory = sqlite3.Row
             return conn
-    
+
     def get_cursor(self, conn):
         """Get a cursor with appropriate row factory"""
         if self.is_postgres:
             return conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         else:
             return conn.cursor()
-    
+
     def param_placeholder(self):
         """Get the correct parameter placeholder for the database type"""
         return "%s" if self.is_postgres else "?"
-    
+
     def execute_query(self, cursor, query, params=None):
         """Execute a query with the correct parameter placeholder"""
         if self.is_postgres:
@@ -61,7 +64,7 @@ class Database:
             cursor.execute(query, params)
         else:
             cursor.execute(query)
-    
+
     def safe_execute(self, query, params=None, fetch_one=False, fetch_all=False):
         """
         Execute a query with automatic transaction handling and error recovery.
@@ -72,13 +75,13 @@ class Database:
             conn = self.get_connection()
             cursor = self.get_cursor(conn) if self.is_postgres else conn.cursor()
             self.execute_query(cursor, query, params)
-            
+
             result = None
             if fetch_one:
                 result = cursor.fetchone()
             elif fetch_all:
                 result = cursor.fetchall()
-            
+
             conn.commit()
             return result
         except Exception as e:
@@ -97,7 +100,8 @@ class Database:
         if self.is_postgres:
             # Postgres-specific schema
             # Employees table
-            cursor.execute("""
+            cursor.execute(
+                """
                 CREATE TABLE IF NOT EXISTS employees (
                     id SERIAL PRIMARY KEY,
                     name TEXT NOT NULL,
@@ -111,10 +115,12 @@ class Database:
                     created_at TIMESTAMP DEFAULT NOW(),
                     updated_at TIMESTAMP DEFAULT NOW()
                 )
-            """)
+            """
+            )
 
             # Audit runs table
-            cursor.execute("""
+            cursor.execute(
+                """
                 CREATE TABLE IF NOT EXISTS audit_runs (
                     id SERIAL PRIMARY KEY,
                     run_type TEXT NOT NULL,
@@ -128,10 +134,12 @@ class Database:
                     report_path TEXT,
                     error_message TEXT
                 )
-            """)
+            """
+            )
 
             # Audit findings table
-            cursor.execute("""
+            cursor.execute(
+                """
                 CREATE TABLE IF NOT EXISTS audit_findings (
                     id SERIAL PRIMARY KEY,
                     audit_run_id INTEGER NOT NULL,
@@ -143,10 +151,12 @@ class Database:
                     created_at TIMESTAMP DEFAULT NOW(),
                     FOREIGN KEY (audit_run_id) REFERENCES audit_runs(id)
                 )
-            """)
+            """
+            )
 
             # Offboarding tasks table
-            cursor.execute("""
+            cursor.execute(
+                """
                 CREATE TABLE IF NOT EXISTS offboarding_tasks (
                     id SERIAL PRIMARY KEY,
                     employee_id INTEGER NOT NULL,
@@ -162,10 +172,12 @@ class Database:
                     created_at TIMESTAMP DEFAULT NOW(),
                     FOREIGN KEY (employee_id) REFERENCES employees(id)
                 )
-            """)
+            """
+            )
 
             # Telegram audit status table (single row to track current status across workers)
-            cursor.execute("""
+            cursor.execute(
+                """
                 CREATE TABLE IF NOT EXISTS telegram_audit_status (
                     id INTEGER PRIMARY KEY CHECK (id = 1),
                     status TEXT NOT NULL DEFAULT 'idle',
@@ -176,19 +188,24 @@ class Database:
                     session_string TEXT,
                     updated_at TIMESTAMP DEFAULT NOW()
                 )
-            """)
-            
+            """
+            )
+
             # Insert initial row if it doesn't exist (Postgres syntax)
-            self.execute_query(cursor, """
+            self.execute_query(
+                cursor,
+                """
                 INSERT INTO telegram_audit_status (id, status, message)
                 VALUES (1, 'idle', '')
                 ON CONFLICT (id) DO NOTHING
-            """)
-            
+            """,
+            )
+
         else:
             # SQLite-specific schema (local dev fallback)
             # Employees table
-            cursor.execute("""
+            cursor.execute(
+                """
                 CREATE TABLE IF NOT EXISTS employees (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     name TEXT NOT NULL,
@@ -202,10 +219,12 @@ class Database:
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )
-            """)
+            """
+            )
 
             # Audit runs table
-            cursor.execute("""
+            cursor.execute(
+                """
                 CREATE TABLE IF NOT EXISTS audit_runs (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     run_type TEXT NOT NULL,
@@ -219,10 +238,12 @@ class Database:
                     report_path TEXT,
                     error_message TEXT
                 )
-            """)
+            """
+            )
 
             # Audit findings table
-            cursor.execute("""
+            cursor.execute(
+                """
                 CREATE TABLE IF NOT EXISTS audit_findings (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     audit_run_id INTEGER NOT NULL,
@@ -234,10 +255,12 @@ class Database:
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     FOREIGN KEY (audit_run_id) REFERENCES audit_runs(id)
                 )
-            """)
+            """
+            )
 
             # Offboarding tasks table
-            cursor.execute("""
+            cursor.execute(
+                """
                 CREATE TABLE IF NOT EXISTS offboarding_tasks (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     employee_id INTEGER NOT NULL,
@@ -253,10 +276,12 @@ class Database:
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     FOREIGN KEY (employee_id) REFERENCES employees(id)
                 )
-            """)
+            """
+            )
 
             # Telegram audit status table (single row to track current status across workers)
-            cursor.execute("""
+            cursor.execute(
+                """
                 CREATE TABLE IF NOT EXISTS telegram_audit_status (
                     id INTEGER PRIMARY KEY CHECK (id = 1),
                     status TEXT NOT NULL DEFAULT 'idle',
@@ -267,13 +292,16 @@ class Database:
                     session_string TEXT,
                     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )
-            """)
-            
+            """
+            )
+
             # Insert initial row if it doesn't exist (SQLite syntax)
-            cursor.execute("""
+            cursor.execute(
+                """
                 INSERT OR IGNORE INTO telegram_audit_status (id, status, message)
                 VALUES (1, 'idle', '')
-            """)
+            """
+            )
 
         conn.commit()
         conn.close()
@@ -286,7 +314,7 @@ class Database:
         # Check if already seeded
         cursor.execute("SELECT COUNT(*) as count FROM employees")
         row = cursor.fetchone()
-        count = row['count'] if isinstance(row, dict) else row[0]
+        count = row["count"] if isinstance(row, dict) else row[0]
         if count > 0:
             print("⚠️  Database already contains employees. Skipping seed.")
             conn.close()
@@ -449,4 +477,3 @@ if __name__ == "__main__":
     print("\n🌱 Seeding initial data...")
     db.seed_initial_data()
     print("✅ Database ready!")
-
