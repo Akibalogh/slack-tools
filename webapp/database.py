@@ -179,7 +179,7 @@ class Database:
             """)
             
             # Insert initial row if it doesn't exist (Postgres syntax)
-            db.execute_query(cursor, """
+            self.execute_query(cursor, """
                 INSERT INTO telegram_audit_status (id, status, message)
                 VALUES (1, 'idle', '')
                 ON CONFLICT (id) DO NOTHING
