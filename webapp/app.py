@@ -76,7 +76,8 @@ def get_telegram_code():
         cursor = db.get_cursor(conn)
         db.execute_query(cursor, "SELECT code FROM telegram_audit_status WHERE id = 1")
         row = cursor.fetchone()
-        code = row[0] if row and row[0] else None
+        row_dict = dict(row) if row and not isinstance(row, dict) else row
+        code = row_dict.get('code') if row_dict else None
         if code:
             # Clear code after reading
             db.execute_query(cursor, "UPDATE telegram_audit_status SET code = NULL WHERE id = 1")
@@ -98,7 +99,8 @@ def get_telegram_password():
         cursor = db.get_cursor(conn)
         db.execute_query(cursor, "SELECT password FROM telegram_audit_status WHERE id = 1")
         row = cursor.fetchone()
-        password = row[0] if row and row[0] else None
+        row_dict = dict(row) if row and not isinstance(row, dict) else row
+        password = row_dict.get('password') if row_dict else None
         if password:
             # Clear password after reading
             db.execute_query(cursor, "UPDATE telegram_audit_status SET password = NULL WHERE id = 1")
