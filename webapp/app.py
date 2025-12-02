@@ -29,12 +29,14 @@ def get_telegram_status():
         row = cursor.fetchone()
         
         if row:
+            # Access by key for RealDictCursor compatibility
+            row_dict = dict(row) if not isinstance(row, dict) else row
             return {
-                'status': row[0] or 'idle',
-                'message': row[1] or '',
-                'error': row[2],
-                'code': row[3],
-                'password': row[4]
+                'status': row_dict.get('status') or 'idle',
+                'message': row_dict.get('message') or '',
+                'error': row_dict.get('error'),
+                'code': row_dict.get('code'),
+                'password': row_dict.get('password')
             }
         return {'status': 'idle', 'message': '', 'error': None, 'code': None, 'password': None}
     except Exception as e:
