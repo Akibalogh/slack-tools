@@ -7,6 +7,7 @@ Web application for **viewing** team member access to customer Slack channels an
 The webapp is deployed as a **read-only dashboard** with one interactive feature:
 - ✅ **View** employees, audits, and reports
 - ✅ **Telegram Audit**: Interactive button to manually trigger Telegram audit with 2FA support
+- ✅ **Separated Audit History**: Scheduled audits (Slack + Telegram) and manual audits (Telegram-only) shown in separate sections
 - ❌ No Slack manual audit triggers (Slack audits run via Heroku Scheduler at 2:00 AM UTC daily)
 - ❌ No employee editing/status changes (managed via scripts/database)
 - ❌ No offboarding triggers (done via command-line scripts)
