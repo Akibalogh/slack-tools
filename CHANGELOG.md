@@ -10,6 +10,12 @@ All notable changes to the Slack Tools project will be documented in this file.
   - Manual Telegram Audits section: On-demand Telegram-only audits
   - Improved clarity with distinct headers and coverage metrics for each type
 
+### Fixed
+- **Postgres INSERT ID Retrieval**: Fixed critical bug where audit completion status wasn't being updated
+  - Replace `cursor.lastrowid` (returns 0 in Postgres) with `RETURNING id` clause
+  - Ensures audit results are properly saved to the correct audit record
+  - Fixes audits completing successfully but showing as "running" forever
+
 ## [1.4.3] - 2025-12-02
 
 ### Fixed
