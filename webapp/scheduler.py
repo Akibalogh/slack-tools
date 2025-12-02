@@ -45,7 +45,7 @@ def run_audit_job(audit_id=None):
     
     # Create audit run record if not provided
     if audit_id is None:
-        cursor.execute("""
+        db.execute_query(cursor, """
             INSERT INTO audit_runs (run_type, status)
             VALUES ('scheduled', 'running')
         """)
@@ -53,7 +53,7 @@ def run_audit_job(audit_id=None):
         conn.commit()
     else:
         # Update existing audit to running
-        cursor.execute("""
+        db.execute_query(cursor, """
             UPDATE audit_runs 
             SET status = 'running', started_at = CURRENT_TIMESTAMP
             WHERE id = ?
@@ -62,7 +62,7 @@ def run_audit_job(audit_id=None):
     
     try:
         # Get current active and required members from database
-        cursor.execute("""
+        db.execute_query(cursor, """
             SELECT slack_username, telegram_username 
             FROM employees 
             WHERE status = 'active' AND (slack_required = 1 OR telegram_required = 1)
@@ -103,7 +103,7 @@ def run_audit_job(audit_id=None):
         save_audit_results(audit_id, audit_results, str(report_path))
         
         # Update audit run status
-        cursor.execute("""
+        db.execute_query(cursor, """
             UPDATE audit_runs 
             SET status = 'completed',
                 completed_at = CURRENT_TIMESTAMP,
@@ -127,7 +127,7 @@ def run_audit_job(audit_id=None):
         
     except Exception as e:
         logger.error(f"❌ Audit failed: {str(e)}")
-        cursor.execute("""
+        db.execute_query(cursor, """
             UPDATE audit_runs 
             SET status = 'failed',
                 completed_at = CURRENT_TIMESTAMP,
@@ -178,7 +178,7 @@ def save_audit_results(audit_id, results, report_path):
     cursor = conn.cursor()
     
     for channel in results.get('incomplete_channels', []):
-        cursor.execute("""
+        db.execute_query(cursor, """
             INSERT INTO audit_findings 
             (audit_run_id, platform, channel_name, channel_id, missing_members, status)
             VALUES (?, ?, ?, ?, ?, ?)
@@ -209,7 +209,7 @@ def run_offboarding_job(task_id, employee_id, platform='both'):
     cursor = conn.cursor()
     
     # Get employee details
-    cursor.execute("SELECT * FROM employees WHERE id = ?", (employee_id,))
+    db.execute_query(cursor, "SELECT * FROM employees WHERE id = ?", (employee_id,))
     employee = cursor.fetchone()
     
     if not employee:
@@ -217,7 +217,7 @@ def run_offboarding_job(task_id, employee_id, platform='both'):
         return
     
     # Update task status
-    cursor.execute("""
+    db.execute_query(cursor, """
         UPDATE offboarding_tasks 
         SET status = 'running', started_at = CURRENT_TIMESTAMP
         WHERE id = ?
@@ -278,7 +278,7 @@ def run_offboarding_job(task_id, employee_id, platform='both'):
                 raise Exception(f"Telegram offboarding failed: {result.stderr}")
         
         # Update task as completed
-        cursor.execute("""
+        db.execute_query(cursor, """
             UPDATE offboarding_tasks 
             SET status = 'completed',
                 completed_at = CURRENT_TIMESTAMP,
@@ -298,7 +298,7 @@ def run_offboarding_job(task_id, employee_id, platform='both'):
         
     except Exception as e:
         logger.error(f"❌ Offboarding failed: {str(e)}")
-        cursor.execute("""
+        db.execute_query(cursor, """
             UPDATE offboarding_tasks 
             SET status = 'failed',
                 completed_at = CURRENT_TIMESTAMP,

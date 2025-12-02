@@ -2,129 +2,241 @@
 Database setup and models for Admin Panel
 """
 import os
-import sqlite3
-from datetime import datetime
+import psycopg2
+import psycopg2.extras
 from pathlib import Path
 
 
 class Database:
-    def __init__(self, db_path=None):
+    def __init__(self, db_url=None):
         """Initialize database connection"""
-        if db_path is None:
-            # Use absolute path relative to project root
-            project_root = Path(__file__).parent.parent
-            db_path = project_root / "data" / "admin_panel.db"
-        self.db_path = str(db_path)
-        Path(self.db_path).parent.mkdir(parents=True, exist_ok=True)
+        if db_url is None:
+            # Use Heroku DATABASE_URL or local sqlite fallback
+            db_url = os.environ.get('DATABASE_URL')
+            if not db_url:
+                # Local development fallback (though we now prefer Postgres)
+                project_root = Path(__file__).parent.parent
+                db_path = project_root / "data" / "admin_panel.db"
+                db_url = f"file:{db_path}"
+        
+        # Fix for Heroku postgres:// -> postgresql://
+        if db_url and db_url.startswith("postgres://"):
+            db_url = db_url.replace("postgres://", "postgresql://", 1)
+        
+        self.db_url = db_url
+        self.is_postgres = db_url and db_url.startswith("postgresql://")
         self.init_db()
 
     def get_connection(self):
         """Get database connection"""
-        conn = sqlite3.connect(self.db_path)
-        conn.row_factory = sqlite3.Row
-        return conn
+        if self.is_postgres:
+            conn = psycopg2.connect(self.db_url)
+            return conn
+        else:
+            # Fallback to sqlite for local dev
+            import sqlite3
+            conn = sqlite3.connect(self.db_url.replace("file:", ""))
+            conn.row_factory = sqlite3.Row
+            return conn
+    
+    def param_placeholder(self):
+        """Get the correct parameter placeholder for the database type"""
+        return "%s" if self.is_postgres else "?"
+    
+    def execute_query(self, cursor, query, params=None):
+        """Execute a query with the correct parameter placeholder"""
+        if self.is_postgres:
+            # Replace ? with %s for Postgres
+            query = query.replace("?", "%s")
+            # Replace CURRENT_TIMESTAMP with NOW() for Postgres
+            query = query.replace("CURRENT_TIMESTAMP", "NOW()")
+        if params:
+            cursor.execute(query, params)
+        else:
+            cursor.execute(query)
 
     def init_db(self):
         """Initialize database schema"""
         conn = self.get_connection()
         cursor = conn.cursor()
 
-        # Employees table
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS employees (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                name TEXT NOT NULL,
-                slack_username TEXT,
-                slack_user_id TEXT,
-                telegram_username TEXT,
-                email TEXT,
-                status TEXT NOT NULL DEFAULT 'active',
-                slack_required BOOLEAN DEFAULT 1,
-                telegram_required BOOLEAN DEFAULT 0,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )
-        """)
+        if self.is_postgres:
+            # Postgres-specific schema
+            # Employees table
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS employees (
+                    id SERIAL PRIMARY KEY,
+                    name TEXT NOT NULL,
+                    slack_username TEXT,
+                    slack_user_id TEXT,
+                    telegram_username TEXT,
+                    email TEXT,
+                    status TEXT NOT NULL DEFAULT 'active',
+                    slack_required BOOLEAN DEFAULT TRUE,
+                    telegram_required BOOLEAN DEFAULT FALSE,
+                    created_at TIMESTAMP DEFAULT NOW(),
+                    updated_at TIMESTAMP DEFAULT NOW()
+                )
+            """)
 
-        # Audit runs table
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS audit_runs (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                run_type TEXT NOT NULL,
-                status TEXT NOT NULL,
-                started_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                completed_at TIMESTAMP,
-                slack_channels_total INTEGER,
-                slack_channels_complete INTEGER,
-                telegram_groups_total INTEGER,
-                telegram_groups_complete INTEGER,
-                report_path TEXT,
-                error_message TEXT
-            )
-        """)
+            # Audit runs table
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS audit_runs (
+                    id SERIAL PRIMARY KEY,
+                    run_type TEXT NOT NULL,
+                    status TEXT NOT NULL,
+                    started_at TIMESTAMP DEFAULT NOW(),
+                    completed_at TIMESTAMP,
+                    slack_channels_total INTEGER,
+                    slack_channels_complete INTEGER,
+                    telegram_groups_total INTEGER,
+                    telegram_groups_complete INTEGER,
+                    report_path TEXT,
+                    error_message TEXT
+                )
+            """)
 
-        # Audit findings table
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS audit_findings (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                audit_run_id INTEGER NOT NULL,
-                platform TEXT NOT NULL,
-                channel_name TEXT NOT NULL,
-                channel_id TEXT,
-                missing_members TEXT,
-                status TEXT,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                FOREIGN KEY (audit_run_id) REFERENCES audit_runs(id)
-            )
-        """)
+            # Audit findings table
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS audit_findings (
+                    id SERIAL PRIMARY KEY,
+                    audit_run_id INTEGER NOT NULL,
+                    platform TEXT NOT NULL,
+                    channel_name TEXT NOT NULL,
+                    channel_id TEXT,
+                    missing_members TEXT,
+                    status TEXT,
+                    created_at TIMESTAMP DEFAULT NOW(),
+                    FOREIGN KEY (audit_run_id) REFERENCES audit_runs(id)
+                )
+            """)
 
-        # Offboarding tasks table
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS offboarding_tasks (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                employee_id INTEGER NOT NULL,
-                platform TEXT NOT NULL,
-                status TEXT NOT NULL,
-                started_at TIMESTAMP,
-                completed_at TIMESTAMP,
-                groups_processed INTEGER,
-                groups_removed INTEGER,
-                groups_failed INTEGER,
-                report_path TEXT,
-                error_message TEXT,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                FOREIGN KEY (employee_id) REFERENCES employees(id)
-            )
-        """)
+            # Offboarding tasks table
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS offboarding_tasks (
+                    id SERIAL PRIMARY KEY,
+                    employee_id INTEGER NOT NULL,
+                    platform TEXT NOT NULL,
+                    status TEXT NOT NULL,
+                    started_at TIMESTAMP,
+                    completed_at TIMESTAMP,
+                    groups_processed INTEGER,
+                    groups_removed INTEGER,
+                    groups_failed INTEGER,
+                    report_path TEXT,
+                    error_message TEXT,
+                    created_at TIMESTAMP DEFAULT NOW(),
+                    FOREIGN KEY (employee_id) REFERENCES employees(id)
+                )
+            """)
 
-        # Telegram audit status table (single row to track current status across workers)
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS telegram_audit_status (
-                id INTEGER PRIMARY KEY CHECK (id = 1),
-                status TEXT NOT NULL DEFAULT 'idle',
-                message TEXT DEFAULT '',
-                error TEXT,
-                code TEXT,
-                password TEXT,
-                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )
-        """)
-        
-        # Add code/password columns if they don't exist (for existing databases)
-        try:
-            cursor.execute("ALTER TABLE telegram_audit_status ADD COLUMN code TEXT")
-        except:
-            pass
-        try:
-            cursor.execute("ALTER TABLE telegram_audit_status ADD COLUMN password TEXT")
-        except:
-            pass
-        
-        # Insert initial row if it doesn't exist
-        cursor.execute("""
-            INSERT OR IGNORE INTO telegram_audit_status (id, status, message)
-            VALUES (1, 'idle', '')
-        """)
+            # Telegram audit status table (single row to track current status across workers)
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS telegram_audit_status (
+                    id INTEGER PRIMARY KEY CHECK (id = 1),
+                    status TEXT NOT NULL DEFAULT 'idle',
+                    message TEXT DEFAULT '',
+                    error TEXT,
+                    code TEXT,
+                    password TEXT,
+                    updated_at TIMESTAMP DEFAULT NOW()
+                )
+            """)
+            
+            # Insert initial row if it doesn't exist (Postgres syntax)
+            cursor.execute("""
+                INSERT INTO telegram_audit_status (id, status, message)
+                VALUES (1, 'idle', '')
+                ON CONFLICT (id) DO NOTHING
+            """)
+        else:
+            # SQLite-specific schema (local dev fallback)
+            # Employees table
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS employees (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    name TEXT NOT NULL,
+                    slack_username TEXT,
+                    slack_user_id TEXT,
+                    telegram_username TEXT,
+                    email TEXT,
+                    status TEXT NOT NULL DEFAULT 'active',
+                    slack_required BOOLEAN DEFAULT 1,
+                    telegram_required BOOLEAN DEFAULT 0,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            """)
+
+            # Audit runs table
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS audit_runs (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    run_type TEXT NOT NULL,
+                    status TEXT NOT NULL,
+                    started_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    completed_at TIMESTAMP,
+                    slack_channels_total INTEGER,
+                    slack_channels_complete INTEGER,
+                    telegram_groups_total INTEGER,
+                    telegram_groups_complete INTEGER,
+                    report_path TEXT,
+                    error_message TEXT
+                )
+            """)
+
+            # Audit findings table
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS audit_findings (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    audit_run_id INTEGER NOT NULL,
+                    platform TEXT NOT NULL,
+                    channel_name TEXT NOT NULL,
+                    channel_id TEXT,
+                    missing_members TEXT,
+                    status TEXT,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (audit_run_id) REFERENCES audit_runs(id)
+                )
+            """)
+
+            # Offboarding tasks table
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS offboarding_tasks (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    employee_id INTEGER NOT NULL,
+                    platform TEXT NOT NULL,
+                    status TEXT NOT NULL,
+                    started_at TIMESTAMP,
+                    completed_at TIMESTAMP,
+                    groups_processed INTEGER,
+                    groups_removed INTEGER,
+                    groups_failed INTEGER,
+                    report_path TEXT,
+                    error_message TEXT,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (employee_id) REFERENCES employees(id)
+                )
+            """)
+
+            # Telegram audit status table (single row to track current status across workers)
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS telegram_audit_status (
+                    id INTEGER PRIMARY KEY CHECK (id = 1),
+                    status TEXT NOT NULL DEFAULT 'idle',
+                    message TEXT DEFAULT '',
+                    error TEXT,
+                    code TEXT,
+                    password TEXT,
+                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            """)
+            
+            # Insert initial row if it doesn't exist (SQLite syntax)
+            cursor.execute("""
+                INSERT OR IGNORE INTO telegram_audit_status (id, status, message)
+                VALUES (1, 'idle', '')
+            """)
 
         conn.commit()
         conn.close()
@@ -246,24 +358,44 @@ class Database:
         ]
 
         for member in team_members:
-            cursor.execute(
-                """
-                INSERT INTO employees 
-                (name, slack_username, slack_user_id, telegram_username, email, 
-                 status, slack_required, telegram_required)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-            """,
-                (
-                    member["name"],
-                    member["slack_username"],
-                    member["slack_user_id"],
-                    member["telegram_username"],
-                    member["email"],
-                    member["status"],
-                    member["slack_required"],
-                    member["telegram_required"],
-                ),
-            )
+            if self.is_postgres:
+                cursor.execute(
+                    """
+                    INSERT INTO employees 
+                    (name, slack_username, slack_user_id, telegram_username, email, 
+                     status, slack_required, telegram_required)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                """,
+                    (
+                        member["name"],
+                        member["slack_username"],
+                        member["slack_user_id"],
+                        member["telegram_username"],
+                        member["email"],
+                        member["status"],
+                        member["slack_required"],
+                        member["telegram_required"],
+                    ),
+                )
+            else:
+                cursor.execute(
+                    """
+                    INSERT INTO employees 
+                    (name, slack_username, slack_user_id, telegram_username, email, 
+                     status, slack_required, telegram_required)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                    (
+                        member["name"],
+                        member["slack_username"],
+                        member["slack_user_id"],
+                        member["telegram_username"],
+                        member["email"],
+                        member["status"],
+                        member["slack_required"],
+                        member["telegram_required"],
+                    ),
+                )
 
         conn.commit()
         conn.close()

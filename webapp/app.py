@@ -25,7 +25,7 @@ def get_telegram_status():
     """Get Telegram audit status from database"""
     conn = db.get_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT status, message, error, code, password FROM telegram_audit_status WHERE id = 1")
+    db.execute_query(cursor, "SELECT status, message, error, code, password FROM telegram_audit_status WHERE id = 1")
     row = cursor.fetchone()
     conn.close()
     
@@ -43,7 +43,7 @@ def set_telegram_status(status, message='', error=None):
     """Update Telegram audit status in database"""
     conn = db.get_connection()
     cursor = conn.cursor()
-    cursor.execute("""
+    db.execute_query(cursor, """
         UPDATE telegram_audit_status 
         SET status = ?, message = ?, error = ?, updated_at = CURRENT_TIMESTAMP
         WHERE id = 1
@@ -55,12 +55,12 @@ def get_telegram_code():
     """Get stored code from database and clear it"""
     conn = db.get_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT code FROM telegram_audit_status WHERE id = 1")
+    db.execute_query(cursor, "SELECT code FROM telegram_audit_status WHERE id = 1")
     row = cursor.fetchone()
     code = row[0] if row and row[0] else None
     if code:
         # Clear code after reading
-        cursor.execute("UPDATE telegram_audit_status SET code = NULL WHERE id = 1")
+        db.execute_query(cursor, "UPDATE telegram_audit_status SET code = NULL WHERE id = 1")
         conn.commit()
     conn.close()
     return code
@@ -69,12 +69,12 @@ def get_telegram_password():
     """Get stored password from database and clear it"""
     conn = db.get_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT password FROM telegram_audit_status WHERE id = 1")
+    db.execute_query(cursor, "SELECT password FROM telegram_audit_status WHERE id = 1")
     row = cursor.fetchone()
     password = row[0] if row and row[0] else None
     if password:
         # Clear password after reading
-        cursor.execute("UPDATE telegram_audit_status SET password = NULL WHERE id = 1")
+        db.execute_query(cursor, "UPDATE telegram_audit_status SET password = NULL WHERE id = 1")
         conn.commit()
     conn.close()
     return password
@@ -87,7 +87,7 @@ def ensure_data_seeded():
     """Ensure database has employee data on startup"""
     conn = db.get_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT COUNT(*) FROM employees")
+    db.execute_query(cursor, "SELECT COUNT(*) FROM employees")
     count = cursor.fetchone()[0]
     conn.close()
     
@@ -110,17 +110,17 @@ def dashboard():
     cursor = conn.cursor()
     
     # Get employee stats
-    cursor.execute("SELECT COUNT(*) FROM employees WHERE status = 'active'")
+    db.execute_query(cursor, "SELECT COUNT(*) FROM employees WHERE status = 'active'")
     active_count = cursor.fetchone()[0]
     
-    cursor.execute("SELECT COUNT(*) FROM employees WHERE status = 'inactive'")
+    db.execute_query(cursor, "SELECT COUNT(*) FROM employees WHERE status = 'inactive'")
     inactive_count = cursor.fetchone()[0]
     
-    cursor.execute("SELECT COUNT(*) FROM employees WHERE status = 'optional'")
+    db.execute_query(cursor, "SELECT COUNT(*) FROM employees WHERE status = 'optional'")
     optional_count = cursor.fetchone()[0]
     
     # Get latest audit
-    cursor.execute("""
+    db.execute_query(cursor, """
         SELECT * FROM audit_runs 
         ORDER BY started_at DESC 
         LIMIT 1
@@ -128,7 +128,7 @@ def dashboard():
     latest_audit = cursor.fetchone()
     
     # Get recent offboarding tasks
-    cursor.execute("""
+    db.execute_query(cursor, """
         SELECT ot.*, e.name as employee_name 
         FROM offboarding_tasks ot
         JOIN employees e ON ot.employee_id = e.id
@@ -161,9 +161,9 @@ def employees():
     status_filter = request.args.get('status', 'all')
     
     if status_filter == 'all':
-        cursor.execute("SELECT * FROM employees ORDER BY name")
+        db.execute_query(cursor, "SELECT * FROM employees ORDER BY name")
     else:
-        cursor.execute("SELECT * FROM employees WHERE status = ? ORDER BY name", (status_filter,))
+        db.execute_query(cursor, "SELECT * FROM employees WHERE status = ? ORDER BY name", (status_filter,))
     
     employees = cursor.fetchall()
     conn.close()
@@ -178,7 +178,7 @@ def add_employee():
         conn = db.get_connection()
         cursor = conn.cursor()
         
-        cursor.execute("""
+        db.execute_query(cursor, """
             INSERT INTO employees 
             (name, slack_username, slack_user_id, telegram_username, email, 
              status, slack_required, telegram_required)
@@ -209,7 +209,7 @@ def edit_employee(employee_id):
     cursor = conn.cursor()
     
     if request.method == 'POST':
-        cursor.execute("""
+        db.execute_query(cursor, """
             UPDATE employees 
             SET name = ?, slack_username = ?, slack_user_id = ?, 
                 telegram_username = ?, email = ?, status = ?,
@@ -233,7 +233,7 @@ def edit_employee(employee_id):
         
         return redirect(url_for('employees'))
     
-    cursor.execute("SELECT * FROM employees WHERE id = ?", (employee_id,))
+    db.execute_query(cursor, "SELECT * FROM employees WHERE id = ?", (employee_id,))
     employee = cursor.fetchone()
     conn.close()
     
@@ -251,13 +251,13 @@ def audits():
     cursor = conn.cursor()
     
     # Get audit history
-    cursor.execute("SELECT * FROM audit_runs ORDER BY started_at DESC LIMIT 20")
+    db.execute_query(cursor, "SELECT * FROM audit_runs ORDER BY started_at DESC LIMIT 20")
     audit_history = cursor.fetchall()
     
     # Get latest audit findings
     if audit_history:
         latest_audit_id = audit_history[0]['id']
-        cursor.execute("""
+        db.execute_query(cursor, """
             SELECT * FROM audit_findings 
             WHERE audit_run_id = ? AND status = 'incomplete'
             ORDER BY platform, channel_name
@@ -277,10 +277,10 @@ def audit_detail(audit_id):
     conn = db.get_connection()
     cursor = conn.cursor()
     
-    cursor.execute("SELECT * FROM audit_runs WHERE id = ?", (audit_id,))
+    db.execute_query(cursor, "SELECT * FROM audit_runs WHERE id = ?", (audit_id,))
     audit = cursor.fetchone()
     
-    cursor.execute("""
+    db.execute_query(cursor, """
         SELECT * FROM audit_findings 
         WHERE audit_run_id = ?
         ORDER BY platform, channel_name
@@ -303,11 +303,11 @@ def offboarding():
     cursor = conn.cursor()
     
     # Get inactive employees
-    cursor.execute("SELECT * FROM employees WHERE status = 'inactive' ORDER BY name")
+    db.execute_query(cursor, "SELECT * FROM employees WHERE status = 'inactive' ORDER BY name")
     inactive_employees = cursor.fetchall()
     
     # Get offboarding tasks
-    cursor.execute("""
+    db.execute_query(cursor, """
         SELECT ot.*, e.name as employee_name, e.slack_username, e.telegram_username
         FROM offboarding_tasks ot
         JOIN employees e ON ot.employee_id = e.id
@@ -333,7 +333,7 @@ def api_get_employees():
     """Get all employees as JSON"""
     conn = db.get_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM employees ORDER BY name")
+    db.execute_query(cursor, "SELECT * FROM employees ORDER BY name")
     employees = [dict(row) for row in cursor.fetchall()]
     conn.close()
     return jsonify(employees)
@@ -351,7 +351,7 @@ def api_get_employees():
 #     
 #     conn = db.get_connection()
 #     cursor = conn.cursor()
-#     cursor.execute("""
+#     db.execute_query(cursor, """
 #         UPDATE employees 
 #         SET status = ?, updated_at = CURRENT_TIMESTAMP 
 #         WHERE id = ?
@@ -370,7 +370,7 @@ def api_get_employees():
 #     cursor = conn.cursor()
 #     
 #     # Create audit run record
-#     cursor.execute("""
+#     db.execute_query(cursor, """
 #         INSERT INTO audit_runs (run_type, status)
 #         VALUES ('manual', 'running')
 #     """)
@@ -393,11 +393,11 @@ def api_latest_audit():
     conn = db.get_connection()
     cursor = conn.cursor()
     
-    cursor.execute("SELECT * FROM audit_runs ORDER BY started_at DESC LIMIT 1")
+    db.execute_query(cursor, "SELECT * FROM audit_runs ORDER BY started_at DESC LIMIT 1")
     audit = cursor.fetchone()
     
     if audit:
-        cursor.execute("""
+        db.execute_query(cursor, """
             SELECT * FROM audit_findings 
             WHERE audit_run_id = ?
         """, (audit['id'],))
@@ -455,7 +455,7 @@ def api_submit_telegram_code():
     # Store code in database
     conn = db.get_connection()
     cursor = conn.cursor()
-    cursor.execute("""
+    db.execute_query(cursor, """
         UPDATE telegram_audit_status 
         SET code = ?, status = 'authenticating', message = 'Authenticating with code...'
         WHERE id = 1
@@ -483,7 +483,7 @@ def api_submit_telegram_password():
     # Store password in database
     conn = db.get_connection()
     cursor = conn.cursor()
-    cursor.execute("""
+    db.execute_query(cursor, """
         UPDATE telegram_audit_status 
         SET password = ?, status = 'authenticating_password', message = 'Authenticating with password...'
         WHERE id = 1
@@ -509,7 +509,7 @@ def api_submit_telegram_password():
 #     cursor = conn.cursor()
 #     
 #     # Create offboarding task
-#     cursor.execute("""
+#     db.execute_query(cursor, """
 #         INSERT INTO offboarding_tasks (employee_id, platform, status)
 #         VALUES (?, ?, 'pending')
 #     """, (employee_id, platform))
@@ -531,7 +531,7 @@ def api_offboarding_status(task_id):
     """Get offboarding task status"""
     conn = db.get_connection()
     cursor = conn.cursor()
-    cursor.execute("""
+    db.execute_query(cursor, """
         SELECT ot.*, e.name as employee_name
         FROM offboarding_tasks ot
         JOIN employees e ON ot.employee_id = e.id
@@ -651,7 +651,7 @@ async def run_telegram_audit(api_id, api_hash, phone):
         # Create audit run entry in database
         conn = db.get_connection()
         cursor = conn.cursor()
-        cursor.execute("""
+        db.execute_query(cursor, """
             INSERT INTO audit_runs (run_type, status)
             VALUES ('manual', 'running')
         """)
