@@ -7,7 +7,7 @@
     <div>
         <h2>Audit History</h2>
         <p style="color: #666; margin-top: 10px;">
-            ℹ️ Slack audits run automatically daily at 2:00 AM UTC via Heroku Scheduler
+            View scheduled (Slack + Telegram) and manual (Telegram-only) audit results
         </p>
     </div>
     <button onclick="startTelegramAudit()" class="btn btn-primary" style="white-space: nowrap;">
@@ -52,32 +52,27 @@
 {% endif %}
 
 <div class="card">
-    <h3 style="margin-bottom: 15px;">Audit Runs</h3>
+    <h3 style="margin-bottom: 15px;">⏰ Scheduled Audits (Daily at 2:00 AM UTC)</h3>
+    <p style="color: #666; margin-bottom: 15px;">
+        Full audits covering both Slack channels and Telegram groups, run automatically every day.
+    </p>
     
-    {% if audit_history %}
+    {% if scheduled_audits %}
     <table>
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Type</th>
                 <th>Status</th>
                 <th>Started</th>
                 <th>Completed</th>
-                <th>Slack Coverage</th>
+                <th>Coverage</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            {% for audit in audit_history %}
+            {% for audit in scheduled_audits %}
             <tr>
                 <td>{{ audit.id }}</td>
-                <td>
-                    {% if audit.run_type == 'manual' %}
-                        👤 Manual
-                    {% else %}
-                        ⏰ Scheduled
-                    {% endif %}
-                </td>
                 <td>
                     <span class="badge badge-{{ audit.status }}">
                         {% if audit.status == 'running' %}⏳{% elif audit.status == 'completed' %}✅{% else %}❌{% endif %}
@@ -104,7 +99,59 @@
         </tbody>
     </table>
     {% else %}
-    <p style="color: #666;">No audits yet. The first audit will run automatically at 2:00 AM UTC via Heroku Scheduler.</p>
+    <p style="color: #666;">No scheduled audits yet. The first audit will run automatically at 2:00 AM UTC via Heroku Scheduler.</p>
+    {% endif %}
+</div>
+
+<div class="card" style="margin-top: 20px;">
+    <h3 style="margin-bottom: 15px;">✈️ Manual Telegram Audits</h3>
+    <p style="color: #666; margin-bottom: 15px;">
+        On-demand Telegram audits triggered manually via the "Run Telegram Audit" button above.
+    </p>
+    
+    {% if manual_audits %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Status</th>
+                <th>Started</th>
+                <th>Completed</th>
+                <th>Telegram Coverage</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for audit in manual_audits %}
+            <tr>
+                <td>{{ audit.id }}</td>
+                <td>
+                    <span class="badge badge-{{ audit.status }}">
+                        {% if audit.status == 'running' %}⏳{% elif audit.status == 'completed' %}✅{% else %}❌{% endif %}
+                        {{ audit.status }}
+                    </span>
+                </td>
+                <td>{{ audit.started_at }}</td>
+                <td>{{ audit.completed_at or '-' }}</td>
+                <td>
+                    {% if audit.telegram_groups_total %}
+                        {{ audit.telegram_groups_complete or 0 }}/{{ audit.telegram_groups_total }}
+                        ({{ ((audit.telegram_groups_complete or 0) * 100 / audit.telegram_groups_total) | round(1) }}%)
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="/audits/{{ audit.id }}" class="btn btn-secondary" style="padding: 5px 10px; font-size: 12px;">
+                        View Details
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p style="color: #666;">No manual Telegram audits yet. Click the "Run Telegram Audit" button above to start one.</p>
     {% endif %}
 </div>
 

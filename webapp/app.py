@@ -287,25 +287,41 @@ def audits():
     conn = db.get_connection()
     cursor = db.get_cursor(conn)
     
-    # Get audit history
-    db.execute_query(cursor, "SELECT * FROM audit_runs ORDER BY started_at DESC LIMIT 20")
-    audit_history = cursor.fetchall()
+    # Get scheduled audits (full Slack + Telegram audits)
+    db.execute_query(cursor, """
+        SELECT * FROM audit_runs 
+        WHERE run_type = 'scheduled' 
+        ORDER BY started_at DESC LIMIT 10
+    """)
+    scheduled_audits = cursor.fetchall()
     
-    # Get latest audit findings
-    if audit_history:
-        latest_audit_id = audit_history[0]['id']
+    # Get manual audits (Telegram-only audits)
+    db.execute_query(cursor, """
+        SELECT * FROM audit_runs 
+        WHERE run_type = 'manual' 
+        ORDER BY started_at DESC LIMIT 10
+    """)
+    manual_audits = cursor.fetchall()
+    
+    # Get latest audit findings (from most recent audit of either type)
+    db.execute_query(cursor, "SELECT * FROM audit_runs ORDER BY started_at DESC LIMIT 1")
+    latest_audit = cursor.fetchone()
+    if latest_audit:
         db.execute_query(cursor, """
             SELECT * FROM audit_findings 
             WHERE audit_run_id = ? AND status = 'incomplete'
             ORDER BY platform, channel_name
-        """, (latest_audit_id,))
+        """, (latest_audit['id'],))
         findings = cursor.fetchall()
     else:
         findings = []
     
     conn.close()
     
-    return render_template('audits.html', audit_history=audit_history, findings=findings)
+    return render_template('audits.html', 
+                         scheduled_audits=scheduled_audits, 
+                         manual_audits=manual_audits, 
+                         findings=findings)
 
 
 @app.route('/audits/<int:audit_id>')
