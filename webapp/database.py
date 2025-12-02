@@ -164,18 +164,19 @@ class Database:
                 )
             """)
 
-            # Telegram audit status table (single row to track current status across workers)
-            cursor.execute("""
-                CREATE TABLE IF NOT EXISTS telegram_audit_status (
-                    id INTEGER PRIMARY KEY CHECK (id = 1),
-                    status TEXT NOT NULL DEFAULT 'idle',
-                    message TEXT DEFAULT '',
-                    error TEXT,
-                    code TEXT,
-                    password TEXT,
-                    updated_at TIMESTAMP DEFAULT NOW()
-                )
-            """)
+        # Telegram audit status table (single row to track current status across workers)
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS telegram_audit_status (
+                id INTEGER PRIMARY KEY CHECK (id = 1),
+                status TEXT NOT NULL DEFAULT 'idle',
+                message TEXT DEFAULT '',
+                error TEXT,
+                code TEXT,
+                password TEXT,
+                session_string TEXT,
+                updated_at TIMESTAMP DEFAULT NOW()
+            )
+        """)
             
             # Insert initial row if it doesn't exist (Postgres syntax)
             cursor.execute("""
@@ -262,6 +263,7 @@ class Database:
                     error TEXT,
                     code TEXT,
                     password TEXT,
+                    session_string TEXT,
                     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )
             """)

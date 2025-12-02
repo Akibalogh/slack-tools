@@ -10,6 +10,7 @@ import threading
 import asyncio
 from telethon import TelegramClient
 from telethon.errors import SessionPasswordNeededError
+from telethon.sessions import StringSession
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY', 'dev-secret-key-change-in-production')
@@ -111,6 +112,44 @@ def get_telegram_password():
 
 # In-memory storage for client objects (not shared across workers, but needed for auth flow)
 telegram_client_storage = {}
+
+
+def get_telegram_session():
+    """Get stored Telegram session string from database"""
+    conn = None
+    try:
+        conn = db.get_connection()
+        cursor = db.get_cursor(conn)
+        db.execute_query(cursor, "SELECT session_string FROM telegram_audit_status WHERE id = 1")
+        row = cursor.fetchone()
+        return row['session_string'] if row and row.get('session_string') else ''
+    except Exception as e:
+        print(f"Error getting session: {e}")
+        return ''
+    finally:
+        if conn:
+            conn.close()
+
+
+def save_telegram_session(session_string):
+    """Save Telegram session string to database"""
+    conn = None
+    try:
+        conn = db.get_connection()
+        cursor = db.get_cursor(conn)
+        db.execute_query(cursor, """
+            UPDATE telegram_audit_status 
+            SET session_string = ?
+            WHERE id = 1
+        """, (session_string,))
+        conn.commit()
+    except Exception as e:
+        if conn:
+            conn.rollback()
+        print(f"Error saving session: {e}")
+    finally:
+        if conn:
+            conn.close()
 
 # Auto-seed database if empty (for Heroku ephemeral filesystem)
 def ensure_data_seeded():
@@ -625,10 +664,10 @@ def start_telegram_auth():
 async def run_telegram_audit(api_id, api_hash, phone):
     """Run Telegram audit with interactive code input"""
     try:
-        # Create Telegram client (use same session file name as audit script)
-        # Store session file in project root so audit script can find it
-        session_path = Path(__file__).parent.parent / 'telegram_session'
-        client = TelegramClient(str(session_path), api_id, api_hash)
+        # Use StringSession stored in database instead of file-based session
+        # This avoids file locking issues on Heroku's ephemeral filesystem
+        session_string = get_telegram_session()
+        client = TelegramClient(StringSession(session_string), api_id, api_hash)
         await client.connect()
         
         # Check if already authorized
@@ -648,6 +687,8 @@ async def run_telegram_audit(api_id, api_hash, phone):
                     if code:
                         try:
                             await client.sign_in(phone, code)
+                            # Save session to database for future use
+                            save_telegram_session(client.session.save())
                             set_telegram_status('running', 'Authenticated! Running audit...')
                             break
                         except SessionPasswordNeededError:
@@ -673,6 +714,8 @@ async def run_telegram_audit(api_id, api_hash, phone):
                         if password:
                             try:
                                 await client.sign_in(password=password)
+                                # Save session to database for future use
+                                save_telegram_session(client.session.save())
                                 set_telegram_status('running', 'Authenticated! Running audit...')
                                 break
                             except Exception as e:
