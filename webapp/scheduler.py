@@ -147,35 +147,33 @@ def run_audit_job(audit_id=None):
 
 
 def parse_audit_output(output):
-    """Parse audit script output to extract results"""
-    # Try to find JSON in output
+    """Parse audit script output to extract JSON results"""
+    # Look for JSON between markers
     try:
-        lines = output.split('\n')
-        for line in lines:
-            if line.strip().startswith('{'):
-                return json.loads(line)
-    except:
-        pass
+        if 'AUDIT_RESULTS_JSON_START' in output and 'AUDIT_RESULTS_JSON_END' in output:
+            start_marker = 'AUDIT_RESULTS_JSON_START'
+            end_marker = 'AUDIT_RESULTS_JSON_END'
+            
+            start_idx = output.find(start_marker) + len(start_marker)
+            end_idx = output.find(end_marker)
+            
+            if start_idx > 0 and end_idx > start_idx:
+                json_str = output[start_idx:end_idx].strip()
+                results = json.loads(json_str)
+                logger.info(f"📊 Parsed audit results: {results.get('slack_total', 0)} Slack, {results.get('telegram_total', 0)} Telegram")
+                return results
+    except Exception as e:
+        logger.warning(f"Failed to parse JSON results: {e}")
     
-    # Fallback: parse text output
-    results = {
+    # Fallback: return empty results
+    logger.warning("No JSON results found in audit output, returning empty results")
+    return {
         'slack_total': 0,
         'slack_complete': 0,
         'telegram_total': 0,
         'telegram_complete': 0,
         'incomplete_channels': []
     }
-    
-    # Simple text parsing (can be enhanced based on actual script output)
-    if 'Slack channels:' in output:
-        # Extract numbers from output
-        import re
-        slack_match = re.search(r'Slack.*?(\d+).*?complete.*?(\d+)', output, re.IGNORECASE)
-        if slack_match:
-            results['slack_complete'] = int(slack_match.group(1))
-            results['slack_total'] = int(slack_match.group(2))
-    
-    return results
 
 
 def save_audit_results(audit_id, results, report_path):
