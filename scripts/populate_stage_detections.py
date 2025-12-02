@@ -5,11 +5,11 @@ Processes all existing messages in the database to detect deal stages and popula
 This script should be run after slack_ingest.py to enable proper commission calculations.
 """
 
-import sqlite3
-import logging
-from pathlib import Path
-from typing import List, Tuple, Dict
 import json
+import logging
+import sqlite3
+from pathlib import Path
+from typing import Dict, List, Tuple
 
 # Set up logging
 logging.basicConfig(

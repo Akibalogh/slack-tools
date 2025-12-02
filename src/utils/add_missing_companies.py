@@ -6,16 +6,18 @@ Add missing companies from the user's list to the company mapping table.
 import csv
 import os
 
+
 def get_existing_companies():
     """Get existing companies from the mapping table."""
     existing = set()
     if os.path.exists("output/company_mapping_table.csv"):
-        with open("output/company_mapping_table.csv", 'r') as f:
+        with open("output/company_mapping_table.csv", "r") as f:
             reader = csv.DictReader(f)
             for row in reader:
-                company_name = row['Company Name'].strip().lower()
+                company_name = row["Company Name"].strip().lower()
                 existing.add(company_name)
     return existing
+
 
 def get_target_companies():
     """Get the target companies from the user's list."""
@@ -67,63 +69,67 @@ def get_target_companies():
         "t-rize": "t-rize-bitsafe",  # We have this one
         "unlock-it": "unlock-it",
         "xbto": "xbto",
-        "xlabs": "xlabs-bitsafe"  # We have this one
+        "xlabs": "xlabs-bitsafe",  # We have this one
     }
+
 
 def add_missing_companies():
     """Add missing companies to the mapping table."""
     existing = get_existing_companies()
     target_companies = get_target_companies()
-    
+
     # Find missing companies
     missing = {}
     for target_name, slack_name in target_companies.items():
         if target_name.lower() not in existing and slack_name.lower() not in existing:
             missing[target_name] = slack_name
-    
+
     print(f"🔍 Found {len(missing)} missing companies:")
     for company in missing:
         print(f"  - {company}")
-    
+
     # Read existing mapping table
     rows = []
     if os.path.exists("output/company_mapping_table.csv"):
-        with open("output/company_mapping_table.csv", 'r') as f:
+        with open("output/company_mapping_table.csv", "r") as f:
             reader = csv.DictReader(f)
             fieldnames = reader.fieldnames
             for row in reader:
                 rows.append(row)
-    
+
     # Add missing companies
     for company_name, slack_name in missing.items():
         new_row = {
-            'Company Name': company_name,
-            'Slack Channel': slack_name if not slack_name.endswith('-bitsafe') else slack_name,
-            'Telegram Group': '',
-            'Calendar Entries': '',
-            'Wallet Status': 'No',
-            'Platform Overlap': 'Slack'
+            "Company Name": company_name,
+            "Slack Channel": (
+                slack_name if not slack_name.endswith("-bitsafe") else slack_name
+            ),
+            "Telegram Group": "",
+            "Calendar Entries": "",
+            "Wallet Status": "No",
+            "Platform Overlap": "Slack",
         }
         rows.append(new_row)
-    
+
     # Write updated mapping table
-    with open("output/company_mapping_table_updated.csv", 'w', newline='') as f:
+    with open("output/company_mapping_table_updated.csv", "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         for row in rows:
             writer.writerow(row)
-    
+
     print(f"\n✅ Added {len(missing)} companies to company_mapping_table_updated.csv")
     print(f"📊 Total companies now: {len(rows)}")
-    
+
     return missing
+
 
 def main():
     print("🔍 Adding Missing Companies to Mapping Table")
     print("=" * 50)
-    
+
     missing = add_missing_companies()
-    
+
     if missing:
         print(f"\n📋 Next steps:")
         print(f"  1. Review company_mapping_table_updated.csv")
@@ -131,6 +137,7 @@ def main():
         print(f"  3. Run commission analysis for all companies")
     else:
         print(f"\n✅ All companies are already in the mapping table!")
+
 
 if __name__ == "__main__":
     main()

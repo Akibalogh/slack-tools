@@ -1,9 +1,10 @@
-from dotenv import load_dotenv
-import os
 import asyncio
-import aiohttp
+import os
 import time
+
+import aiohttp
 import pandas as pd
+from dotenv import load_dotenv
 
 # Load environment variables from .env
 load_dotenv()

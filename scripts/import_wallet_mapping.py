@@ -8,23 +8,24 @@ using the new ORM models for wallet tracking.
 
 import re
 import sqlite3
-from typing import Dict, List, Optional
 from pathlib import Path
+from typing import Dict, List, Optional
+
 
 def parse_wallet_mapping_data(data_text: str) -> List[Dict]:
     """Parse the wallet mapping table data into structured records."""
     records = []
     seen_wallets = set()
-    
+
     # Split into lines and process each company entry
-    lines = data_text.strip().split('\n')
-    
+    lines = data_text.strip().split("\n")
+
     for line in lines:
-        if not line.strip() or 'Status' in line or '---' in line:
+        if not line.strip() or "Status" in line or "---" in line:
             continue
-            
+
         # Parse company data
-        parts = line.split('\t')
+        parts = line.split("\t")
         if len(parts) >= 5:
             status = parts[0].strip()
             company_name = parts[1].strip()
@@ -33,43 +34,49 @@ def parse_wallet_mapping_data(data_text: str) -> List[Dict]:
             external_customer_id = parts[4].strip() if len(parts) > 4 else None
             current_deposit = parts[5].strip() if len(parts) > 5 else "0"
             total_paid = parts[6].strip() if len(parts) > 6 else "0"
-            
+
             # Handle missing status (default to "Outstanding")
             if not status:
                 status = "Outstanding"
-            
+
             # Clean up company name
-            company_name = re.sub(r'\s+', ' ', company_name).strip()
-            
+            company_name = re.sub(r"\s+", " ", company_name).strip()
+
             # Skip empty entries
             if not company_name or not billing_wallet:
                 continue
-            
+
             # Skip duplicate wallet addresses (keep the first occurrence)
             if billing_wallet in seen_wallets:
-                print(f"⚠️  Skipping duplicate wallet: {billing_wallet} for {company_name}")
+                print(
+                    f"⚠️  Skipping duplicate wallet: {billing_wallet} for {company_name}"
+                )
                 continue
             seen_wallets.add(billing_wallet)
-                
-            records.append({
-                'status': status,
-                'company_name': company_name,
-                'fund_ownership': fund_ownership,
-                'billing_wallet': billing_wallet,
-                'external_customer_id': external_customer_id,
-                'current_deposit': current_deposit,
-                'total_paid': total_paid
-            })
-    
+
+            records.append(
+                {
+                    "status": status,
+                    "company_name": company_name,
+                    "fund_ownership": fund_ownership,
+                    "billing_wallet": billing_wallet,
+                    "external_customer_id": external_customer_id,
+                    "current_deposit": current_deposit,
+                    "total_paid": total_paid,
+                }
+            )
+
     return records
+
 
 def create_wallet_tables(db_path: str):
     """Create the wallet mapping tables if they don't exist."""
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
-    
+
     # Create company_wallets table
-    cursor.execute("""
+    cursor.execute(
+        """
         CREATE TABLE IF NOT EXISTS company_wallets (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             company_name TEXT NOT NULL,
@@ -81,47 +88,57 @@ def create_wallet_tables(db_path: str):
             total_paid TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
-    """)
-    
+    """
+    )
+
     # Create indexes
-    cursor.execute("CREATE INDEX IF NOT EXISTS idx_company_wallets_company_name ON company_wallets(company_name)")
-    cursor.execute("CREATE INDEX IF NOT EXISTS idx_company_wallets_status ON company_wallets(status)")
-    
+    cursor.execute(
+        "CREATE INDEX IF NOT EXISTS idx_company_wallets_company_name ON company_wallets(company_name)"
+    )
+    cursor.execute(
+        "CREATE INDEX IF NOT EXISTS idx_company_wallets_status ON company_wallets(status)"
+    )
+
     conn.commit()
     conn.close()
+
 
 def import_wallet_data(db_path: str, records: List[Dict]):
     """Import wallet data into the database."""
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
-    
+
     # Clear existing data
     cursor.execute("DELETE FROM company_wallets")
-    
+
     # Insert new records
     for record in records:
-        cursor.execute("""
+        cursor.execute(
+            """
             INSERT INTO company_wallets 
             (company_name, status, fund_ownership, billing_wallet, external_customer_id, current_deposit, total_paid)
             VALUES (?, ?, ?, ?, ?, ?, ?)
-        """, (
-            record['company_name'],
-            record['status'],
-            record['fund_ownership'],
-            record['billing_wallet'],
-            record['external_customer_id'],
-            record['current_deposit'],
-            record['total_paid']
-        ))
-    
+        """,
+            (
+                record["company_name"],
+                record["status"],
+                record["fund_ownership"],
+                record["billing_wallet"],
+                record["external_customer_id"],
+                record["current_deposit"],
+                record["total_paid"],
+            ),
+        )
+
     conn.commit()
     conn.close()
+
 
 def main():
     """Main function to import wallet mapping data."""
     print("🔍 Importing Wallet Mapping Data")
     print("=" * 50)
-    
+
     # Real data from the billing table
     real_data = """Status	Company Name	Fund our PartyID or Theirs?	"Wallet (PartyID) - customer sends money here"	External Customer ID	Current Deposit from Billing tab before clicking revoke/cancel on credentials tab (user should pay this much into wallet)	Total Paid when revoke/cancel
 Signed	SendIt CantonWallet	Theirs	send-cantonwallet::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2	sendmainnet1::12203726c4d6a2041bc700b91effb7baea3fa3af720edabb5dd3e6e8b56867f9b016		
@@ -189,35 +206,37 @@ Outstanding	Binance		binance-us::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4
 Outstanding	OpenVector (Cypherock)		openvector-minter::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2			
 Outstanding	SenseiNode		sensei-node-minter::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2			
 Outstanding	Barg Systems	No Rewards	barg-systems-minter::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2	"""
-    
+
     # Parse the data
     records = parse_wallet_mapping_data(real_data)
     print(f"📊 Parsed {len(records)} wallet records")
-    
+
     # Create tables
     db_path = "repsplit.db"
     create_wallet_tables(db_path)
     print("✅ Wallet tables created")
-    
+
     # Import data
     import_wallet_data(db_path, records)
     print("✅ Wallet data imported")
-    
+
     # Show summary
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
-    
+
     cursor.execute("SELECT COUNT(*) FROM company_wallets")
     total_count = cursor.fetchone()[0]
-    
+
     cursor.execute("SELECT status, COUNT(*) FROM company_wallets GROUP BY status")
     status_counts = cursor.fetchall()
-    
-    cursor.execute("SELECT fund_ownership, COUNT(*) FROM company_wallets GROUP BY fund_ownership")
+
+    cursor.execute(
+        "SELECT fund_ownership, COUNT(*) FROM company_wallets GROUP BY fund_ownership"
+    )
     ownership_counts = cursor.fetchall()
-    
+
     conn.close()
-    
+
     print(f"\n📈 Import Summary:")
     print(f"   Total companies: {total_count}")
     print(f"   Status breakdown:")
@@ -226,6 +245,7 @@ Outstanding	Barg Systems	No Rewards	barg-systems-minter::1220409a9fcc5ff6422e29a
     print(f"   Fund ownership:")
     for ownership, count in ownership_counts:
         print(f"     {ownership}: {count}")
+
 
 if __name__ == "__main__":
     main()

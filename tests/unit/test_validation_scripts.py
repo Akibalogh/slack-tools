@@ -1,28 +1,30 @@
 """
 Unit tests for ETL output validation scripts
 """
-import pytest
-import sys
+
 import os
-import tempfile
 import shutil
+import sys
+import tempfile
 from pathlib import Path
-from unittest.mock import patch, mock_open
+from unittest.mock import mock_open, patch
+
+import pytest
 
 # Add the project root to the Python path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../..'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../.."))
 
 
 class TestETLOutputValidation:
     """Test ETL output validation functionality"""
-    
+
     @pytest.fixture
     def temp_dir(self):
         """Create temporary directory for testing"""
         temp_dir = tempfile.mkdtemp()
         yield temp_dir
         shutil.rmtree(temp_dir)
-    
+
     @pytest.fixture
     def sample_etl_output(self):
         """Create sample ETL output content"""
@@ -86,105 +88,117 @@ TELEGRAM: No data
 CALENDAR: No data
 HUBSPOT: No data
 """
-    
+
     def test_validate_etl_output_simple_import(self):
         """Test that validation script can be imported"""
         # Import the validation function
         import scripts.validate_etl_output_simple as validator
-        assert hasattr(validator, 'main')
-    
+
+        assert hasattr(validator, "main")
+
     def test_etl_output_parsing(self, sample_etl_output, temp_dir):
         """Test ETL output file parsing"""
         # Write sample output to file
         output_file = os.path.join(temp_dir, "test_output.txt")
-        with open(output_file, 'w') as f:
+        with open(output_file, "w") as f:
             f.write(sample_etl_output)
-        
+
         # Test basic file reading
-        with open(output_file, 'r') as f:
+        with open(output_file, "r") as f:
             content = f.read()
-        
+
         assert "COMMISSION CALCULATOR - ETL DATA INGESTION REPORT" in content
         assert "COMPANY: TEST-COMPANY" in content
         assert "COMPANY: NO-DATA-COMPANY" in content
-    
+
     def test_company_extraction(self, sample_etl_output):
         """Test company name extraction from ETL output"""
         import re
-        
+
         # Extract company names
-        companies = re.findall(r'COMPANY: (.+)', sample_etl_output)
-        
+        companies = re.findall(r"COMPANY: (.+)", sample_etl_output)
+
         assert "TEST-COMPANY" in companies
         assert "NO-DATA-COMPANY" in companies
         assert len(companies) == 2
-    
+
     def test_data_coverage_analysis(self, sample_etl_output):
         """Test data coverage analysis"""
         # Count Slack sections
-        slack_sections = sample_etl_output.count('SLACK CHANNELS:')
+        slack_sections = sample_etl_output.count("SLACK CHANNELS:")
         assert slack_sections == 1
-        
-        # Count Telegram sections  
-        telegram_sections = sample_etl_output.count('TELEGRAM CHATS:')
+
+        # Count Telegram sections
+        telegram_sections = sample_etl_output.count("TELEGRAM CHATS:")
         assert telegram_sections == 1
-        
+
         # Count no data sections
-        no_data_sections = sample_etl_output.count('SLACK: No data')
+        no_data_sections = sample_etl_output.count("SLACK: No data")
         assert no_data_sections == 1
-    
+
     def test_message_counting(self, sample_etl_output):
         """Test message counting in ETL output"""
         import re
-        
+
         # Count total messages
-        message_pattern = r'\[.*?\] .*?: .*'
+        message_pattern = r"\[.*?\] .*?: .*"
         messages = re.findall(message_pattern, sample_etl_output)
-        
+
         # Should find messages from both Slack and Telegram
         assert len(messages) > 0
-        
+
         # Check for specific message patterns
-        slack_messages = [msg for msg in messages if 'test-company-channel' in sample_etl_output[:sample_etl_output.find(msg) + len(msg)]]
-        telegram_messages = [msg for msg in messages if 'Test Company' in sample_etl_output[:sample_etl_output.find(msg) + len(msg)]]
-        
+        slack_messages = [
+            msg
+            for msg in messages
+            if "test-company-channel"
+            in sample_etl_output[: sample_etl_output.find(msg) + len(msg)]
+        ]
+        telegram_messages = [
+            msg
+            for msg in messages
+            if "Test Company"
+            in sample_etl_output[: sample_etl_output.find(msg) + len(msg)]
+        ]
+
         assert len(slack_messages) > 0
         assert len(telegram_messages) > 0
-    
+
     def test_validation_script_execution(self, sample_etl_output, temp_dir):
         """Test validation script execution"""
         output_file = os.path.join(temp_dir, "test_output.txt")
-        with open(output_file, 'w') as f:
+        with open(output_file, "w") as f:
             f.write(sample_etl_output)
-        
+
         # Test validation script import and structure
         import scripts.validate_etl_output_simple as validator
-        assert hasattr(validator, 'main')
-        
+
+        assert hasattr(validator, "main")
+
         # Test that we can read the file we created
-        with open(output_file, 'r') as f:
+        with open(output_file, "r") as f:
             content = f.read()
         assert content == sample_etl_output
-    
+
     def test_file_size_validation(self, sample_etl_output, temp_dir):
         """Test file size validation"""
         output_file = os.path.join(temp_dir, "test_output.txt")
-        
+
         # Test empty file
-        with open(output_file, 'w') as f:
+        with open(output_file, "w") as f:
             f.write("")
-        
+
         file_size = os.path.getsize(output_file)
         assert file_size == 0
-        
+
         # Test normal file
-        with open(output_file, 'w') as f:
+        with open(output_file, "w") as f:
             f.write(sample_etl_output)
-        
+
         file_size = os.path.getsize(output_file)
         assert file_size > 0
         assert file_size < 1000000  # Should be reasonable size
-    
+
     def test_notebooklm_readiness_check(self, sample_etl_output):
         """Test NotebookLM readiness validation"""
         # Check for required elements for NotebookLM
@@ -193,12 +207,14 @@ HUBSPOT: No data
             "COMPANY INFORMATION:",
             "SLACK CHANNELS:",
             "TELEGRAM CHATS:",
-            "ALL MESSAGES:"
+            "ALL MESSAGES:",
         ]
-        
+
         for element in required_elements:
-            assert element in sample_etl_output, f"Required element '{element}' not found"
-        
+            assert (
+                element in sample_etl_output
+            ), f"Required element '{element}' not found"
+
         # Check for message format
         assert "[" in sample_etl_output  # Timestamp format
         assert "] " in sample_etl_output  # Sender format
@@ -207,36 +223,44 @@ HUBSPOT: No data
 
 class TestValidationScriptIntegration:
     """Test integration of validation scripts"""
-    
+
     def test_validation_script_file_structure(self):
         """Test that validation script files exist and are importable"""
-        script_path = os.path.join(os.path.dirname(__file__), "../../scripts/validate_etl_output_simple.py")
-        assert os.path.exists(script_path), f"Validation script not found: {script_path}"
-        
+        script_path = os.path.join(
+            os.path.dirname(__file__), "../../scripts/validate_etl_output_simple.py"
+        )
+        assert os.path.exists(
+            script_path
+        ), f"Validation script not found: {script_path}"
+
         # Test that it can be imported
         import importlib.util
+
         spec = importlib.util.spec_from_file_location("validator", script_path)
         validator_module = importlib.util.module_from_spec(spec)
-        
+
         # Should not raise an error
         try:
             spec.loader.exec_module(validator_module)
             assert True, "Validation script imported successfully"
         except Exception as e:
             pytest.fail(f"Failed to import validation script: {e}")
-    
+
     def test_validation_script_help(self):
         """Test validation script help functionality"""
-        script_path = os.path.join(os.path.dirname(__file__), "../../scripts/validate_etl_output_simple.py")
-        
+        script_path = os.path.join(
+            os.path.dirname(__file__), "../../scripts/validate_etl_output_simple.py"
+        )
+
         # Test that script can be run with help
         import subprocess
+
         try:
             result = subprocess.run(
-                [sys.executable, script_path, "--help"], 
-                capture_output=True, 
-                text=True, 
-                timeout=10
+                [sys.executable, script_path, "--help"],
+                capture_output=True,
+                text=True,
+                timeout=10,
             )
             # Should not crash
             assert result.returncode in [0, 2]  # 0 for success, 2 for help shown

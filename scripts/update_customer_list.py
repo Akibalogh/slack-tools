@@ -8,54 +8,64 @@ based on the provided customer list.
 
 import csv
 import re
-from typing import Set, List
+from typing import List, Set
+
 
 def parse_customer_list(customer_list: str) -> Set[str]:
     """Parse the customer list and extract company names."""
     customers = set()
-    
-    for line in customer_list.strip().split('\n'):
-        if '::' in line:
+
+    for line in customer_list.strip().split("\n"):
+        if "::" in line:
             # Extract company name before the ::
-            company_name = line.split('::')[0].strip()
+            company_name = line.split("::")[0].strip()
             customers.add(company_name)
-    
+
     return customers
 
-def update_company_mapping(customers: Set[str], mapping_file: str = "data/company_mapping.csv"):
+
+def update_company_mapping(
+    customers: Set[str], mapping_file: str = "data/company_mapping.csv"
+):
     """Update the company mapping file to only include actual customers."""
-    
+
     # Read existing mapping
     existing_companies = set()
     rows_to_keep = []
-    
-    with open(mapping_file, 'r', encoding='utf-8') as f:
+
+    with open(mapping_file, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         fieldnames = reader.fieldnames
-        
+
         for row in reader:
-            existing_companies.add(row['Company Name'])
+            existing_companies.add(row["Company Name"])
             rows_to_keep.append(row)
-    
+
     # Filter to only include customers
     filtered_rows = []
     customers_found = set()
     customers_missing = set()
-    
+
     for row in rows_to_keep:
-        company_name = row['Company Name']
-        
+        company_name = row["Company Name"]
+
         # Check if this company is in our customer list
         if company_name in customers:
             filtered_rows.append(row)
             customers_found.add(company_name)
         else:
             # Check if it's a variant of a customer company
-            base_name = company_name.replace('-minter', '').replace('-mainnet-1', '').replace('-validator-1', '').replace('-validator-2', '').replace('-wallet-1', '')
+            base_name = (
+                company_name.replace("-minter", "")
+                .replace("-mainnet-1", "")
+                .replace("-validator-1", "")
+                .replace("-validator-2", "")
+                .replace("-wallet-1", "")
+            )
             if base_name in customers:
                 filtered_rows.append(row)
                 customers_found.add(company_name)
-    
+
     # Check for customers not in mapping
     for customer in customers:
         if customer not in customers_found:
@@ -67,20 +77,21 @@ def update_company_mapping(customers: Set[str], mapping_file: str = "data/compan
                     break
             if not found_variant:
                 customers_missing.add(customer)
-    
+
     # Write filtered mapping
-    with open(mapping_file, 'w', newline='', encoding='utf-8') as f:
+    with open(mapping_file, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(filtered_rows)
-    
+
     return {
-        'total_customers': len(customers),
-        'customers_in_mapping': len(customers_found),
-        'customers_missing': customers_missing,
-        'companies_removed': len(existing_companies) - len(filtered_rows),
-        'final_company_count': len(filtered_rows)
+        "total_customers": len(customers),
+        "customers_in_mapping": len(customers_found),
+        "customers_missing": customers_missing,
+        "companies_removed": len(existing_companies) - len(filtered_rows),
+        "final_company_count": len(filtered_rows),
     }
+
 
 def main():
     # Your customer list
@@ -197,30 +208,33 @@ xbto-minter::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c
 xbto-validator-1::12209b9741b4de98a57f93948b5f4a2911aa13a789b822eb215ef4c4b54060b0e0d3
 xlabs::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2
 xlabs-minter::1220409a9fcc5ff6422e29ab978c22c004dde33202546b4bcbde24b25b85353366c2"""
-    
+
     print("🔍 Updating Company Mapping to Only Include Actual Customers")
     print("=" * 60)
-    
+
     # Parse customer list
     customers = parse_customer_list(customer_list)
     print(f"📋 Found {len(customers)} unique customer companies")
-    
+
     # Update mapping
     results = update_company_mapping(customers)
-    
+
     print(f"✅ Company mapping updated:")
     print(f"   • Total customers: {results['total_customers']}")
     print(f"   • Customers in mapping: {results['customers_in_mapping']}")
     print(f"   • Companies removed: {results['companies_removed']}")
     print(f"   • Final company count: {results['final_company_count']}")
-    
-    if results['customers_missing']:
-        print(f"\n⚠️  Customers not found in mapping ({len(results['customers_missing'])}):")
-        for customer in sorted(results['customers_missing']):
+
+    if results["customers_missing"]:
+        print(
+            f"\n⚠️  Customers not found in mapping ({len(results['customers_missing'])}):"
+        )
+        for customer in sorted(results["customers_missing"]):
             print(f"   • {customer}")
-    
+
     print(f"\n🎯 Next step: Run ETL again to generate filtered output")
     print(f"   python src/etl/run_etl.py --workers 2 --batch-size 50")
+
 
 if __name__ == "__main__":
     main()
