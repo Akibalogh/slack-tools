@@ -4,6 +4,17 @@ All notable changes to the Slack Tools project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.4.2] - 2025-12-02
+
+### Changed
+- **Migrated to Heroku Postgres**: The admin panel database has been migrated from SQLite to Heroku Postgres for persistent storage
+  - Added psycopg2-binary to dependencies for Postgres support
+  - Implemented dual database support (Postgres for production, SQLite fallback for local dev)
+  - Created execute_query helper to handle parameter placeholder differences between Postgres (%s) and SQLite (?)
+  - Updated SQL schema to use Postgres-specific syntax (SERIAL, NOW(), etc.)
+  - Database now persists across dyno restarts (no more ephemeral storage issues)
+  - Maintained backward compatibility with SQLite for local development
+
 ## [1.4.1] - 2025-12-01
 
 ### Changed
