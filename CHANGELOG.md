@@ -4,6 +4,16 @@ All notable changes to the Slack Tools project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.4.3] - 2025-12-02
+
+### Fixed
+- **Postgres Transaction Error Handling**: Fixed "transaction is aborted" errors in Postgres
+  - Added proper try-except-finally blocks with rollback to all database operations
+  - Ensured all transactions are properly committed or rolled back on error
+  - Added safe_execute method to Database class for automatic error handling
+  - Fixed Telegram audit failures caused by unhandled transaction errors
+  - Updated scheduler audit and offboarding functions with proper error recovery
+
 ## [1.4.2] - 2025-12-02
 
 ### Changed
