@@ -177,13 +177,13 @@ class Database:
                 updated_at TIMESTAMP DEFAULT NOW()
             )
         """)
-            
-            # Insert initial row if it doesn't exist (Postgres syntax)
-            cursor.execute("""
-                INSERT INTO telegram_audit_status (id, status, message)
-                VALUES (1, 'idle', '')
-                ON CONFLICT (id) DO NOTHING
-            """)
+        
+        # Insert initial row if it doesn't exist (Postgres syntax)
+        db.execute_query(cursor, """
+            INSERT INTO telegram_audit_status (id, status, message)
+            VALUES (1, 'idle', '')
+            ON CONFLICT (id) DO NOTHING
+        """)
         else:
             # SQLite-specific schema (local dev fallback)
             # Employees table
