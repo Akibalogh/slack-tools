@@ -4,6 +4,8 @@ All notable changes to the Slack Tools project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.5.0] - 2025-12-02
+
 ### Added
 - **Separated Audit History**: Split audit display into two clear sections
   - Scheduled Audits section: Daily automated Slack + Telegram audits (2:00 AM UTC)
