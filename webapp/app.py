@@ -26,7 +26,7 @@ def get_telegram_status():
     conn = None
     try:
         conn = db.get_connection()
-        cursor = conn.cursor()
+        cursor = db.get_cursor(conn)
         db.execute_query(cursor, "SELECT status, message, error, code, password FROM telegram_audit_status WHERE id = 1")
         row = cursor.fetchone()
         
@@ -53,7 +53,7 @@ def set_telegram_status(status, message='', error=None):
     conn = None
     try:
         conn = db.get_connection()
-        cursor = conn.cursor()
+        cursor = db.get_cursor(conn)
         db.execute_query(cursor, """
             UPDATE telegram_audit_status 
             SET status = ?, message = ?, error = ?, updated_at = CURRENT_TIMESTAMP
@@ -73,7 +73,7 @@ def get_telegram_code():
     conn = None
     try:
         conn = db.get_connection()
-        cursor = conn.cursor()
+        cursor = db.get_cursor(conn)
         db.execute_query(cursor, "SELECT code FROM telegram_audit_status WHERE id = 1")
         row = cursor.fetchone()
         code = row[0] if row and row[0] else None
@@ -95,7 +95,7 @@ def get_telegram_password():
     conn = None
     try:
         conn = db.get_connection()
-        cursor = conn.cursor()
+        cursor = db.get_cursor(conn)
         db.execute_query(cursor, "SELECT password FROM telegram_audit_status WHERE id = 1")
         row = cursor.fetchone()
         password = row[0] if row and row[0] else None
@@ -119,9 +119,10 @@ telegram_client_storage = {}
 def ensure_data_seeded():
     """Ensure database has employee data on startup"""
     conn = db.get_connection()
-    cursor = conn.cursor()
-    db.execute_query(cursor, "SELECT COUNT(*) FROM employees")
-    count = cursor.fetchone()[0]
+    cursor = db.get_cursor(conn)
+    db.execute_query(cursor, "SELECT COUNT(*) as count FROM employees")
+    row = cursor.fetchone()
+    count = row['count'] if isinstance(row, dict) else row[0]
     conn.close()
     
     if count == 0:
@@ -140,17 +141,20 @@ ensure_data_seeded()
 def dashboard():
     """Main dashboard with overview stats"""
     conn = db.get_connection()
-    cursor = conn.cursor()
+    cursor = db.get_cursor(conn)
     
     # Get employee stats
-    db.execute_query(cursor, "SELECT COUNT(*) FROM employees WHERE status = 'active'")
-    active_count = cursor.fetchone()[0]
+    db.execute_query(cursor, "SELECT COUNT(*) as count FROM employees WHERE status = 'active'")
+    row = cursor.fetchone()
+    active_count = row['count'] if isinstance(row, dict) else row[0]
     
-    db.execute_query(cursor, "SELECT COUNT(*) FROM employees WHERE status = 'inactive'")
-    inactive_count = cursor.fetchone()[0]
+    db.execute_query(cursor, "SELECT COUNT(*) as count FROM employees WHERE status = 'inactive'")
+    row = cursor.fetchone()
+    inactive_count = row['count'] if isinstance(row, dict) else row[0]
     
-    db.execute_query(cursor, "SELECT COUNT(*) FROM employees WHERE status = 'optional'")
-    optional_count = cursor.fetchone()[0]
+    db.execute_query(cursor, "SELECT COUNT(*) as count FROM employees WHERE status = 'optional'")
+    row = cursor.fetchone()
+    optional_count = row['count'] if isinstance(row, dict) else row[0]
     
     # Get latest audit
     db.execute_query(cursor, """
@@ -189,7 +193,7 @@ def dashboard():
 def employees():
     """List all employees"""
     conn = db.get_connection()
-    cursor = conn.cursor()
+    cursor = db.get_cursor(conn)
     
     status_filter = request.args.get('status', 'all')
     
@@ -209,7 +213,7 @@ def add_employee():
     """Add new employee"""
     if request.method == 'POST':
         conn = db.get_connection()
-        cursor = conn.cursor()
+        cursor = db.get_cursor(conn)
         
         db.execute_query(cursor, """
             INSERT INTO employees 
@@ -239,7 +243,7 @@ def add_employee():
 def edit_employee(employee_id):
     """Edit existing employee"""
     conn = db.get_connection()
-    cursor = conn.cursor()
+    cursor = db.get_cursor(conn)
     
     if request.method == 'POST':
         db.execute_query(cursor, """
@@ -281,7 +285,7 @@ def edit_employee(employee_id):
 def audits():
     """View audit history and results"""
     conn = db.get_connection()
-    cursor = conn.cursor()
+    cursor = db.get_cursor(conn)
     
     # Get audit history
     db.execute_query(cursor, "SELECT * FROM audit_runs ORDER BY started_at DESC LIMIT 20")
@@ -308,7 +312,7 @@ def audits():
 def audit_detail(audit_id):
     """View specific audit details"""
     conn = db.get_connection()
-    cursor = conn.cursor()
+    cursor = db.get_cursor(conn)
     
     db.execute_query(cursor, "SELECT * FROM audit_runs WHERE id = ?", (audit_id,))
     audit = cursor.fetchone()
@@ -333,7 +337,7 @@ def audit_detail(audit_id):
 def offboarding():
     """Offboarding center"""
     conn = db.get_connection()
-    cursor = conn.cursor()
+    cursor = db.get_cursor(conn)
     
     # Get inactive employees
     db.execute_query(cursor, "SELECT * FROM employees WHERE status = 'inactive' ORDER BY name")
@@ -365,7 +369,7 @@ def offboarding():
 def api_get_employees():
     """Get all employees as JSON"""
     conn = db.get_connection()
-    cursor = conn.cursor()
+    cursor = db.get_cursor(conn)
     db.execute_query(cursor, "SELECT * FROM employees ORDER BY name")
     employees = [dict(row) for row in cursor.fetchall()]
     conn.close()
@@ -383,7 +387,7 @@ def api_get_employees():
 #         return jsonify({'error': 'Invalid status'}), 400
 #     
 #     conn = db.get_connection()
-#     cursor = conn.cursor()
+#     cursor = db.get_cursor(conn)
 #     db.execute_query(cursor, """
 #         UPDATE employees 
 #         SET status = ?, updated_at = CURRENT_TIMESTAMP 
@@ -400,7 +404,7 @@ def api_get_employees():
 # def api_run_audit():
 #     """Trigger manual audit"""
 #     conn = db.get_connection()
-#     cursor = conn.cursor()
+#     cursor = db.get_cursor(conn)
 #     
 #     # Create audit run record
 #     db.execute_query(cursor, """
@@ -424,7 +428,7 @@ def api_get_employees():
 def api_latest_audit():
     """Get latest audit results"""
     conn = db.get_connection()
-    cursor = conn.cursor()
+    cursor = db.get_cursor(conn)
     
     db.execute_query(cursor, "SELECT * FROM audit_runs ORDER BY started_at DESC LIMIT 1")
     audit = cursor.fetchone()
@@ -487,7 +491,7 @@ def api_submit_telegram_code():
     
     # Store code in database
     conn = db.get_connection()
-    cursor = conn.cursor()
+    cursor = db.get_cursor(conn)
     db.execute_query(cursor, """
         UPDATE telegram_audit_status 
         SET code = ?, status = 'authenticating', message = 'Authenticating with code...'
@@ -515,7 +519,7 @@ def api_submit_telegram_password():
     
     # Store password in database
     conn = db.get_connection()
-    cursor = conn.cursor()
+    cursor = db.get_cursor(conn)
     db.execute_query(cursor, """
         UPDATE telegram_audit_status 
         SET password = ?, status = 'authenticating_password', message = 'Authenticating with password...'
@@ -539,7 +543,7 @@ def api_submit_telegram_password():
 #         return jsonify({'error': 'employee_id required'}), 400
 #     
 #     conn = db.get_connection()
-#     cursor = conn.cursor()
+#     cursor = db.get_cursor(conn)
 #     
 #     # Create offboarding task
 #     db.execute_query(cursor, """
@@ -563,7 +567,7 @@ def api_submit_telegram_password():
 def api_offboarding_status(task_id):
     """Get offboarding task status"""
     conn = db.get_connection()
-    cursor = conn.cursor()
+    cursor = db.get_cursor(conn)
     db.execute_query(cursor, """
         SELECT ot.*, e.name as employee_name
         FROM offboarding_tasks ot
@@ -683,7 +687,7 @@ async def run_telegram_audit(api_id, api_hash, phone):
         
         # Create audit run entry in database
         conn = db.get_connection()
-        cursor = conn.cursor()
+        cursor = db.get_cursor(conn)
         db.execute_query(cursor, """
             INSERT INTO audit_runs (run_type, status)
             VALUES ('manual', 'running')

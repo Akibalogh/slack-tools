@@ -31,8 +31,6 @@ class Database:
         """Get database connection"""
         if self.is_postgres:
             conn = psycopg2.connect(self.db_url)
-            # Use RealDictCursor to return dict-like rows instead of tuples
-            conn.cursor_factory = psycopg2.extras.RealDictCursor
             return conn
         else:
             # Fallback to sqlite for local dev
@@ -40,6 +38,13 @@ class Database:
             conn = sqlite3.connect(self.db_url.replace("file:", ""))
             conn.row_factory = sqlite3.Row
             return conn
+    
+    def get_cursor(self, conn):
+        """Get a cursor with appropriate row factory"""
+        if self.is_postgres:
+            return conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+        else:
+            return conn.cursor()
     
     def param_placeholder(self):
         """Get the correct parameter placeholder for the database type"""
@@ -65,7 +70,7 @@ class Database:
         conn = None
         try:
             conn = self.get_connection()
-            cursor = conn.cursor()
+            cursor = self.get_cursor(conn) if self.is_postgres else conn.cursor()
             self.execute_query(cursor, query, params)
             
             result = None
@@ -87,7 +92,7 @@ class Database:
     def init_db(self):
         """Initialize database schema"""
         conn = self.get_connection()
-        cursor = conn.cursor()
+        cursor = self.get_cursor(conn) if self.is_postgres else conn.cursor()
 
         if self.is_postgres:
             # Postgres-specific schema
@@ -273,11 +278,13 @@ class Database:
     def seed_initial_data(self):
         """Seed database with current team members"""
         conn = self.get_connection()
-        cursor = conn.cursor()
+        cursor = self.get_cursor(conn) if self.is_postgres else conn.cursor()
 
         # Check if already seeded
-        cursor.execute("SELECT COUNT(*) FROM employees")
-        if cursor.fetchone()[0] > 0:
+        cursor.execute("SELECT COUNT(*) as count FROM employees")
+        row = cursor.fetchone()
+        count = row['count'] if isinstance(row, dict) else row[0]
+        if count > 0:
             print("⚠️  Database already contains employees. Skipping seed.")
             conn.close()
             return

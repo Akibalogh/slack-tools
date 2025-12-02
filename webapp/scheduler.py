@@ -45,7 +45,7 @@ def run_audit_job(audit_id=None):
     
     try:
         conn = db.get_connection()
-        cursor = conn.cursor()
+        cursor = db.get_cursor(conn)
         
         # Create audit run record if not provided
         if audit_id is None:
@@ -184,7 +184,7 @@ def save_audit_results(audit_id, results, report_path):
     conn = None
     try:
         conn = db.get_connection()
-        cursor = conn.cursor()
+        cursor = db.get_cursor(conn)
         
         for channel in results.get('incomplete_channels', []):
             db.execute_query(cursor, """
@@ -225,7 +225,7 @@ def run_offboarding_job(task_id, employee_id, platform='both'):
     
     try:
         conn = db.get_connection()
-        cursor = conn.cursor()
+        cursor = db.get_cursor(conn)
         
         # Get employee details
         db.execute_query(cursor, "SELECT * FROM employees WHERE id = ?", (employee_id,))
