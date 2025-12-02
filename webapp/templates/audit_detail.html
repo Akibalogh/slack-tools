@@ -122,6 +122,97 @@
 </div>
 {% endif %}
 
+{% if report_data %}
+<div class="card" style="margin-top: 20px;">
+    <h3 style="margin-bottom: 15px;">📊 Full Audit Report</h3>
+    
+    {% set slack_channels = report_data.slack_channels or [] %}
+    {% set telegram_groups = report_data.telegram_groups or [] %}
+    
+    {% if slack_channels %}
+    <h4 style="margin: 20px 0 10px 0;">💬 Slack Channels ({{ slack_channels|length }})</h4>
+    <table style="margin-bottom: 30px;">
+        <thead>
+            <tr>
+                <th>Channel Name</th>
+                <th>Required Members</th>
+                <th>Missing</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for channel in slack_channels[:50] %}
+            <tr>
+                <td><strong>{{ channel['Group Name'] or channel.name }}</strong></td>
+                <td>{{ channel['Required Members'] or '-' }}</td>
+                <td>
+                    {% if channel['Missing Members'] %}
+                        <span style="color: #e74c3c;">{{ channel['Missing Members'] }}</span>
+                    {% else %}
+                        <span style="color: #27ae60;">✓ Complete</span>
+                    {% endif %}
+                </td>
+                <td>
+                    <span class="badge {% if channel['Missing Members'] %}badge-warning{% else %}badge-completed{% endif %}">
+                        {{ channel['Completeness'] or '100%' }}
+                    </span>
+                </td>
+            </tr>
+            {% endfor %}
+            {% if slack_channels|length > 50 %}
+            <tr>
+                <td colspan="4" style="text-align: center; color: #666;">
+                    ... and {{ slack_channels|length - 50 }} more channels (showing first 50)
+                </td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+    {% endif %}
+    
+    {% if telegram_groups %}
+    <h4 style="margin: 20px 0 10px 0;">✈️ Telegram Groups ({{ telegram_groups|length }})</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Group Name</th>
+                <th>Required Members</th>
+                <th>Missing</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for group in telegram_groups[:50] %}
+            <tr>
+                <td><strong>{{ group['Group Name'] or group.name }}</strong></td>
+                <td>{{ group['Required Members'] or '-' }}</td>
+                <td>
+                    {% if group['Missing Members'] %}
+                        <span style="color: #e74c3c;">{{ group['Missing Members'] }}</span>
+                    {% else %}
+                        <span style="color: #27ae60;">✓ Complete</span>
+                    {% endif %}
+                </td>
+                <td>
+                    <span class="badge {% if group['Missing Members'] %}badge-warning{% else %}badge-completed{% endif %}">
+                        {{ group['Completeness'] or '100%' }}
+                    </span>
+                </td>
+            </tr>
+            {% endfor %}
+            {% if telegram_groups|length > 50 %}
+            <tr>
+                <td colspan="4" style="text-align: center; color: #666;">
+                    ... and {{ telegram_groups|length - 50 }} more groups (showing first 50)
+                </td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+{% endif %}
+
 {% endblock %}
 
 

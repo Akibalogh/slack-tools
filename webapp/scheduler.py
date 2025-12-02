@@ -112,7 +112,8 @@ def run_audit_job(audit_id=None):
                 slack_channels_complete = ?,
                 telegram_groups_total = ?,
                 telegram_groups_complete = ?,
-                report_path = ?
+                report_path = ?,
+                results_json = ?
             WHERE id = ?
         """, (
             audit_results.get('slack_total', 0),
@@ -120,6 +121,7 @@ def run_audit_job(audit_id=None):
             audit_results.get('telegram_total', 0),
             audit_results.get('telegram_complete', 0),
             str(report_path),
+            json.dumps(audit_results),
             audit_id
         ))
         conn.commit()

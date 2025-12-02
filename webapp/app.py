@@ -367,6 +367,8 @@ def audits():
 @app.route('/audits/<int:audit_id>')
 def audit_detail(audit_id):
     """View specific audit details"""
+    import json
+    
     conn = db.get_connection()
     cursor = db.get_cursor(conn)
     
@@ -382,7 +384,19 @@ def audit_detail(audit_id):
     
     conn.close()
     
-    return render_template('audit_detail.html', audit=audit, findings=findings)
+    # Parse full audit results from stored JSON
+    audit_dict = dict(audit) if not isinstance(audit, dict) else audit
+    report_data = None
+    if audit_dict and audit_dict.get('results_json'):
+        try:
+            report_data = json.loads(audit_dict['results_json'])
+        except Exception as e:
+            print(f"Could not parse results JSON: {e}")
+    
+    return render_template('audit_detail.html', 
+                         audit=audit, 
+                         findings=findings,
+                         report_data=report_data)
 
 
 # ============================================================================

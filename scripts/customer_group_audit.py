@@ -664,7 +664,9 @@ async def main():
         'slack_complete': len([r for r in slack_results if not r.get('Missing Members')]),
         'telegram_total': len(telegram_results),
         'telegram_complete': len([r for r in telegram_results if not r.get('Missing Members')]),
-        'incomplete_channels': incomplete_channels
+        'incomplete_channels': incomplete_channels,
+        'slack_channels': slack_results,
+        'telegram_groups': telegram_results
     }
     
     # Output in parseable format for webapp
