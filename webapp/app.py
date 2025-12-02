@@ -701,11 +701,19 @@ async def run_telegram_audit(api_id, api_hash, phone):
         # Create audit run entry in database
         conn = db.get_connection()
         cursor = db.get_cursor(conn)
-        db.execute_query(cursor, """
-            INSERT INTO audit_runs (run_type, status)
-            VALUES ('manual', 'running')
-        """)
-        audit_id = cursor.lastrowid
+        if db.is_postgres:
+            db.execute_query(cursor, """
+                INSERT INTO audit_runs (run_type, status)
+                VALUES ('manual', 'running')
+                RETURNING id
+            """)
+            audit_id = cursor.fetchone()['id']
+        else:
+            db.execute_query(cursor, """
+                INSERT INTO audit_runs (run_type, status)
+                VALUES ('manual', 'running')
+            """)
+            audit_id = cursor.lastrowid
         conn.commit()
         conn.close()
         

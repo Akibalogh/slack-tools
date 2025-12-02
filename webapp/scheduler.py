@@ -48,11 +48,19 @@ def run_audit_job(audit_id=None):
         
         # Create audit run record if not provided
         if audit_id is None:
-            db.execute_query(cursor, """
-                INSERT INTO audit_runs (run_type, status)
-                VALUES ('scheduled', 'running')
-            """)
-            audit_id = cursor.lastrowid
+            if db.is_postgres:
+                db.execute_query(cursor, """
+                    INSERT INTO audit_runs (run_type, status)
+                    VALUES ('scheduled', 'running')
+                    RETURNING id
+                """)
+                audit_id = cursor.fetchone()['id']
+            else:
+                db.execute_query(cursor, """
+                    INSERT INTO audit_runs (run_type, status)
+                    VALUES ('scheduled', 'running')
+                """)
+                audit_id = cursor.lastrowid
             conn.commit()
         else:
             # Update existing audit to running
