@@ -67,7 +67,7 @@ def run_audit_job(audit_id=None):
         db.execute_query(cursor, """
             SELECT slack_username, telegram_username 
             FROM employees 
-            WHERE status = 'active' AND (slack_required = 1 OR telegram_required = 1)
+            WHERE status = 'active' AND (slack_required = TRUE OR telegram_required = TRUE)
         """)
         active_members = cursor.fetchall()
         
