@@ -924,8 +924,16 @@ async def run_telegram_audit(api_id, api_hash, phone):
                     "completed",
                     "Audit completed successfully! Check the Audit History tab to see results.",
                 )
+                # Auto-reset to idle after 30 seconds
+                import time
+                time.sleep(30)
+                set_telegram_status("idle", "")
             except Exception as e:
                 set_telegram_status("error", "", f"Audit failed: {str(e)}")
+                # Auto-reset errors after 60 seconds
+                import time
+                time.sleep(60)
+                set_telegram_status("idle", "")
 
         thread = threading.Thread(target=run_audit)
         thread.daemon = True
