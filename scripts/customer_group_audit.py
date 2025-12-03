@@ -508,7 +508,7 @@ class CustomerGroupAuditor:
                     history_flag = (
                         "⚠️ HIDDEN" if history_visible == "Hidden" else history_visible
                     )
-                    
+
                     # Check if group has "BitSafe" in name (work-related groups)
                     has_bitsafe = "bitsafe" in group_name.lower()
                     bitsafe_flag = "✓ YES" if has_bitsafe else "No"
@@ -637,10 +637,10 @@ class CustomerGroupAuditor:
 
 async def main():
     import sys
-    
+
     # Check for --skip-telegram flag (for scheduled Slack-only audits)
-    skip_telegram = '--skip-telegram' in sys.argv
-    
+    skip_telegram = "--skip-telegram" in sys.argv
+
     auditor = CustomerGroupAuditor()
 
     # Step 1: Get Slack user IDs
