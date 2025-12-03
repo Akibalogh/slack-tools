@@ -24,7 +24,7 @@ def list_audits(db, status=None, limit=10):
             cursor,
             """
             SELECT id, run_type, status, started_at, completed_at, error_message
-            FROM audit_runs 
+            FROM audit_runs
             WHERE status = ?
             ORDER BY started_at DESC LIMIT ?
         """,
@@ -35,7 +35,7 @@ def list_audits(db, status=None, limit=10):
             cursor,
             """
             SELECT id, run_type, status, started_at, completed_at, error_message
-            FROM audit_runs 
+            FROM audit_runs
             ORDER BY started_at DESC LIMIT ?
         """,
             (limit,),
@@ -107,8 +107,8 @@ def cancel_audit(db, audit_id):
         db.execute_query(
             cursor,
             """
-            UPDATE audit_runs 
-            SET status = 'cancelled', 
+            UPDATE audit_runs
+            SET status = 'cancelled',
                 completed_at = ?,
                 error_message = 'Manually cancelled via CLI'
             WHERE id = ?
@@ -140,9 +140,9 @@ def cleanup_telegram_session(db):
         db.execute_query(
             cursor,
             """
-            UPDATE telegram_audit_status 
-            SET status = 'idle', 
-                message = '', 
+            UPDATE telegram_audit_status
+            SET status = 'idle',
+                message = '',
                 error = NULL,
                 code = NULL,
                 password = NULL
@@ -198,7 +198,7 @@ def cancel_all_running(db):
             db.execute_query(
                 cursor,
                 """
-                UPDATE audit_runs 
+                UPDATE audit_runs
                 SET status = 'cancelled',
                     completed_at = ?,
                     error_message = 'Bulk cancelled via CLI'

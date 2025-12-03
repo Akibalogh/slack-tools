@@ -129,7 +129,7 @@ class StageDetectionPopulator:
             for stage_name, confidence in detected_stages:
                 cursor.execute(
                     """
-                    INSERT INTO stage_detections 
+                    INSERT INTO stage_detections
                     (conv_id, stage_name, message_id, author, timestamp, confidence)
                     VALUES (?, ?, ?, ?, ?, ?)
                 """,

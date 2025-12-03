@@ -104,7 +104,7 @@ def populate_sales_reps(db_path: str):
     for user_id, display_name, real_name, email, role, commission_rate in sales_reps:
         cursor.execute(
             """
-            INSERT OR REPLACE INTO sales_reps 
+            INSERT OR REPLACE INTO sales_reps
             (user_id, display_name, real_name, email, role, commission_rate)
             VALUES (?, ?, ?, ?, ?, ?)
         """,
@@ -131,7 +131,7 @@ def populate_sales_reps(db_path: str):
     for display_name in ["Aki", "Addie", "Amy", "Mayank"]:
         cursor.execute(
             """
-            UPDATE users SET is_sales_rep = TRUE 
+            UPDATE users SET is_sales_rep = TRUE
             WHERE display_name LIKE ? OR real_name LIKE ?
         """,
             (f"%{display_name}%", f"%{display_name}%"),
@@ -158,8 +158,8 @@ def update_existing_data(db_path: str):
     for user_id in sales_rep_ids:
         cursor.execute(
             """
-            UPDATE stage_detections 
-            SET author_is_sales_rep = TRUE 
+            UPDATE stage_detections
+            SET author_is_sales_rep = TRUE
             WHERE author = ? OR author LIKE ?
         """,
             (user_id, f"%{user_id}%"),
@@ -169,8 +169,8 @@ def update_existing_data(db_path: str):
     for user_id in sales_rep_ids:
         cursor.execute(
             """
-            UPDATE messages 
-            SET author_is_sales_rep = TRUE 
+            UPDATE messages
+            SET author_is_sales_rep = TRUE
             WHERE author = ? OR author LIKE ?
         """,
             (user_id, f"%{user_id}%"),
@@ -182,8 +182,8 @@ def update_existing_data(db_path: str):
     for name in sales_rep_names:
         cursor.execute(
             """
-            UPDATE stage_detections 
-            SET author_is_sales_rep = TRUE 
+            UPDATE stage_detections
+            SET author_is_sales_rep = TRUE
             WHERE author LIKE ?
         """,
             (f"%{name}%",),
@@ -191,8 +191,8 @@ def update_existing_data(db_path: str):
 
         cursor.execute(
             """
-            UPDATE messages 
-            SET author_is_sales_rep = TRUE 
+            UPDATE messages
+            SET author_is_sales_rep = TRUE
             WHERE author LIKE ?
         """,
             (f"%{name}%",),

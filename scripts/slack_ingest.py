@@ -220,7 +220,7 @@ class SlackIngest:
 
             cursor.execute(
                 """
-                INSERT OR REPLACE INTO conversations 
+                INSERT OR REPLACE INTO conversations
                 (conv_id, name, member_count, creation_date, is_bitsafe)
                 VALUES (?, ?, ?, ?, ?)
             """,
@@ -246,7 +246,7 @@ class SlackIngest:
             if not user.get("is_bot", False) and not user.get("deleted", False):
                 cursor.execute(
                     """
-                    INSERT OR REPLACE INTO users 
+                    INSERT OR REPLACE INTO users
                     (id, display_name, real_name, email)
                     VALUES (?, ?, ?, ?)
                 """,
@@ -274,7 +274,7 @@ class SlackIngest:
 
             cursor.execute(
                 """
-                INSERT OR REPLACE INTO messages 
+                INSERT OR REPLACE INTO messages
                 (id, conv_id, timestamp, author, text, stage_hits)
                 VALUES (?, ?, ?, ?, ?, ?)
             """,

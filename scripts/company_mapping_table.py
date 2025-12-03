@@ -40,10 +40,10 @@ class CompanyMappingTable:
         cursor.execute(
             """
             SELECT c.name, COUNT(m.id) as msg_count
-            FROM conversations c 
-            LEFT JOIN messages m ON c.conv_id = m.conv_id 
-            WHERE c.name NOT LIKE '%general%' 
-              AND c.name NOT LIKE '%random%' 
+            FROM conversations c
+            LEFT JOIN messages m ON c.conv_id = m.conv_id
+            WHERE c.name NOT LIKE '%general%'
+              AND c.name NOT LIKE '%random%'
               AND c.name NOT LIKE '%business%'
               AND c.name NOT LIKE '%validator%'
               AND c.name NOT LIKE '%eng%'
@@ -58,7 +58,7 @@ class CompanyMappingTable:
               AND c.name NOT LIKE '%runbook%'
               AND c.name NOT LIKE '%testnet%'
               AND c.name NOT LIKE '%mainnet%'
-            GROUP BY c.conv_id, c.name 
+            GROUP BY c.conv_id, c.name
             ORDER BY msg_count DESC
         """
         )
@@ -501,7 +501,7 @@ class CompanyMappingTable:
             cursor.execute(
                 """
                 SELECT company_name, meeting_title, meeting_date, duration_minutes
-                FROM calendar_meetings 
+                FROM calendar_meetings
                 ORDER BY company_name, meeting_date DESC
             """
             )
@@ -541,9 +541,9 @@ class CompanyMappingTable:
             # Query wallet information
             cursor.execute(
                 """
-                SELECT company_name, status, fund_ownership, billing_wallet, 
+                SELECT company_name, status, fund_ownership, billing_wallet,
                        external_customer_id, current_deposit, total_paid
-                FROM company_wallets 
+                FROM company_wallets
                 ORDER BY company_name
             """
             )

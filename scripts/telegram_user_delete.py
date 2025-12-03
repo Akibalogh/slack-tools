@@ -516,10 +516,10 @@ async def main():
 Examples:
     # Dry run (recommended first)
     python3 scripts/telegram_user_delete.py --dry-run --username=nftaddie
-    
+
     # Actual removal
     python3 scripts/telegram_user_delete.py --username=nftaddie
-    
+
     # Using environment variable
     export TARGET_USERNAME=nftaddie
     python3 scripts/telegram_user_delete.py --dry-run
