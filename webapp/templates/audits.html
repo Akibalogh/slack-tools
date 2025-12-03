@@ -83,7 +83,21 @@
                 <td>{{ audit.started_at.strftime('%Y-%m-%d %H:%M:%S') if audit.started_at else '-' }}</td>
                 <td>{{ audit.completed_at.strftime('%Y-%m-%d %H:%M:%S') if audit.completed_at else '-' }}</td>
                 <td>
-                    {% if audit.slack_channels_total and audit.telegram_groups_total %}
+                    {% if audit.status == 'running' %}
+                        {% if audit.slack_progress_current %}
+                            <i class="fab fa-slack" style="color: #4A154B;"></i> {{ audit.slack_progress_current }} scanned
+                        {% else %}
+                            <i class="fab fa-slack" style="color: #4A154B;"></i> Starting...
+                        {% endif %}
+                        <br>
+                        {% if audit.telegram_progress_current %}
+                            <i class="fab fa-telegram" style="color: #0088CC;"></i> {{ audit.telegram_progress_current }}/~413 scanned
+                        {% elif audit.slack_progress_current %}
+                            <i class="fab fa-telegram" style="color: #0088CC;"></i> Waiting...
+                        {% else %}
+                            <i class="fab fa-telegram" style="color: #0088CC;"></i> Pending...
+                        {% endif %}
+                    {% elif audit.slack_channels_total and audit.telegram_groups_total %}
                         <i class="fab fa-slack" style="color: #4A154B;"></i> {{ audit.slack_channels_complete or 0 }}/{{ audit.slack_channels_total }}
                         ({{ ((audit.slack_channels_complete or 0) * 100 / audit.slack_channels_total) | round | int }}%)<br>
                         <i class="fab fa-telegram" style="color: #0088CC;"></i> {{ audit.telegram_groups_complete or 0 }}/{{ audit.telegram_groups_total }}
@@ -140,7 +154,21 @@
                 <td>{{ audit.started_at.strftime('%Y-%m-%d %H:%M:%S') if audit.started_at else '-' }}</td>
                 <td>{{ audit.completed_at.strftime('%Y-%m-%d %H:%M:%S') if audit.completed_at else '-' }}</td>
                 <td>
-                    {% if audit.slack_channels_total and audit.telegram_groups_total %}
+                    {% if audit.status == 'running' %}
+                        {% if audit.slack_progress_current %}
+                            <i class="fab fa-slack" style="color: #4A154B;"></i> {{ audit.slack_progress_current }} scanned
+                        {% else %}
+                            <i class="fab fa-slack" style="color: #4A154B;"></i> Starting...
+                        {% endif %}
+                        <br>
+                        {% if audit.telegram_progress_current %}
+                            <i class="fab fa-telegram" style="color: #0088CC;"></i> {{ audit.telegram_progress_current }}/~413 scanned
+                        {% elif audit.slack_progress_current %}
+                            <i class="fab fa-telegram" style="color: #0088CC;"></i> Waiting...
+                        {% else %}
+                            <i class="fab fa-telegram" style="color: #0088CC;"></i> Pending...
+                        {% endif %}
+                    {% elif audit.slack_channels_total and audit.telegram_groups_total %}
                         <i class="fab fa-slack" style="color: #4A154B;"></i> {{ audit.slack_channels_complete or 0 }}/{{ audit.slack_channels_total }}
                         ({{ ((audit.slack_channels_complete or 0) * 100 / audit.slack_channels_total) | round | int }}%)<br>
                         <i class="fab fa-telegram" style="color: #0088CC;"></i> {{ audit.telegram_groups_complete or 0 }}/{{ audit.telegram_groups_total }}
