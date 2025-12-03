@@ -977,7 +977,7 @@ async def run_telegram_audit(api_id, api_hash, phone):
                     "Content-Type": "application/json",
                 }
                 data = {
-                    "command": f"python scripts/customer_group_audit.py --audit-id={audit_id}",
+                    "command": f"cd webapp && python -c 'from scheduler import run_audit_job; run_audit_job({audit_id}, skip_telegram=False)'",
                     "attach": False,
                     "type": "run",
                 }
