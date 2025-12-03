@@ -22,8 +22,12 @@
     {% if latest_audit %}
     <div class="stat-card {% if latest_audit.status == 'completed' %}success{% elif latest_audit.status == 'failed' %}warning{% else %}info{% endif %}">
         <div class="stat-value">
-            {% if latest_audit.slack_channels_complete %}
+            {% if latest_audit.status == 'running' %}
+                ⏳ Running
+            {% elif latest_audit.slack_channels_total %}
                 {{ latest_audit.slack_channels_complete }}/{{ latest_audit.slack_channels_total }}
+            {% elif latest_audit.telegram_groups_total %}
+                {{ latest_audit.telegram_groups_complete }}/{{ latest_audit.telegram_groups_total }}
             {% else %}
                 --
             {% endif %}
@@ -58,14 +62,26 @@
         </tr>
         <tr>
             <td><strong>Slack Channels:</strong></td>
-            <td>{{ latest_audit.slack_channels_complete or 0 }}/{{ latest_audit.slack_channels_total or 0 }} complete</td>
+            <td>
+                {% if latest_audit.status == 'running' and not latest_audit.slack_channels_total %}
+                    ⏳ Running...
+                {% else %}
+                    💬 {{ latest_audit.slack_channels_complete or 0 }}/{{ latest_audit.slack_channels_total or 0 }} complete
+                {% endif %}
+            </td>
         </tr>
-        {% if latest_audit.telegram_groups_total %}
         <tr>
             <td><strong>Telegram Groups:</strong></td>
-            <td>{{ latest_audit.telegram_groups_complete or 0 }}/{{ latest_audit.telegram_groups_total or 0 }} complete</td>
+            <td>
+                {% if latest_audit.status == 'running' and not latest_audit.telegram_groups_total %}
+                    ⏳ Running...
+                {% elif latest_audit.telegram_groups_total %}
+                    ✈️ {{ latest_audit.telegram_groups_complete or 0 }}/{{ latest_audit.telegram_groups_total or 0 }} complete
+                {% else %}
+                    -
+                {% endif %}
+            </td>
         </tr>
-        {% endif %}
     </table>
     <div style="margin-top: 15px;">
         <a href="/audits/{{ latest_audit.id }}" class="btn btn-secondary">View Details</a>
