@@ -67,6 +67,7 @@ REQUIRED_SLACK_MEMBERS = {
     "aliya": "Aliya Gordon",
     "dave": "Dave Shin",
     "Dae_L": "Dae Lee (Sales Advisor)",
+    "j_eisenberg": "Jesse Eisenberg (CTO)",
 }
 
 # Team members for TELEGRAM (core team only, not all members required)
@@ -76,6 +77,7 @@ REQUIRED_TELEGRAM_MEMBERS = {
     "mojo_onchain": "Mayank (Sales Engineer)",
     "kadeemclarke": "Kadeem Clarke (Head of Growth)",
     "NonFungibleAmy": "Amy Wu (BD)",
+    "j_eisenberg": "Jesse Eisenberg (CTO)",
 }
 
 # For backward compatibility
@@ -83,9 +85,7 @@ REQUIRED_MEMBERS = REQUIRED_SLACK_MEMBERS
 
 OPTIONAL_MEMBERS = {
     "shin_novation": "Shin (Strategy Advisor)",
-    "j_eisenberg": "Jesse Eisenberg (CTO)",
     "anmatusova": "Anna Matusova (VP Finance & Legal)",
-    "Dae_L": "Dae (Sales Advisor)",
 }
 
 # Known Slack username mappings (from workspace)
