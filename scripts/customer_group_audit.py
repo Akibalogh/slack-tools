@@ -16,8 +16,7 @@ import pandas as pd
 from dotenv import load_dotenv
 from telethon import TelegramClient
 from telethon.tl.functions.channels import GetFullChannelRequest
-from telethon.tl.functions.messages import (GetCommonChatsRequest,
-                                            GetFullChatRequest)
+from telethon.tl.functions.messages import GetCommonChatsRequest, GetFullChatRequest
 from telethon.tl.types import Channel, Chat
 
 # Load environment variables

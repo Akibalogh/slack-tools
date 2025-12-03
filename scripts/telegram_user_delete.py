@@ -38,14 +38,22 @@ from typing import Dict, List, Optional
 
 try:
     from telethon import TelegramClient
-    from telethon.errors import (ChatAdminRequiredError, FloodWaitError,
-                                 UserAdminInvalidError,
-                                 UserNotParticipantError)
-    from telethon.tl.types import (Channel, ChannelParticipantAdmin,
-                                   ChannelParticipantCreator,
-                                   ChannelParticipantsAdmins, Chat,
-                                   ChatParticipantAdmin,
-                                   ChatParticipantCreator, User)
+    from telethon.errors import (
+        ChatAdminRequiredError,
+        FloodWaitError,
+        UserAdminInvalidError,
+        UserNotParticipantError,
+    )
+    from telethon.tl.types import (
+        Channel,
+        ChannelParticipantAdmin,
+        ChannelParticipantCreator,
+        ChannelParticipantsAdmins,
+        Chat,
+        ChatParticipantAdmin,
+        ChatParticipantCreator,
+        User,
+    )
 except ImportError:
     print("❌ Error: telethon not installed")
     print("Install with: pip install telethon")
