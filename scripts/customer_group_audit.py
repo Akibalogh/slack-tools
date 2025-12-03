@@ -16,7 +16,8 @@ import pandas as pd
 from dotenv import load_dotenv
 from telethon import TelegramClient
 from telethon.tl.functions.channels import GetFullChannelRequest
-from telethon.tl.functions.messages import GetCommonChatsRequest, GetFullChatRequest
+from telethon.tl.functions.messages import (GetCommonChatsRequest,
+                                            GetFullChatRequest)
 from telethon.tl.types import Channel, Chat
 
 # Load environment variables
@@ -429,6 +430,12 @@ class CustomerGroupAuditor:
                     continue
 
                 group_name = chat.title
+
+                # Skip engineer-only groups
+                if "bitsafe eng" in group_name.lower():
+                    print(f"   Skipping engineer group: {group_name}")
+                    continue
+
                 member_count = getattr(chat, "participants_count", 0)
 
                 # Update progress every 50 groups

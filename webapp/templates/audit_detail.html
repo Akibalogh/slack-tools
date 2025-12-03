@@ -156,7 +156,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for channel in slack_channels[:50] %}
+            {% for channel in slack_channels %}
             <tr>
                 <td><strong>{{ channel['Group Name'] or channel.name }}</strong></td>
                 <td>{{ channel['Required Members'] or '-' }}</td>
@@ -203,7 +203,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for group in telegram_groups[:50] %}
+            {% for group in telegram_groups %}
             <tr{% if group.get('Has BitSafe Name') != '✓ YES' %} style="opacity: 0.6;"{% endif %}>
                 <td><strong>{{ group['Group Name'] or group.name }}</strong></td>
                 <td>
