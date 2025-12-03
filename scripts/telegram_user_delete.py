@@ -311,7 +311,9 @@ class TelegramOffboarding:
                 return True
             except Exception as check_error:
                 # If we can't check participation (permission denied, etc.), skip
-                logger.info(f"ℹ️  Cannot verify participation in {chat_name} - skipping")
+                logger.info(
+                    f"ℹ️  Cannot verify participation in {chat_name} - skipping"
+                )
                 self.stats["not_participant"] += 1
                 return True
 

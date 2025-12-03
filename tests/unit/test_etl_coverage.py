@@ -127,7 +127,6 @@ class TestETLCoverage:
         with patch.object(
             self.etl, "load_company_mapping", return_value=mock_companies
         ), patch.object(self.etl, "run_etl", return_value=True):
-
             # Test that methods can be called
             companies = self.etl.load_company_mapping()
             assert len(companies) == 1

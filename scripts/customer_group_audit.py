@@ -568,7 +568,9 @@ class CustomerGroupAuditor:
                     )
 
                     warning = (
-                        "" if requires_full_team or len(required_present) >= 3 else " ⚠️"
+                        ""
+                        if requires_full_team or len(required_present) >= 3
+                        else " ⚠️"
                     )
                     rename_note = " [RENAME]" if needs_rename(group_name) else ""
                     print(

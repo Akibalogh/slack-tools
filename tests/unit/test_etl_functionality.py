@@ -18,7 +18,6 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../.."))
 with patch("logging.FileHandler") as mock_file_handler, patch(
     "logging.basicConfig"
 ) as mock_basic_config, patch("os.makedirs") as mock_makedirs:
-
     from src.etl.etl_data_ingestion import DataETL
 
 
@@ -38,7 +37,6 @@ class TestETLFunctionality:
         with patch("src.etl.etl_data_ingestion.sqlite3.connect"), patch(
             "src.etl.etl_data_ingestion.os.path.exists", return_value=True
         ):
-
             etl = DataETL(max_workers=2, batch_size=10, quick_mode=True)
             etl.company_mapping_file = "data/company_mapping.csv"
             etl.output_file = os.path.join(temp_dir, "test_output.txt")
@@ -128,7 +126,6 @@ class TestETLFunctionality:
         ) as mock_match, patch.object(
             mock_etl, "generate_summary_stats"
         ) as mock_stats:
-
             # Setup mocks
             mock_load.return_value = {"test-company": {"company_name": "test-company"}}
             mock_slack.return_value = {"test-company": {"slack_data": "test"}}

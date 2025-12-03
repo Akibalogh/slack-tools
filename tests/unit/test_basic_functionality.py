@@ -143,7 +143,6 @@ COMPANY INFORMATION:
         with patch("logging.basicConfig") as mock_config, patch(
             "logging.FileHandler"
         ) as mock_file_handler:
-
             main.setup_logging(verbose=True)
             mock_config.assert_called_once()
 

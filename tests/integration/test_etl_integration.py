@@ -21,7 +21,6 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../.."))
 with patch("logging.FileHandler") as mock_file_handler, patch(
     "logging.basicConfig"
 ) as mock_basic_config, patch("os.makedirs") as mock_makedirs:
-
     from src.etl.etl_data_ingestion import DataETL
 
 

@@ -602,7 +602,9 @@ class ETLTextFormatter:
             commission_potential = (
                 "HIGH"
                 if company["engagement_score"] > 150
-                else "MEDIUM" if company["engagement_score"] > 75 else "LOW"
+                else "MEDIUM"
+                if company["engagement_score"] > 75
+                else "LOW"
             )
             self.output_lines.append(
                 f"{i}. {company['name']} - {commission_potential} POTENTIAL"

@@ -232,7 +232,9 @@ class ETLDataAnalyzer:
                     else (
                         "Medium"
                         if total_sources >= 2
-                        else "Low" if total_sources >= 1 else "None"
+                        else "Low"
+                        if total_sources >= 1
+                        else "None"
                     )
                 )
 

@@ -137,7 +137,9 @@ class NotebookLMSplitter:
             commission_potential = (
                 "HIGH"
                 if company["engagement_score"] > 150
-                else "MEDIUM" if company["engagement_score"] > 75 else "LOW"
+                else "MEDIUM"
+                if company["engagement_score"] > 75
+                else "LOW"
             )
             content.extend(
                 [
@@ -260,7 +262,9 @@ class NotebookLMSplitter:
             commission_potential = (
                 "HIGH"
                 if company["engagement_score"] > 150
-                else "MEDIUM" if company["engagement_score"] > 75 else "LOW"
+                else "MEDIUM"
+                if company["engagement_score"] > 75
+                else "LOW"
             )
             content.extend(
                 [

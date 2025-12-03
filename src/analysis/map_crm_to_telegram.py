@@ -102,7 +102,6 @@ class CRMTelegramMapper:
                 or any(word in link_text for word in company_lower.split())
                 or any(word in company_lower for word in link_text.split())
             ):
-
                 href = link.get("href", "")
                 if "chat_" in href:
                     # Extract chat_XXXX from path like "../chats/chat_0058/messages.html"
