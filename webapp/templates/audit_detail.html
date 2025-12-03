@@ -117,8 +117,23 @@
 </div>
 {% else %}
 <div class="card">
+    {% if audit.status == 'running' or audit.status == 'pending' %}
+    <div style="background: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 15px;">
+        <h3 style="margin: 0 0 10px 0; color: #856404;">⏳ Audit In Progress</h3>
+        <p style="margin: 0; color: #856404;">
+            The audit is currently running. Detailed results will appear here once the audit completes.
+            {% if audit.status == 'running' %}
+            This typically takes 13-18 minutes for a full audit (Slack + Telegram).
+            {% endif %}
+        </p>
+        <p style="margin: 10px 0 0 0; font-size: 14px; color: #856404;">
+            <strong>Refresh this page</strong> in a few minutes to see the results.
+        </p>
+    </div>
+    {% else %}
     <h3 style="margin-bottom: 15px;">✅ No Issues Found</h3>
     <p style="color: #666;">All channels have the required team members.</p>
+    {% endif %}
 </div>
 {% endif %}
 
