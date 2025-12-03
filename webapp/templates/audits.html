@@ -118,7 +118,7 @@
                 <th>Status</th>
                 <th>Started</th>
                 <th>Completed</th>
-                <th>Telegram Coverage</th>
+                <th>Coverage</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -135,9 +135,12 @@
                 <td>{{ audit.started_at }}</td>
                 <td>{{ audit.completed_at or '-' }}</td>
                 <td>
-                    {% if audit.telegram_groups_total %}
-                        {{ audit.telegram_groups_complete or 0 }}/{{ audit.telegram_groups_total }}
+                    {% if audit.telegram_groups_total and audit.telegram_groups_total > 0 %}
+                        ✈️ {{ audit.telegram_groups_complete or 0 }}/{{ audit.telegram_groups_total }}
                         ({{ ((audit.telegram_groups_complete or 0) * 100 / audit.telegram_groups_total) | round(1) }}%)
+                    {% elif audit.slack_channels_total and audit.slack_channels_total > 0 %}
+                        💬 {{ audit.slack_channels_complete or 0 }}/{{ audit.slack_channels_total }}
+                        ({{ ((audit.slack_channels_complete or 0) * 100 / audit.slack_channels_total) | round(1) }}%)
                     {% else %}
                         -
                     {% endif %}
