@@ -438,8 +438,8 @@ class Database:
             if self.is_postgres:
                 cursor.execute(
                     """
-                    INSERT INTO employees 
-                    (name, slack_username, slack_user_id, telegram_username, email, 
+                    INSERT INTO employees
+                    (name, slack_username, slack_user_id, telegram_username, email,
                      status, slack_required, telegram_required)
                     VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
                 """,
@@ -457,8 +457,8 @@ class Database:
             else:
                 cursor.execute(
                     """
-                    INSERT INTO employees 
-                    (name, slack_username, slack_user_id, telegram_username, email, 
+                    INSERT INTO employees
+                    (name, slack_username, slack_user_id, telegram_username, email,
                      status, slack_required, telegram_required)
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                 """,

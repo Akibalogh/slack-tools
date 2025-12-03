@@ -4,16 +4,34 @@ All notable changes to the Slack Tools project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.6.0] - 2025-12-03
+
 ### Added
-- **Sarah Flood as BDR**: Added Sarah Flood (@sfl00d) to required members for Slack and Telegram
-- **Kevin and Aliya Required for Telegram**: Updated Kevin and Aliya from optional to required for Telegram groups
+- **Sarah Flood as BDR**: Added Sarah Flood (@sfl00d) to required members for Slack and Telegram (11 total team members)
+- **Kevin and Aliya Required for Telegram**: Updated Kevin and Aliya from optional to required for Telegram groups (9 Telegram-required members)
 - **Enhanced Telegram Audit Visualization**: Added critical fields to audit detail view:
   - Has BitSafe Name (work-related vs old/retired groups)
   - Admin Status (Owner/Admin/Member) - identify groups where user lacks admin rights
   - History Visibility (Visible/Hidden/Unknown) - privacy/security concern
   - Category (BD Customer/Marketing/Internal/Intro) - group classification
+- **Sortable Team Members Table**: Click column headers to sort by Name, Req. Slack, or Req. Telegram
+- **Split Required Status**: Separate "Req. Slack" and "Req. Telegram" columns with checkmarks for easy scanning
 - **Testing Plan Documentation**: Comprehensive testing checklist in `docs/Testing_Plan.md`
 - **Security Documentation**: Full security posture in `docs/Security.md`
+
+### Changed
+- **Clear Text Labels**: Replaced emoji icons (💬 ✈️) with clear text labels ("Slack:", "Telegram:")
+- **Simplified Dashboard**: Removed "Inactive Employees" and "Optional Members" stats (always 0)
+- **Better Coverage Display**: Full audits show BOTH Slack and Telegram coverage stacked
+- **Clean Timestamps**: Removed microseconds from audit timestamps (YYYY-MM-DD HH:MM:SS)
+- **Whole Number Percentages**: Changed from 100.0% to 100%
+- **Removed Filter Buttons**: Eliminated unnecessary All/Active/Inactive/Optional filters from Employees page
+
+### Fixed
+- **Audit In Progress Message**: Shows proper "Audit In Progress" instead of "No Issues Found" while running
+- **CI Tests**: Fixed all flake8 linting errors (unused imports, line length)
+- **Database Sync**: Kevin and Aliya now correctly marked as telegram_required in production
+- **Dashboard Running State**: Both platforms show "Running..." during active audits
 
 ## [1.5.0] - 2025-12-02
 

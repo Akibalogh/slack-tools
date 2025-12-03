@@ -6,7 +6,6 @@ Read-only dashboard - no authentication required
 import asyncio
 import os
 import threading
-from pathlib import Path
 
 from database import Database
 from flask import Flask, jsonify, redirect, render_template, request, url_for
@@ -78,7 +77,7 @@ def set_telegram_status(status, message="", error=None):
         db.execute_query(
             cursor,
             """
-            UPDATE telegram_audit_status 
+            UPDATE telegram_audit_status
             SET status = ?, message = ?, error = ?, updated_at = CURRENT_TIMESTAMP
             WHERE id = 1
         """,
@@ -180,7 +179,7 @@ def save_telegram_session(session_string):
         db.execute_query(
             cursor,
             """
-            UPDATE telegram_audit_status 
+            UPDATE telegram_audit_status
             SET session_string = ?
             WHERE id = 1
         """,
@@ -249,8 +248,8 @@ def dashboard():
     db.execute_query(
         cursor,
         """
-        SELECT * FROM audit_runs 
-        ORDER BY started_at DESC 
+        SELECT * FROM audit_runs
+        ORDER BY started_at DESC
         LIMIT 1
     """,
     )
@@ -260,7 +259,7 @@ def dashboard():
     db.execute_query(
         cursor,
         """
-        SELECT ot.*, e.name as employee_name 
+        SELECT ot.*, e.name as employee_name
         FROM offboarding_tasks ot
         JOIN employees e ON ot.employee_id = e.id
         ORDER BY ot.created_at DESC
@@ -321,8 +320,8 @@ def add_employee():
         db.execute_query(
             cursor,
             """
-            INSERT INTO employees 
-            (name, slack_username, slack_user_id, telegram_username, email, 
+            INSERT INTO employees
+            (name, slack_username, slack_user_id, telegram_username, email,
              status, slack_required, telegram_required)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """,
@@ -356,8 +355,8 @@ def edit_employee(employee_id):
         db.execute_query(
             cursor,
             """
-            UPDATE employees 
-            SET name = ?, slack_username = ?, slack_user_id = ?, 
+            UPDATE employees
+            SET name = ?, slack_username = ?, slack_user_id = ?,
                 telegram_username = ?, email = ?, status = ?,
                 slack_required = ?, telegram_required = ?,
                 updated_at = CURRENT_TIMESTAMP
@@ -403,8 +402,8 @@ def audits():
     db.execute_query(
         cursor,
         """
-        SELECT * FROM audit_runs 
-        WHERE run_type = 'scheduled' 
+        SELECT * FROM audit_runs
+        WHERE run_type = 'scheduled'
         ORDER BY started_at DESC LIMIT 10
     """,
     )
@@ -414,8 +413,8 @@ def audits():
     db.execute_query(
         cursor,
         """
-        SELECT * FROM audit_runs 
-        WHERE run_type = 'manual' 
+        SELECT * FROM audit_runs
+        WHERE run_type = 'manual'
         ORDER BY started_at DESC LIMIT 10
     """,
     )
@@ -430,7 +429,7 @@ def audits():
         db.execute_query(
             cursor,
             """
-            SELECT * FROM audit_findings 
+            SELECT * FROM audit_findings
             WHERE audit_run_id = ? AND status = 'incomplete'
             ORDER BY platform, channel_name
         """,
@@ -464,7 +463,7 @@ def audit_detail(audit_id):
     db.execute_query(
         cursor,
         """
-        SELECT * FROM audit_findings 
+        SELECT * FROM audit_findings
         WHERE audit_run_id = ?
         ORDER BY platform, channel_name
     """,
@@ -604,7 +603,7 @@ def api_latest_audit():
         db.execute_query(
             cursor,
             """
-            SELECT * FROM audit_findings 
+            SELECT * FROM audit_findings
             WHERE audit_run_id = ?
         """,
             (audit["id"],),
@@ -668,7 +667,7 @@ def api_submit_telegram_code():
     db.execute_query(
         cursor,
         """
-        UPDATE telegram_audit_status 
+        UPDATE telegram_audit_status
         SET code = ?, status = 'authenticating', message = 'Authenticating with code...'
         WHERE id = 1
     """,
@@ -700,7 +699,7 @@ def api_submit_telegram_password():
     db.execute_query(
         cursor,
         """
-        UPDATE telegram_audit_status 
+        UPDATE telegram_audit_status
         SET password = ?, status = 'authenticating_password', message = 'Authenticating with password...'
         WHERE id = 1
     """,
