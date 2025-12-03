@@ -71,11 +71,24 @@ Slack Tools is a suite of Python utilities for managing, analyzing, and auditing
 
 ### Secondary User: Sales Engineer (Mayank @ mojo_onchain)
 - **Needs**: Visibility into which groups he should be added to
-- **Use Case**: Uses Telegram as primary customer communication channel, needs to be in all 401+ groups
+- **Use Case**: Uses Telegram as primary customer communication channel, needs to be in all 413+ groups
 
-### Tertiary Users: BD Team (Amy Wu, Aki Balogh)
-- **Needs**: Ensure they're present in high-value customer conversations
-- **Use Case**: Reviews audit to identify important groups they're missing from
+### BD Team Users
+- **Aki Balogh (CEO)**: Required in all customer groups
+- **Amy Wu (BD)**: Required in all customer groups
+- **Kadeem Clarke (Head of Growth)**: Required in all customer groups
+- **Sarah Flood (BDR)**: Required in all customer groups
+- **Kevin Huet (BDR)**: Required in all customer groups
+- **Aliya Gordon (BDR)**: Required in all customer groups
+
+### Product/Technical Team
+- **Gabi Tuinaite (Head of Product)**: Required in all customer groups
+- **Jesse Eisenberg (CTO)**: Required in all customer groups
+- **Dave Shin**: Required in Slack only
+- **Dae Lee (Sales Advisor)**: Required in Slack only
+
+### Optional Team
+- **Anna Matusova (VP Finance & Legal)**: Optional for all groups
 
 ---
 
@@ -522,9 +535,12 @@ Web-based read-only dashboard for viewing team member access, audit results, and
 ## Non-Functional Requirements
 
 ### Performance
-- Audit of 474 groups (72 Slack + 402 Telegram) should complete in < 5 minutes
+- Slack audit of ~120 channels: 5-10 minutes
+- Telegram audit of ~413 groups: 10-15 minutes  
+- Full audit (Slack + Telegram): 13-18 minutes
 - Slack API rate limits: 20+ requests per minute (handled with async)
 - Telegram API rate limits: Handled by Telethon automatically
+- Admin panel pages load in < 2 seconds
 
 ### Security
 - API tokens stored in `.env` file (git-ignored)
