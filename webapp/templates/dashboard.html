@@ -6,17 +6,7 @@
 <div class="stats-grid">
     <div class="stat-card success">
         <div class="stat-value">{{ active_count }}</div>
-        <div class="stat-label">Active Employees</div>
-    </div>
-    
-    <div class="stat-card warning">
-        <div class="stat-value">{{ inactive_count }}</div>
-        <div class="stat-label">Inactive Employees</div>
-    </div>
-    
-    <div class="stat-card info">
-        <div class="stat-value">{{ optional_count }}</div>
-        <div class="stat-label">Optional Members</div>
+        <div class="stat-label">Team Members</div>
     </div>
     
     {% if latest_audit %}
@@ -66,7 +56,7 @@
                 {% if latest_audit.status == 'running' and not latest_audit.slack_channels_total %}
                     ⏳ Running...
                 {% else %}
-                    💬 {{ latest_audit.slack_channels_complete or 0 }}/{{ latest_audit.slack_channels_total or 0 }} complete
+                    {{ latest_audit.slack_channels_complete or 0 }}/{{ latest_audit.slack_channels_total or 0 }} complete
                 {% endif %}
             </td>
         </tr>
@@ -76,7 +66,7 @@
                 {% if latest_audit.status == 'running' and not latest_audit.telegram_groups_total %}
                     ⏳ Running...
                 {% elif latest_audit.telegram_groups_total %}
-                    ✈️ {{ latest_audit.telegram_groups_complete or 0 }}/{{ latest_audit.telegram_groups_total or 0 }} complete
+                    {{ latest_audit.telegram_groups_complete or 0 }}/{{ latest_audit.telegram_groups_total or 0 }} complete
                 {% else %}
                     -
                 {% endif %}

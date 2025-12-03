@@ -1,32 +1,25 @@
 {% extends "base.html" %}
 
-{% block title %}Employees - Customer Group Admin{% endblock %}
+{% block title %}Team Members - Customer Group Admin{% endblock %}
 
 {% block content %}
 <div style="margin-bottom: 20px;">
-    <h2>Team Members</h2>
+    <h2>Team Members ({{ employees|length }})</h2>
     <p style="color: #666; margin-top: 10px;">
-        ℹ️ This is a read-only view. Use command-line scripts to manage employees.
+        ℹ️ This is a read-only view. Use command-line scripts to manage team members.
     </p>
 </div>
 
 <div class="card">
-    <div style="margin-bottom: 20px; display: flex; gap: 10px;">
-        <a href="/employees" class="btn {% if status_filter == 'all' %}btn-primary{% else %}btn-secondary{% endif %}">All</a>
-        <a href="/employees?status=active" class="btn {% if status_filter == 'active' %}btn-primary{% else %}btn-secondary{% endif %}">Active</a>
-        <a href="/employees?status=inactive" class="btn {% if status_filter == 'inactive' %}btn-primary{% else %}btn-secondary{% endif %}">Inactive</a>
-        <a href="/employees?status=optional" class="btn {% if status_filter == 'optional' %}btn-primary{% else %}btn-secondary{% endif %}">Optional</a>
-    </div>
-    
-    <table>
+    <table id="employees-table">
         <thead>
             <tr>
-                <th>Name</th>
+                <th style="cursor: pointer;" onclick="sortTable(0)">Name ↕</th>
                 <th>Email</th>
                 <th>Slack</th>
                 <th>Telegram</th>
-                <th>Status</th>
-                <th>Required In</th>
+                <th style="cursor: pointer; text-align: center;" onclick="sortTable(4)">Req. Slack ↕</th>
+                <th style="cursor: pointer; text-align: center;" onclick="sortTable(5)">Req. Telegram ↕</th>
             </tr>
         </thead>
         <tbody>
@@ -34,37 +27,42 @@
             <tr>
                 <td><strong>{{ employee.name }}</strong></td>
                 <td>{{ employee.email or '-' }}</td>
-                <td>
-                    {% if employee.slack_username %}
-                        {{ employee.name }}
-                    {% else %}
-                        -
-                    {% endif %}
+                <td>{{ employee.name if employee.slack_username else '-' }}</td>
+                <td>@{{ employee.telegram_username if employee.telegram_username else '-' }}</td>
+                <td style="text-align: center; font-size: 18px;">
+                    {% if employee.slack_required %}✓{% else %}-{% endif %}
                 </td>
-                <td>
-                    {% if employee.telegram_username %}
-                        @{{ employee.telegram_username }}
-                    {% else %}
-                        -
-                    {% endif %}
-                </td>
-                <td>
-                    <span class="badge badge-{{ employee.status }}">
-                        {% if employee.status == 'active' %}🟢{% elif employee.status == 'inactive' %}🔴{% else %}🟡{% endif %}
-                        {{ employee.status }}
-                    </span>
-                </td>
-                <td>
-                    {% if employee.slack_required %}Slack{% endif %}
-                    {% if employee.slack_required and employee.telegram_required %}, {% endif %}
-                    {% if employee.telegram_required %}Telegram{% endif %}
-                    {% if not employee.slack_required and not employee.telegram_required %}-{% endif %}
+                <td style="text-align: center; font-size: 18px;">
+                    {% if employee.telegram_required %}✓{% else %}-{% endif %}
                 </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
+
+<script>
+function sortTable(columnIndex) {
+    const table = document.getElementById('employees-table');
+    const tbody = table.querySelector('tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    
+    // Toggle sort direction
+    const isAscending = table.dataset.sortDirection !== 'asc';
+    table.dataset.sortDirection = isAscending ? 'asc' : 'desc';
+    
+    rows.sort((a, b) => {
+        const aText = a.cells[columnIndex].textContent.trim();
+        const bText = b.cells[columnIndex].textContent.trim();
+        
+        if (aText === bText) return 0;
+        if (aText < bText) return isAscending ? -1 : 1;
+        return isAscending ? 1 : -1;
+    });
+    
+    rows.forEach(row => tbody.appendChild(row));
+}
+</script>
 
 {% endblock %}
 
