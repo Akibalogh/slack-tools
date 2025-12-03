@@ -150,26 +150,24 @@
         <thead>
             <tr>
                 <th>Channel Name</th>
-                <th>Required Members</th>
-                <th>Missing</th>
-                <th>Status</th>
+                <th>Missing Members</th>
+                <th>Completeness</th>
             </tr>
         </thead>
         <tbody>
             {% for channel in slack_channels %}
             <tr>
                 <td><strong>{{ channel['Group Name'] or channel.name }}</strong></td>
-                <td>{{ channel['Required Members'] or '-' }}</td>
                 <td>
-                    {% if channel['Missing Members'] %}
+                    {% if channel['Missing Members'] and channel['Missing Members'] != '-' %}
                         <span style="color: #e74c3c;">{{ channel['Missing Members'] }}</span>
                     {% else %}
-                        <span style="color: #27ae60;">✓ Complete</span>
+                        <span style="color: #27ae60;">✓ None</span>
                     {% endif %}
                 </td>
                 <td>
-                    <span class="badge {% if channel['Missing Members'] %}badge-warning{% else %}badge-completed{% endif %}">
-                        {{ channel['Completeness'] or '100%' }}
+                    <span class="badge {% if channel.get('Missing Members') and channel['Missing Members'] != '-' %}badge-warning{% else %}badge-completed{% endif %}">
+                        {{ channel.get('Completeness', '100%') }}
                     </span>
                 </td>
             </tr>
