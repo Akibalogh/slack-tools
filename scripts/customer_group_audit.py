@@ -145,11 +145,12 @@ def needs_rename(group_name):
 
 
 class CustomerGroupAuditor:
-    def __init__(self):
+    def __init__(self, audit_id=None):
         self.slack_user_map = {}  # Maps Slack username -> user_id
         self.required_slack_ids = {}
         self.optional_slack_ids = {}
         self.audit_results = []
+        self.audit_id = audit_id
 
     async def get_slack_bd_members(self):
         """Get all workspace users and map team members"""
@@ -424,12 +425,19 @@ class CustomerGroupAuditor:
             print(f"   Total common groups: {len(common_chat_ids)}")
 
             # Get details for each group
-            for chat in common_chat_ids:
+            for idx, chat in enumerate(common_chat_ids, 1):
                 if not hasattr(chat, "title"):
                     continue
 
                 group_name = chat.title
                 member_count = getattr(chat, "participants_count", 0)
+
+                # Update progress every 50 groups
+                if self.audit_id and idx % 50 == 0:
+                    update_audit_progress(self.audit_id, telegram_current=idx)
+                    print(
+                        f"   Progress: {idx}/{len(common_chat_ids)} groups scanned..."
+                    )
 
                 # Check history visibility settings
                 history_visible = "Unknown"
@@ -692,7 +700,7 @@ async def main():
     )
     args = parser.parse_args()
 
-    auditor = CustomerGroupAuditor()
+    auditor = CustomerGroupAuditor(audit_id=args.audit_id)
 
     # Step 1: Get Slack user IDs
     await auditor.get_slack_bd_members()
