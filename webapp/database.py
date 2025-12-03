@@ -380,7 +380,7 @@ class Database:
                 "email": "kevin@bitsafe.finance",
                 "status": "active",
                 "slack_required": True,
-                "telegram_required": False,
+                "telegram_required": True,
             },
             {
                 "name": "Aliya Gordon",
@@ -390,7 +390,7 @@ class Database:
                 "email": "aliya@bitsafe.finance",
                 "status": "active",
                 "slack_required": True,
-                "telegram_required": False,
+                "telegram_required": True,
             },
             {
                 "name": "Dave Shin",
@@ -418,6 +418,16 @@ class Database:
                 "slack_user_id": "U05G2HFEAQD",
                 "telegram_username": "j_eisenberg",
                 "email": "jesse@bitsafe.finance",
+                "status": "active",
+                "slack_required": True,
+                "telegram_required": True,
+            },
+            {
+                "name": "Sarah Flood",
+                "slack_username": "sarah",
+                "slack_user_id": "UXXXXXXXX",  # TODO: Get actual Slack user ID
+                "telegram_username": "sfl00d",
+                "email": "sarah@bitsafe.finance",
                 "status": "active",
                 "slack_required": True,
                 "telegram_required": True,

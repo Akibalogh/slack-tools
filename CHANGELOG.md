@@ -4,6 +4,17 @@ All notable changes to the Slack Tools project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+- **Sarah Flood as BDR**: Added Sarah Flood (@sfl00d) to required members for Slack and Telegram
+- **Kevin and Aliya Required for Telegram**: Updated Kevin and Aliya from optional to required for Telegram groups
+- **Enhanced Telegram Audit Visualization**: Added critical fields to audit detail view:
+  - Has BitSafe Name (work-related vs old/retired groups)
+  - Admin Status (Owner/Admin/Member) - identify groups where user lacks admin rights
+  - History Visibility (Visible/Hidden/Unknown) - privacy/security concern
+  - Category (BD Customer/Marketing/Internal/Intro) - group classification
+- **Testing Plan Documentation**: Comprehensive testing checklist in `docs/Testing_Plan.md`
+- **Security Documentation**: Full security posture in `docs/Security.md`
+
 ## [1.5.0] - 2025-12-02
 
 ### Added

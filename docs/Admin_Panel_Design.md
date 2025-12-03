@@ -3,15 +3,22 @@
 ## Overview
 Web application for **viewing** team member access to customer Slack channels and Telegram groups, with automated daily audits. This is a **read-only reporting interface** - all write operations (employee management, manual audits, offboarding) are handled via command-line scripts.
 
-## Current Status (v1.4.3)
-The webapp is deployed as a **read-only dashboard** with one interactive feature:
-- ✅ **View** employees, audits, and reports
-- ✅ **Telegram Audit**: Interactive button to manually trigger Telegram audit with 2FA support
-- ✅ **Separated Audit History**: Scheduled audits (Slack + Telegram) and manual audits (Telegram-only) shown in separate sections
-- ❌ No Slack manual audit triggers (Slack audits run via Heroku Scheduler at 2:00 AM UTC daily)
-- ❌ No employee editing/status changes (managed via scripts/database)
-- ❌ No offboarding triggers (done via command-line scripts)
-- ❌ Offboarding tab hidden to avoid alarming employees
+## Current Status (v1.5.0)
+The webapp is deployed as a **read-only dashboard** with comprehensive audit visualization:
+- ✅ **View** employees, audits, and full audit reports
+- ✅ **Telegram Audit**: Interactive button with 2FA support (runs Slack + Telegram)
+- ✅ **Separated Audit History**: Scheduled Slack-only vs Manual Telegram sections
+- ✅ **Full Audit Report Visualization**: Detailed channel/group tables with:
+  - Has BitSafe Name flag (work vs old/retired groups)
+  - Admin Status (Owner/Admin/Member)
+  - History Visibility (Visible/Hidden for privacy)
+  - Category (BD Customer/Marketing/Internal/etc.)
+  - Required/Missing members
+- ✅ **Team Members**: 11 employees (Sarah Flood added as BDR)
+- ✅ **Required Members**: 11 for Slack, 9 for Telegram
+- ❌ No Slack manual audit triggers (automated daily at 2:00 AM UTC)
+- ❌ No employee editing (managed via database)
+- ❌ No offboarding via UI (command-line only)
 
 ## Architecture
 

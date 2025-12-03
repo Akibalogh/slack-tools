@@ -63,11 +63,12 @@ REQUIRED_SLACK_MEMBERS = {
     "mojo_onchain": "Mayank (Sales Engineer)",
     "kadeemclarke": "Kadeem Clarke (Head of Growth)",
     "NonFungibleAmy": "Amy Wu (BD)",
-    "kevin": "Kevin Huet",
-    "aliya": "Aliya Gordon",
+    "kevin": "Kevin Huet (BDR)",
+    "aliya": "Aliya Gordon (BDR)",
     "dave": "Dave Shin",
     "Dae_L": "Dae Lee (Sales Advisor)",
     "j_eisenberg": "Jesse Eisenberg (CTO)",
+    "sfl00d": "Sarah Flood (BDR)",
 }
 
 # Team members for TELEGRAM (core team only, not all members required)
@@ -78,6 +79,9 @@ REQUIRED_TELEGRAM_MEMBERS = {
     "kadeemclarke": "Kadeem Clarke (Head of Growth)",
     "NonFungibleAmy": "Amy Wu (BD)",
     "j_eisenberg": "Jesse Eisenberg (CTO)",
+    "Sw3zz": "Kevin Huet (BDR)",
+    "agordon888": "Aliya Gordon (BDR)",
+    "sfl00d": "Sarah Flood (BDR)",
 }
 
 # For backward compatibility
@@ -95,11 +99,12 @@ SLACK_USERNAME_MAP = {
     "mayank": "mojo_onchain",
     "kadeem": "kadeemclarke",
     "amy": "NonFungibleAmy",
-    "kevin": "kevin",
-    "aliya": "aliya",
+    "kevin": "Sw3zz",
+    "aliya": "agordon888",
     "jesse": "j_eisenberg",
     "anna": "anmatusova",
     "dae": "Dae_L",
+    "sarah": "sfl00d",
 }
 
 

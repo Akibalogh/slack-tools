@@ -179,10 +179,12 @@
         <thead>
             <tr>
                 <th>Group Name</th>
+                <th>Category</th>
                 <th>BitSafe Name</th>
-                <th>Required Members</th>
-                <th>Missing</th>
-                <th>Status</th>
+                <th>Admin Status</th>
+                <th>History</th>
+                <th>Missing Members</th>
+                <th>Completeness</th>
             </tr>
         </thead>
         <tbody>
@@ -190,21 +192,35 @@
             <tr{% if group.get('Has BitSafe Name') != '✓ YES' %} style="opacity: 0.6;"{% endif %}>
                 <td><strong>{{ group['Group Name'] or group.name }}</strong></td>
                 <td>
+                    <span style="font-size: 12px; {% if group.get('Category') == 'BD Customer' %}font-weight: bold; color: #2980b9;{% endif %}">
+                        {{ group.get('Category', '-') }}
+                    </span>
+                </td>
+                <td>
                     <span style="{% if group.get('Has BitSafe Name') == '✓ YES' %}color: #27ae60; font-weight: bold;{% else %}color: #95a5a6;{% endif %}">
                         {{ group.get('Has BitSafe Name', 'No') }}
                     </span>
                 </td>
-                <td>{{ group['Required Members'] or '-' }}</td>
                 <td>
-                    {% if group['Missing Members'] %}
+                    <span style="{% if group.get('Admin Status') == 'Member' %}color: #e74c3c; font-weight: bold;{% elif group.get('Admin Status') == 'Owner' %}color: #27ae60;{% endif %}">
+                        {{ group.get('Admin Status', '-') }}
+                    </span>
+                </td>
+                <td>
+                    <span style="{% if 'HIDDEN' in (group.get('History Visibility') or '') %}color: #e74c3c; font-weight: bold;{% endif %}">
+                        {{ group.get('History Visibility', '-') }}
+                    </span>
+                </td>
+                <td>
+                    {% if group.get('Missing Members') and group['Missing Members'] != '-' %}
                         <span style="color: #e74c3c;">{{ group['Missing Members'] }}</span>
                     {% else %}
-                        <span style="color: #27ae60;">✓ Complete</span>
+                        <span style="color: #27ae60;">✓ None</span>
                     {% endif %}
                 </td>
                 <td>
-                    <span class="badge {% if group['Missing Members'] %}badge-warning{% else %}badge-completed{% endif %}">
-                        {{ group['Completeness'] or '100%' }}
+                    <span class="badge {% if group.get('Missing Members') and group['Missing Members'] != '-' %}badge-warning{% else %}badge-completed{% endif %}">
+                        {{ group.get('Completeness', '100%') }}
                     </span>
                 </td>
             </tr>
