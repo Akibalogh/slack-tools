@@ -645,12 +645,7 @@ def api_start_telegram_audit():
 def api_telegram_audit_status():
     """Check Telegram audit status"""
     status = get_telegram_status()
-    response = jsonify(status)
-    # Prevent browser caching
-    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
-    response.headers['Pragma'] = 'no-cache'
-    response.headers['Expires'] = '0'
-    return response
+    return jsonify(status)
 
 
 @app.route("/api/audit/telegram/code", methods=["POST"])
@@ -924,8 +919,7 @@ async def run_telegram_audit(api_id, api_hash, phone):
         # Run audit job in background thread (handles Slack + Telegram and saves to DB)
         def run_audit():
             try:
-                # Manual UI audits should include Telegram (skip_telegram=False)
-                run_audit_job(audit_id, skip_telegram=False)
+                run_audit_job(audit_id)
                 set_telegram_status(
                     "completed",
                     "Audit completed successfully! Check the Audit History tab to see results.",

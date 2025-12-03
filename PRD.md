@@ -91,13 +91,15 @@ Automatically audit all Slack and Telegram customer groups to verify required an
 **Must Have:**
 - ✅ Fetch all Slack channels containing "bitsafe" in the name (ALWAYS use live API, never cached exports)
 - ✅ Fetch all Telegram groups shared with @mojo_onchain
-- ✅ Verify presence of 5 required team members
-- ✅ Track 4 optional team members
+- ✅ **Identify Telegram groups with "BitSafe" in name** (work-related groups for member management)
+- ✅ Verify presence of required team members (10 for Slack, 6 for Telegram)
+- ✅ Track optional team members (2 total)
 - ✅ Generate Excel report with audit results
 - ✅ Flag groups with "iBTC" that need renaming
 - ✅ Categorize groups (BD Customer, Marketing, Internal, Intro)
 - ✅ Show completeness score (e.g., "5/5 required")
 - ✅ Flag public Slack channels that should be private
+- ✅ Display "Has BitSafe Name" column for Telegram groups in reports
 
 **Should Have:**
 - 🔄 Configurable team member lists via JSON config
