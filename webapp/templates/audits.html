@@ -80,12 +80,12 @@
                         {{ audit.status }}
                     </span>
                 </td>
-                <td>{{ audit.started_at }}</td>
-                <td>{{ audit.completed_at or '-' }}</td>
+                <td>{{ audit.started_at.strftime('%Y-%m-%d %H:%M:%S') if audit.started_at else '-' }}</td>
+                <td>{{ audit.completed_at.strftime('%Y-%m-%d %H:%M:%S') if audit.completed_at else '-' }}</td>
                 <td>
                     {% if audit.slack_channels_total %}
-                        {{ audit.slack_channels_complete or 0 }}/{{ audit.slack_channels_total }}
-                        ({{ ((audit.slack_channels_complete or 0) * 100 / audit.slack_channels_total) | round(1) }}%)
+                        💬 {{ audit.slack_channels_complete or 0 }}/{{ audit.slack_channels_total }}
+                        ({{ ((audit.slack_channels_complete or 0) * 100 / audit.slack_channels_total) | round | int }}%)
                     {% else %}
                         -
                     {% endif %}
@@ -132,15 +132,15 @@
                         {{ audit.status }}
                     </span>
                 </td>
-                <td>{{ audit.started_at }}</td>
-                <td>{{ audit.completed_at or '-' }}</td>
+                <td>{{ audit.started_at.strftime('%Y-%m-%d %H:%M:%S') if audit.started_at else '-' }}</td>
+                <td>{{ audit.completed_at.strftime('%Y-%m-%d %H:%M:%S') if audit.completed_at else '-' }}</td>
                 <td>
                     {% if audit.telegram_groups_total and audit.telegram_groups_total > 0 %}
                         ✈️ {{ audit.telegram_groups_complete or 0 }}/{{ audit.telegram_groups_total }}
-                        ({{ ((audit.telegram_groups_complete or 0) * 100 / audit.telegram_groups_total) | round(1) }}%)
+                        ({{ ((audit.telegram_groups_complete or 0) * 100 / audit.telegram_groups_total) | round | int }}%)
                     {% elif audit.slack_channels_total and audit.slack_channels_total > 0 %}
                         💬 {{ audit.slack_channels_complete or 0 }}/{{ audit.slack_channels_total }}
-                        ({{ ((audit.slack_channels_complete or 0) * 100 / audit.slack_channels_total) | round(1) }}%)
+                        ({{ ((audit.slack_channels_complete or 0) * 100 / audit.slack_channels_total) | round | int }}%)
                     {% else %}
                         -
                     {% endif %}
