@@ -172,10 +172,14 @@
     
     {% if telegram_groups %}
     <h4 style="margin: 20px 0 10px 0;">✈️ Telegram Groups ({{ telegram_groups|length }})</h4>
+    <p style="color: #666; font-size: 14px; margin-bottom: 10px;">
+        Groups with "✓ YES" in BitSafe Name are active work groups. Groups with "No" may be old/retired.
+    </p>
     <table>
         <thead>
             <tr>
                 <th>Group Name</th>
+                <th>BitSafe Name</th>
                 <th>Required Members</th>
                 <th>Missing</th>
                 <th>Status</th>
@@ -183,8 +187,13 @@
         </thead>
         <tbody>
             {% for group in telegram_groups[:50] %}
-            <tr>
+            <tr{% if group.get('Has BitSafe Name') != '✓ YES' %} style="opacity: 0.6;"{% endif %}>
                 <td><strong>{{ group['Group Name'] or group.name }}</strong></td>
+                <td>
+                    <span style="{% if group.get('Has BitSafe Name') == '✓ YES' %}color: #27ae60; font-weight: bold;{% else %}color: #95a5a6;{% endif %}">
+                        {{ group.get('Has BitSafe Name', 'No') }}
+                    </span>
+                </td>
                 <td>{{ group['Required Members'] or '-' }}</td>
                 <td>
                     {% if group['Missing Members'] %}
