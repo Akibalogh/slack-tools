@@ -106,7 +106,11 @@ def run_audit_job(audit_id=None, skip_telegram=False):
                 logger.info("Running Slack-only audit (Telegram skipped)")
             else:
                 logger.info("Running full audit (Slack + Telegram)")
-            
+
+            # Pass audit ID for progress tracking
+            if audit_id:
+                cmd.extend(["--audit-id", str(audit_id)])
+
             result = subprocess.run(
                 cmd,
                 cwd=PROJECT_ROOT,

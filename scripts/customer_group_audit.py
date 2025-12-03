@@ -640,11 +640,57 @@ class CustomerGroupAuditor:
             )
 
 
+def update_audit_progress(audit_id, slack_current=None, telegram_current=None):
+    """Update audit progress in database for real-time tracking"""
+    if not audit_id:
+        return
+
+    try:
+        import os
+
+        import psycopg2
+
+        database_url = os.getenv("DATABASE_URL")
+        if not database_url:
+            return
+
+        conn = psycopg2.connect(database_url)
+        cursor = conn.cursor()
+
+        if slack_current is not None:
+            cursor.execute(
+                "UPDATE audit_runs SET slack_progress_current = %s WHERE id = %s",
+                (slack_current, audit_id),
+            )
+
+        if telegram_current is not None:
+            cursor.execute(
+                "UPDATE audit_runs SET telegram_progress_current = %s WHERE id = %s",
+                (telegram_current, audit_id),
+            )
+
+        conn.commit()
+        cursor.close()
+        conn.close()
+    except Exception as e:
+        print(f"Warning: Could not update progress: {e}")
+
+
 async def main():
+    import argparse
     import sys
 
-    # Check for --skip-telegram flag (for scheduled Slack-only audits)
-    skip_telegram = "--skip-telegram" in sys.argv
+    # Parse arguments
+    parser = argparse.ArgumentParser(description="Customer Group Audit Tool")
+    parser.add_argument(
+        "--skip-telegram",
+        action="store_true",
+        help="Skip Telegram audit (for scheduled runs)",
+    )
+    parser.add_argument(
+        "--audit-id", type=int, help="Audit ID for progress tracking", default=None
+    )
+    args = parser.parse_args()
 
     auditor = CustomerGroupAuditor()
 
@@ -652,13 +698,25 @@ async def main():
     await auditor.get_slack_bd_members()
 
     # Step 2: Audit Slack channels
+    print("\n🔍 Auditing Slack channels...")
     await auditor.audit_slack_channels()
+    slack_count = len(
+        [r for r in auditor.audit_results if r.get("Platform") == "Slack"]
+    )
+    update_audit_progress(args.audit_id, slack_current=slack_count)
+    print(f"✓ Completed {slack_count} Slack channels")
 
     # Step 3: Audit Telegram groups (optional, skip for scheduled runs)
-    if skip_telegram:
+    if args.skip_telegram:
         print("\n⚠️  Telegram audit skipped (--skip-telegram flag)")
     elif TELEGRAM_ENABLED:
+        print("\n🔍 Auditing Telegram groups...")
         await auditor.audit_telegram_groups()
+        telegram_count = len(
+            [r for r in auditor.audit_results if r.get("Platform") == "Telegram"]
+        )
+        update_audit_progress(args.audit_id, telegram_current=telegram_count)
+        print(f"✓ Completed {telegram_count} Telegram groups")
     else:
         print("\n⚠️  Telegram audit skipped (credentials not configured)")
 

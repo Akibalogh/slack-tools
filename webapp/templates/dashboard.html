@@ -53,8 +53,14 @@
         <tr>
             <td><i class="fab fa-slack" style="color: #4A154B;"></i> <strong>Slack Channels:</strong></td>
             <td>
-                {% if latest_audit.status == 'running' and not latest_audit.slack_channels_total %}
-                    ⏳ Running...
+                {% if latest_audit.status == 'running' %}
+                    {% if latest_audit.slack_channels_total %}
+                        {{ latest_audit.slack_channels_complete or 0 }}/{{ latest_audit.slack_channels_total }} complete
+                    {% elif latest_audit.slack_progress_current %}
+                        ⏳ Auditing... {{ latest_audit.slack_progress_current }} scanned
+                    {% else %}
+                        ⏳ Starting Slack audit...
+                    {% endif %}
                 {% else %}
                     {{ latest_audit.slack_channels_complete or 0 }}/{{ latest_audit.slack_channels_total or 0 }} complete
                 {% endif %}
@@ -63,8 +69,16 @@
         <tr>
             <td><i class="fab fa-telegram" style="color: #0088CC;"></i> <strong>Telegram Groups:</strong></td>
             <td>
-                {% if latest_audit.status == 'running' and not latest_audit.telegram_groups_total %}
-                    ⏳ Running...
+                {% if latest_audit.status == 'running' %}
+                    {% if latest_audit.telegram_groups_total %}
+                        {{ latest_audit.telegram_groups_complete or 0 }}/{{ latest_audit.telegram_groups_total }} complete
+                    {% elif latest_audit.telegram_progress_current %}
+                        ⏳ Auditing... {{ latest_audit.telegram_progress_current }} scanned
+                    {% elif latest_audit.slack_progress_current %}
+                        ⏳ Waiting for Slack to finish...
+                    {% else %}
+                        ⏳ Pending...
+                    {% endif %}
                 {% elif latest_audit.telegram_groups_total %}
                     {{ latest_audit.telegram_groups_complete or 0 }}/{{ latest_audit.telegram_groups_total or 0 }} complete
                 {% else %}

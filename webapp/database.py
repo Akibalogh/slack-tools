@@ -129,10 +129,13 @@ class Database:
                     completed_at TIMESTAMP,
                     slack_channels_total INTEGER,
                     slack_channels_complete INTEGER,
+                    slack_progress_current INTEGER DEFAULT 0,
                     telegram_groups_total INTEGER,
                     telegram_groups_complete INTEGER,
+                    telegram_progress_current INTEGER DEFAULT 0,
                     report_path TEXT,
-                    error_message TEXT
+                    error_message TEXT,
+                    results_json JSONB
                 )
             """
             )
@@ -233,10 +236,13 @@ class Database:
                     completed_at TIMESTAMP,
                     slack_channels_total INTEGER,
                     slack_channels_complete INTEGER,
+                    slack_progress_current INTEGER DEFAULT 0,
                     telegram_groups_total INTEGER,
                     telegram_groups_complete INTEGER,
+                    telegram_progress_current INTEGER DEFAULT 0,
                     report_path TEXT,
-                    error_message TEXT
+                    error_message TEXT,
+                    results_json TEXT
                 )
             """
             )
