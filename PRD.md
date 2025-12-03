@@ -436,31 +436,40 @@ Web-based read-only dashboard for viewing team member access, audit results, and
 
 **Stack:**
 - **Flask**: Python web framework
-- **SQLite**: Local database (development)
-- **Heroku Postgres**: Production database (ephemeral filesystem on Heroku)
-- **Gunicorn**: WSGI server for production
-- **Heroku Scheduler**: Daily automated audits (free tier)
+- **Heroku Postgres**: Production database (Essential-0, 1 GB, persistent)  
+- **SQLite**: Local development fallback
+- **Gunicorn**: WSGI server (2 workers, sync)
+- **Heroku Scheduler**: Daily automated **Slack-only** audits at 2:00 AM UTC
 
-**Authentication Flow (Telegram):**
+**Authentication Flow (Telegram - Manual Only):**
 1. User clicks "Run Telegram Audit" button
-2. Backend requests Telegram SMS code
-3. Modal displays code input field
-4. User enters code from Telegram app
-5. If 2FA enabled, prompts for cloud password
-6. Session file saved for reuse
-7. Audit runs in background thread
-8. Results saved to database
+2. Backend connects with StringSession from database
+3. Requests SMS code if not authenticated
+4. Modal displays code input field (real-time polling)
+5. User enters code from Telegram app
+6. If 2FA enabled, prompts for cloud password
+7. **Session string saved to Postgres** (not file)
+8. Audit runs in background thread
+9. **Full results saved to database** (all channels + JSON)
 
 **Session Management:**
-- Telegram session file shared between webapp and audit script
-- Stored in project root (`telegram_session.session`)
-- Reused across audit runs to avoid repeated authentication
+- **StringSession** stored in Postgres `telegram_audit_status.session_string`
+- Database-backed (no file locking on Heroku's ephemeral filesystem)
+- Persists across deployments and workers
+- Minimizes re-authentication frequency
 
-**Database Schema:**
-- `employees`: Team member data (name, Slack/Telegram handles, status)
-- `audit_runs`: Audit execution records (type, status, timestamps, results)
-- `audit_findings`: Individual channel/group findings (missing members, status)
-- `offboarding_tasks`: Offboarding task tracking (read-only history)
+**Database Schema (Postgres):**
+- `employees`: Team data (name, Slack ID, Telegram handle, status, requirements)
+- `audit_runs`: Execution records (type, status, timestamps, coverage stats, **results_json**)
+- `audit_findings`: Channels/groups with issues only (missing members)
+- `telegram_audit_status`: Real-time status, session, 2FA (cleared after use)
+- `offboarding_tasks`: Offboarding history (read-only)
+
+**Data Persistence:**
+- ✅ All audit data saved to Postgres (permanent)
+- ✅ Employee data persists across restarts
+- ✅ Telegram session persists (no re-auth needed)
+- ✅ Full audit results (120+ Slack, 412+ Telegram) stored as JSON
 
 #### User Flow
 
@@ -485,9 +494,11 @@ Web-based read-only dashboard for viewing team member access, audit results, and
 **Heroku Configuration:**
 - **App**: `bitsafe-group-admin`
 - **URL**: https://bitsafe-group-admin-30c4bbdb5186.herokuapp.com/
-- **Scheduler**: Daily job at 2:00 AM UTC
-- **Database**: SQLite (ephemeral) - re-initialized on each deploy
-- **Environment Variables**: `SLACK_USER_TOKEN`, `TELEGRAM_API_ID`, `TELEGRAM_API_HASH`, `TELEGRAM_PHONE`
+- **Scheduler**: Daily **Slack-only** audit at 2:00 AM UTC (uses `--skip-telegram` flag)
+- **Database**: Heroku Postgres Essential-0 (persistent, 1 GB, 20 max connections)
+- **Dynos**: Web dyno only (worker removed - using Heroku Scheduler instead)
+- **Environment Variables**: `DATABASE_URL`, `SLACK_USER_TOKEN`, `TELEGRAM_API_ID`, `TELEGRAM_API_HASH`, `TELEGRAM_PHONE`
+- **Python Version**: 3.11 (specified in `.python-version`)
 
 #### Success Metrics
 
