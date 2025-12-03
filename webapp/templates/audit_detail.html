@@ -145,7 +145,7 @@
     {% set telegram_groups = report_data.telegram_groups or [] %}
     
     {% if slack_channels %}
-    <h4 style="margin: 20px 0 10px 0;"><strong>Slack Channels</strong> ({{ slack_channels|length }})</h4>
+    <h4 style="margin: 20px 0 10px 0;"><i class="fab fa-slack" style="color: #4A154B;"></i> <strong>Slack Channels</strong> ({{ slack_channels|length }})</h4>
     <table style="margin-bottom: 30px;">
         <thead>
             <tr>
@@ -186,7 +186,7 @@
     {% endif %}
     
     {% if telegram_groups %}
-    <h4 style="margin: 20px 0 10px 0;"><strong>Telegram Groups</strong> ({{ telegram_groups|length }})</h4>
+    <h4 style="margin: 20px 0 10px 0;"><i class="fab fa-telegram" style="color: #0088CC;"></i> <strong>Telegram Groups</strong> ({{ telegram_groups|length }})</h4>
     <p style="color: #666; font-size: 14px; margin-bottom: 10px;">
         Groups with "✓ YES" in BitSafe Name are active work groups. Groups with "No" may be old/retired.
     </p>

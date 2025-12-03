@@ -51,7 +51,7 @@
             <td><span class="badge badge-{{ latest_audit.status }}">{{ latest_audit.status }}</span></td>
         </tr>
         <tr>
-            <td><strong>Slack Channels:</strong></td>
+            <td><i class="fab fa-slack" style="color: #4A154B;"></i> <strong>Slack Channels:</strong></td>
             <td>
                 {% if latest_audit.status == 'running' and not latest_audit.slack_channels_total %}
                     ⏳ Running...
@@ -61,7 +61,7 @@
             </td>
         </tr>
         <tr>
-            <td><strong>Telegram Groups:</strong></td>
+            <td><i class="fab fa-telegram" style="color: #0088CC;"></i> <strong>Telegram Groups:</strong></td>
             <td>
                 {% if latest_audit.status == 'running' and not latest_audit.telegram_groups_total %}
                     ⏳ Running...
