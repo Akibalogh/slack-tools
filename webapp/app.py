@@ -7,6 +7,7 @@ import asyncio
 import os
 import threading
 
+import requests
 from database import Database
 from flask import Flask, jsonify, redirect, render_template, request, url_for
 from telethon import TelegramClient
@@ -771,8 +772,56 @@ def api_offboarding_status(task_id):
 # ============================================================================
 
 
-def start_telegram_auth():
-    """Start Telegram authentication process (runs in background thread)"""
+def trigger_audit_via_heroku_api(audit_id):
+    """Trigger audit as a detached one-off dyno via Heroku Platform API"""
+    try:
+        heroku_api_key = os.getenv("HEROKU_API_KEY")
+        app_name = os.getenv("HEROKU_APP_NAME", "bitsafe-group-admin")
+
+        if not heroku_api_key:
+            print("Warning: HEROKU_API_KEY not set, falling back to thread")
+            # Fallback to thread-based approach
+            thread = threading.Thread(target=start_telegram_auth_thread)
+            thread.daemon = True
+            thread.start()
+            return
+
+        # Use Heroku Platform API to create a one-off dyno
+        url = f"https://api.heroku.com/apps/{app_name}/dynos"
+        headers = {
+            "Accept": "application/vnd.heroku+json; version=3",
+            "Authorization": f"Bearer {heroku_api_key}",
+            "Content-Type": "application/json",
+        }
+        data = {
+            "command": f"python scripts/customer_group_audit.py --audit-id={audit_id}",
+            "attach": False,  # Detached
+            "type": "run",
+        }
+
+        response = requests.post(url, headers=headers, json=data, timeout=10)
+        if response.status_code == 201:
+            print(f"✓ Started detached dyno for audit #{audit_id}")
+            set_telegram_status(
+                "running", "Audit running in isolated dyno (will not timeout)..."
+            )
+        else:
+            print(f"❌ Failed to start dyno: {response.status_code} - {response.text}")
+            # Fallback to thread
+            thread = threading.Thread(target=start_telegram_auth_thread)
+            thread.daemon = True
+            thread.start()
+
+    except Exception as e:
+        print(f"❌ Error triggering dyno: {e}")
+        # Fallback to thread
+        thread = threading.Thread(target=start_telegram_auth_thread)
+        thread.daemon = True
+        thread.start()
+
+
+def start_telegram_auth_thread():
+    """Start Telegram authentication process (fallback thread-based approach)"""
     try:
         # Get Telegram credentials from environment
         api_id = int(os.getenv("TELEGRAM_API_ID", "0"))
@@ -907,30 +956,71 @@ async def run_telegram_audit(api_id, api_hash, phone):
         conn.commit()
         conn.close()
 
-        # Import and run audit using scheduler's job function
-        from scheduler import run_audit_job
-
+        # Trigger audit as a detached one-off dyno (won't timeout like web threads)
         set_telegram_status(
             "running",
-            "Running full audit (Slack + Telegram)... This may take a few minutes...",
+            "Running full audit (Slack + Telegram) in isolated environment...",
         )
 
-        # Run audit job in background thread (handles Slack + Telegram and saves to DB)
-        def run_audit():
-            try:
-                run_audit_job(audit_id)
-                set_telegram_status(
-                    "completed",
-                    "Audit completed successfully! Check the Audit History tab to see results.",
-                )
-            except Exception as e:
-                set_telegram_status("error", "", f"Audit failed: {str(e)}")
-
-        thread = threading.Thread(target=run_audit)
-        thread.daemon = True
-        thread.start()
-
         await client.disconnect()
+
+        # Use Heroku Platform API to create detached dyno
+        try:
+            heroku_api_key = os.getenv("HEROKU_API_KEY")
+            app_name = os.getenv("HEROKU_APP_NAME", "bitsafe-group-admin")
+
+            if heroku_api_key:
+                url = f"https://api.heroku.com/apps/{app_name}/dynos"
+                headers = {
+                    "Accept": "application/vnd.heroku+json; version=3",
+                    "Authorization": f"Bearer {heroku_api_key}",
+                    "Content-Type": "application/json",
+                }
+                data = {
+                    "command": f"python scripts/customer_group_audit.py --audit-id={audit_id}",
+                    "attach": False,
+                    "type": "run",
+                }
+
+                response = requests.post(url, headers=headers, json=data, timeout=10)
+                if response.status_code == 201:
+                    print(f"✓ Started detached dyno for audit #{audit_id}")
+                else:
+                    print(
+                        f"Warning: Failed to start dyno ({response.status_code}), using fallback"
+                    )
+                    # Fallback: Run in thread (will timeout but at least starts)
+                    from scheduler import run_audit_job
+
+                    def run_audit_fallback():
+                        try:
+                            run_audit_job(audit_id)
+                            set_telegram_status("completed", "Audit completed!")
+                        except Exception as e:
+                            set_telegram_status("error", "", str(e))
+
+                    thread = threading.Thread(target=run_audit_fallback)
+                    thread.daemon = True
+                    thread.start()
+            else:
+                print("Warning: HEROKU_API_KEY not set, using thread fallback")
+                # Fallback to thread-based approach
+                from scheduler import run_audit_job
+
+                def run_audit_fallback():
+                    try:
+                        run_audit_job(audit_id)
+                        set_telegram_status("completed", "Audit completed!")
+                    except Exception as e:
+                        set_telegram_status("error", "", str(e))
+
+                thread = threading.Thread(target=run_audit_fallback)
+                thread.daemon = True
+                thread.start()
+
+        except Exception as e:
+            print(f"Error triggering dyno: {e}")
+            set_telegram_status("error", "", f"Failed to start audit: {str(e)}")
 
     except Exception as e:
         set_telegram_status("error", "", str(e))
