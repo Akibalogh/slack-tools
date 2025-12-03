@@ -626,6 +626,11 @@ class CustomerGroupAuditor:
 
 
 async def main():
+    import sys
+    
+    # Check for --skip-telegram flag (for scheduled Slack-only audits)
+    skip_telegram = '--skip-telegram' in sys.argv
+    
     auditor = CustomerGroupAuditor()
 
     # Step 1: Get Slack user IDs
@@ -634,8 +639,10 @@ async def main():
     # Step 2: Audit Slack channels
     await auditor.audit_slack_channels()
 
-    # Step 3: Audit Telegram groups (optional)
-    if TELEGRAM_ENABLED:
+    # Step 3: Audit Telegram groups (optional, skip for scheduled runs)
+    if skip_telegram:
+        print("\n⚠️  Telegram audit skipped (--skip-telegram flag)")
+    elif TELEGRAM_ENABLED:
         await auditor.audit_telegram_groups()
     else:
         print("\n⚠️  Telegram audit skipped (credentials not configured)")

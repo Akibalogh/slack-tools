@@ -93,14 +93,15 @@ def run_audit_job(audit_id=None):
         logger.info(f"Running audit script: {script_path}")
 
         # Run audit script and capture output
-        # Increased timeout to 30 minutes for full Slack + Telegram audits
+        # For scheduled runs, skip Telegram (requires interactive 2FA)
+        # Timeout: 30 minutes for Slack audits
         try:
             result = subprocess.run(
-                [sys.executable, str(script_path)],
+                [sys.executable, str(script_path), "--skip-telegram"],
                 cwd=PROJECT_ROOT,
                 capture_output=True,
                 text=True,
-                timeout=1800,  # 30 minute timeout (audits can take 10-15 minutes)
+                timeout=1800,  # 30 minute timeout
             )
         except subprocess.TimeoutExpired:
             raise Exception(
