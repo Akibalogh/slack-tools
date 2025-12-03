@@ -421,11 +421,6 @@ class CustomerGroupAuditor:
                     continue
 
                 group_name = chat.title
-                
-                # Filter: Only audit groups with "bitsafe" in name (work-related groups)
-                if "bitsafe" not in group_name.lower():
-                    continue
-                
                 member_count = getattr(chat, "participants_count", 0)
 
                 # Check history visibility settings
