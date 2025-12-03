@@ -645,7 +645,12 @@ def api_start_telegram_audit():
 def api_telegram_audit_status():
     """Check Telegram audit status"""
     status = get_telegram_status()
-    return jsonify(status)
+    response = jsonify(status)
+    # Prevent browser caching
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+    return response
 
 
 @app.route("/api/audit/telegram/code", methods=["POST"])
@@ -924,16 +929,8 @@ async def run_telegram_audit(api_id, api_hash, phone):
                     "completed",
                     "Audit completed successfully! Check the Audit History tab to see results.",
                 )
-                # Auto-reset to idle after 30 seconds
-                import time
-                time.sleep(30)
-                set_telegram_status("idle", "")
             except Exception as e:
                 set_telegram_status("error", "", f"Audit failed: {str(e)}")
-                # Auto-reset errors after 60 seconds
-                import time
-                time.sleep(60)
-                set_telegram_status("idle", "")
 
         thread = threading.Thread(target=run_audit)
         thread.daemon = True
