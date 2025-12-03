@@ -12,7 +12,8 @@ import sqlite3
 import threading
 import time
 import traceback
-from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
+from concurrent.futures import (ProcessPoolExecutor, ThreadPoolExecutor,
+                                as_completed)
 from datetime import datetime, timedelta
 from typing import Any, Dict, List, Optional
 
@@ -871,17 +872,15 @@ class DataETL:
         try:
             # Try real Google Calendar integration first
             try:
-                from .integrations.google_calendar_integration import (
-                    GoogleCalendarIntegration,
-                )
+                from .integrations.google_calendar_integration import \
+                    GoogleCalendarIntegration
 
                 calendar = GoogleCalendarIntegration()
                 use_mock = False
             except ImportError:
                 # Fall back to mock integration for testing
-                from .integrations.mock_calendar_integration import (
-                    MockCalendarIntegration,
-                )
+                from .integrations.mock_calendar_integration import \
+                    MockCalendarIntegration
 
                 calendar = MockCalendarIntegration()
                 use_mock = True
@@ -975,9 +974,8 @@ class DataETL:
         hubspot_data = {}
 
         try:
-            from .integrations.hubspot_export_integration import (
-                HubSpotExportIntegration,
-            )
+            from .integrations.hubspot_export_integration import \
+                HubSpotExportIntegration
 
             # Initialize HubSpot export integration
             hubspot = HubSpotExportIntegration()

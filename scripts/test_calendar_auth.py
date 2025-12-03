@@ -46,9 +46,8 @@ def check_credentials_file():
 def test_authentication():
     """Test Google Calendar authentication"""
     try:
-        from src.etl.integrations.google_calendar_integration import (
-            GoogleCalendarIntegration,
-        )
+        from src.etl.integrations.google_calendar_integration import \
+            GoogleCalendarIntegration
 
         print("🔐 Testing Google Calendar authentication...")
         calendar = GoogleCalendarIntegration()
@@ -74,9 +73,8 @@ def test_calendar_access():
     try:
         from datetime import datetime, timedelta
 
-        from src.etl.integrations.google_calendar_integration import (
-            GoogleCalendarIntegration,
-        )
+        from src.etl.integrations.google_calendar_integration import \
+            GoogleCalendarIntegration
 
         print("📅 Testing calendar data access...")
         calendar = GoogleCalendarIntegration()

@@ -22,11 +22,8 @@ from typing import Dict, List, Set
 
 try:
     from telethon import TelegramClient
-    from telethon.errors import (
-        FloodWaitError,
-        UserIsBlockedError,
-        UserPrivacyRestrictedError,
-    )
+    from telethon.errors import (FloodWaitError, UserIsBlockedError,
+                                 UserPrivacyRestrictedError)
     from telethon.tl.types import User
 except ImportError:
     print("❌ Error: telethon not installed")

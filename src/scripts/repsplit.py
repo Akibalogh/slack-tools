@@ -19,12 +19,8 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 # Import enhanced logging system
-from logging_config import (
-    DatabaseMonitor,
-    DataFreshnessMonitor,
-    PerformanceMonitor,
-    setup_logging,
-)
+from logging_config import (DatabaseMonitor, DataFreshnessMonitor,
+                            PerformanceMonitor, setup_logging)
 
 
 @dataclass
@@ -850,7 +846,8 @@ class RepSplit:
             # Add calendar meeting information
             f.write("\n## Calendar Meetings (In-Person Interactions)\n\n")
             try:
-                from calendar_commission_analysis import CalendarCommissionAnalysis
+                from calendar_commission_analysis import \
+                    CalendarCommissionAnalysis
 
                 calendar_analysis = CalendarCommissionAnalysis()
                 if calendar_analysis.authenticate():
