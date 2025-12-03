@@ -924,7 +924,8 @@ async def run_telegram_audit(api_id, api_hash, phone):
         # Run audit job in background thread (handles Slack + Telegram and saves to DB)
         def run_audit():
             try:
-                run_audit_job(audit_id)
+                # Manual UI audits should include Telegram (skip_telegram=False)
+                run_audit_job(audit_id, skip_telegram=False)
                 set_telegram_status(
                     "completed",
                     "Audit completed successfully! Check the Audit History tab to see results.",

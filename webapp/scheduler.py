@@ -35,11 +35,14 @@ PROJECT_ROOT = Path(__file__).parent.parent
 # ============================================================================
 
 
-def run_audit_job(audit_id=None):
+def run_audit_job(audit_id=None, skip_telegram=False):
     """
     Run customer group audit using existing customer_group_audit.py script
+    Args:
+        audit_id: Optional audit ID to update (creates new if None)
+        skip_telegram: If True, only audit Slack (for scheduled runs)
     """
-    logger.info("🔍 Starting scheduled audit job")
+    logger.info(f"🔍 Starting audit job (skip_telegram={skip_telegram})")
 
     conn = None
     cursor = None
@@ -94,10 +97,18 @@ def run_audit_job(audit_id=None):
 
         # Run audit script and capture output
         # For scheduled runs, skip Telegram (requires interactive 2FA)
-        # Timeout: 30 minutes for Slack audits
+        # For manual runs, include Telegram (session should be saved)
+        # Timeout: 30 minutes
         try:
+            cmd = [sys.executable, str(script_path)]
+            if skip_telegram:
+                cmd.append("--skip-telegram")
+                logger.info("Running Slack-only audit (Telegram skipped)")
+            else:
+                logger.info("Running full audit (Slack + Telegram)")
+            
             result = subprocess.run(
-                [sys.executable, str(script_path), "--skip-telegram"],
+                cmd,
                 cwd=PROJECT_ROOT,
                 capture_output=True,
                 text=True,
