@@ -9,6 +9,15 @@ All notable changes to the Slack Tools project will be documented in this file.
 ### Added
 - **Sarah Flood as BDR**: Added Sarah Flood (@sfl00d) to required members for Slack and Telegram (11 total team members)
 - **Kevin and Aliya Required for Telegram**: Updated Kevin and Aliya from optional to required for Telegram groups (9 Telegram-required members)
+- **Real-Time Progress Tracking**: Live incremental progress updates during audits
+  - Updates every 50 Telegram groups during audit
+  - Shows "Slack: 120 scanned", "Telegram: 150/~413 scanned"
+  - Progress visible in Coverage column and Dashboard
+  - No more wondering if audit is stuck vs running
+- **Brand Logo Icons**: Official Slack and Telegram logos via Font Awesome
+  - Slack logo (purple #4A154B) and Telegram logo (blue #0088CC)
+  - Replaces confusing text labels and emojis
+  - Professional, instantly recognizable
 - **Enhanced Telegram Audit Visualization**: Added critical fields to audit detail view:
   - Has BitSafe Name (work-related vs old/retired groups)
   - Admin Status (Owner/Admin/Member) - identify groups where user lacks admin rights
@@ -16,22 +25,24 @@ All notable changes to the Slack Tools project will be documented in this file.
   - Category (BD Customer/Marketing/Internal/Intro) - group classification
 - **Sortable Team Members Table**: Click column headers to sort by Name, Req. Slack, or Req. Telegram
 - **Split Required Status**: Separate "Req. Slack" and "Req. Telegram" columns with checkmarks for easy scanning
+- **Saved Session Persistence**: StringSession allows audits without repeated 2FA authentication
 - **Testing Plan Documentation**: Comprehensive testing checklist in `docs/Testing_Plan.md`
 - **Security Documentation**: Full security posture in `docs/Security.md`
 
 ### Changed
-- **Clear Text Labels**: Replaced emoji icons (💬 ✈️) with clear text labels ("Slack:", "Telegram:")
-- **Simplified Dashboard**: Removed "Inactive Employees" and "Optional Members" stats (always 0)
-- **Better Coverage Display**: Full audits show BOTH Slack and Telegram coverage stacked
+- **Simplified Dashboard**: Removed "Inactive Employees" and "Optional Members" stats (show only "Team Members")
+- **Better Coverage Display**: Full audits show BOTH Slack and Telegram coverage with logos
 - **Clean Timestamps**: Removed microseconds from audit timestamps (YYYY-MM-DD HH:MM:SS)
 - **Whole Number Percentages**: Changed from 100.0% to 100%
 - **Removed Filter Buttons**: Eliminated unnecessary All/Active/Inactive/Optional filters from Employees page
 
 ### Fixed
+- **Live Progress in Coverage**: Running audits show real-time progress instead of "-"
 - **Audit In Progress Message**: Shows proper "Audit In Progress" instead of "No Issues Found" while running
-- **CI Tests**: Fixed all flake8 linting errors (unused imports, line length)
+- **CI Tests**: Fixed all flake8 linting errors (unused imports, line length, trailing whitespace)
 - **Database Sync**: Kevin and Aliya now correctly marked as telegram_required in production
-- **Dashboard Running State**: Both platforms show "Running..." during active audits
+- **Dashboard Running State**: Both platforms show incremental progress during active audits
+- **Font Awesome Integration**: Proper CDN loading for brand logos
 
 ## [1.5.0] - 2025-12-02
 

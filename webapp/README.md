@@ -1,15 +1,18 @@
-# Customer Group Admin Panel (v1.5.0)
+# Customer Group Admin Panel (v1.6.0)
 
 **Production URL**: https://bitsafe-group-admin-30c4bbdb5186.herokuapp.com
 
-Web-based read-only dashboard for monitoring team member access to customer Slack channels and Telegram groups.
+Web-based read-only dashboard with **real-time progress tracking** for monitoring team member access to customer Slack channels and Telegram groups.
 
 ## Features
 
-- **📊 Dashboard**: Real-time overview with latest audit coverage (120 Slack channels, 413 Telegram groups)
-- **👥 Employee List**: View 11 team members (status: active/inactive/optional) - read-only display
-- **🔍 Automated Slack Audits**: Daily at 2:00 AM UTC via Heroku Scheduler (Slack-only, no 2FA needed)
-- **✈️ Interactive Telegram Audit**: Manual full audit (Slack + Telegram) with 2FA (SMS + password)
+- **⚡ Real-Time Progress**: Live incremental updates every 50 Telegram groups during audits
+- **🎨 Brand Logos**: Official Slack and Telegram icons throughout UI (Font Awesome)
+- **🔐 Saved Sessions**: One-time 2FA authentication, then automatic audits (StringSession)
+- **📊 Dashboard**: Real-time overview with live progress (120 Slack channels, 413 Telegram groups)
+- **👥 Team Members**: View 11 employees with sortable columns and checkmarks
+- **🔍 Automated Slack Audits**: Daily at 2:00 AM UTC via Heroku Scheduler (Slack-only, no 2FA)
+- **✈️ One-Click Telegram Audit**: Full audit (Slack + Telegram) using saved session
 - **📈 Enhanced Audit Visualization**: Detailed tables showing:
   - **Category** (BD Customer / Marketing / Internal)
   - **Has BitSafe Name** (active vs retired groups)

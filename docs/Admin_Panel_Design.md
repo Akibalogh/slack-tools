@@ -3,19 +3,26 @@
 ## Overview
 Web application for **viewing** team member access to customer Slack channels and Telegram groups, with automated daily audits. This is a **read-only reporting interface** - all write operations (employee management, manual audits, offboarding) are handled via command-line scripts.
 
-## Current Status (v1.5.0)
-The webapp is deployed as a **read-only dashboard** with comprehensive audit visualization:
+## Current Status (v1.6.0)
+The webapp is deployed as a **read-only dashboard** with real-time audit progress and comprehensive visualization:
+- ✅ **Real-Time Progress Tracking**: Live incremental updates every 50 Telegram groups
+- ✅ **Brand Logo Icons**: Official Slack (purple) and Telegram (blue) logos throughout UI
+- ✅ **Saved Session**: StringSession eliminates repeated 2FA authentication
 - ✅ **View** employees, audits, and full audit reports
-- ✅ **Telegram Audit**: Interactive button with 2FA support (runs Slack + Telegram)
-- ✅ **Separated Audit History**: Scheduled Slack-only vs Manual Telegram sections
+- ✅ **Telegram Audit**: One-click trigger (uses saved session, 2FA only needed once)
+- ✅ **Separated Audit History**: Scheduled Slack-only vs Manual full audits
 - ✅ **Full Audit Report Visualization**: Detailed channel/group tables with:
   - Has BitSafe Name flag (work vs old/retired groups)
-  - Admin Status (Owner/Admin/Member)
-  - History Visibility (Visible/Hidden for privacy)
-  - Category (BD Customer/Marketing/Internal/etc.)
-  - Required/Missing members
-- ✅ **Team Members**: 11 employees (Sarah Flood added as BDR)
+  - Admin Status (Owner/Admin/Member) - red warning if not admin
+  - History Visibility (Visible/Hidden) - red warning for privacy concerns
+  - Category (BD Customer/Marketing/Internal) - highlights customer groups
+  - Required/Missing members per group
+- ✅ **Enhanced Team View**: 11 employees with sortable columns and checkmarks
+  - Sarah Flood, Kevin Huet, Aliya Gordon (BDRs)
+  - Separate "Req. Slack" and "Req. Telegram" columns
+  - Click headers to sort
 - ✅ **Required Members**: 11 for Slack, 9 for Telegram
+- ✅ **Clean Formatting**: No microseconds in timestamps, whole number percentages
 - ❌ No Slack manual audit triggers (automated daily at 2:00 AM UTC)
 - ❌ No employee editing (managed via database)
 - ❌ No offboarding via UI (command-line only)
