@@ -634,7 +634,7 @@ def api_start_telegram_audit():
     )
 
     # Start authentication in background thread
-    thread = threading.Thread(target=start_telegram_auth)
+    thread = threading.Thread(target=start_telegram_auth_thread)
     thread.daemon = True
     thread.start()
 
