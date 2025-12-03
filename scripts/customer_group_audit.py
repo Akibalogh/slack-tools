@@ -431,9 +431,10 @@ class CustomerGroupAuditor:
 
                 group_name = chat.title
 
-                # Skip engineer-only groups
-                if "bitsafe eng" in group_name.lower():
-                    print(f"   Skipping engineer group: {group_name}")
+                # Skip engineer-only, archived, and old groups
+                skip_keywords = [" - old", " - archived", "bitsafe eng"]
+                if any(keyword in group_name.lower() for keyword in skip_keywords):
+                    print(f"   Skipping: {group_name}")
                     continue
 
                 member_count = getattr(chat, "participants_count", 0)

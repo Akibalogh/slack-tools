@@ -172,13 +172,6 @@
                 </td>
             </tr>
             {% endfor %}
-            {% if slack_channels|length > 50 %}
-            <tr>
-                <td colspan="4" style="text-align: center; color: #666;">
-                    ... and {{ slack_channels|length - 50 }} more channels (showing first 50)
-                </td>
-            </tr>
-            {% endif %}
         </tbody>
     </table>
     {% endif %}
@@ -238,13 +231,6 @@
                 </td>
             </tr>
             {% endfor %}
-            {% if telegram_groups|length > 50 %}
-            <tr>
-                <td colspan="4" style="text-align: center; color: #666;">
-                    ... and {{ telegram_groups|length - 50 }} more groups (showing first 50)
-                </td>
-            </tr>
-            {% endif %}
         </tbody>
     </table>
     {% endif %}

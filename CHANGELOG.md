@@ -6,6 +6,13 @@ All notable changes to the Slack Tools project will be documented in this file.
 
 ## [1.6.0] - 2025-12-03
 
+### Major Features
+- **🚀 Detached Dyno Architecture**: Audits run as isolated one-off dynos (no 15-20 min timeout limits!)
+- **⚡ Real-Time Incremental Progress**: Live updates every 50 Telegram groups during audits
+- **🎨 Official Brand Logos**: Slack (purple) and Telegram (blue) icons via Font Awesome
+- **🔐 Persistent Sessions**: One-time 2FA authentication, then automatic audits (StringSession)
+- **📊 Complete Data Visibility**: Show ALL 120 Slack channels and ALL 413 Telegram groups (no limits)
+
 ### Added
 - **Sarah Flood as BDR**: Added Sarah Flood (@sfl00d) to required members for Slack and Telegram (11 total team members)
 - **Kevin and Aliya Required for Telegram**: Updated Kevin and Aliya from optional to required for Telegram groups (9 Telegram-required members)
@@ -36,13 +43,20 @@ All notable changes to the Slack Tools project will be documented in this file.
 - **Whole Number Percentages**: Changed from 100.0% to 100%
 - **Removed Filter Buttons**: Eliminated unnecessary All/Active/Inactive/Optional filters from Employees page
 
+### Changed
+- **Excluded Engineer Groups**: BitSafe Eng groups excluded from audits (not customer-facing)
+- **Removed Required Members Column**: Eliminated useless column from Slack table (always showed "-")
+- **Show All Groups**: Display complete list of all 413 Telegram groups (no 50-group limit)
+
 ### Fixed
+- **Detached Dyno Execution**: Audits complete reliably in 15-20 minutes (no worker timeouts!)
 - **Live Progress in Coverage**: Running audits show real-time progress instead of "-"
-- **Audit In Progress Message**: Shows proper "Audit In Progress" instead of "No Issues Found" while running
+- **Audit In Progress Message**: Shows proper "Audit In Progress" instead of "No Issues Found" while running  
 - **CI Tests**: Fixed all flake8 linting errors (unused imports, line length, trailing whitespace)
-- **Database Sync**: Kevin and Aliya now correctly marked as telegram_required in production
+- **Database Sync**: Kevin, Aliya, Sarah correctly configured in production
 - **Dashboard Running State**: Both platforms show incremental progress during active audits
 - **Font Awesome Integration**: Proper CDN loading for brand logos
+- **Session Persistence**: StringSession enables automatic re-authentication
 
 ## [1.5.0] - 2025-12-02
 
