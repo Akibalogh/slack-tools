@@ -421,6 +421,11 @@ class CustomerGroupAuditor:
                     continue
 
                 group_name = chat.title
+                
+                # Filter: Only audit groups with "bitsafe" in name (work-related groups)
+                if "bitsafe" not in group_name.lower():
+                    continue
+                
                 member_count = getattr(chat, "participants_count", 0)
 
                 # Check history visibility settings
@@ -503,12 +508,17 @@ class CustomerGroupAuditor:
                     history_flag = (
                         "⚠️ HIDDEN" if history_visible == "Hidden" else history_visible
                     )
+                    
+                    # Check if group has "BitSafe" in name (work-related groups)
+                    has_bitsafe = "bitsafe" in group_name.lower()
+                    bitsafe_flag = "✓ YES" if has_bitsafe else "No"
 
                     # Add to results
                     self.audit_results.append(
                         {
                             "Platform": "Telegram",
                             "Group Name": group_name,
+                            "Has BitSafe Name": bitsafe_flag,
                             "Category": category,
                             "Requires Full Team": "Yes" if requires_full_team else "No",
                             "Needs Rename (iBTC)": rename_flag,
