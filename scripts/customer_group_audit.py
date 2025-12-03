@@ -91,6 +91,11 @@ OPTIONAL_MEMBERS = {
     "anmatusova": "Anna Matusova (VP Finance & Legal)",
 }
 
+# Slack username to Telegram username mapping for optional members
+OPTIONAL_SLACK_MAP = {
+    "anna": "anmatusova",
+}
+
 # Known Slack username mappings (from workspace)
 SLACK_USERNAME_MAP = {
     "aki": "akibalogh",

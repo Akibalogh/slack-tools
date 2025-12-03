@@ -480,6 +480,16 @@ def audit_detail(audit_id):
     if audit_dict and audit_dict.get("results_json"):
         try:
             report_data = json.loads(audit_dict["results_json"])
+
+            # Sort Telegram groups: BitSafe Name = "✓ YES" first, then "No"
+            if report_data and "telegram_groups" in report_data:
+                report_data["telegram_groups"] = sorted(
+                    report_data["telegram_groups"],
+                    key=lambda g: (
+                        0 if g.get("Has BitSafe Name") == "✓ YES" else 1,
+                        g.get("Group Name", "").lower(),
+                    ),
+                )
         except Exception as e:
             print(f"Could not parse results JSON: {e}")
 
