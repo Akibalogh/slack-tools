@@ -10,7 +10,6 @@ import asyncio
 import json
 import os
 from datetime import datetime
-from pathlib import Path
 
 import aiohttp
 import pandas as pd
@@ -218,7 +217,9 @@ class CustomerGroupAuditor:
                             ):
                                 self.required_slack_ids[mapped_handle] = user_id
                                 print(
-                                    f"   ✓ Found required: {REQUIRED_SLACK_MEMBERS[mapped_handle]} (@{user.get('name')})"
+                                    f"   ✓ Found required: "
+                                    f"{REQUIRED_SLACK_MEMBERS[mapped_handle]} "
+                                    f"(@{user.get('name')})"
                                 )
 
                             # Is it an optional member?
@@ -367,7 +368,9 @@ class CustomerGroupAuditor:
                     "" if requires_full_team or len(required_present) >= 3 else " ⚠️"
                 )
                 print(
-                    f"   ✓ {channel_name}: {len(required_present)}/{len(REQUIRED_SLACK_MEMBERS)} required [{category}]{warning}"
+                    f"   ✓ {channel_name}: "
+                    f"{len(required_present)}/{len(REQUIRED_SLACK_MEMBERS)} "
+                    f"required [{category}]{warning}"
                 )
 
     async def audit_telegram_groups(self):
@@ -549,7 +552,9 @@ class CustomerGroupAuditor:
                     )
                     rename_note = " [RENAME]" if needs_rename(group_name) else ""
                     print(
-                        f"   ✓ {group_name}: {len(required_present)}/{len(REQUIRED_TELEGRAM_MEMBERS)} required [{category}]{warning}{rename_note}"
+                        f"   ✓ {group_name}: "
+                        f"{len(required_present)}/{len(REQUIRED_TELEGRAM_MEMBERS)} "
+                        f"required [{category}]{warning}{rename_note}"
                     )
 
                 except Exception as e:
