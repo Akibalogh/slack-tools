@@ -30,23 +30,16 @@ try:
         GROUP_CATEGORIES = json.load(f)
 except FileNotFoundError:
     GROUP_CATEGORIES = {
-        "marketing_groups": [
-            "BitSafe Node Operators Community",
-            "BitSafe 中文",
-            "BitSafe Community",
-            "Canton Network",
-            "Bitcoin Layers",
-            "iBTC Offboarding Support Group",
-            "Loop Community",
-        ],
+        "marketing_groups": [],  # Deprecated - use community_groups instead
         "internal_groups": [
+            "BitSafe BD",
+            "BitSafe Company",
             "BitSafe Marketing",
             "BitSafe Product",
-            "BitSafe Company",
-            "BitSafe BD",
+            "BitSafe team at Singapore 2025",
+            "BitSafe team at",  # Catches variations
             "Ben W",
             "Gabi <> BitSafe",
-            "BitSafe team at",
         ],
         "intro_groups": [
             "Felix <> iBTC",
@@ -55,6 +48,9 @@ except FileNotFoundError:
             "Launchnodes <> SIG",
         ],
         "community_groups": [
+            "BitSafe Community",
+            "BitSafe 中文",
+            "BitSafe Node Operators Community",
             "Canton Network",
             "Bitcoin Layers",
             "iBTC Offboarding Support Group",
