@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Delete specific Telegram groups permanently
-⚠️ REQUIRES EXPLICIT CONFIRMATION - CANNOT BE UNDONE
+Leave specific Telegram groups
+- If Owner: Deletes the group permanently (cannot be undone)
+- If Member/Admin: Leaves the group (group continues for others)
 """
 
 import asyncio
@@ -46,12 +47,20 @@ async def main():
         session_string = None
 
     client = TelegramClient(StringSession(session_string), api_id, api_hash)
-    await client.start(phone=phone)
+
+    # Connect without prompting for auth (use saved session only)
+    await client.connect()
+    if not await client.is_user_authorized():
+        print(
+            "❌ Telegram session expired! Please run an audit first to refresh session."
+        )
+        await client.disconnect()
+        return
 
     print("=" * 80)
-    print("⚠️  TELEGRAM GROUP DELETION TOOL")
+    print("📤 TELEGRAM GROUP LEAVE TOOL")
     print("=" * 80)
-    print(f"\n🎯 Groups marked for deletion: {len(GROUPS_TO_DELETE)}")
+    print(f"\n🎯 Groups to leave: {len(GROUPS_TO_DELETE)}")
     for group in GROUPS_TO_DELETE:
         print(f"   - {group}")
 
@@ -82,13 +91,13 @@ async def main():
                     perms = await client.get_permissions(dialog.entity, me)
                     if perms.is_creator:
                         admin_status = "Owner"
-                        can_delete = True
+                        can_delete = True  # Owner can delete
                     elif perms.is_admin:
                         admin_status = "Admin"
-                        can_delete = False  # Admins can't delete groups, only owners
+                        can_delete = True  # Admin can leave
                     else:
                         admin_status = "Member"
-                        can_delete = False
+                        can_delete = True  # Member can leave
                 except:
                     admin_status = "Unknown"
                     can_delete = False
@@ -114,50 +123,46 @@ async def main():
         print(f"Group: {group['name']}")
         print(f"  Members: {group['members']}")
         print(f"  Your role: {group['admin_status']}")
-        print(
-            f"  Can delete: {'✅ YES' if group['can_delete'] else '❌ NO (need Owner)'}"
-        )
+        if group["admin_status"] == "Owner":
+            print(f"  Action: ⚠️  DELETE group (permanent)")
+        else:
+            print(f"  Action: 📤 LEAVE group (group stays for others)")
         print()
 
     print("=" * 80)
     print("⚠️  CONFIRMATION REQUIRED")
     print("=" * 80)
-    print("\n🚨 This will PERMANENTLY DELETE these Telegram groups!")
-    print("🚨 This action CANNOT BE UNDONE!")
-    print("🚨 All messages and history will be lost!")
-    print(f"\n📝 To confirm, type: DELETE {len(found_groups)} GROUPS")
+    print("\n📤 You will LEAVE these groups:")
+    for group in found_groups:
+        action = (
+            "DELETE (permanent)"
+            if group["admin_status"] == "Owner"
+            else "LEAVE (continues for others)"
+        )
+        print(f"   - {group['name']} → {action}")
+    print(f"\n📝 To confirm, type: yes")
     print()
 
-    confirmation = input("Confirmation: ").strip()
+    confirmation = input("Confirmation: ").strip().lower()
 
-    if confirmation != f"DELETE {len(found_groups)} GROUPS":
-        print("\n❌ Deletion cancelled (confirmation didn't match)")
+    if confirmation != "yes":
+        print(f"\n❌ Cancelled (you typed '{confirmation}', expected 'yes')")
         await client.disconnect()
         return
 
-    print(f"\n⚠️  Final confirmation: Type 'I UNDERSTAND THIS IS PERMANENT'")
-    final = input("Final confirmation: ").strip()
-
-    if final != "I UNDERSTAND THIS IS PERMANENT":
-        print("\n❌ Deletion cancelled (final confirmation didn't match)")
-        await client.disconnect()
-        return
-
-    # Perform deletions
-    print(f"\n🗑️  Deleting {len(found_groups)} groups...\n")
+    # Perform leave/delete actions
+    print(f"\n📤 Leaving {len(found_groups)} groups...\n")
 
     for group in found_groups:
-        if not group["can_delete"]:
-            print(f"⚠️  Skipping {group['name']} (not Owner)")
-            continue
-
+        action = "Deleting" if group["admin_status"] == "Owner" else "Leaving"
         try:
             await client.delete_dialog(group["entity"])
-            print(f"✅ Deleted: {group['name']}")
+            emoji = "🗑️" if group["admin_status"] == "Owner" else "📤"
+            print(f"{emoji} {action}: {group['name']}")
         except Exception as e:
-            print(f"❌ Failed to delete {group['name']}: {e}")
+            print(f"❌ Failed to {action.lower()} {group['name']}: {e}")
 
-    print(f"\n✅ Deletion process complete!")
+    print(f"\n✅ Process complete!")
 
     await client.disconnect()
 
