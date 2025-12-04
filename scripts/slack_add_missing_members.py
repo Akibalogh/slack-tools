@@ -93,6 +93,23 @@ def main():
 
     print(f"✅ Found audit #{audit['id']}")
 
+    # Get required Slack members from database
+    import psycopg2
+
+    database_url = os.getenv("DATABASE_URL")
+    conn = psycopg2.connect(database_url)
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "SELECT name, slack_user_id FROM employees WHERE slack_required = TRUE AND slack_user_id IS NOT NULL"
+    )
+    required_members = {row[0]: row[1] for row in cursor.fetchall()}
+
+    cursor.close()
+    conn.close()
+
+    print(f"📇 Required members: {len(required_members)}")
+
     # Parse audit data
     report_data = audit["data"]
     slack_channels = report_data.get("slack_channels", [])
@@ -100,16 +117,24 @@ def main():
     # Find channels with missing members
     channels_to_fix = []
     for channel in slack_channels:
-        missing = channel.get("Missing Members", "")
-        if missing and missing not in ["-", "✓ None"]:
-            # Extract missing member names
-            missing_names = [name.strip() for name in missing.split(",")]
+        # Get channel members
+        channel_members = channel.get("Members", [])
+        channel_id = channel.get("channel_id", "")
+        channel_name = channel.get("Channel Name", "")
+
+        # Find who's missing
+        missing = []
+        for member_name, member_id in required_members.items():
+            if member_id not in channel_members:
+                missing.append((member_name, member_id))
+
+        if missing:
             channels_to_fix.append(
                 {
-                    "name": channel.get("Channel Name", ""),
-                    "id": channel.get("channel_id", ""),
-                    "missing": missing_names,
-                    "completeness": channel.get("Completeness", ""),
+                    "name": channel_name,
+                    "id": channel_id,
+                    "missing": missing,
+                    "completeness": f"{len(channel_members)}/{len(required_members)} required",
                 }
             )
 
@@ -123,7 +148,8 @@ def main():
     for channel in channels_to_fix:
         print(f"Channel: {channel['name']}")
         print(f"  Current: {channel['completeness']}")
-        print(f"  Missing: {', '.join(channel['missing'])}")
+        missing_names = [name for name, _ in channel["missing"]]
+        print(f"  Missing: {', '.join(missing_names)}")
         print()
 
     # Confirm
@@ -145,34 +171,13 @@ def main():
     # Perform additions
     print(f"\n👥 Adding members to {len(channels_to_fix)} channels...\n")
 
-    # Get employee Slack IDs from database
-    import psycopg2
-
-    database_url = os.getenv("DATABASE_URL")
-    conn = psycopg2.connect(database_url)
-    cursor = conn.cursor()
-
-    cursor.execute("SELECT name, slack_id FROM employees WHERE slack_id IS NOT NULL")
-    employee_map = {row[0]: row[1] for row in cursor.fetchall()}
-
-    cursor.close()
-    conn.close()
-
-    print(f"📇 Loaded {len(employee_map)} employees with Slack IDs")
-
     success_count = 0
     error_count = 0
 
     for channel in channels_to_fix:
         print(f"📢 {channel['name']}:")
 
-        for missing_name in channel["missing"]:
-            user_id = employee_map.get(missing_name)
-            if not user_id:
-                print(f"  ⚠️  {missing_name}: No Slack ID found")
-                error_count += 1
-                continue
-
+        for missing_name, user_id in channel["missing"]:
             ok, result = invite_user_to_channel(channel["id"], user_id)
 
             if ok:
