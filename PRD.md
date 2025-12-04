@@ -88,7 +88,7 @@ Slack Tools is a suite of Python utilities for managing, analyzing, and auditing
 - **Dae Lee (Sales Advisor)**: Required in Slack only
 
 ### Optional Team
-- **Anna Matusova (VP Finance & Legal)**: Optional for all groups
+- **Anna Matusova (VP Finance & Legal)**: Optional for all groups (not required, added on case-by-case basis)
 
 ---
 
@@ -105,8 +105,11 @@ Automatically audit all Slack and Telegram customer groups to verify required an
 - ✅ Fetch all Slack channels containing "bitsafe" in the name (ALWAYS use live API, never cached exports)
 - ✅ Fetch all Telegram groups shared with @mojo_onchain
 - ✅ **Identify Telegram groups with "BitSafe" in name** (work-related groups for member management)
-- ✅ Verify presence of required team members (10 for Slack, 6 for Telegram)
-- ✅ Track optional team members (2 total)
+- ✅ **Filter and sort groups by multiple criteria** (Category, BitSafe Name, Admin Status, History, Missing Members)
+- ✅ **Real-time progress tracking** during audits (incremental updates every 50 groups)
+- ✅ **Exclude irrelevant groups** (Old, Archived, Engineer-only groups)
+- ✅ Verify presence of required team members (11 for Slack, 9 for Telegram)
+- ✅ Track optional team members (1 total: Anna)
 - ✅ Generate Excel report with audit results
 - ✅ Flag groups with "iBTC" that need renaming
 - ✅ Categorize groups (BD Customer, Marketing, Internal, Intro)
@@ -535,12 +538,15 @@ Web-based read-only dashboard for viewing team member access, audit results, and
 ## Non-Functional Requirements
 
 ### Performance
-- Slack audit of ~120 channels: 5-10 minutes
-- Telegram audit of ~413 groups: 10-15 minutes  
-- Full audit (Slack + Telegram): 13-18 minutes
+- Slack audit of ~120 channels: 1-2 minutes
+- Telegram audit of ~410 groups (filtered): 10-15 minutes
+- Full audit (Slack + Telegram): 13-20 minutes
+- No timeout limits (runs as detached one-off dyno)
+- Incremental progress updates every 50 groups
 - Slack API rate limits: 20+ requests per minute (handled with async)
 - Telegram API rate limits: Handled by Telethon automatically
 - Admin panel pages load in < 2 seconds
+- Filtering 410 groups: Instant (client-side JavaScript)
 
 ### Security
 - API tokens stored in `.env` file (git-ignored)
