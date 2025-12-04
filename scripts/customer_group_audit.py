@@ -34,6 +34,10 @@ except FileNotFoundError:
             "BitSafe Node Operators Community",
             "BitSafe 中文",
             "BitSafe Community",
+            "Canton Network",
+            "Bitcoin Layers",
+            "iBTC Offboarding Support Group",
+            "Loop Community",
         ],
         "internal_groups": [
             "BitSafe Marketing",
@@ -44,8 +48,18 @@ except FileNotFoundError:
             "Gabi <> BitSafe",
             "BitSafe team at",
         ],
+        "intro_groups": [
+            "Felix <> iBTC",
+            "SBL-BIMA-iBTC",
+        ],
         "special_groups": {},
     }
+
+# Groups to exclude from audits entirely (not needed)
+EXCLUDE_GROUPS = [
+    "Aki / Mayank",
+    "PMM Interviews",
+]
 
 # Slack configuration
 SLACK_TOKEN = os.getenv(
@@ -457,6 +471,11 @@ class CustomerGroupAuditor:
                 skip_keywords = [" - old", " - archived", "bitsafe eng"]
                 if any(keyword in group_name.lower() for keyword in skip_keywords):
                     print(f"   Skipping: {group_name}")
+                    continue
+
+                # Skip explicitly excluded groups
+                if group_name in EXCLUDE_GROUPS:
+                    print(f"   Excluding: {group_name}")
                     continue
 
                 member_count = getattr(chat, "participants_count", 0)
