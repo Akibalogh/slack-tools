@@ -727,6 +727,56 @@ slack-tools/
 
 ---
 
+## Feature 8: Telegram Group Management (Future)
+
+### Description
+Ability to permanently delete unwanted Telegram groups with multi-step confirmation process.
+
+### Requirements
+
+**Must Have:**
+- ⚠️ **EXTRA CONFIRMATION REQUIRED**: Multi-step confirmation before any deletion
+- List groups eligible for deletion (Old, Archived, excluded groups)
+- Preview what will be deleted
+- Require typing group name to confirm
+- Final "Are you sure?" prompt
+- Use Telegram API to permanently delete group
+- Log all deletions with timestamp and reason
+- Cannot be undone warning
+
+**Groups Eligible for Deletion:**
+- Groups with " - Old" in name
+- Groups with " - Archived" in name
+- Groups in EXCLUDE_GROUPS list
+- Groups marked as "not needed" by admin
+
+**Safety Features:**
+- Must be Owner or Admin in group to delete
+- Require password re-entry for destructive actions
+- Show member count before deletion
+- Prevent deletion of active customer groups (BitSafe Name = YES)
+- Cooldown period between deletions (prevent mass deletion)
+
+**UI Flow:**
+1. Navigate to "Group Management" page
+2. See list of deletable groups with warnings
+3. Click "Delete" on specific group
+4. Confirmation modal: "Are you absolutely sure?"
+5. Type group name exactly to confirm
+6. Enter Telegram password
+7. Final confirmation: "This cannot be undone"
+8. Delete via Telegram API
+9. Show success/error message
+10. Update audit to reflect deletion
+
+**Logging:**
+- Record in database: group_deletions table
+- Timestamp, group name, deleted by, reason
+- Cannot delete groups with "Customer" category
+- Audit trail for compliance
+
+**Note:** This is a DESTRUCTIVE feature requiring extreme caution. Only implement with multiple safeguards.
+
 ## Future Enhancements
 
 ### Q1 2025

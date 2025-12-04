@@ -51,11 +51,19 @@ except FileNotFoundError:
         "intro_groups": [
             "Felix <> iBTC",
             "SBL-BIMA-iBTC",
+            "Bron <> SIG",
+            "Launchnodes <> SIG",
+        ],
+        "community_groups": [
+            "Canton Network",
+            "Bitcoin Layers",
+            "iBTC Offboarding Support Group",
+            "Loop Community",
         ],
         "special_groups": {},
     }
 
-# Groups to exclude from audits entirely (not needed)
+# Groups to exclude from audits entirely (candidates for deletion)
 EXCLUDE_GROUPS = [
     "Aki / Mayank",
     "PMM Interviews",
@@ -159,6 +167,13 @@ def categorize_group(group_name):
         for intro in GROUP_CATEGORIES.get("intro_groups", [])
     ):
         return "Intro", False
+
+    # Check community groups
+    if any(
+        cg.lower() in group_name.lower()
+        for cg in GROUP_CATEGORIES.get("community_groups", [])
+    ):
+        return "Community", False
 
     # Check special groups
     for special, note in GROUP_CATEGORIES.get("special_groups", {}).items():
