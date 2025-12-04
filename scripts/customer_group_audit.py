@@ -140,8 +140,8 @@ def categorize_group(group_name):
         if special.lower() in group_name.lower():
             return f"Special ({note})", False
 
-    # Default: BD Customer group requiring full team
-    return "BD Customer", True
+    # Default: Customer group requiring full team
+    return "Customer", True
 
 
 def needs_rename(group_name):
