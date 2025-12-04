@@ -66,7 +66,6 @@ REQUIRED_SLACK_MEMBERS = {
     "aliya": "Aliya Gordon (BDR)",
     "dave": "Dave Shin",
     "Dae_L": "Dae Lee (Sales Advisor)",
-    "j_eisenberg": "Jesse Eisenberg (CTO)",
     "sfl00d": "Sarah Flood (BDR)",
 }
 
@@ -77,7 +76,6 @@ REQUIRED_TELEGRAM_MEMBERS = {
     "mojo_onchain": "Mayank (Sales Engineer)",
     "kadeemclarke": "Kadeem Clarke (Head of Growth)",
     "NonFungibleAmy": "Amy Wu (BD)",
-    "j_eisenberg": "Jesse Eisenberg (CTO)",
     "Sw3zz": "Kevin Huet (BDR)",
     "agordon888": "Aliya Gordon (BDR)",
     "sfl00d": "Sarah Flood (BDR)",
@@ -89,6 +87,7 @@ REQUIRED_MEMBERS = REQUIRED_SLACK_MEMBERS
 OPTIONAL_MEMBERS = {
     "shin_novation": "Shin (Strategy Advisor)",
     "anmatusova": "Anna Matusova (VP Finance & Legal)",
+    "j_eisenberg": "Jesse Eisenberg (CTO)",
 }
 
 # Slack username to Telegram username mapping for optional members
@@ -301,6 +300,12 @@ class CustomerGroupAuditor:
             for channel in bitsafe_channels:
                 channel_id = channel["id"]
                 channel_name = channel["name"]
+
+                # Skip internal IEU alert channels
+                if "bitsafe-ieu" in channel_name.lower():
+                    print(f"   Skipping internal channel: {channel_name}")
+                    continue
+
                 is_private = channel.get(
                     "is_private", True
                 )  # Default to private for safety
