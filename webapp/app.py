@@ -6,6 +6,7 @@ Read-only dashboard - no authentication required
 import asyncio
 import os
 import threading
+from datetime import datetime, timedelta
 
 import requests
 from database import Database
@@ -32,7 +33,8 @@ def get_telegram_status():
         cursor = db.get_cursor(conn)
         db.execute_query(
             cursor,
-            "SELECT status, message, error, code, password FROM telegram_audit_status WHERE id = 1",
+            """SELECT status, message, error, code, password, updated_at
+               FROM telegram_audit_status WHERE id = 1""",
         )
         row = cursor.fetchone()
 
@@ -45,6 +47,7 @@ def get_telegram_status():
                 "error": row_dict.get("error"),
                 "code": row_dict.get("code"),
                 "password": row_dict.get("password"),
+                "updated_at": row_dict.get("updated_at"),
             }
         return {
             "status": "idle",
@@ -52,6 +55,7 @@ def get_telegram_status():
             "error": None,
             "code": None,
             "password": None,
+            "updated_at": None,
         }
     except Exception as e:
         if conn:
@@ -63,6 +67,7 @@ def get_telegram_status():
             "error": str(e),
             "code": None,
             "password": None,
+            "updated_at": None,
         }
     finally:
         if conn:
@@ -635,8 +640,34 @@ def api_start_telegram_audit():
     """Start Telegram audit - requests 2FA code"""
     # Check if already running
     current_status = get_telegram_status()
+
+    # Check if status is stale (older than 30 minutes) and reset if needed
     if current_status["status"] in ["waiting_for_code", "authenticating", "running"]:
-        return jsonify({"error": "Telegram audit already in progress"}), 400
+        if current_status["updated_at"]:
+            try:
+                # Parse timestamp (handle SQLite and PostgreSQL formats)
+                if isinstance(current_status["updated_at"], str):
+                    ts_str = current_status["updated_at"].replace('Z', '+00:00')
+                    updated_at = datetime.fromisoformat(ts_str)
+                else:
+                    updated_at = current_status["updated_at"]
+
+                # If status hasn't been updated in 30 min, consider stale
+                time_diff = datetime.utcnow() - updated_at.replace(tzinfo=None)
+                if time_diff > timedelta(minutes=30):
+                    msg = f"⚠️ Resetting stale status (last: {updated_at})"
+                    print(msg)
+                    set_telegram_status("idle", "Previous audit timed out")
+                else:
+                    err = "Telegram audit already in progress"
+                    return jsonify({"error": err}), 400
+            except Exception as e:
+                print(f"⚠️ Error checking timestamp: {e}, resetting status")
+                set_telegram_status("idle", "Status check failed, resetting")
+        else:
+            # No timestamp available, reset to be safe
+            print("⚠️ No timestamp found, resetting status")
+            set_telegram_status("idle", "Status had no timestamp, resetting")
 
     # Reset state in database
     set_telegram_status(
