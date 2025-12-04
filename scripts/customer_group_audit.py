@@ -30,8 +30,20 @@ try:
         GROUP_CATEGORIES = json.load(f)
 except FileNotFoundError:
     GROUP_CATEGORIES = {
-        "marketing_groups": [],
-        "internal_groups": [],
+        "marketing_groups": [
+            "BitSafe Node Operators Community",
+            "BitSafe 中文",
+            "BitSafe Community",
+        ],
+        "internal_groups": [
+            "BitSafe Marketing",
+            "BitSafe Product",
+            "BitSafe Company",
+            "BitSafe BD",
+            "Ben W",
+            "Gabi <> BitSafe",
+            "BitSafe team at",
+        ],
         "special_groups": {},
     }
 
