@@ -14,8 +14,10 @@ All notable changes to the Slack Tools project will be documented in this file.
 - **📊 Complete Data Visibility**: Show ALL 120 Slack channels and ALL 413 Telegram groups (no limits)
 
 ### Added
-- **Sarah Flood as BDR**: Added Sarah Flood (@sfl00d) to required members for Slack and Telegram (11 total team members)
-- **Kevin and Aliya Required for Telegram**: Updated Kevin and Aliya from optional to required for Telegram groups (9 Telegram-required members)
+- **Sarah Flood as BDR**: Added Sarah Flood (@sfl00d, U0A1SQQKD33) to required members for Slack and Telegram
+- **Anna Matusova as Optional**: Added Anna (@anmatusova, U08Q9VCAM1A) as optional member (not required)
+- **Team Total**: 12 employees (11 required + 1 optional)
+- **Kevin and Aliya Required for Telegram**: Updated Kevin and Aliya to Telegram-required (9 total Telegram-required)
 - **Real-Time Progress Tracking**: Live incremental progress updates during audits
   - Updates every 50 Telegram groups during audit
   - Shows "Slack: 120 scanned", "Telegram: 150/~413 scanned"
@@ -45,8 +47,12 @@ All notable changes to the Slack Tools project will be documented in this file.
 
 ### Changed
 - **Excluded Engineer Groups**: BitSafe Eng groups excluded from audits (not customer-facing)
+- **Excluded Old/Archived Groups**: Groups with " - Old" or " - Archived" excluded automatically
 - **Removed Required Members Column**: Eliminated useless column from Slack table (always showed "-")
-- **Show All Groups**: Display complete list of all 413 Telegram groups (no 50-group limit)
+- **Show All Groups**: Display complete list of ALL Telegram groups (no 50-group limit, ~410 after filtering)
+- **Category Rename**: "BD Customer" simplified to "Customer"
+- **Interactive Filtering**: Filter Telegram groups by Category, BitSafe Name, Admin Status, History, Missing Members
+- **Dynamic Count**: Live group count updates as filters are applied
 
 ### Fixed
 - **Detached Dyno Execution**: Audits complete reliably in 15-20 minutes (no worker timeouts!)
