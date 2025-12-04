@@ -12,35 +12,49 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-SLACK_BOT_TOKEN = os.getenv("SLACK_BOT_TOKEN")
-SLACK_TEAM_ID = "E09HEBXK4J3"  # BitSafe team ID
+SLACK_TOKEN = os.getenv("SLACK_USER_TOKEN")  # Use user token like audit script
 SARAH_SLACK_ID = "U0A1SQQKD33"  # Sarah Flood's Slack user ID
 
 
 def get_all_channels():
-    """Get all Slack channels"""
+    """Get all Slack channels with pagination"""
     url = "https://slack.com/api/conversations.list"
-    headers = {"Authorization": f"Bearer {SLACK_BOT_TOKEN}"}
-    params = {
-        "team_id": SLACK_TEAM_ID,
-        "exclude_archived": True,
-        "limit": 1000,
-    }
+    headers = {"Authorization": f"Bearer {SLACK_TOKEN}"}
 
-    response = requests.get(url, headers=headers, params=params)
-    result = response.json()
+    all_channels = []
+    cursor = None
 
-    if not result.get("ok"):
-        print(f"❌ Failed to get channels: {result.get('error')}")
-        return []
+    while True:
+        params = {
+            "types": "public_channel,private_channel",
+            "exclude_archived": "true",
+            "limit": 200,
+        }
+        if cursor:
+            params["cursor"] = cursor
 
-    return result.get("channels", [])
+        response = requests.get(url, headers=headers, params=params)
+        result = response.json()
+
+        if not result.get("ok"):
+            print(f"❌ Failed to get channels: {result.get('error')}")
+            break
+
+        channels = result.get("channels", [])
+        all_channels.extend(channels)
+
+        # Check if there are more pages
+        cursor = result.get("response_metadata", {}).get("next_cursor")
+        if not cursor:
+            break
+
+    return all_channels
 
 
 def get_channel_members(channel_id):
     """Get members of a channel"""
     url = "https://slack.com/api/conversations.members"
-    headers = {"Authorization": f"Bearer {SLACK_BOT_TOKEN}"}
+    headers = {"Authorization": f"Bearer {SLACK_TOKEN}"}
     params = {"channel": channel_id}
 
     response = requests.get(url, headers=headers, params=params)
@@ -56,7 +70,7 @@ def invite_to_channel(channel_id, user_id):
     """Invite user to channel"""
     url = "https://slack.com/api/conversations.invite"
     headers = {
-        "Authorization": f"Bearer {SLACK_BOT_TOKEN}",
+        "Authorization": f"Bearer {SLACK_TOKEN}",
         "Content-Type": "application/json",
     }
     data = {"channel": channel_id, "users": user_id}
@@ -68,8 +82,8 @@ def invite_to_channel(channel_id, user_id):
 
 
 def main():
-    if not SLACK_BOT_TOKEN:
-        print("❌ SLACK_BOT_TOKEN not configured")
+    if not SLACK_TOKEN:
+        print("❌ SLACK_TOKEN not configured")
         return 1
 
     print("=" * 80)
