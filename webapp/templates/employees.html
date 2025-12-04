@@ -27,7 +27,7 @@
             {% for employee in employees %}
             <tr>
                 <td><strong>{{ employee.name }}</strong></td>
-                <td style="color: #666; font-size: 14px;">{{ employee.role or '-' }}</td>
+                <td>{{ employee.role or '-' }}</td>
                 <td>{{ employee.email or '-' }}</td>
                 <td>{{ employee.name if employee.slack_username else '-' }}</td>
                 <td>@{{ employee.telegram_username if employee.telegram_username else '-' }}</td>
