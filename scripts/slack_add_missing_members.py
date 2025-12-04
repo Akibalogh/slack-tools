@@ -31,11 +31,10 @@ def get_latest_audit():
     # Get latest completed audit with Slack data
     cursor.execute(
         """
-        SELECT id, report_data
+        SELECT id, results_json
         FROM audit_runs
         WHERE status = 'completed'
-        AND report_data IS NOT NULL
-        AND report_data::text LIKE '%slack_channels%'
+        AND results_json IS NOT NULL
         ORDER BY completed_at DESC
         LIMIT 1
     """
@@ -48,7 +47,15 @@ def get_latest_audit():
     if not row:
         return None
 
-    audit_id, report_data = row
+    audit_id, results_json = row
+
+    # Parse the JSON results
+    try:
+        report_data = json.loads(results_json)
+    except json.JSONDecodeError:
+        print(f"⚠️  Failed to parse audit results JSON")
+        return None
+
     return {"id": audit_id, "data": report_data}
 
 
