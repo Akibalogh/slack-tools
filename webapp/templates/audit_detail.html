@@ -159,14 +159,14 @@
             <tr>
                 <td><strong>{{ channel['Group Name'] or channel.name }}</strong></td>
                 <td>
-                    {% if channel['Missing Members'] and channel['Missing Members'] != '-' %}
-                        <span style="color: #e74c3c;">{{ channel['Missing Members'] }}</span>
+                    {% if channel.get('Required Missing') and channel['Required Missing'] != '-' %}
+                        <span style="color: #e74c3c;">{{ channel['Required Missing'] }}</span>
                     {% else %}
-                        <span style="color: #27ae60;">✓ None</span>
+                        <span style="color: #27ae60;">✓ All Present</span>
                     {% endif %}
                 </td>
                 <td>
-                    <span class="badge {% if channel.get('Missing Members') and channel['Missing Members'] != '-' %}badge-warning{% else %}badge-completed{% endif %}">
+                    <span class="badge {% if channel.get('Required Missing') and channel['Required Missing'] != '-' %}badge-warning{% else %}badge-completed{% endif %}">
                         {{ channel.get('Completeness', '100%') }}
                     </span>
                 </td>
@@ -177,11 +177,56 @@
     {% endif %}
     
     {% if telegram_groups %}
-    <h4 style="margin: 20px 0 10px 0;"><i class="fab fa-telegram" style="color: #0088CC;"></i> <strong>Telegram Groups</strong> ({{ telegram_groups|length }})</h4>
-    <p style="color: #666; font-size: 14px; margin-bottom: 10px;">
-        Groups with "✓ YES" in BitSafe Name are active work groups. Groups with "No" may be old/retired.
-    </p>
-    <table>
+    <h4 style="margin: 20px 0 10px 0;"><i class="fab fa-telegram" style="color: #0088CC;"></i> <strong>Telegram Groups</strong> (<span id="group-count">{{ telegram_groups|length }}</span> shown)</h4>
+    
+    <div style="background: #f8f9fa; padding: 15px; border-radius: 4px; margin-bottom: 15px; display: flex; gap: 15px; flex-wrap: wrap;">
+        <div>
+            <label style="font-weight: bold; margin-right: 5px;">Category:</label>
+            <select id="filter-category" onchange="filterTable()" style="padding: 5px;">
+                <option value="">All</option>
+                <option value="Customer">Customer</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Internal">Internal</option>
+                <option value="Intro">Intro</option>
+            </select>
+        </div>
+        <div>
+            <label style="font-weight: bold; margin-right: 5px;">BitSafe Name:</label>
+            <select id="filter-bitsafe" onchange="filterTable()" style="padding: 5px;">
+                <option value="">All</option>
+                <option value="YES">✓ YES (Active)</option>
+                <option value="No">No (Old/Retired)</option>
+            </select>
+        </div>
+        <div>
+            <label style="font-weight: bold; margin-right: 5px;">Admin Status:</label>
+            <select id="filter-admin" onchange="filterTable()" style="padding: 5px;">
+                <option value="">All</option>
+                <option value="Owner">Owner</option>
+                <option value="Admin">Admin</option>
+                <option value="Member">Member (⚠️)</option>
+            </select>
+        </div>
+        <div>
+            <label style="font-weight: bold; margin-right: 5px;">History:</label>
+            <select id="filter-history" onchange="filterTable()" style="padding: 5px;">
+                <option value="">All</option>
+                <option value="Visible">Visible</option>
+                <option value="HIDDEN">Hidden (⚠️)</option>
+            </select>
+        </div>
+        <div>
+            <label style="font-weight: bold; margin-right: 5px;">Missing Members:</label>
+            <select id="filter-missing" onchange="filterTable()" style="padding: 5px;">
+                <option value="">All</option>
+                <option value="none">All Present</option>
+                <option value="has-missing">Has Missing</option>
+            </select>
+        </div>
+        <button onclick="clearFilters()" style="padding: 5px 15px; background: #6c757d; color: white; border: none; border-radius: 4px; cursor: pointer;">Clear Filters</button>
+    </div>
+    
+    <table id="telegram-table">
         <thead>
             <tr>
                 <th>Group Name</th>
@@ -218,14 +263,14 @@
                     </span>
                 </td>
                 <td>
-                    {% if group.get('Missing Members') and group['Missing Members'] != '-' %}
-                        <span style="color: #e74c3c;">{{ group['Missing Members'] }}</span>
+                    {% if group.get('Required Missing') and group['Required Missing'] != '-' %}
+                        <span style="color: #e74c3c;">{{ group['Required Missing'] }}</span>
                     {% else %}
-                        <span style="color: #27ae60;">✓ None</span>
+                        <span style="color: #27ae60;">✓ All Present</span>
                     {% endif %}
                 </td>
                 <td>
-                    <span class="badge {% if group.get('Missing Members') and group['Missing Members'] != '-' %}badge-warning{% else %}badge-completed{% endif %}">
+                    <span class="badge {% if group.get('Required Missing') and group['Required Missing'] != '-' %}badge-warning{% else %}badge-completed{% endif %}">
                         {{ group.get('Completeness', '100%') }}
                     </span>
                 </td>
@@ -237,6 +282,59 @@
 </div>
 {% endif %}
 
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function filterTable() {
+    const table = document.getElementById('telegram-table');
+    if (!table) return;
+    
+    const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+    
+    const categoryFilter = document.getElementById('filter-category').value.toLowerCase();
+    const bitsafeFilter = document.getElementById('filter-bitsafe').value;
+    const adminFilter = document.getElementById('filter-admin').value.toLowerCase();
+    const historyFilter = document.getElementById('filter-history').value.toLowerCase();
+    const missingFilter = document.getElementById('filter-missing').value;
+    
+    let visibleCount = 0;
+    
+    for (let row of rows) {
+        const cells = row.getElementsByTagName('td');
+        if (cells.length < 7) continue;
+        
+        const category = cells[1].textContent.trim().toLowerCase();
+        const bitsafeName = cells[2].textContent.trim();
+        const adminStatus = cells[3].textContent.trim().toLowerCase();
+        const history = cells[4].textContent.trim().toLowerCase();
+        const missing = cells[5].textContent.trim();
+        
+        let show = true;
+        
+        if (categoryFilter && !category.includes(categoryFilter)) show = false;
+        if (bitsafeFilter && !bitsafeName.includes(bitsafeFilter)) show = false;
+        if (adminFilter && !adminStatus.includes(adminFilter)) show = false;
+        if (historyFilter && !history.includes(historyFilter)) show = false;
+        if (missingFilter === 'none' && !missing.includes('All Present')) show = false;
+        if (missingFilter === 'has-missing' && missing.includes('All Present')) show = false;
+        
+        row.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
+    }
+    
+    document.getElementById('group-count').textContent = visibleCount;
+}
+
+function clearFilters() {
+    document.getElementById('filter-category').value = '';
+    document.getElementById('filter-bitsafe').value = '';
+    document.getElementById('filter-admin').value = '';
+    document.getElementById('filter-history').value = '';
+    document.getElementById('filter-missing').value = '';
+    filterTable();
+}
+</script>
 {% endblock %}
 
 
