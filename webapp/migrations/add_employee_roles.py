@@ -62,10 +62,45 @@ def main():
         print("   ✅ Role column added")
 
     except Exception as e:
-        print(f"   ⚠️  Column may already exist: {e}")
+        print(f"   ⚠️  Error adding column: {e}")
         conn.rollback()
 
-    print("\n2️⃣ Populating roles for existing employees...")
+    # Verify the column actually exists before proceeding
+    print("\n2️⃣ Verifying role column exists...")
+    try:
+        if db.is_postgres:
+            cursor.execute(
+                """
+                SELECT column_name
+                FROM information_schema.columns
+                WHERE table_name = 'employees' AND column_name = 'role'
+            """
+            )
+            column_exists = cursor.fetchone() is not None
+        else:
+            cursor.execute("PRAGMA table_info(employees)")
+            columns = [row[1] for row in cursor.fetchall()]
+            column_exists = "role" in columns
+
+        if not column_exists:
+            print("   ❌ Role column does not exist!")
+            print("\n" + "=" * 80)
+            print("❌ MIGRATION FAILED: Unable to add role column")
+            print("=" * 80)
+            conn.close()
+            return 1
+
+        print("   ✅ Role column verified")
+
+    except Exception as e:
+        print(f"   ❌ Error verifying column: {e}")
+        print("\n" + "=" * 80)
+        print("❌ MIGRATION FAILED: Could not verify role column")
+        print("=" * 80)
+        conn.close()
+        return 1
+
+    print("\n3️⃣ Populating roles for existing employees...")
 
     for name, role in EMPLOYEE_ROLES.items():
         try:
@@ -88,7 +123,7 @@ def main():
 
     conn.commit()
 
-    print("\n3️⃣ Verifying updates...")
+    print("\n4️⃣ Verifying updates...")
     db.execute_query(cursor, "SELECT name, role FROM employees ORDER BY name")
     employees = cursor.fetchall()
 
