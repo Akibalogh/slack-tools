@@ -538,15 +538,21 @@ Web-based read-only dashboard for viewing team member access, audit results, and
 ## Non-Functional Requirements
 
 ### Performance
-- Slack audit of ~120 channels: 1-2 minutes
-- Telegram audit of ~410 groups (filtered): 10-15 minutes
+- Slack audit of ~116 active channels: 1-2 minutes (excludes archived channels)
+- Telegram audit of ~408 active groups (filtered): 10-15 minutes
 - Full audit (Slack + Telegram): 13-20 minutes
 - No timeout limits (runs as detached one-off dyno)
 - Incremental progress updates every 50 groups
 - Slack API rate limits: 20+ requests per minute (handled with async)
 - Telegram API rate limits: Handled by Telethon automatically
 - Admin panel pages load in < 2 seconds
-- Filtering 410 groups: Instant (client-side JavaScript)
+- Filtering 408 groups: Instant (client-side JavaScript)
+
+### Exclusions
+- **Slack**: Archived channels excluded automatically (inactive/retired)
+- **Slack**: Internal IEU alert channels excluded (bitsafe-ieu-nonprod-alerts, bitsafe-ieu-prod-alerts)
+- **Telegram**: Groups with " - Old", " - Archived", "BitSafe Eng" excluded
+- **Telegram**: Specific excluded groups: Aki / Mayank, PMM Interviews (left/deleted)
 
 ### Security
 - API tokens stored in `.env` file (git-ignored)

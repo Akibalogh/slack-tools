@@ -313,7 +313,7 @@ class CustomerGroupAuditor:
         async with aiohttp.ClientSession() as session:
             params = {
                 "limit": 200,
-                "exclude_archived": "false",
+                "exclude_archived": "true",  # Skip archived channels (inactive)
                 "types": "public_channel,private_channel",
             }
             async with session.get(
