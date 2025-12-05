@@ -19,7 +19,7 @@ EMPLOYEE_ROLES = {
     "Aki Balogh": "CEO",
     "Gabi Tuinaite": "Head of Product",
     "Kadeem Clarke": "Head of Growth",
-    "Amy Wu": "BD",
+    "Amy Wu": "BDR",
     "Kevin Huet": "BDR",
     "Aliya Gordon": "BDR",
     "Sarah Flood": "BDR",

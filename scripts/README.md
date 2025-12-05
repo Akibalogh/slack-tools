@@ -197,3 +197,173 @@ Thanks! -Aki
 - Automatically skips the target user if they're listed as an admin
 - Respects Telegram's privacy settings (some users may block messages)
 - Test with your own account first to verify message formatting
+
+---
+
+## Telegram Group Automation & Ownership Transfer (Dec 2025)
+
+### Overview
+
+Suite of scripts for managing Telegram group membership and ownership based on audit results. Addresses gaps in team coverage and ownership structure across 400+ Telegram groups.
+
+### Scripts
+
+#### `telegram_add_missing_members.py`
+
+Automatically adds missing required team members to customer Telegram groups.
+
+**Features:**
+- Reads latest audit from Heroku Postgres
+- Filters for customer groups with "BitSafe" in name
+- Excludes internal/community/marketing groups
+- Handles supergroups and channels (skips basic chats due to API limitations)
+- Rate limit detection with informative errors
+- Non-interactive mode with `--yes` flag
+
+**Usage:**
+```bash
+python3 scripts/telegram_add_missing_members.py --yes
+```
+
+**Known Limitations:**
+- **Telegram Rate Limits:** Very aggressive anti-spam
+  - First ~30 groups succeed
+  - Then 51-minute cooldown
+  - Repeated runs: 20+ hour cooldowns
+  - **Recommendation:** Run once daily, manual addition for remainder
+- **Basic Groups:** Some groups (InputPeerChat type) cannot be modified via API
+  - Script skips these to avoid errors
+  - Manual addition required through Telegram UI
+
+**Results (Dec 4, 2025):**
+- ✅ Added 88 members to ~30 groups before rate limits
+- ⏳ ~135 groups remaining (blocked by rate limits)
+
+#### `telegram_make_history_visible.py`
+
+Makes message history visible to new members for groups with hidden history.
+
+**Usage:**
+```bash
+# All groups where we have permission
+python3 scripts/telegram_make_history_visible.py --yes
+
+# Only BitSafe customer groups
+python3 scripts/telegram_make_history_visible.py --yes --bitsafe-only
+```
+
+**Results:**
+- ✅ Updated 9 BitSafe groups to visible history
+- Works only on supergroups/channels (basic chats don't support this)
+
+### Ownership Transfer Workflow
+
+**Problem:** In 163 Telegram groups, we're only "Member" (not Owner/Admin). Need ownership to:
+- Add/remove team members
+- Manage group settings
+- Transfer ownership to others
+
+**Solution:** Manual ownership transfer requests with clear instructions.
+
+**Process:**
+
+1. **Identify Groups Needing Transfer:**
+   ```bash
+   python3 scripts/show_member_only_groups.py
+   ```
+   Generates:
+   - `output/member_only_groups.csv` - Full list (163 groups)
+   - `output/ownership_transfer_message.txt` - Message template
+
+2. **Find Current Owners:**
+   ```bash
+   python3 scripts/find_group_owners.py
+   ```
+   Identifies owner username for each group
+
+3. **Send Transfer Requests:**
+   Manually message owners with template, or use batch script:
+   ```bash
+   python3 scripts/send_ownership_requests_batch1.py
+   ```
+
+**Message Template Includes:**
+- Friendly explanation of why ownership is needed
+- **Critical detail:** Must enable "Add new admins" permission first
+- Step-by-step instructions for mobile and desktop
+- Note that 2FA password may be required
+
+**Transfer Requirements (from Telegram):**
+1. Recipient must first be added as admin
+2. Admin must have "Add new admins" permission enabled
+3. "Transfer Group Ownership" button only appears after step 2
+4. Owner may need 2FA password to confirm
+5. Transfer is irreversible (unless new owner transfers back)
+
+**Test Results (Dec 4, 2025):**
+- ✅ Sent requests to 3 owners (4 groups total)
+- ✅ @ThePhunky1 responded positively: "super helpful, didn't know how to do this"
+- ✅ Transferring GlobalStake group ownership
+- ⏳ Waiting on @Dae_L (2 groups - internal team member)
+- ⏳ Waiting on @kaskitrix (1 group)
+
+### Helper Scripts
+
+#### `show_bitsafe_customer_gaps.py`
+
+Generates CSV report of customer groups missing team members.
+
+```bash
+python3 scripts/show_bitsafe_customer_gaps.py
+```
+
+Output: `output/bitsafe_customer_gaps.csv`
+
+#### `show_member_only_groups.py`
+
+Lists groups where we're only members (not owner/admin).
+
+```bash
+python3 scripts/show_member_only_groups.py
+```
+
+Outputs:
+- `output/member_only_groups.csv`
+- `output/ownership_transfer_message.txt`
+
+#### `update_group_categories.py`
+
+Updates group categories in database audit results.
+
+**Usage:**
+1. Edit `CATEGORY_UPDATES` dictionary in script
+2. Run: `python3 scripts/update_group_categories.py`
+
+**Example:**
+```python
+CATEGORY_UPDATES = {
+    "BitSafe Marketing": "Internal",
+    "BitSafe Community": "Community",
+    "7Ridge <> BitSafe (CBTC)": "Investor",
+}
+```
+
+**Results:** Reclassified 8 groups in audit #103
+
+### Recommendations
+
+**For Member Addition:**
+- **Automated:** Good for first 30 groups, then hit rate limits
+- **Manual:** More reliable for remaining groups
+- **Hybrid:** Use automation for initial batch, manual for remainder
+
+**For Ownership Transfer:**
+- **Manual only:** No API support in Telegram
+- Use provided message template
+- Focus on 98 BitSafe customer groups first
+- Track progress manually via audits
+
+**For Group Management:**
+- Prioritize supergroups/channels over basic groups
+- Basic groups have API limitations
+- Consider converting basic groups to supergroups for better API access
