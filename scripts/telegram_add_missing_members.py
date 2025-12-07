@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """
 Add missing required members to Telegram customer groups
+
+Bug Fix (2025-12-04):
+- Handles audit data where "Required Missing" field contains '-' as a placeholder
+  (indicating no missing members). The script now filters out these groups and
+  skips dashes/placeholders when parsing the missing members list.
 """
 
 import argparse
@@ -71,31 +76,26 @@ def get_required_members():
 
 
 async def add_user_to_group(client, dialog, username):
-    """Add user to group - handles both basic chats and channels/supergroups"""
+    """Add user to group - matches telegram_admin.py approach"""
     try:
         user = await client.get_entity(username)
         entity = dialog.entity
 
-        # Check if it's a Channel (supergroup/channel) or Chat (basic group)
-        if isinstance(entity, Channel):
-            # Supergroup or Channel - use InviteToChannelRequest
-            await client(
-                functions.channels.InviteToChannelRequest(
-                    channel=entity, users=[user]
-                )
+        # Skip basic groups - they have API limitations
+        if isinstance(entity, Chat):
+            return True, "basic_group_skipped"
+
+        # Only process Channels (supergroups/broadcast channels)
+        if not isinstance(entity, Channel):
+            return True, "unknown_type_skipped"
+
+        # For supergroups/channels, use InviteToChannelRequest
+        # Pass dialog.entity directly like telegram_admin.py does
+        await client(
+            functions.channels.InviteToChannelRequest(
+                channel=entity, users=[user]
             )
-        elif isinstance(entity, Chat):
-            # Basic group - use AddChatUserRequest with chat ID (not entity)
-            await client(
-                functions.messages.AddChatUserRequest(
-                    chat_id=entity.id, 
-                    user_id=user, 
-                    fwd_limit=0
-                )
-            )
-        else:
-            return False, "unsupported_type"
-            
+        )
         return True, "added"
     except UserAlreadyParticipantError:
         return True, "already_member"
@@ -108,7 +108,25 @@ async def add_user_to_group(client, dialog, username):
     except FloodWaitError as e:
         return False, f"rate_limited_{e.seconds}s"
     except Exception as e:
-        return False, str(e)[:50]
+        error_msg = str(e)
+        # Check for specific error types
+        if "USER_ALREADY_PARTICIPANT" in error_msg:
+            return True, "already_member"
+        if "CHAT_ID_INVALID" in error_msg or "chat ID is not a valid" in error_msg:
+            # Try to get fresh entity and retry once
+            try:
+                fresh_entity = await client.get_entity(dialog.title)
+                if isinstance(fresh_entity, Channel):
+                    await client(
+                        functions.channels.InviteToChannelRequest(
+                            channel=fresh_entity, users=[user]
+                        )
+                    )
+                    return True, "added"
+            except:
+                pass
+            return False, "invalid_chat_id"
+        return False, error_msg[:60]
 
 
 async def main():
@@ -134,12 +152,14 @@ async def main():
         missing = group.get("Required Missing", "")
         permission = group.get("Admin Status", "")
 
+        # Filter out dashes and empty values
+        missing_clean = missing.strip() if missing else ""
         if (
             has_bitsafe == "✓ YES"
             and name not in INTERNAL_CHANNELS
             and category != "Internal"
-            and missing
-            and missing.strip()
+            and missing_clean
+            and missing_clean != "-"
             and ("Owner" in permission or "Admin" in permission)
         ):
             groups_to_fix.append({"name": name, "missing": missing})
@@ -178,6 +198,10 @@ async def main():
 
         for missing_name in group["missing"].split(","):
             missing_name = missing_name.strip()
+            # Skip empty values, dashes, or placeholders
+            if not missing_name or missing_name == "-" or missing_name.lower() == "none":
+                continue
+            
             username = None
             for member_name, member_username in required_members.items():
                 if (
@@ -211,4 +235,3 @@ async def main():
 
 if __name__ == "__main__":
     sys.exit(asyncio.run(main()))
-

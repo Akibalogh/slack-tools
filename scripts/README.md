@@ -235,9 +235,16 @@ python3 scripts/telegram_add_missing_members.py --yes
   - Script skips these to avoid errors
   - Manual addition required through Telegram UI
 
-**Results (Dec 4, 2025):**
-- ✅ Added 88 members to ~30 groups before rate limits
-- ⏳ ~135 groups remaining (blocked by rate limits)
+**Bug Fixes (Dec 7, 2025):**
+- ✅ Fixed "No username" errors for groups with placeholder dashes
+  - Audit data uses `'-'` as placeholder when no members are missing
+  - Script now filters out dashes/placeholders at filtering and processing stages
+  - Eliminates false warnings and prevents unnecessary API calls
+
+**Results (Dec 7, 2025):**
+- ✅ Processing 139 groups (down from 171 - filters out placeholder groups)
+- ✅ Added members to 75+ groups before rate limits
+- ⏳ Remaining groups blocked by rate limits (expected behavior)
 
 #### `telegram_make_history_visible.py`
 

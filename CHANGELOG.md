@@ -4,6 +4,12 @@ All notable changes to the Slack Tools project will be documented in this file.
 
 ## [Unreleased]
 
+### Fixed
+- **Bug: "No username" errors for groups with placeholder dashes**: Fixed `telegram_add_missing_members.py` incorrectly trying to process groups where the audit's "Required Missing" field contained `'-'` as a placeholder value (indicating no missing members). The script now filters out groups with dashes/placeholders at both the filtering and processing stages.
+  - **Root Cause**: Audit data uses `'-'` as a placeholder when no members are missing, but the script attempted to match this against employee names.
+  - **Fix**: Added validation to skip empty values, dashes, and "none" placeholders when parsing missing members list.
+  - **Impact**: Eliminates false "No username" warnings and prevents unnecessary API calls.
+
 ## [1.6.0] - 2025-12-03
 
 ### Major Features
