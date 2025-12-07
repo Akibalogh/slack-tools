@@ -39,6 +39,8 @@ except FileNotFoundError:
             "BitSafe team at Singapore 2025",
             "BitSafe team at",  # Catches variations
             "Ben W",
+            "BitSafe <> Ben W",
+            "🇬🇧 BitSafe <> Ben W",
             "Gabi <> BitSafe",
         ],
         "intro_groups": [

@@ -49,6 +49,7 @@ Internal BitSafe groups:
 - Loop Community
 - PMM Interviews
 - Gabi <> BitSafe
+- 🇬🇧 BitSafe <> Ben W
 
 ### Intro (No Full Team Required)
 Introduction/referral groups:
