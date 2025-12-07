@@ -92,9 +92,7 @@ async def add_user_to_group(client, dialog, username):
         # For supergroups/channels, use InviteToChannelRequest
         # Pass dialog.entity directly like telegram_admin.py does
         await client(
-            functions.channels.InviteToChannelRequest(
-                channel=entity, users=[user]
-            )
+            functions.channels.InviteToChannelRequest(channel=entity, users=[user])
         )
         return True, "added"
     except UserAlreadyParticipantError:
@@ -199,9 +197,13 @@ async def main():
         for missing_name in group["missing"].split(","):
             missing_name = missing_name.strip()
             # Skip empty values, dashes, or placeholders
-            if not missing_name or missing_name == "-" or missing_name.lower() == "none":
+            if (
+                not missing_name
+                or missing_name == "-"
+                or missing_name.lower() == "none"
+            ):
                 continue
-            
+
             username = None
             for member_name, member_username in required_members.items():
                 if (
