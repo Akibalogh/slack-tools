@@ -246,6 +246,54 @@ python3 scripts/telegram_add_missing_members.py --yes
 - ✅ Added members to 75+ groups before rate limits
 - ⏳ Remaining groups blocked by rate limits (expected behavior)
 
+#### `export_telegram_group.py`
+
+Generic script to export messages from any Telegram group for a specified time period.
+
+**Features:**
+- Export messages from any Telegram group by name
+- Flexible time periods: days, weeks, months, or years
+- Auto-generates output filename with timestamp
+- Includes sender names, timestamps, and message text
+- Marks reply messages for context
+- Uses saved Telegram session (no re-authentication needed)
+
+**Usage:**
+```bash
+# Export last 3 months (default)
+python3 scripts/export_telegram_group.py "BitSafe Leadership Team"
+
+# Export last 30 days
+python3 scripts/export_telegram_group.py "Group Name" --days 30
+
+# Export last 2 weeks
+python3 scripts/export_telegram_group.py "Group Name" --weeks 2
+
+# Export last 6 months
+python3 scripts/export_telegram_group.py "Group Name" --months 6
+
+# Export last 1 year
+python3 scripts/export_telegram_group.py "Group Name" --years 1
+
+# Custom output file
+python3 scripts/export_telegram_group.py "Group Name" --days 30 -o output/custom_export.txt
+```
+
+**Output:**
+- Text file in `output/` directory with format: `telegram_export_{group_name}_{timestamp}.txt`
+- Includes header with export metadata (group name, time range, message count)
+- Chronologically sorted messages (oldest first)
+- Reply messages marked with "↳" prefix
+
+**Examples:**
+```bash
+# Export leadership team chat for last 3 months
+python3 scripts/export_telegram_group.py "BitSafe Leadership Team"
+
+# Export customer group for last week
+python3 scripts/export_telegram_group.py "Customer <> BitSafe (CBTC)" --weeks 1
+```
+
 #### `telegram_make_history_visible.py`
 
 Makes message history visible to new members for groups with hidden history.

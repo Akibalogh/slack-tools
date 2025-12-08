@@ -320,7 +320,90 @@ python3 scripts/add_members_to_channels.py shin_novation j_eisenberg --yes
 
 ---
 
-### Feature 5: Telegram Export
+### Feature 5: Telegram Group Export
+
+#### Description
+Generic utility to export messages from any Telegram group for a specified time period. Supports flexible time ranges (days, weeks, months, years) and exports to human-readable text files.
+
+#### Requirements
+
+**Must Have:**
+- ✅ Export messages from any Telegram group by name
+- ✅ Flexible time periods: days, weeks, months, or years
+- ✅ Auto-generate output filename with timestamp
+- ✅ Include sender names, timestamps, and message text
+- ✅ Mark reply messages for context
+- ✅ Use saved Telegram session (no re-authentication needed)
+- ✅ Chronologically sort messages (oldest first)
+
+**Should Have:**
+- 🔄 Custom output file path option
+- 🔄 JSON export format option
+- 🔄 Filter by sender or keyword
+
+**Could Have:**
+- ⏳ Batch export of multiple groups
+- ⏳ Export media attachments
+- ⏳ Export to cloud storage (S3, GCS)
+
+#### Technical Implementation
+
+**Script:** `scripts/export_telegram_group.py`
+
+**Dependencies:**
+- Telethon library for Telegram API
+- Saved Telegram session (StringSession) from database
+- PostgreSQL connection for session retrieval
+
+**Time Period Calculation:**
+- Supports `--days`, `--weeks`, `--months`, `--years` flags
+- Defaults to 3 months if no period specified
+- Time periods can be combined (e.g., `--months 1 --days 15`)
+
+**Output Format:**
+- Text file with header metadata (group name, time range, message count)
+- Messages sorted chronologically (oldest first)
+- Format: `YYYY-MM-DD HH:MM:SS | Sender Name`
+- Reply messages marked with "↳" prefix
+
+#### User Flow
+
+1. User runs script with group name and optional time period
+2. Script connects to Telegram using saved session
+3. Script finds group by name
+4. Script collects messages since the specified date threshold
+5. Script formats and writes messages to text file
+6. Script outputs file path and message count
+
+#### Usage Examples
+
+```bash
+# Export last 3 months (default)
+python3 scripts/export_telegram_group.py "BitSafe Leadership Team"
+
+# Export last 30 days
+python3 scripts/export_telegram_group.py "Group Name" --days 30
+
+# Export last 2 weeks
+python3 scripts/export_telegram_group.py "Group Name" --weeks 2
+
+# Export last 6 months
+python3 scripts/export_telegram_group.py "Group Name" --months 6
+
+# Export last 1 year
+python3 scripts/export_telegram_group.py "Group Name" --years 1
+
+# Custom output file
+python3 scripts/export_telegram_group.py "Group Name" --days 30 -o output/custom_export.txt
+```
+
+**Output Location:**
+- Default: `output/telegram_export_{group_name}_{timestamp}.txt`
+- Custom: Specified via `-o` or `--output` flag
+
+---
+
+### Feature 5: Legacy Telegram Export (Deprecated)
 
 #### Description
 Export Telegram group message history for archival.
