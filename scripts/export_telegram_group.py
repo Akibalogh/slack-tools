@@ -124,12 +124,31 @@ async def export_group_messages(group_name, days=None, weeks=None, months=None, 
     print(f"📊 Collecting messages since {date_threshold.strftime('%Y-%m-%d')}...\n")
 
     # Collect messages
+    # Note: offset_date in iter_messages is for pagination (messages before date)
+    # To filter messages AFTER a date, we need to iterate and filter manually
     messages = []
     message_count = 0
-    async for message in client.iter_messages(target_dialog.entity, offset_date=date_threshold):
+    collected_count = 0
+    
+    # Convert date_threshold to timezone-aware datetime for comparison
+    from datetime import timezone
+    if date_threshold.tzinfo is None:
+        date_threshold = date_threshold.replace(tzinfo=timezone.utc)
+    
+    async for message in client.iter_messages(target_dialog.entity, reverse=False):
         message_count += 1
-        if message_count % 50 == 0:
-            print(f"  Collected {message_count} messages...", end="\r")
+        if message_count % 100 == 0:
+            print(f"  Scanned {message_count} messages, collected {collected_count}...", end="\r")
+        
+        # Filter messages after the threshold date
+        if message.date < date_threshold:
+            # We've gone past our threshold, but we need to continue
+            # in case there are newer messages (iter_messages goes newest to oldest by default)
+            continue
+        
+        collected_count += 1
+        if collected_count % 50 == 0:
+            print(f"  Scanned {message_count} messages, collected {collected_count}...", end="\r")
 
         # Get sender name
         sender_name = "Unknown"
@@ -164,13 +183,14 @@ async def export_group_messages(group_name, days=None, weeks=None, months=None, 
                 "text": msg_text,
                 "id": message.id,
                 "is_reply": message.is_reply,
+                "timestamp": message.date,
             }
         )
 
-    print(f"\n✅ Collected {len(messages)} messages")
+    print(f"\n✅ Scanned {message_count} messages, collected {collected_count} since {date_threshold.strftime('%Y-%m-%d')}")
 
-    # Sort by date (oldest first)
-    messages.sort(key=lambda m: m["date"])
+    # Sort by timestamp (oldest first) - use timestamp for accurate sorting
+    messages.sort(key=lambda m: m["timestamp"])
 
     # Generate output filename if not provided
     if not output_file:
