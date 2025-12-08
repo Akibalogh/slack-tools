@@ -42,6 +42,7 @@ except FileNotFoundError:
             "BitSafe <> Ben W",
             "🇬🇧 BitSafe <> Ben W",
             "Gabi <> BitSafe",
+            "Contribution Capital <> BitSafe",
         ],
         "intro_groups": [
             "Felix <> iBTC",
