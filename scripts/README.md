@@ -241,10 +241,49 @@ python3 scripts/telegram_add_missing_members.py --yes
   - Script now filters out dashes/placeholders at filtering and processing stages
   - Eliminates false warnings and prevents unnecessary API calls
 
-**Results (Dec 7, 2025):**
-- ✅ Processing 139 groups (down from 171 - filters out placeholder groups)
-- ✅ Added members to 75+ groups before rate limits
-- ⏳ Remaining groups blocked by rate limits (expected behavior)
+**Results (Dec 7-8, 2025):**
+- ✅ Processing 138 groups (down from 171 - filters out placeholder groups)
+- ✅ Added 254 members successfully in first run
+- ⏳ 266 operations rate-limited (expected behavior)
+- 🔄 Retry script available for automatic retry after cooldown
+
+#### `telegram_add_missing_members_retry.py`
+
+Automated retry script that waits for rate limit cooldown and retries the member addition process.
+
+**Features:**
+- Automatically calculates wait time from latest log file
+- Progress updates during wait period
+- Can run in background for hands-off operation
+- Manual wait time override available
+
+**Usage:**
+```bash
+# Automatic retry (calculates wait time from latest log)
+python3 scripts/telegram_add_missing_members_retry.py --auto-wait
+
+# Retry after specific wait time (in seconds)
+python3 scripts/telegram_add_missing_members_retry.py --wait 2600
+
+# Run in background with auto-wait
+nohup python3 scripts/telegram_add_missing_members_retry.py --auto-wait > /tmp/telegram_retry_$(date +%Y%m%d_%H%M%S).log 2>&1 &
+```
+
+**How it works:**
+1. Finds the latest `telegram_add_members_*.log` file
+2. Extracts maximum rate limit wait time from log
+3. Adds 5-minute buffer to ensure cooldown is complete
+4. Waits with progress updates
+5. Automatically reruns the member addition script
+
+**Monitoring:**
+```bash
+# Check retry script progress
+tail -f /tmp/telegram_retry_*.log
+
+# Check if retry script is running
+ps aux | grep telegram_add_missing_members_retry
+```
 
 #### `export_telegram_group.py`
 
