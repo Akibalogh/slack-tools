@@ -37,6 +37,7 @@ INTERNAL_CHANNELS = {
     "BitSafe Company",
     "🇬🇧 BitSafe <> Ben W",
     "BitSafe <> Ben W",
+    "Contribution Capital <> BitSafe",
 }
 
 
