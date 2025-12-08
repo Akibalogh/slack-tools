@@ -201,7 +201,10 @@ def main():
                 )
                 print(msg)
             else:
-                msg = "Could not extract rate limit time from log. Using default 45 min."
+                msg = (
+                    "Could not extract rate limit time from log. "
+                    "Using default 45 min."
+                )
                 print(f"⚠️  {msg}")
                 wait_seconds = 45 * 60  # 45 minutes default
         else:
