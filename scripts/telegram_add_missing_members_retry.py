@@ -77,9 +77,8 @@ def wait_with_progress(seconds, log_file=None):
             log_fd.write(msg + "\n")
             log_fd.flush()  # Ensure it's written immediately
 
-    log_print(
-        f"\n⏳ Waiting {seconds} seconds ({seconds // 60} minutes) for rate limit cooldown..."
-    )
+    minutes = seconds // 60
+    log_print(f"\n⏳ Waiting {seconds} seconds ({minutes} minutes) for rate limit cooldown...")
     log_print("=" * 80)
 
     start_time = time.time()
@@ -101,9 +100,8 @@ def wait_with_progress(seconds, log_file=None):
         # Only log if enough time has passed
         if elapsed - last_update >= update_interval:
             minutes_remaining = remaining // 60
-            log_print(
-                f"  ⏱️  {minutes_remaining} minutes remaining... ({datetime.now().strftime('%H:%M:%S')})"
-            )
+            time_str = datetime.now().strftime("%H:%M:%S")
+            log_print(f"  ⏱️  {minutes_remaining} minutes remaining... ({time_str})")
             last_update = elapsed
 
         time.sleep(60)  # Check every minute instead of every second
@@ -177,9 +175,8 @@ def main():
 
     if args.wait:
         wait_seconds = args.wait
-        print(
-            f"⏱️  Using specified wait time: {wait_seconds} seconds ({wait_seconds // 60} minutes)"
-        )
+        minutes = wait_seconds // 60
+        print(f"⏱️  Using specified wait time: {wait_seconds} seconds ({minutes} minutes)")
     elif args.auto_wait:
         latest_log = find_latest_log()
         if latest_log:
@@ -188,13 +185,11 @@ def main():
             if wait_seconds:
                 # Add a small buffer (5 minutes) to ensure cooldown is complete
                 wait_seconds += 300
-                print(
-                    f"⏱️  Calculated wait time: {wait_seconds} seconds ({wait_seconds // 60} minutes)"
-                )
+                minutes = wait_seconds // 60
+                print(f"⏱️  Calculated wait time: {wait_seconds} seconds ({minutes} minutes)")
             else:
-                print(
-                    "⚠️  Could not extract rate limit time from log. Using default 45 minutes."
-                )
+                msg = "Could not extract rate limit time from log. Using default 45 minutes."
+                print(f"⚠️  {msg}")
                 wait_seconds = 45 * 60  # 45 minutes default
         else:
             print("⚠️  No log file found. Using default 45 minutes.")
@@ -202,9 +197,8 @@ def main():
     else:
         # Default: wait 45 minutes
         wait_seconds = 45 * 60
-        print(
-            f"⏱️  Using default wait time: {wait_seconds} seconds ({wait_seconds // 60} minutes)"
-        )
+        minutes = wait_seconds // 60
+        print(f"⏱️  Using default wait time: {wait_seconds} seconds ({minutes} minutes)")
 
     # Wait for cooldown
     if wait_seconds > 0:
