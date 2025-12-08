@@ -16,7 +16,8 @@ Usage:
     python3 scripts/telegram_add_missing_members_retry.py --auto-wait
 
     # Run in background with auto-wait
-    nohup python3 scripts/telegram_add_missing_members_retry.py --auto-wait > /tmp/telegram_retry_$(date +%Y%m%d_%H%M%S).log 2>&1 &
+    # nohup python3 scripts/telegram_add_missing_members_retry.py --auto-wait \
+    #   > /tmp/telegram_retry_$(date +%Y%m%d_%H%M%S).log 2>&1 &
 """
 
 import argparse
@@ -78,7 +79,8 @@ def wait_with_progress(seconds, log_file=None):
             log_fd.flush()  # Ensure it's written immediately
 
     minutes = seconds // 60
-    log_print(f"\n⏳ Waiting {seconds} seconds ({minutes} minutes) for rate limit cooldown...")
+    msg = f"\n⏳ Waiting {seconds} seconds ({minutes} minutes) for rate limit cooldown..."
+    log_print(msg)
     log_print("=" * 80)
 
     start_time = time.time()
@@ -176,7 +178,8 @@ def main():
     if args.wait:
         wait_seconds = args.wait
         minutes = wait_seconds // 60
-        print(f"⏱️  Using specified wait time: {wait_seconds} seconds ({minutes} minutes)")
+        msg = f"⏱️  Using specified wait time: {wait_seconds} seconds ({minutes} minutes)"
+        print(msg)
     elif args.auto_wait:
         latest_log = find_latest_log()
         if latest_log:
@@ -186,9 +189,10 @@ def main():
                 # Add a small buffer (5 minutes) to ensure cooldown is complete
                 wait_seconds += 300
                 minutes = wait_seconds // 60
-                print(f"⏱️  Calculated wait time: {wait_seconds} seconds ({minutes} minutes)")
+                msg = f"⏱️  Calculated wait time: {wait_seconds} seconds ({minutes} minutes)"
+                print(msg)
             else:
-                msg = "Could not extract rate limit time from log. Using default 45 minutes."
+                msg = "Could not extract rate limit time from log. Using default 45 min."
                 print(f"⚠️  {msg}")
                 wait_seconds = 45 * 60  # 45 minutes default
         else:
@@ -198,7 +202,8 @@ def main():
         # Default: wait 45 minutes
         wait_seconds = 45 * 60
         minutes = wait_seconds // 60
-        print(f"⏱️  Using default wait time: {wait_seconds} seconds ({minutes} minutes)")
+        msg = f"⏱️  Using default wait time: {wait_seconds} seconds ({minutes} minutes)"
+        print(msg)
 
     # Wait for cooldown
     if wait_seconds > 0:
