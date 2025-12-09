@@ -13,6 +13,8 @@ import asyncio
 import json
 import os
 import sys
+import time
+from datetime import datetime, timedelta
 
 import psycopg2
 from dotenv import load_dotenv
@@ -26,6 +28,35 @@ from telethon.errors import (
 )
 from telethon.sessions import StringSession
 from telethon.tl.types import Channel, Chat
+
+try:
+    from tqdm import tqdm
+
+    TQDM_AVAILABLE = True
+except ImportError:
+    TQDM_AVAILABLE = False
+
+    # Fallback: simple progress display
+    class tqdm:
+        def __init__(self, *args, **kwargs):
+            self.total = kwargs.get("total", 0)
+            self.n = 0
+
+        def update(self, n=1):
+            self.n += n
+
+        def set_description(self, desc):
+            pass
+
+        def close(self):
+            pass
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):
+            pass
+
 
 load_dotenv()
 
@@ -171,7 +202,18 @@ async def main():
         ):
             groups_to_fix.append({"name": name, "missing": missing})
 
-    print(f"📋 {len(groups_to_fix)} groups need updates\n")
+    # Calculate total operations needed
+    total_operations = 0
+    for group in groups_to_fix:
+        missing_list = [
+            m.strip()
+            for m in group["missing"].split(",")
+            if m.strip() and m.strip() != "-"
+        ]
+        total_operations += len(missing_list)
+
+    print(f"📋 {len(groups_to_fix)} groups need updates")
+    print(f"📊 {total_operations} total member additions needed\n")
 
     if not args.yes:
         print("Type 'yes' to confirm: ", end="")
