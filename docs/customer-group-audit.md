@@ -50,7 +50,8 @@ Internal BitSafe groups:
 - PMM Interviews
 - Gabi <> BitSafe
 - 🇬🇧 BitSafe <> Ben W
-- Contribution Capital <> BitSafe (VC)
+- Contribution Capital | BitSafe (New) (VC - Internal)
+  - Note: "Contribution Capital <> BitSafe" was hacked and replaced with this new group
 
 ### Intro (No Full Team Required)
 Introduction/referral groups:

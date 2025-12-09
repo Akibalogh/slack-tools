@@ -37,7 +37,12 @@ INTERNAL_CHANNELS = {
     "BitSafe Company",
     "🇬🇧 BitSafe <> Ben W",
     "BitSafe <> Ben W",
-    "Contribution Capital <> BitSafe",
+    "Contribution Capital | BitSafe (New)",
+}
+
+# Groups that have been hacked/compromised (should be excluded)
+HACKED_GROUPS = {
+    "Contribution Capital <> BitSafe",  # Replaced by "Contribution Capital | BitSafe (New)"
 }
 
 
@@ -158,6 +163,7 @@ async def main():
         if (
             has_bitsafe == "✓ YES"
             and name not in INTERNAL_CHANNELS
+            and name not in HACKED_GROUPS
             and category != "Internal"
             and missing_clean
             and missing_clean != "-"

@@ -215,7 +215,8 @@ Automatically adds missing required team members to customer Telegram groups.
 **Features:**
 - Reads latest audit from Heroku Postgres
 - Filters for customer groups with "BitSafe" in name
-- Excludes internal/community/marketing groups (including "BitSafe <> Ben W", "Contribution Capital <> BitSafe" - VC)
+- Excludes internal/community/marketing groups (including "BitSafe <> Ben W", "Contribution Capital | BitSafe (New)" - VC)
+- Excludes hacked/compromised groups (e.g., "Contribution Capital <> BitSafe" - replaced with new group)
 - Handles supergroups and channels (skips basic chats due to API limitations)
 - Rate limit detection with informative errors
 - Non-interactive mode with `--yes` flag

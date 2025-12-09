@@ -42,7 +42,7 @@ except FileNotFoundError:
             "BitSafe <> Ben W",
             "🇬🇧 BitSafe <> Ben W",
             "Gabi <> BitSafe",
-            "Contribution Capital <> BitSafe",
+            "Contribution Capital | BitSafe (New)",
         ],
         "intro_groups": [
             "Felix <> iBTC",
@@ -66,6 +66,11 @@ except FileNotFoundError:
 EXCLUDE_GROUPS = [
     "Aki / Mayank",
     "PMM Interviews",
+]
+
+# Groups that have been hacked/compromised (replaced by new groups)
+HACKED_GROUPS = [
+    "Contribution Capital <> BitSafe",  # Replaced by "Contribution Capital | BitSafe (New)"
 ]
 
 # Slack configuration
@@ -490,6 +495,11 @@ class CustomerGroupAuditor:
                 # Skip explicitly excluded groups
                 if group_name in EXCLUDE_GROUPS:
                     print(f"   Excluding: {group_name}")
+                    continue
+
+                # Skip hacked/compromised groups
+                if group_name in HACKED_GROUPS:
+                    print(f"   ⚠️  Skipping hacked group: {group_name}")
                     continue
 
                 member_count = getattr(chat, "participants_count", 0)
