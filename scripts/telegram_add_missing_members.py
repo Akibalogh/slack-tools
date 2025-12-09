@@ -236,25 +236,58 @@ async def main():
     group_dialogs = {d.title: d for d in dialogs}
 
     print("\n👥 Adding members...\n")
-    success = error = 0
+
+    # Statistics tracking
+    stats = {
+        "success": 0,
+        "errors": 0,
+        "rate_limited": 0,
+        "no_permission": 0,
+        "already_member": 0,
+        "skipped": 0,
+        "rate_limit_seconds": [],
+        "operations_completed": 0,
+        "start_time": time.time(),
+    }
+
+    # Initialize progress bar
+    progress_bar = tqdm(
+        total=total_operations,
+        desc="Overall Progress",
+        unit="ops",
+        bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}, {rate_fmt}]",
+        disable=not TQDM_AVAILABLE,
+    )
 
     for idx, group in enumerate(groups_to_fix, 1):
-        print(f"[{idx}/{len(groups_to_fix)}] {group['name']}:")
-        if group["name"] not in group_dialogs:
-            print(f"  ⚠️  Not found")
-            error += 1
+        group_name = group["name"]
+        missing_list = [
+            m.strip()
+            for m in group["missing"].split(",")
+            if m.strip() and m.strip() != "-"
+        ]
+
+        # Update progress bar description with current group
+        if TQDM_AVAILABLE:
+            group_short = (
+                group_name[:35] + "..." if len(group_name) > 35 else group_name
+            )
+            progress_bar.set_description(
+                f"Group {idx}/{len(groups_to_fix)}: {group_short}"
+            )
+        else:
+            print(f"\n[{idx}/{len(groups_to_fix)}] {group_name}:")
+
+        if group_name not in group_dialogs:
+            if not TQDM_AVAILABLE:
+                print(f"  ⚠️  Group not found")
+            stats["errors"] += 1
+            stats["operations_completed"] += len(missing_list)
+            progress_bar.update(len(missing_list))
             continue
 
-        for missing_name in group["missing"].split(","):
-            missing_name = missing_name.strip()
-            # Skip empty values, dashes, or placeholders
-            if (
-                not missing_name
-                or missing_name == "-"
-                or missing_name.lower() == "none"
-            ):
-                continue
-
+        for missing_name in missing_list:
+            # Extract Telegram username from name like "Gabi Tui (Head of Product)"
             username = None
             for member_name, member_username in required_members.items():
                 if (
@@ -265,24 +298,130 @@ async def main():
                     break
 
             if not username:
-                print(f"  ⚠️  {missing_name}: No username")
-                error += 1
+                if not TQDM_AVAILABLE:
+                    print(f"  ❌ {missing_name}: No username found")
+                stats["errors"] += 1
+                stats["operations_completed"] += 1
+                progress_bar.update(1)
                 continue
 
+            op_start_time = time.time()
             ok, result = await add_user_to_group(
-                client, group_dialogs[group["name"]], username
+                client, group_dialogs[group_name], username
             )
+            op_duration = time.time() - op_start_time
+
+            stats["operations_completed"] += 1
+
             if ok:
-                print(f"  ✅ {missing_name.split('(')[0].strip()}")
-                success += 1
+                if result == "already_member":
+                    if not TQDM_AVAILABLE:
+                        print(
+                            f"  ℹ️  {missing_name.split('(')[0].strip()}: Already member"
+                        )
+                    stats["already_member"] += 1
+                elif "skipped" in result:
+                    if not TQDM_AVAILABLE:
+                        print(f"  ⏭️  {missing_name.split('(')[0].strip()}: {result}")
+                    stats["skipped"] += 1
+                else:
+                    if not TQDM_AVAILABLE:
+                        print(f"  ✅ {missing_name.split('(')[0].strip()}")
+                    stats["success"] += 1
             else:
-                print(f"  ❌ {missing_name.split('(')[0].strip()}: {result}")
-                error += 1
+                if result.startswith("rate_limited"):
+                    rate_seconds = int(result.split("_")[-1].rstrip("s"))
+                    stats["rate_limited"] += 1
+                    stats["rate_limit_seconds"].append(rate_seconds)
+                    if not TQDM_AVAILABLE:
+                        print(
+                            f"  ⏱️  {missing_name.split('(')[0].strip()}: "
+                            f"Rate limited ({rate_seconds}s)"
+                        )
+                elif result == "no_permission":
+                    if not TQDM_AVAILABLE:
+                        print(
+                            f"  🔒 {missing_name.split('(')[0].strip()}: No permission"
+                        )
+                    stats["no_permission"] += 1
+                else:
+                    if not TQDM_AVAILABLE:
+                        print(f"  ❌ {missing_name.split('(')[0].strip()}: {result}")
+                stats["errors"] += 1
 
-            await asyncio.sleep(2.0)
+            progress_bar.update(1)
 
+            # Calculate and update ETA
+            elapsed = time.time() - stats["start_time"]
+            if stats["operations_completed"] > 0:
+                ops_per_sec = stats["operations_completed"] / elapsed
+                remaining_ops = total_operations - stats["operations_completed"]
+                eta_seconds = remaining_ops / ops_per_sec if ops_per_sec > 0 else 0
+
+                # Update progress bar postfix with metrics
+                success_rate = (
+                    stats["success"] / stats["operations_completed"] * 100
+                    if stats["operations_completed"] > 0
+                    else 0
+                )
+                postfix_dict = {
+                    "✅": stats["success"],
+                    "❌": stats["errors"],
+                    "Success": f"{success_rate:.1f}%",
+                }
+                if stats["rate_limited"] > 0:
+                    postfix_dict["⏱️"] = stats["rate_limited"]
+                progress_bar.set_postfix(postfix_dict)
+
+            # Dynamic delay based on rate limits
+            delay = 2.0
+            if stats["rate_limit_seconds"]:
+                avg_rate_limit = sum(stats["rate_limit_seconds"]) / len(
+                    stats["rate_limit_seconds"]
+                )
+                if avg_rate_limit > 1000:  # > 16 minutes
+                    delay = 5.0
+                elif avg_rate_limit > 300:  # > 5 minutes
+                    delay = 3.0
+            await asyncio.sleep(delay)
+
+    progress_bar.close()
     await client.disconnect()
-    print(f"\n{'='*80}\n✅ Added {success} members\n⚠️  {error} errors\n{'='*80}")
+
+    # Final statistics
+    elapsed_total = time.time() - stats["start_time"]
+    avg_rate_limit = (
+        sum(stats["rate_limit_seconds"]) / len(stats["rate_limit_seconds"])
+        if stats["rate_limit_seconds"]
+        else 0
+    )
+
+    print("\n" + "=" * 80)
+    print("📊 FINAL STATISTICS")
+    print("=" * 80)
+    print(f"✅ Successfully added: {stats['success']} members")
+    print(f"ℹ️  Already members: {stats['already_member']}")
+    print(f"⏭️  Skipped: {stats['skipped']}")
+    print(f"⚠️  Errors: {stats['errors']}")
+    print(f"   - Rate limited: {stats['rate_limited']}")
+    print(f"   - No permission: {stats['no_permission']}")
+    if avg_rate_limit > 0:
+        print(
+            f"   - Avg rate limit wait: {int(avg_rate_limit // 60)}m "
+            f"{int(avg_rate_limit % 60)}s"
+        )
+    print(f"⏱️  Total time: {int(elapsed_total // 60)}m {int(elapsed_total % 60)}s")
+    ops_per_sec = (
+        stats["operations_completed"] / elapsed_total if elapsed_total > 0 else 0
+    )
+    print(f"📈 Operations/sec: {ops_per_sec:.2f}")
+    success_rate = (
+        stats["success"] / stats["operations_completed"] * 100
+        if stats["operations_completed"] > 0
+        else 0
+    )
+    print(f"📉 Success rate: {success_rate:.1f}%")
+    print("=" * 80)
     return 0
 
 
