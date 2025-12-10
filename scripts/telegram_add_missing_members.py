@@ -76,6 +76,11 @@ HACKED_GROUPS = {
     "Contribution Capital <> BitSafe",  # Replaced by "Contribution Capital | BitSafe (New)"
 }
 
+# Old/archived groups that should be excluded
+EXCLUDED_GROUPS = {
+    "Alchemy <> BitSafe",  # Old/archived group
+}
+
 
 def get_latest_audit():
     """Get latest audit from database"""
