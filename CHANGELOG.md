@@ -4,6 +4,14 @@ All notable changes to the Slack Tools project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+- **Progress tracking and metrics for Telegram member addition**: Enhanced `telegram_add_missing_members.py` with comprehensive progress tracking:
+  - Real-time `tqdm` progress bar showing current group and operation progress
+  - Live metrics display: success/error counts, rate limits, ETA estimation
+  - Adaptive delay system that increases wait time when rate limits are detected
+  - Comprehensive final statistics report with success rate, operations/sec, rate limit analysis
+  - Graceful fallback if `tqdm` library is not available
+
 ### Fixed
 - **Bug: "No username" errors for groups with placeholder dashes**: Fixed `telegram_add_missing_members.py` incorrectly trying to process groups where the audit's "Required Missing" field contained `'-'` as a placeholder value (indicating no missing members). The script now filters out groups with dashes/placeholders at both the filtering and processing stages.
   - **Root Cause**: Audit data uses `'-'` as a placeholder when no members are missing, but the script attempted to match this against employee names.

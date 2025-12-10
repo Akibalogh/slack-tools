@@ -218,13 +218,27 @@ Automatically adds missing required team members to customer Telegram groups.
 - Excludes internal/community/marketing groups (including "BitSafe <> Ben W", "Contribution Capital | BitSafe (New)" - VC)
 - Excludes hacked/compromised groups (e.g., "Contribution Capital <> BitSafe" - replaced with new group)
 - Handles supergroups and channels (skips basic chats due to API limitations)
+- **Real-time progress tracking with `tqdm` progress bar**
+- **Live metrics**: Success/error counts, rate limits, ETA estimation
+- **Adaptive delays**: Automatically increases delay when rate limits detected
 - Rate limit detection with informative errors
 - Non-interactive mode with `--yes` flag
+- Comprehensive final statistics report
 
 **Usage:**
 ```bash
 python3 scripts/telegram_add_missing_members.py --yes
 ```
+
+**Progress Tracking:**
+- Real-time progress bar showing current group and operation count
+- Live metrics in progress bar: success count, error count, success rate
+- ETA calculation based on current operation speed
+- Final statistics report includes:
+  - Successfully added / already members / skipped
+  - Rate limit analysis (count and average wait time)
+  - Operations per second
+  - Total elapsed time
 
 **Known Limitations:**
 - **Telegram Rate Limits:** Very aggressive anti-spam
