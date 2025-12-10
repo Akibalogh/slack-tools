@@ -202,6 +202,7 @@ async def main():
             has_bitsafe == "✓ YES"
             and name not in INTERNAL_CHANNELS
             and name not in HACKED_GROUPS
+            and name not in EXCLUDED_GROUPS
             and category != "Internal"
             and missing_clean
             and missing_clean != "-"
