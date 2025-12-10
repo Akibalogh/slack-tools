@@ -191,6 +191,8 @@ async def main():
 
         # Filter out dashes and empty values
         missing_clean = missing.strip() if missing else ""
+        # Include Member status groups - Telegram API may still allow additions
+        # if user has sufficient permissions despite audit showing "Member"
         if (
             has_bitsafe == "✓ YES"
             and name not in INTERNAL_CHANNELS
@@ -198,7 +200,9 @@ async def main():
             and category != "Internal"
             and missing_clean
             and missing_clean != "-"
-            and ("Owner" in permission or "Admin" in permission)
+            and (
+                "Owner" in permission or "Admin" in permission or "Member" in permission
+            )
         ):
             groups_to_fix.append({"name": name, "missing": missing})
 
