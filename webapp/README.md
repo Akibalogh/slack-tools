@@ -241,8 +241,9 @@ python3 app.py       # Start Flask dev server on port 5001
 
 **Procfile Configuration**:
 ```
-web: cd webapp && gunicorn app:app --timeout 300
-release: python database.py
+release: cd webapp && python database.py
+web: cd webapp && gunicorn app:app
+worker: python scripts/telegram_add_missing_members_retry.py --auto-wait --until-done
 ```
 
 **Heroku Add-ons**:
@@ -270,6 +271,13 @@ git push heroku main
 # Database auto-initializes via release phase
 # No manual seeding required
 ```
+
+**Worker Dyno (Telegram Member Addition)**:
+- **Purpose**: Continuously retry adding missing members to Telegram groups
+- **Start**: `heroku ps:scale worker=1 --app bitsafe-group-admin`
+- **Stop**: `heroku ps:scale worker=0 --app bitsafe-group-admin`
+- **Monitor**: `heroku logs --tail --app bitsafe-group-admin --dyno worker`
+- **Note**: The worker automatically retries until all operations complete (handles rate limits)
 
 **Database Seeding**:
 - Automatic on first deployment (release phase runs `database.py`)

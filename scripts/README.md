@@ -206,6 +206,31 @@ Thanks! -Aki
 
 Suite of scripts for managing Telegram group membership and ownership based on audit results. Addresses gaps in team coverage and ownership structure across 400+ Telegram groups.
 
+### Running on Heroku (Recommended)
+
+Instead of running locally, you can run the continuous retry script on Heroku as a worker dyno. This is recommended because:
+- Runs continuously without needing your local machine
+- Won't be interrupted by computer sleep or disconnections
+- Handles long-running processes with multiple retries better
+
+**Setup:**
+1. The `Procfile` already includes a worker process type
+2. Deploy to Heroku: `git push heroku main`
+3. Scale the worker dyno: `heroku ps:scale worker=1 --app bitsafe-group-admin`
+4. Monitor logs: `heroku logs --tail --app bitsafe-group-admin --dyno worker`
+
+**To stop:** `heroku ps:scale worker=0 --app bitsafe-group-admin`
+
+**To restart:** `heroku restart worker --app bitsafe-group-admin`
+
+The worker will automatically:
+- Wait for appropriate cooldown periods
+- Retry member additions continuously
+- Stop when all operations complete
+- Handle rate limits gracefully
+
+**Note:** The script reads the Telegram session from the database (same as the webapp), so no additional configuration needed beyond what's already set up for Heroku.
+
 ### Scripts
 
 #### `telegram_add_missing_members.py`
