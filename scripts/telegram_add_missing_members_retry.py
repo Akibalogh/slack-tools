@@ -149,7 +149,8 @@ def wait_with_progress(seconds, log_file=None):
         time.sleep(60)  # Check every minute instead of every second
 
     if log_fd:
-        log_fd.close()
+        if log_fd:
+            log_fd.close()
 
     print("\n✅ Cooldown complete! Starting retry...")
     print("=" * 80 + "\n")
@@ -168,7 +169,8 @@ def run_member_addition(log_file=None):
         log_fd.flush()
         # Redirect stdout/stderr to log file
         result = subprocess.run(cmd, stdout=log_fd, stderr=subprocess.STDOUT)
-        log_fd.close()
+        if log_fd:
+            log_fd.close()
     else:
         print(f"🔄 Running: {' '.join(cmd)}")
         result = subprocess.run(cmd, capture_output=False)
@@ -314,7 +316,8 @@ def main():
                     print("No more rate-limited operations remaining.")
                     print("=" * 80)
                     sys.stdout.flush()
-                    log_fd.close()
+                    if log_fd:
+                        log_fd.close()
                     return 0
                 else:
                     msg = (
