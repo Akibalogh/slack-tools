@@ -66,6 +66,43 @@ def extract_rate_limit_seconds(log_file):
     return max_seconds if max_seconds > 0 else None
 
 
+def check_if_done(log_file):
+    """Check if there are still rate-limited operations remaining"""
+    if not os.path.exists(log_file):
+        return False, 0
+
+    try:
+        with open(log_file, "r") as f:
+            content = f.read()
+            # Look for rate limit errors in the final statistics
+            if "📊 FINAL STATISTICS" in content:
+                # Extract error count from final statistics
+                error_pattern = r"⚠️\s+Errors:\s+(\d+)"
+                match = re.search(error_pattern, content)
+                if match:
+                    error_count = int(match.group(1))
+                    rate_limit_pattern = r"Rate limited:\s+(\d+)"
+                    rate_match = re.search(rate_limit_pattern, content)
+                    if rate_match:
+                        rate_limit_count = int(rate_match.group(1))
+                        return rate_limit_count == 0, rate_limit_count
+                    # If no rate limit count but error count is 0, we're done
+                    return error_count == 0, error_count
+                # Check if success rate is 100% or very high
+                success_rate_pattern = r"Success rate:\s+(\d+(?:\.\d+)?)%"
+                success_match = re.search(success_rate_pattern, content)
+                if success_match:
+                    rate = float(success_match.group(1))
+                    # If success rate is very high (>95%), consider it done
+                    if rate > 95.0:
+                        return True, 0
+    except Exception as e:
+        print(f"⚠️  Error checking completion status: {e}")
+        return False, 999  # Assume not done if we can't check
+
+    return False, 999
+
+
 def wait_with_progress(seconds, log_file=None):
     """Wait for specified seconds with progress updates"""
     log_fd = None
@@ -157,6 +194,11 @@ def main():
         type=str,
         help="Log file path (default: auto-generated in /tmp/)",
     )
+    parser.add_argument(
+        "--until-done",
+        action="store_true",
+        help="Keep retrying until all operations complete (no rate limits remaining)",
+    )
     args = parser.parse_args()
 
     # Set up log file
@@ -232,15 +274,65 @@ def main():
     print("=" * 80 + "\n")
     sys.stdout.flush()  # Ensure output is written
 
-    exit_code = run_member_addition(log_file)
+    iteration = 1
+    max_iterations = 100  # Safety limit to prevent infinite loops
 
-    print("\n" + "=" * 80)
-    if exit_code == 0:
-        print("✅ Retry completed successfully!")
-    else:
-        print(f"⚠️  Retry completed with exit code: {exit_code}")
-    print("=" * 80)
-    sys.stdout.flush()
+    while iteration <= max_iterations:
+        print(f"\n{'=' * 80}")
+        print(f"🔄 RETRY ITERATION #{iteration}")
+        print(f"{'=' * 80}\n")
+        sys.stdout.flush()
+
+        exit_code = run_member_addition(log_file)
+
+        print("\n" + "=" * 80)
+        if exit_code == 0:
+            print("✅ Retry iteration completed successfully!")
+        else:
+            print(f"⚠️  Retry iteration completed with exit code: {exit_code}")
+        print("=" * 80)
+        sys.stdout.flush()
+
+        # Check if we should continue
+        if args.until_done:
+            # Find the latest member addition log to check completion
+            latest_member_log = find_latest_log()
+            if latest_member_log:
+                is_done, remaining_errors = check_if_done(latest_member_log)
+                if is_done:
+                    print("\n" + "=" * 80)
+                    print("✅ ALL OPERATIONS COMPLETE!")
+                    print("No more rate-limited operations remaining.")
+                    print("=" * 80)
+                    sys.stdout.flush()
+                    log_fd.close()
+                    return 0
+                else:
+                    print(
+                        f"\n⚠️  Still {remaining_errors} rate-limited operations remaining."
+                    )
+                    print("Continuing to next retry iteration...\n")
+                    sys.stdout.flush()
+                    # Calculate wait time for next iteration
+                    wait_seconds = extract_rate_limit_seconds(latest_member_log)
+                    if wait_seconds:
+                        wait_seconds += 300  # Add 5 minute buffer
+                    else:
+                        wait_seconds = 45 * 60  # Default 45 minutes
+
+                    if wait_seconds > 0:
+                        wait_with_progress(wait_seconds, log_file)
+                    iteration += 1
+                    continue
+            else:
+                print("⚠️  Could not find latest log file. Stopping retries.")
+                break
+        else:
+            # Not in loop mode, just exit
+            break
+
+    if iteration > max_iterations:
+        print("\n⚠️  Reached maximum iteration limit. Stopping.")
 
     log_fd.close()
     return exit_code
