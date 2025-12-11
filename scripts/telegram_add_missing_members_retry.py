@@ -308,9 +308,11 @@ def main():
                     log_fd.close()
                     return 0
                 else:
-                    print(
-                        f"\n⚠️  Still {remaining_errors} rate-limited operations remaining."
+                    msg = (
+                        f"\n⚠️  Still {remaining_errors} "
+                        "rate-limited operations remaining."
                     )
+                    print(msg)
                     print("Continuing to next retry iteration...\n")
                     sys.stdout.flush()
                     # Calculate wait time for next iteration
