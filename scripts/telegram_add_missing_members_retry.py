@@ -203,18 +203,27 @@ def main():
 
     # Set up log file
     log_file = args.log
-    if not log_file:
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        log_file = f"/tmp/telegram_retry_{timestamp}.log"
+    log_fd = None
 
-    # Redirect stdout/stderr to log file for background execution
-    log_fd = open(log_file, "a")
-    sys.stdout = log_fd
-    sys.stderr = log_fd
+    # On Heroku, output to stdout so it appears in logs
+    # Only redirect to file if explicitly requested or running locally
+    is_heroku = os.getenv("DYNO") is not None
+
+    if not is_heroku:
+        if not log_file:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            log_file = f"/tmp/telegram_retry_{timestamp}.log"
+        # Redirect stdout/stderr to log file for background execution
+        log_fd = open(log_file, "a")
+        sys.stdout = log_fd
+        sys.stderr = log_fd
 
     print("=" * 80)
     print("🔄 TELEGRAM MEMBER ADDITION - RETRY SCRIPT")
-    print(f"📄 Log file: {log_file}")
+    if log_file:
+        print(f"📄 Log file: {log_file}")
+    else:
+        print("📄 Output: stdout (Heroku)")
     print("=" * 80)
 
     # Determine wait time
