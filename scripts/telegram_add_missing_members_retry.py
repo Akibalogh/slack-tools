@@ -348,7 +348,8 @@ def main():
     if iteration > max_iterations:
         print("\n⚠️  Reached maximum iteration limit. Stopping.")
 
-    log_fd.close()
+    if log_fd:
+        log_fd.close()
     return exit_code
 
 
